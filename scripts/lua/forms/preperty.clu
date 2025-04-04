@@ -1,0 +1,457 @@
+-----------------------------------------------------------------------
+-- Character
+-----------------------------------------------------------------------
+local collum = {}
+collum.states = {x = 545, y = 140, margin = 20}
+
+frmState = UI_CreateForm("frmState", FALSE, 612, 550, 150, 200, TRUE, FALSE )
+UI_FormSetHotKey( frmState, ALT_KEY, HOTKEY_A )
+UI_ShowForm( frmState, TRUE )
+UI_AddFormToTemplete( frmState, 1 )
+UI_SetIsDrag( frmState, TRUE )
+UI_SetFormStyle( frmState, 0 )
+
+imgNotification = UI_CreateCompent( frmState, IMAGE_TYPE, "imgNotification", 612, 550, 0, 0)
+UI_LoadImage( imgNotification, "texture/gui/p0w-frmState.png", NORMAL, 612, 550, 0, 0 )
+
+pgePublic = UI_CreateCompent(frmState, PAGE_TYPE, "pgePublic", 612, 420, 0, 70 )
+UI_SetPageButton(pgePublic, PAGE_BUTTON_CUSTOM, 48, 16 )
+
+skillid = UI_CreatePageItem(pgePublic)
+ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_NORMAL, 129, 46, 0, 690)
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_ACTIVE, 129, 46, 0, 736)
+UI_SetPos( ttlNum, 60, 1)
+UI_SetSize( ttlNum, 129, 46)
+
+ui3dCha = UI_CreateCompent( frmState, UI3D_COMPENT, "ui3dCha", 130, 130, 135, 285)
+UI_AddCompent(skillid, ui3dCha)
+
+imgPROHP = UI_CreateCompent(frmState, IMAGE_TYPE, "imgPROHP", 211, 22, 101, 358)
+UI_LoadImage(imgPROHP, "texture/gui/p0w-frmState.png", NORMAL, 211, 22, 222, 792 )
+UI_AddCompent(skillid, imgPROHP)
+
+proHP = UI_CreateCompent(frmState, PROGRESS_TYPE, "proHP", 207, 18, 103, 360 )
+UI_LoadScaleImage( proHP, "texture/gui/p0w-frmState.png", PROGRESS_PROGRESS, 207, 18, 12, 795, 1.0, 1.0 )
+UI_SetHint( proHP, "HP" )
+UI_SetProgressHintStyle( proHP, PROGRESS_HINT_NUM )
+UI_AddCompent(skillid, proHP)
+
+imgPROSP = UI_CreateCompent(frmState, IMAGE_TYPE, "imgPROSP", 211, 22, 101, 383)
+UI_LoadImage(imgPROSP, "texture/gui/p0w-frmState.png", NORMAL, 211, 22, 222, 792 )
+UI_AddCompent(skillid, imgPROSP)
+
+proSP = UI_CreateCompent(frmState, PROGRESS_TYPE, "proSP", 207, 18, 103, 385 )
+UI_LoadScaleImage( proSP, "texture/gui/p0w-frmState.png", PROGRESS_PROGRESS, 207, 18, 12, 813, 1.0, 1.0 )
+UI_SetHint( proSP, "SP" )
+UI_SetProgressHintStyle( proSP, PROGRESS_HINT_NUM )
+UI_AddCompent(skillid, proSP)
+
+labHp = UI_CreateCompent( frmState, LABELEX_TYPE, "labHp", 100, 11, 145, 362)
+UI_SetTextColor(labHp, 4285754198)
+UI_SetLabelExFont(labHp, FONT016, FALSE, COLOR_WHITE)
+UI_AddCompent(skillid, labHp)
+
+labMana = UI_CreateCompent( frmState, LABELEX_TYPE, "labMana", 100, 11, 145, 387)
+UI_SetTextColor(labMana, 4285754198)
+UI_SetLabelExFont(labMana, FONT016, FALSE, COLOR_WHITE)
+UI_AddCompent(skillid, labMana)
+
+labName = UI_CreateCompent( frmState, LABELEX_TYPE, "labName", 100, 11, 135, 140 - 65)
+UI_SetTextColor(labName, 4289695337)
+UI_SetLabelExFont(labName, FONT24, FALSE, COLOR_WHITE)
+UI_AddCompent(skillid, labName)
+
+labJob = UI_CreateCompent( frmState, LABELEX_TYPE, "labJob", 100, 11, 135, 170 - 65)
+UI_SetTextColor(labJob, 4283910720)
+UI_SetLabelExFont(labJob, FONT18, FALSE, COLOR_WHITE)
+UI_AddCompent(skillid, labJob)
+
+labGuild = UI_CreateCompent( frmState, LABELEX_TYPE, "labGuild", 100, 11, 145, 192 - 65)
+UI_SetTextColor( labGuild, 4283910720 )
+UI_SetLabelExFont( labGuild, FONT016, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labGuild)
+
+------
+-- Кнопки прокачивания характеристик
+------
+btnStr = UI_CreateCompent(frmState, BUTTON_TYPE, "btnStr", 14, 14, 580, 70 )
+UI_LoadButtonImage(btnStr, "texture/gui/skill-panel.png", 17, 17, 233, 60, TRUE )
+UI_SetHint(btnStr, "Strength increases Melee attack power")
+UI_AddCompent(skillid, btnStr)
+
+btnCon = UI_CreateCompent(frmState, BUTTON_TYPE, "btnCon", 14, 14, 580, 90 )
+UI_LoadButtonImage(btnCon, "texture/gui/skill-panel.png", 17, 17, 233, 60, TRUE )
+UI_SetHint(btnCon, "Constitution increases Defense, Max HP and HP recovery rate")
+UI_AddCompent(skillid, btnCon)
+
+btnAgi = UI_CreateCompent(frmState, BUTTON_TYPE, "btnAgi", 14, 14, 580, 110 )
+UI_LoadButtonImage(btnAgi, "texture/gui/skill-panel.png", 17, 17, 233, 60, TRUE )
+UI_SetHint(btnAgi, "Agility increases Attack speed and Dodge rate")
+UI_AddCompent(skillid, btnAgi)
+
+btnDex = UI_CreateCompent( frmState, BUTTON_TYPE, "btnDex", 14, 14, 580, 130 )
+UI_LoadButtonImage( btnDex, "texture/gui/skill-panel.png", 17, 17, 233, 60, TRUE )
+UI_SetHint( btnDex, "Accuracy increases Range attack power and Hit Rate" )
+UI_AddCompent(skillid, btnDex)
+
+btnSta = UI_CreateCompent(frmState, BUTTON_TYPE, "btnSta", 14, 14, 580, 150 )
+UI_LoadButtonImage( btnSta, "texture/gui/skill-panel.png", 17, 17, 233, 60, TRUE )
+UI_SetHint( btnSta, "Spirit increases Max SP and SP recovery rate" )
+UI_AddCompent(skillid, btnSta)
+
+------
+-- Базовые характеристики персонажа
+------
+lab_Strength = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Strength", 30, 14, 400, 70)
+UI_SetCaption(lab_Strength, "Strength")
+UI_SetTextColor(lab_Strength, 4287330145 )
+UI_SetLabelExFont(lab_Strength, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Strength)
+
+labStrength = UI_CreateCompent(frmState, LABELEX_TYPE, "labStrength", 30, 14, 535, 70)
+UI_SetTextColor(labStrength, 4287151464 )
+UI_SetLabelExFont(labStrength, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labStrength)
+
+lab_Constitution = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Constitution", 30, 14, 400, 90)
+UI_SetCaption(lab_Constitution, "Constitution")
+UI_SetTextColor(lab_Constitution, 4287330145 )
+UI_SetLabelExFont(lab_Constitution, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Constitution)
+
+labConstitution = UI_CreateCompent(frmState, LABELEX_TYPE, "labConstitution", 30, 14, 535, 90)
+UI_SetTextColor(labConstitution, 4287151464 )
+UI_SetLabelExFont(labConstitution, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labConstitution)
+
+lab_Agility = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Agility", 30, 14, 400, 110)
+UI_SetCaption(lab_Agility, "Agility")
+UI_SetTextColor(lab_Agility, 4287330145 )
+UI_SetLabelExFont(lab_Agility, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Agility)
+
+labAgility = UI_CreateCompent(frmState, LABELEX_TYPE, "labAgility", 30, 14, 535, 110)
+UI_SetTextColor(labAgility, 4287151464 )
+UI_SetLabelExFont(labAgility, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labAgility)
+
+lab_Accuracy = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Accuracy", 30, 14, 400, 130)
+UI_SetCaption(lab_Accuracy, "Accuracy")
+UI_SetTextColor(lab_Accuracy, 4287330145 )
+UI_SetLabelExFont(lab_Accuracy, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Accuracy)
+
+labAccuracy = UI_CreateCompent(frmState, LABELEX_TYPE, "labAccuracy", 30, 14, 535, 130)
+UI_SetTextColor(labAccuracy, 4287151464 )
+UI_SetLabelExFont(labAccuracy, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labAccuracy)
+
+lab_Spirit = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Spirit", 30, 14, 400, 150)
+UI_SetCaption(lab_Spirit, "Spirit")
+UI_SetTextColor(lab_Spirit, 4287330145 )
+UI_SetLabelExFont(lab_Spirit, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Spirit)
+
+labSpirit = UI_CreateCompent(frmState, LABELEX_TYPE, "labSpirit", 30, 14, 535, 150)
+UI_SetTextColor(labSpirit, 4287151464 )
+UI_SetLabelExFont(labSpirit, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labSpirit)
+
+lab_Spoint = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Spoint", 30, 14, 400, 175)
+UI_SetCaption(lab_Spoint, "Stat points")
+UI_SetTextColor(lab_Spoint, 4286409043 )
+UI_SetLabelExFont(lab_Spoint, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Spoint)
+
+labSpoint = UI_CreateCompent(frmState, LABELEX_TYPE, "labSpoint", 30, 14, 535, 175)
+UI_SetCaption(labSpoint, "0")
+UI_SetTextColor(labSpoint, 4294109040 )
+UI_SetLabelExFont(labSpoint, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labSpoint)
+
+------
+-- Характеристики персонажа
+------
+lab_Attack = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Attack", 50, 14, 400, 190 + 15)
+UI_SetCaption(lab_Attack, "Attack")
+UI_SetTextColor(lab_Attack, 4287330145 )
+UI_SetLabelExFont(lab_Attack, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Attack)
+
+labAttack = UI_CreateCompent(frmState, LABELEX_TYPE, "labAttack", 30, 14, 535, 190 + 15)
+UI_SetTextColor(labAttack, 4286541410 )
+UI_SetLabelExFont(labAttack, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labAttack)
+
+lab_Aspd = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Aspd", 50, 14, 400, 210 + 15)
+UI_SetCaption(lab_Aspd, "Attack speed")
+UI_SetTextColor(lab_Aspd, 4287330145 )
+UI_SetLabelExFont(lab_Aspd, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Aspd)
+
+labAspd = UI_CreateCompent(frmState, LABELEX_TYPE, "labAspd", 30, 14, 535, 210 + 15)
+UI_SetTextColor(labAspd, 4286541410 )
+UI_SetLabelExFont(labAspd, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labAspd)
+
+lab_Defense = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Defense", 50, 14, 400, 230 + 15)
+UI_SetCaption(lab_Defense, "Defense")
+UI_SetTextColor(lab_Defense, 4287330145 )
+UI_SetLabelExFont(lab_Defense, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Defense)
+
+labDefense = UI_CreateCompent(frmState, LABELEX_TYPE, "labDefense", 30, 14, 535, 230 + 15)
+UI_SetTextColor(labDefense, 4286541410 )
+UI_SetLabelExFont(labDefense, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labDefense)
+
+lab_Presist = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Presist", 50, 14, 400, 250 + 15)
+UI_SetCaption(lab_Presist, "Physical Resist")
+UI_SetTextColor(lab_Presist, 4287330145 )
+UI_SetLabelExFont(lab_Presist, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Presist)
+
+labPresist = UI_CreateCompent(frmState, LABELEX_TYPE, "labPresist", 30, 14, 535, 250 + 15)
+UI_SetTextColor(labPresist, 4286541410 )
+UI_SetLabelExFont(labPresist, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labPresist)
+
+lab_HitRate = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_HitRate", 50, 14, 400, 270 + 15)
+UI_SetCaption(lab_HitRate, "Hit Rate")
+UI_SetTextColor(lab_HitRate, 4287330145 )
+UI_SetLabelExFont(lab_HitRate, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_HitRate)
+
+labHitRate = UI_CreateCompent(frmState, LABELEX_TYPE, "labHitRate", 30, 14, 535, 270 + 15)
+UI_SetTextColor(labHitRate, 4286541410 )
+UI_SetLabelExFont(labHitRate, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labHitRate)
+
+lab_Dodge = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Dodge", 50, 14, 400, 290 + 15)
+UI_SetCaption(lab_Dodge, "Dodge")
+UI_SetTextColor(lab_Dodge, 4287330145 )
+UI_SetLabelExFont(lab_Dodge, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Dodge)
+
+labDodge = UI_CreateCompent(frmState, LABELEX_TYPE, "labDodge", 30, 14, 535, 290 + 15)
+UI_SetTextColor(labDodge, 4286541410 )
+UI_SetLabelExFont(labDodge, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labDodge)
+
+lab_Movement = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_Movement", 50, 14, 400, 310 + 15)
+UI_SetCaption(lab_Movement, "Movement speed")
+UI_SetTextColor(lab_Movement, 4287330145 )
+UI_SetLabelExFont(lab_Movement, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_Movement)
+
+labMovement = UI_CreateCompent(frmState, LABELEX_TYPE, "labMovement", 30, 14, 535, 310 + 15)
+UI_SetTextColor(labMovement, 4286541410 )
+UI_SetLabelExFont(labMovement, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labMovement)
+
+lab_CriticalRate = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_CriticalRate", 50, 14, 400, 330 + 15)
+UI_SetCaption(lab_CriticalRate, "Critical Rate")
+UI_SetTextColor(lab_CriticalRate, 4287330145 )
+UI_SetLabelExFont(lab_CriticalRate, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_CriticalRate)
+
+labCriticalRate = UI_CreateCompent(frmState, LABELEX_TYPE, "labCriticalRate", 30, 14, 535, 330 + 15)
+UI_SetTextColor(labCriticalRate, 4286541410 )
+UI_SetLabelExFont(labCriticalRate, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labCriticalRate)
+
+lab_HPRecovery = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_HPRecovery", 50, 14, 400, 350 + 15)
+UI_SetCaption(lab_HPRecovery, "HP Recovery")
+UI_SetTextColor(lab_HPRecovery, 4287330145 )
+UI_SetLabelExFont(lab_HPRecovery, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_HPRecovery)
+
+labHPRecovery = UI_CreateCompent(frmState, LABELEX_TYPE, "labHPRecovery", 30, 14, 535, 350 + 15)
+UI_SetTextColor(labHPRecovery, 4286541410 )
+UI_SetLabelExFont(labHPRecovery, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labHPRecovery)
+
+lab_SPRecovery = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_SPRecovery", 50, 14, 400, 370 + 15)
+UI_SetCaption(lab_SPRecovery, "SP Recovery")
+UI_SetTextColor(lab_SPRecovery, 4287330145 )
+UI_SetLabelExFont(lab_SPRecovery, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, lab_SPRecovery)
+
+labSPRecovery = UI_CreateCompent(frmState, LABELEX_TYPE, "labSPRecovery", 30, 14, 535, 370 + 15)
+UI_SetTextColor(labSPRecovery, 4286541410 )
+UI_SetLabelExFont(labSPRecovery, FONT_14, FALSE, COLOR_WHITE )
+UI_AddCompent(skillid, labSPRecovery)
+
+------
+-- Слоты под эквип
+------
+
+local collum = {}
+	collum.left = { x = 45, y = 90, margin = 50 }
+	collum.right = { x = collum.left.x + 280, y = collum.left.y, margin = collum.left.margin }
+
+cmdImgHead = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgHead", 41, 48, collum.left.x, collum.left.y)
+UI_LoadImage(cmdImgHead, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdHead = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdHead", 32, 32, collum.left.x + 5, collum.left.y + 7)
+UI_SetHint(cmdHead, "Head")
+UI_AddCompent(skillid, cmdImgHead)
+UI_AddCompent(skillid, cmdHead)
+
+cmdImgBody = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgBody", 41, 48, collum.left.x, collum.left.y + (collum.left.margin * 1))
+UI_LoadImage(cmdImgBody, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdBody = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdBody", 32, 32, collum.left.x + 5, collum.left.y + 7 + (collum.left.margin * 1))
+UI_SetHint(cmdBody, "Body")
+UI_AddCompent(skillid, cmdImgBody)
+UI_AddCompent(skillid, cmdBody)
+
+cmdImgGloves = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgGloves", 41, 48, collum.left.x, collum.left.y + (collum.left.margin * 2))
+UI_LoadImage(cmdImgGloves, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdGlove = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, collum.left.x + 5, collum.left.y + 7 + (collum.left.margin * 2))
+UI_SetHint(cmdGlove, "Glove")
+UI_AddCompent(skillid, cmdImgGloves)
+UI_AddCompent(skillid, cmdGlove)
+
+cmdImgBoots = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgBoots", 41, 48, collum.left.x, collum.left.y + (collum.left.margin * 3))
+UI_LoadImage(cmdImgBoots, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdShoes = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, collum.left.x + 5, collum.left.y + 7 + (collum.left.margin * 3))
+UI_SetHint(cmdShoes, "Boots")
+UI_AddCompent(skillid, cmdImgBoots)
+UI_AddCompent(skillid, cmdShoes)
+
+cmdImgLHand = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgLHand", 41, 48, collum.left.x, collum.left.y + (collum.left.margin * 4))
+UI_LoadImage(cmdImgLHand, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdLeftHand = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, collum.left.x + 5, collum.left.y + 7 + (collum.left.margin * 4))
+UI_SetHint(cmdLeftHand, "Left hand")
+UI_AddCompent(skillid, cmdImgLHand)
+UI_AddCompent(skillid, cmdLeftHand)
+
+cmdImgRHand = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgRHand", 41, 48, collum.left.x, collum.left.y + (collum.left.margin * 5))
+UI_LoadImage(cmdImgRHand, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdRightHand = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, collum.left.x + 5, collum.left.y + 7 + (collum.left.margin * 5))
+UI_SetHint(cmdRightHand, "Right hand")
+UI_AddCompent(skillid, cmdImgRHand)
+UI_AddCompent(skillid, cmdRightHand)
+
+cmdImgCloak = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgCloak", 41, 48, collum.left.x, collum.left.y + (collum.left.margin * 6))
+UI_LoadImage(cmdImgCloak, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdCloak = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdCloak", 32, 32, collum.left.x + 5, collum.left.y + 7 + (collum.left.margin * 6))
+UI_SetHint(cmdCloak, "Cloak")
+UI_AddCompent(skillid, cmdImgCloak)
+UI_AddCompent(skillid, cmdCloak)
+
+cmdImgNecklace = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgNecklace", 41, 48, collum.right.x, collum.right.y)
+UI_LoadImage(cmdImgNecklace, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdNecklace = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, collum.right.x + 5, collum.right.y + 7)
+UI_SetHint(cmdNecklace, "Necklace")
+UI_AddCompent(skillid, cmdImgNecklace)
+UI_AddCompent(skillid, cmdNecklace)
+
+cmdImgLRing = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgLRing", 41, 48, collum.right.x, collum.right.y + (collum.right.margin * 1))
+UI_LoadImage(cmdImgLRing, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdLRing = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdLRing", 32, 32, collum.right.x + 5, collum.right.y + 7 + (collum.right.margin * 1))
+UI_SetHint(cmdLRing, "Left ring")
+UI_AddCompent(skillid, cmdImgLRing)
+UI_AddCompent(skillid, cmdLRing)
+
+cmdImgRRing = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgRRing", 41, 48, collum.right.x, collum.right.y + (collum.right.margin * 2))
+UI_LoadImage(cmdImgRRing, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdRRing = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdRRing", 32, 32, collum.right.x + 5, collum.right.y + 7 + (collum.right.margin * 2))
+UI_SetHint(cmdRRing, "Right ring")
+UI_AddCompent(skillid, cmdImgRRing)
+UI_AddCompent(skillid, cmdRRing)
+
+cmdImgLBracelet = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgLBracelet", 41, 48, collum.right.x, collum.right.y + (collum.left.margin * 3))
+UI_LoadImage(cmdImgLBracelet, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdLBracelet = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdLBracelet", 32, 32, collum.right.x + 5, collum.right.y + 7 + (collum.right.margin * 3))
+UI_SetHint(cmdLBracelet, "Left bracelet")
+UI_AddCompent(skillid, cmdImgLBracelet)
+UI_AddCompent(skillid, cmdLBracelet)
+
+cmdImgRBracelet = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgRBracelet", 41, 48, collum.right.x, collum.right.y + (collum.left.margin * 4))
+UI_LoadImage(cmdImgRBracelet, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdRBracelet = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdRBracelet", 32, 32, collum.right.x + 5, collum.right.y + 7 + (collum.right.margin * 4))
+UI_SetHint(cmdRBracelet, "Right bracelet")
+UI_AddCompent(skillid, cmdImgRBracelet)
+UI_AddCompent(skillid, cmdRBracelet)
+
+cmdImgBelt = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgBelt", 41, 48, collum.right.x, collum.right.y + (collum.left.margin * 5))
+UI_LoadImage(cmdImgBelt, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdBelt = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdBelt", 32, 32, collum.right.x + 5, collum.right.y + 7 + (collum.right.margin * 5))
+UI_SetHint(cmdBelt, "Belt")
+UI_AddCompent(skillid, cmdImgBelt)
+UI_AddCompent(skillid, cmdBelt)
+
+cmdImgHandguard = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgHandguard", 41, 48, collum.right.x, collum.right.y + (collum.left.margin * 6))
+UI_LoadImage(cmdImgHandguard, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdHandguard = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdHandguard", 32, 32, collum.right.x + 5, collum.right.y + 7 + (collum.right.margin * 6))
+UI_SetHint(cmdHandguard, "Handguard")
+UI_AddCompent(skillid, cmdImgHandguard)
+UI_AddCompent(skillid, cmdHandguard)
+
+cmdImgFairy = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgFairy", 41, 48, collum.left.x + (collum.left.margin * 1.63), collum.left.y + (collum.left.margin * 6) + (collum.left.margin / 2.5))
+UI_LoadImage(cmdImgFairy, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdPet = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdPet", 32, 32, collum.left.x + 5 + (collum.left.margin * 1.63), collum.left.y + 7 + (collum.left.margin * 6) + (collum.left.margin / 2.5))
+UI_SetHint(cmdPet, "Fairy")
+UI_AddCompent(skillid, cmdImgFairy)
+UI_AddCompent(skillid, cmdPet)
+
+cmdImgHandPet = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgHandPet", 41, 48, collum.left.x + (collum.left.margin * 2 * 1.4), collum.left.y + (collum.left.margin * 6) + (collum.left.margin / 2.5))
+UI_LoadImage(cmdImgHandPet, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdRearPet = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdRearPet", 32, 32, collum.left.x + 5 + (collum.left.margin * 2 * 1.4), collum.left.y + 7 + (collum.left.margin * 6) + (collum.left.margin / 2.5))
+UI_SetHint(cmdRearPet, "Hand pet")
+UI_AddCompent(skillid, cmdImgHandPet)
+UI_AddCompent(skillid, cmdRearPet)
+
+cmdImgMount = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImgMount", 41, 48, collum.right.x - (collum.right.margin * 1.63), collum.right.y + (collum.right.margin * 6) + (collum.right.margin / 2.5))
+UI_LoadImage(cmdImgMount, "texture/gui/p0w-frmState.png", NORMAL, 41, 48, 640, 0)
+cmdMount = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmdMount", 32, 32, collum.right.x + 5 - (collum.right.margin * 1.63), collum.right.y + 7 + (collum.right.margin * 6) + (collum.right.margin / 2.5))
+UI_SetHint(cmdMount, "Mount")
+UI_AddCompent(skillid, cmdImgMount)
+UI_AddCompent(skillid, cmdMount)
+
+------
+--[[ Journal
+------
+skillid = UI_CreatePageItem(pgePublic)
+ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE)
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_NORMAL, 129, 46, 119, 690)
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_ACTIVE, 129, 46, 119, 736)
+UI_SetPos( ttlNum, 60 + 130, 1)
+UI_SetSize( ttlNum, 129, 46)
+
+trvJournal = UI_CreateCompent( frmState, TREE_TYPE, "trvJournal", 210, 400, 30, 80 )
+UI_SetIsDrag( trvEditor, TRUE )
+UI_TreeLoadImage( trvJournal, enumTreeAddImage, "texture/gui/old_gui/SystemBotton3.tga", 16, 16, 205, 120, 12, 12 )
+UI_TreeLoadImage( trvJournal, enumTreeSubImage, "texture/gui/old_gui/SystemBotton3.tga", 16, 16, 222, 120, 12, 12 )
+
+scrollid = UI_GetScroll( trvJournal)
+UI_SetSize( scrollid, 11, 1 )
+UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
+UI_SetSize( id, 13, 43 )
+
+UI_AddCompent(skillid, trvJournal)
+------
+-- Medal
+------
+skillid = UI_CreatePageItem(pgePublic)
+ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_NORMAL, 129, 46, 239, 690)
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_ACTIVE, 129, 46, 239, 736)
+UI_SetPos( ttlNum, 60 + 130 + 130, 1)
+UI_SetSize( ttlNum, 129, 46)
+
+------
+-- Titles
+------
+skillid = UI_CreatePageItem(pgePublic)
+ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_NORMAL, 129, 46, 359, 690)
+UI_LoadImage( ttlNum, "texture/gui/p0w-frmState.png", PAGE_ITEM_TITLE_ACTIVE, 129, 46, 359, 736)
+UI_SetPos( ttlNum, 60 + 130 + 130 + 130, 1)
+UI_SetSize( ttlNum, 129, 46)
+
+]]
