@@ -4030,8 +4030,8 @@ font\simsun.ttc	b2d90e297152d368f087bfcac7b188a4
 map\abandonedcity.map	2ad3384c7e8fac6e9666d42d75631e50
 map\abandonedcity.obj	d3e6b1c7f06499588614d1ce7eced4f3
 map\abandonedcity.rbo	d41d8cd98f00b204e9800998ecf8427e
-map\archipelagos.map	e4ebf4d81e068e4c6a6adf60a975f985
-map\archipelagos.obj	15aeacdedceb2e3231fc845aa509b07d
+map\archipelagos.map	e5fd5cd54e8231a7d81538ad8382276e
+map\archipelagos.obj	8c13b050cabc24f34bb518131b9bef86
 map\archipelagos.rbo	d41d8cd98f00b204e9800998ecf8427e
 map\bdlair.map	d4c48b6f5b3a9f90ad057e3bc76b4574
 map\bdlair.obj	a1ac0309c3a0f1bbb36876c3cc54a796
@@ -18674,11 +18674,11 @@ system\BugTrap.dll	de2225f6d43ec3d2dabccc10dd471b48
 system\CaLua.dll	5c55c71cce36c5c85e5266dd01a1d2a5
 system\discord-rpc.dll	b6fd682381b825d2ceba5995c296dde3
 system\en_US.res	63de64711605ad29ff11301536052db3
-system\Game.exe	291f1283d4fc57bb84907ccb3f3721db
+system\Game.exe	ec4de2ce45cc7b928260d68b299ff096
 system\icudt38.dll	9b5ac1badf16aea1a48dae77fca76670
 system\icuuc38.dll	395b5b053bc7505626e446f36b92d0c5
 system\libcurl.dll	b613b88a5a778361e570515c968c7350
-system\MindPower3D_D9R.dll	dfa5ac544b1e2435545ca70e6276af27
+system\MindPower3D_D9R.dll	5636ae510a71f277e04a09a3410fc7ef
 system\PAI.DLL	ecb6062b9a4026a7b525ce733e2adb82
 system\SDL.dll	a28d3c74676fc1bf398a7f91c8873b2f
 system\SDL_mixer.dll	210c22faec8c452b4f90f1ea253d9312
