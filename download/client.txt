@@ -18505,7 +18505,7 @@ music\sound\pc\10.wav	aa0e6d6fc2d9a4565a54442850bb1ef9
 music\sound\pc\11.wav	e181c20488e46e73bfbf8798712796b2
 music\sound\pc\12.wav	be507f7998ad0dd8a1bc007f4e19864a
 music\sound\pc\13.wav	98e55278cc863c162c280e2f696eac22
-scripts\kop.cfg	defd7b5f54f378990d519437a5b97cc9
+scripts\kop.cfg	defd7b5f54f378990d519437a5b97cc1
 scripts\lua\apple.luc	4c36543ee2e11dc7bbfded2674ce4532
 scripts\lua\Camera-big.clu	1c09a4759aee3e778cffcdbef6e428a3
 scripts\lua\Camera.clu	3f5d9f28366cf042bf45bab8c93a0110
