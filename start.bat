@@ -1,1 +1,0 @@
-START system/Game.exe startgame
