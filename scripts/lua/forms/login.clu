@@ -78,6 +78,14 @@ UI_LoadButtonImage( btnVersionCheck, "texture/gui/btnServer.png", 293, 49, 22, 3
 btnUpdate = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnUpdate", 253, 100, __left + 35, 340)
 UI_LoadButtonImage( btnUpdate, "texture/gui/btnServer.png", 253, 100, 328, 312, FALSE )
 
+imgProcessing = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgProcessing", 512, 29, -75, 405)
+UI_LoadImage( imgProcessing, "texture/gui/p0w-loading-mini.png", NORMAL, 512, 29, 0, 0)
+
+proProcessing = UI_CreateCompent( frmServer, PROGRESS_TYPE, "proProcessing", 512, 29, -75, 405)
+UI_LoadScaleImage( proProcessing, "texture/gui/p0w-loading-mini.png", PROGRESS_PROGRESS, 512, 29, 0, 29, 1.0, 1.0 )
+UI_SetHint( proProcessing, "File" )
+UI_SetProgressHintStyle( proProcessing, PROGRESS_HINT_NUM )
+
 -----------------------------------------------------------------------
 -- Login Form
 -----------------------------------------------------------------------
