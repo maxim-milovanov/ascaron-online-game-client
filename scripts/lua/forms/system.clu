@@ -539,17 +539,17 @@ btnClose = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnClose", 28, 26, 340, 1
 UI_LoadButtonImage( btnClose, "texture/gui/btnServer.png", 28, 26, 0, 512, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
-btnMazes = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnMazes", 91, 47, 5, 65 )
+btnMazes = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnMazes", 91, 47, 45 + 5, 65 )
 UI_LoadButtonImage( btnMazes, "texture/gui/btnServer.png", 91, 47, 859, 519, FALSE )
 
-btnAreas = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnAreas", 91, 47, 5 + 5 +91, 65 )
+btnAreas = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnAreas", 91, 47, 45 + 101, 65 )
 UI_LoadButtonImage( btnAreas, "texture/gui/btnServer.png", 91, 47, 950, 519, FALSE )
 
-btnBosses = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnBosses", 91, 47, 5 + 5 +91 +5 + 91, 65 )
+btnBosses = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnBosses", 91, 47, 45 + 197, 65 )
 UI_LoadButtonImage( btnBosses, "texture/gui/btnServer.png", 91, 47, 1041, 519, FALSE )
 
-btnNpc = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnNpc", 91, 47, 5 + 5 +91 +5 + 91 + 5 + 91, 65 )
-UI_LoadButtonImage( btnNpc, "texture/gui/btnServer.png", 91, 47, 1132, 519, FALSE )
+-- btnNpc = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnNpc", 91, 47, 45+ 293, 65 )
+-- UI_LoadButtonImage( btnNpc, "texture/gui/btnServer.png", 91, 47, 1132, 519, FALSE )
 
 local szTicketName = {}
 local szTicketPrice = {}
@@ -593,8 +593,8 @@ for page_id = 0, 3, 1 do
 		UI_SetLabelExFont( szTicketPrice[page_id][i], DEFAULT_FONT, FALSE, COLOR_WHITE )
 		UI_SetIsShow(szTicketPrice[page_id][i],FALSE)
 		
-		szTicketImgPrice[page_id][i] =  UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgPrice_".. page_id.."_" .. i, 16, 16, 270 + posx, 7 + _posy )
-		UI_LoadImage( szTicketImgPrice[page_id][i], "texture/gui/btnServer.png", NORMAL, 32, 32, 666, 431 )
+		szTicketImgPrice[page_id][i] =  UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgPrice_".. page_id.."_" .. i, 18, 18, 270 + posx, 7 + _posy )
+		UI_LoadImage( szTicketImgPrice[page_id][i], "texture/gui/p0w-frmInv.png", NORMAL, 60, 60, 346, 282)
 		
 		_posy = _posy + 16
 		szTicketDesc[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labDescription_"..page_id.."_"..i, 10, 150, 45+posx, _posy )

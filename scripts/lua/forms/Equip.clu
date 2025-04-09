@@ -25,45 +25,31 @@ labItemIMPnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemIMPnumber", 9
 UI_SetTextColor( labItemIMPnumber, COLOR_B1A58E )
 UI_SetLabelExFont( labItemIMPnumber, DEFAULT_FONT, FALSE, 4289901234 )
 
+grdMouseRight = UI_CreateCompent( frmInv, MENU_TYPE, "grdMouseRight", 92, 97, 240, 468 )
+UI_MenuLoadImage( grdMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_SetMargin( grdMouseRight, 10, 5, 5, 5 )
+UI_MenuLoadSelect( grdMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+
 ------
 -- 
 ------
-btnTmpBag = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnTmpBag", 26, 26, 175, 405 )
+btnTmpBag = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnTmpBag", 26, 26, 220, 405 )
 UI_LoadButtonImage(btnTmpBag, "texture/gui/p0w-frmInv.png", 59, 59, 479, 281, FALSE )
 UI_SetHint(btnTmpBag, "Temporary bag (ALT+D)" )
 
 ------
--- §¢§Ý§à§Ü§Ú§â§à§Ó§Ü§Ñ §á§â§Ö§Õ§Þ§Ö§ä§Ñ
-------
-btnLockItem = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnLockItem", 26, 26, 206, 405 )
-UI_LoadImage( btnLockItem, "texture/gui/p0w-frmInv.png", 0, 59, 59, 550, 281)
-UI_LoadImage( btnLockItem, "texture/gui/p0w-frmInv.png", 1, 59, 59, 550, 281)
-UI_LoadImage( btnLockItem, "texture/gui/p0w-frmInv.png", 2, 59, 59, 550, 281)
-UI_SetHint( btnLockItem, "Lock Item" )
-
-------
 -- §¢§Ý§à§Ü§Ú§â§à§Ó§Ñ§Ü§Ñ §Ú§ß§Ó§Ö§ß§ä§à§â§ñ
 ------
-btnLock = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnLock", 22, 26, 237, 405 )
+local btnlockx = 255
+btnLock = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnLock", 22, 26, btnlockx, 405 )
 UI_FormSetHotKey( btnLock, ALT_KEY, HOTKEY_B )
 
-imgLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgLock", 22, 26, 237, 405 )
+imgLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgLock", 22, 26, btnlockx, 405 )
 UI_LoadImage( imgLock, "texture/gui/p0w-frmInv.png", NORMAL, 60, 61, 665, 281, FALSE )
 UI_SetHint( imgLock, "Lock Inventory" )
 
-imgUnLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgUnLock", 22, 26, 237, 405 )
+imgUnLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgUnLock", 22, 26, btnlockx, 405 )
 UI_LoadImage( imgUnLock, "texture/gui/p0w-frmInv.png", NORMAL, 49, 60, 613, 281, FALSE )
-
-------
--- §¬§à§â§Ù§Ú§ß§Ñ
-------
-btnbrush = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnbrush", 20, 26, 237 + 31, 405 )
-UI_LoadButtonImage( btnbrush, "texture/gui/p0w-frmInv.png", 52, 62, 732, 281, FALSE )
-
-cmdLost = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLost", 32, 32, 237 + 31, 405)
-UI_SetTag( cmdLost, 999 )
-UI_SetHint( cmdLost, "Delete" )
-
 
 ------
 -- §£§â§Ö§Þ§Ö§ß§ß§í§Û §Þ§Ö§ê§à§Ü

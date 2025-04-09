@@ -398,7 +398,14 @@ frmMainFun = UI_CreateForm( "frmMainFun", FALSE, 215, 30, 185, 566, TRUE, FALSE 
 UI_ShowForm( frmMainFun, TRUE )
 UI_AddFormToTemplete( frmMainFun, FORM_MAIN )
 UI_FormSetIsEscClose( frmMainFun, FALSE )
-UI_SetFormStyle( frmMainFun, 11 )---сроб
+UI_SetFormStyle( frmMainFun, 11 )
+
+btnSitDown = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSitDown", 50, 50, 150, -100 )
+UI_LoadButtonImage( btnSitDown, "texture/gui/p0w-frmInv.png", 50, 50, 0, 469, TRUE )
+
+btnStandUp = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnStandUp", 50, 50, 150, -100 )
+UI_LoadButtonImage( btnStandUp, "texture/gui/p0w-frmInv.png", 50, 50, 0, 519, TRUE )
+UI_SetIsShow(btnStandUp, FALSE)
 
 imgMainFun = UI_CreateCompent( frmMainFun, IMAGE_TYPE, "imgMainFun", 367, 80, -173, -52 )
 UI_LoadImage( imgMainFun, "texture/gui/system-btn.png", NORMAL, 367, 80, 0, 146+23 )

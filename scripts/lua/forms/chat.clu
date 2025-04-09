@@ -114,7 +114,7 @@ UI_MenuLoadSelect( frndMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 
 -- 增加菜单
 UI_MenuAddText( frndMouseRight, "Detailed Info" )
-UI_MenuAddText( frndMouseRight, "Send message" )
+--UI_MenuAddText( frndMouseRight, "Send message" )
 UI_MenuAddText( frndMouseRight, "Delete Friend" )
 UI_MenuAddText( frndMouseRight, "PM" )
 
@@ -132,7 +132,7 @@ UI_MenuLoadSelect( groupMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 
 -- 增加菜单
 UI_MenuAddText( groupMouseRight, "Add Friend" )
-UI_MenuAddText( groupMouseRight, "Send message" )
+--UI_MenuAddText( groupMouseRight, "Send message" )
 UI_MenuAddText( groupMouseRight, "PM" )
 UI_MenuAddText( groupMouseRight, "Kick" )
 
@@ -147,7 +147,7 @@ UI_MenuLoadSelect( roadMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 -- 增加菜单
 UI_MenuAddText( roadMouseRight, "Add Friend" )
 UI_MenuAddText( roadMouseRight, "Party Invite" )
-UI_MenuAddText( roadMouseRight, "Send message" )
+--UI_MenuAddText( roadMouseRight, "Send message" )
 UI_MenuAddText( roadMouseRight, "PM" )
 
 ---创建当前会话右键表单
