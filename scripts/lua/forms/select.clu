@@ -166,6 +166,13 @@ for id = 1, 8, 1 do
 	UI_LoadButtonImage( name, "texture/gui/p0w-create-cha.png", 85, 93, 0, 0, TRUE )
 end
 
+labJob = UI_CreateCompent(frmQuit, LABELEX_TYPE, "labJob", 180, 30, 0, 0)
+UI_SetTextColor(labJob, COLOR_WHITE)
+UI_SetLabelExFont(labJob, BIGFONT01, TRUE, COLOR_BLACK )
+
+btnJobHelp = UI_CreateCompent(frmQuit, BUTTON_TYPE, "btnJobHelp", 30, 30, 300, 650)
+UI_LoadButtonImage(btnJobHelp, "texture/gui/p0w-frmInv.png", 30, 30, 0, 574, TRUE)
+
 btnNo = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btnNo", 28, 26, 398, 54 )
 UI_LoadButtonImage( btnNo, "texture/gui/btnServer.png", 28, 26, 0, 512, TRUE )
 

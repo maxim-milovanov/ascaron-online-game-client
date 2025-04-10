@@ -1,0 +1,1 @@
+START system64\game.exe startgame
