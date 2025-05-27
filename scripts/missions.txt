@@ -1,94 +1,122 @@
-1	Welcome!	Добро пожаловать!	2
-2	New place	Новое место	2
-3	First acquaintance	Первое знакомство	2
-4	Fairy provisions	Провиант для фей	2
-5	Secretary	Секретарь	2
-10	Old Jack	Старина Джек	2
-11	Crabs	Крабы	2
-12	Where are my tools?	Где мои инструменты?	2
-13	Report to Salvier	Доложите Сальверу	2
-14	Mines	Шахты	2
-15	Missing people	Пропажа людей	2
-16	Immersion	Погружение	2
-17	Mysterious door	Таинственная дверь	2
-18	Legendary artifact	Легендарный артефакт	2
-19	Mines’ closure	Закрытие шахт	2
-20	Meet Sinbad	Познакомься с Sinbad	2
-21	Getting to know the blueprints	Знакомство с чертежами	2
-22	Acquaintance with Wood	Знакомство с древесиной	2
-23	Pine trees	Сосны	2
-24	Ingredients for Sinbad	Ингредиенты для Sinbad	2
-25	Manufacture	Производство	2
-26	Grandmother Granny	Бабушка Granny	2
-27	Acquaintance with Fishing	Знакомство с рыболовством	2
-28	First fish	Первая рыбка	2
-29	There is fish, so you can eat it	Рыба есть, можно и поесть	2
-30	Cooking	Готовим	2
-31	You are ready	Ты готов	2
-32	Danger	Опасность	2
-33	Village on fire	Деревня в огне	2
-34	Leader’s head	Голова лидера	2
-35	Smuggling	Контрабанда	2
-36	They want to see you	Тебя хотят видеть	2
-37	Unusual request	Необычная просьба	2
-56	Talk with Pet Tamer	Поговори с Pet Tamer	2
-38	It’s time to eat	Время кушать	2
-39	Mount	Ездовое животное	2
-40	Head of Navy	Глава флота	2
-41	Ghost ship	Призрачный корабль	2
-42	Cursed sailors	Проклятые моряки	2
-43	Cursed Blade	Проклятый клинок	2
-44	Broken Chains	Разорванные цепи	2
-45	No rest for the dead	Нет покоя мертвецам	2
-46	Whispers of the Dead	Шепот мертвых	2
-47	The Shackles of Curse	Оковы проклятия	2
-48	A power that my father never ever dreamed of	Сила, которая и не снилась моему отцу	2
-49	Helping the blacksmith	Помощь кузнецу	2
-50	Disassembly of items	Разбор предметов	2
-51	Crafting	Ремесло	2
-52	Report to the head of navy	Доложите главе флота	2
-100	Introducing Grany Nila	Знакомство с Grany Nila	2
-101	Upgrade equipment	Улучшение экипировки	2
-102	Go back to Dessaro	Возвращайся к Dessaro	2
-103	The Zephyr Archipelagos	Архипелаг Зефир	2
-104	Подготовка к Стуже	Подготовка к Стуже	2
-105	Socket under gem	Слот под самоцвет	2
-106	Fusion gem	Ковка самоцвета	2
-107	Report	Отчет	2
-108	Пиратская холера	Пиратская холера	2
-109	Preparation	Подготовка	2
-110	Upgrade equipment: Efficiency	Улучшение экипировки: Эффективность	2
-111	Your ready	Ты готов	2
-112	Island of Gold Roger: Good Luck	Остров Золотого Роджера: Удачи	2
-501	A trivial task	Пустяковое задание	4
-502	Hunting for a new mount	Охота на нового спутника	4
-503	Rare catch	Редкий улов	4
-504	Combination	Комбинирование	4
-505	Forging	Вставка самоцвета	4
-506	Improving equipment	Улучшение экипировки	4
-507	Improving	Улучшение	4
-508	Beginner's manufacture	Производство начинающего	4
-509	Manufacture of the experienced	Производство бывалого	4
-510	Manufacture expert	Производство эксперта	4
-511	Help	Помощь	4
-512	Culinary Basics	Кулинарные основы	4
-513	Culinary Master	Кулинарный мастер	4
-514	Culinary guru	Кулинарный гуру	4
-515	A dozen crucian carps	Десяток карасей	4
-516	Fishing time	Время рыбалки	4
-517	Advanced Fishing	Продвинутая рыбалка	4
-518	Trophy fish	Трофейная рыба	4
-519	Resources	Ресурсы	4
-520	Resources	Ресурсы	4
-521	First level craft	Ремесло первого уровня	4
-522	Craft for advanced	Ремесло для продвинутого	4
-523	A challenging craft task	Непростая ремесленная задачка	4
-524	Initial research	Начальное исследование	4
-525	Adventurer's Research	Исследование авантюриста	4
-526	Wandering soul	Блуждающая душа	4
-527	Initial research	Начальное исследование	4
-528	Adventurer's Research	Исследование авантюриста	4
-529	Initial research	The Dark Knight	4
-530	Mines	Шахты	4
-531	Archipelago of the Cold	Архипелаг Стужи	4
-532	Damned Therans	Проклятые Теранцы	4
+1	Welcome!	Добро пожаловать!	2 
+2	New place	Новое место	2 
+3	First acquaintance	Первое знакомство	2 
+4	Fairy provisions	Провиант для фей	2 
+5	Secretary	Секретарь	2 
+10	Old Jack	Старина Джек	2 
+11	Crabs	Крабы	2 
+12	Where are my tools?	Где мои инструменты?	2 
+13	Report to Salvier	Доложите Сальверу	2 
+14	Mines	Шахты	2 
+15	Missing people	Пропажа людей	2 
+16	Immersion	Погружение	2 
+17	Mysterious door	Таинственная дверь	2 
+18	Legendary artifact	Легендарный артефакт	2 
+19	Mines’ closure	Закрытие шахт	2 
+20	Meet Sinbad	Познакомься с Sinbad	2 
+21	Getting to know the blueprints	Знакомство с чертежами	2 
+22	Acquaintance with Wood	Знакомство с древесиной	2 
+23	Pine trees	Сосны	2 
+24	Ingredients for Sinbad	Ингредиенты для Sinbad	2 
+25	Manufacture	Производство	2 
+26	Grandmother Granny	Бабушка Granny	2 
+27	Acquaintance with Fishing	Знакомство с рыболовством	2 
+28	First fish	Первая рыбка	2 
+29	There is fish, so you can eat it	Рыба есть, можно и поесть	2 
+30	Cooking	Готовим	2 
+31	You are ready	Ты готов	2 
+32	Danger	Опасность	2 
+33	Village on fire	Деревня в огне	2 
+34	Leader’s head	Голова лидера	2 
+35	Smuggling	Контрабанда	2 
+36	They want to see you	Тебя хотят видеть	2 
+37	Unusual request	Необычная просьба	2 
+56	Talk with Pet Tamer	Поговори с Pet Tamer	2 
+38	It’s time to eat	Время кушать	2 
+39	Mount	Ездовое животное	2 
+40	Head of Navy	Глава флота	2 
+41	Ghost ship	Призрачный корабль	2 
+42	Cursed sailors	Проклятые моряки	2 
+43	Cursed Blade	Проклятый клинок	2 
+44	Broken Chains	Разорванные цепи	2 
+45	No rest for the dead	Нет покоя мертвецам	2 
+46	Whispers of the Dead	Шепот мертвых	2 
+47	The Shackles of Curse	Оковы проклятия	2 
+48	A power that my father never ever dreamed of	Сила, которая и не снилась моему отцу	2 
+49	Helping the blacksmith	Помощь кузнецу	2 
+50	Disassembly of items	Разбор предметов	2 
+51	Crafting	Ремесло	2 
+52	Report to the head of navy	Доложите главе флота	2 
+100	Introducing Grany Nila	Знакомство с Grany Nila	2 
+101	Upgrade equipment	Улучшение экипировки	2 
+102	Go back to Dessaro	Возвращайся к Dessaro	2 
+103	The Zephyr Archipelagos	Архипелаг Зефир	2 
+104	Подготовка к Стуже	Подготовка к Стуже	2 
+105	Socket under gem	Слот под самоцвет	2 
+106	Fusion gem	Ковка самоцвета	2 
+107	Report	Отчет	2 
+108	Пиратская холера	Пиратская холера	2 
+109	Preparation	Подготовка	2 
+110	Upgrade equipment: Efficiency	Улучшение экипировки: Эффективность	2 
+111	Your ready	Ты готов	2 
+112	Island of Gold Roger: Good Luck	Остров Золотого Роджера: Удачи	2 
+114	Blood and Sand	Кровь и песок	2 
+115	Coliseum	Колизей	2 
+116	A fight to the death	Битва на смерть	2 
+117	Contracts	Контракты	2 
+118	He's still alive!	Он всё ещё жив!	2 
+119	Behemoth lair	Логово Бехамота	2 
+120	The Death of Behamoth	Смерть Бехамота	2 
+121	Autumn Forest	Осенний лес	2 
+122	Strange behavior	Странное поведение	2 
+123	Records	Записи	2 
+124	Ancient Weapon	Древнее оружие	2 
+125	Ancient Mage	Древний маг	2 
+126	Archaeologists	Археологи	2 
+127	Forsaken City	Затерянный город	2 
+128	Cleansing of the Former Inhabitants	Зачистка от бывших жителей	2 
+129	Report what happened	Доложить, что произошло	2 
+130	Sacred Forest	Священный лес	2 
+131	The Legend of the Sacred Forest	Легенда о Священном лесе	2 
+132	The Path to the Entrance of the Demonic World	Путь ко входу в Мир Демонов	2 
+133	Demonic World	Мир Демонов	2 
+134	Ice Mountain	Ледяная гора	2 
+135	In Search of Shan	В поисках Shan	2 
+501	A trivial task	Пустяковое задание	4 
+502	Hunting for a new mount	Охота на нового спутника	4 
+503	Rare catch	Редкий улов	4 
+504	Combination	Комбинирование	4 
+505	Forging	Вставка самоцвета	4 
+506	Improving equipment	Улучшение экипировки	4 
+507	Improving	Улучшение	4 
+508	Beginner's manufacture	Производство начинающего	4 
+509	Manufacture of the experienced	Производство бывалого	4 
+510	Manufacture expert	Производство эксперта	4 
+511	Help	Помощь	4 
+512	Culinary Basics	Кулинарные основы	4 
+513	Culinary Master	Кулинарный мастер	4 
+514	Culinary guru	Кулинарный гуру	4 
+515	A dozen crucian carps	Десяток карасей	4 
+516	Fishing time	Время рыбалки	4 
+517	Advanced Fishing	Продвинутая рыбалка	4 
+518	Trophy fish	Трофейная рыба	4 
+519	Resources	Ресурсы	4 
+520	Resources	Ресурсы	4 
+521	First level craft	Ремесло первого уровня	4 
+522	Craft for advanced	Ремесло для продвинутого	4 
+523	A challenging craft task	Непростая ремесленная задачка	4 
+524	Initial research	Начальное исследование	4 
+525	Adventurer's Research	Исследование авантюриста	4 
+526	Wandering soul	Блуждающая душа	4 
+527	Initial research	Начальное исследование	4 
+528	Adventurer's Research	Исследование авантюриста	4 
+529	Initial research	The Dark Knight	4 
+530	Mines	Шахты	4 
+531	Archipelago of the Cold	Архипелаг Стужи	4 
+532	Damned Therans	Проклятые Теранцы	4 
+533	Cleaning of mines	Зачистка шахт	4 
+534	Destroying bosses	Уничтожение боссов	4 
+535	Behemoth Hearth	Сердце Бехамота	4 
+536	Beginner-Level Survival	Выживание начального уровня	4 
+537	Intermediate Survival	Выживание среднего уровня	4 
+538	High-Level Survival	Выживание высокого уровня	4 
