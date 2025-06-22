@@ -9,7 +9,7 @@ UI_FormSetIsEscClose( frmServer, FALSE )
 local __left = 16
 local __up = 75
 
-imgBackground = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBackground", 345, 329, 0, 0 )
+imgBackground = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBackground", 345, 250, 0, 0 )
 UI_LoadImage( imgBackground, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
 
 imgSelectGate = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgSelectGate", 307, 41, 25, 20 )
@@ -19,50 +19,39 @@ btnNo = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnNo", 28, 26, 290, 18 )
 UI_LoadButtonImage( btnNo, "texture/gui/btnServer.png", 28, 26, 0, 512, TRUE )
 UI_SetAlpha(btnNo,210)
 
--- worldwide
-btnServer_0 = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnServer_0", 320, 71, __left, __up )
-UI_LoadButtonImage( btnServer_0, "texture/gui/btnServer.png", 320, 71, 8, 8, TRUE )
+-----------------
+																	-- §°§ä§ã§ä§å§á §ã§Ý§Ö§Ó§Ñ (§Ó§Ö§ã§î §ã§á§Ú§ã§à§Ü)
+																		-- §°§ä§ã§ä§å§á §ã§Ó§Ö§â§ç§å (§Ó§Ö§ã§î §ã§á§Ú§ã§à§Ü)
+serverList = UI_CreateListView( frmServer, "serverList", 250, 190, 50, 50, 50, 50 )
+--UI_SetMargin( serverList, 30, 20, 15, 0 )
+UI_ListViewSetTitle(serverList, 0, 185, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(serverList, 1, 32, "", 0, 0, 0, 0)
+UI_ListSetItemMargin(serverList, 0, 3 )						-- §±§Ö§â§Ö§Þ§Ö§ë§Ö§ß§Ú§Ö §ä§Ö§Ü§ã§ä§Ñ §Ó§ß§å§ä§â§Ú §ã§ä§â§à§Ü§Ú
+UI_SetListRowHeight(serverList, 40 )							-- §°§ä§ã§ä§å§á §ã§ä§â§à§Ü §Þ§Ö§Ø§Õ§å §ã§à§Ò§à§Û
+UI_SetListIsMouseFollow(serverList, TRUE)
+UI_ListLoadSelectImage(serverList, "texture/gui/frmBackground.png", 79, 13, 100, 300 )
+UI_SetImageAlpha(serverList, 134)
+--UI_SetListFontColor(serverList, COLOR_BLACK, COLOR_RED )
 
-labServer_0 = UI_CreateCompent( frmServer, LABELEX_TYPE, "labServer_0", 200, 20, __left + 37, __up + 38 )
-UI_SetCaption( labServer_0, "Ping: 0ms" )
-UI_SetTextColor( labServer_0, COLOR_958273 )
-UI_SetLabelExFont( labServer_0, FONT016, TRUE, COLOR_BLACK )
+scrollid = UI_GetScroll(serverList)
+UI_SetSize( scrollid, 11, 1 )
+UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
 
--- europe
-btnServer_1 = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnServer_1", 320, 71, __left, __up + (71 + 6) )
-UI_LoadButtonImage( btnServer_1, "texture/gui/btnServer.png", 320, 71, 8, 8 + 71, TRUE )
+id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
+UI_SetSize( id, 13, 43 )
+--------------
 
-labServer_1 = UI_CreateCompent( frmServer, LABELEX_TYPE, "labServer_1", 200, 20, __left + 37, __up + (71 + 6) + 38 )
-UI_SetCaption( labServer_1, "Ping: 0ms" )
-UI_SetTextColor( labServer_1, COLOR_958273 )
-UI_SetLabelExFont( labServer_1, FONT016, TRUE, COLOR_BLACK )
+-- §£§Ö§â§ã§Ú§ñ §Ü§Ý§Ú§Ö§ß§ä§Ñ
+labGameVersion = UI_CreateCompent( frmServer, LABELEX_TYPE, "labGameVersion", 345, 20, 40, 470 )
+UI_SetCaption( labGameVersion, "--------------------------------" )
+UI_SetTextHtmlColor(labGameVersion, "808080")
+UI_SetLabelExFont( labGameVersion, FONT016, TRUE, COLOR_BLACK )
 
--- stall mode
-btnServer_2 = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnServer_2", 320, 71, __left, __up + (71 + 6) + (71 + 6) )
-UI_LoadButtonImage( btnServer_2, "texture/gui/btnServer.png", 320, 71, 8, 8 + 71 + 71, TRUE )
-
-labServer_2 = UI_CreateCompent( frmServer, LABELEX_TYPE, "labServer_2", 200, 20, __left + 37, __up + (71 + 6) + (71 + 6) + 38 )
-UI_SetCaption( labServer_2, "Ping: 0ms" )
-UI_SetTextColor( labServer_2, COLOR_958273 )
-UI_SetLabelExFont( labServer_2, FONT016, TRUE, COLOR_BLACK )
-
--- other
-btnServer_3 = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnServer_3", 320, 71, __left, __up + (71 + 6) + (71 + 6) + (71 + 6) )
-UI_LoadButtonImage( btnServer_3, "texture/gui/btnServer.png", 320, 71, 8, 8 + 71 + 71 + 71, TRUE )
-
-labServer_3 = UI_CreateCompent( frmServer, LABELEX_TYPE, "labServer_3", 200, 20, __left + 77, __up + (71 + 6) + (71 + 6) + (71 + 6) + 38 )
-UI_SetCaption( labServer_3, "Ping: 0ms" )
-UI_SetTextColor( labServer_3, COLOR_958273 )
-UI_SetLabelExFont( labServer_3, FONT016, TRUE, COLOR_BLACK )
-
--- other
-btnServer_4 = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnServer_4", 320, 71, __left, __up + (71 + 6) + (71 + 6) + (71 + 6) + (71 + 6) )
-UI_LoadButtonImage( btnServer_4, "texture/gui/btnServer.png", 320, 71, 8, 8 + 71 + 71 + 71, TRUE )
-
-labServer_4 = UI_CreateCompent( frmServer, LABELEX_TYPE, "labServer_4", 200, 20, __left + 77, __up + (71 + 6) + (71 + 6) + (71 + 6) + (71 + 6) + 38 )
-UI_SetCaption( labServer_4, "Ping: 0ms" )
-UI_SetTextColor( labServer_4, COLOR_958273 )
-UI_SetLabelExFont( labServer_4, FONT016, TRUE, COLOR_BLACK )
+labGameVersionDate = UI_CreateCompent( frmServer, LABELEX_TYPE, "labGameVersionDate", 345, 20, 75, 500 )
+UI_SetCaption(labGameVersionDate, "Last update: --.--.----" )
+UI_SetTextHtmlColor(labGameVersionDate, "808080")
+UI_SetLabelExFont(labGameVersionDate, FONT016, TRUE, COLOR_BLACK )
 
 -- §³§ä§Ñ§ä§å§ã §à§Ò§ß§à§Ó§Ý§Ö§ß§Ú§ñ
 labStatus = UI_CreateCompent( frmServer, LABELEX_TYPE, "labStatus", 345, 20, -25, 370 )

@@ -632,6 +632,10 @@ function UI_SetTextColor( id, color )
 	CLU_Call( "UI_SetTextColor", id, color )
 end
 
+function UI_SetTextHtmlColor( id, color )
+	CLU_Call( "UI_SetTextColor", id, argbColor(color) )
+end
+
 -- 设置grid单元间距,默认为2
 function UI_SetGridSpace( id, x, y )
 	CLU_Call( "UI_SetGridSpace", id, x, y )
@@ -905,17 +909,20 @@ function addEquipGroup(X,Y,Xoff,Yoff,names,form,skillid)
 	end
 end
 
+------
+-- Конвертация цвета html to argb
+------
 function argbColor(hex)
-    -- Разбираем шестнадцатеричное значение цвета
-    local r = tonumber(hex:sub(1, 2), 16)
-    local g = tonumber(hex:sub(3, 4), 16)
-    local b = tonumber(hex:sub(5, 6), 16)
+    -- Преобразуем HEX в компоненты R, G, B
+    local r = tonumber(string.sub(hex, 1, 2), 16)
+    local g = tonumber(string.sub(hex, 3, 4), 16)
+    local b = tonumber(string.sub(hex, 5, 6), 16)
     
-    -- Добавляем альфа-канал (255 - полностью непрозрачный)
-    local a = 255
+    local a = 255  -- полностью непрозрачный
 
-    -- Конвертируем в число (ARGB в little-endian формате)
-    return a * 2^24 + r * 2^16 + g * 2^8 + b
+    -- Считаем значение ARGB вручную через умножение
+    return a * 16777216 + r * 65536 + g * 256 + b
+    -- 16777216 = 2^24, 65536 = 2^16, 256 = 2^8
 end
 
 UI_ItemBarLoadImage( "texture/ui/system/progress.tga", 64, 16, 0, 0 )
