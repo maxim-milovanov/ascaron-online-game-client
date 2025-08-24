@@ -884,3 +884,145 @@ labSeconds = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labSeconds", 33, 33, 3
 UI_SetCaption( labSeconds, "30s" )
 UI_SetTextColor( labSeconds, COLOR_WHITE )
 UI_SetLabelExFont( labSeconds, FONT016, FALSE, COLOR_WHITE )
+
+------
+-- Set Trade
+------
+frmSetTrade = UI_CreateForm( "frmSetTrade", FALSE, 340, 400, 100, 50, TRUE, FALSE )
+UI_ShowForm( frmSetTrade, FALSE )
+UI_AddFormToTemplete( frmSetTrade, FORM_MAIN )
+UI_FormSetIsEscClose( frmSetTrade, TRUE )
+UI_SetIsDrag(frmSetTrade, FALSE)
+UI_SetFormStyle(frmSetTrade, 1)
+UI_FormSetHotKey(frmSetTrade, ALT_KEY, HOTKEY_X)
+
+imgBackground = UI_CreateCompent( frmSetTrade, IMAGE_TYPE, "imgBackground", 340, 400, 0, 0 )
+UI_LoadImage( imgBackground, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
+
+local x, y
+
+labTitle1 = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labTitle1", 33, 33, 35, 40)
+UI_SetCaption(labTitle1, "Choose 1 reward from each section")
+UI_SetTextColor(labTitle1, argbColor("f2efde"))
+UI_SetLabelExFont(labTitle1, FONT_14, FALSE, COLOR_WHITE)
+
+labStep1 = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labStep1", 33, 33, 45, 75)
+UI_SetCaption(labStep1, "1:")
+UI_SetTextColor(labStep1, argbColor("FFFFFF"))
+UI_SetLabelExFont(labStep1, FONT24, FALSE, COLOR_WHITE)
+
+labStep2 = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labStep2", 33, 33, 45, 75 + 47)
+UI_SetCaption(labStep2, "2:")
+UI_SetTextColor(labStep2, argbColor("FFFFFF"))
+UI_SetLabelExFont(labStep2, FONT24, FALSE, COLOR_WHITE)
+
+labStep3 = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labStep3", 33, 33, 45, 75 + 47 + 50)
+UI_SetCaption(labStep3, "3:")
+UI_SetTextColor(labStep3, argbColor("FFFFFF"))
+UI_SetLabelExFont(labStep3, FONT24, FALSE, COLOR_WHITE)
+
+labStep4 = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labStep4", 33, 33, 45, 75 + 47 + 50 + 51)
+UI_SetCaption(labStep4, "4:")
+UI_SetTextColor(labStep4, argbColor("FFFFFF"))
+UI_SetLabelExFont(labStep4, FONT24, FALSE, COLOR_WHITE)
+
+labTitle2 = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labTitle2", 33, 33, 90, 270)
+UI_SetCaption(labTitle2, "Claim set once!")
+UI_SetTextColor(labTitle2, argbColor("feaf00"))
+UI_SetLabelExFont(labTitle2, FONT20, FALSE, COLOR_WHITE)
+
+------
+-- Fairy
+------
+x, y = 80, 65
+sltImgfStr = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltImgfStr", 36, 36, x, y)
+UI_LoadImage(sltImgfStr, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0 )
+grdfStr = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, "grdfStr", 32, 32, x + 2, y + 2)
+
+x = x + 40
+sltImgfCon = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltImgfCon", 36, 36, x, y)
+UI_LoadImage(sltImgfCon, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0 )
+grdfCon = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, "grdfCon", 32, 32, x + 2, y + 2)
+
+x = x + 40
+sltImgfAgi = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltImgfAgi", 36, 36, x, y)
+UI_LoadImage(sltImgfAgi, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0 )
+grdfAgi = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, "grdfAgi", 32, 32, x + 2, y + 2)
+
+x = x + 40
+sltImgfDex = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltImgfDex", 36, 36, x, y)
+UI_LoadImage(sltImgfDex, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0 )
+grdfDex = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, "grdfDex", 32, 32, x + 2, y + 2)
+
+x = x + 40
+sltImgfSta = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltImgfSta", 36, 36, x, y)
+UI_LoadImage(sltImgfSta, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0 )
+grdfSta = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, "grdfSta", 32, 32, x + 2, y + 2)
+
+------
+-- Item type 1
+------
+x, y = 80, y + 50
+
+for pos = 0, 2, 1 do
+	if (pos > 0) then
+		x = x + 40
+	end
+	
+	local label = string.format("Item1_%d", pos)
+	
+	sltLabel = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltLabel", 36, 36, x, y)
+	UI_LoadImage(sltLabel, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0)
+	
+	label = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, label, 32, 32, x + 2, y + 2)
+end
+
+------
+-- Item type 2
+------
+x, y = 80, y + 50
+
+for pos = 0, 2, 1 do
+	if (pos > 0) then
+		x = x + 40
+	end
+	
+	local label = string.format("Item2_%d", pos)
+	
+	sltLabel = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltLabel", 36, 36, x, y)
+	UI_LoadImage(sltLabel, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0)
+	
+	label = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, label, 32, 32, x + 2, y + 2)
+end
+
+
+------
+-- Item type 3
+------
+x, y = 80, y + 50
+
+for pos = 0, 4, 1 do
+	if (pos > 0) then
+		x = x + 40
+	end
+	
+	local label = string.format("Item3_%d", pos)
+	
+	sltLabel = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "sltLabel", 36, 36, x, y)
+	UI_LoadImage(sltLabel, "texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0)
+	
+	label = UI_CreateCompent(frmSetTrade, COMMAND_ONE_TYPE, label, 32, 32, x + 2, y + 2)
+end
+
+------
+
+imgCost = UI_CreateCompent(frmSetTrade, IMAGE_TYPE, "imgCost", 32, 30, 75, 300)
+UI_LoadImage(imgCost, "texture/gui/p0w-frmInv.png", NORMAL, 57, 55, 416, 284)
+
+labCost = UI_CreateCompent(frmSetTrade, LABELEX_TYPE, "labCost", 33, 33, 135, 305)
+UI_SetCaption(labCost, "0")
+UI_SetTextColor(labCost, argbColor("fbf3e0"))
+UI_SetLabelExFont(labCost, FONT28, FALSE, COLOR_WHITE)
+
+btnBuy = UI_CreateCompent( frmSetTrade, BUTTON_TYPE, "btnBuy", 139, 47, 100, 345 )
+UI_LoadButtonImage( btnBuy, "texture/gui/p0w-wardrobe.png", 139, 47, 743, 166, FALSE)

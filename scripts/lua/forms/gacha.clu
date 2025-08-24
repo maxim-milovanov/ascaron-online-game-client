@@ -1,0 +1,39 @@
+frmGacha = UI_CreateForm( "frmGacha", FALSE, 650, 500, 198, 160, TRUE, FALSE )
+--UI_FormSetHotKey( frmGacha, ALT_KEY, HOTKEY_I )
+UI_ShowForm( frmGacha, FALSE )
+UI_AddFormToTemplete( frmGacha, FORM_MAIN )
+UI_SetIsDrag( frmGacha, TRUE )
+
+setBackground(frmGacha, "Gacha", true, 650, 500, 235)
+
+d3dSkin = UI_CreateCompent(frmGacha, UI3D_COMPENT, "d3dSkin", 100, 100, 400, 60)
+
+listItems = UI_CreateListView(frmGacha, "listItems", 250, 350, 20, 35, 50, 50 )
+--UI_SetMargin( listItems, 30, 20, 15, 0 )
+UI_ListViewSetTitle(listItems, 0, 34, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listItems, 1, 145, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listItems, 2, 25, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listItems, 3, 30, "", 0, 0, 0, 0)
+UI_ListSetItemMargin(listItems, 0, 3 )						-- §±§Ö§â§Ö§Þ§Ö§ë§Ö§ß§Ú§Ö §ä§Ö§Ü§ã§ä§Ñ §Ó§ß§å§ä§â§Ú §ã§ä§â§à§Ü§Ú
+UI_SetListRowHeight(listItems, 40 )							-- §°§ä§ã§ä§å§á §ã§ä§â§à§Ü §Þ§Ö§Ø§Õ§å §ã§à§Ò§à§Û
+UI_SetListIsMouseFollow(listItems, TRUE)
+UI_ListLoadSelectImage(listItems, "texture/gui/frmBackground.png", 79, 13, 100, 300 )
+UI_SetImageAlpha(listItems, 134)
+--UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
+
+scrollid = UI_GetScroll(listItems)
+UI_SetSize( scrollid, 11, 1 )
+UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
+UI_SetSize( id, 13, 43 )
+
+btnOpen1Box = UI_CreateCompent(frmGacha, BUTTON_TYPE, "btnOpen1Box", 139, 47, 320, 450)
+UI_LoadButtonImage(btnOpen1Box, "texture/gui/p0w-wardrobe.png", 139, 47, 743, 166, FALSE)
+
+grdPrizeItems = UI_CreateCompent(frmGacha, GOODS_GRID_TYPE, "grdPrizeItems", 400, 160, 270, 240) 
+UI_SetGridSpace( grdPrizeItems, 3, 3)
+UI_SetGridContent( grdPrizeItems, 3, 7)
+UI_SetGridUnitSize( grdPrizeItems, 50, 40 )
+UI_SetMargin( grdPrizeItems, 2, 2, 0, 0 )

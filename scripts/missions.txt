@@ -1,122 +1,122 @@
-1	Welcome!	Добро пожаловать!	2 
-2	New place	Новое место	2 
-3	First acquaintance	Первое знакомство	2 
-4	Fairy provisions	Провиант для фей	2 
-5	Secretary	Секретарь	2 
-10	Old Jack	Старина Джек	2 
-11	Crabs	Крабы	2 
-12	Where are my tools?	Где мои инструменты?	2 
-13	Report to Salvier	Доложите Сальверу	2 
-14	Mines	Шахты	2 
-15	Missing people	Пропажа людей	2 
-16	Immersion	Погружение	2 
-17	Mysterious door	Таинственная дверь	2 
-18	Legendary artifact	Легендарный артефакт	2 
-19	Mines’ closure	Закрытие шахт	2 
-20	Meet Sinbad	Познакомься с Sinbad	2 
-21	Getting to know the blueprints	Знакомство с чертежами	2 
-22	Acquaintance with Wood	Знакомство с древесиной	2 
-23	Pine trees	Сосны	2 
-24	Ingredients for Sinbad	Ингредиенты для Sinbad	2 
-25	Manufacture	Производство	2 
-26	Grandmother Granny	Бабушка Granny	2 
-27	Acquaintance with Fishing	Знакомство с рыболовством	2 
-28	First fish	Первая рыбка	2 
-29	There is fish, so you can eat it	Рыба есть, можно и поесть	2 
-30	Cooking	Готовим	2 
-31	You are ready	Ты готов	2 
-32	Danger	Опасность	2 
-33	Village on fire	Деревня в огне	2 
-34	Leader’s head	Голова лидера	2 
-35	Smuggling	Контрабанда	2 
-36	They want to see you	Тебя хотят видеть	2 
-37	Unusual request	Необычная просьба	2 
-56	Talk with Pet Tamer	Поговори с Pet Tamer	2 
-38	It’s time to eat	Время кушать	2 
-39	Mount	Ездовое животное	2 
-40	Head of Navy	Глава флота	2 
-41	Ghost ship	Призрачный корабль	2 
-42	Cursed sailors	Проклятые моряки	2 
-43	Cursed Blade	Проклятый клинок	2 
-44	Broken Chains	Разорванные цепи	2 
-45	No rest for the dead	Нет покоя мертвецам	2 
-46	Whispers of the Dead	Шепот мертвых	2 
-47	The Shackles of Curse	Оковы проклятия	2 
-48	A power that my father never ever dreamed of	Сила, которая и не снилась моему отцу	2 
-49	Helping the blacksmith	Помощь кузнецу	2 
-50	Disassembly of items	Разбор предметов	2 
-51	Crafting	Ремесло	2 
-52	Report to the head of navy	Доложите главе флота	2 
-100	Introducing Grany Nila	Знакомство с Grany Nila	2 
-101	Upgrade equipment	Улучшение экипировки	2 
-102	Go back to Dessaro	Возвращайся к Dessaro	2 
-103	The Zephyr Archipelagos	Архипелаг Зефир	2 
-104	Подготовка к Стуже	Подготовка к Стуже	2 
-105	Socket under gem	Слот под самоцвет	2 
-106	Fusion gem	Ковка самоцвета	2 
-107	Report	Отчет	2 
-108	Пиратская холера	Пиратская холера	2 
-109	Preparation	Подготовка	2 
-110	Upgrade equipment: Efficiency	Улучшение экипировки: Эффективность	2 
-111	Your ready	Ты готов	2 
-112	Island of Gold Roger: Good Luck	Остров Золотого Роджера: Удачи	2 
-114	Blood and Sand	Кровь и песок	2 
-115	Coliseum	Колизей	2 
-116	A fight to the death	Битва на смерть	2 
-117	Contracts	Контракты	2 
-118	He's still alive!	Он всё ещё жив!	2 
-119	Behemoth lair	Логово Бехамота	2 
-120	The Death of Behamoth	Смерть Бехамота	2 
-121	Autumn Forest	Осенний лес	2 
-122	Strange behavior	Странное поведение	2 
-123	Records	Записи	2 
-124	Ancient Weapon	Древнее оружие	2 
-125	Ancient Mage	Древний маг	2 
-126	Archaeologists	Археологи	2 
-127	Forsaken City	Затерянный город	2 
-128	Cleansing of the Former Inhabitants	Зачистка от бывших жителей	2 
-129	Report what happened	Доложить, что произошло	2 
-130	Sacred Forest	Священный лес	2 
-131	The Legend of the Sacred Forest	Легенда о Священном лесе	2 
-132	The Path to the Entrance of the Demonic World	Путь ко входу в Мир Демонов	2 
-133	Demonic World	Мир Демонов	2 
-134	Ice Mountain	Ледяная гора	2 
-135	In Search of Shan	В поисках Shan	2 
-501	A trivial task	Пустяковое задание	4 
-502	Hunting for a new mount	Охота на нового спутника	4 
-503	Rare catch	Редкий улов	4 
-504	Combination	Комбинирование	4 
-505	Forging	Вставка самоцвета	4 
-506	Improving equipment	Улучшение экипировки	4 
-507	Improving	Улучшение	4 
-508	Beginner's manufacture	Производство начинающего	4 
-509	Manufacture of the experienced	Производство бывалого	4 
-510	Manufacture expert	Производство эксперта	4 
-511	Help	Помощь	4 
-512	Culinary Basics	Кулинарные основы	4 
-513	Culinary Master	Кулинарный мастер	4 
-514	Culinary guru	Кулинарный гуру	4 
-515	A dozen crucian carps	Десяток карасей	4 
-516	Fishing time	Время рыбалки	4 
-517	Advanced Fishing	Продвинутая рыбалка	4 
-518	Trophy fish	Трофейная рыба	4 
-519	Resources	Ресурсы	4 
-520	Resources	Ресурсы	4 
-521	First level craft	Ремесло первого уровня	4 
-522	Craft for advanced	Ремесло для продвинутого	4 
-523	A challenging craft task	Непростая ремесленная задачка	4 
-524	Initial research	Начальное исследование	4 
-525	Adventurer's Research	Исследование авантюриста	4 
-526	Wandering soul	Блуждающая душа	4 
-527	Initial research	Начальное исследование	4 
-528	Adventurer's Research	Исследование авантюриста	4 
+1	Welcome!	Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!	2 
+2	New place	РќРѕРІРѕРµ РјРµСЃС‚Рѕ	2 
+3	First acquaintance	РџРµСЂРІРѕРµ Р·РЅР°РєРѕРјСЃС‚РІРѕ	2 
+4	Fairy provisions	РџСЂРѕРІРёР°РЅС‚ РґР»СЏ С„РµР№	2 
+5	Secretary	РЎРµРєСЂРµС‚Р°СЂСЊ	2 
+10	Old Jack	РЎС‚Р°СЂРёРЅР° Р”Р¶РµРє	2 
+11	Crabs	РљСЂР°Р±С‹	2 
+12	Where are my tools?	Р“РґРµ РјРѕРё РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹?	2 
+13	Report to Salvier	Р”РѕР»РѕР¶РёС‚Рµ РЎР°Р»СЊРІРµСЂСѓ	2 
+14	Mines	РЁР°С…С‚С‹	2 
+15	Missing people	РџСЂРѕРїР°Р¶Р° Р»СЋРґРµР№	2 
+16	Immersion	РџРѕРіСЂСѓР¶РµРЅРёРµ	2 
+17	Mysterious door	РўР°РёРЅСЃС‚РІРµРЅРЅР°СЏ РґРІРµСЂСЊ	2 
+18	Legendary artifact	Р›РµРіРµРЅРґР°СЂРЅС‹Р№ Р°СЂС‚РµС„Р°РєС‚	2 
+19	MinesвЂ™ closure	Р—Р°РєСЂС‹С‚РёРµ С€Р°С…С‚	2 
+20	Meet Sinbad	РџРѕР·РЅР°РєРѕРјСЊСЃСЏ СЃ Sinbad	2 
+21	Getting to know the blueprints	Р—РЅР°РєРѕРјСЃС‚РІРѕ СЃ С‡РµСЂС‚РµР¶Р°РјРё	2 
+22	Acquaintance with Wood	Р—РЅР°РєРѕРјСЃС‚РІРѕ СЃ РґСЂРµРІРµСЃРёРЅРѕР№	2 
+23	Pine trees	РЎРѕСЃРЅС‹	2 
+24	Ingredients for Sinbad	РРЅРіСЂРµРґРёРµРЅС‚С‹ РґР»СЏ Sinbad	2 
+25	Manufacture	РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ	2 
+26	Grandmother Granny	Р‘Р°Р±СѓС€РєР° Granny	2 
+27	Acquaintance with Fishing	Р—РЅР°РєРѕРјСЃС‚РІРѕ СЃ СЂС‹Р±РѕР»РѕРІСЃС‚РІРѕРј	2 
+28	First fish	РџРµСЂРІР°СЏ СЂС‹Р±РєР°	2 
+29	There is fish, so you can eat it	Р С‹Р±Р° РµСЃС‚СЊ, РјРѕР¶РЅРѕ Рё РїРѕРµСЃС‚СЊ	2 
+30	Cooking	Р“РѕС‚РѕРІРёРј	2 
+31	You are ready	РўС‹ РіРѕС‚РѕРІ	2 
+32	Danger	РћРїР°СЃРЅРѕСЃС‚СЊ	2 
+33	Village on fire	Р”РµСЂРµРІРЅСЏ РІ РѕРіРЅРµ	2 
+34	LeaderвЂ™s head	Р“РѕР»РѕРІР° Р»РёРґРµСЂР°	2 
+35	Smuggling	РљРѕРЅС‚СЂР°Р±Р°РЅРґР°	2 
+36	They want to see you	РўРµР±СЏ С…РѕС‚СЏС‚ РІРёРґРµС‚СЊ	2 
+37	Unusual request	РќРµРѕР±С‹С‡РЅР°СЏ РїСЂРѕСЃСЊР±Р°	2 
+56	Talk with Pet Tamer	РџРѕРіРѕРІРѕСЂРё СЃ Pet Tamer	2 
+38	ItвЂ™s time to eat	Р’СЂРµРјСЏ РєСѓС€Р°С‚СЊ	2 
+39	Mount	Р•Р·РґРѕРІРѕРµ Р¶РёРІРѕС‚РЅРѕРµ	2 
+40	Head of Navy	Р“Р»Р°РІР° С„Р»РѕС‚Р°	2 
+41	Ghost ship	РџСЂРёР·СЂР°С‡РЅС‹Р№ РєРѕСЂР°Р±Р»СЊ	2 
+42	Cursed sailors	РџСЂРѕРєР»СЏС‚С‹Рµ РјРѕСЂСЏРєРё	2 
+43	Cursed Blade	РџСЂРѕРєР»СЏС‚С‹Р№ РєР»РёРЅРѕРє	2 
+44	Broken Chains	Р Р°Р·РѕСЂРІР°РЅРЅС‹Рµ С†РµРїРё	2 
+45	No rest for the dead	РќРµС‚ РїРѕРєРѕСЏ РјРµСЂС‚РІРµС†Р°Рј	2 
+46	Whispers of the Dead	РЁРµРїРѕС‚ РјРµСЂС‚РІС‹С…	2 
+47	The Shackles of Curse	РћРєРѕРІС‹ РїСЂРѕРєР»СЏС‚РёСЏ	2 
+48	A power that my father never ever dreamed of	РЎРёР»Р°, РєРѕС‚РѕСЂР°СЏ Рё РЅРµ СЃРЅРёР»Р°СЃСЊ РјРѕРµРјСѓ РѕС‚С†Сѓ	2 
+49	Helping the blacksmith	РџРѕРјРѕС‰СЊ РєСѓР·РЅРµС†Сѓ	2 
+50	Disassembly of items	Р Р°Р·Р±РѕСЂ РїСЂРµРґРјРµС‚РѕРІ	2 
+51	Crafting	Р РµРјРµСЃР»Рѕ	2 
+52	Report to the head of navy	Р”РѕР»РѕР¶РёС‚Рµ РіР»Р°РІРµ С„Р»РѕС‚Р°	2 
+100	Introducing Grany Nila	Р—РЅР°РєРѕРјСЃС‚РІРѕ СЃ Grany Nila	2 
+101	Upgrade equipment	РЈР»СѓС‡С€РµРЅРёРµ СЌРєРёРїРёСЂРѕРІРєРё	2 
+102	Go back to Dessaro	Р’РѕР·РІСЂР°С‰Р°Р№СЃСЏ Рє Dessaro	2 
+103	The Zephyr Archipelagos	РђСЂС…РёРїРµР»Р°Рі Р—РµС„РёСЂ	2 
+104	РџРѕРґРіРѕС‚РѕРІРєР° Рє РЎС‚СѓР¶Рµ	РџРѕРґРіРѕС‚РѕРІРєР° Рє РЎС‚СѓР¶Рµ	2 
+105	Socket under gem	РЎР»РѕС‚ РїРѕРґ СЃР°РјРѕС†РІРµС‚	2 
+106	Fusion gem	РљРѕРІРєР° СЃР°РјРѕС†РІРµС‚Р°	2 
+107	Report	РћС‚С‡РµС‚	2 
+108	РџРёСЂР°С‚СЃРєР°СЏ С…РѕР»РµСЂР°	РџРёСЂР°С‚СЃРєР°СЏ С…РѕР»РµСЂР°	2 
+109	Preparation	РџРѕРґРіРѕС‚РѕРІРєР°	2 
+110	Upgrade equipment: Efficiency	РЈР»СѓС‡С€РµРЅРёРµ СЌРєРёРїРёСЂРѕРІРєРё: Р­С„С„РµРєС‚РёРІРЅРѕСЃС‚СЊ	2 
+111	Your ready	РўС‹ РіРѕС‚РѕРІ	2 
+112	Island of Gold Roger: Good Luck	РћСЃС‚СЂРѕРІ Р—РѕР»РѕС‚РѕРіРѕ Р РѕРґР¶РµСЂР°: РЈРґР°С‡Рё	2 
+114	Blood and Sand	РљСЂРѕРІСЊ Рё РїРµСЃРѕРє	2 
+115	Coliseum	РљРѕР»РёР·РµР№	2 
+116	A fight to the death	Р‘РёС‚РІР° РЅР° СЃРјРµСЂС‚СЊ	2 
+117	Contracts	РљРѕРЅС‚СЂР°РєС‚С‹	2 
+118	He's still alive!	РћРЅ РІСЃС‘ РµС‰С‘ Р¶РёРІ!	2 
+119	Behemoth lair	Р›РѕРіРѕРІРѕ Р‘РµС…Р°РјРѕС‚Р°	2 
+120	The Death of Behamoth	РЎРјРµСЂС‚СЊ Р‘РµС…Р°РјРѕС‚Р°	2 
+121	Autumn Forest	РћСЃРµРЅРЅРёР№ Р»РµСЃ	2 
+122	Strange behavior	РЎС‚СЂР°РЅРЅРѕРµ РїРѕРІРµРґРµРЅРёРµ	2 
+123	Records	Р—Р°РїРёСЃРё	2 
+124	Ancient Weapon	Р”СЂРµРІРЅРµРµ РѕСЂСѓР¶РёРµ	2 
+125	Ancient Mage	Р”СЂРµРІРЅРёР№ РјР°Рі	2 
+126	Archaeologists	РђСЂС…РµРѕР»РѕРіРё	2 
+127	Forsaken City	Р—Р°С‚РµСЂСЏРЅРЅС‹Р№ РіРѕСЂРѕРґ	2 
+128	Cleansing of the Former Inhabitants	Р—Р°С‡РёСЃС‚РєР° РѕС‚ Р±С‹РІС€РёС… Р¶РёС‚РµР»РµР№	2 
+129	Report what happened	Р”РѕР»РѕР¶РёС‚СЊ, С‡С‚Рѕ РїСЂРѕРёР·РѕС€Р»Рѕ	2 
+130	Sacred Forest	РЎРІСЏС‰РµРЅРЅС‹Р№ Р»РµСЃ	2 
+131	The Legend of the Sacred Forest	Р›РµРіРµРЅРґР° Рѕ РЎРІСЏС‰РµРЅРЅРѕРј Р»РµСЃРµ	2 
+132	The Path to the Entrance of the Demonic World	РџСѓС‚СЊ РєРѕ РІС…РѕРґСѓ РІ РњРёСЂ Р”РµРјРѕРЅРѕРІ	2 
+133	Demonic World	РњРёСЂ Р”РµРјРѕРЅРѕРІ	2 
+134	Ice Mountain	Р›РµРґСЏРЅР°СЏ РіРѕСЂР°	2 
+135	In Search of Shan	Р’ РїРѕРёСЃРєР°С… Shan	2 
+501	A trivial task	РџСѓСЃС‚СЏРєРѕРІРѕРµ Р·Р°РґР°РЅРёРµ	4 
+502	Hunting for a new mount	РћС…РѕС‚Р° РЅР° РЅРѕРІРѕРіРѕ СЃРїСѓС‚РЅРёРєР°	4 
+503	Rare catch	Р РµРґРєРёР№ СѓР»РѕРІ	4 
+504	Combination	РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРёРµ	4 
+505	Forging	Р’СЃС‚Р°РІРєР° СЃР°РјРѕС†РІРµС‚Р°	4 
+506	Improving equipment	РЈР»СѓС‡С€РµРЅРёРµ СЌРєРёРїРёСЂРѕРІРєРё	4 
+507	Improving	РЈР»СѓС‡С€РµРЅРёРµ	4 
+508	Beginner's manufacture	РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РЅР°С‡РёРЅР°СЋС‰РµРіРѕ	4 
+509	Manufacture of the experienced	РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ Р±С‹РІР°Р»РѕРіРѕ	4 
+510	Manufacture expert	РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ СЌРєСЃРїРµСЂС‚Р°	4 
+511	Help	РџРѕРјРѕС‰СЊ	4 
+512	Culinary Basics	РљСѓР»РёРЅР°СЂРЅС‹Рµ РѕСЃРЅРѕРІС‹	4 
+513	Culinary Master	РљСѓР»РёРЅР°СЂРЅС‹Р№ РјР°СЃС‚РµСЂ	4 
+514	Culinary guru	РљСѓР»РёРЅР°СЂРЅС‹Р№ РіСѓСЂСѓ	4 
+515	A dozen crucian carps	Р”РµСЃСЏС‚РѕРє РєР°СЂР°СЃРµР№	4 
+516	Fishing time	Р’СЂРµРјСЏ СЂС‹Р±Р°Р»РєРё	4 
+517	Advanced Fishing	РџСЂРѕРґРІРёРЅСѓС‚Р°СЏ СЂС‹Р±Р°Р»РєР°	4 
+518	Trophy fish	РўСЂРѕС„РµР№РЅР°СЏ СЂС‹Р±Р°	4 
+519	Resources	Р РµСЃСѓСЂСЃС‹	4 
+520	Resources	Р РµСЃСѓСЂСЃС‹	4 
+521	First level craft	Р РµРјРµСЃР»Рѕ РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ	4 
+522	Craft for advanced	Р РµРјРµСЃР»Рѕ РґР»СЏ РїСЂРѕРґРІРёРЅСѓС‚РѕРіРѕ	4 
+523	A challenging craft task	РќРµРїСЂРѕСЃС‚Р°СЏ СЂРµРјРµСЃР»РµРЅРЅР°СЏ Р·Р°РґР°С‡РєР°	4 
+524	Initial research	РќР°С‡Р°Р»СЊРЅРѕРµ РёСЃСЃР»РµРґРѕРІР°РЅРёРµ	4 
+525	Adventurer's Research	РСЃСЃР»РµРґРѕРІР°РЅРёРµ Р°РІР°РЅС‚СЋСЂРёСЃС‚Р°	4 
+526	Wandering soul	Р‘Р»СѓР¶РґР°СЋС‰Р°СЏ РґСѓС€Р°	4 
+527	Initial research	РќР°С‡Р°Р»СЊРЅРѕРµ РёСЃСЃР»РµРґРѕРІР°РЅРёРµ	4 
+528	Adventurer's Research	РСЃСЃР»РµРґРѕРІР°РЅРёРµ Р°РІР°РЅС‚СЋСЂРёСЃС‚Р°	4 
 529	Initial research	The Dark Knight	4 
-530	Mines	Шахты	4 
-531	Archipelago of the Cold	Архипелаг Стужи	4 
-532	Damned Therans	Проклятые Теранцы	4 
-533	Cleaning of mines	Зачистка шахт	4 
-534	Destroying bosses	Уничтожение боссов	4 
-535	Behemoth Hearth	Сердце Бехамота	4 
-536	Beginner-Level Survival	Выживание начального уровня	4 
-537	Intermediate Survival	Выживание среднего уровня	4 
-538	High-Level Survival	Выживание высокого уровня	4 
+530	Mines	РЁР°С…С‚С‹	4 
+531	Archipelago of the Cold	РђСЂС…РёРїРµР»Р°Рі РЎС‚СѓР¶Рё	4 
+532	Damned Therans	РџСЂРѕРєР»СЏС‚С‹Рµ РўРµСЂР°РЅС†С‹	4 
+533	Cleaning of mines	Р—Р°С‡РёСЃС‚РєР° С€Р°С…С‚	4 
+534	Destroying bosses	РЈРЅРёС‡С‚РѕР¶РµРЅРёРµ Р±РѕСЃСЃРѕРІ	4 
+535	Behemoth Hearth	РЎРµСЂРґС†Рµ Р‘РµС…Р°РјРѕС‚Р°	4 
+536	Beginner-Level Survival	Р’С‹Р¶РёРІР°РЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ СѓСЂРѕРІРЅСЏ	4 
+537	Intermediate Survival	Р’С‹Р¶РёРІР°РЅРёРµ СЃСЂРµРґРЅРµРіРѕ СѓСЂРѕРІРЅСЏ	4 
+538	High-Level Survival	Р’С‹Р¶РёРІР°РЅРёРµ РІС‹СЃРѕРєРѕРіРѕ СѓСЂРѕРІРЅСЏ	4 

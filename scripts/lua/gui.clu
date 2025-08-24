@@ -925,6 +925,173 @@ function argbColor(hex)
     -- 16777216 = 2^24, 65536 = 2^16, 256 = 2^8
 end
 
+function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alpha)
+	local image_x, image_y = 50, 50
+	local tile_size = 15
+	
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, 0)
+	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, 0, 0)
+	UI_SetAlpha(image, alpha)
+	
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, 0)
+	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, 0)
+	UI_SetAlpha(image, alpha)
+	
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, form_size_y - tile_size)
+	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, 0, image_y - tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, form_size_y - tile_size)
+	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, image_y - tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	if form_size_x > tile_size * 2 then
+		local start_x = tile_size
+		local usable_width = form_size_x - tile_size * 2
+		local full_tiles = math.floor(usable_width / tile_size)
+		local remainder = usable_width % tile_size
+
+		for i = 0, full_tiles - 1 do
+			local pos_x = start_x + tile_size * i
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, pos_x, 0)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
+			UI_SetAlpha(image, alpha)
+		end
+		
+		if remainder > 0 then
+			local pos_x = start_x + tile_size * full_tiles
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder, tile_size, pos_x, 0)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder, tile_size, tile_size, 0)
+			UI_SetAlpha(image, alpha)
+		end
+	end
+	
+	if form_size_y > tile_size * 2 then
+		local start_y = tile_size
+		local usable_height = form_size_y - tile_size * 2
+		local full_tiles = math.floor(usable_height / tile_size)
+		local remainder = usable_height % tile_size
+
+		for i = 0, full_tiles - 1 do
+			local pos_y = start_y + tile_size * i
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, pos_y)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, tile_size)
+			UI_SetAlpha(image, alpha)
+		end
+
+		if remainder > 0 then
+			local pos_y = start_y + tile_size * full_tiles
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder, form_size_x - tile_size, pos_y)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, remainder, image_x - tile_size, tile_size)
+			UI_SetAlpha(image, alpha)
+		end
+	end
+	
+	if form_size_y > tile_size * 2 then
+		local start_y = tile_size
+		local usable_height = form_size_y - tile_size * 2
+		local full_tiles = math.floor(usable_height / tile_size)
+		local remainder = usable_height % tile_size
+
+		for i = 0, full_tiles - 1 do
+			local pos_y = start_y + tile_size * i
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, pos_y)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
+			UI_SetAlpha(image, alpha)
+		end
+
+		if remainder > 0 then
+			local pos_y = start_y + tile_size * full_tiles
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder, 0, pos_y)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, remainder, tile_size, 0)
+			UI_SetAlpha(image, alpha)
+		end
+	end
+	
+	if form_size_x > tile_size * 2 then
+		local start_x = tile_size
+		local usable_width = form_size_x - tile_size * 2
+		local full_tiles = math.floor(usable_width / tile_size)
+		local remainder = usable_width % tile_size
+		local pos_y = form_size_y - tile_size
+
+		for i = 0, full_tiles - 1 do
+			local pos_x = start_x + tile_size * i
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, pos_x, pos_y)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, image_y - tile_size)
+			UI_SetAlpha(image, alpha)
+		end
+
+		if remainder > 0 then
+			local pos_x = start_x + tile_size * full_tiles
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder, tile_size, pos_x, pos_y)
+			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder, tile_size, tile_size, image_y - tile_size)
+			UI_SetAlpha(image, alpha)
+		end
+	end
+	
+	if form_size_x > tile_size * 2 and form_size_y > tile_size * 2 then
+		local start_x = tile_size
+		local start_y = tile_size
+		local usable_width = form_size_x - tile_size * 2
+		local usable_height = form_size_y - tile_size * 2
+
+		local full_tiles_x = math.floor(usable_width / tile_size)
+		local remainder_x = usable_width % tile_size
+
+		local full_tiles_y = math.floor(usable_height / tile_size)
+		local remainder_y = usable_height % tile_size
+
+		for y = 0, full_tiles_y - 1 do
+			for x = 0, full_tiles_x - 1 do
+				local pos_x = start_x + x * tile_size
+				local pos_y = start_y + y * tile_size
+				image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, pos_x, pos_y)
+				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, tile_size)
+				UI_SetAlpha(image, alpha)
+			end
+			
+			if remainder_x > 0 then
+				local pos_x = start_x + full_tiles_x * tile_size
+				local pos_y = start_y + y * tile_size
+				image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder_x, tile_size, pos_x, pos_y)
+				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder_x, tile_size, tile_size, tile_size)
+				UI_SetAlpha(image, alpha)
+			end
+		end
+		
+		if remainder_y > 0 then
+			for x = 0, full_tiles_x - 1 do
+				local pos_x = start_x + x * tile_size
+				local pos_y = start_y + full_tiles_y * tile_size
+				image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder_y, pos_x, pos_y)
+				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, remainder_y, tile_size, tile_size)
+				UI_SetAlpha(image, alpha)
+			end
+			
+			if remainder_x > 0 then
+				local pos_x = start_x + full_tiles_x * tile_size
+				local pos_y = start_y + full_tiles_y * tile_size
+				image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder_x, remainder_y, pos_x, pos_y)
+				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder_x, remainder_y, tile_size, tile_size)
+				UI_SetAlpha(image, alpha)
+			end
+		end
+	end
+	
+	-- Статус обновления
+	lamName = UI_CreateCompent(form, LABELEX_TYPE, "lamName", form_size_x, 30, 20, 20)
+	UI_SetCaption(lamName, string.format("%s", form_name))
+	UI_SetTextHtmlColor(lamName, "d7dede")
+	UI_SetLabelExFont(lamName, FONT18, FALSE, COLOR_BLACK)
+	
+	if (isbClose) then
+		btnClose = UI_CreateCompent(form, BUTTON_TYPE, "btnClose", 18, 18, form_size_x - 40, 18)
+		UI_LoadButtonImage(btnClose, "texture/ui/part-01.png", 50, 50, 55, 0, TRUE)
+		UI_SetButtonModalResult(btnClose, BUTTON_CLOSE)
+	end
+end
+
 UI_ItemBarLoadImage( "texture/ui/system/progress.tga", 64, 16, 0, 0 )
 
 
@@ -992,6 +1159,7 @@ UI_LoadScript("scripts/lua/forms/ship.clu")		-- 造船
 UI_LoadScript("scripts/lua/forms/traderoom.clu")	-- 交易所
 UI_LoadScript("scripts/lua/forms/manage.clu")	-- 公会管理
 UI_LoadScript("scripts/lua/forms/select.clu")
+UI_LoadScript("scripts/lua/forms/gacha.clu")
 
 --字符过滤表
 UI_LoadScript("scripts/lua/filter.clu")

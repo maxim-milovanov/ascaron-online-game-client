@@ -76,6 +76,9 @@ UI_LoadButtonImage( btnWardrobe, "texture/gui/minimap-background.png", 87, 23, 1
 btnTeleports = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnTeleports", 87, 23, 62, 234 )
 UI_LoadButtonImage( btnTeleports, "texture/gui/minimap-background.png", 87, 23, 153, 70, FALSE )
 
+btnSetTrade = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSetTrade", 65, 66, 75, 280)
+UI_LoadButtonImage(btnSetTrade, "texture/gui/p0w-frmInv.png", 98, 99, 0, 607, TRUE)
+
 imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 25, 25, 134, 50 )
 UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 25, 25, 0, 185 )
 
