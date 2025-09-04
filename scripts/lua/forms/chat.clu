@@ -27,7 +27,7 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 labTitle = UI_CreateCompent( frmQQMin, LABELEX_TYPE, "labTitle", 400, 150, 10, 4 )
 UI_SetCaption( labTitle, "Friend List")
 UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labTitle, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 ------
 -- 
@@ -214,7 +214,7 @@ UI_LoadImage( imgChatTL, "texture/gui/dialogue.png", NORMAL, 391, 214, 0, 0 )
 labName1 = UI_CreateCompent( frmChat, LABELEX_TYPE, "labName1", 96, 11, 52+70, 11 )
 UI_SetCaption( labName1, "012345678901234567890123456789" )
 UI_SetTextColor( labName1, COLOR_C9C2B4 )
-UI_SetLabelExFont( labName1, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labName1, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmChat, BUTTON_TYPE, "btnClose", 14, 14, -1355, 3 )
@@ -334,7 +334,7 @@ UI_LoadImage( imgChatA, "texture/gui/old_gui/TalkM.dds", NORMAL, 203, 135, 0, 0 
 labName = UI_CreateCompent( frmChatMd, LABELEX_TYPE, "labName", 96, 11, 7, 4 )
 --UI_SetCaption( labName, "012345678901234567890123456789" )
 UI_SetTextColor( labName, COLOR_BLACK )
-UI_SetLabelExFont( labName, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labName, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmChatMd, BUTTON_TYPE, "btnClose", 14, 14, 182, 3 )
@@ -426,7 +426,7 @@ UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 17
 labName = UI_CreateCompent( frmChatMin, LABELEX_TYPE, "labName", 150, 11, 7, 4 )
 UI_SetCaption( labName, "012345678901234567890123456789" )
 UI_SetTextColor( labName, COLOR_BLACK )
-UI_SetLabelExFont( labName, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labName, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
 -----------------------------------------------------------------------
@@ -492,7 +492,7 @@ UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 labName = UI_CreateCompent( frmEdit, LABELEX_TYPE, "labName", 96, 11, 22, 15 )
 UI_SetCaption( labName, "Child of Demon what is that" )
 UI_SetTextColor( labName, COLOR_FFEDCF )
-UI_SetLabelExFont( labName, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labName, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 -----------------------------------------------------------------------
 -- 定义详细资料
@@ -524,7 +524,7 @@ UI_LoadImage( imgDeTitle, "texture/gui/old_gui/Word.dds", NORMAL, 49, 13, 120, 5
 labDeName = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labDeName", 96, 11, 40, 40 )
 --UI_SetCaption( labDeName, "Child of Demon what is that" )
 UI_SetTextColor( labDeName, COLOR_BLACK )
-UI_SetLabelExFont( labDeName, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labDeName, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -- 加载角色头像
 imgDeHead = UI_CreateCompent( frmdetails, IMAGE_TYPE, "imgDeHead", 32, 32, 4, 24 )
@@ -534,43 +534,43 @@ UI_LoadImage( imgDeHead, "texture/gui/old_gui/main800.tga", NORMAL, 32, 32, 37, 
 labJob = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labJob", 96, 11, 82, 68 )
 --UI_SetCaption( labJob, "Swordsman" )
 UI_SetTextColor( labJob, COLOR_BLACK )
-UI_SetLabelExFont( labJob, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labJob, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建等级
 labLv = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labLv", 96, 11, 82, 86 )
 --UI_SetCaption( labLv, "100" )
 UI_SetTextColor( labLv, COLOR_BLACK )
-UI_SetLabelExFont( labLv, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labLv, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建公会
 labConsortia = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labConsortia", 96, 11, 82, 104 )
 --UI_SetCaption( labConsortia, "AhAhAh" )
 UI_SetTextColor( labConsortia, COLOR_BLACK )
-UI_SetLabelExFont( labConsortia, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labConsortia, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建名声
 labRepute = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labRepute", 96, 11, 82, 122 )
 --UI_SetCaption( labRepute, "200" )
 UI_SetTextColor( labRepute, COLOR_BLACK )
-UI_SetLabelExFont( labRepute, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labRepute, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建称号
 labName = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labName", 96, 11, 82, 140 )
 --UI_SetCaption( labName, "200" )
 UI_SetTextColor( labName, COLOR_BLACK )
-UI_SetLabelExFont( labName, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labName, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建船只名称
 labShip = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labShip", 96, 11, 82, 158 )
 --UI_SetCaption( labShip, "了了了" )
 UI_SetTextColor( labShip, COLOR_BLACK )
-UI_SetLabelExFont( labShip, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labShip, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建船只等级
 labShiplv = UI_CreateCompent( frmdetails, LABELEX_TYPE, "labShiplv", 96, 11, 82, 176 )
 --UI_SetCaption( labShiplv, "100" )
 UI_SetTextColor( labShiplv, COLOR_BLACK )
-UI_SetLabelExFont( labShiplv, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labShiplv, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -----------------------------------------------------------------------
 -- Block
@@ -619,7 +619,7 @@ UI_SetAlpha( frmRemind, 220 )
 btnCheck = UI_CreateCompent( frmRemind, BUTTON_TYPE, "btnCheck", 121, 11, 32, 40 )
 UI_SetCaption( labCheck, "012345678901234567890123456789" )
 UI_SetTextColor( labCheck, COLOR_BLACK )
---UI_SetLabelExFont( labCheck, DEFAULT_FONT, TRUE, COLOR_WHITE )
+--UI_SetLabelExFont( labCheck, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载按钮
 labTitle = UI_CreateCompent( frmRemind, LABELEX_TYPE, "labTitle", 170, 18, 8, 4 )

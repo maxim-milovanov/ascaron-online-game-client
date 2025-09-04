@@ -46,33 +46,33 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 labItem1 = UI_CreateCompent( frmSeaTrade, LABELEX_TYPE, "labItem1", 96, 11, 35, 86 )
 --UI_SetCaption( labItem1, "就就就就就就就就" )
 UI_SetTextColor( labItem1, COLOR_BLACK )
-UI_SetLabelExFont( labItem1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labItem1, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 labItem2 = UI_CreateCompent( frmSeaTrade, LABELEX_TYPE, "labItem2", 96, 11, 142, 86 )
 --UI_SetCaption( labItem2, "就就就就就就就就" )
 UI_SetTextColor( labItem2, COLOR_BLACK )
-UI_SetLabelExFont( labItem2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labItem2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 labItem3 = UI_CreateCompent( frmSeaTrade, LABELEX_TYPE, "labItem3", 96, 11, 249, 86 )
 --UI_SetCaption( labItem3, "就就就就就就就就" )
 UI_SetTextColor( labItem3, COLOR_BLACK )
-UI_SetLabelExFont( labItem3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labItem3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建物品价格
 labMen1 = UI_CreateCompent( frmSeaTrade, LABELEX_TYPE, "labMen1", 46, 8, 59, 103 )
 --UI_SetCaption( labMen1, "11111111" )
 UI_SetTextColor( labMen1, COLOR_BLACK )
-UI_SetLabelExFont( labMen1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labMen1, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 labMen2 = UI_CreateCompent( frmSeaTrade, LABELEX_TYPE, "labMen2", 46, 8, 166, 103 )
 --UI_SetCaption( labMen2, "11111111" )
 UI_SetTextColor( labMen2, COLOR_BLACK )
-UI_SetLabelExFont( labMen2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labMen2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 labMen3 = UI_CreateCompent( frmSeaTrade, LABELEX_TYPE, "labMen3", 46, 8, 273, 103 )
 --UI_SetCaption( labMen3, "11111111" )
 UI_SetTextColor( labMen3, COLOR_BLACK )
-UI_SetLabelExFont( labMen3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labMen3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
 --创建出售物品表
@@ -168,41 +168,33 @@ btnNo = UI_CreateCompent( frmSeaTrade, BUTTON_TYPE, "btnNo", 41, 19, 287, 350 )
 ------
 --  Black market
 ------
-frmBlackTrade = UI_CreateForm( "frmBlackTrade", FALSE, 433, 248, 200, 200, TRUE, FALSE )
+frmBlackTrade = UI_CreateForm( "frmBlackTrade", FALSE, 650, 360, 200, 200, TRUE, FALSE )
 --UI_FormSetHotKey(frmBlackTrade, ALT_KEY, HOTKEY_D )
 UI_ShowForm( frmBlackTrade, FALSE )
 UI_AddFormToTemplete( frmBlackTrade, 1 )
 UI_SetIsDrag(frmBlackTrade, TRUE )
 
-imgTrade = UI_CreateCompent( frmBlackTrade, IMAGE_TYPE, "imgTrade", 433, 248, 0, 0 )
-UI_LoadImage( imgTrade, "texture/gui/black-market.png", NORMAL, 433, 248, 0, 0 )
+setBackground(frmBlackTrade, true, 500, 360, 225)
 
---创建关闭按钮
---btnClose = UI_CreateCompent( frmBlackTrade, BUTTON_TYPE, "btnClose", 14, 14, 362, 3 )
---UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
---UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+labFormname = UI_CreateCompent(frmBlackTrade, LABELEX_TYPE, "labFormname", 15, 14, 190, 20)
+UI_SetCaption( labFormname, "BLACK MARKET" )
+UI_SetTextColor( labFormname, COLOR_WHITE )
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 
+CreateImageGrid(frmBlackTrade, 3, 1, 102, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 91, 81)
+CreateImageGrid(frmBlackTrade, 3, 1, 102, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 91, 186)
 
-btnClose = UI_CreateCompent( frmBlackTrade, BUTTON_TYPE, "btnClose", 32, 32, 333, 184 )
-UI_LoadButtonImage( btnClose, "texture/gui/Inventory.png", 32, 32, 0, 368, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
-grdItemSale = UI_CreateCompent( frmBlackTrade, GOODS_GRID_TYPE, "grdItemSale", 425, 148, 9, 69-56 ) 
-UI_SetGridSpace( grdItemSale, 50, 5 )
+grdItemSale = UI_CreateCompent( frmBlackTrade, GOODS_GRID_TYPE, "grdItemSale", 425, 240, 50, 50 ) 
+UI_SetGridSpace( grdItemSale, 40, 5 )
 UI_SetGridContent( grdItemSale, 14, 3 )
-UI_SetGridUnitSize( grdItemSale, 92,68 )
+UI_SetGridUnitSize( grdItemSale, 100, 100)
 UI_SetMargin( grdItemSale, 10, 0, 0, 0 )
+setScroll(grdItemSale)
 
-scrollid = UI_GetScroll(grdItemSale)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+CreateImageGrid(frmBlackTrade, 7, 1, 9, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 91, 272)
 
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-grdItemBuy = UI_CreateCompent( frmBlackTrade, GOODS_GRID_TYPE, "grdItemBuy", 271, 37, 39, 184 ) 
+grdItemBuy = UI_CreateCompent( frmBlackTrade, GOODS_GRID_TYPE, "grdItemBuy", 320, 40, 84, 275 ) 
 UI_SetGridSpace( grdItemBuy, 7, 1 )
 UI_SetGridContent( grdItemBuy, 1, 7 )
-UI_SetGridUnitSize( grdItemBuy, 32, 32 )
+UI_SetGridUnitSize( grdItemBuy, 40, 32 )
 UI_SetMargin( grdItemBuy, 10, 0, 0, 0 )

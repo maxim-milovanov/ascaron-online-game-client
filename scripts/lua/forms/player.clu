@@ -42,12 +42,12 @@ UI_LoadImage( imgBackgroundGI, "texture/gui/trade.png", NORMAL, 222, 16, 261, 16
 labOtherGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherGold", 47, 11, 40, 136 )
 UI_SetCaption( labOtherGold, "0" )
 UI_SetTextColor( labOtherGold, 4292790446 )
-UI_SetLabelExFont( labOtherGold, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labOtherGold, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 labOtherIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherIMP", 47, 11, 159, 136 )
 UI_SetCaption( labOtherIMP, "0" )
 UI_SetTextColor( labOtherIMP, 4292790446 )
-UI_SetLabelExFont( labOtherIMP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labOtherIMP, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 grdSale = UI_CreateCompent( frmPlayertrade, GOODS_GRID_TYPE, "grdSale", 231, 80, 10, 163 ) 
 UI_LoadImage( grdSale,  "texture/gui/trade.png", NORMAL, 231, 80, 259, 82 )
@@ -62,7 +62,7 @@ UI_LoadImage( imgBackground, "texture/gui/trade.png", NORMAL, 222, 16, 261, 163 
 labSelfGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfGold", 47, 11, 40, 247 )
 UI_SetCaption( labSelfGold, "0" )
 UI_SetTextColor( labSelfGold, 4292790446 )
-UI_SetLabelExFont( labSelfGold, DEFAULT_FONT, FALSE, COLOR_BLACK )
+UI_SetLabelExFont( labSelfGold, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
 btnGold = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnGold", 24, 20, 12, 246 )
 UI_LoadButtonImage( btnGold, "texture/gui/trade.png", 24, 20, 259, 187, TRUE )
@@ -71,7 +71,7 @@ UI_SetHint( btnGold, "Click here to input gold for trade" )
 labSelfIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfIMP", 47, 11, 159, 247 )
 UI_SetCaption( labSelfIMP, "0" )
 UI_SetTextColor( labSelfIMP, 4292790446 )
-UI_SetLabelExFont( labSelfIMP, DEFAULT_FONT, FALSE, COLOR_BLACK )
+UI_SetLabelExFont( labSelfIMP, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
 btnIMP = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnIMP", 25, 20, 131, 246 )
 UI_LoadButtonImage( btnIMP, "texture/gui/trade.png", 24, 20, 259, 187, TRUE )
@@ -104,12 +104,12 @@ UI_FormSetIsEscClose( frmAcceptFrnd, FALSE )
 labFrndName = UI_CreateCompent( frmAcceptFrnd, LABELEX_TYPE, "labFrndName", 23, 11, 44, 32 )
 UI_SetCaption( labFrndName, "" )
 UI_SetTextColor( labFrndName, COLOR_FFEDCF )
-UI_SetLabelExFont( labFrndName, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labFrndName, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labFrnd = UI_CreateCompent( frmAcceptFrnd, LABELEX_TYPE, "labFrnd", 23, 11, 44, 54 )
 UI_SetCaption( labFrnd, "" )
 UI_SetTextColor( labFrnd, COLOR_FFEDCF )
-UI_SetLabelExFont( labFrnd, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labFrnd, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnYes = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnYes", 93, 32, 23+10, 43+55 )
 UI_LoadButtonImage( btnYes, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
@@ -135,12 +135,12 @@ UI_FormSetIsEscClose( frmAcceptGroup, FALSE )
 labGroupName = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroupName", 23, 11, 44, 32 )
 UI_SetCaption( labGroupName, "" )
 UI_SetTextColor( labGroupName, COLOR_FFEDCF )
-UI_SetLabelExFont( labGroupName, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labGroupName, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labGroup = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroup", 23, 11, 44, 54 )
 UI_SetCaption( labGroup, "" )
 UI_SetTextColor( labGroup, COLOR_FFEDCF )
-UI_SetLabelExFont( labGroup, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labGroup, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnYes = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnYes", 93, 32, 23+10, 43+55 )
 UI_LoadButtonImage( btnYes, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
@@ -157,70 +157,46 @@ UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 for pos = 1, 4, 1 do
 	local label = string.format("frmTeamMenber%d", pos)
 	local labelname = string.format("labMenber%dName", pos)
-	local labelbackground = string.format("proTeamMenber%dBackground", pos)
 	local labeldead = string.format("proTeamMenber%dDead", pos)
 	local labelhp = string.format("proTeamMenber%dHP", pos)
-	local labelsp = string.format("proTeamMenber%dSP", pos)
 	
-	label = UI_CreateForm( label, FALSE, 167, 40, 15, 70 + (pos * 58), TRUE, FALSE )
+	label = UI_CreateForm( label, FALSE, 176, 45, 20, 100 + (pos * 50), TRUE, FALSE)
 	UI_ShowForm( label, FLASE )
 	UI_SetIsDrag( label, FLASE )
 	UI_AddFormToTemplete( label, FORM_MAIN )
 	UI_FormSetIsEscClose( label, FALSE )
 	
-	labelbackground = UI_CreateCompent( label, IMAGE_TYPE, labelbackground, 128, 37, 31, 5 )
-	UI_LoadImage( labelbackground, "texture/gui/detail-01.png", NORMAL, 221, 64, 96, 6 )
+	setBackgroundMiddle(label, 176, 45, 225, 0, 0)
 	
-	labelhp = UI_CreateCompent( label, PROGRESS_TYPE, labelhp, 145, 15, 38, 13 )
-	UI_LoadScaleImage( labelhp, "texture/gui/detail-01.png", PROGRESS_PROGRESS, 145, 15, 389, 75, 0.8, 0.8 )
-	UI_SetHint( labelhp, "HP" )
-	UI_SetProgressHintStyle( labelhp, PROGRESS_HINT_NUM )
+	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 125, 15, 45, 22)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
 	
-	percenthp = UI_CreateCompent( label, LABELEX_TYPE, "percenthp", 14, 9, 61, 14 )
-	UI_SetCaption( percenthp, "100%")
-	UI_SetTextColor( percenthp, COLOR_C9C2B4 )
-	UI_SetLabelExFont( percenthp, FONT11, FALSE, COLOR_WHITE )
-
-	labelsp = UI_CreateCompent( label, PROGRESS_TYPE, labelsp, 139, 14, 39, 28 )
-	UI_LoadScaleImage( labelsp, "texture/gui/detail-01.png", PROGRESS_PROGRESS, 139, 14, 394, 95, 0.8, 0.8 )
-	UI_SetHint( labelsp, "SP" )
-	UI_SetProgressHintStyle( labelsp, PROGRESS_HINT_NUM )
+	labelhp = UI_CreateCompent( label, PROGRESS_TYPE, labelhp, 125, 15, 45, 22)
+	UI_LoadScaleImage( labelhp, "texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 125, 15, 534 + 50, 102, 1.0, 1.0 )
+	UI_SetHint(labelhp, "HP")
+	UI_SetProgressHintStyle( labelhp, PROGRESS_HINT_NUM)
 	
-	percentsp = UI_CreateCompent( label, LABELEX_TYPE, "percentsp", 14, 9, 61, 28 )
-	UI_SetCaption( percentsp, "100%")
-	UI_SetTextColor( percentsp, COLOR_C9C2B4 )
-	UI_SetLabelExFont( percentsp, FONT11, FALSE, COLOR_WHITE )
+	d3dHead = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dHead", 36, 36, 3, 3 )
+	d3dDown = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dDown", 176, 45, 0, 0 )
 	
-	avatarBackground = UI_CreateCompent( label, IMAGE_TYPE, "avatarBackground", 57, 57, 0, 0 )
-	UI_LoadImage( avatarBackground, "texture/gui/detail-01.png", NORMAL, 80, 81, 15, 3 )
+	image = UI_CreateCompent( label, IMAGE_TYPE, "image", 15, 11, 10, 30)
+	UI_LoadImage( image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
 	
-	d3dHead = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dHead", 24, 24, 10+6, 10+7 )
-	d3dDown = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dDown", 166, 33, 0, 0 )
-	
-	frameAvatar = UI_CreateCompent( label, IMAGE_TYPE, "frameAvatar", 57, 57, 1, 0 )
-	UI_LoadImage( frameAvatar, "texture/gui/detail-01.png", NORMAL, 80, 81, 15, 86 )
-	
-	levelBackground = UI_CreateCompent( label, IMAGE_TYPE, "levelBackground", 30, 30, -2, 25 )
-	UI_LoadImage( levelBackground, "texture/gui/detail-01.png", NORMAL, 30, 30, 93, 82 )
-	
-	labFLv = UI_CreateCompent( label, LABELEX_TYPE, "labFLv", 14, 9, 7, 35 )
-	UI_SetTextColor( labFLv, COLOR_WHITE )
-	UI_SetLabelExFont( labFLv, DEFAULT_FONT, TRUE, COLOR_BLACK )
+	labFLv = UI_CreateCompent( label, LABELEX_TYPE, "labFLv", 14, 9, 10, 29 )
+	UI_SetTextColor( labFLv, argbColor("b9baba") )
+	UI_SetLabelExFont( labFLv, EXO_Regular_S10, FALSE, COLOR_BLACK )
 	UI_SetCaption( labLv, "99" )
 	
-	labelname = UI_CreateCompent( label, LABELEX_TYPE, labelname, 1, 1, 61, -1 )
+	labelname = UI_CreateCompent( label, LABELEX_TYPE, labelname, 1, 1, 45, 5 )
 	UI_SetCaption( labelname, "-" )
-	UI_SetTextColor( labelname, COLOR_WHITE )
-	UI_SetLabelExFont( labelname, DEFAULT_FONT, TRUE, COLOR_BLACK )
+	UI_SetTextColor( labelname, argbColor("b9baba") )
+	UI_SetLabelExFont( labelname, EXO_Regular_S12, FALSE, COLOR_BLACK )
 	
-	imgobj = UI_CreateCompent( label, IMAGE_TYPE, "imgobj", 9, 9, 23, 21 )
-	UI_SetMaxImage( imgobj, 19 )
+	imgLeader = UI_CreateCompent( label, IMAGE_TYPE, "imgLeader", 15, 15, 5, 5 )
+	UI_LoadImage( imgLeader, "texture/ascaron_ui/asc-part-01.png", NORMAL, 12, 12, 164, 239 )
 	
-	imgLeader = UI_CreateCompent( label, IMAGE_TYPE, "imgLeader", 30, 30, -2, 1 )
-	UI_LoadImage( imgLeader, "texture/gui/detail-01.png", NORMAL, 30, 30, 93, 111 )
-	
-	labeldead = UI_CreateCompent( label, IMAGE_TYPE, labeldead, 57, 57, 1, 0 )
-	UI_LoadImage( labeldead, "texture/gui/detail-01.png", NORMAL, 80, 81, 362, 128 )
+	labeldead = UI_CreateCompent( label, IMAGE_TYPE, labeldead, 25, 25, 10, 5 )
+	UI_LoadImage( labeldead, "texture/ascaron_ui/asc-part-01.png", NORMAL, 25, 25, 138, 238 )
 end
 
 ------------------------------------------------------------------------------
@@ -262,7 +238,7 @@ UI_SetIsDrag( frmTime, TRUE )
 labTime = UI_CreateCompent( frmTime, LABELEX_TYPE, "labTime", 1, 1, 58, 40 )
 --UI_SetCaption( labTime, "Do you want to Revive in town" )
 UI_SetTextColor( labTime, COLOR_BLACK)
-UI_SetLabelExFont( labTime, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labTime, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -- 加载界面title
 imgTime = UI_CreateCompent( frmTime, IMAGE_TYPE, "imgTime", 36, 13, 8, 4 )
@@ -276,51 +252,39 @@ UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRU
 -----------------------------------------------------------------------
 -- Baitan
 -----------------------------------------------------------------------	
-frmBooth = UI_CreateForm( "frmBooth", FALSE, 342, 270, 100, 100, TRUE, FALSE )
+frmBooth = UI_CreateForm( "frmBooth", FALSE, 400, 450, 100, 100, TRUE, FALSE )
 UI_ShowForm( frmBooth, FALSE )
 UI_AddFormToTemplete( frmBooth, FORM_MAIN )
 --UI_FormSetHotKey( frmBooth, ALT_KEY, HOTKEY_T )
 UI_SetIsDrag( frmBooth, TRUE )
 UI_FormSetIsEscClose( frmFound, FALSE )
 
-imgBackground = UI_CreateCompent( frmBooth, IMAGE_TYPE, "imgBackground", 342, 270, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/booth.png", NORMAL, 342, 270, 0, 0 )
+setBackground(frmBooth, true, 400, 450 - 106, 225)
 
-btnClose = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnClose", 32, 32, 303, 10 )
-UI_LoadButtonImage( btnClose, "texture/gui/Inventory.png", 32, 32, 0, 368, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+lblOwnerName = UI_CreateCompent( frmBooth, LABELEX_TYPE, "lblOwnerName", 280, 30, 50, 20 )
+UI_SetCaption( lblOwnerName, "SET STALL" )
+UI_SetTextColor( lblOwnerName, COLOR_WHITE)
+UI_SetLabelExFont( lblOwnerName, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-lblOwnerName = UI_CreateCompent( frmBooth, LABELEX_TYPE, "lblOwnerName", 94, 31, 20, 12 )
-UI_SetTextColor( lblOwnerName, COLOR_FFEDCF )
-UI_SetLabelExFont( lblOwnerName, DEFAULT_FONT, FALSE, COLOR_WHITE )
+CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 81)
+CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 168)
+CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 255)
 
-edtBoothName = UI_CreateCompent( frmBooth, EDIT_TYPE, "edtBoothName", 264, 13, 20, 27 )
-UI_SetCaption( edtBoothName, "Baitan name" )
-UI_SetTextColor( edtBoothName, COLOR_A29688 )
-UI_SetLabelExFont( edtBoothName, DEFAULT_FONT, FALSE, COLOR_WHITE )
-UI_SetEditCursorColor( edtBoothName, COLOR_WHITE )
-
-grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 320, 178, 11, 75 ) 
+grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 332, 265, 43, 60) 
 UI_SetGridSpace( grdBoothItem, 7, 7 )
-UI_SetGridContent( grdBoothItem, 4, 3 )
+UI_SetGridContent( grdBoothItem, 3, 3 )
 UI_SetGridUnitSize( grdBoothItem, 100, 80 )
 UI_SetMargin( grdBoothItem, 0, 0, 0, 0 )
+setScroll(grdBoothItem)
 
-scrollid = UI_GetScroll( grdBoothItem)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+edtBoothName = UI_CreateCompent( frmBooth, EDIT_TYPE, "edtBoothName", 264, 13, 50, 300 )
+UI_SetCaption( edtBoothName, "Baitan name" )
+UI_SetTextColor( edtBoothName, COLOR_A29688 )
+UI_SetLabelExFont( edtBoothName, EXO_Regular_S12, FALSE, COLOR_WHITE )
+UI_SetEditCursorColor( edtBoothName, COLOR_WHITE )
 
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-
---加载确定，取消按钮
-btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 93, 32, 124, 253 )
+btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 93, 32, 50, 340 )
 UI_LoadButtonImage( btnSetupBooth, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
-
-btnPullStakes = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnPullStakes", 93, 32, 124, 253 )
-UI_LoadButtonImage( btnPullStakes, "texture/gui/friends.png", 93, 32, 93, 494, FALSE )
 
 -----------------------------------------------------------------------
 -- 定义理发界面
@@ -349,13 +313,13 @@ UI_LoadImage( imgFoundDownR, "texture/gui/old_gui/head3.tga", NORMAL, 198, 117, 
 labHairColor = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairColor", 61, 12, 330, 200 )
 UI_SetCaption( labHairColor, "Long Hair" )
 UI_SetTextColor( labHairColor, COLOR_BLACK )
-UI_SetLabelExFont( labHairColor, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labHairColor, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建发色
 labHair = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHair", 61, 12, 330, 243 )
 UI_SetCaption( labHair, "1 1 Golden" )
 UI_SetTextColor( labHair, COLOR_BLACK )
-UI_SetLabelExFont( labHair, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labHair, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载向左按钮
 btnLeftColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftColor", 40, 24, 283, 191 )
@@ -384,7 +348,7 @@ UI_LoadButtonImage( btnRight3d, "texture/gui/old_gui/select4.tga",  32, 38, 0, 0
 labHairMoney = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairMoney", 65, 12, 335, 287 )
 UI_SetCaption( labHairMoney, "99999999" )
 UI_SetTextColor( labHairMoney, COLOR_BLACK )
-UI_SetLabelExFont( labHairMoney, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labHairMoney, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载接受按钮
 btnYes = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnYes", 41, 19, 293, 321 )
@@ -407,7 +371,7 @@ UI_CreateCompent( frmHead, COMMAND_ONE_TYPE, "cmdHead4", 32, 32, 390, 78 )
 labTicket = UI_CreateCompent( frmHead, LABELEX_TYPE, "labTicket", 65, 12, 298, 138 )
 UI_SetCaption( labTicket, "Hairstyling Voucher required" )
 UI_SetTextColor( labTicket, COLOR_BLACK )
-UI_SetLabelExFont( labTicket, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labTicket, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -----------------------------------------------------------------------
 -- 定义玩家间PK申请
@@ -444,7 +408,7 @@ UI_LoadImage( imgBakDown2, "texture/gui/old_gui/PK4.tga", NORMAL, 120, 175, 0, 0
 labPKtitle = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKtitle", 207, 12, 87, 7 )
 UI_SetCaption( labPKtitle, "" )
 UI_SetTextColor( labPKtitle, COLOR_BLACK )
-UI_SetLabelExFont( labPKtitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labPKtitle, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnClose", 14, 14, 340, 3 )
@@ -454,7 +418,7 @@ UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 17
 labPKmap = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKmap", 100, 12, 256, 31 )
 UI_SetCaption( labPKmap, "" )
 UI_SetTextColor( labPKmap, COLOR_BLACK )
-UI_SetLabelExFont( labPKmap, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labPKmap, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
 ----------team1队员列表
@@ -510,109 +474,70 @@ UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRU
 ------
 -- Target panel
 ------
-frmTargetInfo = UI_CreateForm( "frmTargetInfo", FALSE, 465, 80, 380, 557, TRUE, FALSE )
-UI_ShowForm( frmTargetInfo, TRUE )
-UI_SetFormStyleEx( frmTargetInfo, FORM_BOTTOM, 0, 70)
-UI_AddFormToTemplete( frmTargetInfo, FORM_MAIN )
-UI_SetIsDrag( frmTargetInfo, FALSE )
-UI_FormSetIsEscClose( frmTargetInfo, TRUE )
+frmTargetInfo = UI_CreateForm( "frmTargetInfo", FALSE, 176, 45, 0, 20, TRUE, FALSE)
+UI_ShowForm(frmTargetInfo, FALSE)
+UI_AddFormToTemplete(frmTargetInfo, FORM_MAIN)
+UI_SetFormStyleEx(frmTargetInfo, FORM_XCENTER, 0, 0)
+UI_FormSetIsEscClose(frmTargetInfo, TRUE)
+UI_SetIsDrag( frmTargetInfo, TRUE )
 
-imgTargetInfo = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetInfo", 465, 80, 0, 0 )
-UI_LoadImage( imgTargetInfo, "texture/gui/detail-01.png", NORMAL, 465, 80, 0, 251 )
+setBackgroundMiddle(frmTargetInfo, 176, 45, 225, 0, 0)
 
-imgTargetName = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetName", 208, 21, 13, 42 )
-UI_LoadImage( imgTargetName, "texture/gui/detail-01.png", NORMAL, 208, 21, 13, 344 )
+image = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "image", 125, 15, 45, 22)
+UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
 
-frmTargetInfoHP = UI_CreateCompent( frmTargetInfo, PROGRESS_TYPE, "frmTargetInfoHP", 208, 21, 247, 42 )
-UI_LoadScaleImage( frmTargetInfoHP, "texture/gui/detail-01.png", PROGRESS_PROGRESS, 208, 21, 246, 344, 1.0, 1.0 )
+frmTargetInfoHP = UI_CreateCompent( frmTargetInfo, PROGRESS_TYPE, "frmTargetInfoHP", 125, 15, 45, 22)
+UI_LoadScaleImage( frmTargetInfoHP, "texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 125, 15, 534 + 50, 102, 1.0, 1.0)
 UI_SetHint( frmTargetInfoHP, "HP" )
+UI_SetProgressHintStyle( frmTargetInfoHP, PROGRESS_HINT_NUM )
 
---d3dTarget = UI_CreateCompent( frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget",  35, 35, 215, 25 )
---Target3dSelfDown = UI_CreateCompent( frmTargetInfo, UI3D_COMPENT_TYPE, "Target3dSelfDown", 35, 35, 215, 25 )
+UI_CreateCompent(frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget",  36, 36, 3, 3)
 
---imgTargetFrame = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetFrame", 80, 81, 192, 0 )
---UI_LoadImage( imgTargetFrame, "texture/gui/detail-01.png", NORMAL, 80, 81, 14, 86 )
+frmTargetInfoName = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "frmTargetInfoName", 95, 11, 45, 5)
+UI_SetTextColor( frmTargetInfoName, argbColor("b9baba") )
+UI_SetLabelExFont( frmTargetInfoName, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-frmTargetInfoName = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "frmTargetInfoName", 95, 11, 68, 45 )
-UI_SetTextColor( frmTargetInfoName, COLOR_C9C2B4 )
-UI_SetLabelExFont( frmTargetInfoName, FONT_16, TRUE, COLOR_BLACK )
+imgTargetLv = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetLv", 15, 11, 10, 30)
+UI_LoadImage( imgTargetLv, "texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
 
-imgTargetLv = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetLv", 28, 26, 190, 38 )
-UI_LoadImage( imgTargetLv, "texture/gui/detail-01.png", NORMAL, 28, 26, 94, 85 )
+labTargetLv = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetLv", 14, 9, 10, 29 )
+UI_SetTextColor( labTargetLv, argbColor("b9baba") )
+UI_SetLabelExFont( labTargetLv, EXO_Regular_S10, FALSE, COLOR_BLACK )
+UI_SetCaption( labTargetLv, "99" )
 
-labTargetLv = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetLv", 14, 9, 200, 45 )
-UI_SetTextColor( labTargetLv, COLOR_C9C2B4 )
-UI_SetLabelExFont( labTargetLv, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labTargetHP = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetHP", 14, 9, 45, 24 )
+UI_SetTextColor( labTargetHP, argbColor("b9baba") )
+UI_SetLabelExFont( labTargetHP, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labLv, "99" )
 
-labTargetHP = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetHP", 14, 9, 360, 45 )
-UI_SetTextColor( labTargetHP, COLOR_C9C2B4 )
-UI_SetLabelExFont( labTargetHP, DEFAULT_FONT, TRUE, COLOR_BLACK )
-UI_SetCaption( labLv, "99" )
-
-btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 16, 18, 247, 42 )
-UI_LoadButtonImage( btnTargetInfo, "texture/gui/fun-panel.png", 16, 18, 52, 28, TRUE )
+btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 15, 15, 155, 22)
+UI_LoadButtonImage( btnTargetInfo, "texture/ascaron_ui/asc-part-01.png", 12, 12, 164, 239, TRUE )
 UI_SetHint( btnTargetInfo, "Show monster info" )
 UI_SetIsShow(btnTargetInfo, TRUE)
 
 ------
 -- Drop Form
 ------
-frmTargetDrop = UI_CreateForm( "frmTargetDrop", FALSE, 470, 19, 0, 0, TRUE, FALSE )
+frmTargetDrop = UI_CreateForm( "frmTargetDrop", FALSE, 202, 79, 0, 0, TRUE, FALSE )
 UI_SetIsDrag( frmTargetDrop, FALSE )
 UI_FormSetIsEscClose( frmTargetDrop, TRUE )
 
-for pos = 0, 9, 1 do
-	local collum = 0
+setBackground(frmTargetDrop, false, 212, 89, 225)
+
+local grd = CreateImageGrid(frmTargetDrop, 5, 2, 3, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 5, 5)
+for i, pos in ipairs(grd) do
+
+	local j0 = i
+	local Item = string.format("infoDrop%d", j0)
+	local j3 = string.format("infoDropRate%d", j0)
 	
-	if (pos > 4) then collum = 86 end
+	Item = UI_CreateCompent( frmTargetDrop, COMMAND_ONE_TYPE, Item, 32, 32, pos.x, pos.y)
+	UI_SetIsDrag(Item, FALSE )
 	
-	imgSlot = UI_CreateCompent( frmTargetDrop, IMAGE_TYPE, "imgSlot", 35, 35, 7 + collum + (pos * 37), 0 )
-	UI_LoadImage(imgSlot, "texture/gui/detail-01.png", NORMAL, 35, 34, 336, 19 )
-	
-	local j0 = pos + 1
-	local j1 = "infoDrop" .. j0
-	--local j2 = "infoDropName" .. j0
-	local j3 = "infoDropRate" .. j0
-	
-	j1 = UI_CreateCompent( frmTargetDrop, COMMAND_ONE_TYPE, j1, 32, 32, 8 + collum + (pos * 37), 1)
-	UI_SetIsDrag(j1, FALSE )
-		
-	--j2 = UI_CreateCompent( frmTargetDrop, LABELEX_TYPE, j2, 85, 9, 63, 35 )
-	--UI_SetTextColor( j2, COLOR_BLACK )
-	--UI_SetLabelExFont(j2, DEFAULT_FONT, TRUE, COLOR_WHITE )
-	
-	imgSlotBackground = UI_CreateCompent( frmTargetDrop, IMAGE_TYPE, "imgSlotBackground", 33, 11, 8 + collum + (pos * 37), 24 )
-	UI_LoadImage(imgSlotBackground, "texture/gui/detail-01.png", NORMAL, 10, 10, 336, 57 )
-	
-	j3 = UI_CreateCompent( frmTargetDrop, LABELEX_TYPE, j3, 30, 10, 14 + collum + (pos * 37), 25 )
-	UI_SetTextColor(j3, COLOR_958273 )
-	UI_SetLabelExFont(j3, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	j3 = UI_CreateCompent( frmTargetDrop, LABELEX_TYPE, j3, 30, 10, pos.x + 3, pos.y + 22)
+	UI_SetTextColor(j3, argbColor("b9baba") )
+	UI_SetLabelExFont(j3, EXO_Regular_S10, TRUE, COLOR_BLACK)
 end
-
-------
--- Casting
------
-frmCasting = UI_CreateForm( "frmCasting", FALSE, 0, 0, 0, 0, TRUE, FALSE )
-UI_ShowForm( frmCasting, TRUE )
-UI_SetIsDrag( frmCasting, FALSE )
-UI_FormSetIsEscClose( frmCasting, FALSE )
-
-imgCasting = UI_CreateCompent( frmCasting, IMAGE_TYPE, "imgCasting", 370, 25, 0, 0 )
-UI_LoadImage( imgCasting, "texture/gui/detail-01.png", NORMAL, 370, 25, 2, 381 )
-
-proCasting = UI_CreateCompent( frmCasting, PROGRESS_TYPE, "proCasting", 343, 21, 25, 2 )
-UI_LoadScaleImage( proCasting, "texture/gui/detail-01.png", PROGRESS_PROGRESS, 343, 21, 27, 407, 1.0, 1.0 )
-
-labCasting = UI_CreateCompent( frmCasting, LABELEX_TYPE, "labCasting", 120, 9, 30, 6 )
-UI_SetTextColor( labCasting, COLOR_C9C2B4 )
-UI_SetLabelExFont( labCasting, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
-labCastingTime = UI_CreateCompent( frmCasting, LABELEX_TYPE, "labCastingTime", 120, 9, 280, 6 )
-UI_SetTextColor( labCastingTime, COLOR_C9C2B4 )
-UI_SetLabelExFont( labCastingTime, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
-imgEffectIcon = UI_CreateCompent( frmCasting, IMAGE_TYPE, "imgEffectIcon", 25, 25, 0, 0 )
 
 -----------------------------------------------------------------------
 -- Positive panel

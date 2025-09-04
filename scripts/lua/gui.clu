@@ -617,6 +617,10 @@ function UI_SetEditCursorColor( id, color )
 	CLU_Call( "UI_SetEditCursorColor", id, color )
 end
 
+function UI_SetEditFont( id, font )
+	CLU_Call( "UI_SetEditFont", id, font )
+end
+
 -- 设置输入框回车时响应的按钮
 function UI_SetEditEnterButton( nEditID, nButtonID )
 	CLU_Call( "UI_SetEditEnterButton", nEditID, nButtonID )
@@ -925,24 +929,24 @@ function argbColor(hex)
     -- 16777216 = 2^24, 65536 = 2^16, 256 = 2^8
 end
 
-function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alpha)
-	local image_x, image_y = 50, 50
-	local tile_size = 15
+function setBackground(form, isbClose, form_size_x, form_size_y, alpha)
+	local image_x, image_y = 54, 54
+	local tile_size = 18
 	
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, 0)
-	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, 0, 0)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 0, 0)
 	UI_SetAlpha(image, alpha)
 	
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, 0)
-	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, 0)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, 0)
 	UI_SetAlpha(image, alpha)
 	
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, form_size_y - tile_size)
-	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, 0, image_y - tile_size)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 0, image_y - tile_size)
 	UI_SetAlpha(image, alpha)
 	
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, form_size_y - tile_size)
-	UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, image_y - tile_size)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, image_y - tile_size)
 	UI_SetAlpha(image, alpha)
 	
 	if form_size_x > tile_size * 2 then
@@ -954,14 +958,14 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 		for i = 0, full_tiles - 1 do
 			local pos_x = start_x + tile_size * i
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, pos_x, 0)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
 			UI_SetAlpha(image, alpha)
 		end
 		
 		if remainder > 0 then
 			local pos_x = start_x + tile_size * full_tiles
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder, tile_size, pos_x, 0)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder, tile_size, tile_size, 0)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder, tile_size, tile_size, 0)
 			UI_SetAlpha(image, alpha)
 		end
 	end
@@ -975,14 +979,14 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 		for i = 0, full_tiles - 1 do
 			local pos_y = start_y + tile_size * i
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, pos_y)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, tile_size)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, tile_size)
 			UI_SetAlpha(image, alpha)
 		end
 
 		if remainder > 0 then
 			local pos_y = start_y + tile_size * full_tiles
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder, form_size_x - tile_size, pos_y)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, remainder, image_x - tile_size, tile_size)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, remainder, image_x - tile_size, tile_size)
 			UI_SetAlpha(image, alpha)
 		end
 	end
@@ -996,14 +1000,14 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 		for i = 0, full_tiles - 1 do
 			local pos_y = start_y + tile_size * i
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, pos_y)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
 			UI_SetAlpha(image, alpha)
 		end
 
 		if remainder > 0 then
 			local pos_y = start_y + tile_size * full_tiles
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder, 0, pos_y)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, remainder, tile_size, 0)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, remainder, tile_size, 0)
 			UI_SetAlpha(image, alpha)
 		end
 	end
@@ -1018,14 +1022,14 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 		for i = 0, full_tiles - 1 do
 			local pos_x = start_x + tile_size * i
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, pos_x, pos_y)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, image_y - tile_size)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, image_y - tile_size)
 			UI_SetAlpha(image, alpha)
 		end
 
 		if remainder > 0 then
 			local pos_x = start_x + tile_size * full_tiles
 			image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder, tile_size, pos_x, pos_y)
-			UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder, tile_size, tile_size, image_y - tile_size)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder, tile_size, tile_size, image_y - tile_size)
 			UI_SetAlpha(image, alpha)
 		end
 	end
@@ -1047,7 +1051,7 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 				local pos_x = start_x + x * tile_size
 				local pos_y = start_y + y * tile_size
 				image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, pos_x, pos_y)
-				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, tile_size, tile_size, tile_size)
+				UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, tile_size)
 				UI_SetAlpha(image, alpha)
 			end
 			
@@ -1055,7 +1059,7 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 				local pos_x = start_x + full_tiles_x * tile_size
 				local pos_y = start_y + y * tile_size
 				image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder_x, tile_size, pos_x, pos_y)
-				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder_x, tile_size, tile_size, tile_size)
+				UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder_x, tile_size, tile_size, tile_size)
 				UI_SetAlpha(image, alpha)
 			end
 		end
@@ -1065,7 +1069,7 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 				local pos_x = start_x + x * tile_size
 				local pos_y = start_y + full_tiles_y * tile_size
 				image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder_y, pos_x, pos_y)
-				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, tile_size, remainder_y, tile_size, tile_size)
+				UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, remainder_y, tile_size, tile_size)
 				UI_SetAlpha(image, alpha)
 			end
 			
@@ -1073,23 +1077,329 @@ function setBackground(form, form_name, isbClose, form_size_x, form_size_y, alph
 				local pos_x = start_x + full_tiles_x * tile_size
 				local pos_y = start_y + full_tiles_y * tile_size
 				image = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder_x, remainder_y, pos_x, pos_y)
-				UI_LoadImage(image, "texture/ui/part-01.png", NORMAL, remainder_x, remainder_y, tile_size, tile_size)
+				UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder_x, remainder_y, tile_size, tile_size)
 				UI_SetAlpha(image, alpha)
 			end
 		end
 	end
 	
-	-- Статус обновления
-	lamName = UI_CreateCompent(form, LABELEX_TYPE, "lamName", form_size_x, 30, 20, 20)
-	UI_SetCaption(lamName, string.format("%s", form_name))
-	UI_SetTextHtmlColor(lamName, "d7dede")
-	UI_SetLabelExFont(lamName, FONT18, FALSE, COLOR_BLACK)
-	
 	if (isbClose) then
-		btnClose = UI_CreateCompent(form, BUTTON_TYPE, "btnClose", 18, 18, form_size_x - 40, 18)
-		UI_LoadButtonImage(btnClose, "texture/ui/part-01.png", 50, 50, 55, 0, TRUE)
+		btnClose = UI_CreateCompent(form, BUTTON_TYPE, "btnClose", 14, 14, form_size_x - 34, 20)
+		UI_LoadButtonImage(btnClose, "texture/ascaron_ui/asc-part-01.png", 14, 14, 54, 0, TRUE)
 		UI_SetButtonModalResult(btnClose, BUTTON_CLOSE)
 	end
+end
+
+function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, form_pos_y)
+	local tile_size = 7
+	local image_x, image_y = 134, 21  -- координаты текстуры для центра
+
+	-- === Углы ===
+	local corners = {
+		{ x=0, y=0, tex_x=110, tex_y=0 },                  -- верхний левый
+		{ x=form_size_x-tile_size, y=0, tex_x=158, tex_y=0 },         -- верхний правый
+		{ x=0, y=form_size_y-tile_size, tex_x=110, tex_y=48 },        -- нижний левый
+		{ x=form_size_x-tile_size, y=form_size_y-tile_size, tex_x=158, tex_y=48 } -- нижний правый
+	}
+	for _, corner in ipairs(corners) do
+		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + corner.x, form_pos_y + corner.y)
+		UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, corner.tex_x, corner.tex_y)
+		UI_SetAlpha(img, alpha)
+	end
+
+	-- === Верхняя и нижняя рамка ===
+	if form_size_x > tile_size * 2 then
+		local start_x = tile_size
+		local usable_width = form_size_x - tile_size * 2
+		local full_tiles = math.floor(usable_width / tile_size)
+		local remainder = usable_width % tile_size
+
+		for i = 0, full_tiles-1 do
+			local pos_x = start_x + tile_size * i
+			-- верх
+			local img_top = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + pos_x, form_pos_y)
+			UI_LoadImage(img_top, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 134, 0)
+			UI_SetAlpha(img_top, alpha)
+			-- низ
+			local img_bottom = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + pos_x, form_pos_y + (form_size_y - tile_size))
+			UI_LoadImage(img_bottom, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 134, 48)
+			UI_SetAlpha(img_bottom, alpha)
+		end
+		if remainder > 0 then
+			local pos_x = start_x + full_tiles * tile_size
+			local img_top = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder, tile_size, form_pos_x + pos_x, form_pos_y)
+			UI_LoadImage(img_top, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder, tile_size, 134, 0)
+			UI_SetAlpha(img_top, alpha)
+			local img_bottom = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder, tile_size, form_pos_x + pos_x, form_pos_y + (form_size_y - tile_size))
+			UI_LoadImage(img_bottom, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder, tile_size, 134, 48)
+			UI_SetAlpha(img_bottom, alpha)
+		end
+	end
+
+	-- === Левая и правая рамка ===
+	if form_size_y > tile_size * 2 then
+		local start_y = tile_size
+		local usable_height = form_size_y - tile_size * 2
+		local full_tiles = math.floor(usable_height / tile_size)
+		local remainder = usable_height % tile_size
+
+		for i = 0, full_tiles-1 do
+			local pos_y = start_y + tile_size * i
+			-- левая
+			local img_left = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x, form_pos_y + pos_y)
+			UI_LoadImage(img_left, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 110, 21)
+			UI_SetAlpha(img_left, alpha)
+			-- правая
+			local img_right = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + (form_size_x - tile_size), form_pos_y + pos_y)
+			UI_LoadImage(img_right, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 158, 21)
+			UI_SetAlpha(img_right, alpha)
+		end
+		if remainder > 0 then
+			local pos_y = start_y + full_tiles * tile_size
+			local img_left = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder, form_pos_x, form_pos_y + pos_y)
+			UI_LoadImage(img_left, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, remainder, 110, 21)
+			UI_SetAlpha(img_left, alpha)
+			local img_right = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder, form_pos_x + (form_size_x - tile_size), form_pos_y + pos_y)
+			UI_LoadImage(img_right, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, remainder, 158, 21)
+			UI_SetAlpha(img_right, alpha)
+		end
+	end
+
+	-- === Центр формы ===
+	if form_size_x > tile_size*2 and form_size_y > tile_size*2 then
+		local start_x = tile_size
+		local start_y = tile_size
+		local usable_width = form_size_x - tile_size*2
+		local usable_height = form_size_y - tile_size*2
+
+		local full_tiles_x = math.floor(usable_width / tile_size)
+		local remainder_x = usable_width % tile_size
+		local full_tiles_y = math.floor(usable_height / tile_size)
+		local remainder_y = usable_height % tile_size
+
+		for y = 0, full_tiles_y-1 do
+			for x = 0, full_tiles_x-1 do
+				local pos_x = start_x + x*tile_size
+				local pos_y = start_y + y*tile_size
+				local img = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + pos_x, form_pos_y + pos_y)
+				UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, image_x, image_y)
+				UI_SetAlpha(img, alpha)
+			end
+			if remainder_x > 0 then
+				local pos_x = start_x + full_tiles_x*tile_size
+				local pos_y = start_y + y*tile_size
+				local img = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder_x, tile_size, form_pos_x + pos_x, form_pos_y + pos_y)
+				UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder_x, tile_size, image_x, image_y)
+				UI_SetAlpha(img, alpha)
+			end
+		end
+
+		if remainder_y > 0 then
+			for x = 0, full_tiles_x-1 do
+				local pos_x = start_x + x*tile_size
+				local pos_y = start_y + full_tiles_y*tile_size
+				local img = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, remainder_y, form_pos_x + pos_x, form_pos_y + pos_y)
+				UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, remainder_y, image_x, image_y)
+				UI_SetAlpha(img, alpha)
+			end
+			if remainder_x > 0 then
+				local pos_x = start_x + full_tiles_x*tile_size
+				local pos_y = start_y + full_tiles_y*tile_size
+				local img = UI_CreateCompent(form, IMAGE_TYPE, "image", remainder_x, remainder_y, form_pos_x + pos_x, form_pos_y + pos_y)
+				UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, remainder_x, remainder_y, image_x, image_y)
+				UI_SetAlpha(img, alpha)
+			end
+		end
+	end
+end
+
+-- form_size_x - размер окна X
+-- form_size_y - размер окна Y
+-- form_pos_x - позиция создаваемого окна на холсте
+-- form_pos_y - позиция создаваемого окна на холсте
+-- @todo сделать чтобы эта функция создавала рамку размером form_size_x на form_size_y
+function setBorderMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, form_pos_y)
+	local border = 2
+	
+	-- Верхняя полоса
+	for pos = 0, (form_size_x - border), border do
+		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x + pos, form_pos_y)
+		UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
+		UI_SetAlpha(img, alpha)
+	end
+	
+	-- Нижняя полоса
+	for pos = 0, (form_size_x - border), border do
+		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x + pos, form_pos_y + form_size_y)
+		UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
+		UI_SetAlpha(img, alpha)
+	end
+	
+	-- Левая полоса
+	for pos = border, (form_size_x - border), border do
+		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x, form_pos_y + pos)
+		UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
+		UI_SetAlpha(img, alpha)
+	end
+	
+	-- Правая полоса
+	for pos = border, (form_size_x - border), border do
+		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x + form_size_x - border, form_pos_y + pos)
+		UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
+		UI_SetAlpha(img, alpha)
+	end
+end
+
+function setScroll(form)
+	scrollid = UI_GetScroll(form)
+	UI_SetSize( scrollid, 3, 42)
+	-- UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+	
+	--[[
+	id = UI_GetScrollObj( scrollid, SCROLL_UP )
+	UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
+	UI_SetSize( id, 11, 9 )
+	]]
+
+	id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+	UI_LoadImage( id, "texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 3, 42, 0, 54)
+	UI_SetSize(id, 3, 42)
+	
+	--[[
+	id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
+	UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
+	UI_SetSize( id, 11, 9 )
+	]]
+end
+
+------
+-- Создание подложки под панель персонажа (нижний бар)
+------
+function setBackgroundChaBar(form, size_x, size_y, alpha, form_size_x, form_size_y)
+	-- Левый край
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", 11, 52, form_size_x, form_size_y)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 11, 52, 141, 57)
+	UI_SetAlpha(image, alpha)
+	
+	-- Заполнение между левым и правым краем
+	--image = UI_CreateCompent(form, IMAGE_TYPE, "image", 1, 52, form_size_x, form_size_y)
+	--UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 1, 52, 152, 57) 
+	
+	if (size_x > 22) then
+		for pos = 11, (size_x - 12), 1 do
+			image = UI_CreateCompent(form, IMAGE_TYPE, "image", 1, 52, pos, form_size_y)
+			UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 1, 52, 152, 57) 
+			UI_SetAlpha(image, alpha)
+		end
+	end
+	
+	-- Правый край
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", 11, 52, size_x - 11, form_size_y)
+	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 11, 52, 153, 57)
+	UI_SetAlpha(image, alpha)
+end
+
+-- Функция для построения сетки изображений (rows × cols)
+-- form      - объект формы, на которую будут добавляться картинки
+-- cols      - количество колонок (по ширине)
+-- rows      - количество строк (по высоте)
+-- indent    - отступ между ячейками (одинаковый по X и Y)
+-- grdWidth  - ширина одной ячейки сетки (контейнера для изображения)
+-- grdHeight - высота одной ячейки
+-- imgPath   - путь к изображению, которое будет загружено
+-- imgWidth  - ширина изображения
+-- imgHeight - высота изображения
+-- imgPosX   - смещение изображения по X внутри ячейки
+-- imgPosY   - смещение изображения по Y внутри ячейки
+-- startPosX - начальная координата X для сетки (левый верхний угол)
+-- startPosY - начальная координата Y для сетки (левый верхний угол)
+-- Функция для построения сетки изображений и возврата координат для innerSize (например, 32x32)
+function CreateImageGrid(form, cols, rows, indent, grdWidth, grdHeight, imgPath, imgWidth, imgHeight, imgPosX, imgPosY, imgAlpha, startPosX, startPosY)
+    local coords = {}
+
+    for r = 1, rows do
+        -- координата Y текущей строки
+        local y = startPosY + (r - 1) * (grdHeight + indent)
+
+        for c = 1, cols do
+            -- координата X текущей колонки
+            local x = startPosX + (c - 1) * (grdWidth + indent)
+
+            -- уникальное имя контейнера
+            local name = string.format("imgGrid_%d_%d", r, c)
+
+            local imgGrid = UI_CreateCompent(form, IMAGE_TYPE, name, grdWidth, grdHeight, x, y)
+            UI_LoadImage(imgGrid, imgPath, NORMAL, imgWidth, imgHeight, imgPosX, imgPosY)
+			UI_SetAlpha(imgGrid, imgAlpha)
+			
+            -- координаты для вложенного innerSize×innerSize объекта (например 32х32), по центру
+            local cx = x + (grdWidth  - 32) / 2
+            local cy = y + (grdHeight - 32) / 2
+
+            -- добавляем в список (строка заполняется слева направо)
+            table.insert(coords, {x = cx, y = cy})
+        end
+    end
+
+    return coords
+end
+
+-- Функция логирования сообщений
+-- fileName - имя файла (например "grid_log.txt")
+-- message  - строка для записи
+function LogMsg(fileName, message)
+	fileName = string.format("log/%s", fileName)
+	
+    local file, err = io.open(fileName, "a")
+    if not file then
+        print("Ошибка: не удалось открыть файл " .. fileName .. ": " .. err)
+        return
+    end
+
+    -- добавляем дату и время к сообщению
+    local timeStamp = os.date("%Y-%m-%d %H:%M:%S")
+    file:write(string.format("[%s] %s\n", timeStamp, message))
+    file:close()
+end
+
+-- Функция для добавления строки
+function AddStatRow(index, caption, hint, labelName, btnName)
+    local y = basestatgroup.y + (index * rowHeight)
+
+    local image = UI_CreateCompent(frmState, IMAGE_TYPE, "image"..index, 219, 26, basestatgroup.x, y + 25)
+    UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 219, 26, 440, 196)
+    UI_AddCompent(skillid, image)
+
+    local lab = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_"..labelName, 30, 14, basestatgroup.x + 15, y + 30)
+    UI_SetCaption(lab, caption)
+    UI_SetTextColor(lab, argbColor("919191") )
+    UI_SetLabelExFont(lab, EXO_Regular_S12, FALSE, COLOR_WHITE )
+    UI_AddCompent(skillid, lab)
+
+    local btn = UI_CreateCompent(frmState, BUTTON_TYPE, btnName, 20, 20, basestatgroup.x + 195, y + 28 )
+    UI_LoadButtonImage(btn, "texture/ascaron_ui/asc-part-01.png", 20, 20, 665, 199, TRUE )
+    UI_SetHint(btn, hint)
+    UI_AddCompent(skillid, btn)
+
+    local valueLab = UI_CreateCompent(frmState, LABELEX_TYPE, "lab"..labelName, 30, 14, basestatgroup.x + 150, y + 30)
+    UI_SetTextColor(valueLab, argbColor("d6d6d6") )
+    UI_SetLabelExFont(valueLab, EXO_Regular_S12, FALSE, COLOR_WHITE )
+    UI_AddCompent(skillid, valueLab)
+end
+
+function AddCharStat(index, caption, labelName)
+    local y = statsGroup.y + (index * rowHeight)
+
+    local lab = UI_CreateCompent(frmState, LABELEX_TYPE, "lab_"..labelName, 50, 14, statsGroup.x, y)
+    UI_SetCaption(lab, caption)
+    UI_SetTextColor(lab, argbColor("919191"))
+    UI_SetLabelExFont(lab, EXO_Regular_S12, FALSE, COLOR_WHITE)
+    UI_AddCompent(skillid, lab)
+
+    local valueLab = UI_CreateCompent(frmState, LABELEX_TYPE, "lab"..labelName, 30, 14, statsGroup.x + 135, y)
+    UI_SetTextColor(valueLab, argbColor("d6d6d6"))
+    UI_SetLabelExFont(valueLab, EXO_Regular_S12, FALSE, COLOR_WHITE)
+    UI_AddCompent(skillid, valueLab)
 end
 
 UI_ItemBarLoadImage( "texture/ui/system/progress.tga", 64, 16, 0, 0 )

@@ -1,33 +1,34 @@
 -----------------------------------------------------------------------
 -- Minimap
 -----------------------------------------------------------------------	
-frmMinimap = UI_CreateForm( "frmMinimap", FALSE, 162, 183, 656, 15, TRUE, FALSE )
+frmMinimap = UI_CreateForm( "frmMinimap", FALSE, 200, 210, 20, 20, TRUE, FALSE )
 UI_ShowForm( frmMinimap, TRUE )
 UI_AddFormToTemplete( frmMinimap, FORM_MAIN )
-UI_SetFormStyle( frmMinimap, 9 )
 UI_FormSetIsEscClose( frmMinimap, FALSE )
 
--- Background radar
-imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 153, 183, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 153, 183, 0, 0 )
+setBackgroundMiddle(frmMinimap, 200, 30, 200, 0, 0)
 
--- radar
-imgMinimapRect = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapRect", 128, 128, 17, 26 )
-
--- Map name
-labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 63, 7 )
+labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 7, 8 )
 UI_SetCaption( labMapName, "0" )
 UI_SetTextColor( labMapName, COLOR_WHITE )
---UI_SetLabelExFont( labMapName, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labMapName, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
--- posx, posy
+labServerTime = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labServerTime", 51, 12, 128, 8)
+UI_SetCaption(labServerTime, "00:00:00")
+UI_SetTextColor(labServerTime, argbColor("babbbb"))
+UI_SetLabelExFont(labServerTime, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+setBorderMiddle(frmMinimap, 200, 200, 200, 0, 35)
+
+imgMinimapRect = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapRect", 198, 198, 2, 37 )
+
 n  = 0
 while 1 do
 	local name = "labMapPos"..n
-	labMapPos = UI_CreateCompent( frmMinimap, LABELEX_TYPE, name, 79, 12, 50, 30 )
+	labMapPos = UI_CreateCompent( frmMinimap, LABELEX_TYPE, name, 200, 16, 0, 40)
 	UI_SetCaption( labMapPos, "2200, 2200" )
 	UI_SetTextColor( labMapPos, COLOR_WHITE )
-	--UI_SetLabelExFont( labMapPos, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetLabelExFont( labMapPos, EXO_Regular_S12, TRUE, COLOR_BLACK )
 	
 	if n ~= 0 then 
 		UI_SetIsShow( labMapPos, FALSE ) 
@@ -39,74 +40,33 @@ while 1 do
 	end	
 end
 
--- 妊快把志快把扶抉快 志把快技攸
-labServerTime = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labServerTime", 65, 23, 53, 147 )
-UI_SetCaption( labServerTime, "-----" )
-UI_SetTextColor(labServerTime, COLOR_WHITE)
---UI_SetLabelExFont(labServerTime, DEFAULT_FONT, TRUE, COLOR_BLACK)
+btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 30, 30, -15, 100)
+UI_LoadButtonImage( btnSearch, "texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 113, TRUE)
+UI_SetHint(btnSearch, "Radar (Alt + R)")
+UI_SetAlpha(btnSearch, 220)
 
-imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 25, 25, 3, 50 )
-UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 25, 25, 0, 185 )
+btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 30, 30, -15, 135)
+UI_LoadButtonImage( btnOpen, "texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 143, TRUE)
+UI_SetHint(btnOpen, "World Map (Alt + W)")
+UI_SetAlpha(btnOpen, 220)
 
-btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 19, 19, 3+3, 50+3 )
-UI_LoadButtonImage( btnOpen, "texture/gui/minimap-background.png", 19, 19, 30, 188, TRUE )
---UI_SetHint( btnOpen, "World Map" )
+btnTeleports = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnTeleports", 30, 30, -15, 170)
+UI_LoadButtonImage( btnTeleports, "texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 173, TRUE)
+UI_SetHint(btnTeleports, "Area Manager (Alt + V)")
+UI_SetAlpha(btnTeleports, 220)
 
-imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 19, 19, 6, 80 )
-UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 19, 19, 0, 211 )
+btnSetTrade = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSetTrade", 40, 40, 31, 247)
+UI_LoadButtonImage( btnSetTrade, "texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 153, TRUE)
 
-btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 15, 15, 8, 82 )
-UI_LoadButtonImage( btnSearch, "texture/gui/minimap-background.png", 14, 14, 21, 213, TRUE )
-UI_SetHint( btnSearch, "Radar" )
+btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 40, 40, 31 + 49, 247)
+UI_LoadButtonImage( btnOpenStore, "texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnOpenStore, "Accessing Item Mall")
+UI_SetAlpha(btnOpenStore, 200)
 
-imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 19, 19, 6, 104 )
-UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 19, 19, 0, 211 )
-
-btnteam = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnteam", 15, 15, 8, 106 )
-UI_LoadButtonImage( btnteam, "texture/gui/minimap-background.png", 14, 14, 64, 213, TRUE )
-UI_SetHint( btnteam, "Search party" )
-
-btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 87, 23, 62, 178 )
-UI_LoadButtonImage( btnOpenStore, "texture/gui/minimap-background.png", 87, 23, 135, 188, FALSE )
-UI_SetHint( btnOpenStore, "Accessing Item Mall" )
-
-btnWardrobe = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnWardrobe", 87, 23, 62, 206)
-UI_LoadButtonImage( btnWardrobe, "texture/gui/minimap-background.png", 87, 23, 153, 0, FALSE )
-
-btnTeleports = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnTeleports", 87, 23, 62, 234 )
-UI_LoadButtonImage( btnTeleports, "texture/gui/minimap-background.png", 87, 23, 153, 70, FALSE )
-
-btnSetTrade = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSetTrade", 65, 66, 75, 280)
-UI_LoadButtonImage(btnSetTrade, "texture/gui/p0w-frmInv.png", 98, 99, 0, 607, TRUE)
-
-imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 25, 25, 134, 50 )
-UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 25, 25, 0, 185 )
-
-btnRogerRaid = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnRogerRaid", 19, 19, 134+3, 53 )
-UI_LoadButtonImage( btnRogerRaid, "texture/gui/minimap-background.png", 19, 19, 30, 231, TRUE )
---UI_SetHint( btnRogerRaid, "Golden Roger (Purchase for IMPs!)" )
-
-imgBackground = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgBackground", 25, 25, 134 , 50 + 10 + 25 )
-UI_LoadImage( imgBackground, "texture/gui/minimap-background.png", NORMAL, 25, 25, 0, 185 )
-
-cbxYellowBag = UI_CreateCompent( frmMinimap, CHECK_TYPE, "cbxYellowBag", 19, 19, 134+3 , 53 + 10 + 25 )
-UI_LoadImage( cbxYellowBag, "texture/gui/minimap-background.png", UNCHECKED, 19, 19, 58, 254 )
-UI_LoadImage( cbxYellowBag, "texture/gui/minimap-background.png", CHECKED, 19, 19, 30, 254 )
-
-cbxShowGuildCircle = UI_CreateCompent( frmMinimap, CHECK_TYPE, "cbxShowGuildCircle", 36, 36, -45, 15 )
-UI_LoadImage( cbxShowGuildCircle, "texture/gui/old_gui//btnCircle.tga", UNCHECKED, 36, 36, 0, 0 )
-UI_LoadImage( cbxShowGuildCircle, "texture/gui/old_gui/btnCircle.tga", CHECKED, 36, 36, 36, 0 )
-
-
---btnRating = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnRating", 87, 23, 62, 178+23+5+30 )
---UI_LoadButtonImage( btnRating, "texture/gui/select-cha-panel.png", 87, 23, 508, 0, FALSE )
---UI_SetHint( btnRating, "Server guides" )
-
---btnSitDown = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSitDown", 87, 23, 62, 178+23+5+30+30 )
---UI_LoadButtonImage( btnSitDown, "texture/gui/select-cha-panel.png", 87, 23, 508, 0, FALSE )
---UI_SetHint( btnSitDown, "Server guides" )
-
-
+btnWardrobe = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnWardrobe", 40, 40, 31 + 49 + 49, 247)
+UI_LoadButtonImage( btnWardrobe, "texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 193, TRUE)
+UI_SetHint(btnTeleports, "Wardrobe")
+UI_SetAlpha(btnWardrobe, 200)
 
 -----------------------------------------------------------------------
 -- Select map
@@ -123,14 +83,14 @@ UI_LoadImage( imgSearch, "texture/gui/select-map.png", NORMAL, 231, 109, 8, 1 )
 
 edtLeft = UI_CreateCompent( frmSearch, EDIT_TYPE, "edtLeft", 45, 11, 107, 54 )
 UI_SetTextColor( edtLeft, COLOR_FFEDCF )
-UI_SetLabelExFont( edtLeft, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( edtLeft, EXO_Regular_S12, FALSE, COLOR_WHITE )
 UI_SetEditMaxNum( edtLeft, 4 )
 UI_SetEditMaxNumVisible( edtLeft, 4 )
 UI_SetEditCursorColor( edtLeft, COLOR_WHITE )
 
 edtRight = UI_CreateCompent( frmSearch, EDIT_TYPE, "edtRight", 28, 11, 180, 54 )
 UI_SetTextColor( edtRight, COLOR_FFEDCF )
-UI_SetLabelExFont( edtRight, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( edtRight, EXO_Regular_S12, FALSE, COLOR_WHITE )
 UI_SetEditMaxNum( edtRight, 4 )
 UI_SetEditMaxNumVisible( edtRight, 4 )
 UI_SetEditCursorColor( edtRight, COLOR_WHITE )

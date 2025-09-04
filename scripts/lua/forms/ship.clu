@@ -61,12 +61,12 @@ UI_SetEditMaxNum( edtShipName, 16 )
 labShipBody = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipBody", 103, 13, 123+12, 314 )
 UI_SetCaption( labShipBody, "Fool" )
 UI_SetTextColor( labShipBody, COLOR_9A958D )
-UI_SetLabelExFont( labShipBody, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labShipBody, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labShipPower = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipPower", 103, 13, 123+12, 350 )
 UI_SetCaption( labShipPower, "Wheel of Fate" )
 UI_SetTextColor( labShipPower, COLOR_9A958D )
-UI_SetLabelExFont( labShipPower, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labShipPower, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnPowerLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnPowerLeft", 31, 31, 74+12, 341 )
 UI_LoadButtonImage( btnPowerLeft, "texture/gui/create-cha-01.png", 41, 41, 0, 410, TRUE )
@@ -78,7 +78,7 @@ UI_LoadButtonImage( btnPowerRight, "texture/gui/create-cha-01.png", 41, 41, 165,
 labShipHead = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipHead", 103, 13, 123+12, 386 )
 UI_SetCaption( labShipHead, "Queen" )
 UI_SetTextColor( labShipHead, COLOR_9A958D )
-UI_SetLabelExFont( labShipHead, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labShipHead, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnHeadLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnHeadLeft", 31, 31, 74+12, 377 )
 UI_LoadButtonImage( btnHeadLeft, "texture/gui/create-cha-01.png", 41, 41, 0, 410, TRUE )
@@ -89,7 +89,7 @@ UI_LoadButtonImage( btnHeadRight, "texture/gui/create-cha-01.png", 41, 41, 165, 
 labShipSign = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipSign", 103, 13, 135, 422 )
 UI_SetCaption( labShipSign, "Skull" )
 UI_SetTextColor( labShipSign, COLOR_9A958D )
-UI_SetLabelExFont( labShipSign, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labShipSign, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnSignLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnSignLeft", 31, 31, 86, 413 )
 UI_LoadButtonImage( btnSignLeft, "texture/gui/create-cha-01.png", 41, 41, 0, 410, TRUE )
@@ -100,7 +100,7 @@ UI_LoadButtonImage( btnSignRight, "texture/gui/create-cha-01.png", 41, 41, 165, 
 labShipCanon = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipCanon", 103, 13, 135, 458 )
 UI_SetCaption( labShipCanon, "Cannon" )
 UI_SetTextColor( labShipCanon, COLOR_9A958D )
-UI_SetLabelExFont( labShipCanon, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labShipCanon, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnCanonLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnCanonLeft", 31, 31, 86, 449 )
 UI_LoadButtonImage( btnCanonLeft, "texture/gui/create-cha-01.png", 41, 41, 0, 410, TRUE )
@@ -111,48 +111,48 @@ UI_LoadButtonImage( btnCanonRight, "texture/gui/create-cha-01.png", 41, 41, 165,
 labAtackShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labAtackShow", 62, 12, 346, 314 )
 UI_SetCaption( labAtackShow, "11111/11111" )
 UI_SetTextColor( labAtackShow, COLOR_9A958D )
-UI_SetLabelExFont( labAtackShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labAtackShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labTimeShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labTimeShow", 27, 12, 470, 314 )
 UI_SetCaption( labTimeShow, "11111" )
 UI_SetTextColor( labTimeShow, COLOR_9A958D )
-UI_SetLabelExFont( labTimeShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labTimeShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labSailorShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labSailorShow", 62, 12, 346, 350 )
 UI_SetCaption( labSailorShow, "22222/22222" )
 UI_SetTextColor( labSailorShow, COLOR_9A958D )
-UI_SetLabelExFont( labSailorShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labSailorShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labFlyspeedShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labFlyspeedShow", 27, 12, 470, 386)
 UI_SetCaption( labFlyspeedShow, "22222" )
 UI_SetTextColor( labFlyspeedShow, COLOR_9A958D )
-UI_SetLabelExFont( labFlyspeedShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labFlyspeedShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labDefenceShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labDefenceShow", 27, 12, 470, 422 )
 UI_SetCaption( labDefenceShow, "33333" )
 UI_SetTextColor( labDefenceShow, COLOR_9A958D )
-UI_SetLabelExFont( labDefenceShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labDefenceShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labCanonShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labCanonShow", 62, 12, 346, 386 )
 UI_SetCaption( labCanonShow, "33333/33333" )
 UI_SetTextColor( labCanonShow, COLOR_9A958D )
-UI_SetLabelExFont( labCanonShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labCanonShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labContentShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labContentShow", 62, 12, 346, 422 )
 UI_SetCaption( labContentShow, "44444/44444" )
 UI_SetTextColor( labContentShow, COLOR_9A958D )
-UI_SetLabelExFont( labContentShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labContentShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 
 labSpeedShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labSpeedShow", 27, 12, 470, 350 )
 UI_SetCaption( labSpeedShow, "44444" )
 UI_SetTextColor( labSpeedShow, COLOR_9A958D )
-UI_SetLabelExFont( labSpeedShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labSpeedShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 labMenShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labMenShow", 62, 12, 346, 458 )
 UI_SetCaption( labMenShow, "55555555555" )
 UI_SetTextColor( labMenShow, COLOR_9A958D )
-UI_SetLabelExFont( labMenShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labMenShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 btnYes = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnYes", 104, 31, 433, 449 )
 UI_LoadButtonImage( btnYes, "texture/gui/create-cha-01.png", 200, 60, 0, 535, FALSE )
@@ -257,25 +257,25 @@ UI_LoadImage( imgBakRightTop, "texture/gui/old_gui/shipinfo.tga", NORMAL, 49, 28
 labSailorShow1 = UI_CreateCompent( frmShipsail, LABELEX_TYPE, "labSailorShow1", 62, 12, 25, 9 )
 UI_SetCaption( labSailorShow1, "22222/22222" )
 UI_SetTextColor( labSailorShow1, COLOR_WHITE )
-UI_SetLabelExFont( labSailorShow1, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labSailorShow1, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --补给
 labCanonShow1 = UI_CreateCompent( frmShipsail, LABELEX_TYPE, "labCanonShow1", 62, 12, 217, 9 )
 UI_SetCaption( labCanonShow1, "33333/33333" )
 UI_SetTextColor( labCanonShow1, COLOR_WHITE )
-UI_SetLabelExFont( labCanonShow1, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labCanonShow1, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --熟练
 labExpship = UI_CreateCompent( frmShipsail, LABELEX_TYPE, "labExpship", 62, 12, 298, 37 )
 UI_SetCaption( labExpship, "10000" )
 UI_SetTextColor( labExpship, COLOR_WHITE )
-UI_SetLabelExFont( labExpship, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labExpship, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --等级
 labLvship = UI_CreateCompent( frmShipsail, LABELEX_TYPE, "labLvship", 62, 12, 40, 37 )
 UI_SetCaption( labLvship, "100" )
 UI_SetTextColor( labLvship, COLOR_WHITE )
-UI_SetLabelExFont( labLvship, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labLvship, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --创建耐久
 proSailor = UI_CreateCompent( frmShipsail, PROGRESS_TYPE, "proSailor", 98, 4, 8, 22 )

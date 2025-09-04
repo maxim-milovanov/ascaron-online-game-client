@@ -4,7 +4,7 @@ UI_ShowForm( frmGacha, FALSE )
 UI_AddFormToTemplete( frmGacha, FORM_MAIN )
 UI_SetIsDrag( frmGacha, TRUE )
 
-setBackground(frmGacha, "Gacha", true, 650, 500, 235)
+setBackground(frmGacha, true, 650, 500, 225)
 
 d3dSkin = UI_CreateCompent(frmGacha, UI3D_COMPENT, "d3dSkin", 100, 100, 400, 60)
 

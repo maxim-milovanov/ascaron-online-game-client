@@ -95,7 +95,7 @@ imgRememberme = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgRememberme", 154, 
 UI_LoadImage( imgRememberme, "texture/gui/btnServer.png", NORMAL, 154, 41, 488, 640 )
 
 imgUsername = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgUsername", 111, 21, 160, 57 )
-UI_LoadImage( imgUsername, "texture/gui/btnServer.png", NORMAL, 111, 21, 669, 651 )
+UI_LoadImage( imgUsername, "texture/gui/btnServer.2png", NORMAL, 111, 21, 669, 651 )
 
 imgPassword = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgPassword", 108, 21, 160, 147 )
 UI_LoadImage( imgPassword, "texture/gui/btnServer.png", NORMAL, 108, 21, 670, 674 )
@@ -116,6 +116,7 @@ UI_SetTextColor( edtID, COLOR_B1A58E )
 UI_SetEditMaxNum( edtID, 35 )
 UI_SetEditMaxNumVisible( edtID, 35 )
 UI_SetEditCursorColor( edtID, COLOR_WHITE )
+--UI_SetEditFont( edtID, EXO_Regular_S20 )
 
 edtPassword = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtPassword", 300, 12, 100, 150 )
 UI_SetTextColor( edtPassword, COLOR_B1A58E )
@@ -175,7 +176,7 @@ UI_SetAlign( btnYes, caWidthCenter )
 labYes = UI_CreateCompent( frmAnnounce, LABELEX_TYPE, "labYes", 24, 10, 109, 324 )
 UI_SetCaption( labYes, "" )
 UI_SetTextColor( labYes, COLOR_WHITE )
-UI_SetLabelExFont( labYes, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labYes, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 -----------------------------------------------------------------------
 -- Create security code

@@ -21,38 +21,38 @@ UI_LoadImage( imgChaInfoDown, "texture/ui/selectcha.tga", NORMAL, 136, 14, 261, 
 labChaInfoName = UI_CreateCompent( frmChaInfo, LABELEX_TYPE, "labChaInfoName", 94, 12, 8, 10 )
 UI_SetCaption( labChaInfoName, "Name Pirate Prince B.J" )
 UI_SetTextColor( labChaInfoName, COLOR_WHITE )
-UI_SetLabelExFont( labChaInfoName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labChaInfoName, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --创建人物职业显示
 labChaInfoJob = UI_CreateCompent( frmChaInfo, LABELEX_TYPE, "labChaInfoJob", 94, 12, 8, 31 )
 UI_SetCaption( labChaInfoJob, "Class Sharpshooter" )
 UI_SetTextColor( labChaInfoJob, COLOR_WHITE )
-UI_SetLabelExFont( labChaInfoJob, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labChaInfoJob, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 
 --加载等级
 labChaInfoLevel = UI_CreateCompent( frmChaInfo, LABELEX_TYPE, "labChaInfoLevel", 94, 12, 8, 52 )
 UI_SetCaption( labChaInfoLevel, "Level 300" )
 UI_SetTextColor( labChaInfoLevel, COLOR_WHITE )
-UI_SetLabelExFont( labChaInfoLevel, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labChaInfoLevel, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 -- 加载EX
 --labEXP = UI_CreateCompent( frmChaInfo, LABELEX_TYPE, "labEXP", 41, 8, 68, 61 )
 --UI_SetCaption( labEXP, "100.00%" )
 --UI_SetTextColor( labEXP, COLOR_WHITE )
---UI_SetLabelExFont( labEXP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+--UI_SetLabelExFont( labEXP, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 -- 加载HP
 --labChaInfoHP = UI_CreateCompent( frmChaInfo, LABELEX_TYPE, "labChaInfoHP", 81, 8, 44, 31 )
 --UI_SetCaption( labChaInfoHP, "HP 88888/88888" )
 --UI_SetTextColor( labChaInfoHP, COLOR_WHITE )
---UI_SetLabelExFont( labChaInfoHP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+--UI_SetLabelExFont( labChaInfoHP, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 -- 加载SP
 --labChaInfoSP = UI_CreateCompent( frmChaInfo, LABELEX_TYPE, "labChaInfoSP", 81, 8, 44, 45 )
 --UI_SetCaption( labChaInfoSP, "SP 88888/88888" )
 --UI_SetTextColor( labChaInfoSP, COLOR_WHITE )
---UI_SetLabelExFont( labChaInfoSP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+--UI_SetLabelExFont( labChaInfoSP, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 -----------------------------------------------------------------------
 -- 定义选择角色表单
@@ -74,7 +74,7 @@ UI_FormSetIsEscClose( frmUserselect, FALSE )
 --labUserselect = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labUserselect", 94, 12, 15, 4 )
 --UI_SetCaption( labUserselect, "Select Character" )
 --UI_SetTextColor( labUserselect, COLOR_WHITE )
---UI_SetLabelExFont( labUserselect, DEFAULT_FONT, TRUE, COLOR_BLACK )
+--UI_SetLabelExFont( labUserselect, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 
 --创建3D角色1
@@ -90,19 +90,19 @@ ui3dCha3 = UI_CreateCompent( frmUserselect, UI3D_COMPENT, "ui3dCha3", 159, 235, 
 labCha1 = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labCha1", 96, 12, 27, 280 )
 UI_SetCaption( labCha1, "Nil" )
 UI_SetTextColor( labCha1, COLOR_BLACK )
-UI_SetLabelExFont( labCha1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labCha1, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建人物2名称显示
 labCha2 = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labCha2", 96, 12, 210, 280 )
 UI_SetCaption( labCha2, "Nil" )
 UI_SetTextColor( labCha2, COLOR_BLACK )
-UI_SetLabelExFont( labCha2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labCha2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建人物3名称显示
 labCha3 = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labCha3", 96, 12, 394, 280 )
 UI_SetCaption( labCha3, "Nil" )
 UI_SetTextColor( labCha3, COLOR_BLACK )
-UI_SetLabelExFont( labCha3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labCha3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
 --定义创建按钮
@@ -112,7 +112,7 @@ UI_LoadButtonImage( btnCreate, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 
 labCreate = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labCreate", 42, 10, 153, 324 )
 UI_SetCaption( labCreate, "" )
 UI_SetTextColor( labCreate, COLOR_WHITE )
-UI_SetLabelExFont( labCreate, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labCreate, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --定义删除按钮
 btnDel = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnDel", 41, 19, 218, 320 )
@@ -121,7 +121,7 @@ UI_LoadButtonImage( btnDel, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 
 labDel = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labDel", 42, 10, 227, 324 )
 UI_SetCaption( labDel, "" )
 UI_SetTextColor( labDel, COLOR_WHITE )
-UI_SetLabelExFont( labDel, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labDel, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --定义进入按钮
 btnYes = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnYes", 41, 19, 292, 320 )
@@ -130,7 +130,7 @@ UI_LoadButtonImage( btnYes, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 
 labYes = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labYes", 42, 10, 301, 324 )
 UI_SetCaption( labYes, "" )
 UI_SetTextColor( labYes, COLOR_WHITE )
-UI_SetLabelExFont( labYes, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labYes, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --定义退出按钮
 btnNo = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnNo", 41, 19, 366, 320 )
@@ -139,7 +139,7 @@ UI_LoadButtonImage( btnNo, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 1
 labNo = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labNo", 42, 10, 375, 324 )
 UI_SetCaption( labNo, "" )
 UI_SetTextColor( labNo, COLOR_WHITE )
-UI_SetLabelExFont( labNo, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labNo, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 -----------------------------------------------------------------------
 -- 定义创建角色
@@ -160,7 +160,7 @@ UI_FormSetIsEscClose( frmUserfound, FALSE )
 memChaDescribe  = UI_CreateCompent( frmUserfound, MEMO_TYPE, "memChaDescribe", 167, 116, 198, 63 )
 --UI_SetCaption( memChaDescribe, "" )
 UI_SetTextColor( memChaDescribe, COLOR_BLACK )
-UI_SetLabelExFont( memChaDescribe, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( memChaDescribe, EXO_Regular_S12, TRUE, COLOR_WHITE )
 UI_SetMemoMaxNumPerRow( memChaDescribe, 26 )
 UI_SetMemoPageShowNum( memChaDescribe, 6 )
 
@@ -201,20 +201,20 @@ UI_SetEditMaxNumVisible( edtName, 16 )
 labStyleShow = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labStyleShow", 86, 10, 250, 211 )
 UI_SetCaption( labStyleShow, "Lance" )
 UI_SetTextColor( labStyleShow, COLOR_BLACK )
-UI_SetLabelExFont( labStyleShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labStyleShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 labHairShow = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labHairShow", 86, 10, 250, 233 )
 UI_SetCaption( labHairShow, "Long Hair" )
 UI_SetTextColor( labHairShow, COLOR_BLACK )
-UI_SetLabelExFont( labHairShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labHairShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 labFaceShow = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labFaceShow", 86, 10, 250, 255 )
 UI_SetCaption( labFaceShow, "Nightmare" )
 UI_SetTextColor( labFaceShow, COLOR_BLACK )
-UI_SetLabelExFont( labFaceShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labFaceShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 labCityShow = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labCityShow", 86, 10, 250, 277 )
 UI_SetCaption( labCityShow, "Argent City" )
 UI_SetTextColor( labCityShow, COLOR_BLACK )
-UI_SetLabelExFont( labCityShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetLabelExFont( labCityShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
 
@@ -261,7 +261,7 @@ UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRU
 labYes = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labYes", 42, 10, 244, 314 )
 UI_SetCaption( labYes, "" )
 UI_SetTextColor( labYes, COLOR_WHITE )
-UI_SetLabelExFont( labYes, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labYes, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnNo", 41, 19, 305, 300 )
@@ -270,7 +270,7 @@ UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRU
 labNo = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labNo", 42, 10, 314, 314 )
 UI_SetCaption( labNo, "" )
 UI_SetTextColor( labNo, COLOR_WHITE )
-UI_SetLabelExFont( labNo, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labNo, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 
 
