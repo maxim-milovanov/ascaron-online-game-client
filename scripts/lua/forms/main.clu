@@ -120,7 +120,7 @@ UI_LoadImage(img_top, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 312, 26, 4
 -- §¯§Ñ§á§Ú§ã§Ñ§ä§î §ã§à§à§Ò§ë§Ö§ß§Ú§Ö
 edtSay = UI_CreateCompent( frmMain800, EDIT_TYPE, "edtSay", 200, 20, 85, 9 )
 UI_SetTextColor( edtSay, COLOR_8D837A )
-UI_SetEditMaxNum( edtSay, 200)
+UI_SetEditMaxNum( edtSay, 64)
 UI_SetEditMaxNumVisible( edtSay, 24)
 UI_SetEditCursorColor( edtSay, COLOR_WHITE )
 
