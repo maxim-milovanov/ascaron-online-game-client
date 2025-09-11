@@ -92,7 +92,7 @@ btnkick = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnkick", 59, 30, 474, 449 
 UI_LoadButtonImage( btnkick, "texture/gui/guild.png", 59, 30, 0, 663, TRUE )
 
 btnSan = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnSan", 164, 29, 18, 226 )
-UI_LoadButtonImage( btnSan, "texture/gui/old_gui/SysBotton4.tga", 41, 14, 0, 76, TRUE )
+UI_LoadButtonImage( btnSan, "./texture/gui/old_gui/SysBotton4.tga", 41, 14, 0, 76, TRUE )
 
 btnMaxim = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnMaxim", 164, 29, 18, 184 )
 UI_LoadButtonImage( btnMaxim, "texture/gui/guild.png", 164, 29, 0, 571, TRUE )

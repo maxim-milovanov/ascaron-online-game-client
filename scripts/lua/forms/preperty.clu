@@ -16,19 +16,19 @@ UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 
 image = UI_CreateCompent(frmState, IMAGE_TYPE, "image", 550, 2, 50, 50+29)
-UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 550, 2, 0, 381)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 550, 2, 0, 381)
 
 pgePublic = UI_CreateCompent(frmState, PAGE_TYPE, "pgePublic", 600, 420, 50, 50 )
 UI_SetPageButton(pgePublic, PAGE_BUTTON_CUSTOM, 48, 16 )
 
 skillid = UI_CreatePageItem(pgePublic)
 ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlNum, "texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 546, 225)
-UI_LoadImage( ttlNum, "texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 423, 225)
+UI_LoadImage( ttlNum, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 546, 225)
+UI_LoadImage( ttlNum, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 423, 225)
 UI_SetPos( ttlNum, 0, 0)
 UI_SetSize( ttlNum, 123, 31)
 
-ui3dCha = UI_CreateCompent( frmState, UI3D_COMPENT, "ui3dCha", 160, 250, 80, 250)
+ui3dCha = UI_CreateCompent( frmState, UI3D_COMPENT, "ui3dCha", 160, 150, 80, 250)
 UI_AddCompent(skillid, ui3dCha)
 
 labName = UI_CreateCompent( frmState, LABELEX_TYPE, "labName", 100, 11, 90, 70)
@@ -109,7 +109,7 @@ local function createSlot(name, hint, col, row, offsetX, offsetY)
     local cmdY = imgY + 3
 
     local img = UI_CreateCompent(frmState, IMAGE_TYPE, "cmdImg" .. name, 38, 38, imgX, imgY)
-    UI_LoadImage(img, "texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+    UI_LoadImage(img, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
     local cmd = UI_CreateCompent(frmState, COMMAND_ONE_TYPE, "cmd" .. name, 32, 32, cmdX, cmdY)
     UI_SetHint(cmd, hint)
@@ -162,8 +162,8 @@ UI_SetSize( ttlNum, 129, 46)
 
 trvJournal = UI_CreateCompent( frmState, TREE_TYPE, "trvJournal", 210, 400, 30, 80 )
 UI_SetIsDrag( trvEditor, TRUE )
-UI_TreeLoadImage( trvJournal, enumTreeAddImage, "texture/gui/old_gui/SystemBotton3.tga", 16, 16, 205, 120, 12, 12 )
-UI_TreeLoadImage( trvJournal, enumTreeSubImage, "texture/gui/old_gui/SystemBotton3.tga", 16, 16, 222, 120, 12, 12 )
+UI_TreeLoadImage( trvJournal, enumTreeAddImage, "./texture/gui/old_gui/SystemBotton3.tga", 16, 16, 205, 120, 12, 12 )
+UI_TreeLoadImage( trvJournal, enumTreeSubImage, "./texture/gui/old_gui/SystemBotton3.tga", 16, 16, 222, 120, 12, 12 )
 
 scrollid = UI_GetScroll( trvJournal)
 UI_SetSize( scrollid, 11, 1 )

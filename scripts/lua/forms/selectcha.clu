@@ -107,7 +107,7 @@ UI_SetLabelExFont( labCha3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --定义创建按钮
 btnCreate = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnCreate", 41, 19, 144, 320 )
-UI_LoadButtonImage( btnCreate, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 95, TRUE )
+UI_LoadButtonImage( btnCreate, "./texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 95, TRUE )
 
 labCreate = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labCreate", 42, 10, 153, 324 )
 UI_SetCaption( labCreate, "" )
@@ -116,7 +116,7 @@ UI_SetLabelExFont( labCreate, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --定义删除按钮
 btnDel = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnDel", 41, 19, 218, 320 )
-UI_LoadButtonImage( btnDel, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 114, TRUE )
+UI_LoadButtonImage( btnDel, "./texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 114, TRUE )
 
 labDel = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labDel", 42, 10, 227, 324 )
 UI_SetCaption( labDel, "" )
@@ -125,7 +125,7 @@ UI_SetLabelExFont( labDel, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --定义进入按钮
 btnYes = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnYes", 41, 19, 292, 320 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 133, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 133, TRUE )
 
 labYes = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labYes", 42, 10, 301, 324 )
 UI_SetCaption( labYes, "" )
@@ -134,7 +134,7 @@ UI_SetLabelExFont( labYes, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --定义退出按钮
 btnNo = UI_CreateCompent( frmUserselect, BUTTON_TYPE, "btnNo", 41, 19, 366, 320 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 152, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/SystemBotton3.tga", 41, 19, 0, 152, TRUE )
 
 labNo = UI_CreateCompent( frmUserselect, LABELEX_TYPE, "labNo", 42, 10, 375, 324 )
 UI_SetCaption( labNo, "" )
@@ -220,35 +220,35 @@ UI_SetLabelExFont( labCityShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载向左按钮
 btnLeftStyle = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnLeftStyle", 13, 13, 234, 211 )
-UI_LoadButtonImage( btnLeftStyle, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
+UI_LoadButtonImage( btnLeftStyle, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
 
 btnLeftHair = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnLeftHair", 13, 13, 234, 233 )
-UI_LoadButtonImage( btnLeftHair, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
+UI_LoadButtonImage( btnLeftHair, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
 
 btnLeftFace = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnLeftFace", 13, 13, 234, 255 )
-UI_LoadButtonImage( btnLeftFace, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
+UI_LoadButtonImage( btnLeftFace, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
 
 btnLeft3d = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnLeft3d", 15, 13, 45, 280 )
 UI_LoadButtonImage( btnLeft3d, "texture/ui/player.dds", 15, 13, 398, 360, TRUE )
 
 btnLeftCity = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnLeftCity", 13, 13, 234, 277 )
-UI_LoadButtonImage( btnLeftCity, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
+UI_LoadButtonImage( btnLeftCity, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
 
 --加载向右按钮
 btnRightStyle = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnRightStyle", 13, 13, 345, 211 )
-UI_LoadButtonImage( btnRightStyle, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
+UI_LoadButtonImage( btnRightStyle, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
 
 btnRightHair = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnRightHair", 13, 13, 345, 233 )
-UI_LoadButtonImage( btnRightHair, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
+UI_LoadButtonImage( btnRightHair, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
 
 btnRightFace = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnRightFace", 13, 13, 345, 255 )
-UI_LoadButtonImage( btnRightFace, "texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
+UI_LoadButtonImage( btnRightFace, "./texture/gui/old_gui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
 
 btnRight3d = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnRight3d", 15, 13, 150, 280 )
 UI_LoadButtonImage( btnRight3d, "texture/ui/player.dds",  15, 13, 398, 373, TRUE )
 
 btnRightCity = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnRightCity", 13, 13, 345, 277 )
-UI_LoadButtonImage( btnRightCity, "texture/gui/old_gui/SystemBotton3.tga",  13, 13, 0, 211, TRUE )
+UI_LoadButtonImage( btnRightCity, "./texture/gui/old_gui/SystemBotton3.tga",  13, 13, 0, 211, TRUE )
 
 --创建3D角色1
 ui3dCreateCha = UI_CreateCompent( frmUserfound, UI3D_COMPENT, "ui3dCreateCha", 159, 235, 24, 34 )
@@ -256,7 +256,7 @@ ui3dCreateCha = UI_CreateCompent( frmUserfound, UI3D_COMPENT, "ui3dCreateCha", 1
 
 --加载确定按钮
 btnYes = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnYes", 41, 19, 235, 300 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 
 labYes = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labYes", 42, 10, 244, 314 )
 UI_SetCaption( labYes, "" )
@@ -265,7 +265,7 @@ UI_SetLabelExFont( labYes, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmUserfound, BUTTON_TYPE, "btnNo", 41, 19, 305, 300 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 labNo = UI_CreateCompent( frmUserfound, LABELEX_TYPE, "labNo", 42, 10, 314, 314 )
 UI_SetCaption( labNo, "" )

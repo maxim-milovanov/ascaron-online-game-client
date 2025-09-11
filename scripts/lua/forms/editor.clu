@@ -55,10 +55,10 @@ UI_LoadImage( chkHideTree, "texture/gui/editor/hidetree.tga", UNCHECKED, 20, 20,
 local start = 430
 
 btnColor = UI_CreateCompent( frmEditor, BUTTON_TYPE, "btnColor", 14, 20, start, 5 )
-UI_LoadImage( btnColor, "texture/gui/old_gui/white.tga", NORMAL, 1, 1, 0, 0  )
-UI_LoadImage( btnColor, "texture/gui/old_gui/white.tga", HOVER, 1, 1, 0, 0 )
-UI_LoadImage( btnColor, "texture/gui/old_gui/white.tga", DOWN, 1, 1, 0, 0 )
-UI_LoadImage( btnColor, "texture/gui/old_gui/white.tga", DISABLE, 1, 1, 0, 0 )
+UI_LoadImage( btnColor, "./texture/gui/old_gui/white.tga", NORMAL, 1, 1, 0, 0  )
+UI_LoadImage( btnColor, "./texture/gui/old_gui/white.tga", HOVER, 1, 1, 0, 0 )
+UI_LoadImage( btnColor, "./texture/gui/old_gui/white.tga", DOWN, 1, 1, 0, 0 )
+UI_LoadImage( btnColor, "./texture/gui/old_gui/white.tga", DISABLE, 1, 1, 0, 0 )
 
 start = start + 15
 chkColor = UI_CreateCompent( frmEditor, CHECK_TYPE, "chkColor", 20, 20, start, 5 )

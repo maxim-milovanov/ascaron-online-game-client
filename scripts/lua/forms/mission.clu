@@ -25,8 +25,8 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 ------
 trvMission = UI_CreateCompent( frmMission, TREE_TYPE, "trvMission", 210, 400, 30, 80 )
 UI_SetIsDrag( trvEditor, TRUE )
-UI_TreeLoadImage( trvMission, enumTreeAddImage, "texture/gui/old_gui/SystemBotton3.tga", 16, 16, 205, 120, 12, 12 )
-UI_TreeLoadImage( trvMission, enumTreeSubImage, "texture/gui/old_gui/SystemBotton3.tga", 16, 16, 222, 120, 12, 12 )
+UI_TreeLoadImage( trvMission, enumTreeAddImage, "./texture/gui/old_gui/SystemBotton3.tga", 16, 16, 205, 120, 12, 12 )
+UI_TreeLoadImage( trvMission, enumTreeSubImage, "./texture/gui/old_gui/SystemBotton3.tga", 16, 16, 222, 120, 12, 12 )
 
 scrollid = UI_GetScroll( trvMission)
 UI_SetSize( scrollid, 11, 1 )

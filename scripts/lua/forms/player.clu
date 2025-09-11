@@ -169,10 +169,10 @@ for pos = 1, 4, 1 do
 	setBackgroundMiddle(label, 176, 45, 225, 0, 0)
 	
 	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 125, 15, 45, 22)
-	UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
 	
 	labelhp = UI_CreateCompent( label, PROGRESS_TYPE, labelhp, 125, 15, 45, 22)
-	UI_LoadScaleImage( labelhp, "texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 125, 15, 534 + 50, 102, 1.0, 1.0 )
+	UI_LoadScaleImage( labelhp, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 125, 15, 534 + 50, 102, 1.0, 1.0 )
 	UI_SetHint(labelhp, "HP")
 	UI_SetProgressHintStyle( labelhp, PROGRESS_HINT_NUM)
 	
@@ -180,7 +180,7 @@ for pos = 1, 4, 1 do
 	d3dDown = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dDown", 176, 45, 0, 0 )
 	
 	image = UI_CreateCompent( label, IMAGE_TYPE, "image", 15, 11, 10, 30)
-	UI_LoadImage( image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
+	UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
 	
 	labFLv = UI_CreateCompent( label, LABELEX_TYPE, "labFLv", 14, 9, 10, 29 )
 	UI_SetTextColor( labFLv, argbColor("b9baba") )
@@ -193,10 +193,10 @@ for pos = 1, 4, 1 do
 	UI_SetLabelExFont( labelname, EXO_Regular_S12, FALSE, COLOR_BLACK )
 	
 	imgLeader = UI_CreateCompent( label, IMAGE_TYPE, "imgLeader", 15, 15, 5, 5 )
-	UI_LoadImage( imgLeader, "texture/ascaron_ui/asc-part-01.png", NORMAL, 12, 12, 164, 239 )
+	UI_LoadImage( imgLeader, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 12, 12, 164, 239 )
 	
 	labeldead = UI_CreateCompent( label, IMAGE_TYPE, labeldead, 25, 25, 10, 5 )
-	UI_LoadImage( labeldead, "texture/ascaron_ui/asc-part-01.png", NORMAL, 25, 25, 138, 238 )
+	UI_LoadImage( labeldead, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 25, 25, 138, 238 )
 end
 
 ------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ UI_LoadButtonImage( btnReCity, "texture/gui/wasted.png", 150, 46, 25, 300, TRUE 
 -- 定义倒计时框
 -----------------------------------------------------------------------
 frmTime = UI_CreateForm( "frmTime",  FALSE, 185, 101, 397, 500, TRUE, FALSE )
-UI_LoadFormImage( frmTime, "texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmTime, "./texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
 UI_ShowForm( frmTime, FALSE )
 UI_AddFormToTemplete( frmTime, FORM_MAIN )
 UI_SetFormStyle( frmTime, 0 )
@@ -242,11 +242,11 @@ UI_SetLabelExFont( labTime, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -- 加载界面title
 imgTime = UI_CreateCompent( frmTime, IMAGE_TYPE, "imgTime", 36, 13, 8, 4 )
-UI_LoadImage( imgTime, "texture/gui/old_gui/Word.dds", NORMAL, 36, 13, 211, 161 )
+UI_LoadImage( imgTime, "./texture/gui/old_gui/Word.dds", NORMAL, 36, 13, 211, 161 )
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmTime, BUTTON_TYPE, "btnNo", 41, 19, 74, 78 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 
 -----------------------------------------------------------------------
@@ -266,9 +266,9 @@ UI_SetCaption( lblOwnerName, "SET STALL" )
 UI_SetTextColor( lblOwnerName, COLOR_WHITE)
 UI_SetLabelExFont( lblOwnerName, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 81)
-CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 168)
-CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 255)
+CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 81)
+CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 168)
+CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 255)
 
 grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 332, 265, 43, 60) 
 UI_SetGridSpace( grdBoothItem, 7, 7 )
@@ -298,16 +298,16 @@ UI_FormSetIsEscClose( frmHead, FALSE )
 
 -- 加载图片
 imgFoundTop = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundTop", 256, 256, 0, 0 )
-UI_LoadImage( imgFoundTop, "texture/gui/old_gui/head1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgFoundTop, "./texture/gui/old_gui/head1.tga", NORMAL, 256, 256, 0, 0 )
 
 imgFoundDown = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundDown", 256, 117, 0, 256 )
-UI_LoadImage( imgFoundDown, "texture/gui/old_gui/head3.tga", NORMAL, 256, 117, 0, 0 )
+UI_LoadImage( imgFoundDown, "./texture/gui/old_gui/head3.tga", NORMAL, 256, 117, 0, 0 )
 
 imgFoundTopR = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundTopR", 198, 256, 256, 0 )
-UI_LoadImage( imgFoundTopR, "texture/gui/old_gui/head2.tga", NORMAL, 198, 256, 0, 0 )
+UI_LoadImage( imgFoundTopR, "./texture/gui/old_gui/head2.tga", NORMAL, 198, 256, 0, 0 )
 
 imgFoundDownR = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundDownR", 198, 117, 256, 256 )
-UI_LoadImage( imgFoundDownR, "texture/gui/old_gui/head3.tga", NORMAL, 198, 117, 0, 117 )
+UI_LoadImage( imgFoundDownR, "./texture/gui/old_gui/head3.tga", NORMAL, 198, 117, 0, 117 )
 
 --创建发型
 labHairColor = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairColor", 61, 12, 330, 200 )
@@ -323,26 +323,26 @@ UI_SetLabelExFont( labHair, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载向左按钮
 btnLeftColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftColor", 40, 24, 283, 191 )
-UI_LoadButtonImage( btnLeftColor, "texture/gui/old_gui/select4.tga", 40, 24, 110, 24, TRUE )
+UI_LoadButtonImage( btnLeftColor, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 24, TRUE )
 
 btnLeftHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftHair", 40, 24, 283, 234 )
-UI_LoadButtonImage( btnLeftHair, "texture/gui/old_gui/select4.tga", 40, 24, 110, 24, TRUE )
+UI_LoadButtonImage( btnLeftHair, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 24, TRUE )
 
 --加载向右按钮
 btnRightColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightColor", 40, 24, 392, 191 )
-UI_LoadButtonImage( btnRightColor, "texture/gui/old_gui/select4.tga", 40, 24, 110, 0, TRUE )
+UI_LoadButtonImage( btnRightColor, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 0, TRUE )
 
 btnRightHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightHair", 40, 24, 392, 234 )
-UI_LoadButtonImage( btnRightHair, "texture/gui/old_gui/select4.tga", 40, 24, 110, 0, TRUE )
+UI_LoadButtonImage( btnRightHair, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 0, TRUE )
 
 --创建3D角色
 ui3dCreateCha = UI_CreateCompent( frmHead, UI3D_COMPENT, "ui3dCreateCha", 160, 300, 52, 35 )
 
 btnLeft3d = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeft3d", 32, 38, 28, 291 )
-UI_LoadButtonImage( btnLeft3d, "texture/gui/old_gui/select4.tga", 32, 38, 0, 38, TRUE )
+UI_LoadButtonImage( btnLeft3d, "./texture/gui/old_gui/select4.tga", 32, 38, 0, 38, TRUE )
 
 btnRight3d = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRight3d", 32, 38, 204, 291 )
-UI_LoadButtonImage( btnRight3d, "texture/gui/old_gui/select4.tga",  32, 38, 0, 0, TRUE )
+UI_LoadButtonImage( btnRight3d, "./texture/gui/old_gui/select4.tga",  32, 38, 0, 0, TRUE )
 
 --创建金钱
 labHairMoney = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairMoney", 65, 12, 335, 287 )
@@ -352,12 +352,12 @@ UI_SetLabelExFont( labHairMoney, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载接受按钮
 btnYes = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnYes", 41, 19, 293, 321 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnNo", 41, 19, 379, 321 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
 -- 理发道具(程序显示)
@@ -387,22 +387,22 @@ UI_FormSetIsEscClose( frmTeamPK, TRUE )
 
 -- 加载背景图片
 imgBakTop1 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop1", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTop1, "texture/gui/old_gui/PK1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTop1, "./texture/gui/old_gui/PK1.tga", NORMAL, 256, 256, 0, 0 )
 
 imgBakTop2 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop2", 120, 256, 256, 0 )
-UI_LoadImage( imgBakTop2, "texture/gui/old_gui/PK2.tga", NORMAL, 120, 256, 0, 0 )
+UI_LoadImage( imgBakTop2, "./texture/gui/old_gui/PK2.tga", NORMAL, 120, 256, 0, 0 )
 
 --imgBakTop3 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop3", 46, 256, 512, 0 )
---UI_LoadImage( imgBakTop3, "texture/gui/old_gui/PK4.tga", NORMAL, 46, 256, 0, 0 )
+--UI_LoadImage( imgBakTop3, "./texture/gui/old_gui/PK4.tga", NORMAL, 46, 256, 0, 0 )
 
 imgBakDown1 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown1", 256, 175, 0, 256 )
-UI_LoadImage( imgBakDown1, "texture/gui/old_gui/PK3.tga", NORMAL, 256, 175, 0, 0 )
+UI_LoadImage( imgBakDown1, "./texture/gui/old_gui/PK3.tga", NORMAL, 256, 175, 0, 0 )
 
 imgBakDown2 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown2", 120, 175, 256, 256 )
-UI_LoadImage( imgBakDown2, "texture/gui/old_gui/PK4.tga", NORMAL, 120, 175, 0, 0 )
+UI_LoadImage( imgBakDown2, "./texture/gui/old_gui/PK4.tga", NORMAL, 120, 175, 0, 0 )
 
 --imgBakDown3 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown3", 46, 26, 512, 256 )
---UI_LoadImage( imgBakDown3, "texture/gui/old_gui/PK3.tga", NORMAL, 46, 26, 210, 52 )
+--UI_LoadImage( imgBakDown3, "./texture/gui/old_gui/PK3.tga", NORMAL, 46, 26, 210, 52 )
 
 --创建PK地图title
 labPKtitle = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKtitle", 207, 12, 87, 7 )
@@ -412,7 +412,7 @@ UI_SetLabelExFont( labPKtitle, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnClose", 14, 14, 340, 3 )
-UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 --创建PK地图名称lab
 labPKmap = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKmap", 100, 12, 256, 31 )
@@ -464,12 +464,12 @@ UI_AddListText( lstTeam1, "Eight characters or therefore" )
 
 --加载确定按钮
 btnYes = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnYes", 41, 19, 224, 382 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnNo", 41, 19, 279, 382 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 ------
 -- Target panel
@@ -484,10 +484,10 @@ UI_SetIsDrag( frmTargetInfo, TRUE )
 setBackgroundMiddle(frmTargetInfo, 176, 45, 225, 0, 0)
 
 image = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "image", 125, 15, 45, 22)
-UI_LoadImage(image, "texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
 
 frmTargetInfoHP = UI_CreateCompent( frmTargetInfo, PROGRESS_TYPE, "frmTargetInfoHP", 125, 15, 45, 22)
-UI_LoadScaleImage( frmTargetInfoHP, "texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 125, 15, 534 + 50, 102, 1.0, 1.0)
+UI_LoadScaleImage( frmTargetInfoHP, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 125, 15, 534 + 50, 102, 1.0, 1.0)
 UI_SetHint( frmTargetInfoHP, "HP" )
 UI_SetProgressHintStyle( frmTargetInfoHP, PROGRESS_HINT_NUM )
 
@@ -498,7 +498,7 @@ UI_SetTextColor( frmTargetInfoName, argbColor("b9baba") )
 UI_SetLabelExFont( frmTargetInfoName, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
 imgTargetLv = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetLv", 15, 11, 10, 30)
-UI_LoadImage( imgTargetLv, "texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
+UI_LoadImage( imgTargetLv, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
 
 labTargetLv = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetLv", 14, 9, 10, 29 )
 UI_SetTextColor( labTargetLv, argbColor("b9baba") )
@@ -511,7 +511,7 @@ UI_SetLabelExFont( labTargetHP, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labLv, "99" )
 
 btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 15, 15, 155, 22)
-UI_LoadButtonImage( btnTargetInfo, "texture/ascaron_ui/asc-part-01.png", 12, 12, 164, 239, TRUE )
+UI_LoadButtonImage( btnTargetInfo, "./texture/ascaron_ui/asc-part-01.png", 12, 12, 164, 239, TRUE )
 UI_SetHint( btnTargetInfo, "Show monster info" )
 UI_SetIsShow(btnTargetInfo, TRUE)
 
@@ -524,7 +524,7 @@ UI_FormSetIsEscClose( frmTargetDrop, TRUE )
 
 setBackground(frmTargetDrop, false, 212, 89, 225)
 
-local grd = CreateImageGrid(frmTargetDrop, 5, 2, 3, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 5, 5)
+local grd = CreateImageGrid(frmTargetDrop, 5, 2, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 5, 5)
 for i, pos in ipairs(grd) do
 
 	local j0 = i

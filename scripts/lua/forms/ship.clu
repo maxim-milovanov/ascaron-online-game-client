@@ -158,7 +158,7 @@ btnYes = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnYes", 104, 31, 433, 44
 UI_LoadButtonImage( btnYes, "texture/gui/create-cha-01.png", 200, 60, 0, 535, FALSE )
 
 btnNo = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnNo", 41, 19, 226, 353+1000 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 -------------------------------------------
@@ -242,16 +242,16 @@ UI_FormSetIsEscClose( frmShipsail, FALSE )
 
 -- 加载背景图片
 imgBakLeft = UI_CreateCompent( frmShipsail, IMAGE_TYPE, "imgBakLeft", 143, 41, -32, 14 )
-UI_LoadImage( imgBakLeft, "texture/gui/old_gui/Shipdetail.tga", NORMAL, 143, 41, 0, 0 )
+UI_LoadImage( imgBakLeft, "./texture/gui/old_gui/Shipdetail.tga", NORMAL, 143, 41, 0, 0 )
 
 imgBakRight = UI_CreateCompent( frmShipsail, IMAGE_TYPE, "imgBakRight", 143, 41, 194, 14 )
-UI_LoadImage( imgBakRight, "texture/gui/old_gui/Shipdetail.tga", NORMAL, 143, 41, 0, 46 )
+UI_LoadImage( imgBakRight, "./texture/gui/old_gui/Shipdetail.tga", NORMAL, 143, 41, 0, 46 )
 
 imgBakLeftTop = UI_CreateCompent( frmShipsail, IMAGE_TYPE, "imgBakLeftTop", 256, 46, 0, 0 )
-UI_LoadImage( imgBakLeftTop, "texture/gui/old_gui/shipinfo.tga", NORMAL, 256, 46, 0, 0 )
+UI_LoadImage( imgBakLeftTop, "./texture/gui/old_gui/shipinfo.tga", NORMAL, 256, 46, 0, 0 )
 
 imgBakRightTop = UI_CreateCompent( frmShipsail, IMAGE_TYPE, "imgBakRightTop", 49, 28, 256, 7 )
-UI_LoadImage( imgBakRightTop, "texture/gui/old_gui/shipinfo.tga", NORMAL, 49, 28, 0, 51 )
+UI_LoadImage( imgBakRightTop, "./texture/gui/old_gui/shipinfo.tga", NORMAL, 49, 28, 0, 51 )
 
 --耐久
 labSailorShow1 = UI_CreateCompent( frmShipsail, LABELEX_TYPE, "labSailorShow1", 62, 12, 25, 9 )
@@ -279,13 +279,13 @@ UI_SetLabelExFont( labLvship, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --创建耐久
 proSailor = UI_CreateCompent( frmShipsail, PROGRESS_TYPE, "proSailor", 98, 4, 8, 22 )
-UI_LoadScaleImage( proSailor, "texture/gui/old_gui/shipinfo.tga", PROGRESS_PROGRESS, 98, 4, 8, 86, 1.0, 1.0 )
+UI_LoadScaleImage( proSailor, "./texture/gui/old_gui/shipinfo.tga", PROGRESS_PROGRESS, 98, 4, 8, 86, 1.0, 1.0 )
 
 --创建补给
 proCanon = UI_CreateCompent( frmShipsail, PROGRESS_TYPE, "proCanon", 98, 4, 199, 22 )
-UI_LoadScaleImage( proCanon, "texture/gui/old_gui/shipinfo.tga", PROGRESS_PROGRESS, 98, 4, 8, 93, 1.0, 1.0 )
+UI_LoadScaleImage( proCanon, "./texture/gui/old_gui/shipinfo.tga", PROGRESS_PROGRESS, 98, 4, 8, 93, 1.0, 1.0 )
 
 --创建船只属性按钮
 btnShip = UI_CreateCompent( frmShipsail, BUTTON_TYPE, "btnShip", 28, 25, 139, 9 )
-UI_LoadButtonImage( btnShip, "texture/gui/old_gui/shipinfo.tga", 28, 25, 4, 102, TRUE )
+UI_LoadButtonImage( btnShip, "./texture/gui/old_gui/shipinfo.tga", 28, 25, 4, 102, TRUE )
 UI_SetHint( btnShip, "Check ship attribute" )

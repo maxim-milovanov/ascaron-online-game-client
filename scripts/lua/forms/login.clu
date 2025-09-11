@@ -1,162 +1,183 @@
+------
+-- frm Back
+------
+frmBack = UI_CreateForm( "frmBack", FALSE, 137, 60, 20, 20, TRUE, FALSE )
+UI_ShowForm( frmBack, FALSE )
+UI_AddFormToTemplete( frmBack, FORM_MAIN )
+UI_FormSetIsEscClose( frmBack, FALSE )
+
+btnBack = UI_CreateCompent(frmBack, BUTTON_TYPE, "btnBack", 137, 60, 0, 0)
+UI_LoadButtonImage(btnBack, "./texture/ascaron_ui/asc-part-01.png", 137, 60, 857, 567, FALSE)
+
 -----------------------------------------------------------------------
 -- Selete gate
 -----------------------------------------------------------------------	
-frmServer = UI_CreateForm( "frmServer", FALSE, 345, 500, 396, 100, FALSE, FALSE )
+frmServer = UI_CreateForm( "frmServer", FALSE, 420, 500, 396, 100, FALSE, FALSE )
 UI_SetFormStyle( frmServer , 2 )
 UI_AddFormToTemplete( frmServer, FORM_LOGIN )
 UI_FormSetIsEscClose( frmServer, FALSE )
 
-local __left = 16
-local __up = 75
+labTitle = UI_CreateCompent( frmServer, LABELEX_TYPE, "labTitle", 420, 20, 0, 0 )
+UI_SetCaption( labTitle, "SELECT GATE" )
+UI_SetTextColor(labTitle, argbColor("ffffff"))
+UI_SetLabelExFont(labTitle, EXO_Regular_S20, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labTitle, TRUE)
 
-imgBackground = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBackground", 345, 250, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
+imgBackground = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBackground", 420, 2, 0, 45 )
+UI_LoadImage( imgBackground, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 2, 0, 381 )
 
-imgSelectGate = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgSelectGate", 307, 41, 25, 20 )
-UI_LoadImage( imgSelectGate, "texture/gui/btnServer.png", NORMAL, 307, 41, 0, 727 )
-
-btnNo = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnNo", 28, 26, 290, 18 )
-UI_LoadButtonImage( btnNo, "texture/gui/btnServer.png", 28, 26, 0, 512, TRUE )
-UI_SetAlpha(btnNo,210)
-
------------------
 																	-- Отступ слева (весь список)
 																		-- Отступ сверху (весь список)
-serverList = UI_CreateListView( frmServer, "serverList", 250, 190, 50, 50, 50, 50 )
+serverList = UI_CreateListView( frmServer, "serverList", 420, 210, 0, 50, 50, 50 )
 --UI_SetMargin( serverList, 30, 20, 15, 0 )
-UI_ListViewSetTitle(serverList, 0, 185, "", 0, 0, 0, 0)
-UI_ListViewSetTitle(serverList, 1, 32, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(serverList, 0, 20, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(serverList, 1, 325, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(serverList, 2, 32, "", 0, 0, 0, 0)
 UI_ListSetItemMargin(serverList, 0, 3 )						-- Перемещение текста внутри строки
-UI_SetListRowHeight(serverList, 40 )							-- Отступ строк между собой
+UI_SetListRowHeight(serverList, 45 )							-- Отступ строк между собой
 UI_SetListIsMouseFollow(serverList, TRUE)
-UI_ListLoadSelectImage(serverList, "texture/gui/frmBackground.png", 79, 13, 100, 300 )
-UI_SetImageAlpha(serverList, 134)
+UI_ListLoadSelectImage(serverList, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
+--UI_SetImageAlpha(serverList, 134)
 --UI_SetListFontColor(serverList, COLOR_BLACK, COLOR_RED )
+setScroll(serverList)
 
-scrollid = UI_GetScroll(serverList)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
 --------------
 
--- Версия клиента
-labGameVersion = UI_CreateCompent( frmServer, LABELEX_TYPE, "labGameVersion", 345, 20, 40, 470 )
-UI_SetCaption( labGameVersion, "--------------------------------" )
-UI_SetTextHtmlColor(labGameVersion, "808080")
-UI_SetLabelExFont( labGameVersion, FONT016, TRUE, COLOR_BLACK )
-
-labGameVersionDate = UI_CreateCompent( frmServer, LABELEX_TYPE, "labGameVersionDate", 345, 20, 75, 500 )
-UI_SetCaption(labGameVersionDate, "Last update: --.--.----" )
-UI_SetTextHtmlColor(labGameVersionDate, "808080")
-UI_SetLabelExFont(labGameVersionDate, FONT016, TRUE, COLOR_BLACK )
-
 -- Статус обновления
-labStatus = UI_CreateCompent( frmServer, LABELEX_TYPE, "labStatus", 345, 20, -25, 370 )
+labStatus = UI_CreateCompent( frmServer, LABELEX_TYPE, "labStatus", 420, 20, 0, 430)
 UI_SetCaption( labStatus, "Begin..." )
 UI_SetTextColor( labStatus, COLOR_WHITE )
-UI_SetLabelExFont( labStatus, FONT016, TRUE, COLOR_BLACK )
+UI_SetLabelExFont( labStatus, EXO_Regular_S15, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labStatus, TRUE)
+
+-- Версия клиента
+labGameVersion = UI_CreateCompent( frmServer, LABELEX_TYPE, "labGameVersion", 420, 12, 0, 530 )
+UI_SetCaption( labGameVersion, "--------------------------------" )
+UI_SetTextHtmlColor(labGameVersion, "e3e3e3")
+UI_SetLabelExFont( labGameVersion, EXO_Regular_S12, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labGameVersion, TRUE)
+
+labGameVersionDate = UI_CreateCompent( frmServer, LABELEX_TYPE, "labGameVersionDate", 420, 20, 0, 560 )
+UI_SetCaption(labGameVersionDate, "Last update: --.--.----" )
+UI_SetTextHtmlColor(labGameVersionDate, "e3e3e3")
+UI_SetLabelExFont(labGameVersionDate, EXO_Regular_S13, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labGameVersionDate, TRUE)
 
 -- Восстановление клиента до оригинальных файлов
-btnVersionCheck = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnVersionCheck", 293, 49, __left + 5, 350)
-UI_LoadButtonImage( btnVersionCheck, "texture/gui/btnServer.png", 293, 49, 22, 314, FALSE )
+btnVersionCheck = CreateButton(1, frmServer, "btnVersionCheck", "CHECK VERION", EXO_Regular_S20, 420, 75, 0, 440)
 
 -- Кнопка обновления клиента
-btnUpdate = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnUpdate", 253, 100, __left + 35, 340)
-UI_LoadButtonImage( btnUpdate, "texture/gui/btnServer.png", 253, 100, 328, 312, FALSE )
+btnUpdate = CreateButton(0, frmServer, "btnUpdate", "UPDATE", EXO_Regular_S20, 420, 75, 0, 440)
 
-imgProcessing = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgProcessing", 512, 29, -75, 405)
-UI_LoadImage( imgProcessing, "texture/gui/p0w-loading-mini.png", NORMAL, 512, 29, 0, 0)
+imgProcessing = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgProcessing", 600, 20, -90, 470)
+UI_LoadImage( imgProcessing, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 600, 20, 0, 810)
 
-proProcessing = UI_CreateCompent( frmServer, PROGRESS_TYPE, "proProcessing", 512, 29, -75, 405)
-UI_LoadScaleImage( proProcessing, "texture/gui/p0w-loading-mini.png", PROGRESS_PROGRESS, 512, 29, 0, 29, 1.0, 1.0 )
+proProcessing = UI_CreateCompent( frmServer, PROGRESS_TYPE, "proProcessing", 600, 20, -90, 470)
+UI_LoadScaleImage( proProcessing, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 600, 20, 0, 830, 1.0, 1.0 )
 UI_SetHint( proProcessing, "File" )
 UI_SetProgressHintStyle( proProcessing, PROGRESS_HINT_NUM )
 
 -----------------------------------------------------------------------
--- Login Form
------------------------------------------------------------------------
-frmAccount = UI_CreateForm( "frmAccount", FALSE, 434, 330, 0, 350, FALSE, FALSE )
-UI_AddFormToTemplete( frmAccount, FORM_LOGIN )
-UI_SetFormStyle( frmAccount, 2 )
-UI_FormSetIsEscClose( frmAccount, FALSE )
-
-imgInput1 = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgInput1", 434, 121, 0, 0 )
-UI_LoadImage( imgInput1, "texture/gui/btnServer.png", NORMAL, 434, 121, 0, 602 )
-UI_SetAlpha( imgInput1, 150 )
-
-imgInput2 = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgInput2", 434, 121, 0, 90 )
-UI_LoadImage( imgInput2, "texture/gui/btnServer.png", NORMAL, 434, 121, 0, 602 )
-UI_SetAlpha( imgInput2, 150 )
-
-imgRememberme = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgRememberme", 154, 41, 165, 220 )
-UI_LoadImage( imgRememberme, "texture/gui/btnServer.png", NORMAL, 154, 41, 488, 640 )
-
-imgUsername = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgUsername", 111, 21, 160, 57 )
-UI_LoadImage( imgUsername, "texture/gui/btnServer.2png", NORMAL, 111, 21, 669, 651 )
-
-imgPassword = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgPassword", 108, 21, 160, 147 )
-UI_LoadImage( imgPassword, "texture/gui/btnServer.png", NORMAL, 108, 21, 670, 674 )
-
-chkRememberme = UI_CreateCompent( frmAccount, CHECK_TYPE, "chkRememberme", 43, 41, 120, 220 )
-UI_LoadImage( chkRememberme, "texture/gui/btnServer.png", UNCHECKED, 43, 41, 441, 679 )
-UI_LoadImage( chkRememberme, "texture/gui/btnServer.png", CHECKED, 43, 41, 441, 640 )
-UI_SetHint( chkRememberme, "Remember ID" )
-
-btnEnterLogin = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnEnterLogin", 253, 100, 100, 270 )
-UI_LoadButtonImage( btnEnterLogin, "texture/gui/btnServer.png", 253, 100, 581, 312, FALSE )
-
-btnSelectGate = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnSelectGate", 293, 49, 70, 240 )
-UI_LoadButtonImage( btnSelectGate, "texture/gui/btnServer.png", 293, 49, 850, 314, FALSE )
-
-edtID = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtID", 300, 12, 100, 60 )
-UI_SetTextColor( edtID, COLOR_B1A58E )
-UI_SetEditMaxNum( edtID, 35 )
-UI_SetEditMaxNumVisible( edtID, 35 )
-UI_SetEditCursorColor( edtID, COLOR_WHITE )
---UI_SetEditFont( edtID, EXO_Regular_S20 )
-
-edtPassword = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtPassword", 300, 12, 100, 150 )
-UI_SetTextColor( edtPassword, COLOR_B1A58E )
-UI_SetEditMaxNum( edtPassword, 35 )
-UI_SetEditMaxNumVisible( edtPassword, 35 )
-UI_SetEditCursorColor( edtPassword, COLOR_WHITE )
-
------------------------------------------------------------------------
 -- Fast login
 -----------------------------------------------------------------------	
-frmFastLogin = UI_CreateForm( "frmFastLogin", FALSE, 500, 180, 0, 150, FALSE, FALSE )
+frmFastLogin = UI_CreateForm( "frmFastLogin", FALSE, 420, 360, 0, 75, FALSE, FALSE )
 UI_AddFormToTemplete( frmFastLogin, FORM_LOGIN )
 UI_SetFormStyle( frmFastLogin, 2 )
 UI_FormSetIsEscClose( frmFastLogin, FALSE )
 
-imgBackground = UI_CreateCompent( frmFastLogin, IMAGE_TYPE, "imgBackground", 500, 180, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
+labTitle = UI_CreateCompent( frmFastLogin, LABELEX_TYPE, "labTitle", 420, 20, 0, 0 )
+UI_SetCaption( labTitle, "SELECT LOGIN" )
+UI_SetTextColor(labTitle, argbColor("ffffff"))
+UI_SetLabelExFont(labTitle, EXO_Regular_S20, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labTitle, TRUE)
 
-pageListLogin = UI_CreateCompent( frmFastLogin, PAGE_TYPE, "pageListLogin", 185, 275, 0, 0 )
-UI_SetPageButton( pageListLogin, PAGE_BUTTON_CUSTOM, 48, 16 )
+imgBackground = UI_CreateCompent( frmFastLogin, IMAGE_TYPE, "imgBackground", 420, 2, 0, 45 )
+UI_LoadImage( imgBackground, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 2, 0, 381 )
 
-listLogin = UI_CreateListView( frmFastLogin, "listLogin", 480, 170, 20, 0, 50, 20 )
-UI_ListViewSetTitle( listLogin, 0, 240, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( listLogin, 1, 140, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( listLogin, 2, 100, "", 0, 0, 0, 0 )
+																	-- Отступ слева (весь список)
+																		-- Отступ сверху (весь список)
+listLogin = UI_CreateListView( frmFastLogin, "listLogin", 420, 165, 0, 50, 50, 50 )
+--UI_SetMargin( listLogin, 30, 20, 15, 0 )
+UI_ListViewSetTitle(listLogin, 0, 20, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listLogin, 1, 245, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listLogin, 2, 32, "", 0, 0, 0, 0)
+UI_ListSetItemMargin(listLogin, 0, 16 )						-- Перемещение текста внутри строки
+UI_SetListRowHeight(listLogin, 45 )							-- Отступ строк между собой
+UI_SetListIsMouseFollow(listLogin, TRUE)
+UI_ListLoadSelectImage(listLogin, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
+--UI_SetImageAlpha(listLogin, 134)
+--UI_SetListFontColor(listLogin, COLOR_BLACK, COLOR_RED )
+setScroll(listLogin)
 
-scrollid = UI_GetScroll( listLogin)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+imgBackground = UI_CreateCompent( frmFastLogin, IMAGE_TYPE, "imgBackground", 420, 2, 0, 232 )
+UI_LoadImage( imgBackground, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 2, 0, 381 )
 
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
+listChars = UI_CreateListView( frmFastLogin, "listChars", 420, 165, 0, 235, 50, 50 )
+--UI_SetMargin( listChars, 30, 20, 15, 0 )
+UI_ListViewSetTitle(listChars, 0, 30, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listChars, 1, 20, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listChars, 2, 275, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listChars, 3, 32, "", 0, 0, 0, 0)
+UI_ListSetItemMargin(listChars, 0, 5 )						-- Перемещение текста внутри строки
+UI_SetListRowHeight(listChars, 25 )							-- Отступ строк между собой
+UI_SetListIsMouseFollow(listChars, TRUE)
+UI_ListLoadSelectImage(listChars, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
+--UI_SetImageAlpha(listChars, 134)
+--UI_SetListFontColor(listChars, COLOR_BLACK, COLOR_RED )
+setScroll(listChars)
+
+-----------------------------------------------------------------------
+-- Login Form
+-----------------------------------------------------------------------
+frmAccount = UI_CreateForm( "frmAccount", FALSE, 420, 330, 0, 425, FALSE, FALSE )
+UI_AddFormToTemplete( frmAccount, FORM_LOGIN )
+UI_SetFormStyle( frmAccount, 2 )
+UI_FormSetIsEscClose( frmAccount, FALSE )
+
+labTitle = UI_CreateCompent( frmAccount, LABELEX_TYPE, "labTitle", 420, 20, 0, 0 )
+UI_SetCaption( labTitle, "SIGN IN GAME" )
+UI_SetTextColor(labTitle, argbColor("ffffff"))
+UI_SetLabelExFont(labTitle, EXO_Regular_S20, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labTitle, TRUE)
+
+imgBackground = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgBackground", 420, 2, 0, 45 )
+UI_LoadImage( imgBackground, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 2, 0, 381 )
+
+imgInput1 = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgInput1", 420, 55, 0, 73)
+UI_LoadImage( imgInput1, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 55, 364, 272)
+
+imgInput2 = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgInput2", 420, 55, 0, 138)
+UI_LoadImage( imgInput2, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 55, 364, 272)
+
+edtID = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtID", 420, 20, 20, 90 )
+UI_SetTextColor( edtID, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtID, 25 )
+UI_SetEditMaxNumVisible( edtID, 25 )
+UI_SetEditCursorColor( edtID, argbColor("c0c0c0") )
+UI_SetEditFont( edtID, EXO_Regular_S20 )
+UI_SetEditClue(edtID, "Login", argbColor("908a92"))
+
+edtPassword = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtPassword", 300, 12, 20, 155)
+UI_SetTextColor( edtPassword, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtPassword, 35 )
+UI_SetEditMaxNumVisible( edtPassword, 15 )
+UI_SetEditCursorColor( edtPassword, COLOR_WHITE )
+UI_SetEditFont( edtPassword, EXO_Regular_S20 )
+UI_SetEditClue(edtPassword, "Password", argbColor("908a92"))
+
+btnEnterLogin = UI_CreateCompent(frmAccount, BUTTON_TYPE, "btnEnterLogin", 350, 60, 0, 215)
+UI_ButtonSetText(btnEnterLogin, "ENTER", EXO_Regular_S20, argbColor("000000"), 0, 0)
+UI_LoadButtonImage(btnEnterLogin, "./texture/ascaron_ui/asc-part-01.png", 420, 60, 0, 567, FALSE)
+
+btnBasket = UI_CreateCompent(frmAccount, BUTTON_TYPE, "btnBasket", 60, 60, 360, 215)
+UI_LoadButtonImage(btnBasket, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 949, TRUE)
 
 -----------------------------------------------------------------------
 -- 定义健康通告
 -----------------------------------------------------------------------	
 -- 创建健康通告表单
 frmAnnounce = UI_CreateForm( "frmAnnounce", FALSE, 198, 207, 396, 190, FALSE, FALSE )
-UI_LoadFormImage( frmAnnounce, "texture/gui/old_gui/game.dds", 198, 207, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAnnounce, "./texture/gui/old_gui/game.dds", 198, 207, 0, 0, "", 0, 0 )
 UI_AddFormToTemplete( frmAnnounce, FORM_LOGIN )
 UI_SetFormStyle( frmAnnounce, 2 )
 --UI_SetAlpha( frmAnnounce, 200 )
@@ -165,12 +186,12 @@ UI_FormSetIsEscClose( frmAnnounce, FALSE )
 
 -- 加载界面title
 imgAnnTitle = UI_CreateCompent( frmAnnounce, IMAGE_TYPE, "imgAnnTitle", 73, 13, 10, 4 )
-UI_LoadImage( imgAnnTitle, "texture/gui/old_gui/Word.dds", NORMAL, 73, 13, 0, 58 )
+UI_LoadImage( imgAnnTitle, "./texture/gui/old_gui/Word.dds", NORMAL, 73, 13, 0, 58 )
 
 
 --加载确定按钮
 btnYes = UI_CreateCompent( frmAnnounce, BUTTON_TYPE, "btnYes", 41, 19, 100, 180 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 UI_SetAlign( btnYes, caWidthCenter )
 
 labYes = UI_CreateCompent( frmAnnounce, LABELEX_TYPE, "labYes", 24, 10, 109, 324 )
@@ -181,7 +202,7 @@ UI_SetLabelExFont( labYes, EXO_Regular_S12, TRUE, COLOR_BLACK )
 -----------------------------------------------------------------------
 -- Create security code
 -----------------------------------------------------------------------	
-frmDoublePwdCreate = UI_CreateForm("frmDoublePwdCreate", FALSE, 263, 133, 200, 200, FALSE, FALSE)
+frmDoublePwdCreate = UI_CreateForm("frmDoublePwdCreate", FALSE, 480, 408, 200, 200, FALSE, FALSE)
 UI_AddFormToTemplete( frmDoublePwdCreate, FORM_SELECT )
 UI_FormSetIsEscClose( frmDoublePwdCreate, FALSE)
 UI_SetIsDrag( frmDoublePwdCreate, FALSE)
@@ -189,39 +210,48 @@ UI_ShowForm( frmDoublePwdCreate, FALSE)
 UI_FormSetEnterButton(frmDoublePwdCreate,btnYes)
 
 -- background
-imgDoublePwdCreate = UI_CreateCompent( frmDoublePwdCreate, IMAGE_TYPE,"imgDoublePwdCreate" ,263, 133, 0, 0)
-UI_LoadImage(imgDoublePwdCreate, "texture/gui/window-01.png", NORMAL, 263, 133, 0, 0)
+setBackground(frmDoublePwdCreate, false, 480, 408, 255)
 
--- label
-imgDoublePwdCreate = UI_CreateCompent( frmDoublePwdCreate, IMAGE_TYPE,"imgDoublePwdCreate", 224, 56, 20, 20)
-UI_LoadImage(imgDoublePwdCreate, "texture/gui/window-01.png", NORMAL, 224, 56, 0, 166)
+image = UI_CreateCompent(frmDoublePwdCreate, IMAGE_TYPE,"image", 420, 55, 30, 30)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
 
--- botton "ok"
-btnYes = UI_CreateCompent( frmDoublePwdCreate, BUTTON_TYPE, "btnYes", 102, 35, 29, 106 )
-UI_LoadButtonImage( btnYes, "texture/gui/window-01.png", 102, 35, 0, 269, TRUE )
-
---botton "cancel"
-btnClear = UI_CreateCompent( frmDoublePwdCreate, BUTTON_TYPE, "btnClear", 102, 35, 134, 106 )
-UI_LoadButtonImage( btnClear, "texture/gui/window-01.png", 102, 35, 0, 304, TRUE )
+image = UI_CreateCompent(frmDoublePwdCreate, IMAGE_TYPE,"image", 420, 55, 30, 95)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
 
 -- enter security code
-edtDoublePwdCreate = UI_CreateCompent(frmDoublePwdCreate, EDIT_TYPE,"edtDoublePwdCreate" ,66, 14, 137, 27)
-UI_SetEditCursorColor(edtDoublePwdCreate, COLOR_968774 )
-UI_SetTextColor(edtDoublePwdCreate, COLOR_968774 )
-UI_SetEditMaxNum(edtDoublePwdCreate, 12 )
-UI_SetEditMaxNumVisible(edtDoublePwdCreate,12)
+edtDoublePwdCreate = UI_CreateCompent( frmDoublePwdCreate, EDIT_TYPE, "edtDoublePwdCreate", 420, 20, 50, 44 )
+UI_SetTextColor( edtDoublePwdCreate, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtDoublePwdCreate, 25 )
+UI_SetEditMaxNumVisible( edtDoublePwdCreate, 25 )
+UI_SetEditCursorColor( edtDoublePwdCreate, argbColor("c0c0c0") )
+UI_SetEditFont( edtDoublePwdCreate, EXO_Regular_S20 )
+UI_SetEditClue(edtDoublePwdCreate, "Enter new code*", argbColor("908a92"))
 
 -- re-enter
-edtDoublePwdCreateRetry = UI_CreateCompent(frmDoublePwdCreate, EDIT_TYPE,"edtDoublePwdCreateRetry", 66, 14, 137, 54)
-UI_SetEditCursorColor(edtDoublePwdCreateRetry, COLOR_968774 )
-UI_SetTextColor(edtDoublePwdCreateRetry, COLOR_968774 )
-UI_SetEditMaxNum(edtDoublePwdCreateRetry, 12 )
-UI_SetEditMaxNumVisible(edtDoublePwdCreateRetry,12)
+edtDoublePwdCreateRetry = UI_CreateCompent( frmDoublePwdCreate, EDIT_TYPE, "edtDoublePwdCreateRetry", 420, 20, 50, 109 )
+UI_SetTextColor( edtDoublePwdCreateRetry, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtDoublePwdCreateRetry, 25 )
+UI_SetEditMaxNumVisible( edtDoublePwdCreateRetry, 25 )
+UI_SetEditCursorColor( edtDoublePwdCreateRetry, argbColor("c0c0c0") )
+UI_SetEditFont( edtDoublePwdCreateRetry, EXO_Regular_S20 )
+UI_SetEditClue(edtDoublePwdCreateRetry, "Re-enter", argbColor("908a92"))
+
+-- botton "ok"
+btnYes = CreateButton(0, frmDoublePwdCreate, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 180)
+
+--botton "cancel"
+btnClear = CreateButton(1, frmDoublePwdCreate, "btnClear", "CANCEL", EXO_Regular_S20, 420, 60, 30, 250)
+
+labTitle = UI_CreateCompent( frmDoublePwdCreate, LABELEX_TYPE, "labTitle", 420, 38, 30, 340 )
+UI_SetCaption( labTitle, "*Dear player, enter the security code so that \nyour account is safe." )
+UI_SetTextColor(labTitle, argbColor("bcbbbb"))
+UI_SetLabelExFont(labTitle, EXO_Regular_S16, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labTitle, FALSE)
 
 -----------------------------------------------------------------------
 -- Change secret code
 -----------------------------------------------------------------------	
-frmDoublePwdAlter = UI_CreateForm("frmDoublePwdAlter", TRUE, 263, 133, 200, 200, TRUE, TRUE)
+frmDoublePwdAlter = UI_CreateForm("frmDoublePwdAlter", TRUE, 480, 425, 200, 200, TRUE, TRUE)
 UI_ShowForm(frmDoublePwdAlter, FALSE)
 --UI_SetFormStyle( frmDoublePwdAlter, 2 )
 UI_SetIsDrag(frmDoublePwdAlter, FALSE)
@@ -232,45 +262,54 @@ UI_FormSetEnterButton(frmDoublePwdAlter,btnYes)
 --UI_FormSetHotKey( frmDoublePwdAlter, ALT_KEY, HOTKEY_C )
 
 -- background
-imgDoublePwdAlter = UI_CreateCompent(frmDoublePwdAlter, IMAGE_TYPE,"imgDoublePwdAlter", 263, 133, 0, 0)
-UI_LoadImage( imgDoublePwdAlter, "texture/gui/window-01.png", NORMAL, 263, 133, 0, 0)
+setBackground(frmDoublePwdAlter, false, 480, 425, 255)
 
-imgDoublePwdAlter = UI_CreateCompent(frmDoublePwdAlter, IMAGE_TYPE,"imgDoublePwdAlter", 228, 95, 20, 14)
-UI_LoadImage( imgDoublePwdAlter, "texture/gui/window-01.png", NORMAL, 228, 95, 0, 133)
+image = UI_CreateCompent(frmDoublePwdAlter, IMAGE_TYPE,"image", 420, 55, 30, 30)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+image = UI_CreateCompent(frmDoublePwdAlter, IMAGE_TYPE,"image", 420, 55, 30, 115)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+image = UI_CreateCompent(frmDoublePwdAlter, IMAGE_TYPE,"image", 420, 55, 30, 180)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
 
 -- botton "ok"
-btnYes = UI_CreateCompent( frmDoublePwdAlter, BUTTON_TYPE, "btnYes", 102, 35, 29, 106 )
-UI_LoadButtonImage( btnYes, "texture/gui/window-01.png", 102, 35, 0, 269, TRUE )
+btnYes = CreateButton(0, frmDoublePwdAlter, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 265)
 
 --botton "cancel"
-btnClear = UI_CreateCompent( frmDoublePwdAlter, BUTTON_TYPE, "btnClear", 102, 35, 134, 106 )
-UI_LoadButtonImage( btnClear, "texture/gui/window-01.png", 102, 35, 0, 304, TRUE )
+btnClear = CreateButton(1, frmDoublePwdAlter, "btnClear", "CANCEL", EXO_Regular_S20, 420, 60, 30, 335)
 
 -- old code
-edtDoublePwdAlterOld = UI_CreateCompent(frmDoublePwdAlter, EDIT_TYPE,"edtDoublePwdAlterOld", 66, 14, 137, 26)
-UI_SetEditCursorColor( edtDoublePwdAlterOld, COLOR_968774 )
-UI_SetTextColor(edtDoublePwdAlterOld, COLOR_968774 )
-UI_SetEditMaxNum( edtDoublePwdAlterOld, 12 )
-UI_SetEditMaxNumVisible(edtDoublePwdAlterOld,12)
+edtDoublePwdAlterOld = UI_CreateCompent( frmDoublePwdAlter, EDIT_TYPE, "edtDoublePwdAlterOld", 420, 20, 50, 44 )
+UI_SetTextColor( edtDoublePwdAlterOld, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtDoublePwdAlterOld, 25 )
+UI_SetEditMaxNumVisible( edtDoublePwdAlterOld, 25 )
+UI_SetEditCursorColor( edtDoublePwdAlterOld, argbColor("c0c0c0") )
+UI_SetEditFont( edtDoublePwdAlterOld, EXO_Regular_S20 )
+UI_SetEditClue(edtDoublePwdAlterOld, "Enter old code", argbColor("908a92"))
 
 -- new code
-edtDoublePwdAlterNew = UI_CreateCompent(frmDoublePwdAlter, EDIT_TYPE,"edtDoublePwdAlterNew", 66, 14, 137, 54)
-UI_SetEditCursorColor( edtDoublePwdAlterNew, COLOR_968774 )
-UI_SetTextColor(edtDoublePwdAlterNew, COLOR_968774 )
-UI_SetEditMaxNum( edtDoublePwdAlterNew, 12 )
-UI_SetEditMaxNumVisible(edtDoublePwdAlterNew,12)
+edtDoublePwdAlterNew = UI_CreateCompent( frmDoublePwdAlter, EDIT_TYPE, "edtDoublePwdAlterNew", 420, 20, 50, 129 )
+UI_SetTextColor( edtDoublePwdAlterNew, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtDoublePwdAlterNew, 25 )
+UI_SetEditMaxNumVisible( edtDoublePwdAlterNew, 25 )
+UI_SetEditCursorColor( edtDoublePwdAlterNew, argbColor("c0c0c0") )
+UI_SetEditFont( edtDoublePwdAlterNew, EXO_Regular_S20 )
+UI_SetEditClue(edtDoublePwdAlterNew, "Enter new code", argbColor("908a92"))
 
 -- re-enter
-edtDoublePwdAlterNewRetry = UI_CreateCompent(frmDoublePwdAlter, EDIT_TYPE,"edtDoublePwdAlterNewRetry" ,66, 14, 137, 82)
-UI_SetEditCursorColor( edtDoublePwdAlterNewRetry, COLOR_968774 )
-UI_SetTextColor(edtDoublePwdAlterNewRetry, COLOR_968774 )
-UI_SetEditMaxNum( edtDoublePwdAlterNewRetry, 12 )
-UI_SetEditMaxNumVisible(edtDoublePwdAlterNewRetry,12)
+edtDoublePwdAlterNewRetry = UI_CreateCompent( frmDoublePwdAlter, EDIT_TYPE, "edtDoublePwdAlterNewRetry", 420, 20, 50, 194 )
+UI_SetTextColor( edtDoublePwdAlterNewRetry, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtDoublePwdAlterNewRetry, 25 )
+UI_SetEditMaxNumVisible( edtDoublePwdAlterNewRetry, 25 )
+UI_SetEditCursorColor( edtDoublePwdAlterNewRetry, argbColor("c0c0c0") )
+UI_SetEditFont( edtDoublePwdAlterNewRetry, EXO_Regular_S20 )
+UI_SetEditClue(edtDoublePwdAlterNewRetry, "Re-enter", argbColor("908a92"))
 
 -----------------------------------------------------------------------
 -- Delete character
 -----------------------------------------------------------------------	
-frmDoublePwd = UI_CreateForm("frmDoublePwd", TRUE, 263, 133, 200, 200, TRUE, TRUE)
+frmDoublePwd = UI_CreateForm("frmDoublePwd", TRUE, 480, 275, 200, 200, TRUE, TRUE)
 UI_ShowForm( frmDoublePwd, FALSE )
 --UI_SetFormStyle( frmDoublePwd, 2 )
 UI_AddFormToTemplete( frmDoublePwd, FORM_SELECT )
@@ -280,95 +319,27 @@ UI_FormSetIsEscClose( frmDoublePwd, TRUE)
 UI_FormSetEnterButton(frmDoublePwd,btnYes)
 --UI_FormSetHotKey( frmDoublePwd, ALT_KEY, HOTKEY_Z )
 
--- Background
-imgDoublePwd = UI_CreateCompent(frmDoublePwd, IMAGE_TYPE,"imgDoublePwd", 263, 133, 0, 0)
-UI_LoadImage( imgDoublePwd, "texture/gui/window-01.png", NORMAL, 263, 133, 0, 0)
+-- background
+setBackground(frmDoublePwd, false, 480, 275, 255)
 
 -- Label
-imgDoublePwd = UI_CreateCompent(frmDoublePwd, IMAGE_TYPE,"imgDoublePwd", 228, 41, 20, 46)
-UI_LoadImage( imgDoublePwd, "texture/gui/window-01.png", NORMAL, 228, 41, 0, 228)
+image = UI_CreateCompent(frmDoublePwd, IMAGE_TYPE,"image", 420, 55, 30, 30)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
 
 -- Enter code
-edtDoublePwd = UI_CreateCompent(frmDoublePwd, EDIT_TYPE,"edtDoublePwd", 66, 14, 137, 60)
-UI_SetIsKeyFocus(edtDoublePwd,FALSE)
-UI_SetEditCursorColor(edtDoublePwd, COLOR_968774 )
-UI_SetTextColor(edtDoublePwd, COLOR_968774 )
-UI_SetEditMaxNum(edtDoublePwd, 12 )
-UI_SetEditMaxNumVisible(edtDoublePwd,12)
+edtDoublePwd = UI_CreateCompent( frmDoublePwd, EDIT_TYPE, "edtDoublePwd", 420, 20, 50, 44 )
+UI_SetTextColor( edtDoublePwd, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtDoublePwd, 25 )
+UI_SetEditMaxNumVisible( edtDoublePwd, 25 )
+UI_SetEditCursorColor( edtDoublePwd, argbColor("c0c0c0") )
+UI_SetEditFont( edtDoublePwd, EXO_Regular_S20 )
+UI_SetEditClue(edtDoublePwd, "Enter code", argbColor("908a92"))
 
 -- botton "ok"
-btnYes = UI_CreateCompent( frmDoublePwd, BUTTON_TYPE, "btnYes", 102, 35, 29, 106 )
-UI_LoadButtonImage( btnYes, "texture/gui/window-01.png", 102, 35, 0, 269, TRUE )
+btnYes = CreateButton(0, frmDoublePwd, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 115)
 
 --botton "cancel"
-btnClear = UI_CreateCompent( frmDoublePwd, BUTTON_TYPE, "btnClear", 102, 35, 134, 106 )
-UI_LoadButtonImage( btnClear, "texture/gui/window-01.png", 102, 35, 0, 304, TRUE )
-
------------------------------------------------------------------------
--- create security code: keyboard
------------------------------------------------------------------------	
-frmDoublePwdInput = UI_CreateForm("frmDoublePwdInput", TRUE, 131, 129, 392, 300, TRUE,TRUE)
-UI_ShowForm(frmDoublePwdInput, FALSE )
-UI_AddAllFormTemplete( frmDoublePwdInput)
-UI_SetIsDrag(frmDoublePwdInput, FALSE)
-UI_FormSetIsEscClose(frmDoublePwdInput, TRUE)
-
-imgDoublePwdInput = UI_CreateCompent(frmDoublePwdInput, IMAGE_TYPE,"imgDoublePwdInput", 80, 80, 0, 0)
-UI_LoadImage( imgDoublePwdInput, "texture/gui/window-01.png", NORMAL, 80, 80, 0, 0)
-
-imgDoublePwdInput = UI_CreateCompent(frmDoublePwdInput, IMAGE_TYPE,"imgDoublePwdInput", 80, 80, 80, 0)
-UI_LoadImage( imgDoublePwdInput, "texture/gui/window-01.png", NORMAL, 80, 80, 208, 0)
-
-imgDoublePwdInput = UI_CreateCompent(frmDoublePwdInput, IMAGE_TYPE,"imgDoublePwdInput", 98, 80, 0, 80)
-UI_LoadImage( imgDoublePwdInput, "texture/gui/window-01.png", NORMAL, 98, 80, 0, 45)
-
-imgDoublePwdInput = UI_CreateCompent(frmDoublePwdInput, IMAGE_TYPE,"imgDoublePwdInput", 98, 80, 80, 80)
-UI_LoadImage( imgDoublePwdInput, "texture/gui/window-01.png", NORMAL, 98, 80, 208, 45)
-
-btnNum1 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum1", 32, 32, 17, 17 )
-UI_LoadButtonImage( btnNum1, "texture/gui/keyboard.png", 32, 32, 0, 0, TRUE )
-
-btnNum2 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum2", 32, 32, 51, 17 )
-UI_LoadButtonImage( btnNum2, "texture/gui/keyboard.png", 32, 32, 0, 32, TRUE )
-
-btnNum3 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum3", 32, 32, 85, 17 )
-UI_LoadButtonImage( btnNum3, "texture/gui/keyboard.png", 32, 32, 0, 64, TRUE )
-
-btnNum4 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum4", 32, 32, 17, 51 )
-UI_LoadButtonImage( btnNum4, "texture/gui/keyboard.png", 32, 32, 0, 96, TRUE )
-
-btnNum5 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum5", 32, 32, 51, 51 )
-UI_LoadButtonImage( btnNum5, "texture/gui/keyboard.png", 32, 32, 0, 128, TRUE )
-
-btnNum6 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum6", 32, 32, 85, 51 )
-UI_LoadButtonImage( btnNum6, "texture/gui/keyboard.png", 32, 32, 0, 160, TRUE )
-
-btnNum7 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum7", 32, 32, 17, 85 )
-UI_LoadButtonImage( btnNum7, "texture/gui/keyboard.png", 32, 32, 0, 192, TRUE )
-
-btnNum8 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum8", 32, 32, 51, 85 )
-UI_LoadButtonImage( btnNum8, "texture/gui/keyboard.png", 32, 32, 0, 224, TRUE )
-
-btnNum9 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum9", 32, 32, 85, 85 )
-UI_LoadButtonImage( btnNum9, "texture/gui/keyboard.png", 32, 32, 0, 256, TRUE )
-
-btnNum0 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum0", 32, 32, 17, 119 )
-UI_LoadButtonImage( btnNum0, "texture/gui/keyboard.png", 32, 32, 0, 288, TRUE )
-
-btnClear = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnClear", 66, 32, 51, 119 )
-UI_LoadButtonImage( btnClear, "texture/gui/keyboard.png", 68, 32, 0, 320, TRUE )
-
------------------------------------------------------------------------
--- create security code: Welcome notification 
------------------------------------------------------------------------	
-frmDoublePwdInfo =  UI_CreateForm("frmDoublePwdInfo", TRUE, 378, 129, 200, 329, TRUE,TRUE)
-UI_ShowForm(frmDoublePwdInfo, TRUE )
-UI_AddFormToTemplete( frmDoublePwdInfo, FORM_SELECT )
-UI_SetIsDrag(frmDoublePwdInfo, FALSE)
-
--- notification
-imgWelcomeNotice1 = UI_CreateCompent(frmDoublePwdInfo, IMAGE_TYPE,"imgWelcomeNotice1", 494, 184, 0, 20)
-UI_LoadImage( imgWelcomeNotice1, "texture/gui/welcome-notification-01.png", NORMAL, 494, 184, 0, 0)
+btnClear = CreateButton(1, frmDoublePwd, "btnClear", "CANCEL", EXO_Regular_S20, 420, 60, 30, 185)
 
 -----------------------------------------------------------------------
 -- Welcome notification 02

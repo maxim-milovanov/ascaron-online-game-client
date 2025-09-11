@@ -13,14 +13,9 @@ UI_SetCaption(labFormname, "CONVERSATION")
 UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 
-memCtrl = UI_CreateCompent( frmNPCchat, MEMO_TYPE, "memCtrl", 450, 260, 50, 50)
-UI_SetTextColor( memCtrl, COLOR_FFEDCF )
-UI_SetLabelExFont( memCtrl, FONT160, TRUE, COLOR_PURPLE )
-UI_SetCaption( memCtrl, "" ) 
-UI_SetMemoMaxNumPerRow(memCtrl, 117 )
-UI_SetMemoPageShowNum(memCtrl, 13 )
-UI_SetMemoRowHeight( memCtrl , 24 )
-
+memCtrl = UI_CreateCompent( frmNPCchat, MEMO_TYPE, "memCtrl", 400, 260, 50, 50)
+UI_SetTextColor( memCtrl, argbColor("f4f4f4") )
+UI_SetLabelExFont( memCtrl, EXO_Regular_S14, TRUE, COLOR_PURPLE )
 setScroll(memCtrl)
 
 -----------------------------------------------------------------------
@@ -113,7 +108,7 @@ UI_AddCompent( itemid, grdNPCtradeOther )
 -- 创建NPC对话表单
 frmNPCTradeNumber = UI_CreateForm( "frmNPCTradeNumber", FALSE, 185, 101, 240, 268, TRUE, FALSE )
 --UI_FormSetHotKey( frmNPCTradeNumber, ALT_KEY, HOTKEY_V ) 
-UI_LoadFormImage( frmNPCTradeNumber, "texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmNPCTradeNumber, "./texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
 UI_ShowForm( frmNPCTradeNumber, TRUE )
 UI_AddFormToTemplete( frmNPCTradeNumber, FORM_MAIN )
 UI_SetIsDrag( frmNPCTradeNumber, TRUE )
@@ -123,7 +118,7 @@ UI_SetAlpha( frmNPCTradeNumber, 255 )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmNPCTradeNumber, BUTTON_TYPE, "btnClose", 14, 14, 164, 3 )
-UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 --创建Title
 --labtitle = UI_CreateCompent( frmNPCTradeNumber, LABELEX_TYPE, "labtitle", 47, 11, 70, 4 )
@@ -145,9 +140,9 @@ UI_SetLabelExFont( labSum, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建数量和总价显示底纹
 imgNumber = UI_CreateCompent( frmNPCTradeNumber, IMAGE_TYPE, "imgNumber", 87, 18, 71, 28 )
-UI_LoadImage( imgNumber, "texture/gui/old_gui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+UI_LoadImage( imgNumber, "./texture/gui/old_gui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
 imgSum = UI_CreateCompent( frmNPCTradeNumber, IMAGE_TYPE, "imgSum", 87, 18, 71, 50 )
-UI_LoadImage( imgSum, "texture/gui/old_gui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+UI_LoadImage( imgSum, "./texture/gui/old_gui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
 
 
 --加载数量输入框
@@ -164,11 +159,11 @@ UI_SetLabelExFont( labNPCTradeNumber, EXO_Regular_S12, TRUE, COLOR_BLACK )
 
 --加载交易
 btnYes = UI_CreateCompent( frmNPCTradeNumber, BUTTON_TYPE, "btnYes", 41, 19, 85, 78 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 40, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 40, TRUE )
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmNPCTradeNumber, BUTTON_TYPE, "btnNo", 41, 19, 130, 78 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, FALSE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, FALSE )
 
 -----------------------------------------------------------------------
 -- bank
@@ -186,7 +181,7 @@ UI_SetCaption( labFormname, "ITEM BANK" )
 UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 
-CreateImageGrid(frmNPCstorage, 6, 8, 3, 38, 38, "texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
+CreateImageGrid(frmNPCstorage, 6, 8, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
 grdNPCstorage = UI_CreateCompent( frmNPCstorage, GOODS_GRID_TYPE, "grdNPCstorage", 230, 360, 53, 53 )
 UI_SetGridSpace(grdNPCstorage, 9, 9)
 UI_SetGridContent(grdNPCstorage, 9, 6)
@@ -299,7 +294,7 @@ UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
 -----------------------------------------------------------------------	
 --- 创建NPC对话表单
 frmNPCshine = UI_CreateForm( "frmNPCshine", FALSE, 237, 217, 240, 70, TRUE, FALSE )
-UI_LoadFormImage( frmNPCshine, "texture/gui/old_gui/forge4.tga", 237, 217, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmNPCshine, "./texture/gui/old_gui/forge4.tga", 237, 217, 0, 0, "", 0, 0 )
 UI_ShowForm( frmNPCshine, TRUE )
 UI_AddFormToTemplete( frmNPCshine, FORM_MAIN )
 --UI_FormSetHotKey( frmNPCshine, ALT_KEY, HOTKEY_X )
@@ -315,7 +310,7 @@ UI_SetIsDrag( frmNPCshine, TRUE )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmNPCshine, BUTTON_TYPE, "btnClose", 14, 14, 216, 3 )
-UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 --打磨需求和结果程序用栏
 cmdShineItem = UI_CreateCompent( frmNPCshine, COMMAND_ONE_TYPE, "cmdShineItem", 32, 32, 16, 61 )	-- 结果
@@ -328,7 +323,7 @@ UI_SetLabelExFont( labShineGold, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建打磨进度
 proNPCshine = UI_CreateCompent( frmNPCshine, PROGRESS_TYPE, "proNPCshine", 198, 8, 20, 170 )
-UI_LoadScaleImage( proNPCshine, "texture/gui/old_gui/forge3.tga", PROGRESS_PROGRESS, 192, 8, 0, 56, 1.0, 1.0 )
+UI_LoadScaleImage( proNPCshine, "./texture/gui/old_gui/forge3.tga", PROGRESS_PROGRESS, 192, 8, 0, 56, 1.0, 1.0 )
 
 --创建物品属性显示
 memForgeItemState = UI_CreateCompent( frmNPCshine, MEMO_TYPE, "memForgeItemState", 152, 75, 67, 36 )
@@ -350,10 +345,10 @@ UI_AddListText( lstForgeItemState, "" )
 
 --加载打磨，取消按钮
 btnShineYes = UI_CreateCompent( frmNPCshine, BUTTON_TYPE, "btnShineYes", 41, 19, 54, 190 )
-UI_LoadButtonImage( btnShineYes, "texture/gui/old_gui/forge3.tga", 41, 19, 0, 63, TRUE )
+UI_LoadButtonImage( btnShineYes, "./texture/gui/old_gui/forge3.tga", 41, 19, 0, 63, TRUE )
 
 btnShineNo = UI_CreateCompent( frmNPCshine, BUTTON_TYPE, "btnShineNo", 41, 19, 146, 190 )
-UI_LoadButtonImage( btnShineNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnShineNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 -----------------------------------------------------------------------
 -- 
@@ -468,7 +463,7 @@ UI_SetButtonModalResult( btnNo, BUTTON_NO )
 -- 定义输入公会密码对话框
 -----------------------------------------------------------------------
 frmCode = UI_CreateForm( "frmCode",  FALSE, 185, 101, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmCode, "texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmCode, "./texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
 UI_ShowForm( frmCode, FALSE )
 UI_AddFormToTemplete( frmCode, FORM_MAIN )
 --UI_FormSetHotKey( frmCode, ALT_KEY, HOTKEY_V ) 
@@ -489,7 +484,7 @@ UI_SetLabelExFont( labInfo, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -- 加载输入区背景
 imgNumber = UI_CreateCompent( frmCode, IMAGE_TYPE, "imgNumber", 87, 18, 50, 50 )
-UI_LoadImage( imgNumber, "texture/gui/old_gui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+UI_LoadImage( imgNumber, "./texture/gui/old_gui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
 
 --加载密码输入框
 edtCode = UI_CreateCompent( frmCode, EDIT_TYPE, "edtCode", 71, 11, 58, 54 )
@@ -499,54 +494,69 @@ UI_SetEditMaxNumVisible( edtID, 8 )
 
 --加载确定按钮
 btnYes = UI_CreateCompent( frmCode, BUTTON_TYPE, "btnYes", 41, 19, 74, 78 )
-UI_LoadButtonImage( btnYes, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
+UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_SetEditEnterButton( edtNumber, btnYes )
 
 --加载取消按钮
 btnNo = UI_CreateCompent( frmCode, BUTTON_TYPE, "btnNo", 41, 19, 122, 78 )
-UI_LoadButtonImage( btnNo, "texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
 -----------------------------------------------------------------------
 -- Create pirate guild
 -----------------------------------------------------------------------
-frmName = UI_CreateForm( "frmName",  FALSE, 185, 136, 397, 500, FALSE, FALSE )
+frmName = UI_CreateForm( "frmName",  FALSE, 480, 425, 397, 500, FALSE, FALSE )
 UI_ShowForm( frmName, FALSE )
 UI_AddFormToTemplete( frmName, FORM_MAIN )
 UI_SetFormStyle( frmName, 0 )
 UI_SetIsDrag( frmName, TRUE )
 
-imgBackground = UI_CreateCompent( frmName, IMAGE_TYPE, "imgBackground", 251, 150, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/create-guild.png", NORMAL, 251, 150, 0, 0 )
+-- background
+setBackground(frmName, false, 480, 425, 255)
 
-edtName = UI_CreateCompent( frmName, EDIT_TYPE, "edtName", 96, 11, 100, 37 )
-UI_SetTextColor( edtName, COLOR_FFEDCF )
-UI_SetEditCursorColor( edtName, COLOR_WHITE )
+image = UI_CreateCompent(frmName, IMAGE_TYPE,"image", 420, 55, 30, 30)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+image = UI_CreateCompent(frmName, IMAGE_TYPE,"image", 420, 55, 30, 115)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+image = UI_CreateCompent(frmName, IMAGE_TYPE,"image", 420, 55, 30, 180)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+edtName = UI_CreateCompent( frmName, EDIT_TYPE, "edtName", 420, 20, 50, 44 )
+UI_SetTextColor( edtName, argbColor("c0c0c0") )
 UI_SetEditMaxNum( edtName, 16 )
 UI_SetEditMaxNumVisible( edtName, 16 )
+UI_SetEditCursorColor( edtName, argbColor("c0c0c0") )
+UI_SetEditFont( edtName, EXO_Regular_S20 )
+UI_SetEditClue(edtName, "Enter guild name*", argbColor("908a92"))
 
-edtPCode = UI_CreateCompent( frmName, EDIT_TYPE, "edtPCode", 71, 11, 100, 65 )
-UI_SetTextColor( edtPCode, COLOR_FFEDCF )
-UI_SetEditCursorColor( edtPCode, COLOR_WHITE )
+edtPCode = UI_CreateCompent( frmName, EDIT_TYPE, "edtPCode", 420, 20, 50, 129 )
+UI_SetTextColor( edtPCode, argbColor("c0c0c0") )
 UI_SetEditMaxNum( edtPCode, 8 )
 UI_SetEditMaxNumVisible( edtPCode, 8 )
+UI_SetEditCursorColor( edtPCode, argbColor("c0c0c0") )
+UI_SetEditFont( edtPCode, EXO_Regular_S20 )
+UI_SetEditClue(edtPCode, "Enter password-guild", argbColor("908a92"))
 
-edtPCode2 = UI_CreateCompent( frmName, EDIT_TYPE, "edtPCode2", 71, 11, 100, 95 )
-UI_SetTextColor( edtPCode2, COLOR_FFEDCF )
-UI_SetEditCursorColor( edtPCode2, COLOR_WHITE )
-UI_SetEditMaxNum( edtPCode2, 8 )
-UI_SetEditMaxNumVisible( edtPCode2, 8 )
-UI_SetEditEnterButton( edtPCode2, btnYes )
+edtPCode2 = UI_CreateCompent( frmName, EDIT_TYPE, "edtPCode2", 420, 20, 50, 194 )
+UI_SetTextColor( edtPCode2, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtPCode2, 25 )
+UI_SetEditMaxNumVisible( edtPCode2, 25 )
+UI_SetEditCursorColor( edtPCode2, argbColor("c0c0c0") )
+UI_SetEditFont( edtPCode2, EXO_Regular_S20 )
+UI_SetEditClue(edtPCode2, "Re-enter password-guild", argbColor("908a92"))
 
-btnYes = UI_CreateCompent( frmName, BUTTON_TYPE, "btnYes", 93, 32, 30, 133 )
-UI_LoadButtonImage( btnYes, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
+-- botton "ok"
+btnYes = CreateButton(0, frmName, "btnYes", "CREATE GUILD", EXO_Regular_S20, 420, 60, 30, 265)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_SetEditEnterButton( edtNumber, btnYes )
 
-btnNo = UI_CreateCompent( frmName, BUTTON_TYPE, "btnNo", 93, 32, 126, 133 )
-UI_LoadButtonImage( btnNo, "texture/gui/friends.png", 93, 32, 93, 494, FALSE )
+--botton "cancel"
+btnNo = CreateButton(1, frmName, "btnNo", "CANCEL", EXO_Regular_S20, 420, 60, 30, 335)
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
+
 
 -----------------------------------------------------------------------
 -- 定义NPC公会挑战
@@ -561,22 +571,22 @@ UI_SetIsDrag( frmGuildPK, TRUE )
 
 -- 加载背景图片
 imgBakLeft = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakLeft, "texture/gui/old_gui/GuildPK1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakLeft, "./texture/gui/old_gui/GuildPK1.tga", NORMAL, 256, 256, 0, 0 )
 
 imgBakMidle = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakMidle", 256, 256, 256, 0 )
-UI_LoadImage( imgBakMidle, "texture/gui/old_gui/GuildPK2.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakMidle, "./texture/gui/old_gui/GuildPK2.tga", NORMAL, 256, 256, 0, 0 )
 
 imgBakRight = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakRight", 46, 256, 512, 0 )
-UI_LoadImage( imgBakRight, "texture/gui/old_gui/GuildPK3.tga", NORMAL, 46, 256, 0, 0 )
+UI_LoadImage( imgBakRight, "./texture/gui/old_gui/GuildPK3.tga", NORMAL, 46, 256, 0, 0 )
 
 imgBakLeftD = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakLeftD", 256, 131, 0, 256 )
-UI_LoadImage( imgBakLeftD, "texture/gui/old_gui/GuildPK4.tga", NORMAL, 256, 131, 0, 0 )
+UI_LoadImage( imgBakLeftD, "./texture/gui/old_gui/GuildPK4.tga", NORMAL, 256, 131, 0, 0 )
 
 imgBakMidleD = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakMidleD", 256, 131, 256, 256 )
-UI_LoadImage( imgBakMidleD, "texture/gui/old_gui/GuildPK5.tga", NORMAL, 256, 131, 0, 0 )
+UI_LoadImage( imgBakMidleD, "./texture/gui/old_gui/GuildPK5.tga", NORMAL, 256, 131, 0, 0 )
 
 imgBakRightD = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakRightD", 46, 131, 512, 256 )
-UI_LoadImage( imgBakRightD, "texture/gui/old_gui/GuildPK6.tga", NORMAL, 46, 131, 0, 0 )
+UI_LoadImage( imgBakRightD, "./texture/gui/old_gui/GuildPK6.tga", NORMAL, 46, 131, 0, 0 )
 
 --title
 labTitle = UI_CreateCompent( frmGuildPK, LABELEX_TYPE, "labTitle", 60, 14, 208, 4 )
@@ -587,7 +597,7 @@ UI_SetLabelExFont( labTitle, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnClose", 14, 14, 537, 3 )
-UI_LoadButtonImage( btnClose, "texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --创建擂主
@@ -640,15 +650,15 @@ UI_SetLabelExFont( labMoney2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 --加载竞价按钮
 btnCharge0 = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnCharge0", 41, 19, 497, 120 )
-UI_LoadButtonImage( btnCharge0, "texture/gui/old_gui/forge3.tga", 41, 19, 0, 82, TRUE )
+UI_LoadButtonImage( btnCharge0, "./texture/gui/old_gui/forge3.tga", 41, 19, 0, 82, TRUE )
 UI_SetButtonModalResult( btnCharge0, BUTTON_YES )
 
 btnCharge1 = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnCharge1", 41, 19, 497, 167 )
-UI_LoadButtonImage( btnCharge1, "texture/gui/old_gui/forge3.tga", 41, 19, 0, 82, TRUE )
+UI_LoadButtonImage( btnCharge1, "./texture/gui/old_gui/forge3.tga", 41, 19, 0, 82, TRUE )
 UI_SetButtonModalResult( btnCharge1, BUTTON_YES )
 
 btnCharge2 = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnCharge2", 41, 19, 497, 212 )
-UI_LoadButtonImage( btnCharge2, "texture/gui/old_gui/forge3.tga", 41, 19, 0, 82, TRUE )
+UI_LoadButtonImage( btnCharge2, "./texture/gui/old_gui/forge3.tga", 41, 19, 0, 82, TRUE )
 UI_SetButtonModalResult( btnCharge2, BUTTON_YES )
 
 
