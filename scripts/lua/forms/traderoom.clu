@@ -177,7 +177,7 @@ UI_SetIsDrag(frmBlackTrade, TRUE )
 setBackground(frmBlackTrade, true, 500, 360, 225)
 
 labFormname = UI_CreateCompent(frmBlackTrade, LABELEX_TYPE, "labFormname", 15, 14, 190, 20)
-UI_SetCaption( labFormname, "BLACK MARKET" )
+UI_SetCaption( labFormname, "MARKET" )
 UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 
