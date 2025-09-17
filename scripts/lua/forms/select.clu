@@ -61,132 +61,169 @@ btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 60, 60, 675, 15 )
 UI_LoadButtonImage( btnNo, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 243, 949, TRUE )
 
 -----------------------------------------------------------------------
--- Create cha
+-- Select race
 -----------------------------------------------------------------------
-frmQuit = UI_CreateForm( "frmQuit", FALSE, 800, 600, 0, 0, TRUE, FALSE )
-UI_ShowForm( frmQuit, TRUE )
-UI_AddFormToTemplete( frmQuit, FORM_CREATE_CHA )
-UI_FormSetIsEscClose( frmQuit, FALSE )
-UI_SetBackground(frmQuit)
+frmSetRace = UI_CreateForm( "frmSetRace", FALSE, 400, 172, 50, 50, TRUE, FALSE )
+UI_ShowForm( frmSetRace, TRUE )
+UI_SetIsDrag(frmSetRace, FALSE)
+UI_FormSetIsEscClose( frmSetRace, FALSE )
 
-imgBg = UI_CreateCompent( frmQuit, IMAGE_TYPE, "imgBg", 1920, 1080, 0, 0 )
-UI_LoadImage( imgBg, "texture/gui/p0w-create-cha-bg.png", NORMAL, 1920, 1080, 0, 0 )
+setBackground(frmSetRace, false, 400, 172, 255)
 
-imgLineBackground = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgLineBackground", 1600, 86, 0, 0)
-UI_LoadImage(imgLineBackground, "texture/gui/p0w-create-cha.png", NORMAL, 1600, 86, 0, 282)
+labFormname = UI_CreateCompent(frmSetRace, LABELEX_TYPE, "labFormname", 400, 14, 0, 20)
+UI_SetCaption(labFormname, "RACE")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
-render_cha = UI_CreateCompent( frmQuit, UI3D_COMPENT, "render_cha", 160, 500, 0, 0 )
+btnLance = UI_CreateCompent(frmSetRace, BUTTON_TYPE, "btnLance", 70, 92, 30, 44)
+UI_LoadButtonImage(btnLance, "./texture/ascaron_ui/asc-part-02.png", 70, 92, 0, 0, TRUE)
+UI_SetHint(btnLance, "Lance")
 
-imgInput = UI_CreateCompent( frmQuit, IMAGE_TYPE, "imgInput", 434, 121, 0, 0 )
-UI_LoadImage( imgInput, "texture/gui/btnServer.png", NORMAL, 434, 121, 0, 602 )
-UI_SetAlpha( imgInput, 150 )
+btnCarsise = UI_CreateCompent(frmSetRace, BUTTON_TYPE, "btnCarsise", 70, 92, 120, 44)
+UI_LoadButtonImage(btnCarsise, "./texture/ascaron_ui/asc-part-02.png", 70, 92, 0, 93, TRUE)
+UI_SetHint(btnCarsise, "Carsise")
 
-edtName = UI_CreateCompent( frmQuit, EDIT_TYPE, "edtName", 300, 12, 0, 0 )
-UI_SetTextColor( edtName, COLOR_B1A58E )
-UI_SetEditMaxNum( edtName, 16 )
-UI_SetEditMaxNumVisible( edtName, 16)
-UI_SetEditCursorColor(edtName, COLOR_WHITE)
+btnPhyllis = UI_CreateCompent(frmSetRace, BUTTON_TYPE, "btnPhyllis", 70, 92, 210, 44)
+UI_LoadButtonImage(btnPhyllis, "./texture/ascaron_ui/asc-part-02.png", 70, 92, 0, 186, TRUE)
+UI_SetHint(btnPhyllis, "Phyllis")
 
-btnCreate = UI_CreateCompent(frmQuit, BUTTON_TYPE, "btnCreate", 288, 103, 300, 650)
-UI_LoadButtonImage(btnCreate, "texture/gui/p0w-create-cha.png", 288, 103, 353, 0, TRUE)
-
-imgBackgroundRace = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgBackgroundRace", 270, 150, 0, 0)
-UI_LoadImage(imgBackgroundRace, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0)
-
-imgRaceTitle = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgRaceTitle", 272, 25, 0, 0)
-UI_LoadImage(imgRaceTitle, "texture/gui/p0w-create-cha.png", NORMAL, 392, 35, 0, 103)
-
--- Формирование выбора рассы
-for id = 1, 4, 1 do
-	local x = 414
-	local y = 103
-	
-	if (id == 2) then
-		y = 196
-	elseif (id == 3) then
-		x = 754
-	elseif (id == 4) then
-		x = 754
-		y = 196
-	end
-	
-	local name = string.format("btn_race_%d", id)
-	name = UI_CreateCompent( frmQuit, BUTTON_TYPE, name, 59, 65, 0, 0)
-	UI_LoadButtonImage( name, "texture/gui/p0w-create-cha.png", 85, 93, x, y, TRUE )
-end
-
-imgBackgroundJobs = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgBackgroundJobs", 270, 210, 0, 0)
-UI_LoadImage(imgBackgroundJobs, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0)
-
-imgJobsTitle = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgJobsTitle", 272, 25, 0, 0)
-UI_LoadImage(imgJobsTitle, "texture/gui/p0w-create-cha.png", NORMAL, 392, 35, 0, 149)
-
-btn_job_8 = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btn_job_8", 59, 65, 0, 0)
-UI_LoadButtonImage(btn_job_8, "texture/gui/p0w-create-cha.png", 85, 93, 1094, 103, TRUE)
-	
-btn_job_9 = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btn_job_9", 59, 65, 0, 0)
-UI_LoadButtonImage(btn_job_9, "texture/gui/p0w-create-cha.png", 85, 93, 1094, 196, TRUE)
-
-btn_job_12 = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btn_job_12", 59, 65, 0, 0)
-UI_LoadButtonImage(btn_job_12, "texture/gui/p0w-create-cha.png", 85, 93, 0, 383, TRUE)
-
-btn_job_13 = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btn_job_13", 59, 65, 0, 0)
-UI_LoadButtonImage(btn_job_13, "texture/gui/p0w-create-cha.png", 85, 93, 340, 383, TRUE)
-
-btn_job_14 = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btn_job_14", 59, 65, 0, 0)
-UI_LoadButtonImage(btn_job_14, "texture/gui/p0w-create-cha.png", 85, 93, 0, 476, TRUE)
-
-btn_job_16 = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btn_job_16", 59, 65, 0, 0)
-UI_LoadButtonImage(btn_job_16, "texture/gui/p0w-create-cha.png", 85, 93, 340, 476, TRUE)
-
-imgBackgroundHair = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgBackgroundHair", 270, 210, 0, 0)
-UI_LoadImage(imgBackgroundHair, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0)
-
-imgHairTitle = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgHairTitle", 272, 25, 0, 0)
-UI_LoadImage(imgHairTitle, "texture/gui/p0w-create-cha.png", NORMAL, 392, 35, 0, 194)
-
--- Формирование выбора головного убора
-for id = 1, 8, 1 do
-	local name = string.format("btn_hair_%d", id)
-	name = UI_CreateCompent( frmQuit, BUTTON_TYPE, name, 59, 65, 0, 0)
-	UI_LoadButtonImage( name, "texture/gui/p0w-create-cha.png", 85, 93, 0, 0, TRUE )
-end
-
-imgBackgroundFace = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgBackgroundFace", 270, 210, 0, 0)
-UI_LoadImage(imgBackgroundFace, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0)
-
-imgFaceTitle = UI_CreateCompent(frmQuit, IMAGE_TYPE, "imgFaceTitle", 272, 25, 0, 0)
-UI_LoadImage(imgFaceTitle, "texture/gui/p0w-create-cha.png", NORMAL, 392, 35, 0, 241)
-
--- Формирование выбора лица
-for id = 1, 8, 1 do
-	local name = string.format("btn_face_%d", id)
-	name = UI_CreateCompent( frmQuit, BUTTON_TYPE, name, 59, 65, 0, 0)
-	UI_LoadButtonImage( name, "texture/gui/p0w-create-cha.png", 85, 93, 0, 0, TRUE )
-end
-
-labJob = UI_CreateCompent(frmQuit, LABELEX_TYPE, "labJob", 180, 30, 0, 0)
-UI_SetTextColor(labJob, COLOR_WHITE)
-UI_SetLabelExFont(labJob, BIGFONT01, TRUE, COLOR_BLACK )
-
-btnJobHelp = UI_CreateCompent(frmQuit, BUTTON_TYPE, "btnJobHelp", 30, 30, 300, 650)
-UI_LoadButtonImage(btnJobHelp, "texture/gui/p0w-frmInv.png", 30, 30, 0, 574, TRUE)
-
-btnNo = UI_CreateCompent( frmQuit, BUTTON_TYPE, "btnNo", 28, 26, 398, 54 )
-UI_LoadButtonImage( btnNo, "texture/gui/btnServer.png", 28, 26, 0, 512, TRUE )
+btnAmi = UI_CreateCompent(frmSetRace, BUTTON_TYPE, "btnAmi", 70, 92, 300, 44)
+UI_LoadButtonImage(btnAmi, "./texture/ascaron_ui/asc-part-02.png", 70, 92, 0, 279, TRUE)
+UI_SetHint(btnAmi, "Ami")
 
 -----------------------------------------------------------------------
--- Character Intro
------------------------------------------------------------------------	
-frmRoleInfo = UI_CreateForm("frmRoleInfo", TRUE, 600, 450, 50 , 450, TRUE,TRUE)
-UI_ShowForm(frmRoleInfo, FALSE )
-UI_SetIsDrag(frmRoleInfo, FALSE)
-UI_FormSetIsEscClose(frmRoleInfo, FALSE)
-UI_SetFormStyle(frmRoleInfo,1)
-UI_AddFormToTemplete( frmRoleInfo, FORM_CREATE_CHA )
+-- Select job
+-----------------------------------------------------------------------
+frmSetJob = UI_CreateForm( "frmSetJob", FALSE, 350, 118, 50, 250, TRUE, FALSE )
+UI_ShowForm( frmSetJob, TRUE )
+UI_SetIsDrag(frmSetJob, FALSE)
+UI_FormSetIsEscClose( frmSetJob, FALSE )
 
-imgRoleInfo = UI_CreateCompent(frmRoleInfo, IMAGE_TYPE,"imgRoleInfo", 606, 488, 0, 0)
-UI_LoadImage( imgRoleInfo, "texture/gui/welcome-notification-04.png", NORMAL, 606, 488, 0, 0)
+setBackground(frmSetJob, false, 350, 118, 255)
 
-btnNextStep = UI_CreateCompent(frmRoleInfo, BUTTON_TYPE,"btnNextStep", 306, 70, 117+33, 449)
-UI_LoadButtonImage( btnNextStep,"texture/gui/welcome-notification-04.png", 306, 70, 0, 488, FALSE )
+labFormname = UI_CreateCompent(frmSetJob, LABELEX_TYPE, "labFormname", 350, 14, 0, 20)
+UI_SetCaption(labFormname, "JOB")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+btnChampion = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnChampion", 40, 40, 30, 44)
+UI_LoadButtonImage(btnChampion, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnChampion, "Champion")
+
+btnCrusader = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnCrusader", 40, 40, 80, 44)
+UI_LoadButtonImage(btnCrusader, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnCrusader, "Crusader")
+
+btnSharpshooter = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnSharpshooter", 40, 40, 130, 44)
+UI_LoadButtonImage(btnSharpshooter, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnSharpshooter, "Sharpshooter")
+
+btnCleric = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnCleric", 40, 40, 180, 44)
+UI_LoadButtonImage(btnCleric, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnCleric, "Cleric")
+
+btnSealMaster = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnSealMaster", 40, 40, 230, 44)
+UI_LoadButtonImage(btnSealMaster, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnSealMaster, "Seal Master")
+
+btnVoyager = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnVoyager", 40, 40, 280, 44)
+UI_LoadButtonImage(btnVoyager, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+UI_SetHint(btnVoyager, "Voyage")
+
+
+-----------------------------------------------------------------------
+-- Select hair
+-----------------------------------------------------------------------
+frmSetHair = UI_CreateForm( "frmSetHair", FALSE, 350, 170, 0, 0, TRUE, FALSE )
+UI_ShowForm(frmSetHair, TRUE)
+UI_SetIsDrag(frmSetHair, FALSE)
+UI_FormSetIsEscClose(frmSetHair, FALSE)
+UI_AddFormToTemplete(frmSetHair, FORM_SELECT )
+UI_SetFormStyleEx(frmSetHair, 9, 50, 50)
+
+setBackground(frmSetHair, false, 350, 170, 255)
+
+labFormname = UI_CreateCompent(frmSetHair, LABELEX_TYPE, "labFormname", 350, 14, 0, 20)
+UI_SetCaption(labFormname, "HAIRS")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+CreateImageGrid(frmSetHair, 6, 2, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
+grdHairs = UI_CreateCompent(frmSetHair, GOODS_GRID_TYPE, "grdHairs", 270, 85, 53, 53) 
+UI_SetGridSpace(grdHairs, 9, 9)
+UI_SetGridContent(grdHairs, 14, 6)
+UI_SetGridUnitSize(grdHairs, 32, 32)
+UI_SetMargin(grdHairs, 0, 0, 0, 0)
+setScroll(grdHairs)
+
+-----------------------------------------------------------------------
+-- Select face
+-----------------------------------------------------------------------
+frmSetFace = UI_CreateForm( "frmSetFace", FALSE, 350, 370, 0, 0, TRUE, FALSE )
+UI_ShowForm(frmSetFace, TRUE)
+UI_SetIsDrag(frmSetFace, FALSE)
+UI_FormSetIsEscClose(frmSetFace, FALSE)
+UI_AddFormToTemplete(frmSetFace, FORM_SELECT )
+UI_SetFormStyleEx(frmSetFace, 9, 50, 250)
+
+setBackground(frmSetFace, false, 350, 170, 255)
+
+labFormname = UI_CreateCompent(frmSetFace, LABELEX_TYPE, "labFormname", 350, 14, 0, 20)
+UI_SetCaption(labFormname, "FACES")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+CreateImageGrid(frmSetFace, 6, 2, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
+grdFaces = UI_CreateCompent(frmSetFace, GOODS_GRID_TYPE, "grdFaces", 230, 360, 53, 53) 
+UI_SetGridSpace(grdFaces, 9, 9)
+UI_SetGridContent(grdFaces, 2, 6)
+UI_SetGridUnitSize(grdFaces, 32, 32)
+UI_SetMargin(grdFaces, 0, 0, 0, 0)
+setScroll(grdFaces)
+
+-----------------------------------------------------------------------
+-- Set name
+-----------------------------------------------------------------------
+frmSetName = UI_CreateForm( "frmSetName", FALSE, 750, 90 + 55 + 10, 0, 0, TRUE, FALSE )
+UI_ShowForm( frmSetName, TRUE )
+UI_AddFormToTemplete( frmSetName, FORM_SELECT )
+UI_SetFormStyle(frmSetName, 12)
+UI_FormSetIsEscClose( frmSetName, FALSE )
+
+imgInput1 = UI_CreateCompent( frmSetName, IMAGE_TYPE, "imgInput1", 420, 55, 165, 0)
+UI_LoadImage( imgInput1, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 20, 20)
+
+editName = UI_CreateCompent(frmSetName, EDIT_TYPE, "editName", 420, 20, 185, 17 )
+UI_SetTextColor(editName, argbColor("c0c0c0") )
+UI_SetEditMaxNum(editName, 20 )
+UI_SetEditMaxNumVisible(editName, 20 )
+UI_SetEditCursorColor(editName, argbColor("c0c0c0") )
+UI_SetEditFont(editName, EXO_Regular_S20 )
+UI_SetEditClue(editName, "New character name", argbColor("908a92"))
+
+-- background
+imgSelect = UI_CreateCompent(frmSetName, IMAGE_TYPE, "imgSelect", 750, 90, 0, 65)
+UI_LoadImage(imgSelect, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 750, 90, 0, 1010)
+
+-- Back
+btnBack = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnBack", 60, 60, 15, 15 + 65 )
+UI_LoadButtonImage( btnBack, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 889, TRUE )
+
+-- Delete
+btnDel = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnDel", 60, 60, 90, 15  + 65 )
+UI_LoadButtonImage( btnDel, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 949, TRUE )
+
+-- Play
+btnCreate = CreateButton(0, frmSetName, "btnCreate", "CREATE", EXO_Regular_S20, 420, 60, 165, 15 + 65)
+
+-- change pw
+btnChangePw = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnChangePw", 60, 60, 600, 15 + 65 )
+UI_LoadButtonImage( btnChangePw, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 244, 889, TRUE )
+
+-- Exit
+btnExit = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnExit", 60, 60, 675, 15 + 65 )
+UI_LoadButtonImage( btnExit, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 243, 949, TRUE )
