@@ -5,15 +5,16 @@ frmMinimap = UI_CreateForm( "frmMinimap", FALSE, 200, 210, 20, 20, TRUE, FALSE )
 UI_ShowForm( frmMinimap, TRUE )
 UI_AddFormToTemplete( frmMinimap, FORM_MAIN )
 UI_FormSetIsEscClose( frmMinimap, FALSE )
+UI_SetFormStyleEx(frmMinimap, FORM_RIGHTTOP, 20, 20)
 
 setBackgroundMiddle(frmMinimap, 200, 30, 200, 0, 0)
 
-labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 7, 8 )
+labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 10, 8 )
 UI_SetCaption( labMapName, "0" )
 UI_SetTextColor( labMapName, COLOR_WHITE )
 UI_SetLabelExFont( labMapName, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-labServerTime = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labServerTime", 51, 12, 128, 8)
+labServerTime = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labServerTime", 51, 12, 136, 8)
 UI_SetCaption(labServerTime, "00:00:00")
 UI_SetTextColor(labServerTime, argbColor("babbbb"))
 UI_SetLabelExFont(labServerTime, EXO_Regular_S12, FALSE, COLOR_BLACK)

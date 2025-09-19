@@ -220,7 +220,7 @@ FORM_LEFTTOP=8			-- 左上角
 FORM_RIGHTTOP=9			-- 右上角
 FORM_LEFTBOTTOM=10		-- 左下角
 FORM_RIGHTBOTTOM=11		-- 右下角
-
+FORM_CENTERBOTTOM=12
 
 -----------------------------------------------------------------------
 -- 定义要调用的函数

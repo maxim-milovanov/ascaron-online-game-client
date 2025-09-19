@@ -26,10 +26,11 @@ UI_FormSetIsEscClose( frmDetail, FALSE )
 
 setBackgroundMiddle(frmDetail, 250, 65, 225, 0, 0)
 
-labMainLv = UI_CreateCompent( frmDetail, LABELEX_TYPE, "labMainLv", 14, 9, 15, 20 )
+labMainLv = UI_CreateCompent( frmDetail, LABELEX_TYPE, "labMainLv", 31, 20, 15, 20 )
 UI_SetTextColor( labMainLv, argbColor("d0d0d1"))
 UI_SetLabelExFont( labMainLv, EXO_Bold_S20, FALSE, COLOR_BLACK )
 UI_SetCaption( labMainLv, "99" )
+UI_SetCaptionIsCenter(labMainLv, TRUE)
 
 image = UI_CreateCompent(frmDetail, IMAGE_TYPE, "image", 175, 15, 60, 15)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 175, 15, 534, 86)
@@ -204,6 +205,7 @@ UI_ShowForm(frmFast, TRUE)
 UI_AddFormToTemplete( frmFast, FORM_MAIN)
 UI_SetIsDrag(frmFast, true)
 UI_FormSetIsEscClose(frmFast, FALSE)
+UI_SetFormStyleEx(frmFast, FORM_CENTERBOTTOM, 0, 60)
 
 imgfscMainNA = {}
 imgfscMainNB = {}
@@ -252,6 +254,7 @@ UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 5
 frmCbbfb = UI_CreateForm("frmCbbfb", FALSE, 601, 52, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmCbbfb, TRUE)
 UI_AddFormToTemplete(frmCbbfb, FORM_MAIN)
+UI_SetFormStyleEx(frmCbbfb, FORM_CENTERBOTTOM, 0, 0)
 UI_SetIsDrag(frmCbbfb, FALSE)
 UI_FormSetIsEscClose(frmCbbfb, FALSE)
 
