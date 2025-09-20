@@ -179,14 +179,15 @@ for pos = 1, 4, 1 do
 	d3dHead = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dHead", 36, 36, 3, 3 )
 	d3dDown = UI_CreateCompent( label, UI3D_COMPENT_TYPE, "d3dDown", 176, 45, 0, 0 )
 	
-	image = UI_CreateCompent( label, IMAGE_TYPE, "image", 15, 11, 10, 30)
-	UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
-	
-	labFLv = UI_CreateCompent( label, LABELEX_TYPE, "labFLv", 14, 9, 10, 29 )
-	UI_SetTextColor( labFLv, argbColor("b9baba") )
+	image = UI_CreateCompent( label, IMAGE_TYPE, "image", 18, 18, 6, 25)
+	UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 115, 61)
+
+	labFLv = UI_CreateCompent( label, LABELEX_TYPE, "labFLv", 18, 10, 6, 28 )
+	UI_SetTextColor( labFLv, argbColor("d0d0d1"))
 	UI_SetLabelExFont( labFLv, EXO_Regular_S10, FALSE, COLOR_BLACK )
-	UI_SetCaption( labLv, "99" )
-	
+	UI_SetCaption( labFLv, "99" )
+	UI_SetCaptionIsCenter(labFLv, TRUE)
+
 	labelname = UI_CreateCompent( label, LABELEX_TYPE, labelname, 1, 1, 45, 5 )
 	UI_SetCaption( labelname, "-" )
 	UI_SetTextColor( labelname, argbColor("b9baba") )
@@ -491,27 +492,28 @@ UI_LoadScaleImage( frmTargetInfoHP, "./texture/ascaron_ui/asc-part-01.png", PROG
 UI_SetHint( frmTargetInfoHP, "HP" )
 UI_SetProgressHintStyle( frmTargetInfoHP, PROGRESS_HINT_NUM )
 
-UI_CreateCompent(frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget",  36, 36, 3, 3)
+d3dTarget = UI_CreateCompent( frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget", 32, 32, 6, 6 )
 
 frmTargetInfoName = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "frmTargetInfoName", 95, 11, 45, 5)
 UI_SetTextColor( frmTargetInfoName, argbColor("b9baba") )
 UI_SetLabelExFont( frmTargetInfoName, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-imgTargetLv = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "imgTargetLv", 15, 11, 10, 30)
-UI_LoadImage( imgTargetLv, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 11, 10, 10)
+image = UI_CreateCompent( frmTargetInfo, IMAGE_TYPE, "image", 18, 18, 6, 25)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 115, 61)
 
-labTargetLv = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetLv", 14, 9, 10, 29 )
-UI_SetTextColor( labTargetLv, argbColor("b9baba") )
+labTargetLv = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetLv", 18, 10, 6, 28 )
+UI_SetTextColor( labTargetLv, argbColor("d0d0d1"))
 UI_SetLabelExFont( labTargetLv, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labTargetLv, "99" )
+UI_SetCaptionIsCenter(labTargetLv, TRUE)
 
 labTargetHP = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "labTargetHP", 14, 9, 45, 24 )
 UI_SetTextColor( labTargetHP, argbColor("b9baba") )
 UI_SetLabelExFont( labTargetHP, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labLv, "99" )
 
-btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 15, 15, 155, 22)
-UI_LoadButtonImage( btnTargetInfo, "./texture/ascaron_ui/asc-part-01.png", 12, 12, 164, 239, TRUE )
+btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 17, 17, 150, 22)
+UI_LoadButtonImage( btnTargetInfo, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 145, TRUE )
 UI_SetHint( btnTargetInfo, "Show monster info" )
 UI_SetIsShow(btnTargetInfo, TRUE)
 

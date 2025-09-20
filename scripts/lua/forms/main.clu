@@ -524,13 +524,14 @@ UI_SetProgressHintStyle( proPetSP, PROGRESS_HINT_NUM )
 
 imgPetHead = UI_CreateCompent( frmMainPet, IMAGE_TYPE, "imgPetHead", 32, 32, 10, 10 )
 
-image = UI_CreateCompent( frmMainPet, IMAGE_TYPE, "image", 16, 11, 10, 27)
-UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 16, 11, 10, 10)
+image = UI_CreateCompent( frmMainPet, IMAGE_TYPE, "image", 18, 18, 10, 25)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 115, 61)
 
-labPetLv = UI_CreateCompent( frmMainPet, LABELEX_TYPE, "labPetLv", 14, 9, 10, 26 )
+labPetLv = UI_CreateCompent( frmMainPet, LABELEX_TYPE, "labPetLv", 18, 10, 10, 28 )
 UI_SetTextColor( labPetLv, argbColor("d0d0d1"))
-UI_SetLabelExFont( labPetLv, FONT_14, FALSE, COLOR_BLACK )
+UI_SetLabelExFont( labPetLv, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labPetLv, "99" )
+UI_SetCaptionIsCenter(labPetLv, TRUE)
 
 -----------------------------------------------------------------------
 -- Mount
@@ -561,13 +562,14 @@ UI_SetProgressHintStyle( proMountSP, PROGRESS_HINT_NUM )
 
 imgMountHead = UI_CreateCompent( frmMainMount, IMAGE_TYPE, "imgMountHead", 32, 32, 10, 10 )
 
-image = UI_CreateCompent( frmMainMount, IMAGE_TYPE, "image", 16, 11, 10, 27)
-UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 16, 11, 10, 10)
+image = UI_CreateCompent( frmMainMount, IMAGE_TYPE, "image", 18, 18, 10, 25)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 115, 61)
 
-labMountLv = UI_CreateCompent( frmMainMount, LABELEX_TYPE, "labMountLv", 14, 9, 10, 26 )
+labMountLv = UI_CreateCompent( frmMainMount, LABELEX_TYPE, "labMountLv", 18, 10, 10, 28 )
 UI_SetTextColor( labMountLv, argbColor("d0d0d1"))
-UI_SetLabelExFont( labMountLv, FONT_14, FALSE, COLOR_BLACK )
+UI_SetLabelExFont( labMountLv, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labMountLv, "99" )
+UI_SetCaptionIsCenter(labMountLv, TRUE)
 
 -----------------------------------------------------------------------
 ---- 定义新手帮助系统面板
