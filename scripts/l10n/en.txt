@@ -1042,3 +1042,6 @@
 [1042]	"Max Energy"
 [1043]	"Gear Score: +%d"
 [1044]	"Total Gear Score: +%d"
+[1045]	"Do you confirm that you wish to log in to the game using the %s account?"
+[1045]	"The cost of one package: %s"
+[1046]	"Total cost: %s"
