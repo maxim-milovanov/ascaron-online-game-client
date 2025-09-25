@@ -1,12 +1,12 @@
 -----------------------------------------------------------------------
 -- Store
 -----------------------------------------------------------------------
-frmStore = UI_CreateForm( "frmStore", FALSE, 760, 632, 300, 100, TRUE, FALSE )
-UI_ShowForm( frmStore, FALSE )
-UI_AddFormToTemplete( frmStore, FORM_MAIN )
-UI_FormSetIsEscClose( frmStore, FALSE )
-UI_SetIsDrag( frmStore,FALSE)
-UI_SetFormStyle( frmStore, 1)
+frmStore = UI_CreateForm("frmStore", FALSE, 760, 632, 300, 100, TRUE, FALSE)
+UI_ShowForm(frmStore, FALSE )
+UI_AddFormToTemplete(frmStore, FORM_MAIN)
+UI_FormSetIsEscClose(frmStore, TRUE)
+UI_SetIsDrag(frmStore, FALSE)
+UI_SetFormStyle(frmStore, FORM_ALLCENTER)
 setBackground(frmStore, true, 760, 632, 255)
 
 labFormname = UI_CreateCompent(frmStore, LABELEX_TYPE, "labFormname", 760, 14, 0, 20)
@@ -333,37 +333,37 @@ UI_AddCompent(pgReputation, listMenu)
 -----------------------------------------------------------------------
 -- Диалоговое окно при покупке пакета
 -----------------------------------------------------------------------	
-frmStoreBox = UI_CreateForm( "frmStoreBox",  FALSE, 480, 375, 0, 0, FALSE, FALSE )
+frmStoreBox = UI_CreateForm( "frmStoreBox",  FALSE, 480, 260, 0, 0, FALSE, FALSE )
 UI_ShowForm( frmStoreBox, FALSE )
 UI_AddFormToTemplete( frmStoreBox, FORM_DIALOG )
 UI_SetIsDrag( frmStoreBox, TRUE )
 UI_SetFormStyle( frmStoreBox, FORM_NONE )
 
-setBackground(frmStoreBox, true, 480, 375, 255)
+setBackground(frmStoreBox, true, 480, 260, 255)
 
-labName = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labName", 480, 275, 0, 20)
+labName = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labName", 480, 16, 0, 20)
 UI_SetCaption( labName, "0" )
 UI_SetTextColor( labName, argbColor("d0d0d1"))
 UI_SetLabelExFont( labName, EXO_Regular_S16, FALSE, COLOR_BLACK )
 UI_SetCaptionIsCenter(labName, TRUE)
 
 CreateImageGrid(frmStoreBox, 6, 1, 30, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
-Items = UI_CreateCompent(frmStoreBox, GOODS_GRID_TYPE, "Items", 230, 360, 53, 53) 
+Items = UI_CreateCompent(frmStoreBox, GOODS_GRID_TYPE, "Items", 400, 100, 53, 53) 
 UI_SetGridSpace(Items, 36, 9)
 UI_SetGridContent(Items, 1, 6)
 UI_SetGridUnitSize(Items, 32, 32)
 UI_SetMargin(Items, 0, 0, 0, 0)
 
-labPrice = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labPrice", 87, 11, 250, 235 )
+labPrice = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labPrice", 87, 11, 250, 120 )
 UI_SetCaption( labPrice, "0" )
 UI_SetTextColor( labPrice, argbColor("c0c0c0") )
 UI_SetEditCursorColor( labPrice, COLOR_WHITE )
 UI_SetLabelExFont( labPrice, EXO_Regular_S20, FALSE, COLOR_WHITE )
 
-image = UI_CreateCompent(frmStoreBox, IMAGE_TYPE,"image", 200, 55, 30, 220)
+image = UI_CreateCompent(frmStoreBox, IMAGE_TYPE,"image", 200, 55, 30, 105)
 UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
 
-edtNumber = UI_CreateCompent( frmStoreBox, EDIT_TYPE, "edtNumber", 420, 20, 50, 235 )
+edtNumber = UI_CreateCompent( frmStoreBox, EDIT_TYPE, "edtNumber", 420, 20, 50, 120 )
 UI_SetTextColor( edtNumber, argbColor("c0c0c0") )
 UI_SetEditMaxNum( edtNumber, 3 )
 UI_SetEditCursorColor( edtNumber, argbColor("c0c0c0") )
@@ -371,6 +371,6 @@ UI_SetEditFont( edtNumber, EXO_Regular_S20 )
 UI_SetEditClue(edtNumber, "Quantity", argbColor("908a92"))
 
 -- botton "ok"
-btnYes = CreateButton(0, frmStoreBox, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 285)
+btnYes = CreateButton(0, frmStoreBox, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 170)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_FormSetEnterButton( frmSelect, btnYes )

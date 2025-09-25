@@ -1,7 +1,6 @@
 -----------------------------------------------------------------------
--- 定义loading表单
+-- Loading scene
 -----------------------------------------------------------------------	
--- 创建loading表单
 frmLoading = UI_CreateForm( "frmLoading", FALSE, 1198, 768, 0, 0, FALSE, FALSE )
 UI_SetFormStyle( frmLoading , 8 )
 UI_ShowForm( frmLoading, TRUE )
@@ -9,18 +8,16 @@ UI_AddFormToTemplete( frmLoading, FORM_SWITCH_SCENE )
 UI_FormSetIsEscClose( frmLoading, FALSE )
 
 imgBackground = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgBackground", 2048, 2048, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/login_scene.png", NORMAL, 2048, 2048, 0, 0 )
+UI_LoadImage( imgBackground, "./texture/ascaron_ui/loginscene.png", NORMAL, 2048, 2048, 0, 0 )
 
 imgLogo = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLogo", 561, 353, 0, 0)
-UI_LoadImage( imgLogo, "texture/gui/logo.png", NORMAL, 561, 353, 0, 0)
+UI_LoadImage( imgLogo, "./texture/ascaron_ui/logo.png", NORMAL, 561, 353, 0, 0)
 
-imgLoading = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLoading", 1024, 29, 0, 0)
-UI_LoadImage( imgLoading, "texture/gui/p0w-loading.png", NORMAL, 1024, 29, 0, 0)
+imgLoading = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLoading", 721, 19, 0, 0)
+UI_LoadImage( imgLoading, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 721, 19, 0, 850)
 
-proLoading = UI_CreateCompent( frmLoading, PROGRESS_TYPE, "proLoading", 1024, 29, 0, 0)
-UI_LoadScaleImage( proLoading, "texture/gui/p0w-loading.png", PROGRESS_PROGRESS, 1725, 29, 0, 29, 1.0, 1.0 )
-UI_SetHint( proLoading, "SP" )
-UI_SetProgressHintStyle( proLoading, PROGRESS_HINT_NUM )
+proLoading = UI_CreateCompent( frmLoading, PROGRESS_TYPE, "proLoading", 721, 19, 0, 0)
+UI_LoadScaleImage( proLoading, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 721, 19, 0, 869, 1.0, 1.0 )
 
 -----------------------------------------------------------------------
 -- Loading
