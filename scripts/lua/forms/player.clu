@@ -480,7 +480,7 @@ UI_ShowForm(frmTargetInfo, FALSE)
 UI_AddFormToTemplete(frmTargetInfo, FORM_MAIN)
 UI_SetFormStyleEx(frmTargetInfo, FORM_XCENTER, 0, 0)
 UI_FormSetIsEscClose(frmTargetInfo, TRUE)
-UI_SetIsDrag( frmTargetInfo, TRUE )
+UI_SetIsDrag( frmTargetInfo, FALSE )
 
 setBackgroundMiddle(frmTargetInfo, 176, 45, 225, 0, 0)
 
@@ -520,9 +520,11 @@ UI_SetIsShow(btnTargetInfo, TRUE)
 ------
 -- Drop Form
 ------
-frmTargetDrop = UI_CreateForm( "frmTargetDrop", FALSE, 202, 79, 0, 0, TRUE, FALSE )
+frmTargetDrop = UI_CreateForm( "frmTargetDrop", FALSE, 202, 79, 0, 75, TRUE, FALSE )
 UI_SetIsDrag( frmTargetDrop, FALSE )
 UI_FormSetIsEscClose( frmTargetDrop, TRUE )
+UI_SetFormStyleEx(frmTargetDrop, FORM_XCENTER, 0, 0)
+UI_SetIsDrag(frmTargetDrop, FALSE )
 
 setBackground(frmTargetDrop, false, 212, 89, 225)
 

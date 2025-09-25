@@ -103,7 +103,7 @@ UI_ListViewSetTitle(listLogin, 1, 245, "", 0, 0, 0, 0)
 UI_ListViewSetTitle(listLogin, 2, 32, "", 0, 0, 0, 0)
 UI_ListSetItemMargin(listLogin, 0, 16 )						-- §±§Ö§â§Ö§Þ§Ö§ë§Ö§ß§Ú§Ö §ä§Ö§Ü§ã§ä§Ñ §Ó§ß§å§ä§â§Ú §ã§ä§â§à§Ü§Ú
 UI_SetListRowHeight(listLogin, 45 )							-- §°§ä§ã§ä§å§á §ã§ä§â§à§Ü §Þ§Ö§Ø§Õ§å §ã§à§Ò§à§Û
-UI_SetListIsMouseFollow(listLogin, TRUE)
+UI_SetListIsMouseFollow(listLogin, FALSE)
 UI_ListLoadSelectImage(listLogin, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
 --UI_SetImageAlpha(listLogin, 134)
 --UI_SetListFontColor(listLogin, COLOR_BLACK, COLOR_RED )
@@ -120,8 +120,8 @@ UI_ListViewSetTitle(listChars, 2, 275, "", 0, 0, 0, 0)
 UI_ListViewSetTitle(listChars, 3, 32, "", 0, 0, 0, 0)
 UI_ListSetItemMargin(listChars, 0, 5 )						-- §±§Ö§â§Ö§Þ§Ö§ë§Ö§ß§Ú§Ö §ä§Ö§Ü§ã§ä§Ñ §Ó§ß§å§ä§â§Ú §ã§ä§â§à§Ü§Ú
 UI_SetListRowHeight(listChars, 25 )							-- §°§ä§ã§ä§å§á §ã§ä§â§à§Ü §Þ§Ö§Ø§Õ§å §ã§à§Ò§à§Û
-UI_SetListIsMouseFollow(listChars, TRUE)
-UI_ListLoadSelectImage(listChars, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
+--UI_SetListIsMouseFollow(listChars, FALSE)
+--UI_ListLoadSelectImage(listChars, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
 --UI_SetImageAlpha(listChars, 134)
 --UI_SetListFontColor(listChars, COLOR_BLACK, COLOR_RED )
 setScroll(listChars)
