@@ -203,6 +203,7 @@ UI_ListSetItemMargin(listMenu, 15, 15 )						-- Перемещение текс�
 UI_SetListRowHeight(listMenu, 40 )							-- Отступ строк между собой
 UI_SetListIsMouseFollow(listMenu, FALSE)
 UI_ListLoadSelectImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
+--UI_LoadListItemImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272, 150, 39)
 --UI_SetImageAlpha(listMenu, 134)
 --UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
 UI_SetIsShow(listMenu, FALSE)
@@ -339,6 +340,7 @@ UI_AddFormToTemplete( frmStoreBox, FORM_DIALOG )
 UI_SetIsDrag( frmStoreBox, TRUE )
 UI_SetFormStyle( frmStoreBox, FORM_NONE )
 
+setBackground(frmStoreBox, true, 480, 260, 255)
 setBackground(frmStoreBox, true, 480, 260, 255)
 
 labName = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labName", 480, 16, 0, 20)
