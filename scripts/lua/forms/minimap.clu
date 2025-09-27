@@ -59,15 +59,10 @@ UI_SetAlpha(btnTeleports, 220)
 btnSetTrade = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSetTrade", 40, 40, 31, 247)
 UI_LoadButtonImage( btnSetTrade, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 153, TRUE)
 
-btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 40, 40, 31 + 49, 247)
+btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 40, 40, 31 + 49 + 49, 247)
 UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
 UI_SetHint(btnOpenStore, "Accessing Item Mall")
 UI_SetAlpha(btnOpenStore, 200)
-
-btnWardrobe = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnWardrobe", 40, 40, 31 + 49 + 49, 247)
-UI_LoadButtonImage( btnWardrobe, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 193, TRUE)
-UI_SetHint(btnTeleports, "Wardrobe")
-UI_SetAlpha(btnWardrobe, 200)
 
 -----------------------------------------------------------------------
 -- Select map

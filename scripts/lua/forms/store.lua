@@ -61,12 +61,13 @@ UI_SetSize(GachaItem, 175, 31)
 -- Спец. кнопки
 ------
 	-- Пополнить счет
-	btnPayment = CreateButton(0, frmStore, "btnPayment", "PAYMENT", EXO_Regular_S20, 142, 42, 453, 500)
+	btnPayment = CreateButton(2, frmStore, "btnPayment", "PAYMENT", EXO_Regular_S14, 106, 42, 491, 502)
 	UI_AddCompent(pgCrystal, btnPayment)
 	UI_AddCompent(pgReputation, btnPayment)
+	UI_AddCompent(pgWardrobe, btnPayment)
 
 	-- Купить товар
-	btnBuy = CreateButton(0, frmStore, "btnBuy", "BUY", EXO_Regular_S20, 95, 42, 605, 500)
+	btnBuy = CreateButton(2, frmStore, "btnBuy", "BUY", EXO_Regular_S14, 93, 42, 605, 502)
 	UI_AddCompent(pgCrystal, btnBuy)
 	UI_AddCompent(pgReputation, btnBuy)
 
@@ -78,6 +79,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 80, 19, 324, 329)
 	UI_AddCompent(pgCrystal, image)
 	UI_AddCompent(pgReputation, image)
+	UI_AddCompent(pgWardrobe, image)
 
 	-- Шкала купленных кристаллов
 	proCrystal = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proCrystal", 74, 13, 32, 507)
@@ -86,6 +88,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetProgressHintStyle( proCrystal, PROGRESS_HINT_NUM )
 	UI_AddCompent(pgCrystal, proCrystal)
 	UI_AddCompent(pgReputation, proCrystal)
+	UI_AddCompent(pgWardrobe, proCrystal)
 
 	-- Сумма купленных кристаллов
 	labCrystal = UI_CreateCompent( frmStore, LABELEX_TYPE, "labCrystal", 74, 10, 32, 508)
@@ -95,12 +98,14 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labCrystal, TRUE)
 	UI_AddCompent(pgCrystal, labCrystal)
 	UI_AddCompent(pgReputation, labCrystal)
+	UI_AddCompent(pgWardrobe, labCrystal)
 
 	-- Иконка кристалла
 	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 0, 502)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
 	UI_AddCompent(pgCrystal, image)
 	UI_AddCompent(pgReputation, image)
+	UI_AddCompent(pgWardrobe, image)
 
 	-- 
 	labPremium = UI_CreateCompent(frmStore, LABELEX_TYPE, "labPremium", 80, 13, 29, 531)
@@ -110,6 +115,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labPremium, TRUE)
 	UI_AddCompent(pgCrystal, labPremium)
 	UI_AddCompent(pgReputation, labPremium)
+	UI_AddCompent(pgWardrobe, labPremium)
 
 	-- Уровень премиума
 	labPremiumLv = UI_CreateCompent(frmStore, LABELEX_TYPE, "labPremiumLv", 35, 13, -5, 531)
@@ -119,6 +125,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labPremiumLv, TRUE)
 	UI_AddCompent(pgCrystal, labPremiumLv)
 	UI_AddCompent(pgReputation, labPremiumLv)
+	UI_AddCompent(pgWardrobe, labPremiumLv)
 
 ------
 -- Состояние репутации
@@ -128,14 +135,16 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 80, 19, 324, 329)
 	UI_AddCompent(pgCrystal, image)
 	UI_AddCompent(pgReputation, image)
+	UI_AddCompent(pgWardrobe, image)
 
 	-- Шкала купленных кристаллов
-	proReputation = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proReputation", 74, 13, 32 + 134, 507)
+	proReputation = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proReputation", 74, 13, 166, 507)
 	UI_LoadScaleImage( proReputation, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 74, 13, 324, 361, 1.0, 1.0 )
 	UI_SetHint( proReputation, "Level up" )
 	UI_SetProgressHintStyle( proReputation, PROGRESS_HINT_NUM )
 	UI_AddCompent(pgCrystal, proReputation)
 	UI_AddCompent(pgReputation, proReputation)
+	UI_AddCompent(pgWardrobe, proReputation)
 
 	-- Сумма купленных кристаллов
 	labReputation = UI_CreateCompent( frmStore, LABELEX_TYPE, "labReputation", 74, 10, 32 + 134, 508)
@@ -145,12 +154,14 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labReputation, TRUE)
 	UI_AddCompent(pgCrystal, labReputation)
 	UI_AddCompent(pgReputation, labReputation)
+	UI_AddCompent(pgWardrobe, labReputation)
 
 	-- Иконка кристалла
 	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 0 + 134, 502)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 22, 22, 298, 329)
 	UI_AddCompent(pgCrystal, image)
 	UI_AddCompent(pgReputation, image)
+	UI_AddCompent(pgWardrobe, image)
 
 	-- 
 	labFame = UI_CreateCompent(frmStore, LABELEX_TYPE, "labFame", 80, 13, 29 + 134, 531)
@@ -160,6 +171,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labFame, TRUE)
 	UI_AddCompent(pgCrystal, labFame)
 	UI_AddCompent(pgReputation, labFame)
+	UI_AddCompent(pgWardrobe, labFame)
 
 	-- Уровень премиума
 	labFameLv = UI_CreateCompent(frmStore, LABELEX_TYPE, "labFameLv", 35, 13, -5  + 134, 531)
@@ -169,6 +181,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labFameLv, TRUE)
 	UI_AddCompent(pgCrystal, labFameLv)
 	UI_AddCompent(pgReputation, labFameLv)
+	UI_AddCompent(pgWardrobe, labFameLv)
 
 ------
 -- Переключатель страниц
@@ -197,18 +210,18 @@ UI_SetSize(GachaItem, 175, 31)
 ------
 -- Меню магазина кристаллов\репутации
 ------
-listMenu = UI_CreateListView( frmStore, "listMenu", 150, 350, 0, 40, 2, 50)
-UI_ListViewSetTitle(listMenu, 0, 150, "", 0, 0, 0, 0)
-UI_ListSetItemMargin(listMenu, 15, 15 )						-- Перемещение текста внутри строки
-UI_SetListRowHeight(listMenu, 40 )							-- Отступ строк между собой
-UI_SetListIsMouseFollow(listMenu, FALSE)
-UI_ListLoadSelectImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272)
---UI_LoadListItemImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 420, 55, 364, 272, 150, 39)
---UI_SetImageAlpha(listMenu, 134)
---UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
-UI_SetIsShow(listMenu, FALSE)
-UI_AddCompent(pgCrystal, listMenu)
-UI_AddCompent(pgReputation, listMenu)
+	listMenu = UI_CreateListView( frmStore, "listMenu", 154, 350, -7, 40, 2, eNoTitle)
+	UI_ListViewSetTitle(listMenu, 0, 150, "", 0, 0, 0, 0)
+	UI_ListSetItemMargin(listMenu, 15, 15 )						-- Перемещение текста внутри строки
+	UI_SetListRowHeight(listMenu, 44 )							-- Отступ строк между собой
+	UI_SetListIsMouseFollow(listMenu, FALSE)
+	UI_LoadListItemImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 154, 44, 550, 1171, 144, 44)
+	UI_ListLoadSelectImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 154, 44, 710, 1171)
+	--UI_SetImageAlpha(listMenu, 134)
+	--UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
+	UI_SetIsShow(listMenu, FALSE)
+	UI_AddCompent(pgCrystal, listMenu)
+	UI_AddCompent(pgReputation, listMenu)
 
 ------
 -- Формирование пакетов в магазине (кристаллы\репутация)
@@ -330,7 +343,6 @@ UI_AddCompent(pgReputation, listMenu)
 		UI_AddCompent(pgReputation, labLeftNum[i])
 	end
 
-
 -----------------------------------------------------------------------
 -- Диалоговое окно при покупке пакета
 -----------------------------------------------------------------------	
@@ -376,3 +388,185 @@ UI_SetEditClue(edtNumber, "Quantity", argbColor("908a92"))
 btnYes = CreateButton(0, frmStoreBox, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 170)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_FormSetEnterButton( frmSelect, btnYes )
+
+------
+-- Страница Wardrobe
+------
+d3dSkin = UI_CreateCompent(frmStore, UI3D_COMPENT, "d3dSkin", 100, 100, 450, 250)
+UI_AddCompent(pgWardrobe, d3dSkin)
+
+btnWCat1 = UI_CreateCompent(frmStore, CHECK_TYPE, "btnWCat1", 95, 34, 0, 41)
+UI_LoadImage(btnWCat1, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 95, 34, 688, 518)
+UI_LoadImage(btnWCat1, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 95, 34, 783, 518)
+UI_AddCompent(pgWardrobe, btnWCat1)
+
+labWCat1 = UI_CreateCompent(frmStore, LABELEX_TYPE, "labWCat1", 95, 34, 0, 50)
+UI_SetCaption(labWCat1, "Mounts" )
+UI_SetTextColor(labWCat1, argbColor("ababac"))
+UI_SetLabelExFont(labWCat1, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labWCat1, TRUE)
+UI_AddCompent(pgWardrobe, labWCat1)
+
+btnWCat2 = UI_CreateCompent(frmStore, CHECK_TYPE, "btnWCat2", 95, 34, 105, 41)
+UI_LoadImage(btnWCat2, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 95, 34, 688, 518)
+UI_LoadImage(btnWCat2, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 95, 34, 783, 518)
+UI_AddCompent(pgWardrobe, btnWCat2)
+
+labWCat2 = UI_CreateCompent(frmStore, LABELEX_TYPE, "labWCat2", 95, 34, 105, 50)
+UI_SetCaption(labWCat2, "Costume" )
+UI_SetTextColor(labWCat2, argbColor("ababac"))
+UI_SetLabelExFont(labWCat2, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labWCat2, TRUE)
+UI_AddCompent(pgWardrobe, labWCat2)
+
+btnWCat3 = UI_CreateCompent(frmStore, CHECK_TYPE, "btnWCat3", 95, 34, 210, 41)
+UI_LoadImage(btnWCat3, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 95, 34, 688, 518)
+UI_LoadImage(btnWCat3, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 95, 34, 783, 518)
+UI_AddCompent(pgWardrobe, btnWCat3)
+
+labWCat3 = UI_CreateCompent(frmStore, LABELEX_TYPE, "labWCat3", 95, 34, 210, 50)
+UI_SetCaption(labWCat3, "Weapon" )
+UI_SetTextColor(labWCat3, argbColor("ababac"))
+UI_SetLabelExFont(labWCat3, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labWCat3, TRUE)
+UI_AddCompent(pgWardrobe, labWCat3)
+
+btnWCat4 = UI_CreateCompent(frmStore, CHECK_TYPE, "btnWCat4", 95, 34, 315, 41)
+UI_LoadImage(btnWCat4, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 95, 34, 688, 518)
+UI_LoadImage(btnWCat4, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 95, 34, 783, 518)
+UI_AddCompent(pgWardrobe, btnWCat4)
+
+labWCat4 = UI_CreateCompent(frmStore, LABELEX_TYPE, "labWCat4", 95, 34, 315, 50)
+UI_SetCaption(labWCat4, "Hand pet" )
+UI_SetTextColor(labWCat4, argbColor("ababac"))
+UI_SetLabelExFont(labWCat4, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labWCat4, TRUE)
+UI_AddCompent(pgWardrobe, labWCat4)
+
+btnWCat5 = UI_CreateCompent(frmStore, CHECK_TYPE, "btnWCat5", 95, 34, 420, 41)
+UI_LoadImage(btnWCat5, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 95, 34, 688, 518)
+UI_LoadImage(btnWCat5, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 95, 34, 783, 518)
+UI_AddCompent(pgWardrobe, btnWCat5)
+
+labWCat5 = UI_CreateCompent(frmStore, LABELEX_TYPE, "labWCat5", 95, 34, 420, 50)
+UI_SetCaption(labWCat5, "Fairy" )
+UI_SetTextColor(labWCat5, argbColor("ababac"))
+UI_SetLabelExFont(labWCat5, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labWCat5, TRUE)
+UI_AddCompent(pgWardrobe, labWCat5)
+
+btnWCat6 = UI_CreateCompent(frmStore, CHECK_TYPE, "btnWCat6", 95, 34, 525, 41)
+UI_LoadImage(btnWCat6, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 95, 34, 688, 518)
+UI_LoadImage(btnWCat6, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 95, 34, 783, 518)
+UI_AddCompent(pgWardrobe, btnWCat6)
+
+labWCat6 = UI_CreateCompent(frmStore, LABELEX_TYPE, "labWCat6", 95, 34, 525, 50)
+UI_SetCaption(labWCat6, "Wings" )
+UI_SetTextColor(labWCat6, argbColor("ababac"))
+UI_SetLabelExFont(labWCat6, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labWCat6, TRUE)
+UI_AddCompent(pgWardrobe, labWCat6)
+
+------
+-- Меню гардероба
+------
+	wardrobeRecord = UI_CreateListView( frmStore, "wardrobeRecord", 270, 380, -7, 120, 4, eNoTitle)
+	UI_ListViewSetTitle(wardrobeRecord, 0, 42, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(wardrobeRecord, 1, 130, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(wardrobeRecord, 2, 50, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(wardrobeRecord, 3, 12, "", 0, 0, 0, 0)
+	UI_ListSetItemMargin(wardrobeRecord, 10, 8 )						-- Перемещение текста внутри строки
+	UI_SetListRowHeight(wardrobeRecord, 46 )							-- Отступ строк между собой
+	UI_SetListIsMouseFollow(wardrobeRecord, FALSE)
+	UI_ListLoadSelectImage(wardrobeRecord, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 0, 1170)
+	UI_LoadListItemImage(wardrobeRecord, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 270, 1170, 258, 46)
+	--UI_SetImageAlpha(wardrobeRecord, 134)
+	--UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
+	UI_SetIsShow(wardrobeRecord, FALSE)
+	setScroll(wardrobeRecord)
+	UI_AddCompent(pgWardrobe, wardrobeRecord)
+	
+------
+-- Выбор купленных предметов
+------
+	checkAvailable = UI_CreateCompent(frmStore, CHECK_TYPE, "checkAvailable", 15, 15, 180, 92)
+	UI_LoadImage(checkAvailable, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 15, 15, 625, 332)
+	UI_LoadImage(checkAvailable, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 15, 15, 641, 332)
+	UI_AddCompent(pgWardrobe, checkAvailable)
+
+	labAvailable = UI_CreateCompent(frmStore, LABELEX_TYPE, "labAvailable", 75, 11, 200, 92)
+	UI_SetCaption(labAvailable, "Available" )
+	UI_SetTextColor(labAvailable, argbColor("ffffff"))
+	UI_SetLabelExFont(labAvailable, EXO_Regular_S12, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgWardrobe, labAvailable)
+	
+------
+-- Выбор типа записи
+------
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 15, 15, 5, 92)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 641, 332)
+	UI_AddCompent(pgWardrobe, image)
+
+	recordType  = UI_CreateCompent(frmStore, COMBO_TYPE, "recordType", 98, 20, 20, 90)
+	UI_ComboSetStyle(recordType, TRUE)
+	UI_ComboSetTextColor(recordType, COLOR_WHITE)
+
+	lstType = UI_GetList(recordType)
+	UI_SetListFontColor( lstType, COLOR_WHITE, COLOR_WHITE )
+	UI_SetSize( lstType, 81, 100 )
+	UI_SetMargin( lstType, 16,6,16,0 )
+	UI_SetListRowHeight( lstType, 18 )
+	UI_LoadImage( lstType, "./texture/gui/select-map.png", COMPENT_BACK, 81, 68, 4, 114 )
+	UI_AddListText( lstType, "All" )
+	UI_AddListText( lstType, "Level 1-30" )
+	UI_AddListText( lstType, "Level 31-60" )
+	UI_AddListText( lstType, "Level 61+" )
+	UI_AddListText( lstType, "Event" )
+	UI_SetListIsMouseFollow( lstType, TRUE)
+	UI_ComboSetTextColor(lstType, COLOR_WHITE )
+	UI_AddCompent(pgWardrobe, recordType)
+	
+------
+-- Слоты под эквип в разделе Wardrobe->Costume
+------
+	sltImgHead = UI_CreateCompent(frmStore, IMAGE_TYPE, "sltImgHead", 38, 38, 400, 450)
+	UI_LoadImage(sltImgHead, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+	sltHead = UI_CreateCompent(frmStore, COMMAND_ONE_TYPE, "sltHead", 32, 32, 403, 453)
+	UI_AddCompent(pgWardrobe, sltImgHead)
+	UI_AddCompent(pgWardrobe, sltHead)
+	
+	sltImgBody = UI_CreateCompent(frmStore, IMAGE_TYPE, "sltImgBody", 38, 38, 450, 450)
+	UI_LoadImage(sltImgBody, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+	sltBody = UI_CreateCompent(frmStore, COMMAND_ONE_TYPE, "sltBody", 32, 32, 453, 453)
+	UI_AddCompent(pgWardrobe, sltImgBody)
+	UI_AddCompent(pgWardrobe, sltBody)
+	
+	sltImgGlove = UI_CreateCompent(frmStore, IMAGE_TYPE, "sltImgGlove", 38, 38, 500, 450)
+	UI_LoadImage(sltImgGlove, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+	sltGlove = UI_CreateCompent(frmStore, COMMAND_ONE_TYPE, "sltGlove", 32, 32, 503, 453)
+	UI_AddCompent(pgWardrobe, sltImgGlove)
+	UI_AddCompent(pgWardrobe, sltGlove)
+	
+	sltImgShoes = UI_CreateCompent(frmStore, IMAGE_TYPE, "sltImgShoes", 38, 38, 550, 450)
+	UI_LoadImage(sltImgShoes, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+	sltShoes = UI_CreateCompent(frmStore, COMMAND_ONE_TYPE, "sltShoes", 32, 32, 553, 453)
+	UI_AddCompent(pgWardrobe, sltImgShoes)
+	UI_AddCompent(pgWardrobe, sltShoes)
+
+------
+-- Кнопки управления гардеробом
+------
+	btnReset = UI_CreateCompent(frmStore, BUTTON_TYPE, "btnReset", 130, 42, 292, 502)
+	UI_LoadButtonImage(btnReset, "./texture/ascaron_ui/asc-part-01.png", 130, 42, 755, 1002, FALSE)
+	UI_AddCompent(pgWardrobe, btnReset)
+	
+	checkPlay = UI_CreateCompent(frmStore, CHECK_TYPE, "checkPlay", 42, 42, 435, 502)
+	UI_LoadImage(checkPlay, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 42, 42, 497, 958)
+	UI_LoadImage(checkPlay, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 42, 42, 541, 958)
+	UI_AddCompent(pgWardrobe, checkPlay)
+	
+	btnBuyCostume = CreateButton(2, frmStore, "btnBuyCostume", "BUY", EXO_Regular_S14, 93, 42, 605, 502)
+	UI_AddCompent(pgWardrobe, btnBuyCostume)
+	
+	btnUseCostume = CreateButton(2, frmStore, "btnUseCostume", "USE", EXO_Regular_S14, 93, 42, 605, 502)
+	UI_AddCompent(pgWardrobe, btnUseCostume)

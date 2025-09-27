@@ -1165,25 +1165,13 @@ function setBorderMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, form
 end
 
 function setScroll(form)
-	scrollid = UI_GetScroll(form)
-	UI_SetSize( scrollid, 3, 42)
-	-- UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-	
-	--[[
-	id = UI_GetScrollObj( scrollid, SCROLL_UP )
-	UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
-	UI_SetSize( id, 11, 9 )
-	]]
+	scrollid = UI_GetScroll( form )
+	UI_SetSize( scrollid, 2, 12)
+	UI_LoadImage( scrollid, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 3, 12, 13, 57)
 
 	id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-	UI_LoadImage( id, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 3, 42, 0, 54)
-	UI_SetSize(id, 3, 42)
-	
-	--[[
-	id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
-	UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
-	UI_SetSize( id, 11, 9 )
-	]]
+	UI_LoadImage( id, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 4, 45, 7, 56)
+	UI_SetSize(id, 4, 45)
 end
 
 ------
@@ -1316,6 +1304,9 @@ function AddCharStat(index, caption, labelName)
     UI_AddCompent(skillid, valueLab)
 end
 
+-- 0 - §Ò§à§Ý§î§ê§Ñ§ñ §Ø§Ö§Ý§ä§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 420§ç60
+-- 1 - §Ò§à§Ý§î§ê§Ñ§ñ §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 420§ç60
+-- 2 - §Þ§Ñ§Ý§Ö§ß§î§Ü§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 106§ç42 (§Ø§Ö§Ý§ä§Ñ§ñ)
 function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y, posx, posy)
 	local Item
 	Item = UI_CreateCompent(frm, BUTTON_TYPE, button_name, size_x, size_y, posx, posy)
@@ -1323,9 +1314,12 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 	if (type == 0) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 420, 60, 0, 567, FALSE)
-	else
+	elseif (type == 1) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("ffffff"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 420, 60, 420, 567, FALSE)
+	elseif (type == 2) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 106, 42, 888, 1001, FALSE)
 	end
 	
 	return Item
