@@ -80,7 +80,8 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, image)
 	UI_AddCompent(pgReputation, image)
 	UI_AddCompent(pgWardrobe, image)
-
+	UI_AddCompent(pgGacha, image)
+	
 	-- Шкала купленных кристаллов
 	proCrystal = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proCrystal", 74, 13, 32, 507)
 	UI_LoadScaleImage( proCrystal, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 74, 13, 324, 348, 1.0, 1.0 )
@@ -89,6 +90,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, proCrystal)
 	UI_AddCompent(pgReputation, proCrystal)
 	UI_AddCompent(pgWardrobe, proCrystal)
+	UI_AddCompent(pgGacha, proCrystal)
 
 	-- Сумма купленных кристаллов
 	labCrystal = UI_CreateCompent( frmStore, LABELEX_TYPE, "labCrystal", 74, 10, 32, 508)
@@ -99,6 +101,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, labCrystal)
 	UI_AddCompent(pgReputation, labCrystal)
 	UI_AddCompent(pgWardrobe, labCrystal)
+	UI_AddCompent(pgGacha, labCrystal)
 
 	-- Иконка кристалла
 	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 0, 502)
@@ -106,6 +109,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, image)
 	UI_AddCompent(pgReputation, image)
 	UI_AddCompent(pgWardrobe, image)
+	UI_AddCompent(pgGacha, image)
 
 	-- 
 	labPremium = UI_CreateCompent(frmStore, LABELEX_TYPE, "labPremium", 80, 13, 29, 531)
@@ -116,6 +120,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, labPremium)
 	UI_AddCompent(pgReputation, labPremium)
 	UI_AddCompent(pgWardrobe, labPremium)
+	UI_AddCompent(pgGacha, labPremium)
 
 	-- Уровень премиума
 	labPremiumLv = UI_CreateCompent(frmStore, LABELEX_TYPE, "labPremiumLv", 35, 13, -5, 531)
@@ -126,6 +131,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, labPremiumLv)
 	UI_AddCompent(pgReputation, labPremiumLv)
 	UI_AddCompent(pgWardrobe, labPremiumLv)
+	UI_AddCompent(pgGacha, labPremiumLv)
 
 ------
 -- Состояние репутации
@@ -183,6 +189,51 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgReputation, labFameLv)
 	UI_AddCompent(pgWardrobe, labFameLv)
 
+
+------
+-- Состояние Gacha-coin
+------
+	-- Подложка под шкалу кристаллов
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 80, 19, 29 + 134, 504)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 80, 19, 324, 329)
+	UI_AddCompent(pgGacha, image)
+
+	-- Шкала купленных кристаллов
+	proGachaCoin = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proGachaCoin", 74, 13, 166, 507)
+	UI_LoadScaleImage(proGachaCoin, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 74, 13, 497, 359, 1.0, 1.0 )
+	UI_SetHint(proGachaCoin, "Level up" )
+	UI_SetProgressHintStyle(proGachaCoin, PROGRESS_HINT_NUM )
+	UI_AddCompent(pgGacha, proGachaCoin)
+
+	-- Сумма купленных кристаллов
+	labGachaCoin = UI_CreateCompent( frmStore, LABELEX_TYPE, "labGachaCoin", 74, 10, 32 + 134, 508)
+	UI_SetCaption(labGachaCoin, "99999")
+	UI_SetTextColor(labGachaCoin, argbColor("ffffff"))
+	UI_SetLabelExFont(labGachaCoin, EXO_Regular_S10, FALSE, COLOR_WHITE )
+	UI_SetCaptionIsCenter(labGachaCoin, TRUE)
+	UI_AddCompent(pgGacha, labGachaCoin)
+
+	-- Иконка кристалла
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 0 + 134, 502)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 355)
+	UI_AddCompent(pgGacha, image)
+	
+	-- 
+	labGacha = UI_CreateCompent(frmStore, LABELEX_TYPE, "labGacha", 80, 13, 29 + 134, 531)
+	UI_SetCaption(labGacha, "Gacha Coin")
+	UI_SetTextColor(labGacha, argbColor("a2a1a2"))
+	UI_SetLabelExFont(labGacha, EXO_Regular_S13, FALSE, COLOR_BLACK)
+	UI_SetCaptionIsCenter(labGacha, TRUE)
+	UI_AddCompent(pgGacha, labGacha)
+
+	-- Уровень GC
+	labGachaLv = UI_CreateCompent(frmStore, LABELEX_TYPE, "labGachaLv", 35, 13, -5  + 134, 531)
+	UI_SetCaption(labGachaLv, "GC")
+	UI_SetTextColor(labGachaLv, argbColor("a2a1a2"))
+	UI_SetLabelExFont(labGachaLv, EXO_Regular_S13, FALSE, COLOR_BLACK)
+	UI_SetCaptionIsCenter(labGachaLv, TRUE)
+	UI_AddCompent(pgGacha, labGachaLv)
+	
 ------
 -- Переключатель страниц
 ------
@@ -570,3 +621,115 @@ UI_AddCompent(pgWardrobe, labWCat6)
 	
 	btnUseCostume = CreateButton(2, frmStore, "btnUseCostume", "USE", EXO_Regular_S14, 93, 42, 605, 502)
 	UI_AddCompent(pgWardrobe, btnUseCostume)
+	
+------------
+-- Страница Gacha
+------------
+
+	d3dBox = UI_CreateCompent(frmStore, UI3D_COMPENT, "d3dBox", 100, 100, 450, 100)
+	UI_AddCompent(pgGacha, d3dBox)
+
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 304, 229, 0, 50)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 304, 229, 618, 232)
+	UI_AddCompent(pgGacha, image)
+	
+	lab = UI_CreateCompent(frmStore, LABELEX_TYPE, "lab", 75, 11, 22, 60)
+	UI_SetCaption(lab, "Equipment" )
+	UI_SetTextColor(lab, argbColor("ffffff"))
+	UI_SetLabelExFont(lab, EXO_Regular_S14, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgGacha, lab)
+	
+	lab = UI_CreateCompent(frmStore, LABELEX_TYPE, "lab", 75, 11, 167, 64)
+	UI_SetCaption(lab, "Price" )
+	UI_SetTextColor(lab, argbColor("b9b9ba"))
+	UI_SetLabelExFont(lab, EXO_Regular_S12, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgGacha, lab)
+	
+	lab = UI_CreateCompent(frmStore, LABELEX_TYPE, "lab", 75, 11, 223, 64)
+	UI_SetCaption(lab, "Items" )
+	UI_SetTextColor(lab, argbColor("b9b9ba"))
+	UI_SetLabelExFont(lab, EXO_Regular_S12, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgGacha, lab)
+	
+	-- Equipment
+	gachaEquipmentList = UI_CreateListView( frmStore, "gachaEquipmentList", 270, 195, 15, 80, 4, eNoTitle)
+	UI_ListViewSetTitle(gachaEquipmentList, 0, 42, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(gachaEquipmentList, 1, 100, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(gachaEquipmentList, 2, 50, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(gachaEquipmentList, 3, 12, "", 0, 0, 0, 0)
+	UI_ListSetItemMargin(gachaEquipmentList, 10, 8 )						-- Перемещение текста внутри строки
+	UI_SetListRowHeight(gachaEquipmentList, 46 )							-- Отступ строк между собой
+	UI_SetListIsMouseFollow(gachaEquipmentList, FALSE)
+	UI_ListLoadSelectImage(gachaEquipmentList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 0, 1170)
+	UI_LoadListItemImage(gachaEquipmentList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 270, 1170, 258, 46)
+	UI_SetIsShow(gachaEquipmentList, FALSE)
+	setScroll(gachaEquipmentList)
+	UI_AddCompent(pgGacha, gachaEquipmentList)
+
+	-- Weapon
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 304, 184, 0, 50 + 229 + 15)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 304, 184, 301, 232)
+	UI_AddCompent(pgGacha, image)
+	
+	lab = UI_CreateCompent(frmStore, LABELEX_TYPE, "lab", 75, 11, 22, 60 + 229 + 15)
+	UI_SetCaption(lab, "Weapon" )
+	UI_SetTextColor(lab, argbColor("ffffff"))
+	UI_SetLabelExFont(lab, EXO_Regular_S14, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgGacha, lab)
+	
+	lab = UI_CreateCompent(frmStore, LABELEX_TYPE, "lab", 75, 11, 167, 64 + 229 + 15)
+	UI_SetCaption(lab, "Price" )
+	UI_SetTextColor(lab, argbColor("b9b9ba"))
+	UI_SetLabelExFont(lab, EXO_Regular_S12, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgGacha, lab)
+	
+	lab = UI_CreateCompent(frmStore, LABELEX_TYPE, "lab", 75, 11, 223, 64 + 229 + 15)
+	UI_SetCaption(lab, "Items" )
+	UI_SetTextColor(lab, argbColor("b9b9ba"))
+	UI_SetLabelExFont(lab, EXO_Regular_S12, FALSE, COLOR_BLACK )
+	UI_AddCompent(pgGacha, lab)
+	
+	-- Equipment
+	gachaWeaponList = UI_CreateListView(frmStore, "gachaWeaponList", 270, 150, 15, 80 + 229 + 15, 4, eNoTitle)
+	UI_ListViewSetTitle(gachaWeaponList, 0, 42, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(gachaWeaponList, 1, 100, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(gachaWeaponList, 2, 50, "", 0, 0, 0, 0)
+	UI_ListViewSetTitle(gachaWeaponList, 3, 12, "", 0, 0, 0, 0)
+	UI_ListSetItemMargin(gachaWeaponList, 10, 8 )						-- Перемещение текста внутри строки
+	UI_SetListRowHeight(gachaWeaponList, 46 )							-- Отступ строк между собой
+	UI_SetListIsMouseFollow(gachaWeaponList, FALSE)
+	UI_ListLoadSelectImage(gachaWeaponList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 0, 1170)
+	UI_LoadListItemImage(gachaWeaponList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 270, 1170, 258, 46)
+	UI_SetIsShow(gachaWeaponList, FALSE)
+	setScroll(gachaWeaponList)
+	UI_AddCompent(pgGacha, gachaWeaponList)
+	
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 376, 160, 324, 50 + 229 + 15)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 376, 160, 229, 426)
+	UI_AddCompent(pgGacha, image)
+	
+	grdItems = UI_CreateCompent(frmStore, GOODS_GRID_TYPE, "grdItems", 400, 160, 350, 300) 
+	UI_SetGridSpace(grdItems, 10, 10)
+	UI_SetGridContent(grdItems, 3, 7)
+	UI_SetGridUnitSize(grdItems, 38, 38 )
+	--UI_SetMargin(grdItems, 0, 0, 0, 0 )
+	UI_AddCompent(pgGacha, grdItems)
+	
+	btnUseBox = CreateButton(2, frmStore, "btnUseBox", "USE", EXO_Regular_S14, 93, 42, 605, 502)
+	UI_AddCompent(pgGacha, btnUseBox)
+	
+------
+-- Страница демонстрации костюма
+------
+frmGacha = UI_CreateForm( "frmGacha", FALSE, 713, 713, 0, 0, TRUE, FALSE)
+UI_ShowForm(frmGacha, FALSE)
+UI_AddFormToTemplete(frmGacha, FORM_DIALOG)
+UI_SetIsDrag(frmGacha, FALSE)
+UI_SetFormStyle(frmGacha, FORM_NONE)
+
+imgEffect = UI_CreateCompent(frmGacha, IMAGE_TYPE, "imgEffect", 713, 713, 0, 0)
+UI_LoadImage(imgEffect, "./texture/ascaron_ui/gacha-light.png", NORMAL, 713, 713, 0, 0)
+
+imgBackground = UI_CreateCompent(frmGacha, IMAGE_TYPE, "imgBackground", 455, 455, 129, 129)
+UI_LoadImage(imgBackground, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 455, 455, 0, 597)
+

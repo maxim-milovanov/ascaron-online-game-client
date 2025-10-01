@@ -1393,7 +1393,6 @@ UI_LoadScript("scripts/lua/forms/ship.clu")		-- 造船
 UI_LoadScript("scripts/lua/forms/traderoom.clu")	-- 交易所
 UI_LoadScript("scripts/lua/forms/manage.clu")	-- 公会管理
 UI_LoadScript("scripts/lua/forms/select.clu")
-UI_LoadScript("scripts/lua/forms/gacha.clu")
 UI_LoadScript("scripts/lua/forms/store.lua")
 
 --字符过滤表
