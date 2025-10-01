@@ -1,10 +1,23 @@
+------
+-- Init font
+------
 function UI_CreateFont( font, size, thicknessBias, lineSpacing )		
 	return CLU_Call("UI_CreateFont", font, size, thicknessBias, lineSpacing )
 end
 
+-- scale
 local global_font_scale = 14.0 / 12.0
 
 DEFAULT_FONT = UI_CreateFont( "Exo2-Regular", 12 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S01 = UI_CreateFont( "Exo2-Regular", 1 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S02 = UI_CreateFont( "Exo2-Regular", 2 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S03 = UI_CreateFont( "Exo2-Regular", 3 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S04 = UI_CreateFont( "Exo2-Regular", 4 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S05 = UI_CreateFont( "Exo2-Regular", 5 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S06 = UI_CreateFont( "Exo2-Regular", 6 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S07 = UI_CreateFont( "Exo2-Regular", 7 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S08 = UI_CreateFont( "Exo2-Regular", 8 * global_font_scale, 0.2, 0.8 )
+EXO_Regular_S09 = UI_CreateFont( "Exo2-Regular", 9 * global_font_scale, 0.2, 0.8 )
 EXO_Regular_S10 = UI_CreateFont( "Exo2-Regular", 10 * global_font_scale, 0.2, 0.8 )
 EXO_Regular_S11 = UI_CreateFont( "Exo2-Regular", 11 * global_font_scale, 0.2, 0.8 )
 EXO_Regular_S12 = UI_CreateFont( "Exo2-Regular", 12 * global_font_scale, 0.2, 0.8 )
@@ -40,5 +53,3 @@ EXO_Thin_S17 = UI_CreateFont( "Exo2-Thin", 17 * global_font_scale, 0.2, 0.8 )
 EXO_Thin_S18 = UI_CreateFont( "Exo2-Thin", 18 * global_font_scale, 0.2, 0.8 )
 EXO_Thin_S19 = UI_CreateFont( "Exo2-Thin", 19 * global_font_scale, 0.2, 0.8 )
 EXO_Thin_S20 = UI_CreateFont( "Exo2-Thin", 20 * global_font_scale, 0.2, 0.8 )
-
-
