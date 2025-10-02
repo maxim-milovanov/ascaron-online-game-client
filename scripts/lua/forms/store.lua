@@ -65,6 +65,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_AddCompent(pgCrystal, btnPayment)
 	UI_AddCompent(pgReputation, btnPayment)
 	UI_AddCompent(pgWardrobe, btnPayment)
+	UI_AddCompent(pgGacha, btnPayment)
 
 	-- Купить товар
 	btnBuy = CreateButton(2, frmStore, "btnBuy", "BUY", EXO_Regular_S14, 93, 42, 605, 502)
@@ -193,19 +194,19 @@ UI_SetSize(GachaItem, 175, 31)
 ------
 -- Состояние Gacha-coin
 ------
-	-- Подложка под шкалу кристаллов
+	-- Подложка под шкалу
 	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 80, 19, 29 + 134, 504)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 80, 19, 324, 329)
 	UI_AddCompent(pgGacha, image)
 
-	-- Шкала купленных кристаллов
+	-- Шкала
 	proGachaCoin = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proGachaCoin", 74, 13, 166, 507)
 	UI_LoadScaleImage(proGachaCoin, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 74, 13, 497, 359, 1.0, 1.0 )
 	UI_SetHint(proGachaCoin, "Level up" )
 	UI_SetProgressHintStyle(proGachaCoin, PROGRESS_HINT_NUM )
 	UI_AddCompent(pgGacha, proGachaCoin)
 
-	-- Сумма купленных кристаллов
+	-- 
 	labGachaCoin = UI_CreateCompent( frmStore, LABELEX_TYPE, "labGachaCoin", 74, 10, 32 + 134, 508)
 	UI_SetCaption(labGachaCoin, "99999")
 	UI_SetTextColor(labGachaCoin, argbColor("ffffff"))
@@ -213,7 +214,7 @@ UI_SetSize(GachaItem, 175, 31)
 	UI_SetCaptionIsCenter(labGachaCoin, TRUE)
 	UI_AddCompent(pgGacha, labGachaCoin)
 
-	-- Иконка кристалла
+	-- Иконка GC
 	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 0 + 134, 502)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 355)
 	UI_AddCompent(pgGacha, image)
@@ -261,15 +262,13 @@ UI_SetSize(GachaItem, 175, 31)
 ------
 -- Меню магазина кристаллов\репутации
 ------
-	listMenu = UI_CreateListView( frmStore, "listMenu", 154, 350, -7, 40, 2, eNoTitle)
+	listMenu = UI_CreateListView( frmStore, "listMenu", 154, 400, -7, 40, 2, eNoTitle)
 	UI_ListViewSetTitle(listMenu, 0, 150, "", 0, 0, 0, 0)
 	UI_ListSetItemMargin(listMenu, 15, 15 )						-- Перемещение текста внутри строки
 	UI_SetListRowHeight(listMenu, 44 )							-- Отступ строк между собой
 	UI_SetListIsMouseFollow(listMenu, FALSE)
 	UI_LoadListItemImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 154, 44, 550, 1171, 144, 44)
 	UI_ListLoadSelectImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 154, 44, 710, 1171)
-	--UI_SetImageAlpha(listMenu, 134)
-	--UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
 	UI_SetIsShow(listMenu, FALSE)
 	UI_AddCompent(pgCrystal, listMenu)
 	UI_AddCompent(pgReputation, listMenu)
@@ -708,15 +707,43 @@ UI_AddCompent(pgWardrobe, labWCat6)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 376, 160, 229, 426)
 	UI_AddCompent(pgGacha, image)
 	
-	grdItems = UI_CreateCompent(frmStore, GOODS_GRID_TYPE, "grdItems", 400, 160, 350, 300) 
+	grdItems = UI_CreateCompent(frmStore, GOODS_GRID_TYPE, "grdItems", 400, 160, 350, 307) 
 	UI_SetGridSpace(grdItems, 10, 10)
 	UI_SetGridContent(grdItems, 3, 7)
 	UI_SetGridUnitSize(grdItems, 38, 38 )
-	--UI_SetMargin(grdItems, 0, 0, 0, 0 )
 	UI_AddCompent(pgGacha, grdItems)
 	
-	btnUseBox = CreateButton(2, frmStore, "btnUseBox", "USE", EXO_Regular_S14, 93, 42, 605, 502)
+	-- 
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 300, 19, 324, 459)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 300, 19, 0, 1216)
+	UI_AddCompent(pgGacha, image)
+	
+	-- 
+	proItems = UI_CreateCompent(frmStore, PROGRESS_TYPE, "proItems", 294, 13, 327, 462)
+	UI_LoadScaleImage(proItems, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 294, 13, 0, 1235, 1.0, 1.0 )
+	UI_AddCompent(pgGacha, proItems)
+	
+	btnUse = CreateButton(3, frmStore, "btnUse", "USE", EXO_Regular_S10, 70, 17, 629, 460)
+	UI_AddCompent(pgGacha, btnUse)
+	
+	labItems = UI_CreateCompent(frmStore, LABELEX_TYPE, "labItems", 294, 13, 327, 463)
+	UI_SetCaption(labItems, "0/0" )
+	UI_SetTextColor(labItems, argbColor("000000"))
+	UI_SetLabelExFont(labItems, EXO_Regular_S10, FALSE, argbColor("ffca61"))
+	UI_SetCaptionIsCenter(labItems, TRUE)
+	UI_AddCompent(pgGacha, labItems)
+	
+	btnUseBox = CreateButton(2, frmStore, "btnUseBox", "USE", EXO_Regular_S12, 93, 42, 605, 502)
 	UI_AddCompent(pgGacha, btnUseBox)
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 610, 512)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 23, 22, 665, 231)
+	UI_AddCompent(pgGacha, image)
+	
+	btnUseBoxGC = CreateButton(2, frmStore, "btnUseBoxGC", "USE", EXO_Regular_S12, 93, 42, 390, 502)
+	UI_AddCompent(pgGacha, btnUseBoxGC)
+	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 24, 24, 395, 512)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 25, 24, 692, 230)
+	UI_AddCompent(pgGacha, image)
 	
 ------
 -- Страница демонстрации костюма
@@ -733,3 +760,33 @@ UI_LoadImage(imgEffect, "./texture/ascaron_ui/gacha-light.png", NORMAL, 713, 713
 imgBackground = UI_CreateCompent(frmGacha, IMAGE_TYPE, "imgBackground", 455, 455, 129, 129)
 UI_LoadImage(imgBackground, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 455, 455, 0, 597)
 
+labCommon = UI_CreateCompent(frmGacha, LABELEX_TYPE, "labCommon", 713, 20, 0, 202)
+UI_SetCaption(labCommon, "COMMON" )
+UI_SetTextColor(labCommon, argbColor("ffffff"))
+UI_SetLabelExFont(labCommon, EXO_Regular_S16, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labCommon, TRUE)
+
+d3dcostume = UI_CreateCompent(frmGacha, UI3D_COMPENT, "d3dcostume", 100, 100, 325, 300)
+
+labAddWardrobe = UI_CreateCompent(frmGacha, LABELEX_TYPE, "labAddWardrobe", 713, 20, 0, 487)
+UI_SetCaption(labAddWardrobe, "ADDED TO WARDROBE" )
+UI_SetTextColor(labAddWardrobe, argbColor("FFCA61"))
+UI_SetLabelExFont(labAddWardrobe, EXO_Regular_S16, FALSE, COLOR_BLACK )
+UI_SetIsShow(labAddWardrobe, FALSE)
+UI_SetCaptionIsCenter(labAddWardrobe, TRUE)
+
+labDuplicate = UI_CreateCompent(frmGacha, LABELEX_TYPE, "labDuplicate", 713, 20, 255 + 13, 487)
+UI_SetCaption(labDuplicate, "DUPLICATE" )
+UI_SetTextColor(labDuplicate, argbColor("ffffff"))
+UI_SetLabelExFont(labDuplicate, EXO_Regular_S16, FALSE, COLOR_BLACK )
+UI_SetIsShow(labDuplicate, FALSE)
+
+labGCoin = UI_CreateCompent(frmGacha, LABELEX_TYPE, "labGCoin", 713, 20, 355 + 13, 487)
+UI_SetCaption(labGCoin, "+300" )
+UI_SetTextColor(labGCoin, argbColor("FFCA61"))
+UI_SetLabelExFont(labGCoin, EXO_Regular_S16, FALSE, COLOR_BLACK )
+UI_SetIsShow(labGCoin, FALSE)
+
+imgGCoin = UI_CreateCompent(frmGacha, IMAGE_TYPE, "imgGCoin", 25, 25, 409 + 13, 483)
+UI_LoadImage(imgGCoin, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 25, 25, 228, 237)
+UI_SetIsShow(imgGCoin, FALSE)
