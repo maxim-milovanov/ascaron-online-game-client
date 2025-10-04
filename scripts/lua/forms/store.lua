@@ -568,7 +568,7 @@ UI_AddCompent(pgWardrobe, btnHelpStoreW)
 -- Выбор типа записи
 ------
 	image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 15, 15, 5, 92)
-	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 641, 332)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
 	UI_AddCompent(pgWardrobe, image)
 
 	recordType  = UI_CreateCompent(frmStore, COMBO_TYPE, "recordType", 98, 20, 20, 90)
