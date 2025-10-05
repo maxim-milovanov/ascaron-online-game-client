@@ -505,7 +505,6 @@ frmMainPet = UI_CreateForm( "frmMainPet", FALSE, 120, 47, 20, 95, FALSE, FALSE )
 UI_ShowForm( frmMainPet, FALSE )
 UI_AddFormToTemplete( frmMainPet, FORM_MAIN )
 UI_FormSetIsEscClose( frmMainPet, FALSE )
---UI_FormSetHotKey( frmMainPet, ALT_KEY, HOTKEY_V )
 
 setBackgroundMiddle(frmMainPet, 120, 47, 225, 0, 0)
 
@@ -540,7 +539,6 @@ frmMainMount = UI_CreateForm( "frmMainMount", FALSE, 120, 47, 20 + 120 + 10, 95,
 UI_ShowForm( frmMainMount, FALSE )
 UI_AddFormToTemplete( frmMainMount, FORM_MAIN )
 UI_FormSetIsEscClose( frmMainMount, FALSE )
---UI_FormSetHotKey( frmMainMount, ALT_KEY, HOTKEY_V )
 
 setBackgroundMiddle(frmMainMount, 120, 47, 225, 0, 0)
 
@@ -682,8 +680,6 @@ UI_AddFormToTemplete( frmSpiritErnie, FORM_MAIN )
 UI_FormSetIsEscClose( frmSpiritErnie, TRUE )
 UI_SetIsDrag( frmSpiritErnie,TRUE)
 UI_SetFormStyle( frmSpiritErnie,1)
-
---UI_FormSetHotKey( frmSpiritErnie, ALT_KEY, HOTKEY_V )
 
 --º”‘ÿ±≥æ∞Õº∆¨
 imgBakTopLeft = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )

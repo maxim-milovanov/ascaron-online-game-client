@@ -517,39 +517,38 @@ UI_LoadButtonImage( btnClose, "./texture/gui/Inventory.png", 32, 32, 0, 368, TRU
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 ------
--- Tickets system
+-- Area Manager
 ------
-frmTickets = UI_CreateForm( "frmTickets", FALSE, 400, 420, 300, 100, TRUE, FALSE )
+frmTickets = UI_CreateForm( "frmTickets", FALSE, 429, 562, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmTickets, TRUE )
 UI_SetIsDrag( frmTickets, TRUE )
 UI_AddFormToTemplete( frmTickets, FORM_MAIN )
 UI_FormSetIsEscClose( frmTickets, TRUE )
 UI_FormSetHotKey( frmTickets, ALT_KEY, HOTKEY_G )
+UI_SetFormStyleEx(frmTickets, FORM_CENTERBOTTOM, 0, 160)
 
-imgBackground = UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgBackground", 400, 420, 0, 0 )
-UI_LoadImage( imgBackground, "./texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
-imgBackground2 = UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgBackground2", 400, 420, 0, 0 )
-UI_LoadImage( imgBackground2, "./texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
-UI_SetAlpha( imgBackground2, 100 )
+setBackground(frmTickets, true, 429, 562, 225)
 
-imgHeader = UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgHeader", 299, 42, 50, 20 )
-UI_LoadImage( imgHeader, "./texture/gui/btnServer.png", NORMAL, 299, 42, 652, 727 )
+labFormname = UI_CreateCompent(frmTickets, LABELEX_TYPE, "labFormname", 429, 14, 0, 20)
+UI_SetCaption( labFormname, "AREA MANAGER" )
+UI_SetTextColor( labFormname, COLOR_WHITE )
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
-btnClose = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnClose", 28, 26, 340, 17 )
-UI_LoadButtonImage( btnClose, "./texture/gui/btnServer.png", 28, 26, 0, 512, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+btnMazes = UI_CreateCompent(frmTickets, BUTTON_TYPE, "btnMazes", 123, 31, 30, 48)
+UI_LoadButtonImage(btnMazes, "./texture/ascaron_ui/asc-part-02.png", 123, 31, 608, 464, FALSE)
 
-btnMazes = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnMazes", 91, 47, 45 + 5, 65 )
-UI_LoadButtonImage( btnMazes, "./texture/gui/btnServer.png", 91, 47, 859, 519, FALSE )
+btnAreas = UI_CreateCompent(frmTickets, BUTTON_TYPE, "btnAreas", 123, 31, 153, 48)
+UI_LoadButtonImage(btnAreas, "./texture/ascaron_ui/asc-part-02.png", 123, 31, 731, 464, FALSE)
 
-btnAreas = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnAreas", 91, 47, 45 + 101, 65 )
-UI_LoadButtonImage( btnAreas, "./texture/gui/btnServer.png", 91, 47, 950, 519, FALSE )
-
-btnBosses = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnBosses", 91, 47, 45 + 197, 65 )
-UI_LoadButtonImage( btnBosses, "./texture/gui/btnServer.png", 91, 47, 1041, 519, FALSE )
+btnBosses = UI_CreateCompent(frmTickets, BUTTON_TYPE, "btnBosses", 123, 31, 276, 48)
+UI_LoadButtonImage(btnBosses, "./texture/ascaron_ui/asc-part-02.png", 123, 31, 854, 464, FALSE)
 
 -- btnNpc = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnNpc", 91, 47, 45+ 293, 65 )
 -- UI_LoadButtonImage( btnNpc, "./texture/gui/btnServer.png", 91, 47, 1132, 519, FALSE )
+
+image = UI_CreateCompent(frmTickets, IMAGE_TYPE, "image", 369, 2, 30, 50+29)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 369, 2, 0, 381)
 
 local szTicketName = {}
 local szTicketPrice = {}
@@ -559,8 +558,8 @@ local szTicketIcon = {}
 local szBtnLine = {}
 
 local posx = 30
-local posy = 80
-local padding = 40
+local posy = 33
+local padding = 72
 
 for page_id = 0, 3, 1 do
 	local str_id = 1
@@ -573,33 +572,32 @@ for page_id = 0, 3, 1 do
 		szTicketIcon[page_id] = {}
 		szBtnLine[page_id] = {}
 
-		-- icon background
+		-- icon
 		local _posy = posy + (str_id * padding)
-		szTicketIcon[page_id][i] =  UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgIcon_".. page_id.."_" .. i, 36, 36, posx, _posy )
-		UI_LoadImage( szTicketIcon[page_id][i], "./texture/gui/detail-01.png", NORMAL, 35, 34, 336, 19 )
+		szTicketIcon[page_id][i] =  UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgIcon_".. page_id.."_" .. i, 32, 32, posx + 15, _posy + 6)
 		
-		szBtnLine[page_id][i] = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnLine_"..page_id.."_"..i, 340, 45, posx, _posy - 9 )
-		UI_LoadButtonImage( szBtnLine[page_id][i], "./texture/gui/btnServer.png", 434, 70, 0, 810, TRUE )
+		szBtnLine[page_id][i] = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnLine_"..page_id.."_"..i, 369, 62, posx, _posy - 9 )
+		UI_LoadButtonImage(szBtnLine[page_id][i], "./texture/ascaron_ui/asc-part-02.png", 369, 62, 608, 597, FALSE)
 		
-		szTicketName[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labName_"..page_id.."_"..i, 10, 150, 45+posx, _posy )
+		szTicketName[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labName_"..page_id.."_"..i, 10, 150, posx + 64,  _posy + 6 )
 		UI_SetCaption( szTicketName[page_id][i], "Item "..i)
-		UI_SetTextColor( szTicketName[page_id][i], COLOR_C9C2B4 )
-		UI_SetLabelExFont( szTicketName[page_id][i], EXO_Regular_S12, FALSE, COLOR_WHITE )
+		UI_SetTextColor( szTicketName[page_id][i], argbColor("ffffff") )
+		UI_SetLabelExFont( szTicketName[page_id][i], EXO_Regular_S14, FALSE, COLOR_WHITE )
 		UI_SetIsShow(szTicketName[page_id][i],FALSE)
 		
-		szTicketPrice[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labPrice_"..page_id.."_"..i, 10, 150, 290+posx, _posy + 9 )
+		szTicketPrice[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labPrice_"..page_id.."_"..i, 10, 150, posx + 32 + 229 + 15, _posy + 18)
 		UI_SetCaption( szTicketPrice[page_id][i], "1.000 ")
-		UI_SetTextColor( szTicketPrice[page_id][i], COLOR_C9C2B4 )
+		UI_SetTextColor( szTicketPrice[page_id][i], argbColor("e9e9e9") )
 		UI_SetLabelExFont( szTicketPrice[page_id][i], EXO_Regular_S12, FALSE, COLOR_WHITE )
 		UI_SetIsShow(szTicketPrice[page_id][i],FALSE)
 		
-		szTicketImgPrice[page_id][i] =  UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgPrice_".. page_id.."_" .. i, 18, 18, 270 + posx, 7 + _posy )
-		UI_LoadImage( szTicketImgPrice[page_id][i], "./texture/gui/p0w-frmInv.png", NORMAL, 60, 60, 346, 282)
+		szTicketImgPrice[page_id][i] =  UI_CreateCompent( frmTickets, IMAGE_TYPE, "imgPrice_".. page_id.."_" .. i, 29, 29, 330 + posx, _posy + 10)
+		UI_LoadImage( szTicketImgPrice[page_id][i], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
 		
-		_posy = _posy + 16
-		szTicketDesc[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labDescription_"..page_id.."_"..i, 10, 150, 45+posx, _posy )
+		_posy = _posy + 25
+		szTicketDesc[page_id][i] = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labDescription_"..page_id.."_"..i, 10, 150, posx + 64, _posy )
 		UI_SetCaption( szTicketDesc[page_id][i], "Remark"..i)
-		UI_SetTextColor( szTicketDesc[page_id][i], COLOR_958273 )
+		UI_SetTextColor( szTicketDesc[page_id][i], argbColor("e9e9e9"))
 		UI_SetLabelExFont( szTicketDesc[page_id][i], EXO_Regular_S12, FALSE, COLOR_WHITE )
 		
 		str_id = str_id + 1
@@ -611,221 +609,14 @@ for page_id = 0, 3, 1 do
 	
 end
 
-btnBackPage = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnBackPage", 25, 46, 154, 365 )
-UI_LoadButtonImage( btnBackPage, "./texture/gui/btnServer.png", 84, 154, 1284, 0, FALSE )
+btnBackPage = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnBackPage", 20, 20, 169, 527)
+UI_LoadButtonImage( btnBackPage, "./texture/ascaron_ui/asc-part-01.png", 20, 20, 409, 350, TRUE)
 
-labPagination = UI_CreateCompent( frmTickets, LABELEX_TYPE, "labPagination", 40, 12, 183, 379 )
+labPagination = UI_CreateCompent(frmTickets, LABELEX_TYPE, "labPagination", 429, 14, 0, 529)
 UI_SetCaption(labPagination, "Page (0/0)" )
-UI_SetTextColor(labPagination, COLOR_FFEDCF )
-UI_SetLabelExFont(labPagination, FONT18, FALSE, COLOR_WHITE )
+UI_SetTextColor(labPagination, argbColor("a3a3a3"))
+UI_SetLabelExFont(labPagination, EXO_Regular_S14, FALSE, COLOR_WHITE )
+UI_SetCaptionIsCenter(labPagination, TRUE)
 
-btnNextPage = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnNextPage", 25, 46, 221, 365 )
-UI_LoadButtonImage( btnNextPage, "./texture/gui/btnServer.png", 84, 154, 1369, 0, FALSE )
-
-------
--- Wardrobe
-------
-frmWardrobe = UI_CreateForm( "frmWardrobe", FALSE, 735, 630, 300, 100, TRUE, FALSE )
-UI_ShowForm( frmWardrobe, FALSE )
-UI_AddFormToTemplete( frmWardrobe, FORM_MAIN )
-UI_FormSetIsEscClose( frmWardrobe, TRUE )
-UI_SetIsDrag( frmWardrobe,FALSE)
-UI_SetFormStyle( frmWardrobe, 1)
-UI_FormSetHotKey( frmTickets, ALT_KEY, HOTKEY_V )
-
-imgBackground = UI_CreateCompent( frmWardrobe, IMAGE_TYPE, "imgBackground", 735, 630, 0, 0 )
-UI_LoadImage( imgBackground, "./texture/gui/p0w-wardrobe.png", NORMAL, 735, 630, 0, 0 )
-
-btnClose = UI_CreateCompent(frmWardrobe, BUTTON_TYPE, "btnClose", 28, 26, 670, 40)
-UI_LoadButtonImage(btnClose, "./texture/gui/btnServer.png", 28, 26, 0, 512, TRUE)
-UI_SetButtonModalResult(btnClose, BUTTON_CLOSE)
-
-d3dSkin = UI_CreateCompent( frmWardrobe, UI3D_COMPENT, "d3dSkin", 160, 300, 420, 210 )
-
-btnBuy = UI_CreateCompent( frmWardrobe, BUTTON_TYPE, "btnBuy", 139, 47, 330, 540 )
-UI_LoadButtonImage( btnBuy, "./texture/gui/p0w-wardrobe.png", 139, 47, 743, 166, FALSE)
-
-labPrice = UI_CreateCompent( frmWardrobe, LABELEX_TYPE, "labPrice", 100, 11, 380, 555)
-UI_SetCaption(labPrice, "9,999")
-UI_SetTextColor(labPrice, 4285754198)
-UI_SetLabelExFont(labPrice, FONT016, FALSE, COLOR_WHITE)
-
-btnTry = UI_CreateCompent( frmWardrobe, BUTTON_TYPE, "btnTry", 139, 47, 530, 540 )
-UI_LoadButtonImage( btnTry, "./texture/gui/p0w-wardrobe.png", 139, 47, 884, 166, FALSE )
-
-imgCrystals = UI_CreateCompent(frmWardrobe, IMAGE_TYPE, "imgCrystals", 25, 25, 58, 550)
-UI_LoadImage(imgCrystals, "./texture/gui/p0w-frmInv.png", NORMAL, 57, 57, 416, 283)
-
-labCrystals = UI_CreateCompent( frmWardrobe, LABELEX_TYPE, "labCrystals", 100, 11, 90, 555)
-UI_SetCaption(labCrystals, "9,999")
-UI_SetTextColor(labCrystals, 4285754198)
-UI_SetLabelExFont(labCrystals, FONT18, FALSE, COLOR_WHITE)
-
-btnReset = UI_CreateCompent( frmWardrobe, BUTTON_TYPE, "btnReset", 116, 45, 175, 541 )
-UI_LoadButtonImage( btnReset, "./texture/gui/p0w-wardrobe.png", 116, 47, 750, 362, FALSE)
-
-
-																	-- §°§ä§ã§ä§å§á §ã§Ý§Ö§Ó§Ñ (§Ó§Ö§ã§î §ã§á§Ú§ã§à§Ü)
-																		-- §°§ä§ã§ä§å§á §ã§Ó§Ö§â§ç§å (§Ó§Ö§ã§î §ã§á§Ú§ã§à§Ü)
-listItems = UI_CreateListView( frmWardrobe, "listItems", 250, 350, 50, 170, 50, 50 )
---UI_SetMargin( listItems, 30, 20, 15, 0 )
-UI_ListViewSetTitle(listItems, 0, 34, "", 0, 0, 0, 0)
-UI_ListViewSetTitle(listItems, 1, 145, "", 0, 0, 0, 0)
-UI_ListViewSetTitle(listItems, 2, 25, "", 0, 0, 0, 0)
-UI_ListViewSetTitle(listItems, 3, 30, "", 0, 0, 0, 0)
-UI_ListSetItemMargin(listItems, 0, 3 )						-- §±§Ö§â§Ö§Þ§Ö§ë§Ö§ß§Ú§Ö §ä§Ö§Ü§ã§ä§Ñ §Ó§ß§å§ä§â§Ú §ã§ä§â§à§Ü§Ú
-UI_SetListRowHeight(listItems, 40 )							-- §°§ä§ã§ä§å§á §ã§ä§â§à§Ü §Þ§Ö§Ø§Õ§å §ã§à§Ò§à§Û
-UI_SetListIsMouseFollow(listItems, TRUE)
-UI_ListLoadSelectImage(listItems, "./texture/gui/frmBackground.png", 79, 13, 100, 300 )
-UI_SetImageAlpha(listItems, 134)
---UI_SetListFontColor(listItems, COLOR_BLACK, COLOR_RED )
-
-scrollid = UI_GetScroll(listItems)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "./texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "./texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-pgePublic = UI_CreateCompent( frmWardrobe, PAGE_TYPE, "pgePublic", 192, 325, 20, 100 )
-UI_SetPageButton(pgePublic, PAGE_BUTTON_CUSTOM, 0, 0 )
-
-------
--- MOUNT
-------
-skillid = UI_CreatePageItem(pgePublic)
-ttlNum = UI_GetPageItemObj(skillid, PAGE_ITEM_TITLE)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 63, 38, 9, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 63, 38, 9, 646)
-UI_SetPos(ttlNum, 47, 0 )
-UI_SetSize(ttlNum, 63, 38)
-
-------
--- EQUIP
-------
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 51, 38, 103, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 51, 38, 103, 646)
-UI_SetPos(ttlNum, 140, 0 )
-UI_SetSize(ttlNum, 51, 38)
-
-sltImgHead = UI_CreateCompent(frmWardrobe, IMAGE_TYPE, "sltImgHead", 36, 36, 385, 380)
-UI_LoadImage(sltImgHead, "./texture/gui/eqform/cmdArmet.png", NORMAL, 36, 36, 0, 0 )
-sltHead = UI_CreateCompent(frmWardrobe, COMMAND_ONE_TYPE, "sltHead", 32, 32, 387, 382)
-
-sltImgBody = UI_CreateCompent(frmWardrobe, IMAGE_TYPE, "sltImgBody", 36, 36, 435, 380)
-UI_LoadImage(sltImgBody, "./texture/gui/eqform/cmdBody.png", NORMAL, 36, 36, 0, 0 )
-sltBody = UI_CreateCompent(frmWardrobe, COMMAND_ONE_TYPE, "sltBody", 32, 32, 437, 382)
-
-sltImgGlove = UI_CreateCompent(frmWardrobe, IMAGE_TYPE, "sltImgGlove", 36, 36, 485, 380)
-UI_LoadImage(sltImgGlove, "./texture/gui/eqform/cmdGlove.png", NORMAL, 36, 36, 0, 0 )
-sltGlove = UI_CreateCompent(frmWardrobe, COMMAND_ONE_TYPE, "sltGlove", 32, 32, 487, 382)
-
-sltImgShoes = UI_CreateCompent(frmWardrobe, IMAGE_TYPE, "sltImgShoes", 36, 36, 535, 380)
-UI_LoadImage(sltImgShoes, "./texture/gui/eqform/cmdShoes.png", NORMAL, 36, 36, 0, 0 )
-sltShoes = UI_CreateCompent(frmWardrobe, COMMAND_ONE_TYPE, "sltShoes", 32, 32, 538, 382)
-
-UI_AddCompent(skillid, sltImgHead)
-UI_AddCompent(skillid, sltHead)
-UI_AddCompent(skillid, sltImgBody)
-UI_AddCompent(skillid, sltBody)
-UI_AddCompent(skillid, sltImgGlove)
-UI_AddCompent(skillid, sltGlove)
-UI_AddCompent(skillid, sltImgShoes)
-UI_AddCompent(skillid, sltShoes)
-
-------
--- WEAPON
-------
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 72, 38, 183, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 72, 38, 183, 646)
-UI_SetPos(ttlNum, 221, 0 )
-UI_SetSize(ttlNum, 72, 38)
-
-------
--- HAND PET
-------
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 83, 38, 284, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 83, 38, 284, 646)
-UI_SetPos(ttlNum, 323, 0 )
-UI_SetSize(ttlNum, 83, 38)
-
-------
--- FAIRY
-------
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 47, 38, 396, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 47, 38, 396, 646)
-UI_SetPos(ttlNum, 436, 0 )
-UI_SetSize(ttlNum, 47, 38)
-
-------
--- WINGS
-------
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 55, 38, 472, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 55, 38, 472, 646)
-UI_SetPos(ttlNum, 513, 0 )
-UI_SetSize(ttlNum, 55, 38)
-
-------
---[[ AURAS
-------
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_NORMAL, 55, 38, 565, 700)
-UI_LoadImage(ttlNum, "./texture/gui/p0w-wardrobe.png", PAGE_ITEM_TITLE_ACTIVE, 55, 38, 565, 646)
-UI_SetPos(ttlNum, 598, 0 )
-UI_SetSize(ttlNum, 55, 38)
-]]
-
-------
--- Select type record
-------
-imgCboMountType = UI_CreateCompent( frmWardrobe, IMAGE_TYPE, "imgCboMountType", 241, 41, 55, 140)
-UI_LoadImage( imgCboMountType, "./texture/gui/p0w-wardrobe.png", NORMAL, 241, 41, 743, 108)
-UI_AddCompent( frmWardrobe, imgCboMountType )
-
-cboType  = UI_CreateCompent( frmWardrobe, COMBO_TYPE, "cboType", 98, 20, 90, 157 )
-UI_ComboSetStyle( cboType, TRUE )
-UI_ComboSetTextColor( cboType, COLOR_WHITE )
-lstType = UI_GetList( cboType )
-UI_SetListFontColor( lstType, COLOR_WHITE, COLOR_WHITE )
-UI_SetSize( lstType, 81, 100 )
-UI_SetMargin( lstType, 16,6,16,0 )
-UI_SetListRowHeight( lstType, 18 )
-UI_LoadImage( lstType, "./texture/gui/select-map.png", COMPENT_BACK, 81, 68, 4, 114 )
-UI_AddListText( lstType, "All" )
-UI_AddListText( lstType, "Level 1-30" )
-UI_AddListText( lstType, "Level 31-60" )
-UI_AddListText( lstType, "Level 61+" )
-UI_AddListText( lstType, "Event" )
-UI_SetListIsMouseFollow( lstType, TRUE)
-UI_ComboSetTextColor( lstType, COLOR_WHITE )
-
-------
--- Only purchased
-------
-chkPurchased = UI_CreateCompent(frmWardrobe, CHECK_TYPE, "chkPurchased", 13, 14, 200, 157 )
-UI_LoadImage( chkPurchased, "./texture/gui/display-settings.png", UNCHECKED, 30, 30, 266, 31 )
-UI_LoadImage( chkPurchased, "./texture/gui/display-settings.png", CHECKED, 30, 30, 266, 0 )
-
-labPurchased = UI_CreateCompent( frmWardrobe, LABELEX_TYPE, "labPurchased", 100, 11, 220, 158)
-UI_SetCaption(labPurchased, "Available")
-UI_SetTextColor(labPurchased, 4285754198)
-UI_SetLabelExFont(labPurchased, FONT_14, FALSE, COLOR_WHITE)
-
-------
--- Play
-------
-chkPlay = UI_CreateCompent(frmWardrobe, CHECK_TYPE, "chkPlay", 35, 35, 480, 545)
-UI_LoadImage(chkPlay, "./texture/gui/p0w-wardrobe.png", UNCHECKED, 35, 35, 1034, 168)
-UI_LoadImage(chkPlay, "./texture/gui/p0w-wardrobe.png", CHECKED, 35, 35, 1034, 203)
+btnNextPage = UI_CreateCompent( frmTickets, BUTTON_TYPE, "btnNextPage", 20, 20, 240, 527)
+UI_LoadButtonImage( btnNextPage, "./texture/ascaron_ui/asc-part-01.png", 20, 20, 409, 330, TRUE)

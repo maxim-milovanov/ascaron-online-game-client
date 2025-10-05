@@ -19,14 +19,14 @@ UI_SetGridUnitSize(grdItem, 32, 32)
 UI_SetMargin(grdItem, 0, 0, 0, 0)
 
 imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 30, 30, 50, 380)
-UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 30, 30, 243, 326)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
 
 labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 85, 390)
 UI_SetTextColor( labItemgoldnumber, COLOR_B1A58E )
 UI_SetLabelExFont( labItemgoldnumber, EXO_Regular_S12, FALSE, 4289901234 )
 
 imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 30, 30, 50, 410)
-UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 30, 30, 243, 354)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 28, 27, 243, 354)
 
 labItemIMPnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemIMPnumber", 91, 8, 85, 420)
 UI_SetTextColor( labItemIMPnumber, COLOR_B1A58E )
