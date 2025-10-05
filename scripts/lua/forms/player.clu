@@ -260,7 +260,7 @@ UI_AddFormToTemplete( frmBooth, FORM_MAIN )
 UI_SetIsDrag( frmBooth, TRUE )
 UI_FormSetIsEscClose( frmFound, FALSE )
 
-setBackground(frmBooth, true, 400, 450 - 106, 225)
+setBackground(frmBooth, true, 400, 344, 225)
 
 lblOwnerName = UI_CreateCompent( frmBooth, LABELEX_TYPE, "lblOwnerName", 280, 30, 50, 20 )
 UI_SetCaption( lblOwnerName, "SET STALL" )
@@ -492,7 +492,7 @@ UI_LoadScaleImage( frmTargetInfoHP, "./texture/ascaron_ui/asc-part-01.png", PROG
 UI_SetHint( frmTargetInfoHP, "HP" )
 UI_SetProgressHintStyle( frmTargetInfoHP, PROGRESS_HINT_NUM )
 
-d3dTarget = UI_CreateCompent( frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget", 32, 32, 6, 6 )
+d3dTarget = UI_CreateCompent(frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget", 36, 36, 6, 6)
 
 frmTargetInfoName = UI_CreateCompent( frmTargetInfo, LABELEX_TYPE, "frmTargetInfoName", 95, 11, 45, 5)
 UI_SetTextColor( frmTargetInfoName, argbColor("b9baba") )
@@ -546,11 +546,12 @@ end
 -----------------------------------------------------------------------
 -- Positive panel
 -----------------------------------------------------------------------
-frmPositiveEffects = UI_CreateForm( "frmPositiveEffects", FALSE, 34, 34, 280, 30, TRUE, FALSE )
-UI_ShowForm( frmPositiveEffects, FALSE )
-UI_SetIsDrag( frmPositiveEffects, TRUE )
-UI_AddFormToTemplete( frmPositiveEffects, FORM_MAIN )
-UI_FormSetIsEscClose( frmPositiveEffects, FALSE )
+frmPositiveEffects = UI_CreateForm("frmPositiveEffects", FALSE, 34, 34, 0, 0, TRUE, FALSE)
+UI_ShowForm(frmPositiveEffects, FALSE)
+UI_SetIsDrag(frmPositiveEffects, TRUE)
+UI_AddFormToTemplete(frmPositiveEffects, FORM_MAIN )
+UI_FormSetIsEscClose(frmPositiveEffects, FALSE )
+UI_SetFormStyleEx(frmPositiveEffects, FORM_RIGHTTOP, 186, 317)
 
 local td = 7
 local now_td = 1
@@ -576,12 +577,12 @@ for pos = 0, 20, 1 do
 		margin_top = (now_td * margin) - margin
 	end
 	
-	local margin_left = 34
+	local margin_left = 29
 	if (EffectItem > 1) then
-		margin_left = 34 * EffectItem
+		margin_left = 29 * EffectItem
 	end
 	
-	margin_left = margin_left - 34
+	margin_left = margin_left - 29
 	
 	local szBackground = string.format("frmPositiveBackground%d", slot)
 	local szIcon = string.format("frmPositiveIcon%d", slot)
@@ -599,17 +600,18 @@ for pos = 0, 20, 1 do
 	szBackgroundTime = UI_CreateCompent( frmPositiveEffects, IMAGE_TYPE, szBackgroundTime, 34, 13, margin_left - 4, margin_top + 27 )
 	UI_LoadImage(szBackgroundTime, "texture/gui/panel-effects.png", NORMAL, 34, 13, 0, 43 )
 	
-	szStatetime = UI_CreateCompent( frmPositiveEffects, LABELEX_TYPE, szStatetime, 0, 0, margin_left + 17, margin_top + 29 )
-	UI_SetTextColor(szStatetime, COLOR_FFEDCF )
-	UI_SetLabelExFont(szStatetime, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	szStatetime = UI_CreateCompent( frmPositiveEffects, LABELEX_TYPE, szStatetime, 32, 8, margin_left - 3, margin_top + 29 )
+	UI_SetTextColor(szStatetime, argbColor("ffffff") )
+	UI_SetLabelExFont(szStatetime, EXO_Regular_S08, FALSE, COLOR_WHITE )
+	UI_SetCaptionIsCenter(szStatetime, TRUE)
 	
 	szBackgroundLv = UI_CreateCompent( frmPositiveEffects, IMAGE_TYPE, szBackgroundLv, 25, 10, margin_left, margin_top + 18 )
 	UI_LoadImage(szBackgroundLv, "texture/gui/panel-effects.png", NORMAL, 22, 8, 0, 35 )
 	UI_SetAlpha( szBackgroundLv, 180 )
 	
-	szStateLv = UI_CreateCompent( frmPositiveEffects, LABELEX_TYPE, szStateLv, 30, 10, margin_left + 1, margin_top + 18 )
-	UI_SetTextColor(szStateLv, COLOR_FFEDCF )
-	UI_SetLabelExFont(szStateLv, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	szStateLv = UI_CreateCompent( frmPositiveEffects, LABELEX_TYPE, szStateLv, 30, 10, margin_left + 1, margin_top + 17 )
+	UI_SetTextColor(szStateLv, argbColor("ffffff") )
+	UI_SetLabelExFont(szStateLv, EXO_Regular_S08, FALSE, COLOR_WHITE )
 end
 
 imgResize = UI_CreateCompent( frmPositiveEffects, IMAGE_TYPE, "imgResize", 12, 12, 0, 0 )
@@ -623,6 +625,7 @@ UI_ShowForm( frmNegativeEffects, FALSE )
 UI_SetIsDrag( frmNegativeEffects, TRUE )
 UI_AddFormToTemplete( frmNegativeEffects, FORM_MAIN )
 UI_FormSetIsEscClose( frmNegativeEffects, FALSE )
+UI_SetFormStyleEx(frmNegativeEffects, FORM_RIGHTTOP, 186, 317 + 90 + 90)
 
 local td = 7
 local now_td = 1
@@ -648,12 +651,12 @@ for pos = 0, 20, 1 do
 		margin_top = (now_td * margin) - margin
 	end
 	
-	local margin_left = 34
+	local margin_left = 29
 	if (EffectItem > 1) then
-		margin_left = 34 * EffectItem
+		margin_left = 29 * EffectItem
 	end
 	
-	margin_left = margin_left - 34
+	margin_left = margin_left - 29
 	
 	local szBackground = string.format("frmNegativeBackground%d", slot)
 	local szIcon = string.format("frmNegativeIcon%d", slot)
@@ -671,17 +674,19 @@ for pos = 0, 20, 1 do
 	szBackgroundTime = UI_CreateCompent( frmNegativeEffects, IMAGE_TYPE, szBackgroundTime, 34, 13, margin_left - 4, margin_top + 27 )
 	UI_LoadImage(szBackgroundTime, "texture/gui/panel-effects.png", NORMAL, 34, 13, 0, 43 )
 	
-	szStatetime = UI_CreateCompent( frmNegativeEffects, LABELEX_TYPE, szStatetime, 0, 0, margin_left + 17, margin_top + 29 )
-	UI_SetTextColor(szStatetime, COLOR_FFEDCF )
-	UI_SetLabelExFont(szStatetime, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	szStatetime = UI_CreateCompent( frmNegativeEffects, LABELEX_TYPE, szStatetime, 32, 8, margin_left - 3, margin_top + 29 )
+	UI_SetTextColor(szStatetime, argbColor("ffffff") )
+	UI_SetLabelExFont(szStatetime, EXO_Regular_S08, FALSE, COLOR_WHITE )
+	UI_SetCaptionIsCenter(szStatetime, TRUE)
 	
 	szBackgroundLv = UI_CreateCompent( frmNegativeEffects, IMAGE_TYPE, szBackgroundLv, 25, 10, margin_left, margin_top + 18 )
 	UI_LoadImage(szBackgroundLv, "texture/gui/panel-effects.png", NORMAL, 22, 8, 0, 35 )
 	UI_SetAlpha( szBackgroundLv, 180 )
 	
-	szStateLv = UI_CreateCompent( frmNegativeEffects, LABELEX_TYPE, szStateLv, 30, 10, margin_left + 1, margin_top + 18 )
-	UI_SetTextColor(szStateLv, COLOR_FFEDCF )
-	UI_SetLabelExFont(szStateLv, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	szStateLv = UI_CreateCompent( frmNegativeEffects, LABELEX_TYPE, szStateLv, 30, 10, margin_left + 1, margin_top + 17 )
+	UI_SetTextColor(szStateLv, argbColor("ffffff") )
+	UI_SetLabelExFont(szStateLv, EXO_Regular_S08, FALSE, COLOR_WHITE )
+	
 end
 
 imgResize = UI_CreateCompent( frmNegativeEffects, IMAGE_TYPE, "imgResize", 12, 12, 0, 0 )
@@ -695,6 +700,7 @@ UI_ShowForm( frmCookingEffects, FALSE )
 UI_SetIsDrag( frmCookingEffects, TRUE )
 UI_AddFormToTemplete( frmCookingEffects, FORM_MAIN )
 UI_FormSetIsEscClose( frmCookingEffects, FALSE )
+UI_SetFormStyleEx(frmCookingEffects, FORM_RIGHTTOP, 186, 317 + 90)
 
 local td = 7
 local now_td = 1
@@ -720,12 +726,12 @@ for pos = 0, 20, 1 do
 		margin_top = (now_td * margin) - margin
 	end
 	
-	local margin_left = 34
+	local margin_left = 29
 	if (EffectItem > 1) then
-		margin_left = 34 * EffectItem
+		margin_left = 29 * EffectItem
 	end
 	
-	margin_left = margin_left - 34
+	margin_left = margin_left - 29
 	
 	local szBackground = string.format("frmCookingBackground%d", slot)
 	local szIcon = string.format("frmCookingIcon%d", slot)
@@ -743,17 +749,18 @@ for pos = 0, 20, 1 do
 	szBackgroundTime = UI_CreateCompent( frmCookingEffects, IMAGE_TYPE, szBackgroundTime, 34, 13, margin_left - 4, margin_top + 27 )
 	UI_LoadImage(szBackgroundTime, "texture/gui/panel-effects.png", NORMAL, 34, 13, 0, 43 )
 	
-	szStatetime = UI_CreateCompent( frmCookingEffects, LABELEX_TYPE, szStatetime, 0, 0, margin_left + 17, margin_top + 29 )
-	UI_SetTextColor(szStatetime, COLOR_FFEDCF )
-	UI_SetLabelExFont(szStatetime, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	szStatetime = UI_CreateCompent( frmCookingEffects, LABELEX_TYPE, szStatetime, 32, 8, margin_left - 3, margin_top + 29 )
+	UI_SetTextColor(szStatetime, argbColor("ffffff") )
+	UI_SetLabelExFont(szStatetime, EXO_Regular_S08, FALSE, COLOR_WHITE )
+	UI_SetCaptionIsCenter(szStatetime, TRUE)
 	
 	szBackgroundLv = UI_CreateCompent( frmCookingEffects, IMAGE_TYPE, szBackgroundLv, 25, 10, margin_left, margin_top + 18 )
 	UI_LoadImage(szBackgroundLv, "texture/gui/panel-effects.png", NORMAL, 22, 8, 0, 35 )
 	UI_SetAlpha( szBackgroundLv, 180 )
 	
-	szStateLv = UI_CreateCompent( frmCookingEffects, LABELEX_TYPE, szStateLv, 30, 10, margin_left + 1, margin_top + 18 )
-	UI_SetTextColor(szStateLv, COLOR_FFEDCF )
-	UI_SetLabelExFont(szStateLv, ARIAL_FONT_MINI, FALSE, COLOR_WHITE )
+	szStateLv = UI_CreateCompent( frmCookingEffects, LABELEX_TYPE, szStateLv, 30, 10, margin_left + 1, margin_top + 17 )
+	UI_SetTextColor(szStateLv, argbColor("ffffff") )
+	UI_SetLabelExFont(szStateLv, EXO_Regular_S08, FALSE, COLOR_WHITE )
 end
 
 imgResize = UI_CreateCompent( frmCookingEffects, IMAGE_TYPE, "imgResize", 12, 12, 0, 0 )

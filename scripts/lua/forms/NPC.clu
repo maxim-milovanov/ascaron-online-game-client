@@ -1,10 +1,11 @@
 -----------------------------------------------------------------------
 -- Dialog
 -----------------------------------------------------------------------	
-frmNPCchat = UI_CreateForm( "frmNPCchat", FALSE, 500, 300, 240, 70, TRUE, FALSE )
+frmNPCchat = UI_CreateForm( "frmNPCchat", FALSE, 500, 300, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmNPCchat, TRUE )
 UI_AddFormToTemplete( frmNPCchat, FORM_MAIN )
 UI_SetIsDrag( frmNPCchat, FALSE )
+UI_SetFormStyleEx(frmNPCchat, FORM_CENTERBOTTOM, 0, 240)
 
 setBackground(frmNPCchat, true, 500, 300, 190)
 
