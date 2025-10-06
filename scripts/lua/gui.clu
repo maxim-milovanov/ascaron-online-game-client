@@ -1004,6 +1004,56 @@ function setBackground(form, isbClose, form_size_x, form_size_y, alpha)
 	end
 end
 
+function setBackground2(form, form_size_x, form_size_y, alpha, posx, posy)
+	local image_x, image_y = 55, 55
+	local tile_size = 18
+	
+	-- §­§Ö§Ó§í§Û §Ó§Ö§â§ç§ß§Ú§Û §å§Ô§à§Ý
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx, posy)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52, 49)
+	UI_SetAlpha(image, alpha)
+	
+	-- §©§Ñ§Ý§Ú§Ó§Ü§Ñ §Þ§Ö§Ø§Õ§å §Ó§Ö§â§ç§ß§Ú§Þ §Ý§Ö§Ó§í§Þ §Ú §á§â§Ñ§Ó§í§Þ §å§Ô§Ý§à§Þ
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size*2), tile_size, posx + tile_size, posy)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size, 49)
+	UI_SetAlpha(image, alpha)
+	
+	-- §±§â§Ñ§Ó§í§Û §Ó§Ö§â§ß§Ú§Û §å§Ô§à§Ý
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx + form_size_x - tile_size, posy)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + image_x - tile_size, 49)
+	UI_SetAlpha(image, alpha)
+	
+	-- §©§Ñ§Ý§Ú§Ó§Ü§Ñ §Þ§Ö§Ø§Õ§å §Ý§Ö§Ó§í§Þ §Ó§Ö§â§ç§ß§Ú§Þ §Ú §ß§Ú§Ø§ß§Ú§Þ §å§Ô§Ý§à§Þ
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, form_size_y - (tile_size*2), posx, posy + tile_size)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52, 49 + tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	-- §©§Ñ§Ý§Ú§Ó§Ü§Ñ §Þ§Ö§Ø§Õ§å §á§â§Ñ§Ó§í§Þ §Ó§Ö§â§ç§ß§Ú§Þ §Ú §ß§Ú§Ø§ß§Ú§Þ §å§Ô§Ý§à§Þ
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, form_size_y - (tile_size*2), posx + form_size_x - tile_size, posy + tile_size)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size*2, 49 + tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	-- §©§Ñ§Ý§Ú§Ó§Ü§Ñ §è§Ö§ß§ä§â§Ñ
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size*2), form_size_y - (tile_size*2), posx + tile_size, posy + tile_size)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size, 49 + tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	-- §¯§Ú§Ø§ß§Ú§Û §Ý§Ö§Ó§í§Û §å§Ô§à§Ý
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx, posy + form_size_y - tile_size)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52, 49 + image_y - tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	-- §©§Ñ§Ý§Ú§Ó§Ü§Ñ §Þ§Ö§Ø§Õ§å §ß§Ú§Ø§ß§Ú§Þ§Ú §Ý§Ö§Ó§í§Þ §Ú §á§â§Ñ§Ó§í§Þ §å§Ô§Ý§à§Þ
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size * 2), tile_size, posx + tile_size, posy + form_size_y - tile_size)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size, 49 + image_y - tile_size)
+	UI_SetAlpha(image, alpha)
+	
+	-- §¯§Ú§Ø§ß§Ú§Û §á§â§Ñ§Ó§í§Û §å§Ô§à§Ý
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx + form_size_x - tile_size, posy + form_size_y - tile_size)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + image_x - tile_size, 49 + image_y - tile_size)
+	UI_SetAlpha(image, alpha)
+end
+
 function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, form_pos_y)
 	local tile_size = 7
 	local image_x, image_y = 134, 21  -- §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§í §ä§Ö§Ü§ã§ä§å§â§í §Õ§Ý§ñ §è§Ö§ß§ä§â§Ñ
@@ -1308,6 +1358,10 @@ end
 -- 1 - §Ò§à§Ý§î§ê§Ñ§ñ §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 420§ç60
 -- 2 - §Þ§Ñ§Ý§Ö§ß§î§Ü§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 106§ç42 (§Ø§Ö§Ý§ä§Ñ§ñ)
 -- 3 - §Þ§Ñ§Ý§Ö§ß§î§Ü§Ñ§ñ-§Þ§Ú§ß§Ú §Ü§ß§à§á§Ü§Ñ §Ú§Ù §Ô§Ñ§é§Ú (70§ç19) §Ø§Ö§Ý§ä§Ñ§ñ
+-- 4 - §Ü§ß§à§á§Ü§Ñ §Ø§Ö§Ý§ä§Ñ§ñ §Ú§Ù alt+r
+-- 5 - §Ü§ß§à§á§Ü§Ñ §ã§Ö§â§Ñ§ñ §Ú§Ù alt+r
+-- 6 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ motto §Ú§Ù §Ô§Ú§Ý§î§Õ§Ú§Û
+-- 7 - §Ü§â§Ñ§ã§ß§Ñ§ñ §Ü§ß§à§á§Ü§Ñ disband\exit §Ú§Ù §Ô§Ú§Ý§î§Õ§Ú§Û
 function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y, posx, posy)
 	local Item
 	Item = UI_CreateCompent(frm, BUTTON_TYPE, button_name, size_x, size_y, posx, posy)
@@ -1316,7 +1370,7 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 420, 60, 0, 567, FALSE)
 	elseif (type == 1) then
-		UI_ButtonSetText(Item, szCaption, szFont, argbColor("ffffff"), 0, 0)
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("c2c2c1"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 420, 60, 420, 567, FALSE)
 	elseif (type == 2) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
@@ -1325,6 +1379,18 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 	elseif (type == 3) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 70, 19, 940, 188, FALSE)
+	elseif (type == 4) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-03.png", 165, 42, 0, 0, FALSE)
+	elseif (type == 5) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("c2c2c1"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-03.png", 165, 42, 165, 0, FALSE)
+	elseif (type == 6) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("c2c2c1"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-03.png", 130, 42, 0, 168, FALSE)
+	elseif (type == 7) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-03.png", 130, 42, 130, 168, FALSE)
 	end
 	
 	return Item

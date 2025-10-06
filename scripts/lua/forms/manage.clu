@@ -1,124 +1,166 @@
 -----------------------------------------------------------------------
 -- Guild
 -----------------------------------------------------------------------
-frmManage = UI_CreateForm( "frmManage", FALSE, 550, 496, 200, 200, TRUE, FALSE )
+frmManage = UI_CreateForm( "frmManage", FALSE, 528, 638, 0, 0, TRUE, FALSE )
 UI_FormSetHotKey( frmManage, ALT_KEY, HOTKEY_C )
 UI_ShowForm( frmManage, FALSE )
 UI_AddFormToTemplete( frmManage, 1 )
-UI_SetIsDrag( frmManage, TRUE )
-UI_SetFormStyleEx( frmManage, FORM_BOTTOM, 0, 45)
+UI_SetIsDrag( frmManage, FALSE )
+UI_SetFormStyleEx(frmManage, FORM_CENTERBOTTOM, 0, 160)
 
-imgBackground = UI_CreateCompent( frmManage, IMAGE_TYPE, "imgBackground", 550, 496, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/guild.png", NORMAL, 550, 496, 0, 0 )
+PlayersMouseRight = UI_CreateCompent( frmManage, MENU_TYPE, "PlayersMouseRight", 130, 97, 240, 468 )
+UI_MenuLoadImage( PlayersMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_SetMargin( PlayersMouseRight, 10, 5, 5, 5 )
+UI_MenuLoadSelect( PlayersMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 
-imgBackground = UI_CreateCompent( frmManage, IMAGE_TYPE, "imgBackground", 354, 347, 196, 82 )
-UI_LoadImage( imgBackground, "texture/gui/guild.png", NORMAL, 354, 347, 558, 0 )
+ApplyMouseRight = UI_CreateCompent( frmManage, MENU_TYPE, "ApplyMouseRight", 130, 97, 240, 468 )
+UI_MenuLoadImage( ApplyMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_SetMargin( ApplyMouseRight, 10, 5, 5, 5 )
+UI_MenuLoadSelect( ApplyMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 
-btnClose = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnClose", 32, 32, 507, 11 )
-UI_LoadButtonImage( btnClose, "texture/gui/Inventory.png", 32, 32, 0, 368, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+setBackground(frmManage, true, 528, 638, 225)
+setBackground2(frmManage, 468, 386, 100, 30, 150)
 
-pgePublic = UI_CreateCompent( frmManage, PAGE_TYPE, "pgePublic", 185, 275, 11, 79 )
+labFormname = UI_CreateCompent(frmManage, LABELEX_TYPE, "labFormname", 528, 14, 0, 20)
+UI_SetCaption( labFormname, "GUILD" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+imgage = UI_CreateCompent(frmManage, IMAGE_TYPE, "imgage", 468, 30, 30, 110)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 468, 30, 330, 84)
+
+image = UI_CreateCompent(frmManage, IMAGE_TYPE, "image", 468, 2, 30, 98)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 468, 2, 0, 381)
+
+-- Объект страниц
+pgePublic = UI_CreateCompent( frmManage, PAGE_TYPE, "pgePublic", 528, 638, 0, 0)
 UI_SetPageButton( pgePublic, PAGE_BUTTON_CUSTOM, 48, 16 )
 
-skillid = UI_CreatePageItem( pgePublic )
-ttlNum = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlNum, "texture/gui/guild.png", PAGE_ITEM_TITLE_NORMAL, 173, 30, 0, 506 )
-UI_LoadImage( ttlNum, "texture/gui/guild.png", PAGE_ITEM_TITLE_ACTIVE, 173, 30, 190, 506 )
-UI_SetPos( ttlNum, 8, 20 )
-UI_SetSize( ttlNum, 173, 30 )
-UI_AddCompent( skillid, lstNum )
+-- Страница игроков
+pgPlayers = UI_CreatePageItem( pgePublic )
+ttlNum = UI_GetPageItemObj( pgPlayers, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlNum, "./texture/ascaron_ui/asc-part-03.png", PAGE_ITEM_TITLE_NORMAL, 156, 31, 330, 114)
+UI_LoadImage( ttlNum, "./texture/ascaron_ui/asc-part-03.png", PAGE_ITEM_TITLE_ACTIVE, 156, 31, 486, 114)
+UI_SetPos(ttlNum, 30, 69)
+UI_SetSize(ttlNum, 156, 31)
 
-skillid = UI_CreatePageItem( pgePublic )
-ttlLive = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlLive, "texture/gui/guild.png", PAGE_ITEM_TITLE_NORMAL, 173, 30, 0, 538 )
-UI_LoadImage( ttlLive, "texture/gui/guild.png", PAGE_ITEM_TITLE_ACTIVE, 173, 30, 190, 538 )
-UI_SetPos( ttlLive, 8, 20+30+12 )
-UI_SetSize( ttlLive, 173, 30 )
+-- Страница заявок
+pgApply = UI_CreatePageItem( pgePublic )
+ttlLive = UI_GetPageItemObj( pgApply, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlLive, "./texture/ascaron_ui/asc-part-03.png", PAGE_ITEM_TITLE_NORMAL, 156, 31, 330, 145)
+UI_LoadImage( ttlLive, "./texture/ascaron_ui/asc-part-03.png", PAGE_ITEM_TITLE_ACTIVE, 156, 31, 486, 145)
+UI_SetPos( ttlLive, 186, 69)
+UI_SetSize(ttlLive, 156, 31)
 
-lstNum = UI_CreateListView( frmManage, "lstNum", 322, 350, 210, 90, 5, 2 )
-UI_ListViewSetTitle( lstNum, 0, 103, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstNum, 1, 81, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstNum, 2, 30, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstNum, 3, 28, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstNum, 4, 28, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstNum, 6, 30, "", 0, 0, 0, 0 )
-UI_SetListRowHeight( lstNum, 28 )
+------
+-- Страница игроков
+------
+	lstNum = UI_CreateListView( frmManage, "lstNum", 458, 370, 36, 180, 5, eNoTitle)
+	UI_ListViewSetTitle( lstNum, 0, 26, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstNum, 1, 150, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstNum, 2, 60, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstNum, 3, 55, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstNum, 4, 28, "", 0, 0, 0, 0 )
+	UI_ListSetItemMargin(lstNum, 10, 5 )						-- Перемещение текста внутри строки
+	--UI_SetListRowHeight(lstNum, 46 )							-- Отступ строк между собой
+	UI_ListLoadSelectImage(lstNum, "./texture/ascaron_ui/asc-part-03.png", 468, 30, 330, 84)
+	UI_SetListIsMouseFollow(lstNum, FALSE)
+	UI_SetListRowHeight( lstNum, 26 )
+	setScroll(lstNum)
+	UI_AddCompent(pgPlayers, lstNum)
 
-scrollid = UI_GetScroll(lstNum)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
+------
+-- Страница заявок
+------
+	lstAsk = UI_CreateListView( frmManage, "lstAsk", 458, 370, 36, 180, 5, eNoTitle)
+	UI_ListViewSetTitle( lstAsk, 0, 26, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstAsk, 1, 150, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstAsk, 2, 60, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstAsk, 3, 55, "", 0, 0, 0, 0 )
+	UI_ListViewSetTitle( lstAsk, 4, 28, "", 0, 0, 0, 0 )
+	UI_ListSetItemMargin(lstAsk, 10, 5 )						-- Перемещение текста внутри строки
+	--UI_SetListRowHeight(lstAsk, 46 )							-- Отступ строк между собой
+	UI_ListLoadSelectImage(lstAsk, "./texture/ascaron_ui/asc-part-03.png", 468, 30, 330, 84)
+	UI_SetListIsMouseFollow(lstAsk, FALSE)
+	UI_SetListRowHeight( lstAsk, 26 )
+	setScroll(lstAsk)
+	UI_AddCompent(pgApply, lstAsk)
+	
 
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
+labName = UI_CreateCompent( frmManage, LABELEX_TYPE, "labName", 95, 13, 40, 116)
+UI_SetCaption( labName, "Ascaron Online" )
+UI_SetTextColor( labName, argbColor("ffffff"))
+UI_SetLabelExFont( labName, EXO_Regular_S16, FALSE, COLOR_WHITE )
 
-lstAsk = UI_CreateListView( frmManage, "lstAsk", 322, 350, 210, 90, 5, 2 )
-UI_ListViewSetTitle( lstAsk, 0, 103, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstAsk, 1, 81, "", 0, 0, 0, 0 )
-UI_ListViewSetTitle( lstAsk, 2, 30, "", 0, 0, 0, 0 )
-UI_SetListRowHeight( lstAsk, 28 )
+labPlayers = UI_CreateCompent( frmManage, LABELEX_TYPE, "labPlayers", 95, 13, 30, 546)
+UI_SetCaption( labPlayers, "Players:" )
+UI_SetTextColor( labPlayers, argbColor("a7a7a7"))
+UI_SetLabelExFont( labPlayers, EXO_Regular_S16, FALSE, COLOR_WHITE )
 
-scrollid = UI_GetScroll(lstAsk)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-labName = UI_CreateCompent( frmManage, LABELEX_TYPE, "labName", 95, 13, 23, 64 )
-UI_SetCaption( labName, "Tales of Pirates.net" )
-UI_SetTextColor( labName, COLOR_C9C2B4 )
-UI_SetLabelExFont( labName, EXO_Regular_S12, FALSE, COLOR_WHITE )
-
-labNum = UI_CreateCompent( frmManage, LABELEX_TYPE, "labNum", 50, 13, 215, 64 )
+labNum = UI_CreateCompent( frmManage, LABELEX_TYPE, "labNum", 50, 13, 100, 546)
 UI_SetCaption( labNum, "Players 0\150" )
-UI_SetTextColor( labNum, COLOR_C9C2B4 )
-UI_SetLabelExFont( labNum, EXO_Regular_S12, FALSE, COLOR_WHITE )
+UI_SetTextColor( labNum, argbColor("ffffff") )
+UI_SetLabelExFont( labNum, EXO_Regular_S16, FALSE, COLOR_WHITE )
 
-labPeople = UI_CreateCompent( frmManage, LABELEX_TYPE, "labPeople", 95, 13, 400, 64 )
-UI_SetCaption( labPeople, "Leader: %s" )
-UI_SetTextColor( labPeople, COLOR_C9C2B4 )
-UI_SetLabelExFont( labPeople, EXO_Regular_S12, FALSE, COLOR_WHITE )
+labLeader = UI_CreateCompent( frmManage, LABELEX_TYPE, "labLeader", 95, 13, 325, 116)
+UI_SetCaption( labLeader, "Leader:" )
+UI_SetTextColor( labLeader, argbColor("a7a7a7"))
+UI_SetLabelExFont( labLeader, EXO_Regular_S16, FALSE, COLOR_WHITE )
 
-btnYes = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnYes", 59, 30, 327, 449 )
-UI_LoadButtonImage( btnYes, "texture/gui/guild.png", 59, 30, 0, 694, TRUE )
+labPeople = UI_CreateCompent( frmManage, LABELEX_TYPE, "labPeople", 95, 13, 390, 116)
+UI_SetCaption(labPeople, "%s")
+UI_SetTextColor(labPeople, argbColor("ffffff"))
+UI_SetLabelExFont(labPeople, EXO_Regular_S16, FALSE, COLOR_WHITE)
 
-btnNo = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnNo", 59, 30, 400, 449 )
-UI_LoadButtonImage( btnNo, "texture/gui/guild.png", 59, 30, 237, 663, TRUE )
+labOnline = UI_CreateCompent( frmManage, LABELEX_TYPE, "labOnline", 95, 13, 377, 546)
+UI_SetCaption( labOnline, "Online:" )
+UI_SetTextColor( labOnline, argbColor("a7a7a7"))
+UI_SetLabelExFont( labOnline, EXO_Regular_S16, FALSE, COLOR_WHITE )
 
-btnkick = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnkick", 59, 30, 474, 449 )
-UI_LoadButtonImage( btnkick, "texture/gui/guild.png", 59, 30, 0, 663, TRUE )
+labOnlineAmount = UI_CreateCompent( frmManage, LABELEX_TYPE, "labOnlineAmount", 95, 13, 440, 546)
+UI_SetCaption( labOnlineAmount, "99/99" )
+UI_SetTextColor( labOnlineAmount, argbColor("ffffff"))
+UI_SetLabelExFont( labOnlineAmount, EXO_Regular_S16, FALSE, COLOR_WHITE )
 
-btnSan = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnSan", 164, 29, 18, 226 )
-UI_LoadButtonImage( btnSan, "./texture/gui/old_gui/SysBotton4.tga", 41, 14, 0, 76, TRUE )
+-- Расформировать гильдию
+btnSan = CreateButton(7, frmManage, "btnSan", "DISBAND", EXO_Regular_S16, 130, 42, 368, 576)
 
-btnMaxim = UI_CreateCompent( frmManage, BUTTON_TYPE, "btnMaxim", 164, 29, 18, 184 )
-UI_LoadButtonImage( btnMaxim, "texture/gui/guild.png", 164, 29, 0, 571, TRUE )
+-- Расформировать гильдию
+btnLeave = CreateButton(7, frmManage, "btnLeave", "LEAVE", EXO_Regular_S16, 130, 42, 368, 576)
+
+-- Motto
+btnMaxim = CreateButton(6, frmManage, "btnMaxim", "MOTTO", EXO_Regular_S16, 130, 42, 30, 576)
 
 -----------------------------------------------------------------------
 -- Edit motto
 -----------------------------------------------------------------------
-frmEditMaxim = UI_CreateForm( "frmEditMaxim",  FALSE, 231, 109, 397, 500, TRUE, FALSE )
+frmEditMaxim = UI_CreateForm( "frmEditMaxim",  FALSE, 400, 154, 397, 500, TRUE, FALSE )
 UI_ShowForm( frmEditMaxim, FALSE )
 UI_AddFormToTemplete( frmEditMaxim, FORM_MAIN )
 UI_SetFormStyle( frmEditMaxim, 0 )
 UI_SetIsDrag( frmEditMaxim, TRUE )
 
-imgBackground = UI_CreateCompent( frmEditMaxim, IMAGE_TYPE, "imgBackground", 231, 109, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/guild.png", NORMAL, 231, 109, 559, 361 )
+setBackground(frmEditMaxim, false, 400, 154, 225)
 
-edtMaxim = UI_CreateCompent( frmEditMaxim, EDIT_TYPE, "edtMaxim", 95, 11, 90, 38 )
-UI_SetEditCursorColor( edtMaxim, COLOR_WHITE )
-UI_SetTextColor( edtMaxim, COLOR_FFEDCF )
+imgage = UI_CreateCompent(frmEditMaxim, IMAGE_TYPE, "imgage", 283, 42, 87, 30)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 283, 42, 330, 42)
+
+labMotto = UI_CreateCompent(frmEditMaxim, LABELEX_TYPE, "labMotto", 420, 20, 30, 40)
+UI_SetCaption(labMotto, "Motto")
+UI_SetTextColor(labMotto, argbColor("ffffff"))
+UI_SetLabelExFont(labMotto, EXO_Regular_S14, FALSE, COLOR_BLACK)
+
+edtMaxim = UI_CreateCompent(frmEditMaxim, EDIT_TYPE, "edtMaxim", 98, 42, 97, 40)
+UI_SetTextColor( edtMaxim, argbColor("c0c0c0") )
 UI_SetEditMaxNum( edtMaxim, 30 )
 UI_SetEditMaxNumVisible( edtMaxim, 30 )
+UI_SetEditCursorColor( edtMaxim, argbColor("c0c0c0") )
+UI_SetEditFont( edtMaxim, EXO_Regular_S16 )
+UI_SetEditClue(edtMaxim, "Guild motto...", argbColor("908a92"))
 
-btnYes = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnYes", 93, 32, 23, 92 )
-UI_LoadButtonImage( btnYes, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
+btnYes = CreateButton(4, frmEditMaxim, "btnYes", "CONFIRM", EXO_Regular_S16, 165, 42, 205, 92)
 UI_SetEditEnterButton( edtTradeGold, btnYes )
 
-btnNo = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnNo", 93, 32, 119, 92 )
-UI_LoadButtonImage( btnNo, "texture/gui/friends.png", 93, 32, 93, 494, FALSE )
+btnNo = CreateButton(5, frmEditMaxim, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 30, 92)
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
