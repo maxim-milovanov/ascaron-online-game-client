@@ -902,6 +902,10 @@ function UI_LoadSkillSelectImage( file, maxframe, w, h, sx, sy )
 	CLU_Call("UI_LoadSkillSelectImage", file, maxframe, w, h, sx, sy )
 end
 
+function UI_LoadGrdGacha(type, file, w, h, sx, sy )
+	CLU_Call("UI_LoadGrdGacha", type, file, w, h, sx, sy )
+end
+
 -- ×°ÔØ±´¿Ç³äµçµÄÍ¼Æ¬
 function UI_LoadChargeImage( link, file, maxframe, w, h, sx, sy )
 	CLU_Call("UI_LoadChargeImage", link, file, maxframe, w, h, sx, sy )

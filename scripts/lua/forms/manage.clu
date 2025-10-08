@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------
 -- Guild
 -----------------------------------------------------------------------
-frmManage = UI_CreateForm( "frmManage", FALSE, 528, 638, 0, 0, TRUE, FALSE )
+frmManage = UI_CreateForm( "frmManage", FALSE, 528, 600 - 10, 0, 0, TRUE, FALSE )
 UI_FormSetHotKey( frmManage, ALT_KEY, HOTKEY_C )
 UI_ShowForm( frmManage, FALSE )
 UI_AddFormToTemplete( frmManage, 1 )
@@ -18,8 +18,8 @@ UI_MenuLoadImage( ApplyMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3
 UI_SetMargin( ApplyMouseRight, 10, 5, 5, 5 )
 UI_MenuLoadSelect( ApplyMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 
-setBackground(frmManage, true, 528, 638, 225)
-setBackground2(frmManage, 468, 386, 100, 30, 150)
+setBackground(frmManage, true, 528, 600 - 10, 225)
+setBackground2(frmManage, 468, 386 - 50, 100, 30, 150)
 
 labFormname = UI_CreateCompent(frmManage, LABELEX_TYPE, "labFormname", 528, 14, 0, 20)
 UI_SetCaption( labFormname, "GUILD" )
@@ -56,7 +56,7 @@ UI_SetSize(ttlLive, 156, 31)
 ------
 -- Страница игроков
 ------
-	lstNum = UI_CreateListView( frmManage, "lstNum", 458, 370, 36, 180, 5, eNoTitle)
+	lstNum = UI_CreateListView( frmManage, "lstNum", 464, 323 - 27, 36, 180, 5, eNoTitle)
 	UI_ListViewSetTitle( lstNum, 0, 26, "", 0, 0, 0, 0 )
 	UI_ListViewSetTitle( lstNum, 1, 150, "", 0, 0, 0, 0 )
 	UI_ListViewSetTitle( lstNum, 2, 60, "", 0, 0, 0, 0 )
@@ -73,7 +73,7 @@ UI_SetSize(ttlLive, 156, 31)
 ------
 -- Страница заявок
 ------
-	lstAsk = UI_CreateListView( frmManage, "lstAsk", 458, 370, 36, 180, 5, eNoTitle)
+	lstAsk = UI_CreateListView( frmManage, "lstAsk", 458, 323, 36, 180, 5, eNoTitle)
 	UI_ListViewSetTitle( lstAsk, 0, 26, "", 0, 0, 0, 0 )
 	UI_ListViewSetTitle( lstAsk, 1, 150, "", 0, 0, 0, 0 )
 	UI_ListViewSetTitle( lstAsk, 2, 60, "", 0, 0, 0, 0 )
@@ -91,46 +91,46 @@ UI_SetSize(ttlLive, 156, 31)
 labName = UI_CreateCompent( frmManage, LABELEX_TYPE, "labName", 95, 13, 40, 116)
 UI_SetCaption( labName, "Ascaron Online" )
 UI_SetTextColor( labName, argbColor("ffffff"))
-UI_SetLabelExFont( labName, EXO_Regular_S16, FALSE, COLOR_WHITE )
-
-labPlayers = UI_CreateCompent( frmManage, LABELEX_TYPE, "labPlayers", 95, 13, 30, 546)
-UI_SetCaption( labPlayers, "Players:" )
-UI_SetTextColor( labPlayers, argbColor("a7a7a7"))
-UI_SetLabelExFont( labPlayers, EXO_Regular_S16, FALSE, COLOR_WHITE )
-
-labNum = UI_CreateCompent( frmManage, LABELEX_TYPE, "labNum", 50, 13, 100, 546)
-UI_SetCaption( labNum, "Players 0\150" )
-UI_SetTextColor( labNum, argbColor("ffffff") )
-UI_SetLabelExFont( labNum, EXO_Regular_S16, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labName, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
 labLeader = UI_CreateCompent( frmManage, LABELEX_TYPE, "labLeader", 95, 13, 325, 116)
 UI_SetCaption( labLeader, "Leader:" )
 UI_SetTextColor( labLeader, argbColor("a7a7a7"))
-UI_SetLabelExFont( labLeader, EXO_Regular_S16, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labLeader, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
 labPeople = UI_CreateCompent( frmManage, LABELEX_TYPE, "labPeople", 95, 13, 390, 116)
 UI_SetCaption(labPeople, "%s")
 UI_SetTextColor(labPeople, argbColor("ffffff"))
-UI_SetLabelExFont(labPeople, EXO_Regular_S16, FALSE, COLOR_WHITE)
+UI_SetLabelExFont(labPeople, EXO_Regular_S14, FALSE, COLOR_WHITE)
 
-labOnline = UI_CreateCompent( frmManage, LABELEX_TYPE, "labOnline", 95, 13, 377, 546)
+labPlayers = UI_CreateCompent( frmManage, LABELEX_TYPE, "labPlayers", 95, 13, 30, 546 - 50)
+UI_SetCaption( labPlayers, "Players:" )
+UI_SetTextColor( labPlayers, argbColor("a7a7a7"))
+UI_SetLabelExFont( labPlayers, EXO_Regular_S14, FALSE, COLOR_WHITE )
+
+labNum = UI_CreateCompent( frmManage, LABELEX_TYPE, "labNum", 50, 13, 100, 546 - 50)
+UI_SetCaption( labNum, "Players 0\150" )
+UI_SetTextColor( labNum, argbColor("ffffff") )
+UI_SetLabelExFont( labNum, EXO_Regular_S14, FALSE, COLOR_WHITE )
+
+labOnline = UI_CreateCompent( frmManage, LABELEX_TYPE, "labOnline", 95, 13, 377, 546 - 50)
 UI_SetCaption( labOnline, "Online:" )
 UI_SetTextColor( labOnline, argbColor("a7a7a7"))
-UI_SetLabelExFont( labOnline, EXO_Regular_S16, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labOnline, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-labOnlineAmount = UI_CreateCompent( frmManage, LABELEX_TYPE, "labOnlineAmount", 95, 13, 440, 546)
+labOnlineAmount = UI_CreateCompent( frmManage, LABELEX_TYPE, "labOnlineAmount", 95, 13, 440, 546 - 50)
 UI_SetCaption( labOnlineAmount, "99/99" )
 UI_SetTextColor( labOnlineAmount, argbColor("ffffff"))
-UI_SetLabelExFont( labOnlineAmount, EXO_Regular_S16, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labOnlineAmount, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
 -- Расформировать гильдию
-btnSan = CreateButton(7, frmManage, "btnSan", "DISBAND", EXO_Regular_S16, 130, 42, 368, 576)
+btnSan = CreateButton(7, frmManage, "btnSan", "DISBAND", EXO_Regular_S16, 130, 42, 368, 576 - 50)
 
 -- Расформировать гильдию
-btnLeave = CreateButton(7, frmManage, "btnLeave", "LEAVE", EXO_Regular_S16, 130, 42, 368, 576)
+btnLeave = CreateButton(7, frmManage, "btnLeave", "LEAVE", EXO_Regular_S16, 130, 42, 368, 576 - 50)
 
 -- Motto
-btnMaxim = CreateButton(6, frmManage, "btnMaxim", "MOTTO", EXO_Regular_S16, 130, 42, 30, 576)
+btnMaxim = CreateButton(6, frmManage, "btnMaxim", "MOTTO", EXO_Regular_S16, 130, 42, 30, 576 - 50)
 
 -----------------------------------------------------------------------
 -- Edit motto

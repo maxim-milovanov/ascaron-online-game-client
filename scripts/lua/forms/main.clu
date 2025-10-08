@@ -1,5 +1,7 @@
 UI_LoadSkillActiveImage( "./texture/gui/old_gui/StartF.dds", 2,  32, 32, 124, 155 )
 UI_LoadSkillSelectImage( "./texture/gui/old_gui/StartF.dds", 2,  32, 32, 124, 155 )
+UI_LoadGrdGacha(1, "./texture/ascaron_ui/asc-part-01.png", 38, 38, 950, 147)
+UI_LoadGrdGacha(2, "./texture/ascaron_ui/asc-part-01.png", 38, 13, 62, 23)
 
 UI_LoadChargeImage( enumEQUIP_HEAD, "./texture/gui/old_gui/charge.tga", 6,  32, 32, 0, 0 )
 UI_LoadChargeImage( enumEQUIP_FACE, "./texture/gui/old_gui/charge.tga", 6,  32, 32, 0, 0 ) 
