@@ -100,7 +100,7 @@ UI_SetSize(ttlLive, 156, 31)
 ------
 -- Страница заявок
 ------
-	lstAsk = UI_CreateListView( frmManage, "lstAsk", 458, 323, 36, 180, 5, eNoTitle)
+	lstAsk = UI_CreateListView( frmManage, "lstAsk", 464, 323 - 27, 32, 180, 5, eNoTitle)
 	UI_ListViewSetTitle( lstAsk, 0, 26, "", 0, 0, 0, 0 )
 	UI_ListViewSetTitle( lstAsk, 1, 158, "", 0, 0, 0, 0 )
 	UI_ListViewSetTitle( lstAsk, 2, 55, "", 0, 0, 0, 0 )
@@ -112,7 +112,7 @@ UI_SetSize(ttlLive, 156, 31)
 	UI_SetListIsMouseFollow(lstAsk, FALSE)
 	UI_SetListRowHeight( lstAsk, 26 )
 	setScroll(lstAsk)
-	UI_AddCompent(pgPlayers, lstAsk)
+	UI_AddCompent(pgApply, lstNum)
 	
 labName = UI_CreateCompent( frmManage, LABELEX_TYPE, "labName", 95, 13, 40, 116)
 UI_SetCaption( labName, "Ascaron Online" )
