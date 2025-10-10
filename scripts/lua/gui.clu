@@ -661,6 +661,10 @@ function UI_SetGridContent( id, nRow, nCol )
 	CLU_Call( "UI_SetGridContent", id, nRow, nCol )
 end
 
+function UI_SetFontMemo( id, font, color)
+	CLU_Call("UI_SetFontMemo", id, font, color)
+end
+
 -- 设置GoodGrid中的单元格背景
 function UI_GoodGridLoadUnitImage( id, file, w, h, tx, ty )
 	CLU_Call( "UI_GoodGridLoadUnitImage", id, file, w, h, tx, ty )
@@ -1366,6 +1370,11 @@ end
 -- 5 - кнопка серая из alt+r
 -- 6 - серая кнопка motto из гильдий
 -- 7 - красная кнопка disband\exit из гильдий
+-- 8 - серая кнопка 74х42
+-- 9 - желтая кнопка 123х42
+-- 10 - желтая кнопка 138х32
+-- 11 - серая кнопка 138х32
+-- 12 кнопка из магазина 380х42 желтая
 function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y, posx, posy)
 	local Item
 	Item = UI_CreateCompent(frm, BUTTON_TYPE, button_name, size_x, size_y, posx, posy)
@@ -1395,6 +1404,21 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 	elseif (type == 7) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-03.png", 130, 42, 130, 168, FALSE)
+	elseif (type == 8) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("c2c2c1"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-02.png", 74, 42, 607, 932, TRUE)
+	elseif (type == 9) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-02.png", 123, 41, 607, 978, FALSE)
+	elseif (type == 10) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-02.png", 138, 32, 732, 978, FALSE)
+	elseif (type == 11) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("c2c2c1"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-02.png", 138, 32, 872, 978, FALSE)
+	elseif (type == 12) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-02.png", 380, 42, 0, 1058, FALSE)
 	end
 	
 	return Item

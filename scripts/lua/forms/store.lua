@@ -405,38 +405,39 @@ UI_SetSize(GachaItem, 175, 31)
 -----------------------------------------------------------------------
 -- Диалоговое окно при покупке пакета
 -----------------------------------------------------------------------	
-frmStoreBox = UI_CreateForm( "frmStoreBox",  FALSE, 480, 260, 0, 0, FALSE, FALSE )
+frmStoreBox = UI_CreateForm( "frmStoreBox",  FALSE, 440, 260, 0, 0, FALSE, FALSE )
 UI_ShowForm( frmStoreBox, FALSE )
 UI_AddFormToTemplete( frmStoreBox, FORM_DIALOG )
 UI_SetIsDrag( frmStoreBox, TRUE )
 UI_SetFormStyle( frmStoreBox, FORM_NONE )
 
-setBackground(frmStoreBox, true, 480, 260, 255)
-setBackground(frmStoreBox, true, 480, 260, 255)
+setBackground(frmStoreBox, true, 440, 260, 255)
+setBackground(frmStoreBox, true, 440, 200, 255)
 
-labName = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labName", 480, 16, 0, 20)
+labName = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labName", 440, 16, 0, 20)
 UI_SetCaption( labName, "0" )
 UI_SetTextColor( labName, argbColor("d0d0d1"))
 UI_SetLabelExFont( labName, EXO_Regular_S16, FALSE, COLOR_BLACK )
 UI_SetCaptionIsCenter(labName, TRUE)
 
-CreateImageGrid(frmStoreBox, 6, 1, 30, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
-Items = UI_CreateCompent(frmStoreBox, GOODS_GRID_TYPE, "Items", 400, 100, 53, 53) 
-UI_SetGridSpace(Items, 36, 9)
+-- -20 +12
+CreateImageGrid(frmStoreBox, 6, 1, 10, 54, 54, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 30, 62)
+Items = UI_CreateCompent(frmStoreBox, GOODS_GRID_TYPE, "Items", 400, 100, 30 + 11 , 62 + 11) 
+UI_SetGridSpace(Items, 32, 9)
 UI_SetGridContent(Items, 1, 6)
 UI_SetGridUnitSize(Items, 32, 32)
 UI_SetMargin(Items, 0, 0, 0, 0)
 
-labPrice = UI_CreateCompent( frmStoreBox, LABELEX_TYPE, "labPrice", 87, 11, 250, 120 )
+labPrice = UI_CreateCompent(frmStoreBox, LABELEX_TYPE, "labPrice", 87, 11, 160, 146)
 UI_SetCaption( labPrice, "0" )
 UI_SetTextColor( labPrice, argbColor("c0c0c0") )
 UI_SetEditCursorColor( labPrice, COLOR_WHITE )
 UI_SetLabelExFont( labPrice, EXO_Regular_S20, FALSE, COLOR_WHITE )
 
-image = UI_CreateCompent(frmStoreBox, IMAGE_TYPE,"image", 200, 55, 30, 105)
-UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+image = UI_CreateCompent(frmStoreBox, IMAGE_TYPE, "image", 120, 42, 30, 137)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 120, 42, 395, 1058)
 
-edtNumber = UI_CreateCompent( frmStoreBox, EDIT_TYPE, "edtNumber", 420, 20, 50, 120 )
+edtNumber = UI_CreateCompent(frmStoreBox, EDIT_TYPE, "edtNumber", 420, 20, 45, 146)
 UI_SetTextColor( edtNumber, argbColor("c0c0c0") )
 UI_SetEditMaxNum( edtNumber, 3 )
 UI_SetEditCursorColor( edtNumber, argbColor("c0c0c0") )
@@ -444,7 +445,7 @@ UI_SetEditFont( edtNumber, EXO_Regular_S20 )
 UI_SetEditClue(edtNumber, "Quantity", argbColor("908a92"))
 
 -- botton "ok"
-btnYes = CreateButton(0, frmStoreBox, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 170)
+btnYes = CreateButton(12, frmStoreBox, "btnYes", "ACCEPT", EXO_Regular_S20, 380, 42, 30, 199)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_FormSetEnterButton( frmSelect, btnYes )
 
@@ -799,7 +800,7 @@ imgBackground = UI_CreateCompent(frmGacha, IMAGE_TYPE, "imgBackground", 455, 455
 UI_LoadImage(imgBackground, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 455, 455, 0, 597)
 
 labCommon = UI_CreateCompent(frmGacha, LABELEX_TYPE, "labCommon", 713, 20, 0, 202)
-UI_SetCaption(labCommon, "COMMON" )
+UI_SetCaption(labCommon, "REWARD" )
 UI_SetTextColor(labCommon, argbColor("ffffff"))
 UI_SetLabelExFont(labCommon, EXO_Regular_S16, FALSE, COLOR_BLACK )
 UI_SetCaptionIsCenter(labCommon, TRUE)

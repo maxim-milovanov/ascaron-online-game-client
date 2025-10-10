@@ -249,43 +249,47 @@ UI_LoadImage( imgTime, "./texture/gui/old_gui/Word.dds", NORMAL, 36, 13, 211, 16
 btnNo = UI_CreateCompent( frmTime, BUTTON_TYPE, "btnNo", 41, 19, 74, 78 )
 UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
-
 -----------------------------------------------------------------------
 -- Baitan
 -----------------------------------------------------------------------	
-frmBooth = UI_CreateForm( "frmBooth", FALSE, 400, 450, 100, 100, TRUE, FALSE )
+frmBooth = UI_CreateForm( "frmBooth", FALSE, 400, 344, 100, 100, TRUE, FALSE )
 UI_ShowForm( frmBooth, FALSE )
 UI_AddFormToTemplete( frmBooth, FORM_MAIN )
 --UI_FormSetHotKey( frmBooth, ALT_KEY, HOTKEY_T )
 UI_SetIsDrag( frmBooth, TRUE )
 UI_FormSetIsEscClose( frmFound, FALSE )
 
-setBackground(frmBooth, true, 400, 344, 225)
+setBackground(frmBooth, false, 400, 344, 235)
+
+CreateImageGrid(frmBooth, 3, 1, 89, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 51, 61 + 13)
+CreateImageGrid(frmBooth, 3, 1, 89, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 51, 138 + 13)
+CreateImageGrid(frmBooth, 3, 1, 89, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 51, 215 + 13)
+
+imgEdt = UI_CreateCompent(frmBooth, IMAGE_TYPE, "imgEdt", 340, 34, 30, 20)
+UI_LoadImage( imgEdt, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 340, 34, 608, 895)
 
 lblOwnerName = UI_CreateCompent( frmBooth, LABELEX_TYPE, "lblOwnerName", 280, 30, 50, 20 )
 UI_SetCaption( lblOwnerName, "SET STALL" )
 UI_SetTextColor( lblOwnerName, COLOR_WHITE)
 UI_SetLabelExFont( lblOwnerName, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 81)
-CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 168)
-CreateImageGrid(frmBooth, 3, 1, 69, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 74, 255)
-
-grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 332, 265, 43, 60) 
+grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 376, 240, 10, 45 + 13) 
 UI_SetGridSpace( grdBoothItem, 7, 7 )
 UI_SetGridContent( grdBoothItem, 3, 3 )
-UI_SetGridUnitSize( grdBoothItem, 100, 80 )
+UI_SetGridUnitSize( grdBoothItem, 120, 70 )
 UI_SetMargin( grdBoothItem, 0, 0, 0, 0 )
 setScroll(grdBoothItem)
 
-edtBoothName = UI_CreateCompent( frmBooth, EDIT_TYPE, "edtBoothName", 264, 13, 50, 300 )
-UI_SetCaption( edtBoothName, "Baitan name" )
-UI_SetTextColor( edtBoothName, COLOR_A29688 )
-UI_SetLabelExFont( edtBoothName, EXO_Regular_S12, FALSE, COLOR_WHITE )
-UI_SetEditCursorColor( edtBoothName, COLOR_WHITE )
+edtBoothName = UI_CreateCompent( frmBooth, EDIT_TYPE, "edtBoothName", 320, 20, 40, 28)
+UI_SetTextColor( edtBoothName, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtBoothName, 30 )
+UI_SetEditMaxNumVisible( edtBoothName, 30 )
+UI_SetEditCursorColor( edtBoothName, argbColor("c0c0c0") )
+UI_SetEditFont( edtBoothName, EXO_Regular_S14 )
+UI_SetEditClue(edtBoothName, "Enter stall name", argbColor("908a92"))
 
-btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 93, 32, 50, 340 )
-UI_LoadButtonImage( btnSetupBooth, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
+btnSetupBooth = CreateButton(9, frmBooth, "btnSetupBooth", "SET STALL", EXO_Regular_S16, 123, 42, 247, 290)
+btnPullStakes = CreateButton(8, frmBooth, "btnPullStakes", "EXIT", EXO_Regular_S16, 74, 42, 163, 290)
 
 -----------------------------------------------------------------------
 -- 定义理发界面

@@ -10,10 +10,11 @@ UI_SetFormStyle( frmState, 0 )
 
 setBackground(frmState, true, 650, 550, 225)
 
-labFormname = UI_CreateCompent(frmState, LABELEX_TYPE, "labFormname", 15, 14, 250, 20)
+labFormname = UI_CreateCompent(frmState, LABELEX_TYPE, "labFormname", 600, 14, 0, 20)
 UI_SetCaption( labFormname, "CHARACTER INFO" )
 UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
 image = UI_CreateCompent(frmState, IMAGE_TYPE, "image", 550, 2, 50, 50+29)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 550, 2, 0, 381)
@@ -31,19 +32,22 @@ UI_SetSize( ttlNum, 123, 31)
 ui3dCha = UI_CreateCompent( frmState, UI3D_COMPENT, "ui3dCha", 160, 150, 80, 250)
 UI_AddCompent(skillid, ui3dCha)
 
-labName = UI_CreateCompent( frmState, LABELEX_TYPE, "labName", 100, 11, 90, 70)
+labName = UI_CreateCompent( frmState, LABELEX_TYPE, "labName", 242, 11, 40, 55)
 UI_SetTextColor(labName, argbColor("b9baba"))
 UI_SetLabelExFont(labName, EXO_Regular_S20, FALSE, COLOR_WHITE)
+UI_SetCaptionIsCenter(labName, TRUE)
 UI_AddCompent(skillid, labName)
 
-labJob = UI_CreateCompent( frmState, LABELEX_TYPE, "labJob", 100, 11, 95, 105)
-UI_SetTextColor(labJob, argbColor("898a8b"))
+labJob = UI_CreateCompent( frmState, LABELEX_TYPE, "labJob", 242, 11, 40, 85)
+UI_SetTextColor(labJob, argbColor("b9baba"))
 UI_SetLabelExFont(labJob, EXO_Regular_S16, FALSE, COLOR_WHITE)
+UI_SetCaptionIsCenter(labName, TRUE)
 UI_AddCompent(skillid, labJob)
 
-labGuild = UI_CreateCompent( frmState, LABELEX_TYPE, "labGuild", 100, 11, 95, 140)
-UI_SetTextColor( labGuild, argbColor("898a8b") )
+labGuild = UI_CreateCompent( frmState, LABELEX_TYPE, "labGuild", 242, 11, 40, 110)
+UI_SetTextColor( labGuild, argbColor("b9baba") )
 UI_SetLabelExFont( labGuild, EXO_Regular_S16, FALSE, COLOR_WHITE )
+UI_SetCaptionIsCenter(labName, TRUE)
 UI_AddCompent(skillid, labGuild)
 
 ------

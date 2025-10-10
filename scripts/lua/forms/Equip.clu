@@ -18,18 +18,18 @@ UI_SetGridContent(grdItem, 9, 6)
 UI_SetGridUnitSize(grdItem, 32, 32)
 UI_SetMargin(grdItem, 0, 0, 0, 0)
 
-imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 30, 30, 50, 380)
+imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 25, 25, 50, 380)
 UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
 
-labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 85, 390)
-UI_SetTextColor( labItemgoldnumber, COLOR_B1A58E )
+labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 85, 385)
+UI_SetTextColor( labItemgoldnumber, argbColor("a3a3a3") )
 UI_SetLabelExFont( labItemgoldnumber, EXO_Regular_S12, FALSE, 4289901234 )
 
-imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 30, 30, 50, 410)
-UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 28, 27, 243, 354)
+imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 25, 25, 50, 410)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
 
-labItemIMPnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemIMPnumber", 91, 8, 85, 420)
-UI_SetTextColor( labItemIMPnumber, COLOR_B1A58E )
+labItemIMPnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemIMPnumber", 91, 8, 85, 415)
+UI_SetTextColor( labItemIMPnumber, argbColor("a3a3a3") )
 UI_SetLabelExFont( labItemIMPnumber, EXO_Regular_S12, FALSE, 4289901234 )
 
 grdMouseRight = UI_CreateCompent( frmInv, MENU_TYPE, "grdMouseRight", 92, 97, 240, 468 )

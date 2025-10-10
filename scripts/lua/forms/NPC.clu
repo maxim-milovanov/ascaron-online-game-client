@@ -15,8 +15,7 @@ UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 
 memCtrl = UI_CreateCompent( frmNPCchat, MEMO_TYPE, "memCtrl", 400, 260, 50, 50)
-UI_SetTextColor( memCtrl, argbColor("f4f4f4") )
-UI_SetLabelExFont( memCtrl, EXO_Regular_S14, TRUE, COLOR_PURPLE )
+UI_SetFontMemo(memCtrl, EXO_Regular_S14, argbColor("ffffff"))
 setScroll(memCtrl)
 
 -----------------------------------------------------------------------
