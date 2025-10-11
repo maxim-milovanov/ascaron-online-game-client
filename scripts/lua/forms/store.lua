@@ -447,7 +447,7 @@ UI_SetEditClue(edtNumber, "Quantity", argbColor("908a92"))
 -- botton "ok"
 btnYes = CreateButton(12, frmStoreBox, "btnYes", "ACCEPT", EXO_Regular_S20, 380, 42, 30, 199)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
-UI_FormSetEnterButton( frmSelect, btnYes )
+UI_SetEditEnterButton( edtNumber, btnYes )
 
 ------
 -- Страница Wardrobe

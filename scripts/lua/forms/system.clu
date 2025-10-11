@@ -524,7 +524,7 @@ UI_ShowForm( frmTickets, TRUE )
 UI_SetIsDrag( frmTickets, TRUE )
 UI_AddFormToTemplete( frmTickets, FORM_MAIN )
 UI_FormSetIsEscClose( frmTickets, TRUE )
-UI_FormSetHotKey( frmTickets, ALT_KEY, HOTKEY_G )
+UI_FormSetHotKey( frmTickets, ALT_KEY, HOTKEY_V)
 UI_SetFormStyleEx(frmTickets, FORM_CENTERBOTTOM, 0, 160)
 
 setBackground(frmTickets, true, 429, 562, 225)

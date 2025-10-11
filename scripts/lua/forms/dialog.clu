@@ -44,7 +44,7 @@ UI_SetLabelExFont( labPrice, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
 btnYes = CreateButton(10, frmTrade, "btnYes", "ACCEPT", EXO_Regular_S16, 138, 32, 172, 93+ 5)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
-UI_SetEditEnterButton( frmTrade, btnYes )
+UI_SetEditEnterButton( edtNumber, btnYes )
 
 btnNo = CreateButton(11, frmTrade, "btnNo", "CANCEL", EXO_Regular_S16, 138, 32, 23, 93+ 5)
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
@@ -72,7 +72,6 @@ UI_FormSetEnterButton( frmSelect, btnYes )
 
 btnNo = CreateButton(5, frmSelect, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 30, 82)
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
-
 
 -----------------------------------------------------------------------
 -- 

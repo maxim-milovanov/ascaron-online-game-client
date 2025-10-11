@@ -43,7 +43,7 @@ end
 
 btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 30, 30, -15, 100)
 UI_LoadButtonImage( btnSearch, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 113, TRUE)
-UI_SetHint(btnSearch, "Radar (Alt + R)")
+UI_SetHint(btnSearch, "Radar (Alt + T)")
 UI_SetAlpha(btnSearch, 220)
 
 btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 30, 30, -15, 135)
