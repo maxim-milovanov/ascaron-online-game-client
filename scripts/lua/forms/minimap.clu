@@ -46,10 +46,10 @@ UI_LoadButtonImage( btnSearch, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 1
 UI_SetHint(btnSearch, "Radar (Alt + T)")
 UI_SetAlpha(btnSearch, 220)
 
-btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 30, 30, -15, 135)
-UI_LoadButtonImage( btnOpen, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 143, TRUE)
-UI_SetHint(btnOpen, "World Map (Alt + W)")
-UI_SetAlpha(btnOpen, 220)
+btnOpenWorldMap = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenWorldMap", 30, 30, -15, 135)
+UI_LoadButtonImage(btnOpenWorldMap, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 143, TRUE)
+UI_SetHint(btnOpenWorldMap, "World Map (Alt + W)")
+UI_SetAlpha(btnOpenWorldMap, 220)
 
 btnTeleports = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnTeleports", 30, 30, -15, 170)
 UI_LoadButtonImage( btnTeleports, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 173, TRUE)
@@ -61,8 +61,8 @@ UI_LoadButtonImage( btnSetTrade, "./texture/ascaron_ui/asc-part-01.png", 40, 40,
 
 btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 40, 40, 31 + 49 + 49, 247)
 UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
-UI_SetHint(btnOpenStore, "Accessing Item Mall")
-UI_SetAlpha(btnOpenStore, 200)
+UI_SetHint(btnTeleports, "Store (Alt + F)")
+UI_SetAlpha(btnOpenStore, 220)
 
 -----------------------------------------------------------------------
 -- Radar (input x, y)

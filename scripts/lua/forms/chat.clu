@@ -33,7 +33,7 @@ UI_SetLabelExFont( labTitle, EXO_Regular_S12, TRUE, COLOR_WHITE )
 -- 
 ------
 frmQQ = UI_CreateForm( "frmQQ", FALSE, 148, 320, 373, 200, TRUE, FALSE )
-UI_FormSetHotKey( frmQQ, ALT_KEY, HOTKEY_F )
+-- UI_FormSetHotKey( frmQQ, ALT_KEY, HOTKEY_F )
 UI_ShowForm( frmQQ, FALSE )
 UI_AddFormToTemplete( frmQQ, 1 )
 UI_SetIsDrag( frmQQ, TRUE )

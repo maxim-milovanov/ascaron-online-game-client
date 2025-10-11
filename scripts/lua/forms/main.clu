@@ -306,14 +306,14 @@ UI_SetCaption(labMainIndexExp, "100%")
 -----------------------------------------------------------------------
 -- System pannel
 -----------------------------------------------------------------------	
-frmMainFun = UI_CreateForm( "frmMainFun", FALSE, 50, 282, 0, 0, TRUE, FALSE )
+frmMainFun = UI_CreateForm( "frmMainFun", FALSE, 50, 282 - 34, 0, 0, TRUE, FALSE )
 --UI_FormSetHotKey( frmMainFun, ALT_KEY, HOTKEY_D ) 
 UI_ShowForm( frmMainFun, TRUE )
 UI_AddFormToTemplete( frmMainFun, FORM_MAIN )
 UI_FormSetIsEscClose( frmMainFun, FALSE )
 UI_SetFormStyle( frmMainFun, 11 )
 
-setBackground(frmMainFun, false, 44, 276, 225)
+setBackground(frmMainFun, false, 44, 276 - 34, 225)
 
 btnState = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnState", 34, 34, 5, 5)
 UI_LoadButtonImage( btnState, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 111, TRUE)
@@ -335,13 +335,13 @@ btnOpenSociliaty = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenSociliaty"
 UI_LoadButtonImage( btnOpenSociliaty, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 247, TRUE)
 UI_SetHint(btnOpenSociliaty , "Guild (Alt+C)")
 
-btnQQ = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnQQ", 34, 34, 5, 199)
-UI_LoadButtonImage( btnQQ, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 281, TRUE)
-UI_SetHint( btnQQ , "Friend (Alt+F)")
+--btnQQ = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnQQ", 34, 34, 5, 199)
+--UI_LoadButtonImage( btnQQ, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 281, TRUE)
+--UI_SetHint( btnQQ , "Friend (Alt+F)")
 
-btnSystem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSystem", 34, 34, 5, 237)
+btnSystem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSystem", 34, 34, 5, 237 - 34)
 UI_LoadButtonImage( btnSystem, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 315, TRUE)
-UI_SetHint( btnSystem , "Setting (Alt+O)")
+UI_SetHint( btnSystem , "Setting (ESC)")
 
 -------------------------------------------------------------------------
 ---- 定义功能区			--道具          点击btnOpenBag后显示

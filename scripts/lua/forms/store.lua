@@ -7,6 +7,7 @@ UI_AddFormToTemplete(frmStore, FORM_MAIN)
 UI_FormSetIsEscClose(frmStore, TRUE)
 UI_SetIsDrag(frmStore, FALSE)
 UI_SetFormStyle(frmStore, FORM_ALLCENTER)
+UI_FormSetHotKey(frmStore, ALT_KEY, HOTKEY_F)
 setBackground(frmStore, true, 760, 632, 255)
 
 labFormname = UI_CreateCompent(frmStore, LABELEX_TYPE, "labFormname", 760, 14, 0, 20)
