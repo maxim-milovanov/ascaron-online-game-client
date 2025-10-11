@@ -123,32 +123,33 @@ UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 -----------------------------------------------------------------------
 -- 
 -----------------------------------------------------------------------
-frmAcceptGroup = UI_CreateForm( "frmAcceptGroup",  FALSE, 248, 130, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmAcceptGroup, "texture/gui/window-02.png", 248, 118, 0, 0, "", 0, 0 )
+frmAcceptGroup = UI_CreateForm( "frmAcceptGroup",  FALSE, 600, 72, 0, 0, FALSE, FALSE )
+UI_ShowForm(frmAcceptGroup, FALSE )
+UI_AddFormToTemplete(frmAcceptGroup, FORM_MAIN)
+UI_SetIsDrag(frmAcceptGroup, FALSE)
+UI_FormSetIsEscClose(frmAcceptGroup, FALSE)
+UI_SetFormStyleEx(frmAcceptGroup, FORM_CENTERBOTTOM, 0, 160)
 
-UI_ShowForm( frmAcceptGroup, FALSE )
-UI_AddFormToTemplete( frmAcceptGroup, FORM_MAIN )
-UI_SetFormStyle( frmAcceptGroup, 0 )
-UI_SetIsDrag( frmAcceptGroup, TRUE )
-UI_FormSetIsEscClose( frmAcceptGroup, FALSE )
+setBackground(frmAcceptGroup, false, 600, 72, 225)
 
-labGroupName = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroupName", 23, 11, 44, 32 )
+image = UI_CreateCompent(frmAcceptGroup, IMAGE_TYPE,"image", 30, 32, 21, 20)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 30, 32, 475, 937)
+
+labGroupName = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroupName", 23, 11, 72, 20 - 5 )
 UI_SetCaption( labGroupName, "" )
-UI_SetTextColor( labGroupName, COLOR_FFEDCF )
-UI_SetLabelExFont( labGroupName, EXO_Regular_S12, FALSE, COLOR_WHITE )
+UI_SetTextColor( labGroupName, argbColor("ffffff"))
+UI_SetLabelExFont( labGroupName, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-labGroup = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroup", 23, 11, 44, 54 )
+labGroup = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroup", 23, 11, 72, 41 - 4 )
 UI_SetCaption( labGroup, "" )
-UI_SetTextColor( labGroup, COLOR_FFEDCF )
-UI_SetLabelExFont( labGroup, EXO_Regular_S12, FALSE, COLOR_WHITE )
+UI_SetTextColor( labGroup, argbColor("ffffff"))
+UI_SetLabelExFont( labGroup, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-btnYes = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnYes", 93, 32, 23+10, 43+55 )
-UI_LoadButtonImage( btnYes, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
+btnYes = CreateButton(13, frmAcceptGroup, "btnYes", "ACCEPT", EXO_Regular_S16, 130, 42, 455, 15)
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_FormSetEnterButton( frmAcceptGroup, btnYes )
 
-btnNo = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnNo", 93, 32, 119+10, 43+55 )
-UI_LoadButtonImage( btnNo, "texture/gui/friends.png", 93, 32, 93, 494, FALSE )
+btnNo = CreateButton(14, frmAcceptGroup, "btnNo", "CANCEL", EXO_Regular_S16, 130, 42, 315, 15)
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 ------
