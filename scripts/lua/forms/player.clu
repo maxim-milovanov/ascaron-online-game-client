@@ -1,93 +1,85 @@
 -----------------------------------------------------------------------
 -- Player Item Trade
 -----------------------------------------------------------------------	
-frmPlayertrade = UI_CreateForm( "frmPlayertrade", FALSE, 251, 331, 240, 468, TRUE, FALSE )
+frmPlayertrade = UI_CreateForm( "frmPlayertrade", FALSE, 303, 356, 240, 468, TRUE, FALSE )
 --UI_FormSetHotKey( frmPlayertrade, ALT_KEY, HOTKEY_T )
 UI_ShowForm( frmPlayertrade, TRUE )
 UI_SetIsDrag( frmPlayertrade, TRUE )
 UI_AddFormToTemplete( frmPlayertrade, FORM_MAIN )
-UI_SetFormStyle( frmPlayertrade, 1 )---◊Û”“æ”÷–
+UI_SetFormStyle( frmPlayertrade, 1 )
 UI_FormSetIsEscClose( frmPlayertrade, FALSE )
 
-imgBackground = UI_CreateCompent( frmPlayertrade, IMAGE_TYPE, "imgBackground", 251, 331, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/trade.png", NORMAL, 251, 331, 0, 0 )
+setBackground(frmPlayertrade, true, 303, 356, 235)
 
--- from \ to
-labPlayertradeName = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labPlayertradeName", 95, 11, 15, 15 )
-UI_SetCaption( labPlayertradeName, "Wuwuwuw...Ah...Tatatata" )
-UI_SetTextColor( labPlayertradeName, COLOR_968774 )
-UI_SetLabelExFont( labPlayertradeName, FONT016, FALSE, COLOR_WHITE )
+labPlayertradeName = UI_CreateCompent(frmPlayertrade, LABELEX_TYPE, "labPlayertradeName", 313, 14, 0, 20)
+UI_SetCaption(labPlayertradeName, "TRADE WITH")
+UI_SetTextColor(labPlayertradeName, COLOR_WHITE)
+UI_SetLabelExFont(labPlayertradeName, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labPlayertradeName, TRUE)
 
-chkYes = UI_CreateCompent( frmPlayertrade, CHECK_TYPE, "chkYes", 62, 19, 185, 6)
-UI_LoadImage( chkYes, "texture/gui/trade.png", UNCHECKED, 62, 19, 257, 6 )
-UI_LoadImage( chkYes, "texture/gui/trade.png", CHECKED, 62, 19, 257, 42 )
+chkYes = UI_CreateCompent( frmPlayertrade, CHECK_TYPE, "chkYes", 0, 0, 2, 0)
+UI_LoadImage( chkYes, "", UNCHECKED, 0, 0, 0, 0)
+UI_LoadImage( chkYes, "", CHECKED, 0, 0, 0, 0)
 UI_SetIsEnabled( chkYes, FALSE )
 
 chkTrade = UI_CreateCompent( frmPlayertrade, CHECK_TYPE, "chkTrade", 62, 19, 185, 24)
-UI_LoadImage( chkTrade, "texture/gui/trade.png", UNCHECKED, 62, 19, 257, 24 )
-UI_LoadImage( chkTrade, "texture/gui/trade.png", CHECKED, 62, 19, 257, 60 )
+UI_LoadImage( chkTrade, "", UNCHECKED, 0, 0, 0, 0)
+UI_LoadImage( chkTrade, "", CHECKED, 0, 0, 0, 0)
 UI_SetIsEnabled( chkTrade, FALSE )
 
-grdBuy = UI_CreateCompent( frmPlayertrade, GOODS_GRID_TYPE, "grdBuy", 231, 80, 10, 52 ) 
-UI_LoadImage( grdBuy,  "texture/gui/trade.png", NORMAL, 231, 80, 259, 82 )
-UI_SetGridSpace( grdBuy, 7, 7 )
+imgBackgroundGI = UI_CreateCompent(frmPlayertrade, IMAGE_TYPE, "imgBackgroundGI", 243, 110, 30, 50)
+UI_LoadImage(imgBackgroundGI, "./texture/ascaron_ui/tradegrid.png", NORMAL, 243, 110, 0, 0)
+
+grdBuy = UI_CreateCompent( frmPlayertrade, GOODS_GRID_TYPE, "grdBuy", 250, 90, 33, 53 ) 
+UI_SetGridSpace( grdBuy, 9, 9)
 UI_SetGridContent( grdBuy, 2, 6 )
 UI_SetGridUnitSize( grdBuy, 32, 32 )
-UI_SetMargin( grdBuy, 2, 2, 0, 0 )
+UI_SetMargin( grdBuy, 0, 0, 0, 0 )
 UI_SetIsEnabled( grdBuy, FALSE )
 
-imgBackgroundGI = UI_CreateCompent( frmPlayertrade, IMAGE_TYPE, "imgBackgroundGI", 222, 15, 14, 136 )
-UI_LoadImage( imgBackgroundGI, "texture/gui/trade.png", NORMAL, 222, 16, 261, 163 )
-
-labOtherGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherGold", 47, 11, 40, 136 )
+labOtherGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherGold", 47, 11, 62, 140 )
 UI_SetCaption( labOtherGold, "0" )
-UI_SetTextColor( labOtherGold, 4292790446 )
-UI_SetLabelExFont( labOtherGold, EXO_Regular_S12, TRUE, COLOR_BLACK )
+UI_SetTextColor( labOtherGold, argbColor("a3a3a3"))
+UI_SetLabelExFont( labOtherGold, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-labOtherIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherIMP", 47, 11, 159, 136 )
+labOtherIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherIMP", 47, 11, 186, 140 )
 UI_SetCaption( labOtherIMP, "0" )
-UI_SetTextColor( labOtherIMP, 4292790446 )
-UI_SetLabelExFont( labOtherIMP, EXO_Regular_S12, TRUE, COLOR_BLACK )
+UI_SetTextColor( labOtherIMP, argbColor("a3a3a3"))
+UI_SetLabelExFont( labOtherIMP, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-grdSale = UI_CreateCompent( frmPlayertrade, GOODS_GRID_TYPE, "grdSale", 231, 80, 10, 163 ) 
-UI_LoadImage( grdSale,  "texture/gui/trade.png", NORMAL, 231, 80, 259, 82 )
-UI_SetGridSpace( grdSale, 7, 7 )
+CreateImageGrid(frmPlayertrade, 6, 2, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 30, 167)
+grdSale = UI_CreateCompent( frmPlayertrade, GOODS_GRID_TYPE, "grdSale", 250, 90, 33, 170 ) 
+UI_SetGridSpace( grdSale, 9, 9)
 UI_SetGridContent( grdSale, 2, 6 )
 UI_SetGridUnitSize( grdSale, 32, 32 )
-UI_SetMargin( grdSale, 2, 2, 0, 0 )
+UI_SetMargin( grdSale, 0, 0, 0, 0 )
 
-imgBackground = UI_CreateCompent( frmPlayertrade, IMAGE_TYPE, "imgBackground", 222, 15, 14, 247 )
-UI_LoadImage( imgBackground, "texture/gui/trade.png", NORMAL, 222, 16, 261, 163 )
+image = UI_CreateCompent(frmPlayertrade, IMAGE_TYPE, "image", 243, 26, 30, 251)
+UI_LoadImage(image, "./texture/ascaron_ui/tradegrid.png", NORMAL, 243, 26, 0, 84)
 
-labSelfGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfGold", 47, 11, 40, 247 )
+labSelfGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfGold", 47, 11, 62, 257 )
 UI_SetCaption( labSelfGold, "0" )
-UI_SetTextColor( labSelfGold, 4292790446 )
+UI_SetTextColor( labSelfGold, argbColor("a3a3a3") )
 UI_SetLabelExFont( labSelfGold, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-btnGold = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnGold", 24, 20, 12, 246 )
-UI_LoadButtonImage( btnGold, "texture/gui/trade.png", 24, 20, 259, 187, TRUE )
+btnGold = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnGold", 115, 42, 30, 251 )
+UI_LoadButtonImage( btnGold, "", 1, 1, 0, 0, TRUE )
 UI_SetHint( btnGold, "Click here to input gold for trade" )
 
-labSelfIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfIMP", 47, 11, 159, 247 )
+labSelfIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfIMP", 115, 42, 186, 257 )
 UI_SetCaption( labSelfIMP, "0" )
-UI_SetTextColor( labSelfIMP, 4292790446 )
+UI_SetTextColor( labSelfIMP, argbColor("a3a3a3") )
 UI_SetLabelExFont( labSelfIMP, EXO_Regular_S12, FALSE, COLOR_BLACK )
 
-btnIMP = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnIMP", 25, 20, 131, 246 )
-UI_LoadButtonImage( btnIMP, "texture/gui/trade.png", 24, 20, 259, 187, TRUE )
-UI_SetHint( btnIMP, "Click here to input Piastres for trade" )
+btnIMP = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnIMP", 115, 42, 158, 251)
+UI_LoadButtonImage( btnIMP, "", 1, 1, 0, 0, TRUE )
+UI_SetHint( btnIMP, "Click here to input Crystal for trade" )
 
 -- Confirm Button
-btnYes = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnYes", 72, 37, 12, 280 )
-UI_LoadButtonImage( btnYes, "texture/gui/trade.png", 72, 37, 259, 209, FALSE )
+btnYes = CreateButton(13, frmPlayertrade, "btnYes", "CONFIRM", EXO_Regular_S14, 115, 42, 30, 287)
 
 -- Trade Button
-btnTrade = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnTrade", 72, 37, 89, 280 )
-UI_LoadButtonImage( btnTrade, "texture/gui/trade.png", 72, 37, 331, 209, FALSE )
-
--- Cancel Button
-btnNo = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnNo", 72, 37, 167, 280 )
-UI_LoadButtonImage( btnNo, "texture/gui/trade.png", 72, 37, 403, 209, FALSE )
+btnTrade = CreateButton(13, frmPlayertrade, "btnTrade", "TRADE", EXO_Regular_S14, 115, 42, 158, 287)
 
 -----------------------------------------------------------------------
 -- add to friends

@@ -21,86 +21,27 @@ setScroll(memCtrl)
 -----------------------------------------------------------------------
 -- NPC Trade
 -----------------------------------------------------------------------	
-frmNPCtrade = UI_CreateForm( "frmNPCtrade", FALSE, 179, 368, 240, 168, TRUE, FALSE )
+frmNPCtrade = UI_CreateForm( "frmNPCtrade", FALSE, 261, 250, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmNPCtrade, TRUE )
 UI_AddFormToTemplete( frmNPCtrade, FORM_MAIN )
 UI_SetIsDrag( frmNPCtrade, TRUE )
 
-imgBackground = UI_CreateCompent( frmNPCtrade, IMAGE_TYPE, "imgBackground", 179, 368, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/npc-trade.png", NORMAL, 179, 368, 0, 0 )
+setBackground(frmNPCtrade, true, 261, 250, 235)
 
-btnClose = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnClose", 32, 32, 140, 7 )
-UI_LoadButtonImage( btnClose, "texture/gui/Inventory.png", 32, 32, 0, 368, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+labFormname = UI_CreateCompent(frmNPCtrade, LABELEX_TYPE, "labFormname", 261, 14, 0, 20)
+UI_SetCaption(labFormname, "NPC TRADE" )
+UI_SetTextColor(labFormname, COLOR_WHITE )
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
-grdNPCtradeWeapon = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeWeapon", 160, 273, 11, 93 ) 
-UI_SetGridSpace( grdNPCtradeWeapon, 7, 7 )
-UI_SetGridContent( grdNPCtradeWeapon, 30, 4 )
-UI_SetGridUnitSize( grdNPCtradeWeapon, 32, 32 )
-UI_SetMargin( grdNPCtradeWeapon, 0, 0, 0, 0 )
+CreateImageGrid(frmNPCtrade, 4, 4, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
 
-scrollid = UI_GetScroll(grdNPCtradeWeapon)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-grdNPCtradeEquip = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeEquip", 160, 273, 11, 93 ) 
-UI_SetGridSpace( grdNPCtradeEquip, 7, 7 )
-UI_SetGridContent( grdNPCtradeEquip, 30, 4 )
-UI_SetGridUnitSize( grdNPCtradeEquip, 32, 32 )
-UI_SetMargin( grdNPCtradeEquip, 0, 0, 0, 0 )
-
-scrollid = UI_GetScroll(grdNPCtradeEquip)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-grdNPCtradeOther = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeOther", 160, 273, 11, 93 ) 
-UI_SetGridSpace( grdNPCtradeOther, 7, 7 )
-UI_SetGridContent( grdNPCtradeOther, 30, 4 )
-UI_SetGridUnitSize( grdNPCtradeOther, 32, 32 )
-UI_SetMargin( grdNPCtradeOther, 0, 0, 0, 0 )
-
-scrollid = UI_GetScroll(grdNPCtradeOther)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
-
-pgeNPCtrade = UI_CreateCompent( frmNPCtrade, PAGE_TYPE, "pgeNPCtrade", 179, 368, 0, 0 )
-UI_SetPageButton( pgeNPCtrade, PAGE_BUTTON_CUSTOM, 39, 19 )
-
-itemid = UI_CreatePageItem( pgeNPCtrade )
-ttlWeapon = UI_GetPageItemObj( itemid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlWeapon, "texture/gui/npc-trade.png", PAGE_ITEM_TITLE_NORMAL, 14, 14, 0, 371 )
-UI_LoadImage( ttlWeapon, "texture/gui/npc-trade.png", PAGE_ITEM_TITLE_ACTIVE, 14, 14, 17, 371 )
-UI_SetPos( ttlWeapon, 46, 62 )
-UI_SetSize( ttlWeapon, 14, 14 )
-UI_AddCompent( itemid, grdNPCtradeWeapon )
-
-itemid = UI_CreatePageItem( pgeNPCtrade )
-ttlEquip = UI_GetPageItemObj( itemid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlEquip, "texture/gui/npc-trade.png", PAGE_ITEM_TITLE_NORMAL, 14, 14, 35, 371 )
-UI_LoadImage( ttlEquip, "texture/gui/npc-trade.png", PAGE_ITEM_TITLE_ACTIVE, 14, 14, 52, 371 )
-UI_SetPos( ttlEquip, 46+35, 62 )
-UI_SetSize( ttlEquip, 14, 14 )
-UI_AddCompent( itemid, grdNPCtradeEquip )
-
-itemid = UI_CreatePageItem( pgeNPCtrade )
-ttlOther = UI_GetPageItemObj( itemid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlOther, "texture/gui/npc-trade.png", PAGE_ITEM_TITLE_NORMAL, 14, 14, 71, 371 )
-UI_LoadImage( ttlOther, "texture/gui/npc-trade.png", PAGE_ITEM_TITLE_ACTIVE, 14, 14, 88, 371 )
-UI_SetPos( ttlOther, 46+70, 62 )
-UI_SetSize( ttlOther, 14, 14 )
-UI_AddCompent( itemid, grdNPCtradeOther )
+grdNPCtradeWeapon = UI_CreateCompent(frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeWeapon", 180, 165, 53, 53) 
+UI_SetGridSpace(grdNPCtradeWeapon, 9, 9)
+UI_SetGridContent(grdNPCtradeWeapon, 30, 4)
+UI_SetGridUnitSize(grdNPCtradeWeapon, 32, 32)
+UI_SetMargin(grdNPCtradeWeapon, 0, 0, 0, 0)
+setScroll(grdNPCtradeWeapon)
 
 -----------------------------------------------------------------------
 -- 定义NPC交易数量

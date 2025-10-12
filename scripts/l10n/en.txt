@@ -958,7 +958,7 @@
 [958]	"winterland"
 [959]	"Are you sure you want to drop item\n[%s]?"
 [960]	"You cannot insert apparel into slot for equip!"
-[961]	"Please input IMP"
+[961]	"Please input crystal"
 [962]	"Can't be trade"
 [963]	"Can't be thrown"
 [964]	"Can't be deleted"

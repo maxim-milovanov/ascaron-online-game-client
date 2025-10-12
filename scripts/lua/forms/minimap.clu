@@ -61,7 +61,7 @@ UI_LoadButtonImage( btnSetTrade, "./texture/ascaron_ui/asc-part-01.png", 40, 40,
 
 btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 40, 40, 31 + 49 + 49, 247)
 UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
-UI_SetHint(btnTeleports, "Store (Alt + F)")
+UI_SetHint(btnOpenStore, "Store (Alt + F)")
 UI_SetAlpha(btnOpenStore, 220)
 
 -----------------------------------------------------------------------
