@@ -95,12 +95,12 @@ UI_SetHint(btnAmi, "Ami")
 -----------------------------------------------------------------------
 -- Select job
 -----------------------------------------------------------------------
-frmSetJob = UI_CreateForm( "frmSetJob", FALSE, 350, 118, 50, 250, TRUE, FALSE )
+frmSetJob = UI_CreateForm( "frmSetJob", FALSE, 310, 224, 50, 250, TRUE, FALSE )
 UI_ShowForm( frmSetJob, TRUE )
 UI_SetIsDrag(frmSetJob, FALSE)
 UI_FormSetIsEscClose( frmSetJob, FALSE )
 
-setBackground(frmSetJob, false, 350, 118, 255)
+setBackground(frmSetJob, false, 310, 224, 255)
 
 labFormname = UI_CreateCompent(frmSetJob, LABELEX_TYPE, "labFormname", 350, 14, 0, 20)
 UI_SetCaption(labFormname, "JOB")
@@ -108,30 +108,29 @@ UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labFormname, TRUE)
 
-btnChampion = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnChampion", 40, 40, 30, 44)
-UI_LoadButtonImage(btnChampion, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnChampion = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnChampion", 70, 70, 30, 44)
+UI_LoadButtonImage(btnChampion, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 265, 182, FALSE)
 UI_SetHint(btnChampion, "Champion")
 
-btnCrusader = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnCrusader", 40, 40, 80, 44)
-UI_LoadButtonImage(btnCrusader, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnCrusader = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnCrusader", 70, 70, 120, 44)
+UI_LoadButtonImage(btnCrusader, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 335, 182, FALSE)
 UI_SetHint(btnCrusader, "Crusader")
 
-btnSharpshooter = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnSharpshooter", 40, 40, 130, 44)
-UI_LoadButtonImage(btnSharpshooter, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnSharpshooter = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnSharpshooter", 70, 70, 210, 44)
+UI_LoadButtonImage(btnSharpshooter, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 405, 182, FALSE)
 UI_SetHint(btnSharpshooter, "Sharpshooter")
 
-btnCleric = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnCleric", 40, 40, 180, 44)
-UI_LoadButtonImage(btnCleric, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnCleric = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnCleric", 70, 70, 30, 134)
+UI_LoadButtonImage(btnCleric, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 475, 182, FALSE)
 UI_SetHint(btnCleric, "Cleric")
 
-btnSealMaster = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnSealMaster", 40, 40, 230, 44)
-UI_LoadButtonImage(btnSealMaster, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnSealMaster = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnSealMaster", 70, 70, 120, 134)
+UI_LoadButtonImage(btnSealMaster, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 545, 182, FALSE)
 UI_SetHint(btnSealMaster, "Seal Master")
 
-btnVoyager = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnVoyager", 40, 40, 280, 44)
-UI_LoadButtonImage(btnVoyager, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnVoyager = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnVoyager", 70, 70, 210, 134)
+UI_LoadButtonImage(btnVoyager, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 615, 182, FALSE)
 UI_SetHint(btnVoyager, "Voyage")
-
 
 -----------------------------------------------------------------------
 -- Select hair
@@ -194,16 +193,15 @@ UI_AddFormToTemplete( frmSetName, FORM_SELECT )
 UI_SetFormStyle(frmSetName, 12)
 UI_FormSetIsEscClose( frmSetName, FALSE )
 
-imgInput1 = UI_CreateCompent( frmSetName, IMAGE_TYPE, "imgInput1", 420, 55, 165, 0)
-UI_LoadImage( imgInput1, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 20, 20)
+setBackgroundMiddle(frmSetName, 340, 54, 255, 205, 0)
 
-editName = UI_CreateCompent(frmSetName, EDIT_TYPE, "editName", 420, 20, 185, 17 )
+editName = UI_CreateCompent(frmSetName, EDIT_TYPE, "editName", 340, 20, 235, 18 )
 UI_SetTextColor(editName, argbColor("c0c0c0") )
-UI_SetEditMaxNum(editName, 20 )
-UI_SetEditMaxNumVisible(editName, 20 )
+--UI_SetEditMaxNum(editName, 20 )
+--UI_SetEditMaxNumVisible(editName, 20 )
 UI_SetEditCursorColor(editName, argbColor("c0c0c0") )
-UI_SetEditFont(editName, EXO_Regular_S20 )
-UI_SetEditClue(editName, "New character name", argbColor("908a92"))
+UI_SetEditFont(editName, EXO_Regular_S14 )
+UI_SetEditClue(editName, "Please enter the character's name*", argbColor("908a92"))
 
 -- background
 imgSelect = UI_CreateCompent(frmSetName, IMAGE_TYPE, "imgSelect", 750, 90, 0, 65)
@@ -211,7 +209,7 @@ UI_LoadImage(imgSelect, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 750, 90,
 
 -- Back
 btnBack = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnBack", 60, 60, 15, 15 + 65 )
-UI_LoadButtonImage( btnBack, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 889, TRUE )
+UI_LoadButtonImage( btnBack, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 958, 271, FALSE )
 
 -- Delete
 btnDel = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnDel", 60, 60, 90, 15  + 65 )
