@@ -1145,37 +1145,46 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 -----------------------------------------------------------------------
 -- Analyze
 -----------------------------------------------------------------------
-frmBreak = UI_CreateForm( "frmBreak", FALSE, 302, 422, 0, 0, TRUE, FALSE )
+frmBreak = UI_CreateForm( "frmBreak", FALSE, 231, 332, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmBreak, FALSE )
 UI_AddFormToTemplete( frmBreak, FORM_MAIN )
 UI_FormSetIsEscClose( frmBreak, TRUE )
 UI_SetIsDrag( frmBreak,TRUE)
 UI_SetFormStyle( frmBreak,2)
 
-imgBackground = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBackground", 302, 422, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/life-analyze.png", NORMAL, 302, 422, 0, 0 )
+setBackground(frmBreak, true, 231, 332, 235)
 
-cmdItemBase3 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 135, 101 )
+labFormname = UI_CreateCompent(frmBreak, LABELEX_TYPE, "labFormname", 231, 14, 0, 20)
+UI_SetCaption( labFormname, "ANALYZE" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmBreak, IMAGE_TYPE, "image", 54, 54, 85, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmBreak, IMAGE_TYPE, "image", 54, 54, 85, 114)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmBreak, IMAGE_TYPE, "image", 54, 54, 85, 178)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+cmdItemBase3 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 85 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase3, "Catalyst")
 
-cmdItemBase2 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32, 135, 159 )
+cmdItemBase2 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32, 85 + 11, 114 + 11 )
 UI_SetHint(cmdItemBase2, "Equip")
 
-cmdItemBase1 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 135, 217 )
+cmdItemBase1 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 85 + 11, 178 + 11 )
 UI_SetHint(cmdItemBase1, "Particle Crystal")
 
-imgBreakFrame = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBreakFrame", 286, 7, 8, 285 )
-UI_LoadImage( imgBreakFrame, "texture/gui/life-butchering.png", NORMAL, 286, 7, 0, 425 )
+image = UI_CreateCompent( frmBreak, IMAGE_TYPE, "image", 171, 19, 30, 242 )
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 171, 19, 651, 1216)
 
-proBreak = UI_CreateCompent( frmBreak, PROGRESS_TYPE, "proBreak", 282, 4, 10, 287 )
-UI_LoadImage( proBreak, "texture/gui/life-butchering.png", PROGRESS_PROGRESS, 282, 4, 0, 433)
+proBreak = UI_CreateCompent( frmBreak, PROGRESS_TYPE, "proBreak", 165, 13, 33, 245 )
+UI_LoadImage( proBreak, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 165, 13, 651, 1239)
 
-btnForgeYes = UI_CreateCompent( frmBreak, BUTTON_TYPE, "btnForgeYes", 140, 42, 57, 345 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/life-butchering.png", 140, 42, 307, 0, FALSE )
-
-btnClose = UI_CreateCompent( frmBreak, BUTTON_TYPE, "btnClose", 42, 42, 203, 345 )
-UI_LoadButtonImage( btnClose, "texture/gui/life-butchering.png", 42, 42, 307, 172, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmBreak, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 33, 271)
 
 ------
 -- Butchering
@@ -1215,170 +1224,201 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 --------------------------------------------------------------------
 -- Crafting
 -----------------------------------------------------------------------
-frmFound = UI_CreateForm( "frmFound", FALSE, 302, 422, 0, 0, TRUE, FALSE )
+frmFound = UI_CreateForm( "frmFound", FALSE, 282, 445, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmFound, FALSE )
 UI_AddFormToTemplete( frmFound, FORM_MAIN )
 UI_FormSetIsEscClose( frmFound, TRUE )
 UI_SetIsDrag( frmFound,TRUE)
 UI_SetFormStyle( frmFound,2)
 
-imgBackground = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgBackground", 302, 422, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/life-craft.png", NORMAL, 302, 422, 0, 0 )
+setBackground(frmFound, true, 282, 445, 235)
 
-cmdItemBase1 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 84, 255 )
+labFormname = UI_CreateCompent(frmFound, LABELEX_TYPE, "labFormname", 282, 14, 0, 20)
+UI_SetCaption( labFormname, "CRAFTING" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 72, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 156, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 30, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 114, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 198, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 114, 218)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+cmdItemBase1 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 72 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase1,"Blueprint")
 
-cmdItemBase2 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32,	187, 255 )
+cmdItemBase2 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32, 156 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase2,"Tool")
 
-cmdItemBase3 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 51, 157 )
+cmdItemBase3 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 30 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase3,"Material 1")
 
-cmdItemBase4 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase4", 32, 32, 135, 96 )
+cmdItemBase4 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase4", 32, 32, 114 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase4,"Material 2")
 
-cmdItemBase5 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase5", 32, 32, 218, 157 )
+cmdItemBase5 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase5", 32, 32, 198 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase5,"Material 3")
 
-cmdItemBase6 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase6", 32, 32, 135, 184 )
+cmdItemBase6 = UI_CreateCompent( frmFound, COMMAND_ONE_TYPE, "cmdItemBase6", 32, 32, 114 + 11, 218 + 11 )
 UI_SetHint(cmdItemBase6, "Product")
 
-------
-
-imgShaiZi1_1 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_1", 32, 32, 84, 296 )
+imgShaiZi1_1 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_1", 32, 32, 63, 292 )
 UI_LoadImage( imgShaiZi1_1, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 0, 182 )
 -- UI_SetIsShow(imgShaiZi1_1,FALSE)
 
-imgShaiZi1_2 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_2", 32, 32, 84, 296 )
+imgShaiZi1_2 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_2", 32, 32, 63, 292 )
 UI_LoadImage( imgShaiZi1_2, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 36, 182 )
 UI_SetIsShow(imgShaiZi1_2,FALSE)
 
-imgShaiZi1_3 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_3", 32, 32, 84, 296 )
+imgShaiZi1_3 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_3", 32, 32, 63, 292 )
 UI_LoadImage( imgShaiZi1_3, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 72, 182 )
 UI_SetIsShow(imgShaiZi1_3,FALSE)
 
-imgShaiZi1_4 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_4", 32, 32, 84, 296 )
+imgShaiZi1_4 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_4", 32, 32, 63, 292 )
 UI_LoadImage( imgShaiZi1_4, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 108, 182 )
 UI_SetIsShow(imgShaiZi1_4,FALSE)
 
-imgShaiZi1_5 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_5", 32, 32, 84, 296 )
+imgShaiZi1_5 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_5", 32, 32, 63, 292 )
 UI_LoadImage( imgShaiZi1_5, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 144, 182 )
 UI_SetIsShow(imgShaiZi1_5,FALSE)
 
-imgShaiZi1_6 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_6", 32, 32, 84, 296 )
+imgShaiZi1_6 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi1_6", 32, 32, 63, 292 )
 UI_LoadImage( imgShaiZi1_6, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 180, 182 )
 UI_SetIsShow(imgShaiZi1_6,FALSE)
 
-imgShaiZi2_1 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_1", 32, 32, 135, 296 )
+imgShaiZi2_1 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_1", 32, 32, 125, 292 )
 UI_LoadImage( imgShaiZi2_1, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 0, 182 )
 -- UI_SetIsShow(imgShaiZi2_1,FALSE)
 
-imgShaiZi2_2 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_2", 32, 32, 135, 296 )
+imgShaiZi2_2 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_2", 32, 32, 125, 292 )
 UI_LoadImage( imgShaiZi2_2, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 36, 182 )
 UI_SetIsShow(imgShaiZi2_2,FALSE)
 
-imgShaiZi2_3 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_3", 32, 32, 135, 296 )
+imgShaiZi2_3 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_3", 32, 32, 125, 292 )
 UI_LoadImage( imgShaiZi2_3, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 72, 182 )
 UI_SetIsShow(imgShaiZi2_3,FALSE)
 
-imgShaiZi2_4 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_4", 32, 32, 135, 296 )
+imgShaiZi2_4 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_4", 32, 32, 125, 292 )
 UI_LoadImage( imgShaiZi2_4, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 108, 182 )
 UI_SetIsShow(imgShaiZi2_4,FALSE)
 
-imgShaiZi2_5 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_5", 32, 32, 135, 296 )
+imgShaiZi2_5 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_5", 32, 32, 125, 292 )
 UI_LoadImage( imgShaiZi2_5, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 144, 182 )
 UI_SetIsShow(imgShaiZi2_5,FALSE)
 
-imgShaiZi2_6 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_6", 32, 32, 135, 296 )
+imgShaiZi2_6 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi2_6", 32, 32, 125, 292 )
 UI_LoadImage( imgShaiZi2_6, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 180, 182 )
 UI_SetIsShow(imgShaiZi2_6,FALSE)
 
-imgShaiZi3_1 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_1", 32, 32, 187, 296 )
+imgShaiZi3_1 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_1", 32, 32, 187, 292 )
 UI_LoadImage( imgShaiZi3_1, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 0, 182 )
 -- UI_SetIsShow(imgShaiZi3_1,FALSE)
 
-imgShaiZi3_2 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_2", 32, 32, 187, 296 )
+imgShaiZi3_2 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_2", 32, 32, 187, 292 )
 UI_LoadImage( imgShaiZi3_2, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 36, 182 )
 UI_SetIsShow(imgShaiZi3_2,FALSE)
 
-imgShaiZi3_3 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_3", 32, 32, 187, 296 )
+imgShaiZi3_3 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_3", 32, 32, 187, 292 )
 UI_LoadImage( imgShaiZi3_3, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 72, 182 )
 UI_SetIsShow(imgShaiZi3_3,FALSE)
 
-imgShaiZi3_4 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_4", 32, 32, 187, 296 )
+imgShaiZi3_4 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_4", 32, 32, 187, 292 )
 UI_LoadImage( imgShaiZi3_4, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 108, 182 )
 UI_SetIsShow(imgShaiZi3_4,FALSE)
 
-imgShaiZi3_5 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_5", 32, 32, 187, 296 )
+imgShaiZi3_5 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_5", 32, 32, 187, 292 )
 UI_LoadImage( imgShaiZi3_5, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 144, 182 )
 UI_SetIsShow(imgShaiZi3_5,FALSE)
 
-imgShaiZi3_6 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_6", 32, 32, 187, 296 )
+imgShaiZi3_6 = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgShaiZi3_6", 32, 32, 187, 292 )
 UI_LoadImage( imgShaiZi3_6, "./texture/gui/old_gui/Progress.tga", NORMAL, 36, 36, 180, 182 )
 UI_SetIsShow(imgShaiZi3_6,FALSE)
 
-btnBigBig = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnBigBig", 82, 42, 26, 91 )
-UI_LoadButtonImage( btnBigBig, "texture/gui/life-craft.png", 82, 42, 308, 0, FALSE )
+btnBigBig = CreateButton(15, frmFound, "btnBigBig", "BIG", EXO_Regular_S12, 54, 42, 198, 224)
+btnSmallSmall = CreateButton(15, frmFound, "btnSmallSmall", "SMALL", EXO_Regular_S12, 54, 42, 30, 224)
 
-btnSmallSmall = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnSmallSmall", 82, 42, 191, 91 )
-UI_LoadButtonImage( btnSmallSmall, "texture/gui/life-craft.png", 82, 42, 393, 0, FALSE )
+imgFoundFrame = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgFoundFrame", 222, 19, 30, 344 )
+UI_LoadImage( imgFoundFrame, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 222, 19, 383, 1102)
 
-imgFoundFrame = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgFoundFrame", 286, 7, 8, 285+50 )
-UI_LoadImage( imgFoundFrame, "texture/gui/life-butchering.png", NORMAL, 286, 7, 0, 425 )
+proFound = UI_CreateCompent( frmFound, PROGRESS_TYPE, "proFound", 215, 13, 34, 347 )
+UI_LoadImage( proFound, "./texture/ascaron_ui/asc-part-02.png", PROGRESS_PROGRESS, 215, 13, 383, 1123)
 
-proFound = UI_CreateCompent( frmFound, PROGRESS_TYPE, "proFound", 282, 4, 10, 287+50 )
-UI_LoadImage( proFound, "texture/gui/life-butchering.png", PROGRESS_PROGRESS, 282, 4, 0, 433)
-
-btnForgeYes = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnForgeYes", 140, 42, 57, 345+10 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/life-butchering.png", 140, 42, 307, 0, FALSE )
-
-btnClose = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnClose", 42, 42, 203, 345+10 )
-UI_LoadButtonImage( btnClose, "texture/gui/life-butchering.png", 42, 42, 307, 172, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmFound, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 57, 383)
 
 -----------------------------------------------------------------------
 -- Cooking
 -----------------------------------------------------------------------
-frmCooking = UI_CreateForm( "frmCooking", FALSE, 302, 422, 0, 0, TRUE, FALSE )
+frmCooking = UI_CreateForm( "frmCooking", FALSE, 282, 373, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmCooking, FALSE )
 UI_AddFormToTemplete( frmCooking, FORM_MAIN )
 UI_FormSetIsEscClose( frmCooking, TRUE )
 UI_SetIsDrag( frmCooking,TRUE)
 UI_SetFormStyle( frmCooking,2)
 
-imgBackground = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgBackground", 302, 422, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/life-cooking.png", NORMAL, 302, 422, 0, 0 )
+setBackground(frmCooking, true, 282, 373, 235)
 
-cmdItemBase1 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 84, 255 )
+labFormname = UI_CreateCompent(frmCooking, LABELEX_TYPE, "labFormname", 282, 14, 0, 20)
+UI_SetCaption( labFormname, "COOKING" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 72, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 156, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 30, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 114, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 198, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 114, 218)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+cmdItemBase1 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 72 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase1,"Blueprint")
 
-cmdItemBase2 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32,	187, 255 )
+cmdItemBase2 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32,	156 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase2,"Tool")
 
-cmdItemBase3 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 51, 157 )
+cmdItemBase3 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 30 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase3,"Material 1")
 
-cmdItemBase4 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase4", 32, 32, 135, 96 )
+cmdItemBase4 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase4", 32, 32, 114 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase4,"Material 2")
 
-cmdItemBase5 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase5", 32, 32, 218, 157 )
+cmdItemBase5 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase5", 32, 32, 198 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase5,"Material 3")
 
-cmdItemBase6 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase6", 32, 32, 135, 184 )
+cmdItemBase6 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase6", 32, 32, 114 + 11, 218 + 11 )
 UI_SetHint(cmdItemBase6, "Product")
 
-imgCookingFrame = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgCookingFrame", 286, 7, 8, 285+50 )
-UI_LoadImage( imgCookingFrame, "texture/gui/life-butchering.png", NORMAL, 286, 7, 0, 425 )
+imgCookingFrame = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgCookingFrame", 222, 19, 30, 282 )
+UI_LoadImage( imgCookingFrame, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 222, 19, 383, 1102)
 
-proCooking = UI_CreateCompent( frmCooking, PROGRESS_TYPE, "proCooking", 282, 4, 10, 287+50 )
-UI_LoadImage( proCooking, "texture/gui/life-butchering.png", PROGRESS_PROGRESS, 282, 4, 0, 433)
+proCooking = UI_CreateCompent( frmCooking, PROGRESS_TYPE, "proCooking", 215, 13, 34, 285 )
+UI_LoadImage( proCooking, "./texture/ascaron_ui/asc-part-02.png", PROGRESS_PROGRESS, 215, 13, 383, 1123)
 
-btnForgeYes = UI_CreateCompent( frmCooking, BUTTON_TYPE, "btnForgeYes", 140, 42, 57, 345+10 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/life-butchering.png", 140, 42, 307, 0, FALSE )
-
-btnClose = UI_CreateCompent( frmCooking, BUTTON_TYPE, "btnClose", 42, 42, 203, 345+10 )
-UI_LoadButtonImage( btnClose, "texture/gui/life-butchering.png", 42, 42, 307, 172, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmCooking, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 58, 311)
 
 ------
 -- 
