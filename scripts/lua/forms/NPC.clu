@@ -175,40 +175,63 @@ btnNo = UI_CreateCompent( frmNPCMission, BUTTON_TYPE, "btnNo", 111, 43, 140 + 28
 UI_LoadButtonImage( btnNo, "texture/gui/botton.png", 139, 54, 232, 43, FALSE )
 
 -----------------------------------------------------------------------
--- 定义NPC精练
+-- Forge equip \ Socket set
 -----------------------------------------------------------------------	
-frmNPCforge = UI_CreateForm( "frmNPCforge", FALSE, 407, 278, 240, 70, TRUE, FALSE )
+frmNPCforge = UI_CreateForm( "frmNPCforge", FALSE, 400, 285, 240, 70, TRUE, FALSE )
 UI_ShowForm( frmNPCforge, TRUE )
 UI_AddFormToTemplete( frmNPCforge, FORM_MAIN )
 UI_SetFormStyle( frmNPCforge, 2 )
 UI_SetIsDrag( frmNPCforge, TRUE )
 
-imgBak = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgBak", 407, 278, 0, 0 )
-UI_LoadImage( imgBak, "texture/gui/forging.png", NORMAL, 407, 278, 0, 0 )
+setBackground(frmNPCforge, true, 400, 285, 235)
 
-cmdForgeItem0 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem0", 32, 32, 20, 25 )	-- 精炼道具
-cmdForgeItem1 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem1", 32, 32, 20, 77 )	-- 原料1
-cmdForgeItem2 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem2", 32, 32, 20, 129 )	-- 原料2
+labFormname = UI_CreateCompent(frmNPCforge, LABELEX_TYPE, "labFormname", 400, 14, 0, 20)
+UI_SetCaption( labFormname, "FORGE EQUIPMENT" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmNPCforge, IMAGE_TYPE, "image", 38, 38, 30, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmNPCforge, IMAGE_TYPE, "image", 38, 38, 30, 98)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmNPCforge, IMAGE_TYPE, "image", 38, 38, 30, 146)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmNPCforge, IMAGE_TYPE, "image", 162, 40, 30, 224)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 269, 40, 270, 1173)
+
+image = UI_CreateCompent(frmNPCforge, IMAGE_TYPE, "image", 30, 30, 35, 229)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
+
+cmdForgeItem0 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem0", 32, 32, 33, 53 )
+cmdForgeItem1 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem1", 32, 32, 33, 101 )
+cmdForgeItem2 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem2", 32, 32, 33, 149 )
 UI_SetHint( cmdForgeItem0, "Forge item" )
 UI_SetHint( cmdForgeItem1, "Attribute Gem" )
 UI_SetHint( cmdForgeItem2, "Refining Gem" )
 
-labForgeGold = UI_CreateCompent( frmNPCforge, LABELEX_TYPE, "labForgeGold", 140, 12, 30, 247-17 )
-UI_SetCaption( labForgeGold, "" )
-UI_SetTextColor( labForgeGold, COLOR_A29688 )
-UI_SetLabelExFont( labForgeGold, EXO_Regular_S12, FALSE, COLOR_WHITE )
+labForgeGold = UI_CreateCompent( frmNPCforge, LABELEX_TYPE, "labForgeGold", 112, 12, 70, 236 )
+UI_SetCaption( labForgeGold, "0" )
+UI_SetTextColor( labForgeGold, argbColor("a3a3a3"))
+UI_SetLabelExFont( labForgeGold, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-proNPCforge = UI_CreateCompent( frmNPCforge, PROGRESS_TYPE, "proNPCforge", 359, 7, 26, 189 )
-UI_LoadImage( proNPCforge, "texture/gui/forging.png", PROGRESS_PROGRESS, 359, 7, 26, 288 )
+image = UI_CreateCompent(frmNPCforge, IMAGE_TYPE, "image", 340, 19, 35, 194)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 340, 19, 306, 1216)
 
-memForgeItemState = UI_CreateCompent( frmNPCforge, MEMO_TYPE, "memForgeItemState", 294, 124, 82, 54 )
+proNPCforge = UI_CreateCompent( frmNPCforge, PROGRESS_TYPE, "proNPCforge", 333, 13, 33, 197)
+UI_LoadImage( proNPCforge, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 333, 13, 306, 1239)
+
+memForgeItemState = UI_CreateCompent( frmNPCforge, MEMO_TYPE, "memForgeItemState", 294, 170, 82, 54 )
 UI_SetTextColor( memForgeItemState, COLOR_BLACK )
 UI_SetMemoMaxNumPerRow( memForgeItemState, 24 )
 UI_SetMemoPageShowNum( memForgeItemState, 7 )
 UI_SetMemoRowHeight( memForgeItemState, 17 )
 
-lstForgeItemState = UI_CreateCompent( frmNPCforge, LIST_TYPE, "lstForgeItemState", 294, 124, 82-14, 54-21 )
-UI_SetListRowHeight( lstForgeItemState, 17 )
+lstForgeItemState = UI_CreateCompent( frmNPCforge, LIST_TYPE, "lstForgeItemState", 294, 170, 82, 54 )
+UI_SetListRowHeight( lstForgeItemState, 18 )
 UI_SetListFontColor( lstForgeItemState, 4293591039, 4293591039 )
 UI_SetMargin( lstForgeItemState, 8,3,6,0 )
 UI_SetIsShow( lstForgeItemState, TRUE )
@@ -220,15 +243,8 @@ UI_AddListText( lstForgeItemState, "" )
 UI_AddListText( lstForgeItemState, "" )
 UI_AddListText( lstForgeItemState, "" )
 
-btnForgeYes = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnForgeYes", 90, 46, 186, 213 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/forging.png", 90, 46, 409, 0, FALSE )
-
-btnMillingYes = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnMillingYes", 90, 46, 186, 213 )
-UI_LoadButtonImage( btnMillingYes, "texture/gui/forging.png", 90, 46, 409, 0, FALSE )
-
-btnForgeNo = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnForgeNo", 90, 46, 286, 213 )
-UI_LoadButtonImage( btnForgeNo, "texture/gui/make-equip.png", 90, 46, 353, 0, FALSE )
-UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmNPCforge, "btnForgeYes", "FORGE", EXO_Regular_S16, 165, 42, 205, 223)
+btnMillingYes = CreateButton(4, frmNPCforge, "btnMillingYes", "SET SOCKET", EXO_Regular_S16, 165, 42, 205, 223)
 
 -----------------------------------------------------------------------
 -- 定义NPC打磨
@@ -292,58 +308,61 @@ btnShineNo = UI_CreateCompent( frmNPCshine, BUTTON_TYPE, "btnShineNo", 41, 19, 1
 UI_LoadButtonImage( btnShineNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 -----------------------------------------------------------------------
--- 
+-- Combine stone \ Upgrade equip
 -----------------------------------------------------------------------	
-frmMakeEquip = UI_CreateForm( "frmMakeEquip", FALSE, 251, 368, 240, 70, TRUE, FALSE )
+frmMakeEquip = UI_CreateForm( "frmMakeEquip", FALSE, 285, 310, 240, 70, TRUE, FALSE )
 UI_ShowForm( frmMakeEquip, TRUE )
 UI_AddFormToTemplete( frmMakeEquip, FORM_MAIN )
 --UI_FormSetHotKey( frmMakeEquip, ALT_KEY, HOTKEY_V )
 UI_SetFormStyle( frmMakeEquip, 2 )---左右居中
 UI_SetIsDrag( frmMakeEquip, TRUE )
 
-imgBak = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgBak", 251, 368, 0, 0 )
-UI_LoadImage( imgBak, "texture/gui/make-equip.png", NORMAL, 251, 368, 0, 0 ) 
+setBackground(frmMakeEquip, true, 285, 310, 235)
 
---合成需求和结果程序用栏
-cmdRouLeau = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdRouLeau", 32, 32, 109, 22 )	-- 卷轴
-cmdItem0 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem0", 32, 32, 19, 172 )	-- 原料1
-cmdItem1 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem1", 32, 32, 199, 172 )	-- 原料2
-cmdItem2 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem2", 32, 32, -500, 207 )	-- 原料3
-cmdItem3 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem3", 32, 32, -500, 207 )	-- 原料4
-cmdLastEquip = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdLastEquip", 32, 32, -500, 142 )	-- 结果
-UI_SetHint( cmdLastEquip, "Combine item" )
-UI_SetHint( cmdItem0, "Ingredient 1" )
-UI_SetHint( cmdItem1, "Ingredient 2" )
+labFormname = UI_CreateCompent(frmMakeEquip, LABELEX_TYPE, "labFormname", 285, 14, 0, 20)
+UI_SetCaption( labFormname, "DIALOGUE" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmMakeEquip, IMAGE_TYPE, "image", 54, 54, 115, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmMakeEquip, IMAGE_TYPE, "image", 54, 54, 30, 114)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmMakeEquip, IMAGE_TYPE, "image", 54, 54, 201, 114)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmMakeEquip, IMAGE_TYPE, "image", 225, 40, 30, 188)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 269, 40, 270, 1173)
+
+imgage = UI_CreateCompent(frmMakeEquip, IMAGE_TYPE, "imgage", 25, 25, 35, 195)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
+
+-- Scroll
+cmdRouLeau = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdRouLeau", 32, 32, 115 + 11, 50 + 11)
 UI_SetHint( cmdRouLeau, "Scroll" )
 
-labForgeGold = UI_CreateCompent( frmMakeEquip, LABELEX_TYPE, "labForgeGold", 112, 12, 70, 220 )
-UI_SetCaption( labForgeGold, "" )
-UI_SetTextColor( labForgeGold, COLOR_A29688 )
-UI_SetLabelExFont( labForgeGold, EXO_Regular_S12, FALSE, COLOR_WHITE )
+-- Ingredient 1
+cmdItem0 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem0", 32, 32, 30 + 11, 114 + 11 )
+UI_SetHint( cmdItem0, "Ingredient 1" )
 
---创建物品属性显示
-memForgeItemState = UI_CreateCompent( frmMakeEquip, MEMO_TYPE, "memForgeItemState", 180, 77, 24, 286 )
-UI_SetTextColor( memForgeItemState, COLOR_BLACK )
-UI_SetMemoMaxNumPerRow( memForgeItemState, 16 )
-UI_SetMemoPageShowNum( memForgeItemState, 4 )
-UI_SetMemoRowHeight( memForgeItemState, 18 )
+cmdItem1 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem1", 32, 32, 201 + 11, 114 + 11 )
+UI_SetHint( cmdItem1, "Ingredient 2" )
 
-lstForgeItemState = UI_CreateListView( frmConAsk, "lstForgeItemState", 180, 77, 24, 286, 1, 2 )
-UI_SetListRowHeight( lstForgeItemState, 18 )
-UI_SetListFontColor( lstForgeItemState, 4293591039, 4293591039 )
-UI_SetMargin( lstForgeItemState, 8,5,0,0 )
-UI_SetIsShow( lstForgeItemState, TRUE )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
+cmdItem2 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem2", 32, 32, -500, 207 )	-- 原料3
+cmdItem3 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem3", 32, 32, -500, 207 )	-- 原料4
 
-btnForgeYes = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnForgeYes", 90, 46, 30, 247 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/make-equip.png", 90, 46, 263, 0, FALSE )
+cmdLastEquip = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdLastEquip", 32, 32, -500, 142 )	-- 结果
+UI_SetHint( cmdLastEquip, "Combine item" )
 
-btnForgeNo = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnForgeNo", 90, 46, 130, 247 )
-UI_LoadButtonImage( btnForgeNo, "texture/gui/make-equip.png", 90, 46, 353, 0, FALSE )
-UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
+labForgeGold = UI_CreateCompent( frmMakeEquip, LABELEX_TYPE, "labForgeGold", 112, 12, 65, 201 )
+UI_SetCaption( labForgeGold, "0" )
+UI_SetTextColor( labForgeGold, argbColor("a3a3a3"))
+UI_SetLabelExFont( labForgeGold, EXO_Regular_S14, FALSE, COLOR_WHITE )
+
+btnForgeYes = CreateButton(4, frmMakeEquip, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 60, 248)
 
 -----------------------------------------------------------------------
 -- Join to pirate guild
@@ -391,6 +410,16 @@ UI_ListLoadSelectImage(lstAsk, "./texture/ascaron_ui/asc-part-03.png", 468, 30, 
 UI_SetListIsMouseFollow(lstAsk, FALSE)
 UI_SetListRowHeight( lstAsk, 26 )
 setScroll(lstAsk)
+
+lstForgeItemState = UI_CreateListView( frmConAsk, "lstForgeItemState", 180, 77, 24, 286, 1, 2 )
+UI_SetListRowHeight( lstForgeItemState, 18 )
+UI_SetListFontColor( lstForgeItemState, 4293591039, 4293591039 )
+UI_SetMargin( lstForgeItemState, 8,5,0,0 )
+UI_SetIsShow( lstForgeItemState, TRUE )
+UI_AddListText( lstForgeItemState, "" )
+UI_AddListText( lstForgeItemState, "" )
+UI_AddListText( lstForgeItemState, "" )
+UI_AddListText( lstForgeItemState, "" )
 
 btnApply = CreateButton(4, frmConAsk, "btnApply", "APPLY", EXO_Regular_S16, 165, 42, 333, 382 + 51)
 

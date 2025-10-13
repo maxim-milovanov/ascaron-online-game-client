@@ -595,74 +595,45 @@ UI_LoadButtonImage( btnForgeNo, "texture/gui/marryyesno.tga", 60, 53, 60, 0, FAL
 UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
--- 定义装备提纯面板  2006.8.29 by Leo
+-- Tier up \ 
 -----------------------------------------------------------------------
-frmEquipPurify = UI_CreateForm( "frmEquipPurify", FALSE, 251, 182, 0, 0, TRUE, FALSE )
+frmEquipPurify = UI_CreateForm( "frmEquipPurify", FALSE, 285, 246, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmEquipPurify, FALSE )
 UI_AddFormToTemplete( frmEquipPurify, FORM_MAIN )
 UI_FormSetIsEscClose( frmEquipPurify, TRUE )
 UI_SetIsDrag( frmEquipPurify,TRUE)
 UI_SetFormStyle( frmEquipPurify,1)
 
-imgBakTop = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgBakTop", 251, 182, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/gui/purification.png", NORMAL, 251, 182, 0, 0 )
+setBackground(frmEquipPurify, true, 285, 246, 235)
 
-cmdEquipOne = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipOne", 32, 32, 50, 101 )
+labFormname = UI_CreateCompent(frmEquipPurify, LABELEX_TYPE, "labFormname", 285, 14, 0, 20)
+UI_SetCaption( labFormname, "DIALOGUE" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
-labHintleft1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft1", 112, 14, 46, 143 )
-UI_SetCaption( labHintleft1, "Equip #1")
-UI_SetTextColor( labHintleft1, COLOR_A29688 )
-UI_SetLabelExFont( labHintleft1, EXO_Regular_S12, FALSE, COLOR_WHITE )
+image = UI_CreateCompent(frmEquipPurify, IMAGE_TYPE, "image", 54, 54, 30, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
-labHintleft2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft2", 112, 14, 46, 143 )
-UI_SetCaption( labHintleft2, "Wings")
-UI_SetTextColor( labHintleft2, COLOR_A29688 )
-UI_SetLabelExFont( labHintleft2, EXO_Regular_S12, FALSE, COLOR_WHITE )
+image = UI_CreateCompent(frmEquipPurify, IMAGE_TYPE, "image", 54, 54, 201, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
-labHintleft3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft3", 112, 14, 46, 143 )
-UI_SetCaption( labHintleft3, "Equipment")
-UI_SetTextColor( labHintleft3, COLOR_A29688 )
-UI_SetLabelExFont( labHintleft3, EXO_Regular_S12, FALSE, COLOR_WHITE )
+image = UI_CreateCompent(frmEquipPurify, IMAGE_TYPE, "image", 225, 40, 30, 124)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 269, 40, 270, 1173)
 
-labHintleft4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft4", 112, 14, 46, 143 )
-UI_SetCaption( labHintleft4, "Life tool")
-UI_SetTextColor( labHintleft4, COLOR_A29688 )
-UI_SetLabelExFont( labHintleft4, EXO_Regular_S12, FALSE, COLOR_WHITE )
+imgage = UI_CreateCompent(frmEquipPurify, IMAGE_TYPE, "imgage", 25, 25, 35, 133)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
 
-cmdEquipTwo = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipTwo", 32, 32, 170, 101 )	-- 要提纯的武器
+cmdEquipOne = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipOne", 32, 32, 30 + 11, 50 + 11 )
 
-labHintright1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright1", 112, 14, 168, 143 )
-UI_SetCaption( labHintright1, "To Equip #2")
-UI_SetTextColor( labHintright1, COLOR_A29688 )
-UI_SetLabelExFont( labHintright1, EXO_Regular_S12, FALSE, COLOR_WHITE )
+cmdEquipTwo = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipTwo", 32, 32, 201 + 11, 50 + 11 )
 
-labHintright2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright2", 112, 14, 168, 143 )
-UI_SetCaption( labHintright2, "Stone")
-UI_SetTextColor( labHintright2, COLOR_A29688 )
-UI_SetLabelExFont( labHintright2, EXO_Regular_S12, FALSE, COLOR_WHITE )
+labMoneyShow = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labMoneyShow", 112, 12, 65, 137 )
+UI_SetCaption( labMoneyShow, "0" )
+UI_SetTextColor( labMoneyShow, argbColor("a3a3a3"))
+UI_SetLabelExFont( labMoneyShow, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-labHintright3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright3", 112, 14, 168, 143 )
-UI_SetCaption( labHintright3, "Pliers")
-UI_SetTextColor( labHintright3, COLOR_A29688 )
-UI_SetLabelExFont( labHintright3, EXO_Regular_S12, FALSE, COLOR_WHITE )
-
-labHintright4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright4", 112, 14, 168, 143 )
-UI_SetCaption( labHintright4, "Repair Tool")
-UI_SetTextColor( labHintright4, COLOR_A29688 )
-UI_SetLabelExFont( labHintright4, EXO_Regular_S12, FALSE, COLOR_WHITE )
-
-labMoneyShow = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labMoneyShow", 112, 14, 75, 68 )
-UI_SetCaption( labMoneyShow, "")
-UI_SetTextColor( labMoneyShow, COLOR_FFEDCF )
-UI_SetLabelExFont( labMoneyShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
-
-btnForgeYes = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnForgeYes", 93, 32, 23+8, 163 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/friends.png", 93, 32, 0, 494, FALSE )
-UI_SetEditEnterButton( edtTradeGold, btnForgeYes )
-
-btnForgeNo = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnForgeNo", 93, 32, 119+8, 163 )
-UI_LoadButtonImage( btnForgeNo, "texture/gui/friends.png", 93, 32, 93, 494, FALSE )
-UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmEquipPurify, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 60, 184)
 
 -----------------------------------------------------------------------
 -- 定义精灵老虎机面板  2006.8.29 by Leo
