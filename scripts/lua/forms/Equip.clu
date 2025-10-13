@@ -90,109 +90,105 @@ setScroll(grdTempBag)
 -----------------------------------------------------------------------
 -- 定义技能
 -----------------------------------------------------------------------
-frmSkill = UI_CreateForm( "frmSkill", FALSE, 223, 470, 396, 160, FALSE, FALSE )
+frmSkill = UI_CreateForm( "frmSkill", FALSE, 243, 409, 396, 160, FALSE, FALSE )
 UI_FormSetHotKey( frmSkill, ALT_KEY, HOTKEY_S ) 
 UI_ShowForm( frmSkill, TRUE )
 UI_AddFormToTemplete( frmSkill, FORM_MAIN )
 UI_SetIsDrag( frmSkill, TRUE )
---UI_SetFormStyle( frmSkill, 0 )
---UI_SetAlpha( frmSkill, 200 )
 
--- Background
-imgSkillBTop = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillBTop", 223, 470, 0, 0 )
-UI_LoadImage( imgSkillBTop, "texture/gui/skill-panel.png", NORMAL, 223, 470, 0, 0 )
+setBackground(frmSkill, true, 243, 409, 225)
 
-btnClose = UI_CreateCompent( frmSkill, BUTTON_TYPE, "btnClose", 32, 32, 177, 3+9 )
-UI_LoadButtonImage( btnClose, "texture/gui/Inventory.png", 32, 32, 0, 368, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+labFormname = UI_CreateCompent(frmSkill, LABELEX_TYPE, "labFormname", 243, 14, 0, 20)
+UI_SetCaption( labFormname, "SKILLS" )
+UI_SetTextColor( labFormname, COLOR_WHITE )
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmSkill, IMAGE_TYPE, "image", 183, 2, 30, 79)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 183, 2, 0, 381)
+
+imgPoint = UI_CreateCompent(frmSkill, IMAGE_TYPE, "imgPoint", 183, 30, 30, 359 - 49)
+UI_LoadImage(imgPoint, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 269, 40, 270, 1173)
+
+labPn = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPn", 19, 11, 45, 317 )
+UI_SetCaption(labPn, "Points")
+UI_SetTextColor(labPn, argbColor("a3a3a3"))
+UI_SetLabelExFont(labPn, EXO_Regular_S14, FALSE, COLOR_WHITE)
+
 
 -- Skill points
-labPoint = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint", 19, 11, 155, 320 )
-UI_SetCaption( labPoint, "100" )
-UI_SetTextColor( labPoint, COLOR_968774 )
+labPoint = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint", 19, 11, 175, 317 )
+UI_SetCaption(labPoint, "0")
+UI_SetTextColor(labPoint, argbColor("a3a3a3"))
+UI_SetLabelExFont(labPoint, EXO_Regular_S14, FALSE, COLOR_WHITE)
 
 -- Life skill poitns
-labPoint1 = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint1", 19, 11, 155, 320 )
-UI_SetCaption( labPoint1, "100" )
-UI_SetTextColor( labPoint1, COLOR_968774 )
+labPoint1 = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint1", 19, 11, 175, 317 )
+UI_SetCaption(labPoint1, "0")
+UI_SetTextColor(labPoint1, argbColor("a3a3a3"))
+UI_SetLabelExFont(labPoint1, EXO_Regular_S14, FALSE, COLOR_WHITE)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
-lstSkill = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkill", 190, 320, 11, 10 )
+lstSkill = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkill", 190, 270, 30, 35 )
 UI_SetMargin( lstSkill, 1, 4, 3, 5 )
 UI_SetListRowHeight( lstSkill, 38 )
 UI_LoadSkillListButtonImage( lstSkill, "texture/gui/skill-panel.png", 17, 17, 233, 60, 17, 17 )
+setScroll(lstSkill)
 
-scrollid = UI_GetScroll( lstSkill)
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
 -----------------------------------------------------------------------------------------------------------------------------------------------
-lstSkillW = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillW", 180, 320, 11, 11 )
+lstSkillW = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillW", 180, 320, 30, 35 )
 UI_SetMargin( lstSkillW, 1, 4, 3, 5 )
 UI_SetListRowHeight( lstSkillW, 38 )
 UI_LoadSkillListButtonImage( lstSkillW, "texture/gui/skill-panel.png", 17, 17, 233, 60, 17, 17 )
+setScroll(lstSkillW)
 
-scrollid = UI_GetScroll( lstSkillW )
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
 -----------------------------------------------------------------------------------------------------------------------------------------------
-lstSkillS = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillS", 180, 320, 11, 11 )
+lstSkillS = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillS", 180, 320, 30, 35 )
 UI_SetMargin( lstSkillS, 1, 4, 3, 5 )
 UI_SetListRowHeight( lstSkillS, 38 )
 UI_LoadSkillListButtonImage( lstSkillS, "texture/gui/skill-panel.png", 17, 17, 233, 60, 17, 17 )
+setScroll(lstSkillS)
 
-scrollid = UI_GetScroll( lstSkillS )
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/gui/skill-panel.png", COMPENT_BACK, 11, 1, 230, 80 )
-
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/gui/skill-panel.png", COMPENT_BACK, 13, 43, 243, 79 )
-UI_SetSize( id, 13, 43 )
 -----------------------------------------------------------------------------------------------------------------------------------------------
---创建页面
-pgeSkill = UI_CreateCompent( frmSkill, PAGE_TYPE, "pgeSkill", 211, 233, 11, 79 )
-UI_SetPageButton( pgeSkill, PAGE_BUTTON_CUSTOM, 48, 16 )
 
---战斗技能
-skillid = UI_CreatePageItem( pgeSkill )
-ttlBattle = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlBattle, "texture/gui/skill-panel.png", PAGE_ITEM_TITLE_NORMAL, 16, 20, 233, 0 )
-UI_LoadImage( ttlBattle, "texture/gui/skill-panel.png", PAGE_ITEM_TITLE_ACTIVE, 16, 20, 249, 0 )
-UI_SetPos( ttlBattle, 21, -21 )
-UI_SetSize( ttlBattle, 16, 20 )
-UI_AddCompent( skillid, lstSkill )
-UI_AddCompent( skillid, imgSkillP )
-UI_AddCompent( skillid, labFront )
-UI_AddCompent( skillid, labPoint )
+pgeSkill = UI_CreateCompent( frmSkill, PAGE_TYPE, "pgeSkill", 211, 233, 0, 49 )
+UI_SetPageButton( pgeSkill, PAGE_BUTTON_CUSTOM, 0, 0 )
+
+pgBattle = UI_CreatePageItem( pgeSkill )
+ttlBattle = UI_GetPageItemObj( pgBattle, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlBattle, "./texture/ascaron_ui/asc-part-02.png", PAGE_ITEM_TITLE_NORMAL, 61, 31, 386, 1185 )
+UI_LoadImage( ttlBattle, "./texture/ascaron_ui/asc-part-02.png", PAGE_ITEM_TITLE_ACTIVE, 61, 31, 447, 1185 )
+UI_SetPos( ttlBattle, 30, 0 )
+UI_SetSize( ttlBattle, 61, 31 )
+UI_AddCompent( pgBattle, lstSkill )
+UI_AddCompent( pgBattle, imgSkillP )
+UI_AddCompent( pgBattle, labFront )
+UI_AddCompent( pgBattle, labPoint )
+UI_AddCompent( pgBattle, imgPoint )
+UI_AddCompent( pgBattle, labPn )
 
 --生活技能
 skillid = UI_CreatePageItem( pgeSkill )
 ttlLive = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlLive, "texture/gui/skill-panel.png", PAGE_ITEM_TITLE_NORMAL, 10, 20, 233, 20 )
-UI_LoadImage( ttlLive, "texture/gui/skill-panel.png", PAGE_ITEM_TITLE_ACTIVE, 10, 20, 243, 20 )
-UI_SetPos( ttlLive, 21+50+15, -21 )
-UI_SetSize( ttlLive, 10, 20 )
+UI_LoadImage( ttlLive, "./texture/ascaron_ui/asc-part-02.png", PAGE_ITEM_TITLE_NORMAL, 61, 31, 386, 1216 )
+UI_LoadImage( ttlLive, "./texture/ascaron_ui/asc-part-02.png", PAGE_ITEM_TITLE_ACTIVE, 61, 31, 447, 1216 )
+UI_SetPos( ttlLive, 91, 0 )
+UI_SetSize( ttlLive, 61, 31 )
 UI_AddCompent( skillid, lstSkillW )
 UI_AddCompent( skillid, imgSkillP )
 UI_AddCompent( skillid, labFront )
 UI_AddCompent( skillid, labPoint1 )
+UI_AddCompent( skillid, imgPoint )
+UI_AddCompent( skillid, labPn )
 
 --海上技能
 skillid = UI_CreatePageItem( pgeSkill )
 ttlSail = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlSail, "texture/gui/skill-panel.png", PAGE_ITEM_TITLE_NORMAL, 19, 18, 233, 40 )
-UI_LoadImage( ttlSail, "texture/gui/skill-panel.png", PAGE_ITEM_TITLE_ACTIVE, 19, 18, 252, 40 )
-UI_SetPos( ttlSail, 71+50+20+5, -20 )
-UI_SetSize( ttlSail, 19, 18 )
+UI_LoadImage( ttlSail, "./texture/ascaron_ui/asc-part-02.png", PAGE_ITEM_TITLE_NORMAL, 61, 31, 508, 1185 )
+UI_LoadImage( ttlSail, "./texture/ascaron_ui/asc-part-02.png", PAGE_ITEM_TITLE_ACTIVE, 61, 31, 508, 1216 )
+UI_SetPos( ttlSail, 152, 0 )
+UI_SetSize( ttlSail, 61, 31 )
 UI_AddCompent( skillid, lstSkillS )
-
 
 -------------------------------------------------
 -- Equipment Spy | Coded by Billy, GUI by Foxseiz
