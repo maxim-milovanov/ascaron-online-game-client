@@ -80,18 +80,6 @@ UI_SetFormStyle( frmMain800, 7 )---ÏÂ
 UI_FormSetIsEscClose( frmMain800, FALSE )
 --UI_SetAlpha( frmMinimap, 200 )
 
-tlCity = UI_CreateCompent( frmMain800, TITLE_TYPE, "tlCity", 715, 240, 0, 0 )
-UI_LoadImage( tlCity, "texture/gui/City.png", NORMAL, 253, 240, 0, 0 )
-UI_LoadImage( tlCity, "texture/gui/City.png", HOVER, 209, 240, 253, 0 )
-UI_LoadImage( tlCity, "texture/gui/City.png", DOWN, 253, 240, 462, 0 )
-UI_SetTitleFont( tlCity, BIGFONT, COLOR_FFEDCF, 85 )
-
-tlField = UI_CreateCompent( frmMain800, TITLE_TYPE, "tlField", 715, 240, 0, 0 )
-UI_LoadImage( tlField, "texture/gui/Field.png", NORMAL, 253, 240, 0, 0 )
-UI_LoadImage( tlField, "texture/gui/Field.png", HOVER, 209, 240, 253, 0 )
-UI_LoadImage( tlField, "texture/gui/Field.png", DOWN, 253, 240, 462, 0 )
-UI_SetTitleFont( tlField, BIGFONT, COLOR_FFEDCF, 15 )
-
 ------
 -- §ª§Ô§â§à§Ó§à§Û §é§Ñ§ä
 ------
@@ -409,7 +397,7 @@ UI_ShowForm( frmBigmap, TRUE )
 UI_AddFormToTemplete( frmBigmap, FORM_MAIN )
 UI_FormSetIsEscClose( frmBigmap, FALSE )
 UI_FormSetHotKey( frmBigmap, ALT_KEY, HOTKEY_W )
-UI_FormSetIsEscClose( frmBigmap, FALSE )
+UI_FormSetIsEscClose( frmBigmap, TRUE )
 
 -- ¼ÓÔØÍ¼Æ¬
 imgBigmap1 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap1", 256, 256, 0, 0 )

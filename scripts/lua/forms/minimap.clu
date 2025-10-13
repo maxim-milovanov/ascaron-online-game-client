@@ -59,8 +59,8 @@ UI_SetAlpha(btnTeleports, 220)
 btnSetTrade = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSetTrade", 40, 40, 31, 247)
 UI_LoadButtonImage( btnSetTrade, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 153, TRUE)
 
-btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 40, 40, 31 + 49 + 49, 247)
-UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 113, TRUE)
+btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 117, 44, 31 + 49 + 49 - 77, 247)
+UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-03.png", 117, 44, 688, 182, FALSE)
 UI_SetHint(btnOpenStore, "Store (Alt + F)")
 UI_SetAlpha(btnOpenStore, 220)
 

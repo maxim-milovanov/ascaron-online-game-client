@@ -472,7 +472,7 @@ UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, T
 ------
 -- Target panel
 ------
-frmTargetInfo = UI_CreateForm( "frmTargetInfo", FALSE, 176, 45, 0, 20, TRUE, FALSE)
+frmTargetInfo = UI_CreateForm( "frmTargetInfo", FALSE, 212, 45, 0, 20, TRUE, FALSE)
 UI_ShowForm(frmTargetInfo, FALSE)
 UI_AddFormToTemplete(frmTargetInfo, FORM_MAIN)
 UI_SetFormStyleEx(frmTargetInfo, FORM_XCENTER, 0, 0)
@@ -509,15 +509,15 @@ UI_SetTextColor( labTargetHP, argbColor("b9baba") )
 UI_SetLabelExFont( labTargetHP, EXO_Regular_S10, FALSE, COLOR_BLACK )
 UI_SetCaption( labLv, "99" )
 
-btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 17, 17, 150, 22)
-UI_LoadButtonImage( btnTargetInfo, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 145, TRUE )
+btnTargetInfo = UI_CreateCompent( frmTargetInfo, BUTTON_TYPE, "btnTargetInfo", 45, 45, 186, 0)
+UI_LoadButtonImage( btnTargetInfo, "./texture/ascaron_ui/asc-part-03.png", 45, 45, 807, 181, FALSE)
 UI_SetHint( btnTargetInfo, "Show monster info" )
 UI_SetIsShow(btnTargetInfo, TRUE)
 
 ------
 -- Drop Form
 ------
-frmTargetDrop = UI_CreateForm( "frmTargetDrop", FALSE, 202, 79, 0, 75, TRUE, FALSE )
+frmTargetDrop = UI_CreateForm( "frmTargetDrop", FALSE, 212, 79, 0, 75, TRUE, FALSE )
 UI_SetIsDrag( frmTargetDrop, FALSE )
 UI_FormSetIsEscClose( frmTargetDrop, TRUE )
 UI_SetFormStyleEx(frmTargetDrop, FORM_XCENTER, 0, 0)

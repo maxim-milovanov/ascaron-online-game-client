@@ -1048,3 +1048,6 @@
 [1047]	"Buy a %s?"
 [1048]	"Sell a %s?"
 [1049]	"Login to your account %s?"
+[1050]	"Lv%d %s"
+[1051]	"Health: %d/%d"
+[1052]	"Mana: %d/%d"

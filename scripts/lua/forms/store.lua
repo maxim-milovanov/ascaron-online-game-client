@@ -830,3 +830,7 @@ UI_SetIsShow(labGCoin, FALSE)
 imgGCoin = UI_CreateCompent(frmGacha, IMAGE_TYPE, "imgGCoin", 25, 25, 409 + 13, 483)
 UI_LoadImage(imgGCoin, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 25, 25, 228, 237)
 UI_SetIsShow(imgGCoin, FALSE)
+
+btnClose = UI_CreateCompent(frmGacha, BUTTON_TYPE, "btnClose", 713, 713, 0, 0)
+UI_LoadButtonImage(btnClose, "", 1, 1, 54, 0, TRUE)
+UI_SetButtonModalResult(btnClose, BUTTON_CLOSE)

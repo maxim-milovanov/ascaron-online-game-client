@@ -50,6 +50,18 @@ UI_SetLabelExFont( labGuild, EXO_Regular_S16, FALSE, COLOR_WHITE )
 UI_SetCaptionIsCenter(labName, TRUE)
 UI_AddCompent(skillid, labGuild)
 
+labChaHP = UI_CreateCompent( frmState, LABELEX_TYPE, "labChaHP", 242, 11, 40, 355)
+UI_SetTextColor(labChaHP, argbColor("b9baba"))
+UI_SetLabelExFont(labChaHP, EXO_Regular_S14, FALSE, COLOR_WHITE)
+UI_SetCaptionIsCenter(labChaHP, TRUE)
+UI_AddCompent(skillid, labChaHP)
+
+labChaSP = UI_CreateCompent( frmState, LABELEX_TYPE, "labChaSP", 242, 11, 40, 375)
+UI_SetTextColor(labChaSP, argbColor("b9baba"))
+UI_SetLabelExFont(labChaSP, EXO_Regular_S14, FALSE, COLOR_WHITE)
+UI_SetCaptionIsCenter(labChaSP, TRUE)
+UI_AddCompent(skillid, labChaSP)
+
 ------
 -- Базовые характеристики персонажа
 ------
