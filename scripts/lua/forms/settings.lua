@@ -1,7 +1,18 @@
+function settingProgressbar(form, label, posx, posy)
+	image = UI_CreateCompent(form, IMAGE_TYPE, "image", 118, 10, posx, posy)
+	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 118, 10, 596, 958)
+	
+	label = UI_CreateCompent(form, PROGRESS_TYPE, label, 118, 10, posx, posy)
+	UI_LoadScaleImage(label, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 118, 10, 596, 968, 1.0, 1.0 )
+	UI_SetProgressActiveMouse(label, 1)
+	
+	return label
+end
+
 -----------------------------------------------------------------------
 -- Settings
 -----------------------------------------------------------------------
-frmSettings = UI_CreateForm("frmSettings", FALSE, 700, 500, 0, 0, TRUE, FALSE)
+frmSettings = UI_CreateForm("frmSettings", FALSE, 650, 553, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmSettings, FALSE )
 UI_AddFormToTemplete(frmSettings, FORM_MAIN)
 UI_FormSetIsEscClose(frmSettings, TRUE)
@@ -9,9 +20,9 @@ UI_SetIsDrag(frmSettings, FALSE)
 UI_SetFormStyle(frmSettings, FORM_ALLCENTER)
 UI_FormSetHotKey(frmSettings, ALT_KEY, HOTKEY_Y)
 
-setBackground(frmSettings, true, 700, 500, 255)
+setBackground(frmSettings, true, 650, 553, 255)
 
-labFormname = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFormname", 566, 14, 0, 20)
+labFormname = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFormname", 650, 14, 0, 20)
 UI_SetCaption(labFormname, "SETTINGS")
 UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
@@ -20,127 +31,386 @@ UI_SetCaptionIsCenter(labFormname, TRUE)
 ------
 -- Backgrounds
 ------
-setBackground2(frmSettings, 290, 86, 255, 30, 50)
-setBackground2(frmSettings, 290, 80, 255, 30, 141)
-setBackground2(frmSettings, 290, 80, 255, 30, 226)
+local left_block_x = 30
+local left_block_y = 50
+
+setBackground2(frmSettings, 290, 90, 255, left_block_x, left_block_y)
 
 ------
 -- Full screen
 ------
-labFullScreen = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFullScreen", 120, 12, 62, 50 + 8)
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/display.png", NORMAL, 20, 20, 0, 0)
+
+labFullScreen = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFullScreen", 120, 12, left_block_x + 40, left_block_y + 10)
 UI_SetCaption(labFullScreen, "Full Screen" )
 UI_SetTextColor(labFullScreen, argbColor("c2c2c1"))
-UI_SetLabelExFont(labFullScreen, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetLabelExFont(labFullScreen, EXO_Regular_S13, FALSE, COLOR_BLACK)
 
-labFullScreenDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFullScreenDescription", 120, 12, 62, 50 + 22)
+labFullScreenDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFullScreenDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
 UI_SetCaption(labFullScreenDescription, "*description" )
 UI_SetTextColor(labFullScreenDescription, argbColor("6f6f6f"))
 UI_SetLabelExFont(labFullScreenDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
 
-checkFullScreen = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkFullScreen", 31, 20, 268, 50 + 10)
+checkFullScreen = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkFullScreen", 31, 20, left_block_x + 249, left_block_y + 10)
 UI_LoadImage(checkFullScreen, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
 UI_LoadImage(checkFullScreen, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
 
 ------
 -- Resolution
 ------
-labResolution = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labResolution", 120, 12, 62, 101 - 2)
+left_block_y = left_block_y + 10
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/aspect-ratio.png", NORMAL, 20, 20, 0, 0)
+
+labResolution = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labResolution", 120, 12, left_block_x + 40, left_block_y + 10)
 UI_SetCaption(labResolution, "Resolution" )
 UI_SetTextColor(labResolution, argbColor("c2c2c1"))
-UI_SetLabelExFont(labResolution, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetLabelExFont(labResolution, EXO_Regular_S13, FALSE, COLOR_BLACK)
 
-labResolutionDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labResolutionDescription", 120, 12, 62, 101 + 12)
+labResolutionDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labResolutionDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
 UI_SetCaption(labResolutionDescription, "*description" )
 UI_SetTextColor(labResolutionDescription, argbColor("6f6f6f"))
 UI_SetLabelExFont(labResolutionDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
 
-image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 54, 10, 182, 101)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 54, 10, 824, 1216)
-
-proResolutionX = UI_CreateCompent(frmSettings, PROGRESS_TYPE, "proResolutionX", 54, 10, 182, 101)
-UI_LoadScaleImage(proResolutionX, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 54, 10, 824, 1226, 1.0, 1.0 )
-UI_SetProgressActiveMouse( proResolutionX, 1 )
-
-image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 54, 10, 248, 101)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 54, 10, 824, 1216)
-
-proResolutionY = UI_CreateCompent(frmSettings, PROGRESS_TYPE, "proResolutionY", 54, 10, 248, 101)
-UI_LoadScaleImage(proResolutionY, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 54, 10, 824, 1226, 1.0, 1.0 )
-UI_SetProgressActiveMouse( proResolutionY, 1 )
-
-------
--- Music
-------
-labMusic = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusic", 120, 12, 62, 141 + 8)
-UI_SetCaption(labMusic, "Music" )
-UI_SetTextColor(labMusic, argbColor("c2c2c1"))
-UI_SetLabelExFont(labMusic, EXO_Regular_S12, FALSE, COLOR_BLACK)
-
-labMusicDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusicDescription", 120, 12, 62, 141 + 22)
-UI_SetCaption(labMusicDescription, "*description" )
-UI_SetTextColor(labMusicDescription, argbColor("6f6f6f"))
-UI_SetLabelExFont(labMusicDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
-
-image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 118, 10, 182, 151)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 118, 10, 596, 958)
-
-proMusic = UI_CreateCompent(frmSettings, PROGRESS_TYPE, "proMusic", 118, 10, 182, 151)
-UI_LoadScaleImage(proMusic, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 118, 10, 596, 968, 1.0, 1.0 )
-UI_SetProgressActiveMouse( proMusic, 1 )
-
-------
--- Sound Effect
-------
-labSound = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labSound", 120, 12, 62, 176 + 8)
-UI_SetCaption(labSound, "Sound Effect" )
-UI_SetTextColor(labSound, argbColor("c2c2c1"))
-UI_SetLabelExFont(labSound, EXO_Regular_S12, FALSE, COLOR_BLACK)
-
-labSoundDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labSoundDescription", 120, 12, 62, 176 + 22)
-UI_SetCaption(labSoundDescription, "*description" )
-UI_SetTextColor(labSoundDescription, argbColor("6f6f6f"))
-UI_SetLabelExFont(labSoundDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
-
-image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 118, 10, 182, 176 + 10)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 118, 10, 596, 958)
-
-proSound = UI_CreateCompent(frmSettings, PROGRESS_TYPE, "proSound", 118, 10, 182, 176 + 10)
-UI_LoadScaleImage(proSound, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 118, 10, 596, 968, 1.0, 1.0 )
-UI_SetProgressActiveMouse( proSound, 1 )
+left_block_y = left_block_y + 60 
 
 ------
 -- Camera mode
 ------
-labMusic = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusic", 120, 12, 62, 226 + 8)
+setBackground2(frmSettings, 290, 90 + 40, 255, left_block_x, left_block_y)
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/camera-reels.png", NORMAL, 20, 20, 0, 0)
+
+labMusic = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusic", 120, 12, left_block_x + 40, left_block_y + 10)
 UI_SetCaption(labMusic, "Camera mode" )
 UI_SetTextColor(labMusic, argbColor("c2c2c1"))
-UI_SetLabelExFont(labMusic, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetLabelExFont(labMusic, EXO_Regular_S13, FALSE, COLOR_BLACK)
 
-labMusicDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusicDescription", 120, 12, 62, 226 + 22)
+labMusicDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusicDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
 UI_SetCaption(labMusicDescription, "*description" )
 UI_SetTextColor(labMusicDescription, argbColor("6f6f6f"))
 UI_SetLabelExFont(labMusicDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
 
-checkCameraMode = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkCameraMode", 31, 20, 268, 229 + 8)
+checkCameraMode = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkCameraMode", 31, 20, left_block_x + 249, left_block_y + 10)
 UI_LoadImage(checkCameraMode, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
 UI_LoadImage(checkCameraMode, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
 
 ------
 -- Zoom
 ------
-labZoom = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labZoom", 120, 12, 62, 262 + 8)
-UI_SetCaption(labZoom, "Sound effect" )
-UI_SetTextColor(labZoom, argbColor("c2c2c1"))
-UI_SetLabelExFont(labZoom, EXO_Regular_S12, FALSE, COLOR_BLACK)
+left_block_y = left_block_y + 10
 
-labZoomDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labZoomDescription", 120, 12, 62, 262 + 22)
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/zoom-in.png", NORMAL, 20, 20, 0, 0)
+
+labZoom = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labZoom", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labZoom, "Zoom" )
+UI_SetTextColor(labZoom, argbColor("c2c2c1"))
+UI_SetLabelExFont(labZoom, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labZoomDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labZoomDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
 UI_SetCaption(labZoomDescription, "*description" )
 UI_SetTextColor(labZoomDescription, argbColor("6f6f6f"))
 UI_SetLabelExFont(labZoomDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
 
-image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 118, 10, 182, 262 + 10)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 118, 10, 596, 958)
+settingProgressbar(frmSettings, "proZoom", left_block_x + 162, left_block_y + 13)
 
-proZoom = UI_CreateCompent(frmSettings, PROGRESS_TYPE, "proZoom", 118, 10, 182, 262 + 10)
-UI_LoadScaleImage(proZoom, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 118, 10, 596, 968, 1.0, 1.0 )
-UI_SetProgressActiveMouse( proZoom, 1 )
+left_block_y = left_block_y + 30 
+
+------
+-- Panel effects
+------
+left_block_y = left_block_y + 10
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/stars.png", NORMAL, 20, 20, 0, 0)
+
+labPanelEffects = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labPanelEffects", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labPanelEffects, "Panel effects" )
+UI_SetTextColor(labPanelEffects, argbColor("c2c2c1"))
+UI_SetLabelExFont(labPanelEffects, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labPanelEffectsDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labPanelEffectsDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labPanelEffectsDescription, "*description" )
+UI_SetTextColor(labPanelEffectsDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labPanelEffectsDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+
+checkPanelEffects = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkPanelEffects", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkPanelEffects, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkPanelEffects, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+------
+-- Второй блок настроек
+------
+left_block_x = left_block_x + 300
+left_block_y = 50
+
+------
+-- Music
+------
+setBackground2(frmSettings, 290, 90, 255, left_block_x, left_block_y)
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/music-note-list.png", NORMAL, 20, 20, 0, 0)
+
+labMusic = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusic", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labMusic, "Music" )
+UI_SetTextColor(labMusic, argbColor("c2c2c1"))
+UI_SetLabelExFont(labMusic, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labMusicDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusicDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labMusicDescription, "*description" )
+UI_SetTextColor(labMusicDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labMusicDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+
+settingProgressbar(frmSettings, "proMusic", left_block_x + 162, left_block_y + 13)
+
+left_block_y = left_block_y + 30
+
+------
+-- Sound Effect
+------
+left_block_y = left_block_y + 10
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/soundwave.png", NORMAL, 20, 20, 0, 0)
+
+labSound = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labSound", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labSound, "Sound Effect" )
+UI_SetTextColor(labSound, argbColor("c2c2c1"))
+UI_SetLabelExFont(labSound, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labSoundDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labSoundDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labSoundDescription, "*description" )
+UI_SetTextColor(labSoundDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labSoundDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+
+settingProgressbar(frmSettings, "proSound", left_block_x + 162, left_block_y + 13)
+
+left_block_y = left_block_y + 60 
+
+------
+-- Movement
+------
+setBackground2(frmSettings, 290, 90 + 40, 255, left_block_x, left_block_y)
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/person-walking.png", NORMAL, 20, 20, 0, 0)
+
+labMovement = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMovement", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labMovement, "Movement" )
+UI_SetTextColor(labMovement, argbColor("c2c2c1"))
+UI_SetLabelExFont(labMovement, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labMovementDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMovementDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labMovementDescription, "*description" )
+UI_SetTextColor(labMovementDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labMovementDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+
+checkMovement = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkMovement", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkMovement, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkMovement, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Animation speed
+------
+left_block_y = left_block_y + 10
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/person-arms-up.png", NORMAL, 20, 20, 0, 0)
+
+labAnimationSpeed = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labAnimationSpeed", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labAnimationSpeed, "Animation speed" )
+UI_SetTextColor(labAnimationSpeed, argbColor("c2c2c1"))
+UI_SetLabelExFont(labAnimationSpeed, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labAnimationSpeedDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labAnimationSpeedDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labAnimationSpeedDescription, "*description" )
+UI_SetTextColor(labAnimationSpeedDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labAnimationSpeedDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+
+settingProgressbar(frmSettings, "proAnimationSpeed", left_block_x + 162, left_block_y + 13)
+
+left_block_y = left_block_y + 30
+
+------
+-- Magic autoattack
+------
+left_block_y = left_block_y + 10
+
+image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/magic.png", NORMAL, 20, 20, 0, 0)
+
+labMagicAttack = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMagicAttack", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labMagicAttack, "Magic autoattack" )
+UI_SetTextColor(labMagicAttack, argbColor("c2c2c1"))
+UI_SetLabelExFont(labMagicAttack, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+labMagicAttackDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMagicAttackDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labMagicAttackDescription, "*description" )
+UI_SetTextColor(labMagicAttackDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labMagicAttackDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+
+checkMagicAttack = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkMagicAttack", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkMagicAttack, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkMagicAttack, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_x = 30
+left_block_y = left_block_y + 70
+
+------
+-- Header 2block
+------
+labFormname = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFormname", 650, 14, 0, left_block_y)
+UI_SetCaption(labFormname, "HIDE OR SHOW OBJECTS")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+left_block_y = left_block_y + 30
+setBackground2(frmSettings, 290+ 10 + 290, 90 + 40, 255, left_block_x, left_block_y)
+
+------
+-- Players name show
+------
+labPlayersName = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labPlayersName", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labPlayersName, "Players name" )
+UI_SetTextColor(labPlayersName, argbColor("c2c2c1"))
+UI_SetLabelExFont(labPlayersName, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkPlayersName = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkPlayersName", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkPlayersName, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkPlayersName, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Monsters name show
+------
+labMonstersName = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMonstersName", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labMonstersName, "Monsters name" )
+UI_SetTextColor(labMonstersName, argbColor("c2c2c1"))
+UI_SetLabelExFont(labMonstersName, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkMonstersName = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkMonstersName", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkMonstersName, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkMonstersName, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Items name show
+------
+labItemsName = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labItemsName", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labItemsName, "Items name name" )
+UI_SetTextColor(labItemsName, argbColor("c2c2c1"))
+UI_SetLabelExFont(labItemsName, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkItemsName = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkItemsName", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkItemsName, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkItemsName, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Weapon glow
+------
+labWeaponGlow = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labWeaponGlow", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labWeaponGlow, "Weapon glow" )
+UI_SetTextColor(labWeaponGlow, argbColor("c2c2c1"))
+UI_SetLabelExFont(labWeaponGlow, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkWeaponGlow = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkWeaponGlow", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkWeaponGlow, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkWeaponGlow, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+------
+-- Второй блок (справа)
+------
+left_block_x = 30
+left_block_x = left_block_x + 300
+left_block_y = 330
+
+------
+-- Apparels
+------
+labApparels = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labApparels", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labApparels, "Apparels" )
+UI_SetTextColor(labApparels, argbColor("c2c2c1"))
+UI_SetLabelExFont(labApparels, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkApparels = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkApparels", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkApparels, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkApparels, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Mounts
+------
+labMounts = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMounts", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labMounts, "Mounts" )
+UI_SetTextColor(labMounts, argbColor("c2c2c1"))
+UI_SetLabelExFont(labMounts, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkMounts = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkMounts", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkMounts, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkMounts, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Fairy
+------
+labFairy = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFairy", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labFairy, "Fairy" )
+UI_SetTextColor(labFairy, argbColor("c2c2c1"))
+UI_SetLabelExFont(labFairy, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkFairy = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkFairy", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkFairy, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkFairy, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Wings
+------
+labWings = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labWings", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labWings, "Wings" )
+UI_SetTextColor(labWings, argbColor("c2c2c1"))
+UI_SetLabelExFont(labWings, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkWings = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkWings", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkWings, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkWings, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 60
+
+------
+-- Кнопки
+------
+
+-- Выход из игры
+btnExitGame = CreateButton(16, frmSettings, "btnExitGame", "EXIT", EXO_Regular_S13, 70, 42, 30, left_block_y)
+
+-- Выход с аккаунта
+btnRelogin = CreateButton(8, frmSettings, "btnRelogin", "LOGOUT", EXO_Regular_S13, 74, 42, 110, left_block_y)
+
+-- Switch char
+btnSwitchChar = CreateButton(6, frmSettings, "btnSwitchChar", "SWITCH CHAR", EXO_Regular_S13, 130, 42, 194, left_block_y)
+
+-- offline mode
+btnOfflineMode = CreateButton(6, frmSettings, "btnOfflineMode", "OFFLINE MODE", EXO_Regular_S13, 130, 42, 334, left_block_y)
+
+-- APPLY
+btnApply = CreateButton(13, frmSettings, "btnApply", "APPLY", EXO_Regular_S13, 130, 42, 490, left_block_y)
