@@ -1378,6 +1378,7 @@ end
 -- 13 - §Ø§Ö§Ý§ä§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 130§ç42 (§Ù§Ñ§á§â§à§ã §ß§Ñ §à§ä§â§ñ§Õ\§ä§à§â§Ô§à§Ó§Ý§ð)
 -- 14 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 130§ç42 (§Ù§Ñ§á§â§à§ã §ß§Ñ §à§ä§â§ñ§Õ\§ä§à§â§Ô§à§Ó§Ý§ð)
 -- 15 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 54§ç42
+-- 16 - §Ü§â§Ñ§ã§ß§Ñ §Ü§ß§à§á§Ü§Ñ 70§ç42
 function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y, posx, posy)
 	local Item
 	Item = UI_CreateCompent(frm, BUTTON_TYPE, button_name, size_x, size_y, posx, posy)
@@ -1431,6 +1432,9 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 	elseif (type == 15) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("c2c2c1"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-02.png", 54, 42, 383, 1142, TRUE)
+	elseif (type == 16) then
+		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
+		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-03.png", 70, 42, 190, 336, FALSE)
 	end
 	
 	return Item
