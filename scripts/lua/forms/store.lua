@@ -573,7 +573,7 @@ UI_AddCompent(pgWardrobe, btnHelpStoreW)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
 	UI_AddCompent(pgWardrobe, image)
 
-	recordType  = UI_CreateCompent(frmStore, COMBO_TYPE, "recordType", 98, 20, 20, 90)
+	recordType  = UI_CreateCompent(frmStore, COMBO_TYPE, "recordType", 98, 20, 20 + 30, 90 + 70)
 	UI_ComboSetStyle(recordType, TRUE)
 	UI_ComboSetTextColor(recordType, COLOR_WHITE)
 
@@ -590,7 +590,7 @@ UI_AddCompent(pgWardrobe, btnHelpStoreW)
 	UI_AddListText( lstType, "Event" )
 	UI_SetListIsMouseFollow( lstType, TRUE)
 	UI_ComboSetTextColor(lstType, COLOR_WHITE )
-	UI_AddCompent(pgWardrobe, recordType)
+	--UI_AddCompent(pgWardrobe, recordType)
 	
 ------
 -- Слоты под эквип в разделе Wardrobe->Costume

@@ -76,6 +76,20 @@ UI_SetCaption(labResolutionDescription, "*description" )
 UI_SetTextColor(labResolutionDescription, argbColor("6f6f6f"))
 UI_SetLabelExFont(labResolutionDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
 
+cboResolution  = UI_CreateCompent(frmSettings, COMBO_TYPE, "cboResolution", 98, 20, left_block_x + 210, left_block_y + 10)
+UI_ComboSetStyle(cboResolution, TRUE)
+UI_ComboSetTextColor(cboResolution, COLOR_WHITE)
+
+lstResolution = UI_GetList(cboResolution)
+UI_SetListFontColor(lstResolution, COLOR_WHITE, COLOR_WHITE)
+UI_SetSize( lstResolution, 81, 190 )
+UI_SetMargin( lstResolution, 16,6,16,0 )
+UI_SetListRowHeight( lstResolution, 18 )
+UI_LoadImage( lstResolution, "./texture/gui/select-map.png", COMPENT_BACK, 81, 68, 4, 114 )
+UI_AddListText( lstResolution, "1024x768" )
+UI_SetListIsMouseFollow( lstResolution, TRUE)
+UI_ComboSetTextColor( lstResolution, COLOR_WHITE )
+
 left_block_y = left_block_y + 60 
 
 ------
