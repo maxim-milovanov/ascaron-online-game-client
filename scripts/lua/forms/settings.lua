@@ -18,7 +18,7 @@ UI_AddFormToTemplete(frmSettings, FORM_MAIN)
 UI_FormSetIsEscClose(frmSettings, TRUE)
 UI_SetIsDrag(frmSettings, FALSE)
 UI_SetFormStyle(frmSettings, FORM_ALLCENTER)
-UI_FormSetHotKey(frmSettings, ALT_KEY, HOTKEY_Y)
+UI_FormSetHotKey(frmSettings, ALT_KEY, HOTKEY_O)
 
 setBackground(frmSettings, true, 650, 553, 255)
 
@@ -86,15 +86,15 @@ setBackground2(frmSettings, 290, 90 + 40, 255, left_block_x, left_block_y)
 image = UI_CreateCompent(frmSettings, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
 UI_LoadImage(image, "./texture/ascaron_ui/icon/camera-reels.png", NORMAL, 20, 20, 0, 0)
 
-labMusic = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusic", 120, 12, left_block_x + 40, left_block_y + 10)
-UI_SetCaption(labMusic, "Camera mode" )
-UI_SetTextColor(labMusic, argbColor("c2c2c1"))
-UI_SetLabelExFont(labMusic, EXO_Regular_S13, FALSE, COLOR_BLACK)
+labCameraMode = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labCameraMode", 120, 12, left_block_x + 40, left_block_y + 10)
+UI_SetCaption(labCameraMode, "Camera mode" )
+UI_SetTextColor(labCameraMode, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCameraMode, EXO_Regular_S13, FALSE, COLOR_BLACK)
 
-labMusicDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labMusicDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
-UI_SetCaption(labMusicDescription, "*description" )
-UI_SetTextColor(labMusicDescription, argbColor("6f6f6f"))
-UI_SetLabelExFont(labMusicDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
+labCameraModeDescription = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labCameraModeDescription", 120, 12, left_block_x + 40, left_block_y + 10 + 20)
+UI_SetCaption(labCameraModeDescription, "*description" )
+UI_SetTextColor(labCameraModeDescription, argbColor("6f6f6f"))
+UI_SetLabelExFont(labCameraModeDescription, EXO_Regular_S10, FALSE, COLOR_BLACK)
 
 checkCameraMode = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkCameraMode", 31, 20, left_block_x + 249, left_block_y + 10)
 UI_LoadImage(checkCameraMode, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
@@ -410,7 +410,7 @@ btnRelogin = CreateButton(8, frmSettings, "btnRelogin", "LOGOUT", EXO_Regular_S1
 btnSwitchChar = CreateButton(6, frmSettings, "btnSwitchChar", "SWITCH CHAR", EXO_Regular_S13, 130, 42, 194, left_block_y)
 
 -- offline mode
-btnOfflineMode = CreateButton(6, frmSettings, "btnOfflineMode", "OFFLINE MODE", EXO_Regular_S13, 130, 42, 334, left_block_y)
+-- btnOfflineMode = CreateButton(6, frmSettings, "btnOfflineMode", "OFFLINE MODE", EXO_Regular_S13, 130, 42, 334, left_block_y)
 
 -- APPLY
 btnApply = CreateButton(13, frmSettings, "btnApply", "APPLY", EXO_Regular_S13, 130, 42, 490, left_block_y)
