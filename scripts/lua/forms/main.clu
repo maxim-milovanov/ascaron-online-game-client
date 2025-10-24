@@ -1499,7 +1499,6 @@ memCentent  = UI_CreateCompent( frmQuestion, MEMO_TYPE, "memCentent", 140, 210, 
 UI_SetCaption( memCentent, "400" )
 UI_SetTextColor( memCentent, COLOR_BLACK )
 UI_SetLabelExFont( memCentent, EXO_Regular_S12, TRUE, COLOR_WHITE )
-UI_SetMemoPageShowNum( memCentent, 9 )
 UI_SetMemoMaxNumPerRow( memCentent, 31 )
 
 	labNotice = UI_CreateCompent( frmQuestion, LABELEX_TYPE, "labNotice", 400, 150, 15 ,73 )
@@ -1550,7 +1549,6 @@ memMiss  = UI_CreateCompent( frmAnswer, MEMO_TYPE, "memMiss", 197, 230, 20, 44 )
 UI_SetCaption( memMiss, "400" )
 UI_SetTextColor( memMiss, COLOR_BLACK )
 UI_SetLabelExFont( memMiss, EXO_Regular_S12, TRUE, COLOR_WHITE )
-UI_SetMemoPageShowNum( memMiss, 9 )
 UI_SetMemoMaxNumPerRow( memMiss, 31 )
 
 --创建关闭按钮

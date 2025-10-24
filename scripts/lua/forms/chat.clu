@@ -246,7 +246,6 @@ memChat = UI_CreateCompent( frmChat, RICHMEMO_TYPE, "memChat", 254, 120, 14, 55 
 --UI_SetTextColor( memChat, COLOR_BLACK )
 --UI_SetCaption( memChat, "" ) 
 --UI_SetMemoMaxNumPerRow( memChat, 42 )
---UI_SetMemoPageShowNum( memChat, 6 )
 --UI_SetMemoRowHeight( memChat , 21 )
 
 scrollid = UI_GetScroll(memChat)
@@ -363,7 +362,6 @@ UI_SetEditMaxNumVisible( edtTradeGold, 29 )
 --UI_SetTextColor( memCtrl, COLOR_BLACK )
 --UI_SetCaption( memCtrl, "" ) 
 --UI_SetMemoMaxNumPerRow(memCtrl, 42 )
---UI_SetMemoPageShowNum(memCtrl, 6 )
 --UI_SetMemoRowHeight( memCtrl , 21 )
 
 --加载聊天对话

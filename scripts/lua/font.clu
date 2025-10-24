@@ -53,3 +53,6 @@ EXO_Thin_S17 = UI_CreateFont( "Exo2-Thin", 17 * global_font_scale, 0.2, 0.8 )
 EXO_Thin_S18 = UI_CreateFont( "Exo2-Thin", 18 * global_font_scale, 0.2, 0.8 )
 EXO_Thin_S19 = UI_CreateFont( "Exo2-Thin", 19 * global_font_scale, 0.2, 0.8 )
 EXO_Thin_S20 = UI_CreateFont( "Exo2-Thin", 20 * global_font_scale, 0.2, 0.8 )
+
+
+NPC_DIALOGUE = UI_CreateFont( "Exo2-Regular", 14 * global_font_scale, 0.2, 1.1 )

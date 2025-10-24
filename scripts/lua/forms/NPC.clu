@@ -15,7 +15,7 @@ UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 
 memCtrl = UI_CreateCompent( frmNPCchat, MEMO_TYPE, "memCtrl", 400, 260, 50, 50)
-UI_SetFontMemo(memCtrl, EXO_Regular_S14, argbColor("ffffff"))
+UI_SetFontMemo(memCtrl, NPC_DIALOGUE, argbColor("ffffff"))
 setScroll(memCtrl)
 
 -----------------------------------------------------------------------
@@ -132,31 +132,29 @@ UI_SetMargin(grdNPCstorage, 0, 0, 0, 0)
 -----------------------------------------------------------------------
 -- NPC Quest view
 -----------------------------------------------------------------------
-frmNPCMission = UI_CreateForm( "frmNPCMission", FALSE, 400, 350, 269, 150, TRUE, FALSE )
-UI_ShowForm( frmNPCMission, FALSE )
+frmNPCMission = UI_CreateForm( "frmNPCMission", FALSE, 600, 500, 269, 150, TRUE, FALSE )
+UI_ShowForm( frmNPCMission, TRUE )
 UI_AddFormToTemplete( frmNPCMission, FORM_MAIN )
-UI_SetIsDrag( frmNPCMission, TRUE )
+UI_SetIsDrag( frmNPCMission, FALSE )
+UI_SetFormStyleEx(frmNPCMission, FORM_CENTERBOTTOM, 0, 160)
 
-setBackground(frmNPCMission, true, 400, 350, 225)
+setBackground(frmNPCMission, true, 600, 500, 225)
 
-labFormname = UI_CreateCompent(frmNPCMission, LABELEX_TYPE, "labFormname", 400, 14, 0, 20)
+labFormname = UI_CreateCompent(frmNPCMission, LABELEX_TYPE, "labFormname", 600, 14, 0, 20)
 UI_SetCaption( labFormname, "QUEST" )
 UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 UI_SetCaptionIsCenter(labFormname, TRUE)
 
-memMission = UI_CreateCompent( frmNPCMission, MEMOEX_TYPE, "memMission", 340, 218, 30, 50 )
-UI_SetFontMemo(memMission, EXO_Regular_S14, argbColor("ffffff"))
-UI_SetCaption( memMission, "" ) 
-UI_SetMemoMaxNumPerRow(memMission, 30 )
-UI_SetMemoPageShowNum(memMission, 17 )
-UI_SetMemoRowHeight( memMission, 16 )
+memMission = UI_CreateCompent( frmNPCMission, MEMOEX_TYPE, "memMission", 540, 368, 30, 50 )
+UI_SetFontMemo(memMission, NPC_DIALOGUE, argbColor("ffffff"))
 setScroll(memMission)
 
-btnYes = CreateButton(4, frmNPCMission, "btnYes", "ACCEPT", EXO_Regular_S16, 165, 42, 205, 288)
-btnComplete = CreateButton(4, frmNPCMission, "btnComplete", "COMPLETE", EXO_Regular_S16, 165, 42, 205, 288)
 
-btnNo = CreateButton(5, frmNPCMission, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 30, 288)
+btnYes = CreateButton(4, frmNPCMission, "btnYes", "ACCEPT", EXO_Regular_S16, 165, 42, 205, 488 - 50)
+btnComplete = CreateButton(4, frmNPCMission, "btnComplete", "COMPLETE", EXO_Regular_S16, 165, 42, 205, 488 - 50)
+
+btnNo = CreateButton(5, frmNPCMission, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 30, 488 - 50)
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
@@ -212,7 +210,6 @@ UI_LoadImage( proNPCforge, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROG
 memForgeItemState = UI_CreateCompent( frmNPCforge, MEMO_TYPE, "memForgeItemState", 294, 170, 82, 54 )
 UI_SetTextColor( memForgeItemState, COLOR_BLACK )
 UI_SetMemoMaxNumPerRow( memForgeItemState, 24 )
-UI_SetMemoPageShowNum( memForgeItemState, 7 )
 UI_SetMemoRowHeight( memForgeItemState, 17 )
 
 lstForgeItemState = UI_CreateCompent( frmNPCforge, LIST_TYPE, "lstForgeItemState", 294, 170, 82, 54 )
@@ -271,7 +268,6 @@ UI_LoadScaleImage( proNPCshine, "./texture/gui/old_gui/forge3.tga", PROGRESS_PRO
 memForgeItemState = UI_CreateCompent( frmNPCshine, MEMO_TYPE, "memForgeItemState", 152, 75, 67, 36 )
 UI_SetTextColor( memForgeItemState, COLOR_BLACK )
 UI_SetMemoMaxNumPerRow( memForgeItemState, 16 )
-UI_SetMemoPageShowNum( memForgeItemState, 4 )
 UI_SetMemoRowHeight( memForgeItemState, 17 )
 
 lstForgeItemState = UI_CreateListView( frmConAsk, "lstForgeItemState", 152, 75, 67, 36, 1, 2 )

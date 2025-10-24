@@ -702,7 +702,7 @@
 [701]	"Please insert the scroll"
 [702]	"The fairy you inserted is less than Lv 20. Please reselect"
 [703]	"Please put a fairy or a new fairy. "
-[704]	"Quest Objective"
+[704]	"Quest Objective:"
 [705]	"Obtain"
 [706]	"<rUnknown ID ["
 [707]	"<r"

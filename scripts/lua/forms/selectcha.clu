@@ -162,7 +162,6 @@ memChaDescribe  = UI_CreateCompent( frmUserfound, MEMO_TYPE, "memChaDescribe", 1
 UI_SetTextColor( memChaDescribe, COLOR_BLACK )
 UI_SetLabelExFont( memChaDescribe, EXO_Regular_S12, TRUE, COLOR_WHITE )
 UI_SetMemoMaxNumPerRow( memChaDescribe, 26 )
-UI_SetMemoPageShowNum( memChaDescribe, 6 )
 
 -- º”‘ÿ–’√˚±≥æ∞Õº∆¨
 imgNameBak = UI_CreateCompent( frmUserfound, IMAGE_TYPE, "imgNameBak", 136, 19, 227, 187 )

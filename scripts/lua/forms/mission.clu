@@ -43,7 +43,6 @@ memMiss  = UI_CreateCompent( frmMission, MEMOEX_TYPE, "memMiss", 330, 400, 250, 
 UI_SetCaption( memMiss, "400" )
 UI_SetTextColor( memMiss, COLOR_BLACK )
 UI_SetLabelExFont( memMiss, EXO_Regular_S12, TRUE, COLOR_WHITE )
-UI_SetMemoPageShowNum(memMiss, 21)
 UI_SetMemoRowHeight(memMiss, 18 )
 
 

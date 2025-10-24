@@ -690,11 +690,6 @@ function UI_SetMemoMaxNumPerRow(id, num)
     CLU_Call( "UI_SetMemoMaxNumPerRow", id, num )
 end
 
--- 设定Memo每页显示的行数
-function UI_SetMemoPageShowNum(id, num) 
-    CLU_Call( "UI_SetMemoPageShowNum", id, num )
-end
-
 -- 设定Memo每行显示的高度
 function UI_SetMemoRowHeight(id, num) 
     CLU_Call( "UI_SetMemoRowHeight", id, num )

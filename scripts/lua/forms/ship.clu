@@ -213,7 +213,6 @@ UI_SetTextColor( memCtrl, COLOR_FFEDCF )
 UI_SetLabelExFont( memCtrl, FONT160, TRUE, COLOR_PURPLE )
 UI_SetCaption( memCtrl, "" ) 
 UI_SetMemoMaxNumPerRow(memCtrl, 55 )
-UI_SetMemoPageShowNum(memCtrl, 13 )
 UI_SetMemoRowHeight( memCtrl , 22 )
 
 scrollid = UI_GetScroll(memCtrl)
