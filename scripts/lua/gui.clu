@@ -665,6 +665,10 @@ function UI_SetFontMemo( id, font, color)
 	CLU_Call("UI_SetFontMemo", id, font, color)
 end
 
+function UI_SetFontTree( id, font)
+	CLU_Call("UI_SetFontTree", id, font)
+end
+
 -- 设置GoodGrid中的单元格背景
 function UI_GoodGridLoadUnitImage( id, file, w, h, tx, ty )
 	CLU_Call( "UI_GoodGridLoadUnitImage", id, file, w, h, tx, ty )

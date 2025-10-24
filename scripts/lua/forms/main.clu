@@ -1101,46 +1101,64 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 -----------------------------------------------------------------------
 -- Manufacturing
 -----------------------------------------------------------------------
-frmCompose = UI_CreateForm( "frmCompose", FALSE, 302, 422, 0, 0, TRUE, FALSE )
-UI_ShowForm( frmCompose, FALSE )
-UI_AddFormToTemplete( frmCompose, FORM_MAIN )
-UI_FormSetIsEscClose( frmCompose, TRUE )
-UI_SetIsDrag( frmCompose,TRUE)
-UI_SetFormStyle( frmCompose,2)
+frmCompose = UI_CreateForm( "frmCompose", FALSE, 282, 373, 0, 0, TRUE, FALSE )
+UI_ShowForm(frmCompose, FALSE)
+UI_AddFormToTemplete(frmCompose, FORM_MAIN)
+UI_FormSetIsEscClose(frmCompose, TRUE)
+UI_SetIsDrag(frmCompose, TRUE)
+UI_SetFormStyle(frmCompose, 2)
 
-imgBackground = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgBackground", 302, 422, 0, 0 )
-UI_LoadImage( imgBackground, "texture/gui/life-manufacturing.png", NORMAL, 302, 422, 0, 0 )
+setBackground(frmCompose, true, 282, 373, 235)
 
-cmdItemBase1 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 84, 255 )
+labFormname = UI_CreateCompent(frmCompose, LABELEX_TYPE, "labFormname", 282, 14, 0, 20)
+UI_SetCaption( labFormname, "MANUCRAFTING" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 72, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 156, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 30, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 114, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 198, 134)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 114, 218)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+cmdItemBase1 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase1", 32, 32, 72 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase1,"Blueprint")
 
-cmdItemBase2 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32,	187, 255 )
+cmdItemBase2 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase2", 32, 32,	156 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase2,"Tool")
 
-cmdItemBase3 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 51, 157 )
+cmdItemBase3 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 30 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase3,"Material 1")
 
-cmdItemBase4 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase4", 32, 32, 135, 96 )
+cmdItemBase4 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase4", 32, 32, 114 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase4,"Material 2")
 
-cmdItemBase5 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase5", 32, 32, 218, 157 )
+cmdItemBase5 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase5", 32, 32, 198 + 11, 134 + 11 )
 UI_SetHint(cmdItemBase5,"Material 3")
 
-cmdItemBase6 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase6", 32, 32, 135, 184 )
+cmdItemBase6 = UI_CreateCompent( frmCompose, COMMAND_ONE_TYPE, "cmdItemBase6", 32, 32, 114 + 11, 218 + 11 )
 UI_SetHint(cmdItemBase6, "Product")
 
-imgCookingFrame = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgCookingFrame", 286, 7, 8, 285+50 )
-UI_LoadImage( imgCookingFrame, "texture/gui/life-butchering.png", NORMAL, 286, 7, 0, 425 )
+imgManucraftFrame = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgManucraftFrame", 222, 19, 30, 282 )
+UI_LoadImage( imgManucraftFrame, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 222, 19, 383, 1102)
 
-proCompose = UI_CreateCompent( frmCompose, PROGRESS_TYPE, "proCompose", 282, 4, 10, 287+50 )
-UI_LoadImage( proCompose, "texture/gui/life-butchering.png", PROGRESS_PROGRESS, 282, 4, 0, 433)
+proCompose = UI_CreateCompent( frmCompose, PROGRESS_TYPE, "proCompose", 215, 13, 34, 285 )
+UI_LoadImage( proCompose, "./texture/ascaron_ui/asc-part-02.png", PROGRESS_PROGRESS, 215, 13, 383, 1123)
 
-btnForgeYes = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnForgeYes", 140, 42, 57, 345+10 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/life-butchering.png", 140, 42, 307, 0, FALSE )
-
-btnClose = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnClose", 42, 42, 203, 345+10 )
-UI_LoadButtonImage( btnClose, "texture/gui/life-butchering.png", 42, 42, 307, 172, TRUE )
-UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmCompose, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 58, 311)
 
 -----------------------------------------------------------------------
 -- Analyze
