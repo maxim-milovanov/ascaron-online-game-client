@@ -151,10 +151,10 @@ UI_SetFontMemo(memMission, NPC_DIALOGUE, argbColor("ffffff"))
 setScroll(memMission)
 
 
-btnYes = CreateButton(4, frmNPCMission, "btnYes", "ACCEPT", EXO_Regular_S16, 165, 42, 205, 488 - 50)
-btnComplete = CreateButton(4, frmNPCMission, "btnComplete", "COMPLETE", EXO_Regular_S16, 165, 42, 205, 488 - 50)
+btnYes = CreateButton(4, frmNPCMission, "btnYes", "ACCEPT", EXO_Regular_S16, 165, 42, 305, 488 - 50)
+btnComplete = CreateButton(4, frmNPCMission, "btnComplete", "COMPLETE", EXO_Regular_S16, 165, 42, 305, 488 - 50)
 
-btnNo = CreateButton(5, frmNPCMission, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 30, 488 - 50)
+btnNo = CreateButton(5, frmNPCMission, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 130, 488 - 50)
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
