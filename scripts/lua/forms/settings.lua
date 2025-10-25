@@ -424,7 +424,7 @@ btnRelogin = CreateButton(8, frmSettings, "btnRelogin", "LOGOUT", EXO_Regular_S1
 btnSwitchChar = CreateButton(6, frmSettings, "btnSwitchChar", "SWITCH CHAR", EXO_Regular_S13, 130, 42, 194, left_block_y)
 
 -- offline mode
--- btnOfflineMode = CreateButton(6, frmSettings, "btnOfflineMode", "OFFLINE MODE", EXO_Regular_S13, 130, 42, 334, left_block_y)
+btnOfflineMode = CreateButton(6, frmSettings, "btnOfflineMode", "OFFLINE MODE", EXO_Regular_S13, 130, 42, 334, left_block_y)
 
 -- APPLY
 btnApply = CreateButton(13, frmSettings, "btnApply", "APPLY", EXO_Regular_S13, 130, 42, 490, left_block_y)
