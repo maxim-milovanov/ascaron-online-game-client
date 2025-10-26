@@ -1079,3 +1079,4 @@
 [1078]	"Mounts"
 [1079]	"Fairy"
 [1080]	"Wings"
+[1081]	"Offline mode is only available in the safe zone."
