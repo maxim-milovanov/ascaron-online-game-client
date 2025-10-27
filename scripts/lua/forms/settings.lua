@@ -12,7 +12,7 @@ end
 -----------------------------------------------------------------------
 -- Settings
 -----------------------------------------------------------------------
-frmSettings = UI_CreateForm("frmSettings", FALSE, 650, 553, 0, 0, TRUE, FALSE)
+frmSettings = UI_CreateForm("frmSettings", FALSE, 650, 553 + 30, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmSettings, FALSE )
 UI_AddFormToTemplete(frmSettings, FORM_MAIN)
 UI_FormSetIsEscClose(frmSettings, TRUE)
@@ -20,7 +20,7 @@ UI_SetIsDrag(frmSettings, FALSE)
 UI_SetFormStyle(frmSettings, FORM_ALLCENTER)
 UI_FormSetHotKey(frmSettings, ALT_KEY, HOTKEY_O)
 
-setBackground(frmSettings, true, 650, 553, 255)
+setBackground(frmSettings, true, 650, 553 + 30, 255)
 
 labFormname = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labFormname", 650, 14, 0, 20)
 UI_SetCaption(labFormname, "SETTINGS")
@@ -291,7 +291,7 @@ UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labFormname, TRUE)
 
 left_block_y = left_block_y + 30
-setBackground2(frmSettings, 290+ 10 + 290, 90 + 40, 255, left_block_x, left_block_y)
+setBackground2(frmSettings, 290+ 10 + 290, 90 + 40 + 30, 255, left_block_x, left_block_y)
 
 ------
 -- Players name show
@@ -336,6 +336,39 @@ UI_LoadImage(checkItemsName, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31
 left_block_y = left_block_y + 30
 
 ------
+-- YellowKitbag
+------
+labYellowBag = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labYellowBag", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labYellowBag, "Yellow bag" )
+UI_SetTextColor(labYellowBag, argbColor("c2c2c1"))
+UI_SetLabelExFont(labYellowBag, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkYellowBag = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkYellowBag", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkYellowBag, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkYellowBag, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 30
+
+------
+-- Circle
+------
+labCircle = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labCircle", 120, 12, left_block_x + 10, left_block_y + 10)
+UI_SetCaption(labCircle, "Circle" )
+UI_SetTextColor(labCircle, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCircle, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkCircle = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkCircle", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkCircle, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkCircle, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+------
+-- Второй блок (справа)
+------
+left_block_x = 30
+left_block_x = left_block_x + 300
+left_block_y = 330
+
+------
 -- Weapon glow
 ------
 labWeaponGlow = UI_CreateCompent(frmSettings, LABELEX_TYPE, "labWeaponGlow", 120, 12, left_block_x + 10, left_block_y + 10)
@@ -347,12 +380,7 @@ checkWeaponGlow = UI_CreateCompent(frmSettings, CHECK_TYPE, "checkWeaponGlow", 3
 UI_LoadImage(checkWeaponGlow, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
 UI_LoadImage(checkWeaponGlow, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
 
-------
--- Второй блок (справа)
-------
-left_block_x = 30
-left_block_x = left_block_x + 300
-left_block_y = 330
+left_block_y = left_block_y + 30
 
 ------
 -- Apparels

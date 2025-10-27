@@ -1080,3 +1080,5 @@
 [1079]	"Fairy"
 [1080]	"Wings"
 [1081]	"Offline mode is only available in the safe zone."
+[1082]	"Yellow loot-bag"
+[1083]	"Illumination of friend/foe in pk"

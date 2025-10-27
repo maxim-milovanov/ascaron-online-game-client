@@ -97,7 +97,7 @@ UI_LoadHeadSayFaceImage( 61, 2, 50, 50, "texture/gui/brow/61.tga", 64, 64, 0, 0 
 
 
 --¡¡ÑªÌõ
-UI_LoadHeadSayLifeImage( 60, 5, "texture/gui/old_gui/system/life.tga", 60, 5, 0, 0, TRUE )
+UI_LoadHeadSayLifeImage( 60, 7, "./texture/ascaron_ui/hp-sp-bar-7px.png", 60, 7, 0, 0, TRUE )
 --  ¶Ô»°¿ò
 
 
