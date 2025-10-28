@@ -852,14 +852,13 @@ function UI_ItemBarLoadImage( file, w, h, tx, ty )
 	CLU_Call( "UI_ItemBarLoadImage", file, w, h, tx, ty )
 end
 
+function UI_MenuLoadFont(id, font, hover, normal, disabled)
+	CLU_Call( "UI_MenuLoadFont", id, font, hover, normal, disabled)
+end
+
 -- 装载菜单背景图片
 function UI_MenuLoadImage( id, IsShowFrame, IsTitle, clientfile, cw, ch, tx, ty, framefile, w, h )
 	CLU_Call( "UI_MenuLoadImage", id, IsShowFrame, IsTitle, clientfile, cw, ch, tx, ty, framefile, w, h )
-end
-
--- 装载菜单选择条的图片
-function UI_MenuLoadSelect( menuid, imagefile, w, h, tx, ty )
-	CLU_Call( "UI_MenuLoadSelect", menuid, imagefile, w, h, tx, ty )
 end
 
 -- 增加菜单

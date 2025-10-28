@@ -9,14 +9,14 @@ UI_SetIsDrag( frmManage, FALSE )
 UI_SetFormStyleEx(frmManage, FORM_CENTERBOTTOM, 0, 160)
 
 PlayersMouseRight = UI_CreateCompent( frmManage, MENU_TYPE, "PlayersMouseRight", 130, 97, 240, 468 )
-UI_MenuLoadImage( PlayersMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( PlayersMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( PlayersMouseRight, 10, 5, 5, 5 )
-UI_MenuLoadSelect( PlayersMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(PlayersMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 ApplyMouseRight = UI_CreateCompent( frmManage, MENU_TYPE, "ApplyMouseRight", 130, 97, 240, 468 )
-UI_MenuLoadImage( ApplyMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( ApplyMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( ApplyMouseRight, 10, 5, 5, 5 )
-UI_MenuLoadSelect( ApplyMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(ApplyMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 setBackground(frmManage, true, 528, 600 - 10, 225)
 setBackground2(frmManage, 468, 386 - 50, 100, 30, 150)

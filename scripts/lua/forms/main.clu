@@ -180,11 +180,9 @@ UI_GridLoadSelectImage( grdFace, "./texture/gui/old_gui/StartF.dds", 32, 32, 123
 
 ---创建好友右键表单
 selfMouseRight = UI_CreateCompent( frmMain800, MENU_TYPE, "selfMouseRight", 68, 97, 240, 468 )
-UI_MenuLoadImage( selfMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( selfMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( selfMouseRight, 10, 5, 5, 5 )
-
--- 装载菜单选择条的图片
-UI_MenuLoadSelect( selfMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(selfMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( selfMouseRight, "Leave Party" )

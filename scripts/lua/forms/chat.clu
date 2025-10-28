@@ -106,11 +106,11 @@ UI_SetSize( id, 13, 43 )
 -----------------------------------------------------------------------
 ---创建好友右键表单
 frndMouseRight = UI_CreateCompent( frmQQ, MENU_TYPE, "frndMouseRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( frndMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( frndMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( frndMouseRight, 10, 5, 5, 5 )
 
 -- 装载菜单选择条的图片
-UI_MenuLoadSelect( frndMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(frndMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( frndMouseRight, "Detailed Info" )
@@ -123,12 +123,12 @@ UI_MenuAddText( frndMouseRight, "PM" )
 ------
 ---创建队伍右键表单
 groupMouseRight = UI_CreateCompent( frmQQ, MENU_TYPE, "groupMouseRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( groupMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( groupMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( groupMouseRight, 10, 5, 5, 5 )
 
 
 -- 装载菜单选择条的图片
-UI_MenuLoadSelect( groupMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(groupMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( groupMouseRight, "Add Friend" )
@@ -138,11 +138,11 @@ UI_MenuAddText( groupMouseRight, "Kick" )
 
 ---创建路人右键表单
 roadMouseRight = UI_CreateCompent( frmQQ, MENU_TYPE, "roadMouseRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( roadMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( roadMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( roadMouseRight, 10, 5, 5, 5 )
 
 -- 装载菜单选择条的图片
-UI_MenuLoadSelect( roadMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(roadMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( roadMouseRight, "Add Friend" )
@@ -152,22 +152,22 @@ UI_MenuAddText( roadMouseRight, "PM" )
 
 ---创建当前会话右键表单
 ChatMouseRight = UI_CreateCompent( frmQQ, MENU_TYPE, "ChatMouseRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( ChatMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( ChatMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( ChatMouseRight, 10, 5, 5, 5 )
 
 -- 装载菜单选择条的图片
-UI_MenuLoadSelect( ChatMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(ChatMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( ChatMouseRight, "Exit conversation" )
 
 --创建导师的右键菜单
 MasterRight = UI_CreateCompent( frmQQ, MENU_TYPE, "MasterRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( MasterRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( MasterRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( MasterRight, 10, 5, 5, 5 )
 
 --装载菜单选择条的图片
-UI_MenuLoadSelect( MasterRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(MasterRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( MasterRight, "Friend" )
@@ -178,11 +178,11 @@ UI_MenuAddText( MasterRight, "Delete" )
 
 --创建学徒的右键菜单
 StudentRight = UI_CreateCompent( frmQQ, MENU_TYPE, "StudentRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( StudentRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( StudentRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( StudentRight, 10, 5, 5, 5 )
 
 --装载菜单选择条的图片
-UI_MenuLoadSelect( StudentRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(StudentRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( StudentRight, "Friend" )
@@ -193,9 +193,8 @@ UI_MenuAddText( StudentRight, "Delete" )
 
 -- Block
 --BlockedRight = UI_CreateCompent( frmQQ, MENU_TYPE, "BlockedRight", 92, 97, 240, 468 )
---UI_MenuLoadImage( BlockedRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+--UI_MenuLoadImage( BlockedRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 --UI_SetMargin( BlockedRight, 10, 5, 5, 5 )
---UI_MenuLoadSelect( BlockedRight, "texture/gui/right.png", 15, 6, 17, 26  )
 --UI_MenuAddText( BlockedRight, "Delete" )
 
 -----------------------------------------------------------------------
@@ -305,11 +304,11 @@ end
 
 ---创建列表右键表单
 ListMouseRight = UI_CreateCompent( frmChat, MENU_TYPE, "ListMouseRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( ListMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( ListMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( ListMouseRight, 10, 5, 5, 5 )
 
 -- 装载菜单选择条的图片
-UI_MenuLoadSelect( ListMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(ListMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
 UI_MenuAddText( ListMouseRight, "Friend" )
@@ -453,11 +452,11 @@ UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 ---创建好友右键表单
 styMenu = UI_CreateCompent( frmQQ, MENU_TYPE, "styMenu", 92, 97, 240, 468 )
-UI_MenuLoadImage( styMenu, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( styMenu, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( styMenu, 10, 5, 5, 5 )
 
 -- 装载菜单选择条的图片
-UI_MenuLoadSelect( styMenu, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(styMenu, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -----------------------------------------------------------------------
 -- Motto

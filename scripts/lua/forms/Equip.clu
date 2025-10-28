@@ -33,9 +33,9 @@ UI_SetTextColor( labItemIMPnumber, argbColor("a3a3a3") )
 UI_SetLabelExFont( labItemIMPnumber, EXO_Regular_S12, FALSE, 4289901234 )
 
 grdMouseRight = UI_CreateCompent( frmInv, MENU_TYPE, "grdMouseRight", 92, 97, 240, 468 )
-UI_MenuLoadImage( grdMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+UI_MenuLoadImage( grdMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( grdMouseRight, 10, 5, 5, 5 )
-UI_MenuLoadSelect( grdMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(grdMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 ------
 -- 

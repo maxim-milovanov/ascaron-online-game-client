@@ -82,14 +82,14 @@ UI_ComboSetTextColor(cboResolution, COLOR_WHITE)
 
 lstResolution = UI_GetList(cboResolution)
 UI_SetListFontColor(lstResolution, COLOR_WHITE, COLOR_WHITE)
-UI_SetSize( lstResolution, 81, 190 )
+UI_SetSize( lstResolution, 81, 175 )
 UI_SetMargin( lstResolution, 16,6,16,0 )
 UI_SetListRowHeight( lstResolution, 18 )
-UI_LoadImage( lstResolution, "./texture/gui/select-map.png", COMPENT_BACK, 81, 68, 4, 114 )
+UI_LoadImage( lstResolution, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 18, 18)
 UI_AddListText( lstResolution, "1024x768" )
 UI_SetListIsMouseFollow( lstResolution, TRUE)
 UI_ComboSetTextColor( lstResolution, COLOR_WHITE )
-
+setScroll(lstResolution)
 left_block_y = left_block_y + 60 
 
 ------

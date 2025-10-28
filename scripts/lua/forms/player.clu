@@ -194,11 +194,10 @@ for pos = 1, 4, 1 do
 end
 
 ------------------------------------------------------------------------------
-mainMouseRight = UI_CreateCompent( frmMain800, MENU_TYPE, "mainMouseRight", 120, 100, 240, 468 )
-UI_MenuLoadImage( mainMouseRight, TRUE, FALSE, "texture/gui/right.png", 5, 5, 3, 17, "texture/gui/right-off.png", 5, 5 )
+mainMouseRight = UI_CreateCompent( frmMain800, MENU_TYPE, "mainMouseRight", 155, 100, 240, 468 )
+UI_MenuLoadImage( mainMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( mainMouseRight, 10, 5, 5, 5 )
-
-UI_MenuLoadSelect( mainMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
+UI_MenuLoadFont(mainMouseRight, EXO_Regular_S16, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -----------------------------------------------------------------------
 -- Relive
