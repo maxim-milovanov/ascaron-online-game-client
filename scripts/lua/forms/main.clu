@@ -117,9 +117,9 @@ UI_SetEditMaxNum( edtSay, 64)
 UI_SetEditMaxNumVisible( edtSay, 24)
 UI_SetEditCursorColor( edtSay, COLOR_WHITE )
 
-btnTranslate = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnTranslate", 30, 30, 50, 2)
-UI_LoadButtonImage(btnTranslate, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 260, 235, TRUE)
-UI_SetHint(btnTranslate, "Emoticon")
+--btnTranslate = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnTranslate", 30, 30, 50, 2)
+--UI_LoadButtonImage(btnTranslate, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 260, 235, TRUE)
+--UI_SetHint(btnTranslate, "Translate enable")
 
 -- §¬§ß§à§á§Ü§Ñ §ã§Þ§Ñ§Û§Ý§à§Ó
 btnChatFace = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnChatFace", 22, 22, 300, 5)
@@ -564,35 +564,67 @@ UI_SetCaptionIsCenter(labMountLv, TRUE)
 -----------------------------------------------------------------------
 -- Fairy marriage
 -----------------------------------------------------------------------
-frmSpiritMarry = UI_CreateForm( "frmSpiritMarry", FALSE, 251, 368, 0, 0, TRUE, FALSE )
+frmSpiritMarry = UI_CreateForm( "frmSpiritMarry", FALSE, 285, 310, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmSpiritMarry, FALSE )
 UI_AddFormToTemplete( frmSpiritMarry, FORM_MAIN )
 UI_FormSetIsEscClose( frmSpiritMarry, TRUE )
 UI_SetIsDrag( frmSpiritMarry,TRUE)
 UI_SetFormStyle( frmSpiritMarry,1)
 
-imgBak = UI_CreateCompent( frmSpiritMarry, IMAGE_TYPE, "imgBak", 251, 368, 0, 0 )
-UI_LoadImage( imgBak, "texture/gui/fairy-marriage.png", NORMAL, 251, 368, 0, 0 )
+setBackground(frmSpiritMarry, true, 285, 310, 235)
 
-cmdSpiritOne = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritOne", 32, 32, 80, 218 )
-cmdSpiritTwo = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritTwo", 32, 32, 137, 218 )
-cmdSpiritItem = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritItem", 32, 32, 110, 272 )
+labFormname = UI_CreateCompent(frmSpiritMarry, LABELEX_TYPE, "labFormname", 285, 14, 0, 20)
+UI_SetCaption( labFormname, "FAIRY MARRIAGE" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
+image = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "image", 54, 54, 115, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "image", 54, 54, 30, 114)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "image", 54, 54, 201, 114)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+image = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "image", 225, 40, 30, 188)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 269, 40, 270, 1173)
+
+imgage = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "imgage", 25, 25, 35, 195)
+UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
+
+icon = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "icon", 32, 32, 115 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/x0021.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 50)
+
+icon = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "icon", 32, 32, 30 + 11, 114 + 11)
+UI_LoadImage(icon, "./texture/icon/n1340.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 50)
+
+icon = UI_CreateCompent(frmSpiritMarry, IMAGE_TYPE, "icon", 32, 32, 201 + 11, 114 + 11)
+UI_LoadImage(icon, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 52, 49)
+UI_LoadImage(icon, "./texture/icon/n1340.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 50)
+
+cmdSpiritOne = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritOne", 32, 32, 201 + 11, 114 + 11 )
+UI_SetHint( cmdSpiritOne, "Fairy Lv20+" )
 UI_SetTag( cmdSpiritOne, enumSPIRIT_ONE )
+
+cmdSpiritTwo = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritTwo", 32, 32, 30 + 11, 114 + 11 )
+UI_SetHint( cmdSpiritTwo, "Fairy Lv20+" )
 UI_SetTag( cmdSpiritTwo, enumSPIRIT_TWO )
+
+cmdSpiritItem = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritItem", 32, 32,    115 + 11, 50 + 11 )
+UI_SetHint( cmdSpiritItem, "Demonic Fruit" )
 UI_SetTag( cmdSpiritItem, enumSPIRIT_OUT )
 
-labMoneyShow = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labMoneyShow", 112, 14, 68+37, 334 )
-UI_SetCaption( labMoneyShow, "$$$")
-UI_SetTextColor( labMoneyShow, COLOR_FFEDCF )
-UI_SetLabelExFont( labMoneyShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
+labMoneyShow = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labMoneyShow", 112, 12, 65, 201 )
+UI_SetCaption( labMoneyShow, "0" )
+UI_SetTextColor( labMoneyShow, argbColor("a3a3a3"))
+UI_SetLabelExFont( labMoneyShow, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-btnForgeYes = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnForgeYes", 50, 44, 22, 275 )
-UI_LoadButtonImage( btnForgeYes, "texture/gui/marryyesno.tga", 60, 53, 0, 0, FALSE )
-
-btnForgeNo = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnForgeNo", 50, 44, 150+25, 275)
-UI_LoadButtonImage( btnForgeNo, "texture/gui/marryyesno.tga", 60, 53, 60, 0, FALSE )
-UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
+btnForgeYes = CreateButton(4, frmSpiritMarry, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 60, 248)
 
 -----------------------------------------------------------------------
 -- Tier up \ 

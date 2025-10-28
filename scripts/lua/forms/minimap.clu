@@ -29,7 +29,7 @@ while 1 do
 	labMapPos = UI_CreateCompent( frmMinimap, LABELEX_TYPE, name, 200, 16, 0, 40)
 	UI_SetCaption( labMapPos, "2200, 2200" )
 	UI_SetTextColor( labMapPos, COLOR_WHITE )
-	UI_SetLabelExFont( labMapPos, EXO_Regular_S12, TRUE, COLOR_BLACK )
+	UI_SetLabelExFont( labMapPos, EXO_Regular_S14, TRUE, COLOR_BLACK )
 	
 	if n ~= 0 then 
 		UI_SetIsShow( labMapPos, FALSE ) 

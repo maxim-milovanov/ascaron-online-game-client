@@ -203,19 +203,21 @@ UI_MenuLoadSelect( mainMouseRight, "texture/gui/right.png", 15, 6, 17, 26  )
 -----------------------------------------------------------------------
 -- Relive
 -----------------------------------------------------------------------
-frmRelive = UI_CreateForm( "frmRelive",  FALSE, 500, 187, 0, 0, TRUE, FALSE )
-UI_ShowForm( frmRelive, FALSE )
+frmRelive = UI_CreateForm( "frmRelive",  FALSE, 340, 133, 0, 0, TRUE, FALSE )
+UI_ShowForm( frmRelive, TRUE )
 UI_SetIsDrag( frmRelive, FALSE )
 UI_FormSetIsEscClose( frmRelive, FALSE )
-UI_SetBackground(frmRelive)
+UI_FormSetHotKey(frmRelive, ALT_KEY, HOTKEY_Y ) 
 
-imgWasted = UI_CreateCompent( frmRelive, IMAGE_TYPE, "imgWasted", 500, 187, 0, 0 )
-UI_LoadImage( imgWasted, "texture/gui/wasted.png", NORMAL, 715, 268, 0, 0 )
+setBackground(frmRelive, false, 340, 133, 255)
 
-btnReCity = UI_CreateCompent( frmRelive, BUTTON_TYPE, "btnReCity", 105, 32, 197, 155 )
-UI_LoadButtonImage( btnReCity, "texture/gui/wasted.png", 150, 46, 25, 300, TRUE )
---UI_FormSetEnterButton( frmRelive, btnReCity )
+labDesc = UI_CreateCompent(frmRelive, LABELEX_TYPE, "labDesc", 340, 14, 0, 30)
+UI_SetCaption(labDesc, "The character died. Revive in the city?" )
+UI_SetTextColor(labDesc, argbColor("b9baba") )
+UI_SetLabelExFont(labDesc, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labDesc, TRUE)
 
+btnReCity = CreateButton(4, frmRelive, "btnReCity", "REVIVE IN CITY", EXO_Regular_S16, 165, 42, 87, 71)
 -----------------------------------------------------------------------
 -- 定义倒计时框
 -----------------------------------------------------------------------

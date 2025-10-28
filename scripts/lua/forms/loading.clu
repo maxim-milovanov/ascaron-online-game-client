@@ -33,15 +33,14 @@ UI_FormSetIsEscClose( frmConnect, FALSE )
 imgLoading = UI_CreateCompent( frmConnect, IMAGE_FLASH_TYPE, "imgLoading", 483, 7, 14, 7 )
 UI_LoadScaleImage( imgLoading, "texture/gui/loading.png", COMPENT_BACK, 150, 7, 14, 30, 1.0, 1.0 )
 -----------------------------------------------------------------------
--- 定义界面说明表单
+-- Описание интерфейса после создания персонажа (отключено)
 -----------------------------------------------------------------------	
--- 创建界面说明表单
+--[[
 frmVHelp = UI_CreateForm( "frmVHelp", FALSE, 936, 600, 0, 0, TRUE, FALSE )
 UI_AddFormToTemplete( frmVHelp, FORM_MAIN )
-UI_ShowForm( frmVHelp, TRUE )
+UI_ShowForm( frmVHelp, FALSE )
 UI_FormSetIsEscClose( frmVHelp, FALSE )
 --UI_FormSetHotKey( frmVHelp, ALT_KEY, HOTKEY_U )
-
 
 imgLoading1 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading1", 256, 256, 0, 0 )
 UI_LoadImage( imgLoading1, "./texture/gui/old_gui/f1.tga", NORMAL, 256, 256, 0, 0 )
@@ -85,6 +84,4 @@ UI_LoadImage( imgLoading12, "./texture/gui/old_gui/f9.tga", NORMAL, 32, 88, 160,
 --创建关闭按钮
 btnClose = UI_CreateCompent( frmVHelp, BUTTON_TYPE, "btnClose", 222, 78, 50, 400 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/f10.tga", 222, 78, 0, 0, FALSE )
-
-
-
+]]
