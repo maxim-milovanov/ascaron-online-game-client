@@ -4,8 +4,12 @@ function UI_LoadHeadSayFaceImage( num, maxframe, w, h, file, cw, ch, tx, ty )
 end
 
 -- 装载角色的血,参数：显示宽高，图片名称以及图片中宽高，位置，是否水平摆放
-function UI_LoadHeadSayLifeImage( uw, uh, file, w, h, tx, ty, isHorizontal )
-	CLU_Call( "UI_LoadHeadSayLifeImage", uw, uh, file, w, h, tx, ty, isHorizontal )
+function UI_LoadHeadSayHPImage( uw, uh, file, w, h, tx, ty, isHorizontal )
+	CLU_Call( "UI_LoadHeadSayHPImage", uw, uh, file, w, h, tx, ty, isHorizontal )
+end
+
+function UI_LoadHeadSaySPImage( uw, uh, file, w, h, tx, ty, isHorizontal )
+	CLU_Call( "UI_LoadHeadSaySPImage", uw, uh, file, w, h, tx, ty, isHorizontal )
 end
 
 
@@ -95,9 +99,9 @@ UI_LoadHeadSayFaceImage( 61, 2, 50, 50, "texture/gui/brow/61.tga", 64, 64, 0, 0 
 --UI_LoadHeadSayFaceImage( 11, 2, 50, 50, "texture/gui/brow/brow11.tga", 64, 64, 0, 0)
 --UI_LoadHeadSayFaceImage( 12, 2, 50, 50, "texture/gui/brow/brow12.tga", 64, 64, 0, 0 )
 
-
 --　血条
-UI_LoadHeadSayLifeImage( 60, 7, "./texture/ascaron_ui/hp-sp-bar-7px.png", 60, 7, 0, 0, TRUE )
+UI_LoadHeadSayHPImage( 60, 7, "./texture/ascaron_ui/hp-sp-bar-7px.png", 60, 7, 0, 0, TRUE )
+UI_LoadHeadSaySPImage( 60, 7, "./texture/ascaron_ui/hp-sp-bar-7px.png", 60, 7, 0, 14, TRUE )
 --  对话框
 
 

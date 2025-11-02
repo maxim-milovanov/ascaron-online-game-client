@@ -12,7 +12,7 @@ UI_LoadButtonImage(btnBack, "./texture/ascaron_ui/asc-part-01.png", 137, 60, 857
 -----------------------------------------------------------------------
 -- Selete gate
 -----------------------------------------------------------------------	
-frmServer = UI_CreateForm( "frmServer", FALSE, 420, 500, 396, 100, FALSE, FALSE )
+frmServer = UI_CreateForm( "frmServer", FALSE, 420, 650, 396, 100, FALSE, FALSE )
 UI_SetFormStyle( frmServer , 2 )
 UI_AddFormToTemplete( frmServer, FORM_LOGIN )
 UI_FormSetIsEscClose( frmServer, FALSE )
@@ -28,7 +28,7 @@ UI_LoadImage( imgBackground, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420
 
 																	-- §°§ä§ã§ä§å§á §ã§Ý§Ö§Ó§Ñ (§Ó§Ö§ã§î §ã§á§Ú§ã§à§Ü)
 																		-- §°§ä§ã§ä§å§á §ã§Ó§Ö§â§ç§å (§Ó§Ö§ã§î §ã§á§Ú§ã§à§Ü)
-serverList = UI_CreateListView( frmServer, "serverList", 420, 210, 0, 50, 50, 50 )
+serverList = UI_CreateListView( frmServer, "serverList", 420, 210 + 150, 0, 50, 50, 50 )
 --UI_SetMargin( serverList, 30, 20, 15, 0 )
 UI_ListViewSetTitle(serverList, 0, 20, "", 0, 0, 0, 0)
 UI_ListViewSetTitle(serverList, 1, 325, "", 0, 0, 0, 0)

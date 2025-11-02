@@ -828,7 +828,7 @@ UI_AddFormToTemplete( frmSetTrade, FORM_MAIN )
 UI_FormSetIsEscClose( frmSetTrade, TRUE )
 UI_SetIsDrag(frmSetTrade, FALSE)
 UI_SetFormStyle(frmSetTrade, 1)
-UI_FormSetHotKey(frmSetTrade, ALT_KEY, HOTKEY_X)
+--UI_FormSetHotKey(frmSetTrade, ALT_KEY, HOTKEY_X)
 
 imgBackground = UI_CreateCompent( frmSetTrade, IMAGE_TYPE, "imgBackground", 340, 400, 0, 0 )
 UI_LoadImage( imgBackground, "texture/gui/frmBackground.png", NORMAL, 572, 572, 0, 0 )
