@@ -72,7 +72,7 @@ UI_ShowForm(frmSearch, FALSE)
 UI_AddFormToTemplete(frmSearch, FORM_MAIN)
 UI_FormSetIsEscClose(frmSearch, TRUE )
 UI_FormSetHotKey(frmSearch, ALT_KEY, HOTKEY_T)
-UI_SetIsDrag(frmSearch, FALSE)
+UI_SetIsDrag(frmSearch, TRUE)
 UI_SetFormStyleEx(frmSearch, FORM_CENTERBOTTOM, 0, 160)
 
 setBackground(frmSearch, false, 400, 144, 225)

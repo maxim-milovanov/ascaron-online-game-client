@@ -5,7 +5,7 @@ frmMission = UI_CreateForm( "frmMission", FALSE, 600, 500, 0, 0, FALSE, FALSE )
 UI_FormSetHotKey(frmMission, ALT_KEY, HOTKEY_Q) 
 UI_ShowForm(frmMission, TRUE)
 UI_AddFormToTemplete(frmMission, FORM_MAIN)
-UI_SetIsDrag( frmMission, FALSE)
+UI_SetIsDrag( frmMission, TRUE)
 UI_SetFormStyleEx(frmMission, FORM_CENTERBOTTOM, 0, 160)
 
 setBackground(frmMission, true, 600, 500, 225)

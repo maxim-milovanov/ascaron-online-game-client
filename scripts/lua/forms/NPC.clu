@@ -136,9 +136,8 @@ UI_SetMargin(grdNPCstorage, 0, 0, 0, 0)
 frmNPCMission = UI_CreateForm( "frmNPCMission", FALSE, 600, 500, 269, 150, TRUE, FALSE )
 UI_ShowForm( frmNPCMission, TRUE )
 UI_AddFormToTemplete( frmNPCMission, FORM_MAIN )
-UI_SetIsDrag( frmNPCMission, FALSE )
+UI_SetIsDrag( frmNPCMission, TRUE )
 UI_SetFormStyleEx(frmNPCMission, FORM_CENTERBOTTOM, 0, 160)
-
 setBackground(frmNPCMission, true, 600, 500, 225)
 
 labFormname = UI_CreateCompent(frmNPCMission, LABELEX_TYPE, "labFormname", 600, 14, 0, 20)

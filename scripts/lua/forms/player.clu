@@ -186,7 +186,7 @@ for pos = 1, 4, 1 do
 	UI_SetTextColor( labelname, argbColor("b9baba") )
 	UI_SetLabelExFont( labelname, EXO_Regular_S12, FALSE, COLOR_BLACK )
 	
-	imgLeader = UI_CreateCompent( label, IMAGE_TYPE, "imgLeader", 15, 15, 5, 5 )
+	imgLeader = UI_CreateCompent( label, IMAGE_TYPE, "imgLeader", 15, 15, 155, 5 )
 	UI_LoadImage( imgLeader, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 12, 12, 164, 239 )
 	
 	labeldead = UI_CreateCompent( label, IMAGE_TYPE, labeldead, 25, 25, 10, 5 )

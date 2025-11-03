@@ -131,7 +131,6 @@ UI_SetMargin( groupMouseRight, 10, 5, 5, 5 )
 UI_MenuLoadFont(groupMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
-UI_MenuAddText( groupMouseRight, "Add Friend" )
 --UI_MenuAddText( groupMouseRight, "Send message" )
 UI_MenuAddText( groupMouseRight, "PM" )
 UI_MenuAddText( groupMouseRight, "Kick" )
@@ -145,7 +144,6 @@ UI_SetMargin( roadMouseRight, 10, 5, 5, 5 )
 UI_MenuLoadFont(roadMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
 -- 增加菜单
-UI_MenuAddText( roadMouseRight, "Add Friend" )
 UI_MenuAddText( roadMouseRight, "Party Invite" )
 --UI_MenuAddText( roadMouseRight, "Send message" )
 UI_MenuAddText( roadMouseRight, "PM" )
