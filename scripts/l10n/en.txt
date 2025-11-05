@@ -944,7 +944,7 @@
 [944]	"Kindergarten"
 [945]	"Primary School"
 [946]	"Junior Middle School"
-[947]	"Set the slider to %d%%"
+[947]	"SET THE SLIDER TO %d%%"
 [948]	"University"
 [949]	"school record:%s"
 [950]	"academic credit(%d/%d)"
@@ -1082,3 +1082,4 @@
 [1081]	"Offline mode is only available in the safe zone."
 [1082]	"Yellow loot-bag"
 [1083]	"Illumination of friend/foe in pk"
+[1084]	"PLEASE CONFIRM THT YOU ARE NOT A ROBOT"

@@ -204,7 +204,7 @@ UI_MenuLoadFont(mainMouseRight, EXO_Regular_S16, argbColor("FFD166"), argbColor(
 -----------------------------------------------------------------------
 frmRelive = UI_CreateForm( "frmRelive",  FALSE, 340, 133, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmRelive, TRUE )
-UI_SetIsDrag( frmRelive, FALSE )
+UI_SetIsDrag( frmRelive, TRUE )
 UI_FormSetIsEscClose( frmRelive, FALSE )
 UI_FormSetHotKey(frmRelive, ALT_KEY, HOTKEY_Y ) 
 
@@ -218,7 +218,7 @@ UI_SetCaptionIsCenter(labDesc, TRUE)
 
 btnReCity = CreateButton(4, frmRelive, "btnReCity", "REVIVE IN CITY", EXO_Regular_S16, 165, 42, 87, 71)
 -----------------------------------------------------------------------
--- ∂®“Âµπº∆ ±øÚ
+-- ÂÆö‰πâÂÄíËÆ°Êó∂Ê°Ü
 -----------------------------------------------------------------------
 frmTime = UI_CreateForm( "frmTime",  FALSE, 185, 101, 397, 500, TRUE, FALSE )
 UI_LoadFormImage( frmTime, "./texture/gui/old_gui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
@@ -229,17 +229,17 @@ UI_SetIsDrag( frmTime, TRUE )
 --UI_SetAlpha( frmTime, 200 )
 --UI_FormSetHotKey( frmTime, ALT_KEY, HOTKEY_X ) 
 
---¥¥Ω®—ØŒ œ‘ æ
+--ÂàõÂª∫ËØ¢ÈóÆÊòæÁ§∫
 labTime = UI_CreateCompent( frmTime, LABELEX_TYPE, "labTime", 1, 1, 58, 40 )
 --UI_SetCaption( labTime, "Do you want to Revive in town" )
 UI_SetTextColor( labTime, COLOR_BLACK)
 UI_SetLabelExFont( labTime, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
--- º”‘ÿΩÁ√Êtitle
+-- Âä†ËΩΩÁïåÈù¢title
 imgTime = UI_CreateCompent( frmTime, IMAGE_TYPE, "imgTime", 36, 13, 8, 4 )
 UI_LoadImage( imgTime, "./texture/gui/old_gui/Word.dds", NORMAL, 36, 13, 211, 161 )
 
---º”‘ÿ»°œ˚∞¥≈•
+--Âä†ËΩΩÂèñÊ∂àÊåâÈíÆ
 btnNo = UI_CreateCompent( frmTime, BUTTON_TYPE, "btnNo", 41, 19, 74, 78 )
 UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
@@ -286,16 +286,16 @@ btnSetupBooth = CreateButton(9, frmBooth, "btnSetupBooth", "SET STALL", EXO_Regu
 btnPullStakes = CreateButton(8, frmBooth, "btnPullStakes", "EXIT", EXO_Regular_S16, 74, 42, 163, 290)
 
 -----------------------------------------------------------------------
--- ∂®“Â¿Ì∑¢ΩÁ√Ê
+-- ÂÆö‰πâÁêÜÂèëÁïåÈù¢
 -----------------------------------------------------------------------	
--- ¥¥Ω®ÕÊº“¿Ì∑¢±Ìµ•
+-- ÂàõÂª∫Áé©ÂÆ∂ÁêÜÂèëË°®Âçï
 frmHead = UI_CreateForm( "frmHead", FALSE, 454, 373, 100, 100, TRUE, FALSE )
 UI_ShowForm( frmHead, FALSE )
 UI_AddFormToTemplete( frmHead, FORM_MAIN )
 --UI_FormSetHotKey( frmHead, ALT_KEY, HOTKEY_T )
 UI_FormSetIsEscClose( frmHead, FALSE )
 
--- º”‘ÿÕº∆¨
+-- Âä†ËΩΩÂõæÁâá
 imgFoundTop = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundTop", 256, 256, 0, 0 )
 UI_LoadImage( imgFoundTop, "./texture/gui/old_gui/head1.tga", NORMAL, 256, 256, 0, 0 )
 
@@ -308,33 +308,33 @@ UI_LoadImage( imgFoundTopR, "./texture/gui/old_gui/head2.tga", NORMAL, 198, 256,
 imgFoundDownR = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundDownR", 198, 117, 256, 256 )
 UI_LoadImage( imgFoundDownR, "./texture/gui/old_gui/head3.tga", NORMAL, 198, 117, 0, 117 )
 
---¥¥Ω®∑¢–Õ
+--ÂàõÂª∫ÂèëÂûã
 labHairColor = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairColor", 61, 12, 330, 200 )
 UI_SetCaption( labHairColor, "Long Hair" )
 UI_SetTextColor( labHairColor, COLOR_BLACK )
 UI_SetLabelExFont( labHairColor, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®∑¢…´
+--ÂàõÂª∫ÂèëËâ≤
 labHair = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHair", 61, 12, 330, 243 )
 UI_SetCaption( labHair, "1 1 Golden" )
 UI_SetTextColor( labHair, COLOR_BLACK )
 UI_SetLabelExFont( labHair, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---º”‘ÿœÚ◊Û∞¥≈•
+--Âä†ËΩΩÂêëÂ∑¶ÊåâÈíÆ
 btnLeftColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftColor", 40, 24, 283, 191 )
 UI_LoadButtonImage( btnLeftColor, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 24, TRUE )
 
 btnLeftHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftHair", 40, 24, 283, 234 )
 UI_LoadButtonImage( btnLeftHair, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 24, TRUE )
 
---º”‘ÿœÚ”“∞¥≈•
+--Âä†ËΩΩÂêëÂè≥ÊåâÈíÆ
 btnRightColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightColor", 40, 24, 392, 191 )
 UI_LoadButtonImage( btnRightColor, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 0, TRUE )
 
 btnRightHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightHair", 40, 24, 392, 234 )
 UI_LoadButtonImage( btnRightHair, "./texture/gui/old_gui/select4.tga", 40, 24, 110, 0, TRUE )
 
---¥¥Ω®3DΩ«…´
+--ÂàõÂª∫3DËßíËâ≤
 ui3dCreateCha = UI_CreateCompent( frmHead, UI3D_COMPENT, "ui3dCreateCha", 160, 300, 52, 35 )
 
 btnLeft3d = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeft3d", 32, 38, 28, 291 )
@@ -343,23 +343,23 @@ UI_LoadButtonImage( btnLeft3d, "./texture/gui/old_gui/select4.tga", 32, 38, 0, 3
 btnRight3d = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRight3d", 32, 38, 204, 291 )
 UI_LoadButtonImage( btnRight3d, "./texture/gui/old_gui/select4.tga",  32, 38, 0, 0, TRUE )
 
---¥¥Ω®Ω«Æ
+--ÂàõÂª∫ÈáëÈí±
 labHairMoney = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairMoney", 65, 12, 335, 287 )
 UI_SetCaption( labHairMoney, "99999999" )
 UI_SetTextColor( labHairMoney, COLOR_BLACK )
 UI_SetLabelExFont( labHairMoney, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---º”‘ÿΩ” ‹∞¥≈•
+--Âä†ËΩΩÊé•ÂèóÊåâÈíÆ
 btnYes = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnYes", 41, 19, 293, 321 )
 UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 
---º”‘ÿ»°œ˚∞¥≈•
+--Âä†ËΩΩÂèñÊ∂àÊåâÈíÆ
 btnNo = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnNo", 41, 19, 379, 321 )
 UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
--- ¿Ì∑¢µ¿æﬂ(≥Ã–Úœ‘ æ)
+-- ÁêÜÂèëÈÅìÂÖ∑(Á®ãÂ∫èÊòæÁ§∫)
 cmdHead1 = UI_CreateCompent( frmHead, COMMAND_ONE_TYPE, "cmdHead1", 32, 32, 0, 0 )
 UI_SetIsShow( cmdHead1, FALSE )
 
@@ -373,18 +373,18 @@ UI_SetTextColor( labTicket, COLOR_BLACK )
 UI_SetLabelExFont( labTicket, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -----------------------------------------------------------------------
--- ∂®“ÂÕÊº“º‰PK…Í«Î
+-- ÂÆö‰πâÁé©ÂÆ∂Èó¥PKÁî≥ËØ∑
 -----------------------------------------------------------------------	
--- ¥¥Ω®ÕÊº“º‰Ωª“◊±Ìµ•
+-- ÂàõÂª∫Áé©ÂÆ∂Èó¥‰∫§ÊòìË°®Âçï
 frmTeamPK = UI_CreateForm( "frmTeamPK", FALSE, 376, 431, 159, 468, TRUE, FALSE )
 --UI_FormSetHotKey( frmTeamPK, ALT_KEY, HOTKEY_Z )
 UI_ShowForm( frmTeamPK, TRUE )
 UI_SetIsDrag( frmTeamPK, TRUE )
 UI_AddFormToTemplete( frmTeamPK, FORM_MAIN )
-UI_SetFormStyle( frmTeamPK, 1 )---◊Û”“æ”÷–
+UI_SetFormStyle( frmTeamPK, 1 )---Â∑¶Âè≥Â±Ö‰∏≠
 UI_FormSetIsEscClose( frmTeamPK, TRUE )
 
--- º”‘ÿ±≥æ∞Õº∆¨
+-- Âä†ËΩΩËÉåÊôØÂõæÁâá
 imgBakTop1 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop1", 256, 256, 0, 0 )
 UI_LoadImage( imgBakTop1, "./texture/gui/old_gui/PK1.tga", NORMAL, 256, 256, 0, 0 )
 
@@ -403,24 +403,24 @@ UI_LoadImage( imgBakDown2, "./texture/gui/old_gui/PK4.tga", NORMAL, 120, 175, 0,
 --imgBakDown3 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown3", 46, 26, 512, 256 )
 --UI_LoadImage( imgBakDown3, "./texture/gui/old_gui/PK3.tga", NORMAL, 46, 26, 210, 52 )
 
---¥¥Ω®PKµÿÕºtitle
+--ÂàõÂª∫PKÂú∞Âõætitle
 labPKtitle = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKtitle", 207, 12, 87, 7 )
 UI_SetCaption( labPKtitle, "" )
 UI_SetTextColor( labPKtitle, COLOR_BLACK )
 UI_SetLabelExFont( labPKtitle, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®πÿ±’∞¥≈•
+--ÂàõÂª∫ÂÖ≥Èó≠ÊåâÈíÆ
 btnClose = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnClose", 14, 14, 340, 3 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 
---¥¥Ω®PKµÿÕº√˚≥∆lab
+--ÂàõÂª∫PKÂú∞ÂõæÂêçÁß∞lab
 labPKmap = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKmap", 100, 12, 256, 31 )
 UI_SetCaption( labPKmap, "" )
 UI_SetTextColor( labPKmap, COLOR_BLACK )
 UI_SetLabelExFont( labPKmap, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
-----------team1∂”‘±¡–±Ì
+----------team1ÈòüÂëòÂàóË°®
 lstTeam0 = UI_CreateListView( frmTeamPK, "lstTeam0", 296, 115, 44, 87, 5, 2 )
 UI_SetListRowHeight( lstTeam0, 21 )
 UI_SetListFontColor( lstTeam0, COLOR_BLACK, COLOR_BLACK )
@@ -440,7 +440,7 @@ UI_AddListText( lstTeam0, "Eight characters or therefore" )
 UI_AddListText( lstTeam0, "Eight characters or therefore" )
 UI_AddListText( lstTeam0, "Eight characters or therefore" )
 
-----------team2∂”‘±¡–±Ì
+----------team2ÈòüÂëòÂàóË°®
 lstTeam1 = UI_CreateListView( frmTeamPK, "lstTeam1", 296, 115, 44, 264, 5, 2 )
 UI_SetListRowHeight( lstTeam1, 21 )
 UI_SetListFontColor( lstTeam1, COLOR_BLACK, COLOR_BLACK )
@@ -461,12 +461,12 @@ UI_AddListText( lstTeam1, "Eight characters or therefore" )
 UI_AddListText( lstTeam1, "Eight characters or therefore" )
 
 
---º”‘ÿ»∑∂®∞¥≈•
+--Âä†ËΩΩÁ°ÆÂÆöÊåâÈíÆ
 btnYes = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnYes", 41, 19, 224, 382 )
 UI_LoadButtonImage( btnYes, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 0, TRUE )
 
 
---º”‘ÿ»°œ˚∞¥≈•
+--Âä†ËΩΩÂèñÊ∂àÊåâÈíÆ
 btnNo = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnNo", 41, 19, 279, 382 )
 UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
@@ -786,38 +786,45 @@ UI_SetLabelExFont( labIwMessageTitle, FONT18, FALSE, COLOR_WHITE )
 ------
 -- Anti-bot
 ------
-frmAntiBot = UI_CreateForm( "frmAntiBot", FALSE, 480, 85, 100, 50, TRUE, FALSE )
--- UI_FormSetHotKey( frmAntiBot, ALT_KEY, HOTKEY_G )
+frmAntiBot = UI_CreateForm( "frmAntiBot", FALSE, 480, 140 + 30, 0, 0, TRUE, FALSE )
+UI_FormSetHotKey( frmAntiBot, ALT_KEY, HOTKEY_G )
 UI_ShowForm( frmAntiBot, TRUE )
-UI_SetIsDrag( frmAntiBot, TRUE )
+UI_SetIsDrag( frmAntiBot, FALSE )
 UI_AddFormToTemplete( frmAntiBot, FORM_MAIN )
 UI_FormSetIsEscClose( frmAntiBot, FALSE )
-UI_SetAlpha( frmAntiBot, 155 )
+UI_SetFormStyleEx(frmAntiBot, FORM_CENTERBOTTOM, 0, 160)
 
-imgBackground = UI_CreateCompent( frmAntiBot, IMAGE_TYPE, "imgBackground", 453, 76, 30, 20 )
-UI_LoadImage( imgBackground, "texture/gui/frmAntiBot.png", NORMAL, 453, 76, 69, 0 )
+setBackground(frmAntiBot, false, 480, 170, 190)
 
-proPercent = UI_CreateCompent( frmAntiBot, PROGRESS_TYPE, "proPercent", 422, 35, 50, 42 )
-UI_LoadScaleImage( proPercent, "texture/gui/frmAntiBot.png", PROGRESS_PROGRESS, 422, 35, 7, 83, 1.0, 1.0 )
+labFormname = UI_CreateCompent(frmAntiBot, LABELEX_TYPE, "labFormname", 480, 14, 0, 20)
+UI_SetCaption(labFormname, "PLEASE CONFIRM THT YOU ARE NOT A ROBOT")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+image = UI_CreateCompent(frmAntiBot, IMAGE_TYPE, "image", 440, 70, 20, 20 + 30)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 440, 70, 266, 464)
+
+proPercent = UI_CreateCompent( frmAntiBot, PROGRESS_TYPE, "proPercent", 420, 50, 30, 30 + 30)
+UI_LoadScaleImage( proPercent, "./texture/ascaron_ui/asc-part-03.png", PROGRESS_PROGRESS, 420, 50, 268, 535, 1.0, 1.0 )
 UI_SetProgressActiveMouse( proPercent, 1 )
 
-imgPercent = UI_CreateCompent( frmAntiBot, IMAGE_TYPE, "imgPercent", 58, 58, 0, 30 )
-UI_LoadImage( imgPercent, "texture/gui/frmAntiBot.png", NORMAL, 56, 56, 0, 0 )
-
-labPercent = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labPercent", 33, 33, 5, 48 )
+labPercent = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labPercent", 480, 33, 0, 43 + 30)
 UI_SetCaption( labPercent, "90%" )
-UI_SetTextColor( labPercent, COLOR_WHITE )
-UI_SetLabelExFont( labPercent, FONT24, FALSE, COLOR_WHITE )
+UI_SetTextColor( labPercent, argbColor("ffffff") )
+UI_SetLabelExFont( labPercent, EXO_Bold_S20, TRUE, argbColor("000000"))
+UI_SetCaptionIsCenter(labPercent, TRUE)
 
-labInfo = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labInfo", 33, 33, 75, 52 )
+labInfo = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labInfo", 480, 20, 0, 100 + 30)
 UI_SetCaption( labInfo, "Set the slider to 80%" )
-UI_SetTextColor( labInfo, COLOR_WHITE )
-UI_SetLabelExFont( labInfo, FONT016, FALSE, COLOR_WHITE )
+UI_SetTextColor( labInfo, argbColor("FFFFFF") )
+UI_SetLabelExFont( labInfo, EXO_Regular_S14, FALSE, COLOR_WHITE )
+UI_SetCaptionIsCenter(labInfo, TRUE)
 
-labSeconds = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labSeconds", 33, 33, 380, 52 )
+labSeconds = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labSeconds", 33, 33, 380, 43 + 30)
 UI_SetCaption( labSeconds, "30s" )
-UI_SetTextColor( labSeconds, COLOR_WHITE )
-UI_SetLabelExFont( labSeconds, FONT016, FALSE, COLOR_WHITE )
+UI_SetTextColor( labSeconds, argbColor("ffffff") )
+UI_SetLabelExFont( labSeconds, EXO_Bold_S20, TRUE, argbColor("000000") )
 
 ------
 -- Set Trade
