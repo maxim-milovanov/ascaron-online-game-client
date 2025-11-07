@@ -392,16 +392,6 @@ UI_SetListIsMouseFollow(lstAsk, FALSE)
 UI_SetListRowHeight( lstAsk, 26 )
 setScroll(lstAsk)
 
-lstForgeItemState = UI_CreateListView( frmConAsk, "lstForgeItemState", 180, 77, 24, 286, 1, 2 )
-UI_SetListRowHeight( lstForgeItemState, 18 )
-UI_SetListFontColor( lstForgeItemState, 4293591039, 4293591039 )
-UI_SetMargin( lstForgeItemState, 8,5,0,0 )
-UI_SetIsShow( lstForgeItemState, TRUE )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-
 btnApply = CreateButton(4, frmConAsk, "btnApply", "APPLY", EXO_Regular_S16, 165, 42, 333, 382 + 51)
 
 btnNo = CreateButton(5, frmConAsk, "btnNo", "CANCEL", EXO_Regular_S16, 165, 42, 158, 382 + 51)
