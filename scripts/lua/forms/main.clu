@@ -28,7 +28,8 @@ UI_ShowForm( frmDetail, TRUE )
 UI_AddFormToTemplete( frmDetail, FORM_MAIN )
 UI_FormSetIsEscClose( frmDetail, FALSE )
 
-setBackgroundMiddle(frmDetail, 250, 65, 225, 0, 0)
+image = UI_CreateCompent(frmDetail, IMAGE_TYPE, "image", 250, 65, 0, 0)
+UI_LoadImage(image, "./texture/ascaron_ui/frmDetail.png", NORMAL, 250, 65, 0, 0)
 
 labMainLv = UI_CreateCompent( frmDetail, LABELEX_TYPE, "labMainLv", 31, 20, 15, 20 )
 UI_SetTextColor( labMainLv, argbColor("d0d0d1"))
@@ -248,8 +249,9 @@ UI_SetFormStyleEx(frmCbbfb, FORM_CENTERBOTTOM, 0, 0)
 UI_SetIsDrag(frmCbbfb, FALSE)
 UI_FormSetIsEscClose(frmCbbfb, FALSE)
 
-setBackgroundChaBar(frmCbbfb, 601, 52, 170, 0, 0)
-
+image = UI_CreateCompent(frmCbbfb, IMAGE_TYPE, "image", 601, 52, 0, 0)
+UI_LoadImage(image, "./texture/ascaron_ui/frmCbbfb.png", NORMAL, 601, 52, 0, 0)
+	
 imgBars = UI_CreateCompent(frmCbbfb, IMAGE_TYPE, "imgBars", 587, 37, 7, 7)
 UI_LoadImage(imgBars, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 587, 37, 394, 2)
 
@@ -299,7 +301,8 @@ UI_AddFormToTemplete( frmMainFun, FORM_MAIN )
 UI_FormSetIsEscClose( frmMainFun, FALSE )
 UI_SetFormStyle( frmMainFun, 11 )
 
-setBackground(frmMainFun, false, 44, 276 - 34, 225)
+image = UI_CreateCompent(frmMainFun, IMAGE_TYPE, "image", 44, 242, 0, 0)
+UI_LoadImage(image, "./texture/ascaron_ui/frmMainFun.png", NORMAL, 44, 242, 0, 0)
 
 btnState = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnState", 34, 34, 5, 5)
 UI_LoadButtonImage( btnState, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0, 111, TRUE)

@@ -159,7 +159,8 @@ for pos = 1, 4, 1 do
 	UI_AddFormToTemplete( label, FORM_MAIN )
 	UI_FormSetIsEscClose( label, FALSE )
 	
-	setBackgroundMiddle(label, 176, 45, 225, 0, 0)
+	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 176, 45, 45, 22)
+	UI_LoadImage(image, "./texture/ascaron_ui/frmTeamMenber.png", NORMAL, 176, 45, 0, 0)
 	
 	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 125, 15, 45, 22)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
@@ -480,8 +481,9 @@ UI_SetFormStyleEx(frmTargetInfo, FORM_XCENTER, 0, 0)
 UI_FormSetIsEscClose(frmTargetInfo, TRUE)
 UI_SetIsDrag( frmTargetInfo, FALSE )
 
-setBackgroundMiddle(frmTargetInfo, 176, 45, 225, 0, 0)
-
+image = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "image", 176, 45, 0, 0)
+UI_LoadImage(image, "./texture/ascaron_ui/frmTeamMenber.png", NORMAL, 176, 45, 0, 0)
+	
 image = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "image", 125, 15, 45, 22)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
 
