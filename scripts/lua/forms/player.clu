@@ -161,6 +161,7 @@ for pos = 1, 4, 1 do
 	
 	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 176, 45, 0, 0)
 	UI_LoadImage(image, "./texture/ascaron_ui/frmTeamMenber.png", NORMAL, 176, 45, 0, 0)
+	UI_SetAlpha(image, 225)
 	
 	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 125, 15, 45, 22)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
@@ -483,7 +484,8 @@ UI_SetIsDrag( frmTargetInfo, FALSE )
 
 image = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "image", 176, 45, 0, 0)
 UI_LoadImage(image, "./texture/ascaron_ui/frmTeamMenber.png", NORMAL, 176, 45, 0, 0)
-	
+UI_SetAlpha(image, 225)
+
 image = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "image", 125, 15, 45, 22)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 125, 15, 534 + 50, 86)
 

@@ -7,7 +7,9 @@ UI_AddFormToTemplete( frmMinimap, FORM_MAIN )
 UI_FormSetIsEscClose( frmMinimap, FALSE )
 UI_SetFormStyleEx(frmMinimap, FORM_RIGHTTOP, 20, 20)
 
-setBackgroundMiddle(frmMinimap, 200, 30, 200, 0, 0)
+image = UI_CreateCompent(frmMinimap, IMAGE_TYPE, "image", 200, 30, 0, 0)
+UI_LoadImage(image, "./texture/ascaron_ui/frmMinimap.png", NORMAL, 200, 30, 0, 0)
+UI_SetAlpha(frmMinimap, 225)
 
 labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 10, 8 )
 UI_SetCaption( labMapName, "0" )
