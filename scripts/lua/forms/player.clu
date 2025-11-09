@@ -159,7 +159,7 @@ for pos = 1, 4, 1 do
 	UI_AddFormToTemplete( label, FORM_MAIN )
 	UI_FormSetIsEscClose( label, FALSE )
 	
-	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 176, 45, 45, 22)
+	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 176, 45, 0, 0)
 	UI_LoadImage(image, "./texture/ascaron_ui/frmTeamMenber.png", NORMAL, 176, 45, 0, 0)
 	
 	image = UI_CreateCompent(label, IMAGE_TYPE, "image", 125, 15, 45, 22)
