@@ -787,7 +787,6 @@ UI_SetLabelExFont( labIwMessageTitle, FONT18, FALSE, COLOR_WHITE )
 -- Anti-bot
 ------
 frmAntiBot = UI_CreateForm( "frmAntiBot", FALSE, 480, 140 + 30, 0, 0, TRUE, FALSE )
-UI_FormSetHotKey( frmAntiBot, ALT_KEY, HOTKEY_G )
 UI_ShowForm( frmAntiBot, TRUE )
 UI_SetIsDrag( frmAntiBot, FALSE )
 UI_AddFormToTemplete( frmAntiBot, FORM_MAIN )
