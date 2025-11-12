@@ -1508,6 +1508,7 @@ UI_LoadScript("scripts/lua/forms/manage.clu")	-- 公会管理
 UI_LoadScript("scripts/lua/forms/select.clu")
 UI_LoadScript("scripts/lua/forms/store.lua")
 UI_LoadScript("scripts/lua/forms/settings.lua")
+UI_LoadScript("scripts/lua/forms/database.lua")
 
 --字符过滤表
 UI_LoadScript("scripts/lua/filter.clu")
