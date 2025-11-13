@@ -6,7 +6,7 @@ UI_ShowForm(frmDatabase, FALSE )
 UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
 UI_FormSetIsEscClose(frmDatabase, TRUE)
 UI_SetIsDrag(frmDatabase, FALSE)
-UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_G)
+--UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_G)
 UI_SetFormStyleEx(frmDatabase, FORM_LEFTTOP, 20, 100)
 
 setBackground(frmDatabase, true, 313, 550 - 107, 255)
