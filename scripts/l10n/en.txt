@@ -760,7 +760,7 @@
 [759]	"Consume"
 [760]	"Skill is already activated\nClick again to deactivate"
 [761]	"You will be sent back to your Spawn point. \nPlease salvage your ship at the Harbor Operator!"
-[762]	"Revive in Town?"
+[762]	"The character died.\nRevive in the city?"
 [763]	"Refresh experience screen current EXP = %d, Current Lv EXP = %d, next level EXP = %d, Percentage = %.1f\n"
 [764]	"Trade"
 [765]	"To trade, both party must in character or ship status"

@@ -204,21 +204,24 @@ UI_MenuLoadFont(mainMouseRight, EXO_Regular_S16, argbColor("FFD166"), argbColor(
 -----------------------------------------------------------------------
 -- Relive
 -----------------------------------------------------------------------
-frmRelive = UI_CreateForm( "frmRelive",  FALSE, 340, 133, 0, 0, TRUE, FALSE )
+frmRelive = UI_CreateForm( "frmRelive",  FALSE, 400, 72, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmRelive, TRUE )
-UI_SetIsDrag( frmRelive, TRUE )
+UI_SetIsDrag( frmRelive, FALSE )
 UI_FormSetIsEscClose( frmRelive, FALSE )
 UI_FormSetHotKey(frmRelive, ALT_KEY, HOTKEY_Y ) 
+UI_SetFormStyleEx(frmRelive, FORM_CENTERBOTTOM, 0, 160)
+setBackground(frmRelive, false, 400, 72, 225)
 
-setBackground(frmRelive, false, 340, 133, 255)
+image = UI_CreateCompent(frmRelive, IMAGE_TYPE,"image", 24, 24, 20, 23)
+UI_LoadImage( image, "./texture/ascaron_ui/icon/housedoor.png", NORMAL, 24, 24, 0, 0)
 
-labDesc = UI_CreateCompent(frmRelive, LABELEX_TYPE, "labDesc", 340, 14, 0, 30)
-UI_SetCaption(labDesc, "The character died. Revive in the city?" )
-UI_SetTextColor(labDesc, argbColor("b9baba") )
-UI_SetLabelExFont(labDesc, EXO_Regular_S14, FALSE, COLOR_BLACK )
-UI_SetCaptionIsCenter(labDesc, TRUE)
+labDesc = UI_CreateCompent( frmRelive, LABELEX_TYPE, "labDesc", 23, 11, 62, 20)
+UI_SetCaption( labDesc, "The character died.\nRevive in the city?" )
+UI_SetTextColor( labDesc, argbColor("ffffff"))
+UI_SetLabelExFont( labDesc, EXO_Regular_S14, FALSE, COLOR_WHITE )
 
-btnReCity = CreateButton(4, frmRelive, "btnReCity", "REVIVE IN CITY", EXO_Regular_S16, 165, 42, 87, 71)
+btnReCity = CreateButton(7, frmRelive, "btnReCity", "REVIVE IN CITY", EXO_Regular_S16, 130, 42, 400 - 15 - 130, 15)
+
 -----------------------------------------------------------------------
 -- 定义倒计时框
 -----------------------------------------------------------------------

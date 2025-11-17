@@ -51,19 +51,19 @@
 101	Upgrade equipment	Улучшение экипировки	2 
 102	Go back to Dessaro	Возвращайся к Dessaro	2 
 103	The Zephyr Archipelagos	Архипелаг Зефир	2 
-104	Подготовка к Стуже	Подготовка к Стуже	2 
+104	Preparing for the Isle of chill	Подготовка к Стуже	2 
 105	Socket under gem	Слот под самоцвет	2 
 106	Fusion gem	Ковка самоцвета	2 
 107	Report	Отчет	2 
-108	Пиратская холера	Пиратская холера	2 
+108	Pirate cholera	Пиратская холера	2 
 109	Preparation	Подготовка	2 
 110	Upgrade equipment: Efficiency	Улучшение экипировки: Эффективность	2 
 111	Your ready	Ты готов	2 
 112	Island of Gold Roger: Good Luck	Остров Золотого Роджера: Удачи	2 
-114	Blood and Sand	Кровь и песок	2 
-115	Coliseum	Колизей	2 
-116	A fight to the death	Битва на смерть	2 
-117	Contracts	Контракты	2 
+113	Guild Introduction	Знакомство с гильдией	2 
+114	The Path of Transformation	Путь смены обличия	2 
+115	Meeting Shanry	Знакомство с Shanry	2 
+116	Gacha System	Система Gacha	2 
 118	He's still alive!	Он всё ещё жив!	2 
 119	Behemoth lair	Логово Бехамота	2 
 120	The Death of Behamoth	Смерть Бехамота	2 
@@ -82,6 +82,22 @@
 133	Demonic World	Мир Демонов	2 
 134	Ice Mountain	Ледяная гора	2 
 135	In Search of Shan	В поисках Shan	2 
+136	Hero’s Awakening	Пробуждение героя	2 
+137	News from Vesnograd	Вести из Веснограда	2 
+138	Voice of the Ancients	Голос древних	2 
+139	Urgent Message	Срочное послание	2 
+140	The Four Elements	Четыре Стихии	2 
+141	Element of Water	Стихия Воды	2 
+142	Element of Fire	Стихия Огня	2 
+143	Element of Earth	Стихия Земли	2 
+144	Call of the Elements	Призыв стихий	2 
+145	[Fire Prism]	[Призма Огня]	2 
+146	[Earth Prism]	[Призма Земли]	2 
+147	[Air Prism]	[Призма Воздуха]	2 
+148	[Water Prism]	[Призма Воды]	2 
+149	[Weapon of the Four Elements]	[Оружие четырех стихий]	2 
+150	Calm of the Island	Спокойствие острова	2 
+151	Voice of the Statue	Глас статуи	2 
 501	A trivial task	Пустяковое задание	4 
 502	Hunting for a new mount	Охота на нового спутника	4 
 503	Rare catch	Редкий улов	4 
@@ -120,3 +136,10 @@
 536	Beginner-Level Survival	Выживание начального уровня	4 
 537	Intermediate Survival	Выживание среднего уровня	4 
 538	High-Level Survival	Выживание высокого уровня	4 
+539	Dance party	Танцевальная вечеринка	4 
+540	Cocktail	Коктейль	4 
+541	High-Level Survival	Время охладиться	4 
+542	Element of Fire	Стихия огня	4 
+543	Element of Earth	Стихия земли	4 
+544	Element of Air	Стихия воздуха	4 
+545	Feather for Inspiration	Перо для вдохновения	4 
