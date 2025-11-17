@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------
 frmDatabase = UI_CreateForm("frmDatabase", FALSE, 313, 550, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmDatabase, FALSE )
-UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
+--UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
 UI_FormSetIsEscClose(frmDatabase, TRUE)
 UI_SetIsDrag(frmDatabase, FALSE)
 UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_G)
