@@ -3,13 +3,13 @@
 -----------------------------------------------------------------------
 frmDatabase = UI_CreateForm("frmDatabase", FALSE, 313, 550, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmDatabase, FALSE )
---UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
+UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
 UI_FormSetIsEscClose(frmDatabase, TRUE)
 UI_SetIsDrag(frmDatabase, FALSE)
-UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_G)
+--UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_G)
 UI_SetFormStyleEx(frmDatabase, FORM_LEFTTOP, 20, 100)
 
-setBackground(frmDatabase, true, 313, 550 - 107, 255)
+setBackground(frmDatabase, true, 313, 473, 255)
 
 labFormname = UI_CreateCompent(frmDatabase, LABELEX_TYPE, "labFormname", 313, 14, 0, 20)
 UI_SetCaption(labFormname, "DATABASE")
@@ -60,19 +60,13 @@ UI_AddCompent(pgItems, imgInput)
 UI_AddCompent(pgMonsters, imgInput)
 UI_AddCompent(pgNpc, imgInput)
 
-imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 25, 25, 194 + 5, 43)
-UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 25, 25, 615, 56)
+imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 55, 25, 194 + 5, 43)
+UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 55, 25, 642, 56)
 UI_AddCompent(pgItems, imgInput)
 UI_AddCompent(pgMonsters, imgInput)
 UI_AddCompent(pgNpc, imgInput)
 
-imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 25, 25, 194 + 5 + 25 +5, 43)
-UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 25, 25, 615, 56)
-UI_AddCompent(pgItems, imgInput)
-UI_AddCompent(pgMonsters, imgInput)
-UI_AddCompent(pgNpc, imgInput)
-
-editSearch = UI_CreateCompent(frmDatabase, EDIT_TYPE, "editSearch", 230, 20, 10, 51 )
+editSearch = UI_CreateCompent(frmDatabase, EDIT_TYPE, "editSearch", 230, 20, 10, 58 )
 UI_SetTextColor(editSearch, argbColor("c0c0c0") )
 UI_SetEditMaxNum(editSearch, 15 )
 UI_SetEditMaxNumVisible(editSearch, 15 )
@@ -88,7 +82,6 @@ UI_SetEditEnterButton(editSearch, btnSearch)
 UI_AddCompent(pgItems, btnSearch)
 UI_AddCompent(pgMonsters, btnSearch)
 UI_AddCompent(pgNpc, btnSearch)
-
 
 local posx = 30
 local posy = 90
@@ -162,11 +155,10 @@ UI_SetListIsMouseFollow(lstJobs, TRUE)
 UI_ComboSetTextColor(lstJobs, COLOR_WHITE )
 setScroll(lstJobs)
 
-
 ------
 -- Результат поиска
 ------
-searchResult = UI_CreateListView( frmDatabase, "searchResult", 270, 380 - 86, -7, 150 - 15, 2, eNoTitle)
+searchResult = UI_CreateListView( frmDatabase, "searchResult", 270, 288, -7, 150 - 25, 2, eNoTitle)
 UI_ListViewSetTitle(searchResult, 0, 42, "", 0, 0, 0, 0)
 UI_ListViewSetTitle(searchResult, 1, 130, "", 0, 0, 0, 0)
 UI_ListSetItemMargin(searchResult, 10, 8 )						-- Перемещение текста внутри строки
