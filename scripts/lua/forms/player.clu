@@ -793,44 +793,39 @@ UI_SetLabelExFont( labIwMessageTitle, FONT18, FALSE, COLOR_WHITE )
 ------
 -- Anti-bot
 ------
-frmAntiBot = UI_CreateForm( "frmAntiBot", FALSE, 480, 140 + 30, 0, 0, TRUE, FALSE )
+frmAntiBot = UI_CreateForm( "frmAntiBot", FALSE, 440, 130, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmAntiBot, TRUE )
 UI_SetIsDrag( frmAntiBot, FALSE )
 UI_AddFormToTemplete( frmAntiBot, FORM_MAIN )
 UI_FormSetIsEscClose( frmAntiBot, FALSE )
 UI_SetFormStyleEx(frmAntiBot, FORM_CENTERBOTTOM, 0, 160)
 
-setBackground(frmAntiBot, false, 480, 170, 190)
+setBackground(frmAntiBot, false, 440, 130, 190)
 
-labFormname = UI_CreateCompent(frmAntiBot, LABELEX_TYPE, "labFormname", 480, 14, 0, 20)
+labFormname = UI_CreateCompent(frmAntiBot, LABELEX_TYPE, "labFormname", 440, 14, 0, 20)
 UI_SetCaption(labFormname, "PLEASE CONFIRM THT YOU ARE NOT A ROBOT")
 UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labFormname, TRUE)
 
-image = UI_CreateCompent(frmAntiBot, IMAGE_TYPE, "image", 440, 70, 20, 20 + 30)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 440, 70, 266, 464)
-
-proPercent = UI_CreateCompent( frmAntiBot, PROGRESS_TYPE, "proPercent", 420, 50, 30, 30 + 30)
-UI_LoadScaleImage( proPercent, "./texture/ascaron_ui/asc-part-03.png", PROGRESS_PROGRESS, 420, 50, 268, 535, 1.0, 1.0 )
-UI_SetProgressActiveMouse( proPercent, 1 )
-
-labPercent = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labPercent", 480, 33, 0, 43 + 30)
-UI_SetCaption( labPercent, "90%" )
-UI_SetTextColor( labPercent, argbColor("ffffff") )
-UI_SetLabelExFont( labPercent, EXO_Bold_S20, TRUE, argbColor("000000"))
-UI_SetCaptionIsCenter(labPercent, TRUE)
-
-labInfo = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labInfo", 480, 20, 0, 100 + 30)
+labInfo = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labInfo", 440, 20, 0, 50 + 38 + 10)
 UI_SetCaption( labInfo, "Set the slider to 80%" )
 UI_SetTextColor( labInfo, argbColor("FFFFFF") )
-UI_SetLabelExFont( labInfo, EXO_Regular_S14, FALSE, COLOR_WHITE )
+UI_SetLabelExFont( labInfo, EXO_Regular_S12, FALSE, COLOR_WHITE )
 UI_SetCaptionIsCenter(labInfo, TRUE)
 
-labSeconds = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labSeconds", 33, 33, 380, 43 + 30)
-UI_SetCaption( labSeconds, "30s" )
-UI_SetTextColor( labSeconds, argbColor("ffffff") )
-UI_SetLabelExFont( labSeconds, EXO_Bold_S20, TRUE, argbColor("000000") )
+CreateImageGrid(frmAntiBot, 8, 1, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 30, 50)
+grdItems = UI_CreateCompent(frmAntiBot, GOODS_GRID_TYPE, "grdItems", 330, 60, 33, 53) 
+UI_SetGridSpace(grdItems, 9, 9)
+UI_SetGridContent(grdItems, 1, 8)
+UI_SetGridUnitSize(grdItems, 32, 32)
+UI_SetMargin(grdItems, 0, 0, 0, 0)
+
+image = UI_CreateCompent(frmAntiBot, IMAGE_TYPE, "image", 38, 38, 370, 50)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+cmdItem = UI_CreateCompent(frmAntiBot, COMMAND_ONE_TYPE, "cmdItem", 32, 32, 373, 53)
+UI_SetHint(cmdItem, "Result Item")
 
 ------
 -- Set Trade

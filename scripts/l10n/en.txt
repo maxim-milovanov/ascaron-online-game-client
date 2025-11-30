@@ -944,7 +944,7 @@
 [944]	"Kindergarten"
 [945]	"Primary School"
 [946]	"Junior Middle School"
-[947]	"SET THE SLIDER TO %d%%"
+[947]	"Move %s to empty slot"
 [948]	"University"
 [949]	"school record:%s"
 [950]	"academic credit(%d/%d)"
