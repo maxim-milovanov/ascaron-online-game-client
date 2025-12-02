@@ -1083,3 +1083,4 @@
 [1082]	"Yellow loot-bag"
 [1083]	"Illumination of friend/foe in pk"
 [1084]	"PLEASE CONFIRM THT YOU ARE NOT A ROBOT"
+[1085]	"HOVER OVER  THE ITEM ICON TO SEE ITS NAME"

@@ -799,6 +799,7 @@ UI_SetIsDrag( frmAntiBot, FALSE )
 UI_AddFormToTemplete( frmAntiBot, FORM_MAIN )
 UI_FormSetIsEscClose( frmAntiBot, FALSE )
 UI_SetFormStyleEx(frmAntiBot, FORM_CENTERBOTTOM, 0, 160)
+UI_FormSetHotKey(frmAntiBot, ALT_KEY, HOTKEY_B)
 
 setBackground(frmAntiBot, false, 440, 130, 190)
 
@@ -807,6 +808,12 @@ UI_SetCaption(labFormname, "PLEASE CONFIRM THT YOU ARE NOT A ROBOT")
 UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labFormname, TRUE)
+
+labItemInform = UI_CreateCompent(frmAntiBot, LABELEX_TYPE, "labItemInform", 440, 14, 0, -30)
+UI_SetCaption(labItemInform, "НАВЕДИТЕ КУРСОР НА ИКОНКУ ПРЕДМЕТА, ЧТОБЫ УЗНАТЬ ЕГО НАЗВАНИЕ")
+UI_SetTextColor(labItemInform, COLOR_WHITE)
+UI_SetLabelExFont(labItemInform, EXO_Regular_S13, TRUE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labItemInform, TRUE)
 
 labInfo = UI_CreateCompent( frmAntiBot, LABELEX_TYPE, "labInfo", 440, 20, 0, 50 + 38 + 10)
 UI_SetCaption( labInfo, "Set the slider to 80%" )
@@ -826,6 +833,9 @@ UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 
 
 cmdItem = UI_CreateCompent(frmAntiBot, COMMAND_ONE_TYPE, "cmdItem", 32, 32, 373, 53)
 UI_SetHint(cmdItem, "Result Item")
+
+proTimeout = UI_CreateCompent(frmAntiBot, PROGRESS_TYPE, "proTimeout", 440, 3, 0, 126)
+UI_LoadScaleImage(proTimeout, "./texture/ascaron_ui/captcha-progressbar.png", PROGRESS_PROGRESS, 440, 3, 0, 7, 1.0, 1.0)
 
 ------
 -- Set Trade
