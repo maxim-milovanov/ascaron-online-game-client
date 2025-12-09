@@ -799,7 +799,7 @@ UI_SetIsDrag( frmAntiBot, FALSE )
 UI_AddFormToTemplete( frmAntiBot, FORM_MAIN )
 UI_FormSetIsEscClose( frmAntiBot, FALSE )
 UI_SetFormStyleEx(frmAntiBot, FORM_CENTERBOTTOM, 0, 160)
-UI_FormSetHotKey(frmAntiBot, ALT_KEY, HOTKEY_B)
+--UI_FormSetHotKey(frmAntiBot, ALT_KEY, HOTKEY_B)
 
 setBackground(frmAntiBot, false, 440, 130, 190)
 
