@@ -179,7 +179,7 @@
 [178]	"1347478618657394728"
 [179]	"Select %d Region, server %d Server group\n"
 [180]	"msg%d Region %d Group, Empty Server IP, Unable to connect\n"
-[181]	"Game version is incorrect, Clear \"Confirm\"\n to start auto update or click \"Cancel \"\n to go to website to download patch."
+[181]	"The game version is incorrect. Please try again!"
 [182]	"run game script platform!"
 [183]	"msglua enlarge function[%s] participating number or type error!"
 [184]	"msglua expand function[%s]current  Sceneas null"
