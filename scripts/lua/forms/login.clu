@@ -64,7 +64,7 @@ UI_SetLabelExFont(labGameVersionDate, EXO_Regular_S13, FALSE, COLOR_BLACK )
 UI_SetCaptionIsCenter(labGameVersionDate, TRUE)
 
 -- §£§à§ã§ã§ä§Ñ§ß§à§Ó§Ý§Ö§ß§Ú§Ö §Ü§Ý§Ú§Ö§ß§ä§Ñ §Õ§à §à§â§Ú§Ô§Ú§ß§Ñ§Ý§î§ß§í§ç §æ§Ñ§Û§Ý§à§Ó
-btnVersionCheck = CreateButton(1, frmServer, "btnVersionCheck", "CHECK VERION", EXO_Regular_S20, 420, 75, 0, 440)
+btnVersionCheck = CreateButton(1, frmServer, "btnVersionCheck", "CHECK VERSION", EXO_Regular_S20, 420, 75, 0, 440)
 
 -- §¬§ß§à§á§Ü§Ñ §à§Ò§ß§à§Ó§Ý§Ö§ß§Ú§ñ §Ü§Ý§Ú§Ö§ß§ä§Ñ
 btnUpdate = CreateButton(0, frmServer, "btnUpdate", "UPDATE", EXO_Regular_S20, 420, 75, 0, 440)
