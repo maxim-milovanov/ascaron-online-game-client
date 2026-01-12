@@ -119,7 +119,7 @@
 [118]	"Persists"
 [119]	"%d,%s, effect [%d] as Persists effect \n"
 [120]	"Run successful "
-[121]	"https://wikipedia.ascaron.online/"
+[121]	"https://ascaron.online/?act=wiki"
 [122]	"https://ascaron.online/?act=database&cat=items"
 [123]	"https://ascaron.online/?act=ranking"
 [124]	"Unable to connect!"
