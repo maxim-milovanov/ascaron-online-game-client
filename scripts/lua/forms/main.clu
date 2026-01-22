@@ -71,6 +71,50 @@ UI_LoadImage( imgLeader, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 12, 12,
 UI_SetIsShow( imgLeader, FALSE )
 
 -----------------------------------------------------------------------
+-- The Battle info
+-----------------------------------------------------------------------	
+frmBattle = UI_CreateForm( "frmBattle", FALSE, 124, 65, 20, 20, TRUE, FALSE )
+UI_ShowForm( frmBattle, TRUE )
+UI_AddFormToTemplete( frmBattle, FORM_MAIN )
+UI_FormSetIsEscClose( frmBattle, FALSE )
+
+image = UI_CreateCompent(frmBattle, IMAGE_TYPE, "image", 124, 65, 0, 0)
+UI_LoadImage(image, "./texture/ascaron_ui/frmBattle.png", NORMAL, 124, 65, 0, 0)
+UI_SetAlpha(image, 225)
+
+frmBattleRTeam = UI_CreateCompent( frmBattle, LABELEX_TYPE, "frmBattleRTeam", 45, 20, 10, 20 )
+UI_SetTextColor( frmBattleRTeam, argbColor("ff3838"))
+UI_SetLabelExFont( frmBattleRTeam, EXO_Bold_S20, FALSE, COLOR_BLACK )
+UI_SetCaption( frmBattleRTeam, "0" )
+UI_SetCaptionIsCenter(frmBattleRTeam, TRUE)
+
+frmBattleBTeam = UI_CreateCompent(frmBattle, LABELEX_TYPE, "frmBattleBTeam", 45, 20, 10 + 60, 20 )
+UI_SetTextColor( frmBattleBTeam, argbColor("536bff"))
+UI_SetLabelExFont( frmBattleBTeam, EXO_Bold_S20, FALSE, COLOR_BLACK )
+UI_SetCaption( frmBattleBTeam, "0" )
+UI_SetCaptionIsCenter(frmBattleBTeam, TRUE)
+
+image = UI_CreateCompent(frmBattle, IMAGE_TYPE, "image", 35, 35, 135, 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/swords.png", NORMAL, 201, 201, 0, 0)
+
+frmBattleMWin = UI_CreateCompent( frmBattle, LABELEX_TYPE, "frmBattleMWin", 35, 20, 135, 45)
+UI_SetTextColor( frmBattleMWin, argbColor("ffffff"))
+UI_SetLabelExFont( frmBattleMWin, EXO_Bold_S14, TRUE, COLOR_BLACK )
+UI_SetCaption( frmBattleMWin, "0" )
+UI_SetCaptionIsCenter(frmBattleMWin, TRUE)
+
+image = UI_CreateCompent(frmBattle, IMAGE_TYPE, "image", 35, 35, 180, 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/scull.png", NORMAL, 201, 201, 0, 0)
+
+frmBattleMDead = UI_CreateCompent( frmBattle, LABELEX_TYPE, "frmBattleMDead", 35, 20, 180, 45)
+UI_SetTextColor( frmBattleMDead, argbColor("ffffff"))
+UI_SetLabelExFont( frmBattleMDead, EXO_Bold_S14, TRUE, COLOR_BLACK )
+UI_SetCaption( frmBattleMDead, "0" )
+UI_SetCaptionIsCenter(frmBattleMDead, TRUE)
+
+
+
+-----------------------------------------------------------------------
 -- 定义800*600主界面
 -----------------------------------------------------------------------	
 -- 创建主界面表单
