@@ -130,7 +130,7 @@ UI_SetHint(btnSealMaster, "Seal Master")
 
 btnVoyager = UI_CreateCompent(frmSetJob, BUTTON_TYPE, "btnVoyager", 70, 70, 210, 134)
 UI_LoadButtonImage(btnVoyager, "./texture/ascaron_ui/asc-part-03.png", 70, 70, 615, 182, FALSE)
-UI_SetHint(btnVoyager, "Voyage")
+UI_SetHint(btnVoyager, "Voyager")
 
 -----------------------------------------------------------------------
 -- Select hair
