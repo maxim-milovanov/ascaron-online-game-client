@@ -1203,8 +1203,16 @@ UI_SetCaptionIsCenter(labFormname, TRUE)
 image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 72, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
+icon = UI_CreateCompent(frmCompose, IMAGE_TYPE, "icon", 32, 32, 72 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/n1600.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
+
 image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 156, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+icon = UI_CreateCompent(frmCompose, IMAGE_TYPE, "icon", 32, 32, 156 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/s1068.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
 
 image = UI_CreateCompent(frmCompose, IMAGE_TYPE, "image", 54, 54, 30, 134)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
@@ -1265,11 +1273,19 @@ UI_SetCaptionIsCenter(labFormname, TRUE)
 image = UI_CreateCompent(frmBreak, IMAGE_TYPE, "image", 54, 54, 85, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
+icon = UI_CreateCompent(frmBreak, IMAGE_TYPE, "icon", 32, 32, 85 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/s20047.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
+
 image = UI_CreateCompent(frmBreak, IMAGE_TYPE, "image", 54, 54, 85, 114)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
 image = UI_CreateCompent(frmBreak, IMAGE_TYPE, "image", 54, 54, 85, 178)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+icon = UI_CreateCompent(frmBreak, IMAGE_TYPE, "icon", 32, 32, 85 + 11, 178 + 11)
+UI_LoadImage(icon, "./texture/icon/s1070.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
 
 cmdItemBase3 = UI_CreateCompent( frmBreak, COMMAND_ONE_TYPE, "cmdItemBase3", 32, 32, 85 + 11, 50 + 11 )
 UI_SetHint(cmdItemBase3, "Catalyst")
@@ -1344,8 +1360,16 @@ UI_SetCaptionIsCenter(labFormname, TRUE)
 image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 72, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
+icon = UI_CreateCompent(frmFound, IMAGE_TYPE, "icon", 32, 32, 72 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/n1603.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
+
 image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 156, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+icon = UI_CreateCompent(frmFound, IMAGE_TYPE, "icon", 32, 32, 156 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/s1069.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
 
 image = UI_CreateCompent(frmFound, IMAGE_TYPE, "image", 54, 54, 30, 134)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
@@ -1481,8 +1505,16 @@ UI_SetCaptionIsCenter(labFormname, TRUE)
 image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 72, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
 
+icon = UI_CreateCompent(frmCooking, IMAGE_TYPE, "icon", 32, 32, 72 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/n1690.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
+
 image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 156, 50)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+icon = UI_CreateCompent(frmCooking, IMAGE_TYPE, "icon", 32, 32, 156 + 11, 50 + 11)
+UI_LoadImage(icon, "./texture/icon/s1067.png", NORMAL, 32, 32, 0, 0)
+UI_SetAlpha(icon, 60)
 
 image = UI_CreateCompent(frmCooking, IMAGE_TYPE, "image", 54, 54, 30, 134)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
