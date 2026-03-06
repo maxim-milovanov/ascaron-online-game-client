@@ -115,48 +115,48 @@ UI_SetCaptionIsCenter(frmBattleMDead, TRUE)
 
 
 -----------------------------------------------------------------------
--- ∂®“Â800*600÷˜ΩÁ√Ê
+-- ÂÆö‰πâ800*600‰∏ªÁïåÈù¢
 -----------------------------------------------------------------------	
--- ¥¥Ω®÷˜ΩÁ√Ê±Ìµ•
+-- ÂàõÂª∫‰∏ªÁïåÈù¢Ë°®Âçï
 frmMain800 = UI_CreateForm( "frmMain800", FALSE, 330, 30, 0, 570, TRUE, FALSE )
 --UI_FormSetHotKey( frmMain800, ALT_KEY, HOTKEY_X ) 
 UI_ShowForm( frmMain800, TRUE )
 UI_AddFormToTemplete( frmMain800, FORM_MAIN )
-UI_SetFormStyle( frmMain800, 7 )---œ¬
+UI_SetFormStyle( frmMain800, 7 )---‰∏ã
 UI_FormSetIsEscClose( frmMain800, FALSE )
 --UI_SetAlpha( frmMinimap, 200 )
 
 ------
--- ß™ß‘ß‚ß‡ß”ß‡ß€ ßÈß—ß‰
+-- –ò–≥—Ä–æ–≤–æ–π —á–∞—Ç
 ------
 
--- ß±ß‡ß›ßŸßÂßﬂß‡ß‹ ßÂß”ß÷ß›ß⁄ßÈß÷ßﬂß⁄ßÒ ß„ß⁄ß„ß‰ß÷ßﬁßﬂß‡ß‘ß‡ ßÈß—ß‰ß—
+-- –ü–æ–ª–∑—É–Ω–æ–∫ —É–≤–µ–ª–∏—á–µ–Ω–∏—è —Å–∏—Å—Ç–µ–º–Ω–æ–≥–æ —á–∞—Ç–∞
 drpTitleSystem = UI_CreateCompent( frmMain800, DRAG_TITLE_TYPE, "drpTitleSystem", 14, 5, 0, -160)
 UI_LoadImage( drpTitleSystem, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 14, 5, 236, 215)
 
--- ß±ß‡ß’ß›ß‡ßÿß‹ß— ß·ß‡ß’ ß„ß⁄ß„ß‰ß÷ßﬁßﬂßÌß€ ßÈß—ß‰
+-- –ü–æ–¥–ª–æ–∂–∫–∞ –ø–æ–¥ —Å–∏—Å—Ç–µ–º–Ω—ã–π —á–∞—Ç
 lstOnSaySystem = UI_CreateCompent(frmMain800, LIST_TYPE, "lstOnSaySystem", 330, 60, 0, -158)
 UI_LoadImage(lstOnSaySystem, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 15, 15)
 UI_SetImageAlpha(lstOnSaySystem, 200)
 UI_SetMargin(lstOnSaySystem, 5, 3, 0, 0)
 setScroll(lstOnSaySystem)
 
--- ß±ß‡ß›ßŸßÂßﬂß‡ß‹ ßÂß”ß÷ß›ß⁄ßÈß÷ßﬂß⁄ßÒ ß⁄ß‘ß‚ß‡ß”ß‡ß‘ß‡ ßÈß—ß‰ß—
+-- –ü–æ–ª–∑—É–Ω–æ–∫ —É–≤–µ–ª–∏—á–µ–Ω–∏—è –∏–≥—Ä–æ–≤–æ–≥–æ —á–∞—Ç–∞
 drpTitle = UI_CreateCompent( frmMain800, DRAG_TITLE_TYPE, "drpTitle", 14, 5, 0, -100 )
 UI_LoadImage( drpTitle, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 14, 5, 236, 215)
 
--- ß±ß‡ß’ß›ß‡ßÿß‹ß— ß·ß‡ß’ ß‡ß„ßﬂß‡ß”ßﬂß‡ß€ ß⁄ß‘ß‚ß‡ß”ß‡ß€ ßÈß—ß‰
+-- –ü–æ–¥–ª–æ–∂–∫–∞ –ø–æ–¥ –æ—Å–Ω–æ–≤–Ω–æ–π –∏–≥—Ä–æ–≤–æ–π —á–∞—Ç
 lstOnSay = UI_CreateCompent( frmMain800, LIST_TYPE, "lstOnSay", 330, 100, 0, -98 )
 UI_LoadImage( lstOnSay, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 15, 15)
 UI_SetImageAlpha( lstOnSay, 200)
 UI_SetMargin( lstOnSay, 5, 3, 0, 0 )
 setScroll(lstOnSay)
 
--- ß±ß‡ß’ß›ß‡ßÿß‹ß— ß·ß‡ß’ cmd
+-- –ü–æ–¥–ª–æ–∂–∫–∞ –ø–æ–¥ cmd
 local img_top = UI_CreateCompent(frmMain800, IMAGE_TYPE, "image", 330, 28, 0, 2)
 UI_LoadImage(img_top, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 312, 26, 440, 139)
 
--- ßØß—ß·ß⁄ß„ß—ß‰ßÓ ß„ß‡ß‡ß“ßÎß÷ßﬂß⁄ß÷
+-- –ù–∞–ø–∏—Å–∞—Ç—å —Å–æ–æ–±—â–µ–Ω–∏–µ
 edtSay = UI_CreateCompent( frmMain800, EDIT_TYPE, "edtSay", 200, 20, 85, 9 )
 UI_SetTextColor( edtSay, COLOR_8D837A )
 UI_SetEditMaxNum( edtSay, 64)
@@ -167,12 +167,12 @@ UI_SetEditCursorColor( edtSay, COLOR_WHITE )
 --UI_LoadButtonImage(btnTranslate, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 260, 235, TRUE)
 --UI_SetHint(btnTranslate, "Translate enable")
 
--- ß¨ßﬂß‡ß·ß‹ß— ß„ßﬁß—ß€ß›ß‡ß”
+-- –ö–Ω–æ–ø–∫–∞ —Å–º–∞–π–ª–æ–≤
 btnChatFace = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnChatFace", 22, 22, 300, 5)
 UI_LoadButtonImage(btnChatFace, "./texture/ascaron_ui/asc-part-01.png", 22, 22, 138, 206, TRUE)
 UI_SetHint(btnChatFace, "Emoticon")
 
---¥¥Ω®∆µµ¿—°‘Ò
+--ÂàõÂª∫È¢ëÈÅìÈÄâÊã©
 cboChannel  = UI_CreateCompent( frmMain800, COMBO_TYPE, "cboChannel", 45, 26, 2, 5 )
 UI_ComboSetStyle( cboChannel, FALSE )
 --UI_LoadComboImage( cboChannel, "", 33, 26, 0, 0, "texture/ui/Quest1.tga", 1, 1, 30, 195, TRUE )
@@ -191,7 +191,7 @@ UI_AddListText( lstChannel, "Guild" )
 UI_AddListText( lstChannel, "Trade" )
 UI_AddListText( lstChannel, "World" )
 
--- ∆µµ¿¡–±Ì
+-- È¢ëÈÅìÂàóË°®
 lstChannel = UI_CreateCompent( frmMain800, LIST_TYPE, "lstChannel", 75, 84, 0, -200 )
 listid = UI_GetList( lstChannel )
 UI_SetListRowHeight( listid, 15 )
@@ -205,7 +205,7 @@ UI_AddListText( lstChannel, "Party" )
 UI_AddListText( lstChannel, "Guild" )
 UI_AddListText( lstChannel, "Trade" )
 
--- ±Ì«È±Ì∏Ò
+-- Ë°®ÊÉÖË°®Ê†º
 grdFace = UI_CreateCompent( frmMain800, GRID_TYPE, "grdFace", 142, 170, 263, -168 ) 
 UI_LoadImage( grdFace, "texture/gui/chat.png", NORMAL, 142, 170, 39, 92 )
 UI_SetGridUnitSize( grdFace, 20, 20 )
@@ -224,14 +224,44 @@ end
 
 UI_GridLoadSelectImage( grdFace, "./texture/gui/old_gui/StartF.dds", 32, 32, 123, 99 )
 
----¥¥Ω®∫√”—”“º¸±Ìµ•
+---ÂàõÂª∫Â•ΩÂèãÂè≥ÈîÆË°®Âçï
 selfMouseRight = UI_CreateCompent( frmMain800, MENU_TYPE, "selfMouseRight", 68, 97, 240, 468 )
 UI_MenuLoadImage( selfMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
 UI_SetMargin( selfMouseRight, 10, 5, 5, 5 )
 UI_MenuLoadFont(selfMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
 
--- ‘ˆº”≤Àµ•
+-- Â¢ûÂä†ËèúÂçï
 UI_MenuAddText( selfMouseRight, "Leave Party" )
+
+------
+-- Bind keys
+------
+frmBindKey = UI_CreateForm( "frmBindKey", FALSE, 330, 125, 0, 0, TRUE, FALSE )
+UI_ShowForm( frmBindKey, TRUE )
+UI_SetIsDrag( frmBindKey, FALSE )
+UI_AddFormToTemplete( frmBindKey, FORM_MAIN )
+UI_FormSetIsEscClose( frmBindKey, TRUE )
+UI_SetFormStyleEx(frmBindKey, FORM_CENTERBOTTOM, 0, 160)
+
+setBackground(frmBindKey, false, 330, 125, 190)
+
+labButtonCode = UI_CreateCompent(frmBindKey, LABELEX_TYPE, "labButtonCode", 330, 9, 0, 20)
+UI_SetTextColor(labButtonCode, argbColor("bebdbd"))
+UI_SetLabelExFont(labButtonCode, EXO_Bold_S20, FALSE, COLOR_BLACK)
+UI_SetCaption(labButtonCode, "A")
+UI_SetCaptionIsCenter(labButtonCode, TRUE)
+
+labButtonHelp = UI_CreateCompent(frmBindKey, LABELEX_TYPE, "labButtonHelp", 330, 12, 0, 60)
+UI_SetTextColor(labButtonHelp, argbColor("bebdbd"))
+UI_SetLabelExFont(labButtonHelp, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaption(labButtonHelp, "CLICK THE KEY TO ASSIGN IT")
+UI_SetCaptionIsCenter(labButtonHelp, TRUE)
+
+labButtonEnter = UI_CreateCompent(frmBindKey, LABELEX_TYPE, "labButtonEnter", 330, 12, 0, 85)
+UI_SetTextColor(labButtonEnter, argbColor("bebdbd"))
+UI_SetLabelExFont(labButtonEnter, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaption(labButtonEnter, "Press ENTER to confirm")
+UI_SetCaptionIsCenter(labButtonEnter, TRUE)
 
 -----------------------------------------------------------------------------------
 -- Fast bar
@@ -243,46 +273,34 @@ UI_SetIsDrag(frmFast, true)
 UI_FormSetIsEscClose(frmFast, FALSE)
 UI_SetFormStyleEx(frmFast, FORM_CENTERBOTTOM, 0, 60)
 
-imgfscMainNA = {}
-imgfscMainNB = {}
-
 local grd = CreateImageGrid(frmFast, 12, 2, 5, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 110, 0, 170, 43, 0)
 for i, pos in ipairs(grd) do
     local slot = i-1
     local compName
-
+	local buttonName = string.format("fscButton%d", slot)
+	
     if (slot < 12) then
-		compName = string.format("fscMainF%d", slot)  -- ß·ß÷ß‚ß”ßÌß÷ 12 F
-		
-		image = UI_CreateCompent( frmFast, IMAGE_TYPE, "image", 32, 32, pos.x, pos.y)
-		UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (i-1) * 55, 411, FALSE)
+		compName = string.format("fscMainF%d", slot)  -- –ø–µ—Ä–≤—ã–µ 12 F
     else
-        compName = string.format("fscMainN%d", slot)  -- ß„ß›ß÷ß’ßÂßßÎß⁄ß÷ N
-		
-		local a = i - 12
-		imgfscMainNA[a] = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgfscMainNA" .. a, 32, 32, pos.x, pos.y)
-		UI_LoadImage(imgfscMainNA[a], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (a-1) * 55, 466, FALSE)
-		
-		imgfscMainNB[a] = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgfscMainNB" .. a, 32, 32, pos.x, pos.y)
-		UI_LoadImage(imgfscMainNB[a], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (a-1) * 55, 521, FALSE)
-		
+        compName = string.format("fscMainN%d", slot)  -- —Å–ª–µ–¥—É—é—â–∏–µ N
     end
 	
-    -- ß„ß‡ßŸß’ß—ß◊ßﬁ ß‹ß‡ßﬁß·ß‡ßﬂß÷ßﬂß‰
+    -- —Å–æ–∑–¥–∞—ë–º –∫–æ–º–ø–æ–Ω–µ–Ω—Ç
     local comp = UI_CreateCompent(frmFast, FAST_COMMANG_TYPE, compName, 32, 32, pos.x, pos.y)
 	
+	local labName = UI_CreateCompent(frmFast, LABELEX_TYPE, buttonName, 32, 32, pos.x, pos.y + 8)
+	UI_SetTextColor(labName, argbColor("bebdbd"))
+	UI_SetLabelExFont(labName, EXO_Regular_S12, FALSE, COLOR_BLACK)
+	UI_SetCaption(labName, "???")
+	UI_SetCaptionIsCenter(labName, TRUE)
 end
 
 btnFastDown = UI_CreateCompent( frmFast, BUTTON_TYPE, "btnFastDown", 38, 38, 0, 43 )
 UI_LoadButtonImage( btnFastDown, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 166, 0, TRUE )
 
-chSitDown = UI_CreateCompent(frmFast, CHECK_TYPE, "chSitDown", 38, 38, 559, 0)
+chSitDown = UI_CreateCompent(frmFast, CHECK_TYPE, "chSitDown", 38, 38, 559, 43)
 UI_LoadImage(chSitDown, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 55, 55, 276, 56)
 UI_LoadImage(chSitDown, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 55, 55, 331, 56)
-
-chkFBNNucklock = UI_CreateCompent( frmFast, CHECK_TYPE, "chkFBNNucklock", 38, 38, 559, 43)
-UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 55, 55, 166, 56)
-UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 55, 55, 221, 56)
 
 ------
 -- Cha bar bottom fastbar
@@ -380,7 +398,7 @@ UI_LoadButtonImage( btnSystem, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 0
 UI_SetHint( btnSystem , "Setting (ESC)")
 
 -------------------------------------------------------------------------
----- ∂®“Âπ¶ƒ‹«¯			--µ¿æﬂ          µ„ª˜btnOpenBag∫Ûœ‘ æ
+---- ÂÆö‰πâÂäüËÉΩÂå∫			--ÈÅìÂÖ∑          ÁÇπÂáªbtnOpenBagÂêéÊòæÁ§∫
 -------------------------------------------------------------------------	
 frmBag = UI_CreateForm( "frmBag", FALSE, 89,  30, 450, 250, TRUE, FALSE )
 --UI_FormSetHotKey( frmItem, ALT_KEY, HOTKEY_D ) 
@@ -388,7 +406,7 @@ UI_ShowForm( frmBag, TRUE )
 UI_AddFormToTemplete( frmBag, FORM_MAIN )
 UI_FormSetIsEscClose( frmBag, FALSE )
 
---º”‘ÿ±≥æ∞Õº∆¨
+--Âä†ËΩΩËÉåÊôØÂõæÁâá
 imgMainFun1 = UI_CreateCompent( frmBag, IMAGE_TYPE, "imgMainFun1", 32, 30, 57, 0 )
 UI_LoadImage( imgMainFun1, "./texture/gui/old_gui/new4.tga", NORMAL, 32, 30, 0, 0 )
 
@@ -398,19 +416,19 @@ UI_LoadImage( imgMainFun2, "./texture/gui/old_gui/new4.tga", NORMAL, 32, 30, 32,
 imgMainFun2 = UI_CreateCompent( frmBag, IMAGE_TYPE, "imgMainFun2", 25, 30, 32, 0 )
 UI_LoadImage( imgMainFun2, "./texture/gui/old_gui/new4.tga", NORMAL, 2, 30, 0, 0 )
 
---º”‘ÿ±≥∞¸∞¥≈•∫Õ¡Ÿ ±±≥∞¸∞¥≈•
---µ„ª˜∫Ûœ‘ æ‘≠”–µ¿æﬂ¿∏
+--Âä†ËΩΩËÉåÂåÖÊåâÈíÆÂíå‰∏¥Êó∂ËÉåÂåÖÊåâÈíÆ
+--ÁÇπÂáªÂêéÊòæÁ§∫ÂéüÊúâÈÅìÂÖ∑Ê†è
 btnOpenItem = UI_CreateCompent( frmBag, BUTTON_TYPE, "btnOpenItem", 37, 22, 7, 4 )
 UI_LoadButtonImage( btnOpenItem, "./texture/gui/old_gui/new6.tga", 37, 22, 0, 198,TRUE )
 UI_SetHint( btnOpenItem , "Inventory(Alt+E)" )
 
---µ„ª˜∫Ûœ‘ æ¡Ÿ ±±≥∞¸
+--ÁÇπÂáªÂêéÊòæÁ§∫‰∏¥Êó∂ËÉåÂåÖ
 btnOpenTempBag = UI_CreateCompent( frmBag, BUTTON_TYPE, "btnOpenTempBag", 37, 22, 45, 4 )
 UI_LoadButtonImage( btnOpenTempBag, "./texture/gui/old_gui/new6.tga", 37, 22, 0, 220,TRUE )
 UI_SetHint( btnOpenTempBag , "Temporary Bag" )
 
 -------------------------------------------------------------------------
----- ∂®“Âπ¶ƒ‹«¯			--…ÁΩª		µ„ª˜btnSociliaty∫Ûœ‘ æ
+---- ÂÆö‰πâÂäüËÉΩÂå∫			--Á§æ‰∫§		ÁÇπÂáªbtnSociliatyÂêéÊòæÁ§∫
 -------------------------------------------------------------------------	
 frmSociliaty = UI_CreateForm( "frmSociliaty", FALSE, 37,  30, 400, 300, TRUE, FALSE )
 --UI_FormSetHotKey( frmItem, ALT_KEY, HOTKEY_D ) 
@@ -418,28 +436,28 @@ UI_ShowForm( frmSociliaty, TRUE )
 UI_AddFormToTemplete( frmSociliaty, FORM_MAIN )
 UI_FormSetIsEscClose( frmSociliaty, FALSE )
 
---º”‘ÿ±≥æ∞Õº∆¨
+--Âä†ËΩΩËÉåÊôØÂõæÁâá
 imgMainFun1 = UI_CreateCompent( frmSociliaty, IMAGE_TYPE, "imgMainFun1", 25, 30, 0, 0 )
 UI_LoadImage( imgMainFun1, "./texture/gui/old_gui/new4.tga", NORMAL, 25, 30, 32, 0 )
 
 imgMainFun2 = UI_CreateCompent( frmSociliaty, IMAGE_TYPE, "imgMainFun2", 25, 30, 12, 0 )
 UI_LoadImage( imgMainFun2, "./texture/gui/old_gui/new4.tga", NORMAL, 25, 30, 7, 0 )
 
---º”‘ÿ∏˜÷÷∞¥≈•
---º”‘ÿπ§ª·  µ„ª˜∫Û◊ﬂ‘≠”–btnGuildµƒ¬∑œﬂ
+--Âä†ËΩΩÂêÑÁßçÊåâÈíÆ
+--Âä†ËΩΩÂ∑•‰ºö  ÁÇπÂáªÂêéËµ∞ÂéüÊúâbtnGuildÁöÑË∑ØÁ∫ø
 btnOpenGuild = UI_CreateCompent( frmSociliaty, BUTTON_TYPE, "btnOpenGuild", 23, 22, 7, 4  )
 UI_LoadButtonImage( btnOpenGuild, "./texture/gui/old_gui/new6.tga", 23, 22, 0, 88,TRUE )
 UI_SetHint( btnOpenGuild , "Guild(Alt+C)" )
 
---º”‘ÿ◊È∂”÷æ‘∏’ﬂ   µ„ª˜∫Û◊ﬂ‘≠”–◊È∂”÷æ‘∏’ﬂ¬∑œﬂ
+--Âä†ËΩΩÁªÑÈòüÂøóÊÑøËÄÖ   ÁÇπÂáªÂêéËµ∞ÂéüÊúâÁªÑÈòüÂøóÊÑøËÄÖË∑ØÁ∫ø
 -- btnOpenTeam = UI_CreateCompent( frmSociliaty, BUTTON_TYPE, "btnOpenTeam", 23, 22, 31, 4 )
 -- UI_LoadButtonImage( btnOpenTeam, "./texture/gui/old_gui/new6.tga", 23, 22, 69, 22, TRUE )
 -- UI_SetHint( btnOpenTeam , "Party Volunteer" )
 
 -----------------------------------------------------------------------
--- ∂®“Â¥ÛµÿÕº
+-- ÂÆö‰πâÂ§ßÂú∞Âõæ
 -----------------------------------------------------------------------	
--- ¥¥Ω®¥ÛµÿÕº±Ìµ•
+-- ÂàõÂª∫Â§ßÂú∞ÂõæË°®Âçï
 frmBigmap = UI_CreateForm( "frmBigmap", FALSE, 569, 430, 30, 80, TRUE, FALSE )
 UI_ShowForm( frmBigmap, TRUE )
 UI_AddFormToTemplete( frmBigmap, FORM_MAIN )
@@ -447,7 +465,7 @@ UI_FormSetIsEscClose( frmBigmap, FALSE )
 UI_FormSetHotKey( frmBigmap, ALT_KEY, HOTKEY_W )
 UI_FormSetIsEscClose( frmBigmap, TRUE )
 
--- º”‘ÿÕº∆¨
+-- Âä†ËΩΩÂõæÁâá
 imgBigmap1 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap1", 256, 256, 0, 0 )
 UI_LoadImage( imgBigmap1, "./texture/gui/old_gui/bigmap1.tga", NORMAL, 256, 256, 0, 0 )
 
@@ -466,7 +484,7 @@ UI_LoadImage( imgBigmap5, "./texture/gui/old_gui/bigmap5.tga", NORMAL, 256, 256,
 imgBigmap6 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap6", 256, 256, 512, 256 )
 UI_LoadImage( imgBigmap6, "./texture/gui/old_gui/bigmap6.tga", NORMAL, 256, 256, 0, 0 )
 
--- ≥Ã–Ú”√”⁄œ‘ æ¥ÛµÿÕº£¨¥Û–°£¨Œª÷√ŒﬁÀ˘ŒΩ
+-- Á®ãÂ∫èÁî®‰∫éÊòæÁ§∫Â§ßÂú∞ÂõæÔºåÂ§ßÂ∞èÔºå‰ΩçÁΩÆÊó†ÊâÄË∞ì
 UI_CreateCompent( frmBigmap, UI3D_COMPENT_TYPE, "d3dCompent", 530, 390, 140, 52 )
 
 
@@ -489,7 +507,7 @@ imgBigmap61 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap61", 256, 256, 
 UI_LoadImage( imgBigmap61, "./texture/gui/old_gui/bigmap12.tga", NORMAL, 256, 256, 0, 0 )
 
 
-----º˝Õ∑
+----ÁÆ≠Â§¥
 btnLeft = UI_CreateCompent( frmBigmap, BUTTON_TYPE, "btnLeft", 15, 39, 160, 230 )
 UI_LoadButtonImage( btnLeft, "./texture/gui/old_gui/SysBotton4.tga", 15, 39, 165, 39, TRUE )
 
@@ -507,9 +525,9 @@ UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/Close.tga", 111, 36, 0, 0, FAL
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
--- ∂®“Â∏˙ÀÊΩÁ√Ê
+-- ÂÆö‰πâË∑üÈöèÁïåÈù¢
 -----------------------------------------------------------------------	
--- ¥¥Ω®∏˙ÀÊΩÁ√Ê±Ìµ•
+-- ÂàõÂª∫Ë∑üÈöèÁïåÈù¢Ë°®Âçï
 frmFollow = UI_CreateForm( "frmFollow", FALSE, 0, 0, 350, 280, FALSE, FALSE )
 UI_ShowForm( frmFollow, TRUE )
 UI_AddFormToTemplete( frmFollow, FORM_MAIN )
@@ -522,7 +540,7 @@ UI_SetLabelExFont( labFollow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 
 ------------------------------------
--- ¥¥Ω®GM ‰»Î±Ìµ•
+-- ÂàõÂª∫GMËæìÂÖ•Ë°®Âçï
 -------------------------------------
 frmGM = UI_CreateForm( "frmGM", FALSE, 480, 20, 300, 545, TRUE, FALSE )
 UI_FormSetHotKey( frmGM, ALT_KEY, HOTKEY_P ) 
@@ -531,7 +549,7 @@ UI_AddFormToTemplete( frmGM, FORM_MAIN )
 UI_FormSetIsEscClose( frmGM, FALSE )
 UI_SetFormStyleEx( frmGM, FORM_BOTTOM, 0, 45)
 
--- ¡ƒÃÏ ‰»Î
+-- ËÅäÂ§©ËæìÂÖ•
 edtGMSay = UI_CreateCompent( frmGM, EDIT_TYPE, "edtGMSay", 480, 20, 6, 6 )
 UI_SetTextColor( edtGMSay, COLOR_WHITE )
 UI_SetEditMaxNum( edtGMSay, 500)
@@ -720,7 +738,7 @@ UI_SetLabelExFont( labMoneyShow, EXO_Regular_S14, FALSE, COLOR_WHITE )
 btnForgeYes = CreateButton(4, frmEquipPurify, "btnForgeYes", "CONFIRM", EXO_Regular_S16, 165, 42, 60, 184)
 
 -----------------------------------------------------------------------
--- ∂®“Âæ´¡È¿œª¢ª˙√Ê∞Â  2006.8.29 by Leo
+-- ÂÆö‰πâÁ≤æÁÅµËÄÅËôéÊú∫Èù¢Êùø  2006.8.29 by Leo
 -----------------------------------------------------------------------
 frmSpiritErnie = UI_CreateForm( "frmSpiritErnie", FALSE, 423, 357, 0, 0, TRUE, FALSE )
 UI_AddFormToTemplete( frmSpiritErnie, FORM_MAIN )
@@ -728,7 +746,7 @@ UI_FormSetIsEscClose( frmSpiritErnie, TRUE )
 UI_SetIsDrag( frmSpiritErnie,TRUE)
 UI_SetFormStyle( frmSpiritErnie,1)
 
---º”‘ÿ±≥æ∞Õº∆¨
+--Âä†ËΩΩËÉåÊôØÂõæÁâá
 imgBakTopLeft = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
 UI_LoadImage( imgBakTopLeft, "./texture/gui/old_gui/SpiritErnie1.tga", NORMAL, 256, 256, 0, 0 )
 
@@ -741,9 +759,9 @@ UI_LoadImage( imgBakBottomLeft, "./texture/gui/old_gui/SpiritErnie3.tga", NORMAL
 imgBakBottomRight = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakBottomRight", 167, 101, 256, 256 )
 UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMAL, 167, 101, 0, 101 )
 
---º”‘ÿπˆ∂Ø∂Øª≠
-	--µ⁄“ª ˙Ãı
-		--µ⁄“ª––
+--Âä†ËΩΩÊªöÂä®Âä®Áîª
+	--Á¨¨‰∏ÄÁ´ñÊù°
+		--Á¨¨‰∏ÄË°å
 		imgLine1_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine1_1", 32, 32, 180, 86 )
 		UI_LoadImage( imgLine1_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 0, 0 )
 
@@ -758,7 +776,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 
 		imgLine1_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine1_5", 32, 32, 180, 86 )
 		UI_LoadImage( imgLine1_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 128, 0 )
-		--µ⁄∂˛––
+		--Á¨¨‰∫åË°å
 		imgLine2_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine2_1", 32, 32, 180, 143 )
 		UI_LoadImage( imgLine2_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 0, 32 )
 
@@ -773,7 +791,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 
 		imgLine2_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine2_5", 32, 32, 180, 143 )
 		UI_LoadImage( imgLine2_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 128, 32 )
-		--µ⁄»˝––
+		--Á¨¨‰∏âË°å
 		imgLine3_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine3_1", 32, 32, 180, 199 )
 		UI_LoadImage( imgLine3_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 0, 64 )
 
@@ -789,8 +807,8 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 		imgLine3_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine3_5", 32, 32, 180, 199 )
 		UI_LoadImage( imgLine3_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 128, 64 )
 	-------------------------------------------------------------------------------------------------
-	--µ⁄∂˛ ˙Ãı
-		--µ⁄“ª––
+	--Á¨¨‰∫åÁ´ñÊù°
+		--Á¨¨‰∏ÄË°å
 		imgLine4_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine4_1", 32, 32, 239,86 )
 		UI_LoadImage( imgLine4_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 0, 96 )
 
@@ -805,7 +823,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 
 		imgLine4_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine4_5", 32, 32, 239,86 )
 		UI_LoadImage( imgLine4_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 128, 96 )
-		--µ⁄∂˛––
+		--Á¨¨‰∫åË°å
 		imgLine5_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine5_1", 32, 32, 239,143 )
 		UI_LoadImage( imgLine5_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 0, 128 )
 
@@ -820,7 +838,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 
 		imgLine5_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine5_5", 32, 32, 239,143 )
 		UI_LoadImage( imgLine5_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 128, 128 )
-		--µ⁄»˝––
+		--Á¨¨‰∏âË°å
 		imgLine6_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine6_1", 32, 32, 239,199 )
 		UI_LoadImage( imgLine6_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 0, 160 )
 
@@ -836,8 +854,8 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 		imgLine6_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine6_5", 32, 32, 239,199 )
 		UI_LoadImage( imgLine6_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 128, 160 )
 	-------------------------------------------------------------------------------------------------
-	--µ⁄»˝ ˙Ãı
-		--µ⁄“ª––
+	--Á¨¨‰∏âÁ´ñÊù°
+		--Á¨¨‰∏ÄË°å
 		imgLine7_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine7_1", 32, 32, 297, 86 )
 		UI_LoadImage( imgLine7_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 160, 0 )
 
@@ -852,7 +870,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 
 		imgLine7_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine7_5", 32, 32, 297, 86 )
 		UI_LoadImage( imgLine7_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 192, 96 )
-		--µ⁄∂˛––
+		--Á¨¨‰∫åË°å
 		imgLine8_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine8_1", 32, 32, 297, 143 )
 		UI_LoadImage( imgLine3_1_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 160, 32 )
 
@@ -867,7 +885,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 
 		imgLine8_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine8_5", 32, 32, 297, 143 )
 		UI_LoadImage( imgLine8_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 192, 128 )
-		--µ⁄»˝––
+		--Á¨¨‰∏âË°å
 		imgLine9_1 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine9_1", 32, 32, 297, 199 )
 		UI_LoadImage( imgLine9_1, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 160, 64 )
 
@@ -883,7 +901,7 @@ UI_LoadImage( imgBakBottomRight, "./texture/gui/old_gui/SpiritErnie3.tga", NORMA
 		imgLine9_5 = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgLine9_5", 32, 32, 297, 199 )
 		UI_LoadImage( imgLine9_5, "./texture/gui/old_gui/tiger.tga", NORMAL, 32, 32, 192, 160 )
 
---¥¥Ω®9∏ˆµ¿æﬂ¿∏
+--ÂàõÂª∫9‰∏™ÈÅìÂÖ∑Ê†è
 cmdItemTiger1 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTiger1", 32, 32, 180, 86 )
 cmdItemTiger2 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTiger2", 32, 32, 180, 143 )
 cmdItemTiger3 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTiger3", 32, 32, 180, 199 )
@@ -894,7 +912,7 @@ cmdItemTiger7 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTige
 cmdItemTiger8 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTiger8", 32, 32, 297, 143 )
 cmdItemTiger9 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTiger9", 32, 32, 297, 199 )
 
---¥¥Ω®ø™ º∞¥≈•
+--ÂàõÂª∫ÂºÄÂßãÊåâÈíÆ
 btnStart = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnStart", 48, 19, 80, 252 )
 UI_LoadButtonImage( btnStart, "./texture/gui/old_gui/store8.tga", 48, 19, 0, 76, FALSE )
 
@@ -903,78 +921,78 @@ UI_SetCaption( labStart, "Start")
 UI_SetTextColor( labStart, COLOR_BLACK )
 UI_SetLabelExFont( labStart, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®πÿ±’∞¥≈•
+--ÂàõÂª∫ÂÖ≥Èó≠ÊåâÈíÆ
 btnClose = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnClose", 14, 14, 403, 3 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
---¥¥Ω®Ã· æ
+--ÂàõÂª∫ÊèêÁ§∫
 labMoneyShow = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labMoneyShow", 112, 14, 84, 42 )
 UI_SetCaption( labMoneyShow, "Note: Minimum try cost 5 Fairy Coins!")
 UI_SetTextColor( labMoneyShow, COLOR_RED )
 UI_SetLabelExFont( labMoneyShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®Ã· æ
+--ÂàõÂª∫ÊèêÁ§∫
 labMoneyShow = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labMoneyShow", 112, 14, 84, 60 )
 UI_SetCaption( labMoneyShow, "Note: Do not have than 1900000000G in your inventory!")
 UI_SetTextColor( labMoneyShow, COLOR_RED )
 UI_SetLabelExFont( labMoneyShow, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®œ¬◊¢label1
+--ÂàõÂª∫‰∏ãÊ≥®label1
 labSetmoney1= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labSetmoney1", 112, 14, 100, 85 )
 UI_SetCaption( labSetmoney1, "Bet")
 UI_SetTextColor( labSetmoney1, COLOR_BLACK )
 UI_SetLabelExFont( labSetmoney1, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---…Ë÷√—π◊¢∞¥≈•1
+--ËÆæÁΩÆÂéãÊ≥®ÊåâÈíÆ1
 chkSetmoney1 = UI_CreateCompent( frmSpiritErnie, CHECK_TYPE, "chkSetmoney1", 10, 10, 130, 85 )
 UI_LoadImage( chkSetmoney1, "./texture/gui/old_gui/QQ2.tga", UNCHECKED, 10, 10, 40, 231 )
 UI_LoadImage( chkSetmoney1, "./texture/gui/old_gui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
 UI_SetHint( chkSetmoney1, "Bet" )
 
---…Ë÷√œ¬◊¢œ‘ ælabel
+--ËÆæÁΩÆ‰∏ãÊ≥®ÊòæÁ§∫label
 labUsemoney1= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labUsemoney1", 112, 14, 78, 106 )
 UI_SetCaption( labUsemoney1, "")
 UI_SetTextColor( labUsemoney1, COLOR_BLACK )
 UI_SetLabelExFont( labUsemoney1, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®œ¬◊¢label2
+--ÂàõÂª∫‰∏ãÊ≥®label2
 labSetmoney2= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labSetmoney2", 112, 14, 100, 142 )
 UI_SetCaption( labSetmoney2, "Bet")
 UI_SetTextColor( labSetmoney2, COLOR_BLACK )
 UI_SetLabelExFont( labSetmoney2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---…Ë÷√—π◊¢∞¥≈•2
+--ËÆæÁΩÆÂéãÊ≥®ÊåâÈíÆ2
 chkSetmoney2 = UI_CreateCompent( frmSpiritErnie, CHECK_TYPE, "chkSetmoney2", 10, 10, 130, 142 )
 UI_LoadImage( chkSetmoney2, "./texture/gui/old_gui/QQ2.tga", UNCHECKED, 10, 10, 40, 231 )
 UI_LoadImage( chkSetmoney2, "./texture/gui/old_gui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
 UI_SetHint( chkSetmoney2, "Bet" )
---…Ë÷√œ¬◊¢œ‘ ælabel
+--ËÆæÁΩÆ‰∏ãÊ≥®ÊòæÁ§∫label
 
 labUsemoney2= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labUsemoney2", 112, 14, 78, 163 )
 UI_SetCaption( labUsemoney2, "")
 UI_SetTextColor( labUsemoney2, COLOR_BLACK )
 UI_SetLabelExFont( labUsemoney2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®œ¬◊¢label3
+--ÂàõÂª∫‰∏ãÊ≥®label3
 labSetmoney3 = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labSetmoney3", 112, 14, 100, 198 )
 UI_SetCaption( labSetmoney3, "Bet")
 UI_SetTextColor( labSetmoney3, COLOR_BLACK )
 UI_SetLabelExFont( labSetmoney3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---…Ë÷√—π◊¢∞¥≈•3
+--ËÆæÁΩÆÂéãÊ≥®ÊåâÈíÆ3
 chkSetmoney3 = UI_CreateCompent( frmSpiritErnie, CHECK_TYPE, "chkSetmoney3", 10, 10, 130, 198 )
 UI_LoadImage( chkSetmoney3, "./texture/gui/old_gui/QQ2.tga", UNCHECKED, 10, 10, 40, 231 )
 UI_LoadImage( chkSetmoney3, "./texture/gui/old_gui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
 UI_SetHint( chkSetmoney3, "Bet" )
---…Ë÷√œ¬◊¢œ‘ ælabel
+--ËÆæÁΩÆ‰∏ãÊ≥®ÊòæÁ§∫label
 
 labUsemoney3= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labUsemoney3", 112, 14, 78, 219 )
 UI_SetCaption( labUsemoney3, "")
 UI_SetTextColor( labUsemoney3, COLOR_BLACK )
 UI_SetLabelExFont( labUsemoney3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®Õ£÷π∞¥≈•
+--ÂàõÂª∫ÂÅúÊ≠¢ÊåâÈíÆ
 btnStop1 = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnStop1", 48, 19, 175, 252 )
 UI_LoadButtonImage( btnStop1, "./texture/gui/old_gui/store8.tga", 48, 19, 0, 76, FALSE )
 
@@ -999,7 +1017,7 @@ UI_SetCaption( labStop3, "Stop")
 UI_SetTextColor( labStop3, COLOR_BLACK )
 UI_SetLabelExFont( labStop3, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®◊Ó÷’œ‘ ælabel
+--ÂàõÂª∫ÊúÄÁªàÊòæÁ§∫label
 labLastshow1= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labLastshow1", 112, 14, 40, 300 )
 UI_SetCaption( labLastshow1, "This is the first result explanation")
 UI_SetTextColor( labLastshow1, COLOR_BLACK )
@@ -1011,7 +1029,7 @@ UI_SetTextColor( labLastshow2, COLOR_BLACK )
 UI_SetLabelExFont( labLastshow2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
 -----------------------------------------------------------------------
--- ∂®“Â∑¥∂∑∞◊“¯≥«Õ≥º∆√Ê∞Â  2006.10.16 by Leo
+-- ÂÆö‰πâÂèçÊñóÁôΩÈì∂ÂüéÁªüËÆ°Èù¢Êùø  2006.10.16 by Leo
 -----------------------------------------------------------------------
 frmPKSilver = UI_CreateForm( "frmPKSilver", FALSE, 548, 386, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmPKSilver, FALSE )
@@ -1022,7 +1040,7 @@ UI_SetFormStyle( frmPKSilver,2)
 
 --UI_FormSetHotKey( frmPKSilver, ALT_KEY, HOTKEY_Z )
 
---º”‘ÿ±≥æ∞Õº∆¨
+--Âä†ËΩΩËÉåÊôØÂõæÁâá
 imgBackGround1 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround1", 256, 256, 0, 0 )
 UI_LoadImage( imgBackGround1, "./texture/gui/old_gui/fighting1.tga", NORMAL, 256,256, 0, 0 )
 
@@ -1041,13 +1059,13 @@ UI_LoadImage( imgBackGround5, "./texture/gui/old_gui/fighting4.tga", NORMAL, 256
 imgBackGround6 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround6", 46, 130, 512, 256 )
 UI_LoadImage( imgBackGround6, "./texture/gui/old_gui/fighting5.tga", NORMAL, 46,130, 46, 0 )
 
---¥¥Ω®πÿ±’∞¥≈•
+--ÂàõÂª∫ÂÖ≥Èó≠ÊåâÈíÆ
 btnClose = UI_CreateCompent( frmPKSilver, BUTTON_TYPE, "btnClose", 14, 14, 531, 3 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
---¥¥Ω®Ω·π˚±Ìµ•
---±ÍÕ∑--≥Ã–Ú≤ª¥¶¿Ì
+--ÂàõÂª∫ÁªìÊûúË°®Âçï
+--Ê†áÂ§¥--Á®ãÂ∫è‰∏çÂ§ÑÁêÜ
 labTtitle1 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle1", 400, 150,60, 104 )
 UI_SetCaption( labTtitle1, "Character ")
 UI_SetTextColor( labTtitle1, COLOR_RED )
@@ -1073,7 +1091,7 @@ UI_SetCaption( labTtitle5, "NO")
 UI_SetTextColor( labTtitle5, COLOR_RED )
 UI_SetLabelExFont( labTtitle5, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---ƒ⁄»›
+--ÂÜÖÂÆπ
 local labName = {}
 local labLevel = {}
 local labJob = {}
@@ -1116,7 +1134,7 @@ end
 	UI_SetTextColor( labNotice2, COLOR_BLACK )
 	UI_SetLabelExFont( labNotice2, EXO_Regular_S12, TRUE, COLOR_WHITE )
 -----------------------------------------------------------------------
--- ∂®“Â◊È∂”√Ê∞Â  2006.10.17 by Leo
+-- ÂÆö‰πâÁªÑÈòüÈù¢Êùø  2006.10.17 by Leo
 -----------------------------------------------------------------------
 frmFindTeam = UI_CreateForm( "frmFindTeam", FALSE, 568, 427, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmFindTeam, FALSE )
@@ -1128,7 +1146,7 @@ UI_SetFormStyle( frmFindTeam,2)
 imgBackGround1 = UI_CreateCompent( frmFindTeam, IMAGE_TYPE, "imgBackGround1", 568, 427, 0, 0 )
 UI_LoadImage( imgBackGround1, "texture/gui/search-party.png", NORMAL, 568, 427, 0, 0 )
 
---∂®“ÂÕÊº“œ‘ æ¡–±Ì
+--ÂÆö‰πâÁé©ÂÆ∂ÊòæÁ§∫ÂàóË°®
 local labName = {}
 local labLevel = {}
 local labJob = {}
@@ -1599,7 +1617,7 @@ UI_LoadButtonImage( btnClose, "texture/gui/life-butchering.png", 42, 42, 307, 17
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
--- ∂®“ÂŒ Ã‚Ã·Ωª√Ê∞Â  2007.1.17 by Leo
+-- ÂÆö‰πâÈóÆÈ¢òÊèê‰∫§Èù¢Êùø  2007.1.17 by Leo
 -----------------------------------------------------------------------
 frmQuestion = UI_CreateForm( "frmQuestion", FALSE, 235, 317, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmQuestion, FALSE )
@@ -1610,7 +1628,7 @@ UI_SetFormStyle( frmQuestion,2)
 
 --UI_FormSetHotKey( frmQuestion, ALT_KEY, HOTKEY_X )
 
---±≥æ∞
+--ËÉåÊôØ
 imgMissonT = UI_CreateCompent( frmQuestion, IMAGE_TYPE, "imgMissonT", 235, 111, 0, 0 )
 UI_LoadImage( imgMissonT, "./texture/gui/old_gui/answer.tga", NORMAL, 235, 111, 0, 0 )
 imgMissonD = UI_CreateCompent( frmQuestion, IMAGE_TYPE, "imgMissonD", 235, 206, 0, 111 )
@@ -1622,13 +1640,13 @@ UI_SetCaption( labMisson, "Submit question" )
 UI_SetTextColor( labMisson, COLOR_BLACK )
 UI_SetLabelExFont( labMisson, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---Ã·Ωªƒ⁄»›
---÷˜Ã‚
+--Êèê‰∫§ÂÜÖÂÆπ
+--‰∏ªÈ¢ò
 edtQuestionTitle= UI_CreateCompent(frmQuestion, EDIT_TYPE,"edtQuestionTitle",197, 21, 23, 43)
 UI_SetEditMaxNum( edtQuestionTitle, 256)
 UI_SetEditMaxNumVisible(edtDoublePwdAlterNew,30)
 
---ƒ⁄»›
+--ÂÜÖÂÆπ
 memCentent  = UI_CreateCompent( frmQuestion, MEMO_TYPE, "memCentent", 140, 210, 21, 95 )
 UI_SetCaption( memCentent, "400" )
 UI_SetTextColor( memCentent, COLOR_BLACK )
@@ -1640,7 +1658,7 @@ UI_SetMemoMaxNumPerRow( memCentent, 31 )
 	UI_SetTextColor( labNotice, COLOR_RED)
 	UI_SetLabelExFont( labNotice, EXO_Regular_S12, TRUE, COLOR_WHITE )
 	
---∂®“ÂÃ·Ωª∞¥≈•
+--ÂÆö‰πâÊèê‰∫§ÊåâÈíÆ
 	btnSubmit = UI_CreateCompent( frmQuestion, BUTTON_TYPE, "btnSubmit", 48, 19, 170, 287 )
 	UI_LoadButtonImage( btnSubmit, "./texture/gui/old_gui/store8.tga", 48, 19, 0, 76, FALSE )
 
@@ -1649,13 +1667,13 @@ UI_SetMemoMaxNumPerRow( memCentent, 31 )
 	UI_SetTextColor( labSubmit, COLOR_BLACK )
 	UI_SetLabelExFont( labSubmit, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---¥¥Ω®πÿ±’∞¥≈•
+--ÂàõÂª∫ÂÖ≥Èó≠ÊåâÈíÆ
 btnClose = UI_CreateCompent( frmQuestion, BUTTON_TYPE, "btnClose", 14, 14, 215, 3 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
--- ∂®“Â≤Èø¥ªÿ∏¥√Ê∞Â  2007.1.17  by Leo
+-- ÂÆö‰πâÊü•ÁúãÂõûÂ§çÈù¢Êùø  2007.1.17  by Leo
 -----------------------------------------------------------------------
 frmAnswer = UI_CreateForm( "frmAnswer", FALSE, 235, 317, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmAnswer, FALSE )
@@ -1666,7 +1684,7 @@ UI_SetFormStyle( frmAnswer,2)
 
 --UI_FormSetHotKey( frmAnswer, ALT_KEY, HOTKEY_Z )
 
---±≥æ∞
+--ËÉåÊôØ
 imgMissonT = UI_CreateCompent( frmAnswer, IMAGE_TYPE, "imgMissonT", 235, 111, 0, 0)
 UI_LoadImage( imgMissonT, "./texture/gui/old_gui/answer.tga", NORMAL, 235, 111, 0,111 )
 imgMissonD = UI_CreateCompent( frmAnswer, IMAGE_TYPE, "imgMissonD", 235, 206, 0, 111 )
@@ -1678,20 +1696,20 @@ UI_SetCaption( labMisson, "Check browser" )
 UI_SetTextColor( labMisson, COLOR_BLACK )
 UI_SetLabelExFont( labMisson, EXO_Regular_S12, TRUE, COLOR_WHITE )
 
---Ã·Ωªƒ⁄»›
+--Êèê‰∫§ÂÜÖÂÆπ
 memMiss  = UI_CreateCompent( frmAnswer, MEMO_TYPE, "memMiss", 197, 230, 20, 44 )
 UI_SetCaption( memMiss, "400" )
 UI_SetTextColor( memMiss, COLOR_BLACK )
 UI_SetLabelExFont( memMiss, EXO_Regular_S12, TRUE, COLOR_WHITE )
 UI_SetMemoMaxNumPerRow( memMiss, 31 )
 
---¥¥Ω®πÿ±’∞¥≈•
+--ÂàõÂª∫ÂÖ≥Èó≠ÊåâÈíÆ
 btnClose = UI_CreateCompent( frmAnswer, BUTTON_TYPE, "btnClose", 14, 14, 215, 3 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
--- ∂®“ÂΩÃÃ√≈ƒ¬Ù
+-- ÂÆö‰πâÊïôÂ†ÇÊãçÂçñ
 -----------------------------------------------------------------------
 frmChurchSale = UI_CreateForm( "frmChurchSale", FALSE, 558, 291, 380, 507, TRUE, FALSE )
 UI_ShowForm( frmChurchSale, TRUE )
@@ -1703,7 +1721,7 @@ UI_SetFormStyle(frmChurchSale,1)
 --UI_FormSetHotKey( frmChurchSale, ALT_KEY, HOTKEY_Z )
 
 
--- º”‘ÿ±≥æ∞Õº∆¨
+-- Âä†ËΩΩËÉåÊôØÂõæÁâá
 imgBack01 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack01", 256,256,0,0 )
 UI_LoadImage( imgBack01, "./texture/gui/old_gui/church01.tga", NORMAL, 256, 256, 0, 0 )
 
@@ -1725,7 +1743,7 @@ UI_LoadImage( imgBack06, "./texture/gui/old_gui/church04.tga", NORMAL, 46, 35, 4
 btnPriceUp = UI_CreateCompent( frmChurchSale, BUTTON_TYPE, "btnPriceUp", 41, 19, 492, 118)
 UI_LoadButtonImage( btnPriceUp, "./texture/gui/old_gui/church03.tga", 41, 19, 1, 55, TRUE )
 
---º”‘ÿœ‘ ælabel
+--Âä†ËΩΩÊòæÁ§∫label
 labInfoShow1 = UI_CreateCompent( frmChurchSale, LABELEX_TYPE, "labInfoShow1", 124, 16,24,122 )
 UI_SetCaption( labInfoShow1, "Program writes here")
 UI_SetTextColor( labInfoShow1, COLOR_BLACK )
@@ -1747,7 +1765,7 @@ UI_SetTextColor( labTittle, COLOR_BLACK )
 UI_SetLabelExFont( labTittle, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
 
---º”‘ÿŒƒ◊÷label
+--Âä†ËΩΩÊñáÂ≠ólabel
 labTextShow = UI_CreateCompent( frmChurchSale, LABELEX_TYPE, "labTextShow", 496,16,23,202 )
 UI_SetCaption( labTextShow, "Bid for renting Saturday 1st timing for Church usage is Every Monday 06:00pm-06:30 pm")
 UI_SetTextColor( labTextShow, COLOR_BLACK )
@@ -1768,13 +1786,13 @@ UI_SetCaption( labTextShow, "Bid for renting Sunday 2nd timing for Church usage 
 UI_SetTextColor( labTextShow, COLOR_BLACK )
 UI_SetLabelExFont( labTextShow, EXO_Regular_S12, FALSE, COLOR_WHITE )
 
---¥¥Ω®πÿ±’∞¥≈•
+--ÂàõÂª∫ÂÖ≥Èó≠ÊåâÈíÆ
 btnClose = UI_CreateCompent( frmChurchSale, BUTTON_TYPE, "btnClose", 14, 14, 538, 3 )
 UI_LoadButtonImage( btnClose, "./texture/gui/old_gui/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 ----------------------------------------------------------------------- 
--- ß¶ßÿß÷ß’ßﬂß÷ß”ßﬂßÌß÷ ßﬂß—ß‘ß‚ß—ß’ßÌ
+-- –ï–∂–µ–¥–Ω–µ–≤–Ω—ã–µ –Ω–∞–≥—Ä–∞–¥—ã
 ----------------------------------------------------------------------- 
 frmDailyPrize = UI_CreateForm( "frmDailyPrize", FALSE, 640, 366, 0, 0, TRUE, FALSE ) 
 UI_AddFormToTemplete( frmDailyPrize, FORM_MAIN )
