@@ -233,36 +233,6 @@ UI_MenuLoadFont(selfMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor(
 -- 增加菜单
 UI_MenuAddText( selfMouseRight, "Leave Party" )
 
-------
--- Bind keys
-------
-frmBindKey = UI_CreateForm( "frmBindKey", FALSE, 330, 125, 0, 0, TRUE, FALSE )
-UI_ShowForm( frmBindKey, TRUE )
-UI_SetIsDrag( frmBindKey, FALSE )
-UI_AddFormToTemplete( frmBindKey, FORM_MAIN )
-UI_FormSetIsEscClose( frmBindKey, TRUE )
-UI_SetFormStyleEx(frmBindKey, FORM_CENTERBOTTOM, 0, 160)
-
-setBackground(frmBindKey, false, 330, 125, 190)
-
-labButtonCode = UI_CreateCompent(frmBindKey, LABELEX_TYPE, "labButtonCode", 330, 9, 0, 20)
-UI_SetTextColor(labButtonCode, argbColor("bebdbd"))
-UI_SetLabelExFont(labButtonCode, EXO_Bold_S20, FALSE, COLOR_BLACK)
-UI_SetCaption(labButtonCode, "A")
-UI_SetCaptionIsCenter(labButtonCode, TRUE)
-
-labButtonHelp = UI_CreateCompent(frmBindKey, LABELEX_TYPE, "labButtonHelp", 330, 12, 0, 60)
-UI_SetTextColor(labButtonHelp, argbColor("bebdbd"))
-UI_SetLabelExFont(labButtonHelp, EXO_Regular_S12, FALSE, COLOR_BLACK)
-UI_SetCaption(labButtonHelp, "CLICK THE KEY TO ASSIGN IT")
-UI_SetCaptionIsCenter(labButtonHelp, TRUE)
-
-labButtonEnter = UI_CreateCompent(frmBindKey, LABELEX_TYPE, "labButtonEnter", 330, 12, 0, 85)
-UI_SetTextColor(labButtonEnter, argbColor("bebdbd"))
-UI_SetLabelExFont(labButtonEnter, EXO_Regular_S12, FALSE, COLOR_BLACK)
-UI_SetCaption(labButtonEnter, "Press ENTER to confirm")
-UI_SetCaptionIsCenter(labButtonEnter, TRUE)
-
 -----------------------------------------------------------------------------------
 -- Fast bar
 -----------------------------------------------------------------------------------
@@ -273,34 +243,46 @@ UI_SetIsDrag(frmFast, true)
 UI_FormSetIsEscClose(frmFast, FALSE)
 UI_SetFormStyleEx(frmFast, FORM_CENTERBOTTOM, 0, 60)
 
+imgfscMainNA = {}
+imgfscMainNB = {}
+
 local grd = CreateImageGrid(frmFast, 12, 2, 5, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 110, 0, 170, 43, 0)
 for i, pos in ipairs(grd) do
     local slot = i-1
     local compName
-	local buttonName = string.format("fscButton%d", slot)
-	
+
     if (slot < 12) then
 		compName = string.format("fscMainF%d", slot)  -- первые 12 F
+		
+		image = UI_CreateCompent( frmFast, IMAGE_TYPE, "image", 32, 32, pos.x, pos.y)
+		UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (i-1) * 55, 411, FALSE)
     else
         compName = string.format("fscMainN%d", slot)  -- следующие N
+		
+		local a = i - 12
+		imgfscMainNA[a] = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgfscMainNA" .. a, 32, 32, pos.x, pos.y)
+		UI_LoadImage(imgfscMainNA[a], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (a-1) * 55, 466, FALSE)
+		
+		imgfscMainNB[a] = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgfscMainNB" .. a, 32, 32, pos.x, pos.y)
+		UI_LoadImage(imgfscMainNB[a], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (a-1) * 55, 521, FALSE)
+		
     end
 	
     -- создаём компонент
     local comp = UI_CreateCompent(frmFast, FAST_COMMANG_TYPE, compName, 32, 32, pos.x, pos.y)
 	
-	local labName = UI_CreateCompent(frmFast, LABELEX_TYPE, buttonName, 32, 32, pos.x, pos.y + 8)
-	UI_SetTextColor(labName, argbColor("bebdbd"))
-	UI_SetLabelExFont(labName, EXO_Regular_S12, FALSE, COLOR_BLACK)
-	UI_SetCaption(labName, "???")
-	UI_SetCaptionIsCenter(labName, TRUE)
 end
 
 btnFastDown = UI_CreateCompent( frmFast, BUTTON_TYPE, "btnFastDown", 38, 38, 0, 43 )
 UI_LoadButtonImage( btnFastDown, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 166, 0, TRUE )
 
-chSitDown = UI_CreateCompent(frmFast, CHECK_TYPE, "chSitDown", 38, 38, 559, 43)
+chSitDown = UI_CreateCompent(frmFast, CHECK_TYPE, "chSitDown", 38, 38, 559, 0)
 UI_LoadImage(chSitDown, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 55, 55, 276, 56)
 UI_LoadImage(chSitDown, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 55, 55, 331, 56)
+
+chkFBNNucklock = UI_CreateCompent( frmFast, CHECK_TYPE, "chkFBNNucklock", 38, 38, 559, 43)
+UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 55, 55, 166, 56)
+UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 55, 55, 221, 56)
 
 ------
 -- Cha bar bottom fastbar
