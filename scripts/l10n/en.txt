@@ -1091,3 +1091,4 @@
 [1090]	"The key has been successfully bound to the slot."
 [1091]	"Required item type: %s"
 [1092]	"%s, $%s"
+[1093]	"Used with items of type: %s"
