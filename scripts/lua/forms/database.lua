@@ -6,7 +6,7 @@ UI_ShowForm(frmDatabase, FALSE )
 UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
 UI_FormSetIsEscClose(frmDatabase, TRUE)
 UI_SetIsDrag(frmDatabase, FALSE)
---UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_G)
+--UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_I)
 UI_SetFormStyleEx(frmDatabase, FORM_LEFTTOP, 20, 100)
 
 setBackground(frmDatabase, true, 313, 473, 255)
@@ -173,3 +173,26 @@ setScroll(searchResult)
 UI_AddCompent(pgItems, searchResult)
 UI_AddCompent(pgMonsters, searchResult)
 UI_AddCompent(pgNpc, searchResult)
+
+-----------------------------------------------------------------------
+-- ItemInfo
+-----------------------------------------------------------------------
+frmItemInfo = UI_CreateForm("frmItemInfo", FALSE, 600, 400, 0, 0, TRUE, FALSE)
+UI_ShowForm(frmItemInfo, FALSE )
+UI_FormSetIsEscClose(frmItemInfo, TRUE)
+UI_SetIsDrag(frmItemInfo, FALSE)
+
+setBackground(frmItemInfo, true, 600, 400, 255)
+
+labItemName = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labItemName", 313, 14, 50, 20)
+UI_SetCaption(labItemName, "ITEM NAME")
+UI_SetTextColor(labItemName, COLOR_WHITE)
+UI_SetLabelExFont(labItemName, EXO_Regular_S14, FALSE, COLOR_BLACK)
+
+labContainer1 = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labContainer1", 313, 14, 50, 50)
+UI_SetCaption(labContainer1, "ITEM NAME")
+UI_SetTextColor(labContainer1, COLOR_WHITE)
+UI_SetLabelExFont(labContainer1, EXO_Regular_S14, FALSE, COLOR_BLACK)
+
+cmdItem = UI_CreateCompent(frmItemInfo, COMMAND_ONE_TYPE, "cmdItem", 32, 32, 20, 20)
+UI_SetHint(cmdItem,"Blueprint")
