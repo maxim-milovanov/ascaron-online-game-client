@@ -77,12 +77,6 @@ UI_AddCompent(pgItems, editSearch)
 UI_AddCompent(pgMonsters, editSearch)
 UI_AddCompent(pgNpc, editSearch)
 
-btnSearch = CreateButton(0, frmDatabase, "btnSearch", "", EXO_Regular_S20, 55, 20, 199, 71)
-UI_SetEditEnterButton(editSearch, btnSearch)
-UI_AddCompent(pgItems, btnSearch)
-UI_AddCompent(pgMonsters, btnSearch)
-UI_AddCompent(pgNpc, btnSearch)
-
 local posx = 30
 local posy = 90
 image = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "image", 15, 15, posx, posy + 65)
@@ -184,15 +178,18 @@ UI_SetIsDrag(frmItemInfo, FALSE)
 
 setBackground(frmItemInfo, true, 600, 400, 255)
 
-labItemName = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labItemName", 313, 14, 50, 20)
+labItemName = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labItemName", 313, 14, 85, 25)
 UI_SetCaption(labItemName, "ITEM NAME")
 UI_SetTextColor(labItemName, COLOR_WHITE)
 UI_SetLabelExFont(labItemName, EXO_Regular_S14, FALSE, COLOR_BLACK)
 
-labContainer1 = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labContainer1", 313, 14, 50, 50)
+labContainer1 = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labContainer1", 313, 14, 85, 50)
 UI_SetCaption(labContainer1, "ITEM NAME")
 UI_SetTextColor(labContainer1, COLOR_WHITE)
 UI_SetLabelExFont(labContainer1, EXO_Regular_S14, FALSE, COLOR_BLACK)
 
-cmdItem = UI_CreateCompent(frmItemInfo, COMMAND_ONE_TYPE, "cmdItem", 32, 32, 20, 20)
-UI_SetHint(cmdItem,"Blueprint")
+imgItem = UI_CreateCompent(frmItemInfo, IMAGE_TYPE, "imgItem", 55, 55, 20, 20)
+UI_LoadImage(imgItem, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+
+cmdItem = UI_CreateCompent(frmItemInfo, COMMAND_ONE_TYPE, "cmdItem", 32, 32, 32, 32)
+UI_SetHint(cmdItem, "Item")
