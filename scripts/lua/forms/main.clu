@@ -153,8 +153,8 @@ UI_SetMargin( lstOnSay, 5, 3, 0, 0 )
 setScroll(lstOnSay)
 
 -- Подложка под cmd
-imgSay = UI_CreateCompent(frmMain800, IMAGE_TYPE, "imgSay", 330, 28, 0, 2)
-UI_LoadImage(imgSay, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 312, 26, 440, 139)
+local img_top = UI_CreateCompent(frmMain800, IMAGE_TYPE, "image", 330, 28, 0, 2)
+UI_LoadImage(img_top, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 312, 26, 440, 139)
 
 -- Написать сообщение
 edtSay = UI_CreateCompent( frmMain800, EDIT_TYPE, "edtSay", 200, 20, 85, 9 )
@@ -243,34 +243,46 @@ UI_SetIsDrag(frmFast, true)
 UI_FormSetIsEscClose(frmFast, FALSE)
 UI_SetFormStyleEx(frmFast, FORM_CENTERBOTTOM, 0, 60)
 
+imgfscMainNA = {}
+imgfscMainNB = {}
+
 local grd = CreateImageGrid(frmFast, 12, 2, 5, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 110, 0, 170, 43, 0)
 for i, pos in ipairs(grd) do
     local slot = i-1
     local compName
-	local buttonName = string.format("fscButton%d", slot)
-	
+
     if (slot < 12) then
 		compName = string.format("fscMainF%d", slot)  -- первые 12 F
+		
+		image = UI_CreateCompent( frmFast, IMAGE_TYPE, "image", 32, 32, pos.x, pos.y)
+		UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (i-1) * 55, 411, FALSE)
     else
-		compName = string.format("fscMainN%d", slot)  -- следующие N
+        compName = string.format("fscMainN%d", slot)  -- следующие N
+		
+		local a = i - 12
+		imgfscMainNA[a] = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgfscMainNA" .. a, 32, 32, pos.x, pos.y)
+		UI_LoadImage(imgfscMainNA[a], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (a-1) * 55, 466, FALSE)
+		
+		imgfscMainNB[a] = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgfscMainNB" .. a, 32, 32, pos.x, pos.y)
+		UI_LoadImage(imgfscMainNB[a], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 32, 32, 12 + (a-1) * 55, 521, FALSE)
+		
     end
 	
     -- создаём компонент
     local comp = UI_CreateCompent(frmFast, FAST_COMMANG_TYPE, compName, 32, 32, pos.x, pos.y)
 	
-	local labName = UI_CreateCompent(frmFast, LABELEX_TYPE, buttonName, 32, 32, pos.x, pos.y + 8)
-	UI_SetTextColor(labName, argbColor("bebdbd"))
-	UI_SetLabelExFont(labName, EXO_Regular_S12, FALSE, COLOR_BLACK)
-	UI_SetCaption(labName, "???")
-	UI_SetCaptionIsCenter(labName, TRUE)
 end
 
 btnFastDown = UI_CreateCompent( frmFast, BUTTON_TYPE, "btnFastDown", 38, 38, 0, 43 )
 UI_LoadButtonImage( btnFastDown, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 166, 0, TRUE )
 
-chSitDown = UI_CreateCompent(frmFast, CHECK_TYPE, "chSitDown", 38, 38, 559, 43)
+chSitDown = UI_CreateCompent(frmFast, CHECK_TYPE, "chSitDown", 38, 38, 559, 0)
 UI_LoadImage(chSitDown, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 55, 55, 276, 56)
 UI_LoadImage(chSitDown, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 55, 55, 331, 56)
+
+chkFBNNucklock = UI_CreateCompent( frmFast, CHECK_TYPE, "chkFBNNucklock", 38, 38, 559, 43)
+UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 55, 55, 166, 56)
+UI_LoadImage( chkFBNNucklock, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 55, 55, 221, 56)
 
 ------
 -- Cha bar bottom fastbar
