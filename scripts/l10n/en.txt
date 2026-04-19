@@ -490,7 +490,7 @@
 [489]	"Good"
 [490]	"msgJerry Li say: Why do you need so many message window, please check list name [%s],list number :[%d]!\n"
 [491]	"msgJerry LI say why do you open so many chat window, list name [%s], list number:[%d]!\n"
-[492]	"Shortcut: F%d"
+[492]	"Shortcut: %s"
 [493]	"All"
 [494]	"Local"
 [495]	"PM"
