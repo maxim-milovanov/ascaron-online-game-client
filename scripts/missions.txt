@@ -1,103 +1,113 @@
-1	Welcome!	Добро пожаловать!	2 
-2	New place	Новое место	2 
-3	First acquaintance	Первое знакомство	2 
-4	Fairy provisions	Провиант для фей	2 
-5	Secretary	Секретарь	2 
-10	Old Jack	Старина Джек	2 
-11	Crabs	Крабы	2 
-12	Where are my tools?	Где мои инструменты?	2 
-13	Report to Salvier	Доложите Сальверу	2 
-14	Mines	Шахты	2 
-15	Missing people	Пропажа людей	2 
-16	Immersion	Погружение	2 
-17	Mysterious door	Таинственная дверь	2 
-18	Legendary artifact	Легендарный артефакт	2 
-19	Mines’ closure	Закрытие шахт	2 
-20	Meet Sinbad	Познакомься с Sinbad	2 
-21	Getting to know the blueprints	Знакомство с чертежами	2 
-22	Acquaintance with Wood	Знакомство с древесиной	2 
-23	Pine trees	Сосны	2 
-24	Ingredients for Sinbad	Ингредиенты для Sinbad	2 
-25	Manufacture	Производство	2 
-26	Grandmother Granny	Бабушка Granny	2 
-27	Acquaintance with Fishing	Знакомство с рыболовством	2 
-28	First fish	Первая рыбка	2 
-29	There is fish, so you can eat it	Рыба есть, можно и поесть	2 
-30	Cooking	Готовим	2 
-31	You are ready	Ты готов	2 
-32	Danger	Опасность	2 
-33	Village on fire	Деревня в огне	2 
-34	Leader’s head	Голова лидера	2 
-35	Smuggling	Контрабанда	2 
-36	They want to see you	Тебя хотят видеть	2 
-37	Unusual request	Необычная просьба	2 
-56	Talk with Pet Tamer	Поговори с Pet Tamer	2 
-38	It’s time to eat	Время кушать	2 
-39	Mount	Ездовое животное	2 
-40	Head of Navy	Глава флота	2 
-41	Ghost ship	Призрачный корабль	2 
-42	Cursed sailors	Проклятые моряки	2 
-43	Cursed Blade	Проклятый клинок	2 
-44	Broken Chains	Разорванные цепи	2 
-45	No rest for the dead	Нет покоя мертвецам	2 
-46	Whispers of the Dead	Шепот мертвых	2 
-47	The Shackles of Curse	Оковы проклятия	2 
-48	A power that my father never ever dreamed of	Сила, которая и не снилась моему отцу	2 
-49	Helping the blacksmith	Помощь кузнецу	2 
-50	Disassembly of items	Разбор предметов	2 
-51	Crafting	Ремесло	2 
-52	Report to the head of navy	Доложите главе флота	2 
-100	Introducing Grany Nila	Знакомство с Grany Nila	2 
-101	Upgrade equipment	Улучшение экипировки	2 
-102	Go back to Dessaro	Возвращайся к Dessaro	2 
-103	The Zephyr Archipelagos	Архипелаг Зефир	2 
-104	Preparing for the Isle of chill	Подготовка к Стуже	2 
-105	Socket under gem	Слот под самоцвет	2 
-106	Fusion gem	Ковка самоцвета	2 
-107	Report	Отчет	2 
-108	Pirate cholera	Пиратская холера	2 
-109	Preparation	Подготовка	2 
-110	Upgrade equipment: Efficiency	Улучшение экипировки: Эффективность	2 
-111	Your ready	Ты готов	2 
-112	Island of Gold Roger: Good Luck	Остров Золотого Роджера: Удачи	2 
-113	Guild Introduction	Знакомство с гильдией	2 
-114	The Path of Transformation	Путь смены обличия	2 
-115	Meeting Shanry	Знакомство с Shanry	2 
-116	Gacha System	Система Gacha	2 
-118	He's still alive!	Он всё ещё жив!	2 
-119	Behemoth lair	Логово Бехамота	2 
-120	The Death of Behamoth	Смерть Бехамота	2 
-121	Autumn Forest	Осенний лес	2 
-122	Strange behavior	Странное поведение	2 
-123	Records	Записи	2 
-124	Ancient Weapon	Древнее оружие	2 
-125	Ancient Mage	Древний маг	2 
-126	Archaeologists	Археологи	2 
-127	Forsaken City	Затерянный город	2 
-128	Cleansing of the Former Inhabitants	Зачистка от бывших жителей	2 
-129	Report what happened	Доложить, что произошло	2 
-130	Sacred Forest	Священный лес	2 
-131	The Legend of the Sacred Forest	Легенда о Священном лесе	2 
-132	The Path to the Entrance of the Demonic World	Путь ко входу в Мир Демонов	2 
-133	Demonic World	Мир Демонов	2 
-134	Ice Mountain	Ледяная гора	2 
-135	In Search of Shan	В поисках Shan	2 
-136	Hero’s Awakening	Пробуждение героя	2 
-137	News from Vesnograd	Вести из Веснограда	2 
-138	Voice of the Ancients	Голос древних	2 
-139	Urgent Message	Срочное послание	2 
-140	The Four Elements	Четыре Стихии	2 
-141	Element of Water	Стихия Воды	2 
-142	Element of Fire	Стихия Огня	2 
-143	Element of Earth	Стихия Земли	2 
-144	Call of the Elements	Призыв стихий	2 
-145	[Fire Prism]	[Призма Огня]	2 
-146	[Earth Prism]	[Призма Земли]	2 
-147	[Air Prism]	[Призма Воздуха]	2 
-148	[Water Prism]	[Призма Воды]	2 
-149	[Weapon of the Four Elements]	[Оружие четырех стихий]	2 
-150	Calm of the Island	Спокойствие острова	2 
-151	Voice of the Statue	Глас статуи	2 
+1	Welcome!	Добро пожаловать!	1 
+2	New place	Новое место	1 
+3	First acquaintance	Первое знакомство	1 
+4	Fairy provisions	Провиант для фей	1 
+5	Secretary	Секретарь	1 
+10	Old Jack	Старина Джек	1 
+11	Crabs	Крабы	1 
+12	Where are my tools?	Где мои инструменты?	1 
+13	Report to Salvier	Доложите Сальверу	1 
+14	Mines	Шахты	1 
+15	Missing people	Пропажа людей	1 
+16	Immersion	Погружение	1 
+17	Mysterious door	Таинственная дверь	1 
+18	Legendary artifact	Легендарный артефакт	1 
+19	Mines’ closure	Закрытие шахт	1 
+20	Meet Sinbad	Познакомься с Sinbad	1 
+21	Getting to know the blueprints	Знакомство с чертежами	1 
+22	Acquaintance with Wood	Знакомство с древесиной	1 
+23	Pine trees	Сосны	1 
+24	Ingredients for Sinbad	Ингредиенты для Sinbad	1 
+25	Manufacture	Производство	1 
+26	Grandmother Granny	Бабушка Granny	1 
+27	Acquaintance with Fishing	Знакомство с рыболовством	1 
+28	First fish	Первая рыбка	1 
+29	There is fish, so you can eat it	Рыба есть, можно и поесть	1 
+30	Cooking	Готовим	1 
+31	You are ready	Ты готов	1 
+32	Danger	Опасность	1 
+33	Village on fire	Деревня в огне	1 
+34	Leader’s head	Голова лидера	1 
+35	Smuggling	Контрабанда	1 
+36	They want to see you	Тебя хотят видеть	1 
+37	Unusual request	Необычная просьба	1 
+38	It’s time to eat	Время кушать	1 
+39	Mount	Ездовое животное	1 
+40	Head of Navy	Глава флота	1 
+41	Ghost ship	Призрачный корабль	1 
+42	Cursed sailors	Проклятые моряки	1 
+43	Cursed Blade	Проклятый клинок	1 
+44	Broken Chains	Разорванные цепи	1 
+45	No rest for the dead	Нет покоя мертвецам	1 
+46	Whispers of the Dead	Шепот мертвых	1 
+47	The Shackles of Curse	Оковы проклятия	1 
+48	A power that my father never ever dreamed of	Сила, которая и не снилась моему отцу	1 
+49	Helping the blacksmith	Помощь кузнецу	1 
+50	Disassembly of items	Разбор предметов	1 
+51	Crafting	Ремесло	1 
+52	Report to the head of navy	Доложите главе флота	1 
+56	Talk with Pet Tamer	Поговори с Pet Tamer	1 
+100	Introducing Grany Nila	Знакомство с Grany Nila	1 
+101	Upgrade equipment	Улучшение экипировки	1 
+102	Go back to Dessaro	Возвращайся к Dessaro	1 
+103	The Zephyr Archipelagos	Архипелаг Зефир	1 
+104	Preparing for the Isle of chill	Подготовка к Стуже	1 
+105	Socket under gem	Слот под самоцвет	1 
+106	Fusion gem	Ковка самоцвета	1 
+107	Report	Отчет	1 
+108	Pirate cholera	Пиратская холера	1 
+109	Preparation	Подготовка	1 
+110	Upgrade equipment: Efficiency	Улучшение экипировки: Эффективность	1 
+111	Your ready	Ты готов	1 
+112	Island of Gold Roger: Good Luck	Остров Золотого Роджера: Удачи	1 
+113	Guild Introduction	Знакомство с гильдией	1 
+114	The Path of Transformation	Путь смены обличия	1 
+115	Meeting Shanry	Знакомство с Shanry	1 
+116	Gacha System	Система Gacha	1 
+118	He's still alive!	Он всё ещё жив!	1 
+119	Behemoth lair	Логово Бехамота	1 
+120	The Death of Behamoth	Смерть Бехамота	1 
+121	Autumn Forest	Осенний лес	1 
+122	Strange behavior	Странное поведение	1 
+123	Records	Записи	1 
+124	Ancient Weapon	Древнее оружие	1 
+125	Ancient Mage	Древний маг	1 
+126	Archaeologists	Археологи	1 
+127	Forsaken City	Затерянный город	1 
+128	Cleansing of the Former Inhabitants	Зачистка от бывших жителей	1 
+129	Report what happened	Доложить, что произошло	1 
+130	Sacred Forest	Священный лес	1 
+131	The Legend of the Sacred Forest	Легенда о Священном лесе	1 
+132	The Path to the Entrance of the Demonic World	Путь ко входу в Мир Демонов	1 
+133	Demonic World	Мир Демонов	1 
+134	Ice Mountain	Ледяная гора	1 
+135	In Search of Shan	В поисках Shan	1 
+136	Hero’s Awakening	Пробуждение героя	1 
+137	News from Vesnograd	Вести из Веснограда	1 
+138	Voice of the Ancients	Голос древних	1 
+139	Urgent Message	Срочное послание	1 
+140	The Four Elements	Четыре Стихии	1 
+141	Element of Water	Стихия Воды	1 
+142	Element of Fire	Стихия Огня	1 
+143	Element of Earth	Стихия Земли	1 
+144	Call of the Elements	Призыв стихий	1 
+145	[Fire Prism]	[Призма Огня]	1 
+146	[Earth Prism]	[Призма Земли]	1 
+147	[Air Prism]	[Призма Воздуха]	1 
+148	[Water Prism]	[Призма Воды]	1 
+149	[Weapon of the Four Elements]	[Оружие четырех стихий]	1 
+150	Calm of the Island	Спокойствие острова	1 
+151	Voice of the Statue	Глас статуи	1 
+152	Limbo	Лимб	1 
+153	The Exiled Lord	Лорд в изгнании	1 
+154	Love of My Life	Любовь всей жизни	1 
+155	Wargus	Варгус	1 
+156	Wargus Defeated	Wargus повержен	1 
+157	Truth	Истина	1 
+158	Terror of the Wasteland — Astaun	Страх Пустоши — Astaun	1 
+159	Astaun is Dead	Astaun мёртв	1 
+160	The Wasteland’s Final Trial	Последнее испытание Пустоши	1 
+161	Report to the Lord	Вести Лорду	1 
 501	A trivial task	Пустяковое задание	4 
 502	Hunting for a new mount	Охота на нового спутника	4 
 503	Rare catch	Редкий улов	4 
@@ -143,3 +153,8 @@
 543	Element of Earth	Стихия земли	4 
 544	Element of Air	Стихия воздуха	4 
 545	Feather for Inspiration	Перо для вдохновения	4 
+546	Dark Swamp	Тёмное болото	4 
+547	Ancient City	Старинный город	4 
+548	Strange chest	Странный сундук	4 
+549	King of Hill	Царь горы	4 
+550	Christmas sock	Рождественский носок	4 
