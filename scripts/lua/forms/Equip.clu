@@ -12,11 +12,13 @@ UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 
 CreateImageGrid(frmInv, 6, 8, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
-grdItem = UI_CreateCompent(frmInv, GOODS_GRID_TYPE, "grdItem", 230, 360, 53, 53) 
+grdItem = UI_CreateCompent(frmInv, GOODS_GRID_TYPE, "grdItem", 260, 330, 53, 53) 
 UI_SetGridSpace(grdItem, 9, 9)
-UI_SetGridContent(grdItem, 9, 6)
+UI_SetGridContent(grdItem, 16, 6)
 UI_SetGridUnitSize(grdItem, 32, 32)
 UI_SetMargin(grdItem, 0, 0, 0, 0)
+
+setScroll(grdItem)
 
 imgage = UI_CreateCompent(frmInv, IMAGE_TYPE, "imgage", 25, 25, 50, 380)
 UI_LoadImage(imgage, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 29, 29, 243, 326)
