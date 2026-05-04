@@ -124,11 +124,12 @@ UI_SetTextColor( labFormname, COLOR_WHITE )
 UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
 
 CreateImageGrid(frmNPCstorage, 6, 8, 3, 38, 38, "./texture/ascaron_ui/asc-part-01.png", 55, 55, 52, 49, 255, 50, 50)
-grdNPCstorage = UI_CreateCompent( frmNPCstorage, GOODS_GRID_TYPE, "grdNPCstorage", 230, 360, 53, 53 )
+grdNPCstorage = UI_CreateCompent( frmNPCstorage, GOODS_GRID_TYPE, "grdNPCstorage", 260, 330, 53, 53 )
 UI_SetGridSpace(grdNPCstorage, 9, 9)
-UI_SetGridContent(grdNPCstorage, 9, 6)
+UI_SetGridContent(grdNPCstorage, 16, 6)
 UI_SetGridUnitSize(grdNPCstorage, 32, 32)
 UI_SetMargin(grdNPCstorage, 0, 0, 0, 0)
+setScroll(grdNPCstorage)
 
 -----------------------------------------------------------------------
 -- NPC Quest view
