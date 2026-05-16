@@ -61,6 +61,29 @@ btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 60, 60, 675, 15 )
 UI_LoadButtonImage( btnNo, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 243, 949, TRUE )
 
 -----------------------------------------------------------------------
+-- Select chars
+-----------------------------------------------------------------------	
+frmSelectList = UI_CreateForm( "frmSelectList", FALSE, 322, 320, 50, 30, TRUE, FALSE )
+UI_ShowForm( frmSelectList, TRUE )
+UI_AddFormToTemplete( frmSelectList, FORM_SELECT )
+UI_FormSetIsEscClose( frmSelectList, FALSE )
+UI_SetFormStyleEx(frmSelectList, FORM_RIGHTTOP, 20, 230)
+
+setBackground(frmSelectList, false, 322, 220, 200)
+
+SelectList = UI_CreateListView(frmSelectList, "SelectList", 282, 190, 20, 20, 3, eNoTitle)
+UI_ListViewSetTitle(SelectList, 0, 42, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(SelectList, 1, 130, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(SelectList, 2, 50, "", 0, 0, 0, 0)
+UI_ListSetItemMargin(SelectList, 10, 8 )						-- Перемещение текста внутри строки
+UI_SetListRowHeight(SelectList, 55 )							-- Отступ строк между собой
+UI_SetListIsMouseFollow(SelectList, FALSE)
+UI_ListLoadSelectImage(SelectList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 0, 1170)
+UI_LoadListItemImage(SelectList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 270, 1170, 270, 55)
+UI_SetIsShow(SelectList, FALSE)
+setScroll(SelectList)
+	
+-----------------------------------------------------------------------
 -- Select race
 -----------------------------------------------------------------------
 frmSetRace = UI_CreateForm( "frmSetRace", FALSE, 400, 172, 50, 50, TRUE, FALSE )
