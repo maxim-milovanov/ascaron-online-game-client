@@ -63,6 +63,7 @@ UI_LoadButtonImage( btnNo, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 243, 
 -----------------------------------------------------------------------
 -- Select chars
 -----------------------------------------------------------------------	
+--[[
 frmSelectList = UI_CreateForm( "frmSelectList", FALSE, 322, 320, 50, 30, TRUE, FALSE )
 UI_ShowForm( frmSelectList, TRUE )
 UI_AddFormToTemplete( frmSelectList, FORM_SELECT )
@@ -82,7 +83,8 @@ UI_ListLoadSelectImage(SelectList, "./texture/ascaron_ui/asc-part-01.png", 270, 
 UI_LoadListItemImage(SelectList, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 270, 1170, 270, 55)
 UI_SetIsShow(SelectList, FALSE)
 setScroll(SelectList)
-	
+]]
+
 -----------------------------------------------------------------------
 -- Select race
 -----------------------------------------------------------------------
