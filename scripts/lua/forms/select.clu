@@ -45,12 +45,16 @@ UI_LoadImage( imgSelect, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 750, 90
 btnCreate = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnCreate", 60, 60, 15, 15 )
 UI_LoadButtonImage( btnCreate, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 889, TRUE )
 
+-- Rename
+btnRename = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnRename", 60, 60, 90, 15 )
+UI_LoadButtonImage( btnRename, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 889, TRUE )
+
 -- Delete
-btnDel = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnDel", 60, 60, 90, 15 )
+btnDel = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnDel", 60, 60, 165, 15 )
 UI_LoadButtonImage( btnDel, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 949, TRUE )
 
 -- Play
-btnYes = CreateButton(0, frmSelect, "btnYes", "PLAY", EXO_Regular_S20, 420, 60, 165, 15)
+btnYes = CreateButton(0, frmSelect, "btnYes", "PLAY", EXO_Regular_S20, 420 - 75, 60, 165 + 75, 15)
 
 -- change pw
 btnAlter = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnAlter", 60, 60, 600, 15 )
@@ -59,6 +63,64 @@ UI_LoadButtonImage( btnAlter, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 24
 -- Exit
 btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 60, 60, 675, 15 )
 UI_LoadButtonImage( btnNo, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 243, 949, TRUE )
+
+-----------------------------------------------------------------------
+-- Rename character
+-----------------------------------------------------------------------	
+frmRenameCha = UI_CreateForm("frmRenameCha", TRUE, 480, 425, 200, 200, TRUE, TRUE)
+UI_ShowForm(frmRenameCha, FALSE)
+--UI_SetFormStyle( frmRenameCha, 2 )
+UI_SetIsDrag(frmRenameCha, FALSE)
+UI_AddFormToTemplete(frmRenameCha, FORM_SELECT )
+UI_FormSetIsEscClose(frmRenameCha, TRUE)
+
+UI_FormSetEnterButton(frmRenameCha,btnYes)
+--UI_FormSetHotKey( frmRenameCha, ALT_KEY, HOTKEY_C )
+
+-- background
+setBackground(frmRenameCha, false, 480, 425, 255)
+
+image = UI_CreateCompent(frmRenameCha, IMAGE_TYPE,"image", 420, 55, 30, 30)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+image = UI_CreateCompent(frmRenameCha, IMAGE_TYPE,"image", 420, 55, 30, 115)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+image = UI_CreateCompent(frmRenameCha, IMAGE_TYPE,"image", 420, 55, 30, 180)
+UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+
+-- botton "ok"
+btnYes = CreateButton(0, frmRenameCha, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 265)
+
+--botton "cancel"
+btnClose = CreateButton(1, frmRenameCha, "btnClose", "CANCEL", EXO_Regular_S20, 420, 60, 30, 335)
+
+-- old code
+edtCurrentName = UI_CreateCompent( frmRenameCha, EDIT_TYPE, "edtCurrentName", 420, 20, 50, 44 )
+UI_SetTextColor( edtCurrentName, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtCurrentName, 25 )
+UI_SetEditMaxNumVisible( edtCurrentName, 25 )
+UI_SetEditCursorColor( edtCurrentName, argbColor("c0c0c0") )
+UI_SetEditFont( edtCurrentName, EXO_Regular_S20 )
+UI_SetEditClue(edtCurrentName, "Current name", argbColor("908a92"))
+
+-- new name
+edtNewName = UI_CreateCompent( frmRenameCha, EDIT_TYPE, "edtNewName", 420, 20, 50, 129 )
+UI_SetTextColor( edtNewName, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtNewName, 25 )
+UI_SetEditMaxNumVisible( edtNewName, 25 )
+UI_SetEditCursorColor( edtNewName, argbColor("c0c0c0") )
+UI_SetEditFont( edtNewName, EXO_Regular_S20 )
+UI_SetEditClue(edtNewName, "Enter new name", argbColor("908a92"))
+
+-- Secred code
+edtSecredCode = UI_CreateCompent( frmRenameCha, EDIT_TYPE, "edtSecredCode", 420, 20, 50, 194 )
+UI_SetTextColor( edtSecredCode, argbColor("c0c0c0") )
+UI_SetEditMaxNum( edtSecredCode, 25 )
+UI_SetEditMaxNumVisible( edtSecredCode, 25 )
+UI_SetEditCursorColor( edtSecredCode, argbColor("c0c0c0") )
+UI_SetEditFont( edtSecredCode, EXO_Regular_S20 )
+UI_SetEditClue(edtSecredCode, "Enter secred code", argbColor("908a92"))
 
 -----------------------------------------------------------------------
 -- Select chars
