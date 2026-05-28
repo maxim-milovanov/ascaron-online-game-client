@@ -120,14 +120,15 @@ UI_SetEditMaxNum( edtSecredCode, 25 )
 UI_SetEditMaxNumVisible( edtSecredCode, 25 )
 UI_SetEditCursorColor( edtSecredCode, argbColor("c0c0c0") )
 UI_SetEditFont( edtSecredCode, EXO_Regular_S20 )
-UI_SetEditClue(edtSecredCode, "Enter secred code", argbColor("908a92"))
+UI_SetEditClue(edtSecredCode, "Enter pin-code", argbColor("908a92"))
 
-image = UI_CreateCompent(frmRenameCha, IMAGE_TYPE, "image", 25, 25, 350, 130)
+image = UI_CreateCompent(frmRenameCha, IMAGE_TYPE, "image", 30, 30, 360, 130)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
 
-labItemIMPnumber = UI_CreateCompent( frmRenameCha, LABELEX_TYPE, "labItemIMPnumber", 91, 8, 400, 140)
-UI_SetTextColor( labItemIMPnumber, argbColor("a3a3a3") )
-UI_SetLabelExFont( labItemIMPnumber, EXO_Regular_S12, FALSE, 4289901234 )
+labImps = UI_CreateCompent(frmRenameCha, LABELEX_TYPE, "labImps", 91, 8, 395, 133)
+UI_SetCaption(labImps, "299")
+UI_SetTextColor(labImps, argbColor("79acb7") )
+UI_SetLabelExFont(labImps, EXO_Regular_S20, FALSE, 4289901234 )
 
 -----------------------------------------------------------------------
 -- Select chars
