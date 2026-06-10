@@ -46,15 +46,19 @@ btnCreate = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnCreate", 60, 60, 15, 1
 UI_LoadButtonImage( btnCreate, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 889, TRUE )
 
 -- Rename
-btnRename = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnRename", 60, 60, 90, 15 )
-UI_LoadButtonImage( btnRename, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 889, TRUE )
+btnRename = UI_CreateCompent(frmSelect, BUTTON_TYPE, "btnRename", 60, 60, 90, 15)
+UI_LoadButtonImage(btnRename, "./texture/ascaron_ui/asc-part-04.png", 60, 60, 0, 0, FALSE)
+
+-- Change race
+btnRerace = UI_CreateCompent(frmSelect, BUTTON_TYPE, "btnRerace", 60, 60, 165, 15)
+UI_LoadButtonImage(btnRerace, "./texture/ascaron_ui/asc-part-04.png", 60, 60, 60, 0, FALSE)
 
 -- Delete
-btnDel = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnDel", 60, 60, 165, 15 )
+btnDel = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnDel", 60, 60, 165 + 75, 15 )
 UI_LoadButtonImage( btnDel, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 949, TRUE )
 
 -- Play
-btnYes = CreateButton(0, frmSelect, "btnYes", "PLAY", EXO_Regular_S20, 420 - 75, 60, 165 + 75, 15)
+btnYes = CreateButton(0, frmSelect, "btnYes", "PLAY", EXO_Regular_S20, 420 - 75 - 75, 60, 165 + 75 + 75, 15)
 
 -- change pw
 btnAlter = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnAlter", 60, 60, 600, 15 )
@@ -122,13 +126,13 @@ UI_SetEditCursorColor( edtSecredCode, argbColor("c0c0c0") )
 UI_SetEditFont( edtSecredCode, EXO_Regular_S20 )
 UI_SetEditClue(edtSecredCode, "Enter pin-code", argbColor("908a92"))
 
-image = UI_CreateCompent(frmRenameCha, IMAGE_TYPE, "image", 30, 30, 360, 130)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
+imgCrystal = UI_CreateCompent(frmRenameCha, IMAGE_TYPE, "imgCrystal", 30, 30, 360, 130)
+UI_LoadImage(imgCrystal, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
 
-labImps = UI_CreateCompent(frmRenameCha, LABELEX_TYPE, "labImps", 91, 8, 395, 133)
-UI_SetCaption(labImps, "299")
-UI_SetTextColor(labImps, argbColor("79acb7") )
-UI_SetLabelExFont(labImps, EXO_Regular_S20, FALSE, 4289901234 )
+labCrystal = UI_CreateCompent(frmRenameCha, LABELEX_TYPE, "labCrystal", 91, 8, 395, 133)
+UI_SetCaption(labCrystal, "299")
+UI_SetTextColor(labCrystal, argbColor("79acb7") )
+UI_SetLabelExFont(labCrystal, EXO_Regular_S20, FALSE, 4289901234 )
 
 -----------------------------------------------------------------------
 -- Select chars
@@ -298,6 +302,23 @@ UI_SetEditCursorColor(editName, argbColor("c0c0c0") )
 UI_SetEditFont(editName, EXO_Regular_S14 )
 UI_SetEditClue(editName, "Please enter the character's name*", argbColor("908a92"))
 
+-- Secred code
+editPincode = UI_CreateCompent(frmSetName, EDIT_TYPE, "editPincode", 340, 20, 235, 18)
+UI_SetTextColor(editPincode, argbColor("c0c0c0"))
+UI_SetEditMaxNum(editPincode, 25)
+UI_SetEditMaxNumVisible(editPincode, 25 )
+UI_SetEditCursorColor(editPincode, argbColor("c0c0c0"))
+UI_SetEditFont(editPincode, EXO_Regular_S14)
+UI_SetEditClue(editPincode, "Please input pin-code*", argbColor("908a92"))
+
+imgCrystal = UI_CreateCompent(frmSetName, IMAGE_TYPE, "imgCrystal", 30, 30, 430, 12)
+UI_LoadImage(imgCrystal, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
+
+labCrystal = UI_CreateCompent(frmSetName, LABELEX_TYPE, "labCrystal", 91, 8, 465, 14)
+UI_SetCaption(labCrystal, "4999")
+UI_SetTextColor(labCrystal, argbColor("79acb7") )
+UI_SetLabelExFont(labCrystal, EXO_Regular_S20, FALSE, 4289901234 )
+
 -- background
 imgSelect = UI_CreateCompent(frmSetName, IMAGE_TYPE, "imgSelect", 750, 90, 0, 65)
 UI_LoadImage(imgSelect, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 750, 90, 0, 1010)
@@ -306,12 +327,23 @@ UI_LoadImage(imgSelect, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 750, 90,
 btnBack = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnBack", 60, 60, 15, 15 + 65 )
 UI_LoadButtonImage( btnBack, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 958, 271, FALSE )
 
+-- Rename
+btnRename = UI_CreateCompent(frmSetName, BUTTON_TYPE, "btnRename", 60, 60, 90, 15 + 65)
+UI_LoadButtonImage(btnRename, "./texture/ascaron_ui/asc-part-04.png", 60, 60, 0, 0, FALSE)
+
+-- Change race
+btnRerace = UI_CreateCompent(frmSetName, BUTTON_TYPE, "btnRerace", 60, 60, 165, 15 + 65)
+UI_LoadButtonImage(btnRerace, "./texture/ascaron_ui/asc-part-04.png", 60, 60, 60, 0, FALSE)
+
 -- Delete
-btnDel = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnDel", 60, 60, 90, 15  + 65 )
+btnDel = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnDel", 60, 60, 165 + 75, 15  + 65 )
 UI_LoadButtonImage( btnDel, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 0, 949, TRUE )
 
 -- Play
-btnCreate = CreateButton(0, frmSetName, "btnCreate", "CREATE", EXO_Regular_S20, 420, 60, 165, 15 + 65)
+btnCreate = CreateButton(0, frmSetName, "btnCreate", "CREATE", EXO_Regular_S20, 420 - 75 - 75, 60, 165 + 75 + 75, 15 + 65)
+
+-- Change
+btnChange = CreateButton(0, frmSetName, "btnChange", "CHANGE", EXO_Regular_S20, 420 - 75 - 75, 60, 165 + 75 + 75, 15 + 65)
 
 -- change pw
 btnChangePw = UI_CreateCompent( frmSetName, BUTTON_TYPE, "btnChangePw", 60, 60, 600, 15 + 65 )

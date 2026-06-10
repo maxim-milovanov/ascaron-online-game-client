@@ -118,7 +118,7 @@
 [117]	"%d,%s, Effect [%d] does not exist\n"
 [118]	"Persists"
 [119]	"%d,%s, effect [%d] as Persists effect \n"
-[120]	"Run successful "
+[120]	"https://discord.gg/f4uTnEjGbd"
 [121]	"https://ascaron.online/?act=wiki"
 [122]	"https://ascaron.online/?act=database&cat=items"
 [123]	"https://ascaron.online/?act=ranking"
@@ -1092,3 +1092,4 @@
 [1091]	"Required item type: %s"
 [1092]	"%s, $%s"
 [1093]	"Used with items of type: %s"
+[1094]	"Please input PIN-code"

@@ -225,7 +225,7 @@ UI_SetEditMaxNum( edtDoublePwdCreate, 25 )
 UI_SetEditMaxNumVisible( edtDoublePwdCreate, 25 )
 UI_SetEditCursorColor( edtDoublePwdCreate, argbColor("c0c0c0") )
 UI_SetEditFont( edtDoublePwdCreate, EXO_Regular_S20 )
-UI_SetEditClue(edtDoublePwdCreate, "Enter new code*", argbColor("908a92"))
+UI_SetEditClue(edtDoublePwdCreate, "Input new PIN-code*", argbColor("908a92"))
 
 -- re-enter
 edtDoublePwdCreateRetry = UI_CreateCompent( frmDoublePwdCreate, EDIT_TYPE, "edtDoublePwdCreateRetry", 420, 20, 50, 109 )
@@ -234,7 +234,7 @@ UI_SetEditMaxNum( edtDoublePwdCreateRetry, 25 )
 UI_SetEditMaxNumVisible( edtDoublePwdCreateRetry, 25 )
 UI_SetEditCursorColor( edtDoublePwdCreateRetry, argbColor("c0c0c0") )
 UI_SetEditFont( edtDoublePwdCreateRetry, EXO_Regular_S20 )
-UI_SetEditClue(edtDoublePwdCreateRetry, "Re-enter", argbColor("908a92"))
+UI_SetEditClue(edtDoublePwdCreateRetry, "Re-input PIN-code", argbColor("908a92"))
 
 -- botton "ok"
 btnYes = CreateButton(0, frmDoublePwdCreate, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 180)
@@ -286,7 +286,7 @@ UI_SetEditMaxNum( edtDoublePwdAlterOld, 25 )
 UI_SetEditMaxNumVisible( edtDoublePwdAlterOld, 25 )
 UI_SetEditCursorColor( edtDoublePwdAlterOld, argbColor("c0c0c0") )
 UI_SetEditFont( edtDoublePwdAlterOld, EXO_Regular_S20 )
-UI_SetEditClue(edtDoublePwdAlterOld, "Enter old code", argbColor("908a92"))
+UI_SetEditClue(edtDoublePwdAlterOld, "Input old PIN-code", argbColor("908a92"))
 
 -- new code
 edtDoublePwdAlterNew = UI_CreateCompent( frmDoublePwdAlter, EDIT_TYPE, "edtDoublePwdAlterNew", 420, 20, 50, 129 )
@@ -295,7 +295,7 @@ UI_SetEditMaxNum( edtDoublePwdAlterNew, 25 )
 UI_SetEditMaxNumVisible( edtDoublePwdAlterNew, 25 )
 UI_SetEditCursorColor( edtDoublePwdAlterNew, argbColor("c0c0c0") )
 UI_SetEditFont( edtDoublePwdAlterNew, EXO_Regular_S20 )
-UI_SetEditClue(edtDoublePwdAlterNew, "Enter new code", argbColor("908a92"))
+UI_SetEditClue(edtDoublePwdAlterNew, "Input new PIN-code", argbColor("908a92"))
 
 -- re-enter
 edtDoublePwdAlterNewRetry = UI_CreateCompent( frmDoublePwdAlter, EDIT_TYPE, "edtDoublePwdAlterNewRetry", 420, 20, 50, 194 )
@@ -304,7 +304,7 @@ UI_SetEditMaxNum( edtDoublePwdAlterNewRetry, 25 )
 UI_SetEditMaxNumVisible( edtDoublePwdAlterNewRetry, 25 )
 UI_SetEditCursorColor( edtDoublePwdAlterNewRetry, argbColor("c0c0c0") )
 UI_SetEditFont( edtDoublePwdAlterNewRetry, EXO_Regular_S20 )
-UI_SetEditClue(edtDoublePwdAlterNewRetry, "Re-enter", argbColor("908a92"))
+UI_SetEditClue(edtDoublePwdAlterNewRetry, "Re-input PIN-code", argbColor("908a92"))
 
 -----------------------------------------------------------------------
 -- Delete character
@@ -333,7 +333,7 @@ UI_SetEditMaxNum( edtDoublePwd, 25 )
 UI_SetEditMaxNumVisible( edtDoublePwd, 25 )
 UI_SetEditCursorColor( edtDoublePwd, argbColor("c0c0c0") )
 UI_SetEditFont( edtDoublePwd, EXO_Regular_S20 )
-UI_SetEditClue(edtDoublePwd, "Enter code", argbColor("908a92"))
+UI_SetEditClue(edtDoublePwd, "Input PIN-code", argbColor("908a92"))
 
 -- botton "ok"
 btnYes = CreateButton(0, frmDoublePwd, "btnYes", "ACCEPT", EXO_Regular_S20, 420, 60, 30, 115)
