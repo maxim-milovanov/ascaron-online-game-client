@@ -64,7 +64,10 @@ UI_SetLabelExFont(labGameVersionDate, EXO_Regular_S13, FALSE, COLOR_BLACK )
 UI_SetCaptionIsCenter(labGameVersionDate, TRUE)
 
 -- §£§à§ã§ã§ä§Ñ§ß§à§Ó§Ý§Ö§ß§Ú§Ö §Ü§Ý§Ú§Ö§ß§ä§Ñ §Õ§à §à§â§Ú§Ô§Ú§ß§Ñ§Ý§î§ß§í§ç §æ§Ñ§Û§Ý§à§Ó
-btnVersionCheck = CreateButton(1, frmServer, "btnVersionCheck", "CHECK VERSION", EXO_Regular_S20, 420, 75, 0, 440)
+btnVersionCheck = CreateButton(1, frmServer, "btnVersionCheck", "CHECK VERSION", EXO_Regular_S20, 420 - 70, 60, 0, 440)
+
+btnExit = UI_CreateCompent(frmServer, BUTTON_TYPE, "btnExit", 60, 60, 360, 440)
+UI_LoadButtonImage(btnExit, "./texture/ascaron_ui/asc-part-01.png", 60, 60, 243, 949, TRUE)
 
 -- §¬§ß§à§á§Ü§Ñ §à§Ò§ß§à§Ó§Ý§Ö§ß§Ú§ñ §Ü§Ý§Ú§Ö§ß§ä§Ñ
 btnUpdate = CreateButton(0, frmServer, "btnUpdate", "UPDATE", EXO_Regular_S20, 420, 75, 0, 440)
