@@ -1509,6 +1509,7 @@ UI_LoadScript("scripts/lua/forms/select.clu")
 UI_LoadScript("scripts/lua/forms/store.lua")
 UI_LoadScript("scripts/lua/forms/settings.lua")
 UI_LoadScript("scripts/lua/forms/database.lua")
+UI_LoadScript("scripts/lua/forms/realmarket.lua")
 
 --×Ö·û¹ýÂË±í
 UI_LoadScript("scripts/lua/filter.clu")

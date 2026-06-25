@@ -1093,3 +1093,5 @@
 [1092]	"%s, $%s"
 [1093]	"Used with items of type: %s"
 [1094]	"Please input PIN-code"
+[1095]	"Lv%d"
+[1096]	"This item cannot be dropped by monsters"

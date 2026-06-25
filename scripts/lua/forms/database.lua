@@ -6,7 +6,7 @@ UI_ShowForm(frmDatabase, FALSE )
 UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
 UI_FormSetIsEscClose(frmDatabase, TRUE)
 UI_SetIsDrag(frmDatabase, FALSE)
---UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_I)
+UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_I)
 UI_SetFormStyleEx(frmDatabase, FORM_LEFTTOP, 20, 100)
 
 setBackground(frmDatabase, true, 313, 473, 255)
@@ -171,12 +171,12 @@ UI_AddCompent(pgNpc, searchResult)
 -----------------------------------------------------------------------
 -- ItemInfo
 -----------------------------------------------------------------------
-frmItemInfo = UI_CreateForm("frmItemInfo", FALSE, 600, 400, 0, 0, TRUE, FALSE)
+frmItemInfo = UI_CreateForm("frmItemInfo", FALSE, 600, 369, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmItemInfo, FALSE )
 UI_FormSetIsEscClose(frmItemInfo, TRUE)
 UI_SetIsDrag(frmItemInfo, FALSE)
 
-setBackground(frmItemInfo, true, 600, 400, 255)
+setBackground(frmItemInfo, true, 600, 369, 255)
 
 labItemName = UI_CreateCompent(frmItemInfo, LABELEX_TYPE, "labItemName", 313, 14, 85, 25)
 UI_SetCaption(labItemName, "ITEM NAME")
@@ -193,3 +193,63 @@ UI_LoadImage(imgItem, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52
 
 cmdItem = UI_CreateCompent(frmItemInfo, COMMAND_ONE_TYPE, "cmdItem", 32, 32, 32, 32)
 UI_SetHint(cmdItem, "Item")
+
+checkLootFilter = UI_CreateCompent(frmItemInfo, CHECK_TYPE, "checkLootFilter", 31, 20, 600 - 85, 20 - 3)
+UI_LoadImage(checkLootFilter, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkLootFilter, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+UI_SetHint(checkLootFilter, "Loot-filter (on/off)" )
+
+------
+-- Создание страниц
+------
+pageItemInfo = UI_CreateCompent(frmItemInfo, PAGE_TYPE, "pageItemInfo", 540, 400, 20, 85)
+UI_SetPageButton(pageItemInfo, PAGE_BUTTON_CUSTOM, 48, 16 )
+
+-- Дроп-лист
+pageDropInfo = UI_CreatePageItem(pageItemInfo)
+itemDropInfo = UI_GetPageItemObj(pageDropInfo, PAGE_ITEM_TITLE)
+UI_LoadImage(itemDropInfo, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 154, 44, 550, 1171)
+UI_LoadImage(itemDropInfo, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 154, 44, 710, 1171)
+UI_SetPos(itemDropInfo, 0, 0)
+UI_SetSize(itemDropInfo, 154, 44)
+
+-- С каких предметов можно достать
+pageDropItemEffect = UI_CreatePageItem(pageItemInfo)
+itemDropItemEffect = UI_GetPageItemObj(pageDropItemEffect, PAGE_ITEM_TITLE)
+UI_LoadImage(itemDropItemEffect, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 154, 44, 550, 1171)
+UI_LoadImage(itemDropItemEffect, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 154, 44, 710, 1171)
+UI_SetPos(itemDropItemEffect, 0, 44)
+UI_SetSize(itemDropItemEffect, 154, 44)
+
+-- Что можно получить используя этот предмет
+pageItemDrop = UI_CreatePageItem(pageItemInfo)
+itemItemDrop = UI_GetPageItemObj(pageItemDrop, PAGE_ITEM_TITLE)
+UI_LoadImage(itemItemDrop, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 154, 44, 550, 1171)
+UI_LoadImage(itemItemDrop, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 154, 44, 710, 1171)
+UI_SetPos(itemItemDrop, 0, 88)
+UI_SetSize(itemItemDrop, 154, 44)
+
+-- У каких NPC можно купить
+pageNPCBuy = UI_CreatePageItem(pageItemInfo)
+itemNPCBuy = UI_GetPageItemObj(pageNPCBuy, PAGE_ITEM_TITLE)
+UI_LoadImage(itemNPCBuy, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 154, 44, 550, 1171)
+UI_LoadImage(itemNPCBuy, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 154, 44, 710, 1171)
+UI_SetPos(itemNPCBuy, 0, 132)
+UI_SetSize(itemNPCBuy, 154, 44)
+
+------
+-- Таблица с данными о предмете (дроп, где продается, что достается и так далее)
+------
+listItemInfo = UI_CreateListView(frmItemInfo, "listItemInfo", 395, 240, 165, 0, 4, eNoTitle)
+UI_ListViewSetTitle(listItemInfo, 0, 42, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listItemInfo, 1, 220, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listItemInfo, 2, 50, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listItemInfo, 3, 12, "", 0, 0, 0, 0)
+UI_ListSetItemMargin(listItemInfo, 10, 8 )						-- Перемещение текста внутри строки
+UI_SetListRowHeight(listItemInfo, 46 )							-- Отступ строк между собой
+UI_SetListIsMouseFollow(listItemInfo, FALSE)
+UI_ListLoadSelectImage(listItemInfo, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 0, 1170)
+UI_LoadListItemImage(listItemInfo, "./texture/ascaron_ui/asc-part-01.png", 270, 46, 270, 1170, 382, 46)
+UI_SetIsShow(listItemInfo, FALSE)
+setScroll(listItemInfo)
+UI_AddCompent(pageDropInfo, listItemInfo)
