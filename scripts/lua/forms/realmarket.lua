@@ -148,7 +148,6 @@ local imgAvailable = {}
 local imgTime = {}
 local labLeftTime = {}
 local imgQty = {}
-local labLeft = {}
 local labLeftNum = {}
 local imgEdtQty = {}
 local labAmount = {}
@@ -226,14 +225,7 @@ for i = 0, 4, 1 do
 	UI_SetIsShow(imgQty[i], FALSE)
 	UI_AddCompent(pgLots, imgQty[i])
 	
-	labLeft[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labLeft_"..i, 10, 150, card_posx + 364, card_posy + 45)
-	UI_SetCaption( labLeft[i], "Qty available: ")
-	UI_SetTextColor( labLeft[i], argbColor("929292") )
-	UI_SetLabelExFont( labLeft[i], EXO_Regular_S14, FALSE, COLOR_WHITE )		
-	UI_SetIsShow(labLeft[i],FALSE)
-	UI_AddCompent(pgLots, labLeft[i])
-	
-	labLeftNum[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labLeftNum_"..i, 10, 150, card_posx + 467, card_posy + 45)
+	labLeftNum[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labLeftNum_"..i, 10, 150, card_posx + 364, card_posy + 45)
 	UI_SetCaption( labLeftNum[i], "Remaining amount"..i)
 	UI_SetTextColor( labLeftNum[i], argbColor("929292") )
 	UI_SetLabelExFont( labLeftNum[i], EXO_Regular_S14, FALSE, COLOR_WHITE )		

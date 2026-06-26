@@ -1095,3 +1095,6 @@
 [1094]	"Please input PIN-code"
 [1095]	"Lv%d"
 [1096]	"This item cannot be dropped by monsters"
+[1097]	"Available until %s"
+[1098]	"Quantity in lot: %d"
+[1099]	"Avail."
