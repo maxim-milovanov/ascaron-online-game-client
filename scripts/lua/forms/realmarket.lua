@@ -46,8 +46,8 @@ UI_SetSize(AddLotItem, 175, 31)
 -- Спец. кнопки
 ------
 -- Обналичить средства
-btnCancel = CreateButton(2, frmRealMarket, "btnCancel", "CANCEL", EXO_Regular_S14, 93, 42, 605, 502)
-UI_AddCompent(pgLots, btnCancel)
+btnTake = CreateButton(16, frmRealMarket, "btnTake", "TAKE", EXO_Regular_S14, 93, 42, 605, 502)
+UI_AddCompent(pgLots, btnTake)
 
 -- Купить товар
 btnBuy = CreateButton(2, frmRealMarket, "btnBuy", "BUY", EXO_Regular_S14, 93, 42, 605, 502)
@@ -144,6 +144,7 @@ local cmdStore = {}
 local labName = {}
 local labPrice = {}
 local imgPrice = {}
+local imgAvailable = {}
 local imgTime = {}
 local labLeftTime = {}
 local imgQty = {}
@@ -193,11 +194,18 @@ for i = 0, 4, 1 do
 	UI_AddCompent(pgLots, labPrice[i])
 	
 	-- Иконка валюты кристаллов
-	imgPrice[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgPrice_"..i, 24, 24, card_posx + 506, card_posy + 10)
-	UI_LoadImage(imgPrice[i], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
+	imgPrice[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgPrice_"..i, 14, 22, card_posx + 506, card_posy + 10)
+	UI_LoadImage(imgPrice[i], "./texture/ascaron_ui/icon/dollar.png", NORMAL, 14, 24, 0, 0)
 	--UI_SetAlpha(imgPrice[i], 200)
 	UI_SetIsShow(imgPrice[i], FALSE)
 	UI_AddCompent(pgLots, imgPrice[i])
+	
+	-- Иконка доступного лота
+	imgAvailable[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgAvailable_"..i, 14, 22, card_posx + 506, card_posy + 10)
+	UI_LoadImage(imgAvailable[i], "./texture/ascaron_ui/icon/dollargreen.png", NORMAL, 14, 24, 0, 0)
+	--UI_SetAlpha(imgAvailable[i], 200)
+	UI_SetIsShow(imgAvailable[i], FALSE)
+	UI_AddCompent(pgLots, imgAvailable[i])
 	
 	imgTime[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgTime_"..i, 18, 18, card_posx + 44 + 8, card_posy + 44)
 	UI_LoadImage( imgTime[i], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 494, 332)
