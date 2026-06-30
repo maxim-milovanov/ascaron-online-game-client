@@ -29,17 +29,25 @@ UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 550, 2, 0, 3
 -- Кнопка маркета со списком предметов в торговле
 pgLots = UI_CreatePageItem(pageMarket)
 LotsItem = UI_GetPageItemObj(pgLots, PAGE_ITEM_TITLE)
-UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 1101)
-UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 1101)
+UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 240)
+UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 271)
 UI_SetPos(LotsItem, 0, 0)
 UI_SetSize(LotsItem, 175, 31)
+
+-- История
+pgHistory = UI_CreatePageItem(pageMarket)
+HistoryItem = UI_GetPageItemObj(pgHistory, PAGE_ITEM_TITLE)
+UI_LoadImage(HistoryItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 175, 240)
+UI_LoadImage(HistoryItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 271)
+UI_SetPos(HistoryItem, 175, 0)
+UI_SetSize(HistoryItem, 175, 31)
 
 -- Установить предмет на продажу
 pgAddLot = UI_CreatePageItem(pageMarket)
 AddLotItem = UI_GetPageItemObj(pgAddLot, PAGE_ITEM_TITLE)
-UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 350, 1101)
-UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 525, 1101)
-UI_SetPos(AddLotItem, 175, 0)
+UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 302)
+UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 333)
+UI_SetPos(AddLotItem, 350, 0)
 UI_SetSize(AddLotItem, 175, 31)
 
 ------
@@ -60,42 +68,31 @@ UI_AddCompent(pgLots, btnBuy)
 image = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "image", 80, 19, 29, 504)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 80, 19, 324, 329)
 UI_AddCompent(pgLots, image)
-
--- Шкала купленных кристаллов
-proCrystal = UI_CreateCompent(frmRealMarket, PROGRESS_TYPE, "proCrystal", 74, 13, 32, 507)
-UI_LoadScaleImage(proCrystal, "./texture/ascaron_ui/asc-part-01.png", PROGRESS_PROGRESS, 74, 13, 324, 348, 1.0, 1.0)
-UI_SetHint(proCrystal, "Level up")
-UI_SetProgressHintStyle(proCrystal, PROGRESS_HINT_NUM )
-UI_AddCompent(pgLots, proCrystal)
+UI_AddCompent(pgHistory, image)
 
 -- Сумма купленных кристаллов
-labCrystal = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labCrystal", 74, 10, 32, 508)
-UI_SetCaption( labCrystal, "99999")
-UI_SetTextColor( labCrystal, argbColor("ffffff"))
-UI_SetLabelExFont( labCrystal, EXO_Regular_S10, FALSE, COLOR_WHITE )
-UI_SetCaptionIsCenter(labCrystal, TRUE)
-UI_AddCompent(pgLots, labCrystal)
+labDollars = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labDollars", 74, 10, 32, 508)
+UI_SetCaption( labDollars, "99999")
+UI_SetTextColor( labDollars, argbColor("ffffff"))
+UI_SetLabelExFont( labDollars, EXO_Regular_S10, FALSE, COLOR_WHITE )
+UI_SetCaptionIsCenter(labDollars, TRUE)
+UI_AddCompent(pgLots, labDollars)
+UI_AddCompent(pgHistory, labDollars)
 
--- Иконка кристалла
-image = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "image", 24, 24, 0, 502)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 24, 24, 271, 329)
+-- Иконка долллара
+image = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "image", 14, 24, 0, 502)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/dollar.png", NORMAL, 14, 24, 0, 0)
 UI_AddCompent(pgLots, image)
+UI_AddCompent(pgHistory, image)
 
 -- 
-labPremium = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labPremium", 80, 13, 29, 531)
-UI_SetCaption(labPremium, "Premium")
-UI_SetTextColor(labPremium, argbColor("a2a1a2"))
-UI_SetLabelExFont(labPremium, EXO_Regular_S13, FALSE, COLOR_BLACK)
-UI_SetCaptionIsCenter(labPremium, TRUE)
-UI_AddCompent(pgLots, labPremium)
-
--- Уровень премиума
-labPremiumLv = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labPremiumLv", 35, 13, -5, 531)
-UI_SetCaption(labPremiumLv, "Lv1")
-UI_SetTextColor(labPremiumLv, argbColor("a2a1a2"))
-UI_SetLabelExFont(labPremiumLv, EXO_Regular_S13, FALSE, COLOR_BLACK)
-UI_SetCaptionIsCenter(labPremiumLv, TRUE)
-UI_AddCompent(pgLots, labPremiumLv)
+labBallance = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labBallance", 80, 13, 29, 531)
+UI_SetCaption(labBallance, "Balance (Dollar USA)")
+UI_SetTextColor(labBallance, argbColor("a2a1a2"))
+UI_SetLabelExFont(labBallance, EXO_Regular_S13, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labBallance, TRUE)
+UI_AddCompent(pgLots, labBallance)
+UI_AddCompent(pgHistory, labBallance)
 
 ------
 -- Переключатель страниц
@@ -104,6 +101,7 @@ btnLeftPage = UI_CreateCompent( frmRealMarket, BUTTON_TYPE, "btnLeftPage", 20, 2
 UI_LoadButtonImage(btnLeftPage, "./texture/ascaron_ui/asc-part-01.png", 20, 20, 410, 349, TRUE)
 UI_SetIsShow(btnLeftPage, FALSE)
 UI_AddCompent(pgLots, btnLeftPage)
+UI_AddCompent(pgHistory, btnLeftPage)
 
 labListPage = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labListPage", 51, 14, 324, 509)
 UI_SetCaption(labListPage, "0\0")
@@ -112,11 +110,13 @@ UI_SetLabelExFont(labListPage, EXO_Regular_S14, FALSE, COLOR_WHITE )
 UI_SetCaptionIsCenter(labListPage, TRUE)
 UI_SetIsShow(labListPage, FALSE)
 UI_AddCompent(pgLots, labListPage)
+UI_AddCompent(pgHistory, labListPage)
 
 btnRightPage = UI_CreateCompent(frmRealMarket, BUTTON_TYPE, "btnRightPage", 20, 20, 380, 507)
 UI_LoadButtonImage(btnRightPage, "./texture/ascaron_ui/asc-part-01.png", 20, 20, 409, 329, TRUE)
 UI_SetIsShow(btnRightPage, FALSE)
 UI_AddCompent(pgLots, btnRightPage)
+UI_AddCompent(pgHistory, btnRightPage)
 	
 ------
 -- Меню магазина
@@ -130,6 +130,7 @@ UI_LoadListItemImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 154, 44, 
 UI_ListLoadSelectImage(listMenu, "./texture/ascaron_ui/asc-part-01.png", 154, 44, 710, 1171)
 UI_SetIsShow(listMenu, FALSE)
 UI_AddCompent(pgLots, listMenu)
+UI_AddCompent(pgHistory, listMenu)
 
 -- Кнопка помощи (руководство по магазину)
 -- btnHelpStore = UI_CreateCompent(frmRealMarket, BUTTON_TYPE, "btnHelpStore", 50, 16, 20, 410)
@@ -154,6 +155,8 @@ local labAmount = {}
 local btnAmountUp = {}
 local btnAmountDown = {}
 
+local LabNone = {}
+
 for i = 0, 4, 1 do
 	local card_posx = 160
 	local card_posy = 50 + (i * 82)
@@ -163,6 +166,7 @@ for i = 0, 4, 1 do
 	UI_LoadButtonImage( btnHover[i], "./texture/ascaron_ui/asc-part-02.png", 540, 72, 288, 0, FALSE)
 	UI_SetIsShow(btnHover[i], FALSE)
 	UI_AddCompent(pgLots, btnHover[i])
+	UI_AddCompent(pgHistory, btnHover[i])
 	
 	-- Нажатый пакет (подсветка)
 	imgHover[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgHover_"..i, 540, 72, card_posx, card_posy)
@@ -170,10 +174,12 @@ for i = 0, 4, 1 do
 	--UI_SetAlpha(imgHover[i], 200)
 	UI_SetIsShow(imgHover[i], FALSE)
 	UI_AddCompent(pgLots, imgHover[i])
+	UI_AddCompent(pgHistory, imgHover[i])
 	
 	-- Package icon
 	cmdStore[i] = UI_CreateCompent( frmRealMarket, COMMAND_ONE_TYPE, "cmdStore_"..i, 32, 32, card_posx + 10, card_posy + 20)	
 	UI_AddCompent(pgLots, cmdStore[i])
+	UI_AddCompent(pgHistory, cmdStore[i])
 	
 	-- Название пакета
 	labName[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labName_"..i, 10, 150, card_posx + 44 + 8, card_posy + 17 )
@@ -182,6 +188,17 @@ for i = 0, 4, 1 do
 	UI_SetLabelExFont(labName[i], EXO_Regular_S15, FALSE, COLOR_WHITE )
 	UI_SetIsShow(labName[i],FALSE)
 	UI_AddCompent(pgLots, labName[i])
+	UI_AddCompent(pgHistory, labName[i])
+	
+	-- Плашка на  случай отствутсивя предметов
+	LabNone[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "LabNone_"..i, 540, 72, card_posx, card_posy + 23 )
+	UI_SetCaption(LabNone[i], "Item "..i)
+	UI_SetTextColor(LabNone[i], argbColor("ffffff"))
+	UI_SetLabelExFont(LabNone[i], EXO_Regular_S20, FALSE, COLOR_WHITE )
+	UI_SetCaptionIsCenter(LabNone[i], TRUE)
+	UI_SetIsShow(LabNone[i],FALSE)
+	UI_AddCompent(pgLots, LabNone[i])
+	UI_AddCompent(pgHistory, LabNone[i])
 	
 	-- Цена пакета
 	labPrice[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labPrice_"..i, 53, 12, card_posx + 440, card_posy + 13)
@@ -191,6 +208,7 @@ for i = 0, 4, 1 do
 	UI_SetIsShow(labPrice[i], FALSE)
 	UI_SetCaptionIsCenter(labPrice[i], TRUE)
 	UI_AddCompent(pgLots, labPrice[i])
+	UI_AddCompent(pgHistory, labPrice[i])
 	
 	-- Иконка валюты кристаллов
 	imgPrice[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgPrice_"..i, 14, 22, card_posx + 506, card_posy + 10)
@@ -198,6 +216,7 @@ for i = 0, 4, 1 do
 	--UI_SetAlpha(imgPrice[i], 200)
 	UI_SetIsShow(imgPrice[i], FALSE)
 	UI_AddCompent(pgLots, imgPrice[i])
+	UI_AddCompent(pgHistory, imgPrice[i])
 	
 	-- Иконка доступного лота
 	imgAvailable[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgAvailable_"..i, 14, 22, card_posx + 506, card_posy + 10)
@@ -205,12 +224,14 @@ for i = 0, 4, 1 do
 	--UI_SetAlpha(imgAvailable[i], 200)
 	UI_SetIsShow(imgAvailable[i], FALSE)
 	UI_AddCompent(pgLots, imgAvailable[i])
+	UI_AddCompent(pgHistory, imgAvailable[i])
 	
 	imgTime[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgTime_"..i, 18, 18, card_posx + 44 + 8, card_posy + 44)
 	UI_LoadImage( imgTime[i], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 494, 332)
 	UI_SetAlpha(imgTime[i], 200)
 	UI_SetIsShow(imgTime[i], FALSE)
 	UI_AddCompent(pgLots, imgTime[i])
+	UI_AddCompent(pgHistory, imgTime[i])
 	
 	labLeftTime[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labLeftTime_"..i, 10, 150, card_posx + 67 + 8, card_posy + 45)
 	UI_SetCaption( labLeftTime[i], "Remaining time"..i)
@@ -218,12 +239,14 @@ for i = 0, 4, 1 do
 	UI_SetLabelExFont( labLeftTime[i], EXO_Regular_S14, FALSE, COLOR_WHITE )
 	UI_SetIsShow(labLeftTime[i],FALSE)
 	UI_AddCompent(pgLots, labLeftTime[i])
+	UI_AddCompent(pgHistory, labLeftTime[i])
 	
 	imgQty[i] = UI_CreateCompent( frmRealMarket, IMAGE_TYPE, "imgQty_"..i, 18, 18, card_posx + 343, card_posy + 44)
 	UI_LoadImage( imgQty[i], "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 516, 331)
 	UI_SetAlpha(imgQty[i], 200)
 	UI_SetIsShow(imgQty[i], FALSE)
 	UI_AddCompent(pgLots, imgQty[i])
+	UI_AddCompent(pgHistory, imgQty[i])
 	
 	labLeftNum[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labLeftNum_"..i, 10, 150, card_posx + 364, card_posy + 45)
 	UI_SetCaption( labLeftNum[i], "Remaining amount"..i)
@@ -231,6 +254,7 @@ for i = 0, 4, 1 do
 	UI_SetLabelExFont( labLeftNum[i], EXO_Regular_S14, FALSE, COLOR_WHITE )		
 	UI_SetIsShow(labLeftNum[i],FALSE)
 	UI_AddCompent(pgLots, labLeftNum[i])
+	UI_AddCompent(pgHistory, labLeftNum[i])
 end
 
 -----------------------------------------------------------------------
