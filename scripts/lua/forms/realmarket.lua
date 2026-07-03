@@ -50,6 +50,14 @@ UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE
 UI_SetPos(AddLotItem, 350, 0)
 UI_SetSize(AddLotItem, 175, 31)
 
+-- Заявка на вывод средств
+pgCashOut = UI_CreatePageItem(pageMarket)
+CashOutItem = UI_GetPageItemObj(pgCashOut, PAGE_ITEM_TITLE)
+UI_LoadImage(CashOutItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 175, 302)
+UI_LoadImage(CashOutItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 333)
+UI_SetPos(CashOutItem, 350 + 175, 0)
+UI_SetSize(CashOutItem, 175, 31)
+
 ------
 -- Спец. кнопки
 ------
