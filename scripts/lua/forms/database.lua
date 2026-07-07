@@ -253,3 +253,4 @@ UI_LoadListItemImage(listItemInfo, "./texture/ascaron_ui/asc-part-01.png", 270, 
 UI_SetIsShow(listItemInfo, FALSE)
 setScroll(listItemInfo)
 UI_AddCompent(pageDropInfo, listItemInfo)
+UI_AddCompent(pageNPCBuy, listItemInfo)

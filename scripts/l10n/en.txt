@@ -1099,3 +1099,4 @@
 [1098]	"Quantity in lot: %d"
 [1099]	"Avail."
 [1100]	"No items found in this category"
+[1101]	"The item is not traded with NPCs."

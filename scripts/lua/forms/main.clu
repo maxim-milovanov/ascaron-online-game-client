@@ -437,74 +437,25 @@ UI_SetHint( btnOpenGuild , "Guild(Alt+C)" )
 -- UI_SetHint( btnOpenTeam , "Party Volunteer" )
 
 -----------------------------------------------------------------------
--- 定义大地图
+-- World map
 -----------------------------------------------------------------------	
--- 创建大地图表单
-frmBigmap = UI_CreateForm( "frmBigmap", FALSE, 569, 430, 30, 80, TRUE, FALSE )
+frmBigmap = UI_CreateForm( "frmBigmap", FALSE, 800, 570, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmBigmap, TRUE )
 UI_AddFormToTemplete( frmBigmap, FORM_MAIN )
 UI_FormSetIsEscClose( frmBigmap, FALSE )
 UI_FormSetHotKey( frmBigmap, ALT_KEY, HOTKEY_W )
 UI_FormSetIsEscClose( frmBigmap, TRUE )
+UI_SetFormStyleEx(frmBigmap, FORM_CENTERBOTTOM, 0, 160)
 
--- 加载图片
-imgBigmap1 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap1", 256, 256, 0, 0 )
-UI_LoadImage( imgBigmap1, "./texture/gui/old_gui/bigmap1.tga", NORMAL, 256, 256, 0, 0 )
+setBackground(frmBigmap, true, 800, 570, 225)
 
-imgBigmap2 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap2", 256, 256, 256, 0 )
-UI_LoadImage( imgBigmap2, "./texture/gui/old_gui/bigmap2.tga", NORMAL, 256, 256, 0, 0 )
+labFormname = UI_CreateCompent(frmBigmap, LABELEX_TYPE, "labFormname", 800, 14, 0, 20)
+UI_SetCaption( labFormname, "WORLD MAP" )
+UI_SetTextColor( labFormname, argbColor("ffffff"))
+UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaptionIsCenter(labFormname, TRUE)
 
-imgBigmap3 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap3", 256, 256, 512, 0 )
-UI_LoadImage( imgBigmap3, "./texture/gui/old_gui/bigmap3.tga", NORMAL, 256, 256, 0, 0 )
-
-imgBigmap4 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap4", 256, 256, 0, 256 )
-UI_LoadImage( imgBigmap4, "./texture/gui/old_gui/bigmap4.tga", NORMAL, 256, 256, 0, 0 )
-
-imgBigmap5 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap5", 256, 256, 256, 256 )
-UI_LoadImage( imgBigmap5, "./texture/gui/old_gui/bigmap5.tga", NORMAL, 256, 256, 0, 0 )
-
-imgBigmap6 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap6", 256, 256, 512, 256 )
-UI_LoadImage( imgBigmap6, "./texture/gui/old_gui/bigmap6.tga", NORMAL, 256, 256, 0, 0 )
-
--- 程序用于显示大地图，大小，位置无所谓
-UI_CreateCompent( frmBigmap, UI3D_COMPENT_TYPE, "d3dCompent", 530, 390, 140, 52 )
-
-
-imgBigmap11 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap11", 256, 256, 0, 0 )
-UI_LoadImage( imgBigmap11, "./texture/gui/old_gui/bigmap8.tga", NORMAL, 256, 256, 0, 0 )
-
-imgBigmap21 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap21", 256, 97, 256, 10 )
-UI_LoadImage( imgBigmap21, "./texture/gui/old_gui/bigmap9.tga", NORMAL, 256, 97, 0, 0 )
-
-imgBigmap31 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap31", 256, 256, 512, 0 )
-UI_LoadImage( imgBigmap31, "./texture/gui/old_gui/bigmap10.tga", NORMAL, 256, 256, 0, 0 )
-
-imgBigmap41 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap41", 256, 256, 0, 256 )
-UI_LoadImage( imgBigmap41, "./texture/gui/old_gui/bigmap11.tga", NORMAL, 256, 256, 0, 0 )
-
-imgBigmap51 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap51", 256, 97, 256, 373 )
-UI_LoadImage( imgBigmap51, "./texture/gui/old_gui/bigmap9.tga", NORMAL, 256, 97, 0, 159 )
-
-imgBigmap61 = UI_CreateCompent( frmBigmap, IMAGE_TYPE, "imgBigmap61", 256, 256, 512, 256 )
-UI_LoadImage( imgBigmap61, "./texture/gui/old_gui/bigmap12.tga", NORMAL, 256, 256, 0, 0 )
-
-
-----箭头
-btnLeft = UI_CreateCompent( frmBigmap, BUTTON_TYPE, "btnLeft", 15, 39, 160, 230 )
-UI_LoadButtonImage( btnLeft, "./texture/gui/old_gui/SysBotton4.tga", 15, 39, 165, 39, TRUE )
-
-btnRight = UI_CreateCompent( frmBigmap, BUTTON_TYPE, "btnRight", 15, 39, 640, 230 )
-UI_LoadButtonImage( btnRight, "./texture/gui/old_gui/SysBotton4.tga", 15, 39, 165, 0, TRUE )
-
-btnTop = UI_CreateCompent( frmBigmap, BUTTON_TYPE, "btnTop", 39, 15, 387, 60 )
-UI_LoadButtonImage( btnTop, "./texture/gui/old_gui/ShipBuildT.tga", 39, 15, 132, 185, FALSE )
-
-btnDown = UI_CreateCompent( frmBigmap, BUTTON_TYPE, "btnDown", 39, 15, 387, 420 )
-UI_LoadButtonImage( btnDown, "./texture/gui/old_gui/ShipBuildT.tga", 39, 15, 132, 123, FALSE )
-
-btnNo = UI_CreateCompent( frmBigmap, BUTTON_TYPE, "btnNo", 111, 36, 615, 415 )
-UI_LoadButtonImage( btnNo, "./texture/gui/old_gui/Close.tga", 111, 36, 0, 0, FALSE )
-UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
+UI_CreateCompent(frmBigmap, UI3D_COMPENT_TYPE, "d3dCompent", 760, 500, 20, 50)
 
 -----------------------------------------------------------------------
 -- 定义跟随界面
