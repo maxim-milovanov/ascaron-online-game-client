@@ -79,8 +79,8 @@ UI_AddCompent(pgNpc, editSearch)
 
 local posx = 30
 local posy = 90
-image = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "image", 15, 15, posx, posy + 65)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+imgRecordRace = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordRace", 15, 15, posx, posy + 65)
+UI_LoadImage(imgRecordRace, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
 
 recordRace  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordRace", 80, 20, posx + 15, posy + 62)
 UI_ComboSetStyle(recordRace, TRUE)
@@ -102,8 +102,8 @@ UI_ComboSetTextColor(lstJobs, COLOR_WHITE )
 setScroll(lstJobs)
 
 local posx = 110
-image = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "image", 15, 15, posx, posy + 65)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+imgRecordTypes = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordTypes", 15, 15, posx, posy + 65)
+UI_LoadImage(imgRecordTypes, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
 
 recordTypes  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordTypes", 110, 20, posx + 15, posy + 62)
 UI_ComboSetStyle(recordTypes, TRUE)
@@ -125,8 +125,8 @@ UI_ComboSetTextColor(lstTypes, COLOR_WHITE )
 setScroll(lstTypes)
 
 local posx = 200
-image = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "image", 15, 15, posx, posy + 65)
-UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+imgRecordJobs = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordJobs", 15, 15, posx, posy + 65)
+UI_LoadImage(imgRecordJobs, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
 
 recordJobs  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordJobs", 110, 20, posx + 15, posy + 62)
 UI_ComboSetStyle(recordJobs, TRUE)
