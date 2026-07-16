@@ -30,26 +30,18 @@ UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 253, 2, 0, 3
 -- Кнопка предметов
 pgItems = UI_CreatePageItem(pageDatabase)
 itemItems = UI_GetPageItemObj(pgItems, PAGE_ITEM_TITLE)
-UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 1101)
-UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 1101)
+UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 0, 412)
+UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 0, 443)
 UI_SetPos(itemItems, 0, 0)
 UI_SetSize(itemItems, 123, 31)
 
 -- Кнопка монстров
 pgMonsters = UI_CreatePageItem(pageDatabase)
 monsterItems = UI_GetPageItemObj(pgMonsters, PAGE_ITEM_TITLE)
-UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 350, 1101)
-UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 525, 1101)
+UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 123, 412)
+UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 123, 443)
 UI_SetPos(monsterItems, 123, 0)
-UI_SetSize(monsterItems, 71, 31)
-
--- Кнопка NPC
-pgNpc = UI_CreatePageItem(pageDatabase)
-npcItem = UI_GetPageItemObj(pgNpc, PAGE_ITEM_TITLE)
-UI_LoadImage(npcItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 1132)
-UI_LoadImage(npcItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 1132)
-UI_SetPos(npcItem, 123 + 71, 0)
-UI_SetSize(npcItem, 59, 31)
+UI_SetSize(monsterItems, 123, 31)
 
 ------
 -- Поиск
@@ -254,3 +246,64 @@ UI_SetIsShow(listItemInfo, FALSE)
 setScroll(listItemInfo)
 UI_AddCompent(pageDropInfo, listItemInfo)
 UI_AddCompent(pageNPCBuy, listItemInfo)
+
+-----------------------------------------------------------------------
+-- CharacterInfo
+-----------------------------------------------------------------------
+frmCharacterInfo = UI_CreateForm("frmCharacterInfo", FALSE, 570, 400, 0, 0, TRUE, FALSE)
+UI_ShowForm(frmCharacterInfo, FALSE )
+UI_FormSetIsEscClose(frmCharacterInfo, TRUE)
+UI_SetIsDrag(frmCharacterInfo, FALSE)
+
+setBackground(frmCharacterInfo, true, 570, 400, 255)
+
+labMonsterName = UI_CreateCompent(frmCharacterInfo, LABELEX_TYPE, "labMonsterName", 570, 14, 0, 25)
+UI_SetCaption(labMonsterName, "CHARACTER NAME")
+UI_SetTextColor(labMonsterName, COLOR_WHITE)
+UI_SetLabelExFont(labMonsterName, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labMonsterName, TRUE)
+
+-- 3D модель
+d3dSkin = UI_CreateCompent(frmCharacterInfo, UI3D_COMPENT, "d3dSkin", 200, 200, 30, 160)
+
+LabCap = UI_CreateCompent(frmCharacterInfo, LABELEX_TYPE, "LabCap", 320, 14, 250, 75)
+UI_SetCaption(LabCap, "ATTRIBUTES")
+UI_SetTextColor(LabCap, COLOR_WHITE)
+UI_SetLabelExFont(LabCap, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+-- Таблица с данными о монстре (его хар-ки)
+listCharacterInfo = UI_CreateListView(frmCharacterInfo, "listCharacterInfo", 300, 130, 250, 100, 2, eNoTitle)
+UI_ListViewSetTitle(listCharacterInfo, 0, 200, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listCharacterInfo, 1, 30, "", 0, 0, 0, 0)
+UI_SetListRowHeight(listCharacterInfo, 20)
+UI_SetListIsMouseFollow(listCharacterInfo, FALSE)
+UI_SetIsShow(listCharacterInfo, FALSE)
+setScroll(listCharacterInfo)
+
+LabCap = UI_CreateCompent(frmCharacterInfo, LABELEX_TYPE, "LabCap", 320, 14, 250, 235)
+UI_SetCaption(LabCap, "LOCATION")
+UI_SetTextColor(LabCap, COLOR_WHITE)
+UI_SetLabelExFont(LabCap, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+-- Таблица с данными о монстре (его хар-ки)
+listCharacterInfoPos = UI_CreateListView(frmCharacterInfo, "listCharacterInfoPos", 300, 50, 250, 265, 2, eNoTitle)
+UI_ListViewSetTitle(listCharacterInfoPos, 0, 200, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listCharacterInfoPos, 1, 30, "", 0, 0, 0, 0)
+UI_SetListRowHeight(listCharacterInfoPos, 20)
+UI_SetListIsMouseFollow(listCharacterInfoPos, FALSE)
+UI_SetIsShow(listCharacterInfoPos, FALSE)
+setScroll(listCharacterInfoPos)
+
+local posx, posy = 100 - 33, 335
+image = UI_CreateCompent(frmCharacterInfo, IMAGE_TYPE, "image", 445, 48, posx - 4, posy - 4)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-04.png", NORMAL, 445, 48, 0, 364)
+
+labDropInfo = UI_CreateCompent(frmCharacterInfo, LABELEX_TYPE, "labDropInfo", 320, 14, posx, posy - 30)
+UI_SetCaption(labDropInfo, "DROPPED ITEMS")
+UI_SetTextColor(labDropInfo, COLOR_WHITE)
+UI_SetLabelExFont(labDropInfo, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+grdCharacterInfo = UI_CreateCompent(frmCharacterInfo, GOODS_GRID_TYPE, "grdCharacterInfo", 440, 80, posx, posy) 
+UI_SetGridSpace(grdCharacterInfo, 10, 10)
+UI_SetGridContent(grdCharacterInfo, 1, 10)
+UI_SetGridUnitSize(grdCharacterInfo, 34, 34)

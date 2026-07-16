@@ -1100,3 +1100,8 @@
 [1099]	"Avail."
 [1100]	"No items found in this category"
 [1101]	"The item is not traded with NPCs."
+[1102]	"Level"
+[1103]	"Exp"
+[1104]	"Health"
+[1105]	"Mana"
+[1106]	"Attack"
