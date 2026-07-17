@@ -1105,3 +1105,6 @@
 [1104]	"Health"
 [1105]	"Mana"
 [1106]	"Attack"
+[1107]	"%d pcs."
+[1108]	"%d sec."
+[1109]	"The monster is unavailable in the locations"

@@ -144,9 +144,10 @@ setScroll(lstJobs)
 ------
 -- Результат поиска
 ------
-searchResult = UI_CreateListView( frmDatabase, "searchResult", 270, 288, -7, 150 - 25, 2, eNoTitle)
+searchResult = UI_CreateListView( frmDatabase, "searchResult", 270, 288, -7, 150 - 25, 3, eNoTitle)
 UI_ListViewSetTitle(searchResult, 0, 42, "", 0, 0, 0, 0)
-UI_ListViewSetTitle(searchResult, 1, 130, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(searchResult, 1, 180, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(searchResult, 2, 20, "", 0, 0, 0, 0)
 UI_ListSetItemMargin(searchResult, 10, 8 )						-- Перемещение текста внутри строки
 UI_SetListRowHeight(searchResult, 46 )							-- Отступ строк между собой
 UI_SetListIsMouseFollow(searchResult, FALSE)
@@ -271,6 +272,10 @@ UI_SetCaption(LabCap, "ATTRIBUTES")
 UI_SetTextColor(LabCap, COLOR_WHITE)
 UI_SetLabelExFont(LabCap, EXO_Regular_S13, FALSE, COLOR_BLACK)
 
+-- Подложка под кнопки (линия)
+image = UI_CreateCompent(frmCharacterInfo, IMAGE_TYPE, "image", 290, 2, 250, 95)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 253, 2, 0, 381)
+
 -- Таблица с данными о монстре (его хар-ки)
 listCharacterInfo = UI_CreateListView(frmCharacterInfo, "listCharacterInfo", 300, 130, 250, 100, 2, eNoTitle)
 UI_ListViewSetTitle(listCharacterInfo, 0, 200, "", 0, 0, 0, 0)
@@ -285,10 +290,16 @@ UI_SetCaption(LabCap, "LOCATION")
 UI_SetTextColor(LabCap, COLOR_WHITE)
 UI_SetLabelExFont(LabCap, EXO_Regular_S13, FALSE, COLOR_BLACK)
 
+-- Подложка под кнопки (линия)
+image = UI_CreateCompent(frmCharacterInfo, IMAGE_TYPE, "image", 290, 2, 250, 255)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 253, 2, 0, 381)
+
 -- Таблица с данными о монстре (его хар-ки)
-listCharacterInfoPos = UI_CreateListView(frmCharacterInfo, "listCharacterInfoPos", 300, 50, 250, 265, 2, eNoTitle)
-UI_ListViewSetTitle(listCharacterInfoPos, 0, 200, "", 0, 0, 0, 0)
-UI_ListViewSetTitle(listCharacterInfoPos, 1, 30, "", 0, 0, 0, 0)
+listCharacterInfoPos = UI_CreateListView(frmCharacterInfo, "listCharacterInfoPos", 300, 75, 250, 260, 4, eNoTitle)
+UI_ListViewSetTitle(listCharacterInfoPos, 0, 25, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listCharacterInfoPos, 1, 135, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listCharacterInfoPos, 2, 70, "", 0, 0, 0, 0)
+UI_ListViewSetTitle(listCharacterInfoPos, 3, 30, "", 0, 0, 0, 0)
 UI_SetListRowHeight(listCharacterInfoPos, 20)
 UI_SetListIsMouseFollow(listCharacterInfoPos, FALSE)
 UI_SetIsShow(listCharacterInfoPos, FALSE)
@@ -302,6 +313,10 @@ labDropInfo = UI_CreateCompent(frmCharacterInfo, LABELEX_TYPE, "labDropInfo", 32
 UI_SetCaption(labDropInfo, "DROPPED ITEMS")
 UI_SetTextColor(labDropInfo, COLOR_WHITE)
 UI_SetLabelExFont(labDropInfo, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+-- Подложка под кнопки (линия)
+image = UI_CreateCompent(frmCharacterInfo, IMAGE_TYPE, "image", 120, 2, posx, posy - 10)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 253, 2, 0, 381)
 
 grdCharacterInfo = UI_CreateCompent(frmCharacterInfo, GOODS_GRID_TYPE, "grdCharacterInfo", 440, 80, posx, posy) 
 UI_SetGridSpace(grdCharacterInfo, 10, 10)
