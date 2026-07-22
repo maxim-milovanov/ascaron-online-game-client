@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------
 -- Database
 -----------------------------------------------------------------------
-frmDatabase = UI_CreateForm("frmDatabase", FALSE, 313, 550, 0, 0, TRUE, FALSE)
+frmDatabase = UI_CreateForm("frmDatabase", FALSE, 313, 460, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmDatabase, FALSE )
 UI_AddFormToTemplete(frmDatabase, FORM_MAIN)
 UI_FormSetIsEscClose(frmDatabase, TRUE)
@@ -9,7 +9,7 @@ UI_SetIsDrag(frmDatabase, FALSE)
 UI_FormSetHotKey(frmDatabase, ALT_KEY, HOTKEY_I)
 UI_SetFormStyleEx(frmDatabase, FORM_LEFTTOP, 20, 100)
 
-setBackground(frmDatabase, true, 313, 473, 255)
+setBackground(frmDatabase, true, 313, 460, 255)
 
 labFormname = UI_CreateCompent(frmDatabase, LABELEX_TYPE, "labFormname", 313, 14, 0, 20)
 UI_SetCaption(labFormname, "DATABASE")
@@ -46,58 +46,72 @@ UI_SetSize(monsterItems, 123, 31)
 ------
 -- Поиск
 ------
-imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 194, 50, 0, 43)
-UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 194, 50, 673, 0)
+imgSearch = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgSearch", 17, 17, 0, 52)
+UI_LoadImage(imgSearch, "./texture/ascaron_ui/icon/search.png", NORMAL, 32, 32, 0, 0)
+UI_AddCompent(pgItems, imgSearch)
+UI_AddCompent(pgMonsters, imgSearch)
+
+imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 120, 30, 27, 45)
+UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 270, 46, 0, 1170)
 UI_AddCompent(pgItems, imgInput)
 UI_AddCompent(pgMonsters, imgInput)
-UI_AddCompent(pgNpc, imgInput)
 
-imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 55, 25, 194 + 5, 43)
-UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-03.png", NORMAL, 55, 25, 642, 56)
-UI_AddCompent(pgItems, imgInput)
-UI_AddCompent(pgMonsters, imgInput)
-UI_AddCompent(pgNpc, imgInput)
-
-editSearch = UI_CreateCompent(frmDatabase, EDIT_TYPE, "editSearch", 230, 20, 10, 58 )
+editSearch = UI_CreateCompent(frmDatabase, EDIT_TYPE, "editSearch", 110, 20, 32, 52)
 UI_SetTextColor(editSearch, argbColor("c0c0c0") )
-UI_SetEditMaxNum(editSearch, 15 )
-UI_SetEditMaxNumVisible(editSearch, 15 )
+UI_SetEditMaxNum(editSearch, 12 )
+UI_SetEditMaxNumVisible(editSearch, 12 )
 UI_SetEditCursorColor(editSearch, argbColor("c0c0c0") )
-UI_SetEditFont(editSearch, EXO_Regular_S16 )
+UI_SetEditFont(editSearch, EXO_Regular_S13 )
 UI_SetEditClue(editSearch, "Search...", argbColor("908a92"))
 UI_AddCompent(pgItems, editSearch)
 UI_AddCompent(pgMonsters, editSearch)
-UI_AddCompent(pgNpc, editSearch)
 
-local posx = 30
-local posy = 90
-imgRecordRace = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordRace", 15, 15, posx, posy + 65)
-UI_LoadImage(imgRecordRace, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 35, 30, 155, 45)
+UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 270, 46, 0, 1170)
+UI_AddCompent(pgItems, imgInput)
+UI_AddCompent(pgMonsters, imgInput)
 
-recordRace  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordRace", 80, 20, posx + 15, posy + 62)
-UI_ComboSetStyle(recordRace, TRUE)
-UI_ComboSetTextColor(recordRace, COLOR_WHITE)
+labEdtLv = UI_CreateCompent(frmDatabase, LABELEX_TYPE, "labEdtLv", 5, 14, 195, 52)
+UI_SetCaption(labEdtLv, "<>")
+UI_SetTextColor(labEdtLv, argbColor("908a92"))
+UI_SetLabelExFont(labEdtLv, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_AddCompent(pgItems, labEdtLv)
+UI_AddCompent(pgMonsters, labEdtLv)
 
-lstJobs = UI_GetList(recordRace)
-UI_SetListFontColor(lstJobs, COLOR_WHITE, COLOR_WHITE )
-UI_SetSize(lstJobs, 80, 100 )
-UI_SetMargin(lstJobs, 16,6,16,0 )
-UI_SetListRowHeight(lstJobs, 18 )
-UI_LoadImage(lstJobs, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 18, 18)
-UI_AddListText(lstJobs, "All race")
-UI_AddListText(lstJobs, "Lance")
-UI_AddListText(lstJobs, "Carsise")
-UI_AddListText(lstJobs, "Phyllis")
-UI_AddListText(lstJobs, "Ami")
-UI_SetListIsMouseFollow(lstJobs, TRUE)
-UI_ComboSetTextColor(lstJobs, COLOR_WHITE )
-setScroll(lstJobs)
+imgInput = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgInput", 40, 30, 215, 45)
+UI_LoadImage(imgInput, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 270, 46, 0, 1170)
+UI_AddCompent(pgItems, imgInput)
+UI_AddCompent(pgMonsters, imgInput)
 
-local posx = 110
-imgRecordTypes = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordTypes", 15, 15, posx, posy + 65)
+editLvMin = UI_CreateCompent(frmDatabase, EDIT_TYPE, "editLvMin", 20, 15, 160, 52)
+UI_SetTextColor(editLvMin, argbColor("c0c0c0") )
+UI_SetEditMaxNum(editLvMin, 3 )
+UI_SetEditMaxNumVisible(editLvMin, 3)
+UI_SetEditCursorColor(editLvMin, argbColor("c0c0c0") )
+UI_SetEditFont(editLvMin, EXO_Regular_S12 )
+UI_SetEditClue(editLvMin, "Lv0", argbColor("908a92"))
+UI_AddCompent(pgItems, editLvMin)
+UI_AddCompent(pgMonsters, editLvMin)
+
+editLvMax = UI_CreateCompent(frmDatabase, EDIT_TYPE, "editLvMax", 25, 15, 220, 52)
+UI_SetTextColor(editLvMax, argbColor("c0c0c0") )
+UI_SetEditMaxNum(editLvMax, 3 )
+UI_SetEditMaxNumVisible(editLvMax, 3)
+UI_SetEditCursorColor(editLvMax, argbColor("c0c0c0") )
+UI_SetEditFont(editLvMax, EXO_Regular_S12 )
+UI_SetEditClue(editLvMax, "Lv99", argbColor("908a92"))
+UI_AddCompent(pgItems, editLvMax)
+UI_AddCompent(pgMonsters, editLvMax)
+
+
+local posx = 40
+local posy = 70
+imgRecordTypes = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordTypes", 15, 15, 5, 85)
 UI_LoadImage(imgRecordTypes, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+UI_AddCompent(pgItems, imgRecordTypes)
+UI_AddCompent(pgMonsters, imgRecordTypes)
 
-recordTypes  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordTypes", 110, 20, posx + 15, posy + 62)
+recordTypes  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordTypes", 130, 20, posx + 15, posy + 62)
 UI_ComboSetStyle(recordTypes, TRUE)
 UI_ComboSetTextColor(recordTypes, COLOR_WHITE)
 
@@ -116,11 +130,27 @@ UI_SetListIsMouseFollow(lstTypes, TRUE)
 UI_ComboSetTextColor(lstTypes, COLOR_WHITE )
 setScroll(lstTypes)
 
-local posx = 200
-imgRecordJobs = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordJobs", 15, 15, posx, posy + 65)
-UI_LoadImage(imgRecordJobs, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+recordChaMaps  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordChaMaps", 220, 20, posx + 15, posy + 62)
+UI_ComboSetStyle(recordChaMaps, TRUE)
+UI_ComboSetTextColor(recordChaMaps, COLOR_WHITE)
 
-recordJobs  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordJobs", 110, 20, posx + 15, posy + 62)
+lstChaMaps = UI_GetList(recordChaMaps)
+UI_SetListFontColor(lstChaMaps, COLOR_WHITE, COLOR_WHITE )
+UI_SetSize(lstChaMaps, 110, 100 )
+UI_SetMargin(lstChaMaps, 16,6,16,0 )
+UI_SetListRowHeight(lstChaMaps, 18 )
+UI_LoadImage(lstChaMaps, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 18, 18)
+UI_AddListText(lstChaMaps, "All maps")
+UI_SetListIsMouseFollow(lstChaMaps, TRUE)
+UI_ComboSetTextColor(lstChaMaps, COLOR_WHITE )
+setScroll(lstChaMaps)
+
+posx = 185
+imgRecordJobs = UI_CreateCompent(frmDatabase, IMAGE_TYPE, "imgRecordJobs", 15, 15, 155, 85)
+UI_LoadImage(imgRecordJobs, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 15, 15, 610, 358)
+UI_AddCompent(pgItems, imgRecordJobs)
+
+recordJobs  = UI_CreateCompent(frmDatabase, COMBO_TYPE, "recordJobs", 100, 20, posx + 15, posy + 62)
 UI_ComboSetStyle(recordJobs, TRUE)
 UI_ComboSetTextColor(recordJobs, COLOR_WHITE)
 
@@ -141,10 +171,11 @@ UI_SetListIsMouseFollow(lstJobs, TRUE)
 UI_ComboSetTextColor(lstJobs, COLOR_WHITE )
 setScroll(lstJobs)
 
+
 ------
 -- Результат поиска
 ------
-searchResult = UI_CreateListView( frmDatabase, "searchResult", 270, 288, -7, 150 - 25, 3, eNoTitle)
+searchResult = UI_CreateListView( frmDatabase, "searchResult", 270, 288, -7, 105, 3, eNoTitle)
 UI_ListViewSetTitle(searchResult, 0, 42, "", 0, 0, 0, 0)
 UI_ListViewSetTitle(searchResult, 1, 180, "", 0, 0, 0, 0)
 UI_ListViewSetTitle(searchResult, 2, 20, "", 0, 0, 0, 0)
@@ -159,7 +190,6 @@ UI_SetIsShow(searchResult, FALSE)
 setScroll(searchResult)
 UI_AddCompent(pgItems, searchResult)
 UI_AddCompent(pgMonsters, searchResult)
-UI_AddCompent(pgNpc, searchResult)
 
 -----------------------------------------------------------------------
 -- ItemInfo
