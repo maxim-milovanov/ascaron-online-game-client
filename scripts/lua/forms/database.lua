@@ -17,6 +17,10 @@ UI_SetTextColor(labFormname, COLOR_WHITE)
 UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labFormname, TRUE)
 
+btnLootFilter = UI_CreateCompent(frmDatabase, BUTTON_TYPE, "btnLootFilter", 14, 14, 255, 20)
+UI_LoadButtonImage(btnLootFilter, "./texture/ascaron_ui/asc-part-04.png", 14, 14, 120, 0, FALSE)
+UI_SetHint(btnLootFilter, "Loot filter settings")
+
 ------
 -- Создание страниц Store
 ------
@@ -197,7 +201,7 @@ UI_AddCompent(pgMonsters, searchResult)
 frmItemInfo = UI_CreateForm("frmItemInfo", FALSE, 600, 369, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmItemInfo, FALSE )
 UI_FormSetIsEscClose(frmItemInfo, TRUE)
-UI_SetIsDrag(frmItemInfo, FALSE)
+UI_SetIsDrag(frmItemInfo, TRUE)
 
 setBackground(frmItemInfo, true, 600, 369, 255)
 
@@ -284,7 +288,7 @@ UI_AddCompent(pageNPCBuy, listItemInfo)
 frmCharacterInfo = UI_CreateForm("frmCharacterInfo", FALSE, 570, 400, 0, 0, TRUE, FALSE)
 UI_ShowForm(frmCharacterInfo, FALSE )
 UI_FormSetIsEscClose(frmCharacterInfo, TRUE)
-UI_SetIsDrag(frmCharacterInfo, FALSE)
+UI_SetIsDrag(frmCharacterInfo, TRUE)
 
 setBackground(frmCharacterInfo, true, 570, 400, 255)
 
@@ -352,3 +356,160 @@ grdCharacterInfo = UI_CreateCompent(frmCharacterInfo, GOODS_GRID_TYPE, "grdChara
 UI_SetGridSpace(grdCharacterInfo, 10, 10)
 UI_SetGridContent(grdCharacterInfo, 1, 10)
 UI_SetGridUnitSize(grdCharacterInfo, 34, 34)
+
+grdCharacterInfoMouseRight = UI_CreateCompent(frmCharacterInfo, MENU_TYPE, "grdCharacterInfoMouseRight", 150, 100, 0, 0)
+UI_MenuLoadImage(grdCharacterInfoMouseRight, TRUE, FALSE, "./texture/ascaron_ui/asc-part-01.png", 1, 1, 18, 18, "./texture/ascaron_ui/asc-part-01.png", 1, 1)
+UI_SetMargin(grdCharacterInfoMouseRight, 10, 10, 10, 10)
+UI_MenuLoadFont(grdCharacterInfoMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor("ffffff"), argbColor("737374"))
+
+UI_MenuAddText(grdCharacterInfoMouseRight, "Add lootfilter")
+UI_MenuAddText(grdCharacterInfoMouseRight, "Remove lootfilter")
+
+-----------------------------------------------------------------------
+-- Loot filter settings
+-----------------------------------------------------------------------
+frmLootFilter = UI_CreateForm("frmLootFilter", FALSE, 650, 560, 0, 0, TRUE, FALSE)
+UI_ShowForm(frmLootFilter, FALSE )
+UI_FormSetIsEscClose(frmLootFilter, TRUE)
+UI_SetIsDrag(frmLootFilter, TRUE)
+
+setBackground(frmLootFilter, true, 650, 560, 255)
+
+labFormname = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labFormname", 650, 14, 0, 25)
+UI_SetCaption(labFormname, "LOOT FILTER SETTINGS")
+UI_SetTextColor(labFormname, COLOR_WHITE)
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labFormname, TRUE)
+
+-- Выбранные предметы
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, 30, 55)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/listui.png", NORMAL, 20, 20, 0, 0)
+
+labCap010 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap010", 10, 14, 60, 58)
+UI_SetCaption(labCap010, "ВЫБРАННЫЕ ПРЕДМЕТЫ")
+UI_SetTextColor(labCap010, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap010, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+setBackground2(frmLootFilter, 290, 130, 255, 30, 82)
+
+labCap011 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap011", 10, 14, 40, 92)
+UI_SetCaption(labCap011, "Позволяет настроить индивидуальный\nсписок предметов для автоподбора.\n\nЧтобы добавить предмет:\n1. Выберите нужного монстра\n2. Обратите внимание на дроп-лист\n3. ПКМ по нужному предмету\n4. Выберите пункт \"Включить подбор\"")
+UI_SetTextColor(labCap011, argbColor("b8b8b8"))
+UI_SetLabelExFont(labCap011, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+-- Базовый фильтр
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, 340, 55)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/funnel.png", NORMAL, 20, 20, 0, 0)
+
+labCap020 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap020", 10, 14, 370, 58)
+UI_SetCaption(labCap020, "БАЗОВЫЙ ФИЛЬТР")
+UI_SetTextColor(labCap020, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap020, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+setBackground2(frmLootFilter, 290, 130, 255, 340, 82)
+
+labCap021 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap021", 10, 14, 350, 92)
+UI_SetCaption(labCap021, "Рекомендуемый режим для большинства игроков. \n\nПитомец автоматически подбирает \nценные, важные и расходуемые предметы, \nпри этом игнорирует обычные предметы, \nкоторые практически нигде не используются. \nЭто позволяет не засорять инвентарь \nи экономить время.")
+UI_SetTextColor(labCap021, argbColor("b8b8b8"))
+UI_SetLabelExFont(labCap021, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+-- Все предметы с монстров
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, 30, 225)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/box.png", NORMAL, 20, 20, 0, 0)
+
+labCap030 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap030", 10, 14, 60, 228)
+UI_SetCaption(labCap030, "ВСЕ ПРЕДМЕТЫ С МОНСТРОВ")
+UI_SetTextColor(labCap030, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap030, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+setBackground2(frmLootFilter, 600, 50, 255, 30, 252)
+
+labCap031 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap031", 10, 14, 40, 262)
+UI_SetCaption(labCap031, "При включении этого режима питомец будет подбирать абсолютно все предметы, \nвыпадающие со всех монстров, без каких-либо ограничений.")
+UI_SetTextColor(labCap031, argbColor("b8b8b8"))
+UI_SetLabelExFont(labCap031, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+-- Базовый фильтр + выбранные предметы
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, 30, 315)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/funnelfill.png", NORMAL, 20, 20, 0, 0)
+
+labCap040 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap040", 10, 14, 60, 318)
+UI_SetCaption(labCap040, "РАСШИРЕННЫЙ ФИЛЬТР")
+UI_SetTextColor(labCap040, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap040, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+setBackground2(frmLootFilter, 600, 90, 255, 30, 342)
+
+labCap041 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap041", 10, 14, 40, 352)
+UI_SetCaption(labCap041, "Работает так же, как и <Базовый фильтр>, но дополнительно позволяет указать \nсобственный список предметов для подбора. \n\nВсе предметы которые вы добавите через Базу данных, будут подбираться питомцем \nвместе со стандартным списком важных предметов.")
+UI_SetTextColor(labCap041, argbColor("b8b8b8"))
+UI_SetLabelExFont(labCap041, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+-- Меню тумблеров
+local left_block_x = 30
+local left_block_y = 470
+
+labCap050 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap050", 650, 14, 0, 445)
+UI_SetCaption(labCap050, "НАСТРОЙКИ ПИТОМЦА ПОМОШНИКА")
+UI_SetTextColor(labCap050, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap050, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_SetCaptionIsCenter(labCap050, TRUE)
+
+setBackground2(frmLootFilter, 290, 70, 255, 30, 470)
+
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/listui.png", NORMAL, 20, 20, 0, 0)
+
+labCap051 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap051", 120, 12, left_block_x + 40, left_block_y + 12)
+UI_SetCaption(labCap051, "Подбирать выбранные")
+UI_SetTextColor(labCap051, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap051, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkFilter01 = UI_CreateCompent(frmLootFilter, CHECK_TYPE, "checkFilter01", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkFilter01, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkFilter01, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 20 + 10
+
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/funnel.png", NORMAL, 20, 20, 0, 0)
+
+labCap052 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap052", 120, 12, left_block_x + 40, left_block_y + 12)
+UI_SetCaption(labCap052, "Базовый фильтр")
+UI_SetTextColor(labCap052, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap052, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkFilter02 = UI_CreateCompent(frmLootFilter, CHECK_TYPE, "checkFilter02", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkFilter02, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkFilter02, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+---------------
+
+left_block_x = left_block_x + 290 + 20
+left_block_y = left_block_y - 30
+setBackground2(frmLootFilter, 290, 70, 255, 30 + 290 + 20, 470)
+
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/box.png", NORMAL, 20, 20, 0, 0)
+
+labCap053 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap053", 120, 12, left_block_x + 40, left_block_y + 12)
+UI_SetCaption(labCap053, "Подбирать всё")
+UI_SetTextColor(labCap053, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap053, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkFilter03 = UI_CreateCompent(frmLootFilter, CHECK_TYPE, "checkFilter03", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkFilter03, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkFilter03, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
+
+left_block_y = left_block_y + 20 + 10
+image = UI_CreateCompent(frmLootFilter, IMAGE_TYPE, "image", 20, 20, left_block_x + 10, left_block_y + 10)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/funnelfill.png", NORMAL, 20, 20, 0, 0)
+
+labCap054 = UI_CreateCompent(frmLootFilter, LABELEX_TYPE, "labCap054", 120, 12, left_block_x + 40, left_block_y + 12)
+UI_SetCaption(labCap054, "Расширенный фильтр")
+UI_SetTextColor(labCap054, argbColor("c2c2c1"))
+UI_SetLabelExFont(labCap054, EXO_Regular_S13, FALSE, COLOR_BLACK)
+
+checkFilter04 = UI_CreateCompent(frmLootFilter, CHECK_TYPE, "checkFilter04", 31, 20, left_block_x + 249, left_block_y + 10)
+UI_LoadImage(checkFilter04, "./texture/ascaron_ui/asc-part-01.png", UNCHECKED, 31, 20, 758, 229)
+UI_LoadImage(checkFilter04, "./texture/ascaron_ui/asc-part-01.png", CHECKED, 31, 20, 758, 249)
