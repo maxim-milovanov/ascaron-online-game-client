@@ -29,7 +29,8 @@ UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 550, 2, 0, 3
 -- Кнопка маркета со списком предметов в торговле
 pgLots = UI_CreatePageItem(pageMarket)
 LotsItem = UI_GetPageItemObj(pgLots, PAGE_ITEM_TITLE)
-UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 240)
+UI_SetPageItemCaption(pgLots, "ITEMS", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+--UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 240)
 UI_LoadImage(LotsItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 271)
 UI_SetPos(LotsItem, 0, 0)
 UI_SetSize(LotsItem, 175, 31)
@@ -37,24 +38,27 @@ UI_SetSize(LotsItem, 175, 31)
 -- История
 pgHistory = UI_CreatePageItem(pageMarket)
 HistoryItem = UI_GetPageItemObj(pgHistory, PAGE_ITEM_TITLE)
-UI_LoadImage(HistoryItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 175, 240)
-UI_LoadImage(HistoryItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 271)
+UI_SetPageItemCaption(pgHistory, "HISTORY", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+--UI_LoadImage(HistoryItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 175, 240)
+UI_LoadImage(HistoryItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 271)
 UI_SetPos(HistoryItem, 175, 0)
 UI_SetSize(HistoryItem, 175, 31)
 
 -- Установить предмет на продажу
 pgAddLot = UI_CreatePageItem(pageMarket)
 AddLotItem = UI_GetPageItemObj(pgAddLot, PAGE_ITEM_TITLE)
-UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 302)
-UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 333)
+UI_SetPageItemCaption(pgAddLot, "ADD LOT", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+--UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 302)
+UI_LoadImage(AddLotItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 271)
 UI_SetPos(AddLotItem, 350, 0)
 UI_SetSize(AddLotItem, 175, 31)
 
 -- Заявка на вывод средств
 pgCashOut = UI_CreatePageItem(pageMarket)
 CashOutItem = UI_GetPageItemObj(pgCashOut, PAGE_ITEM_TITLE)
-UI_LoadImage(CashOutItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 175, 302)
-UI_LoadImage(CashOutItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 333)
+UI_SetPageItemCaption(pgCashOut, "CASH OUT", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+--UI_LoadImage(CashOutItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 175, 302)
+UI_LoadImage(CashOutItem, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 0, 271)
 UI_SetPos(CashOutItem, 350 + 175, 0)
 UI_SetSize(CashOutItem, 175, 31)
 

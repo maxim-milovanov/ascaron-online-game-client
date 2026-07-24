@@ -34,16 +34,18 @@ UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 253, 2, 0, 3
 -- Кнопка предметов
 pgItems = UI_CreatePageItem(pageDatabase)
 itemItems = UI_GetPageItemObj(pgItems, PAGE_ITEM_TITLE)
-UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 0, 412)
-UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 0, 443)
+UI_SetPageItemCaption(pgItems, "ITEMS", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+--UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 0, 412)
+UI_LoadImage(itemItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 175, 271)
 UI_SetPos(itemItems, 0, 0)
 UI_SetSize(itemItems, 123, 31)
 
 -- Кнопка монстров
 pgMonsters = UI_CreatePageItem(pageDatabase)
 monsterItems = UI_GetPageItemObj(pgMonsters, PAGE_ITEM_TITLE)
-UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 123, 412)
-UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 123, 443)
+UI_SetPageItemCaption(pgMonsters, "MONSTERS", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+--UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_NORMAL, 123, 31, 0, 412)
+UI_LoadImage(monsterItems, "./texture/ascaron_ui/asc-part-04.png", PAGE_ITEM_TITLE_ACTIVE, 123, 31, 175, 271)
 UI_SetPos(monsterItems, 123, 0)
 UI_SetSize(monsterItems, 123, 31)
 
@@ -235,6 +237,7 @@ UI_SetPageButton(pageItemInfo, PAGE_BUTTON_CUSTOM, 48, 16 )
 -- Дроп-лист
 pageDropInfo = UI_CreatePageItem(pageItemInfo)
 itemDropInfo = UI_GetPageItemObj(pageDropInfo, PAGE_ITEM_TITLE)
+UI_SetPageItemCaption(pageDropInfo, "ITEMS", EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
 UI_LoadImage(itemDropInfo, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 154, 44, 550, 1171)
 UI_LoadImage(itemDropInfo, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 154, 44, 710, 1171)
 UI_SetPos(itemDropInfo, 0, 0)

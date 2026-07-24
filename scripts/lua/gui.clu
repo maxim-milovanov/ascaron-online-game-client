@@ -104,14 +104,14 @@ ALL     = 4
 
 
 -----------------------------------------------------------------------
--- ¶¨Òåºê
+-- å®šä¹‰å®
 -----------------------------------------------------------------------
 
--- Õæ¼ÙÖµ
+-- çœŸå‡å€¼
 TRUE = 1
 FALSE = 0
 
--- ¿Ø¼şÏÔÊ¾·½Ê½
+-- æ§ä»¶æ˜¾ç¤ºæ–¹å¼
 caLeft =1
 caLeftUp =2
 caUp = 3
@@ -121,11 +121,11 @@ caRightBottom = 6
 caBottom = 7
 caLeftBottom = 8
 caClient = 9
-caCenter  = 10          -- ÍêÈ«¾ÓÖĞ
-caWidthCenter = 11      -- Ë®Æ½¾ÓÖĞ
-caHeightCenter = 12     -- ÉÏÏÂ¾ÓÖĞ 
+caCenter  = 10          -- å®Œå…¨å±…ä¸­
+caWidthCenter = 11      -- æ°´å¹³å±…ä¸­
+caHeightCenter = 12     -- ä¸Šä¸‹å±…ä¸­ 
 
--- ¿Ø¼şÀàĞÍ
+-- æ§ä»¶ç±»å‹
 LABEL_TYPE		= 0
 LABELEX_TYPE		= 1
 BUTTON_TYPE		= 2
@@ -160,15 +160,15 @@ RICHEDIT_TYPE 		= 30
 
 UI3D_COMPENT = UI3D_COMPENT_TYPE
 
--- ÑÕÉ«
+-- é¢œè‰²
 COLOR_BLACK = 4278190080
 COLOR_RED = 4294901760
 COLOR_WHITE = 4294967295
-COLOR_PURPLE = 4293990336		-- ×ÏÉ«
-COLOR_YELLOW = 4294967040           -- »ÆÉ«
-COLOR_BLUE = 4278190335 --À¼É«
-COLOR_GREEN = 4278255360 --ÂÌÉ«
-COLOR_PINK = 4294902015  --·ÛÉ«
+COLOR_PURPLE = 4293990336		-- ç´«è‰²
+COLOR_YELLOW = 4294967040           -- é»„è‰²
+COLOR_BLUE = 4278190335 --å…°è‰²
+COLOR_GREEN = 4278255360 --ç»¿è‰²
+COLOR_PINK = 4294902015  --ç²‰è‰²
 
 COLOR_8D837A = 4287464314
 COLOR_FFEDCF = 4294962639
@@ -185,55 +185,55 @@ COLOR_FFF4E2 = 	4294964450
 TREE_TEXT_COLOR = COLOR_WHITE
 
 
--- °´Å¥µÄËÄÖÖ×´Ì¬£¬ÆÕÍ¨£¬¼¤»î£¬°´ÏÂ£¬½ûÓÃ
+-- æŒ‰é’®çš„å››ç§çŠ¶æ€ï¼Œæ™®é€šï¼Œæ¿€æ´»ï¼ŒæŒ‰ä¸‹ï¼Œç¦ç”¨
 NORMAL  = 0
 HOVER   = 1
 DOWN    = 2
 DISABLE = 3
 
--- ±³¾°Í¼
-COMPENT_BACK = 0		-- ¿Ø¼ş±³¾°
+-- èƒŒæ™¯å›¾
+COMPENT_BACK = 0		-- æ§ä»¶èƒŒæ™¯
 
--- ½ø¶ÈÌõµÄÁ½·ù»­
-PROGRESS_PROGRESS = 1 		-- ½ø¶ÈÌõ
+-- è¿›åº¦æ¡çš„ä¸¤å¹…ç”»
+PROGRESS_PROGRESS = 1 		-- è¿›åº¦æ¡
 
--- Ñ¡Ôñ¿òµÄÁ½·ù»­
-UNCHECKED = 0			-- Î´Ñ¡Ôñ×´Ì¬
-CHECKED = 1			-- Ñ¡Ôñ×´Ì¬
+-- é€‰æ‹©æ¡†çš„ä¸¤å¹…ç”»
+UNCHECKED = 0			-- æœªé€‰æ‹©çŠ¶æ€
+CHECKED = 1			-- é€‰æ‹©çŠ¶æ€
 
--- ½ø¶ÈÌõÏÔÊ¾·ç¸ñ£º
-PROGRESS_HORIZONTAL = 0		-- Ë®Æ½µÄ,´Ó×ó×ÔÓÒµÄ
-PROGRESS_VERTICAL = 1		-- ´¹Ö±µÄ£¬´ÓÏÂÖ±ÉÏµÄ
+-- è¿›åº¦æ¡æ˜¾ç¤ºé£æ ¼ï¼š
+PROGRESS_HORIZONTAL = 0		-- æ°´å¹³çš„,ä»å·¦è‡ªå³çš„
+PROGRESS_VERTICAL = 1		-- å‚ç›´çš„ï¼Œä»ä¸‹ç›´ä¸Šçš„
 
 
--- ±íµ¥ÑùÊ½
--- 0 :ÆÕÍ¨; 1£ºÈ«¾ÓÖĞ£¬2£ºx·½Ïò¾ÓÖĞ£¬ 3 Y·½Ïò¾ÓÖĞ£¬ 4£º¾Ó×ó£» 5£º¾ÓÓÒ£»6£º¾ÓÉÏ£»7 £º¾ÓÏÂ £» 8 ×óÉÏ½Ç£¬9 ÓÒÉÏ½Ç£¬10 ×óÏÂ½Ç 11 ÓÒÏÂ½Ç
-FORM_NONE=0			-- ÆÕÍ¨
-FORM_ALLCENTER=1		-- È«¾ÓÖĞ
-FORM_XCENTER=2			-- x·½Ïò¾ÓÖĞ
-FORM_YCENTER=3			-- Y·½Ïò¾ÓÖĞ
-FORM_LEFT=4			-- ¾Ó×ó
-FORM_RIGHT=5			-- ¾ÓÓÒ
-FORM_TOP=6			-- ¾ÓÉÏ
-FORM_BOTTOM=7			-- ¾ÓÏÂ
-FORM_LEFTTOP=8			-- ×óÉÏ½Ç
-FORM_RIGHTTOP=9			-- ÓÒÉÏ½Ç
-FORM_LEFTBOTTOM=10		-- ×óÏÂ½Ç
-FORM_RIGHTBOTTOM=11		-- ÓÒÏÂ½Ç
+-- è¡¨å•æ ·å¼
+-- 0 :æ™®é€š; 1ï¼šå…¨å±…ä¸­ï¼Œ2ï¼šxæ–¹å‘å±…ä¸­ï¼Œ 3 Yæ–¹å‘å±…ä¸­ï¼Œ 4ï¼šå±…å·¦ï¼› 5ï¼šå±…å³ï¼›6ï¼šå±…ä¸Šï¼›7 ï¼šå±…ä¸‹ ï¼› 8 å·¦ä¸Šè§’ï¼Œ9 å³ä¸Šè§’ï¼Œ10 å·¦ä¸‹è§’ 11 å³ä¸‹è§’
+FORM_NONE=0			-- æ™®é€š
+FORM_ALLCENTER=1		-- å…¨å±…ä¸­
+FORM_XCENTER=2			-- xæ–¹å‘å±…ä¸­
+FORM_YCENTER=3			-- Yæ–¹å‘å±…ä¸­
+FORM_LEFT=4			-- å±…å·¦
+FORM_RIGHT=5			-- å±…å³
+FORM_TOP=6			-- å±…ä¸Š
+FORM_BOTTOM=7			-- å±…ä¸‹
+FORM_LEFTTOP=8			-- å·¦ä¸Šè§’
+FORM_RIGHTTOP=9			-- å³ä¸Šè§’
+FORM_LEFTBOTTOM=10		-- å·¦ä¸‹è§’
+FORM_RIGHTBOTTOM=11		-- å³ä¸‹è§’
 FORM_CENTERBOTTOM=12
 
 -----------------------------------------------------------------------
--- ¶¨ÒåÒªµ÷ÓÃµÄº¯Êı
+-- å®šä¹‰è¦è°ƒç”¨çš„å‡½æ•°
 -----------------------------------------------------------------------
--- ·µ»ØÖµÈçÎ´ÌØÊâËµÃ÷£¬ÔòÎª³É¹¦1£¬Ê§°Ü-1
+-- è¿”å›å€¼å¦‚æœªç‰¹æ®Šè¯´æ˜ï¼Œåˆ™ä¸ºæˆåŠŸ1ï¼Œå¤±è´¥-1
 
--- ×°ÔØUI½Å±¾
+-- è£…è½½UIè„šæœ¬
 function UI_LoadScript( file )
 	CLU_Call("UI_LoadScript", file )
 end	
 
--- ´´½¨±íµ¥£¬²ÎÊıÒÀ´ÎÎª£º±íµ¥Ãû³Æ£¬ÊÇ·ñÄ£Ì¬£¬±íµ¥¿í£¬¸ß£¬X×ø±ê£¬Y×ø±ê£¬ÊÇ·ñÆ½ÆÌÏÔÊ¾£¬ÊÇ·ñÏÔÊ¾±ßÏß
--- ·µ»ØÖµ£ºÊ§°Ü-1£¬³É¹¦Îª±íµ¥ID
+-- åˆ›å»ºè¡¨å•ï¼Œå‚æ•°ä¾æ¬¡ä¸ºï¼šè¡¨å•åç§°ï¼Œæ˜¯å¦æ¨¡æ€ï¼Œè¡¨å•å®½ï¼Œé«˜ï¼ŒXåæ ‡ï¼ŒYåæ ‡ï¼Œæ˜¯å¦å¹³é“ºæ˜¾ç¤ºï¼Œæ˜¯å¦æ˜¾ç¤ºè¾¹çº¿
+-- è¿”å›å€¼ï¼šå¤±è´¥-1ï¼ŒæˆåŠŸä¸ºè¡¨å•ID
 function UI_CreateForm( name, ismodal, w, h, x, y, isTitle, isShowFrame )
 	local id = CLU_Call("UI_CreateForm", name, ismodal, w, h, x, y, isTitle, isShowFrame )
 	if id==-1 then 
@@ -242,12 +242,12 @@ function UI_CreateForm( name, ismodal, w, h, x, y, isTitle, isShowFrame )
 	return id	
 end
 
--- ÉèÖÃ±íµ¥ÊÇ·ñ¿ÉÒÔ°´ESC¹Ø±Õ
+-- è®¾ç½®è¡¨å•æ˜¯å¦å¯ä»¥æŒ‰ESCå…³é—­
 function UI_FormSetIsEscClose( nFormID, IsEscClose )
 	CLU_Call("UI_FormSetIsEscClose", nFormID, IsEscClose )
 end
 
--- ÉèÖÃ±íµ¥°´EnterÊ±,Ö´ĞĞÄÇ¸ö°´Å¥µÄÊÂ¼ş
+-- è®¾ç½®è¡¨å•æŒ‰Enteræ—¶,æ‰§è¡Œé‚£ä¸ªæŒ‰é’®çš„äº‹ä»¶
 function UI_FormSetEnterButton( nFormID, nButtonID )
 	CLU_Call("UI_FormSetEnterButton", nFormID, nButtonID )
 end
@@ -255,32 +255,32 @@ end
 ALT_KEY = 0
 CTRL_KEY = 1
 SHIFT_KEY = 2
--- ÉèÖÃÏÔÊ¾»òÒş²ØFormµÄÈÈ¼ü
+-- è®¾ç½®æ˜¾ç¤ºæˆ–éšè—Formçš„çƒ­é”®
 function UI_FormSetHotKey( id, control_key, key )
 	CLU_Call("UI_FormSetHotKey", id, control_key, key )
 end
 
--- ÉèÖÃFormÄ£°å×î´óÖµ,±ØĞë´óÓÚÁã
+-- è®¾ç½®Formæ¨¡æ¿æœ€å¤§å€¼,å¿…é¡»å¤§äºé›¶
 function UI_SetFormTempleteMax( max )
 	CLU_Call("UI_SetFormTempleteMax", max )
 end
 
--- ½«Form¼ÓÈënTempleteNoÄ£°åÖĞ,nTempleteNoÒªĞ¡ÓÚmax,´óÓÚµÈÓÚÁã
+-- å°†FormåŠ å…¥nTempleteNoæ¨¡æ¿ä¸­,nTempleteNoè¦å°äºmax,å¤§äºç­‰äºé›¶
 function UI_AddFormToTemplete( formid, nTempleteNo )
 	CLU_Call("UI_AddFormToTemplete", formid, nTempleteNo )
 end
 
--- ½«Form¼ÓÈëÃ¿Ò»¸önTempleteNoÄ£°åÖĞ
+-- å°†FormåŠ å…¥æ¯ä¸€ä¸ªnTempleteNoæ¨¡æ¿ä¸­
 function UI_AddAllFormTemplete( form_id )
 	CLU_Call("UI_AddAllFormTemplete", form_id )
 end
 
--- ÇĞ»»µ±Ç°FormÄ£°å,Èç¹ûnTempleteNoĞ¡ÓÚÁã,ÔòÇĞ»»µ½Ä¬ÈÏÄ£°å
+-- åˆ‡æ¢å½“å‰Formæ¨¡æ¿,å¦‚æœnTempleteNoå°äºé›¶,åˆ™åˆ‡æ¢åˆ°é»˜è®¤æ¨¡æ¿
 function UI_SwitchTemplete( nTempleteNo )
 	CLU_Call("UI_SwitchTemplete", nTempleteNo )
 end
 
--- ×°ÔØformÍ¼Æ¬£¬clientÊÇÆ½ÆÌµ¥ÔªÎÄ¼ş£¬cw,chÊÇÆ½ÆÌµ¥Ôª¿í¸ß£¬bw,bhÊÇÖ¸±ß¿òµ¥ÔªµÄ¿í¸ß£¬µ¥Î»£ºÏñËØ
+-- è£…è½½formå›¾ç‰‡ï¼Œclientæ˜¯å¹³é“ºå•å…ƒæ–‡ä»¶ï¼Œcw,chæ˜¯å¹³é“ºå•å…ƒå®½é«˜ï¼Œbw,bhæ˜¯æŒ‡è¾¹æ¡†å•å…ƒçš„å®½é«˜ï¼Œå•ä½ï¼šåƒç´ 
 function UI_LoadFormImage( id, client, cw, ch, tx, ty, board, bw, bh )
 	CLU_Call("UI_LoadFormImage", id, client, cw, ch, tx, ty, board, bw, bh )
 end
@@ -289,33 +289,33 @@ function UI_LoadFormImageBox( id, image_file, image_pos_x, image_pos_y, size_squ
 	CLU_Call("UI_LoadFormImageBox", id, image_file, image_pos_x, image_pos_y, size_square)
 end
 
--- Éè¶¨formµÄÀàĞÍ£¬¾ÓÖĞ£¬¾ÓÏÂµÈ.
---0 :ÆÕÍ¨; 1£ºÈ«¾ÓÖĞ£¬2£ºx·½Ïò¾ÓÖĞ£¬ 3 Y·½Ïò¾ÓÖĞ£¬ 4£º¾Ó×ó£» 5£º¾ÓÓÒ£»6£º¾ÓÉÏ£»7 £º¾ÓÏÂ £» 8 ×óÉÏ½Ç£¬9 ÓÒÉÏ½Ç£¬10 ×óÏÂ½Ç 11 ÓÒÏÂ½Ç
+-- è®¾å®šformçš„ç±»å‹ï¼Œå±…ä¸­ï¼Œå±…ä¸‹ç­‰.
+--0 :æ™®é€š; 1ï¼šå…¨å±…ä¸­ï¼Œ2ï¼šxæ–¹å‘å±…ä¸­ï¼Œ 3 Yæ–¹å‘å±…ä¸­ï¼Œ 4ï¼šå±…å·¦ï¼› 5ï¼šå±…å³ï¼›6ï¼šå±…ä¸Šï¼›7 ï¼šå±…ä¸‹ ï¼› 8 å·¦ä¸Šè§’ï¼Œ9 å³ä¸Šè§’ï¼Œ10 å·¦ä¸‹è§’ 11 å³ä¸‹è§’
 function UI_SetFormStyle( id, index )
 	CLU_Call("UI_SetFormStyle", id, index)
 end
 
--- Éè¶¨formµÄÀàĞÍ£¬¾ÓÖĞ£¬¾ÓÏÂµÈ.
---0 :ÆÕÍ¨; 1£ºÈ«¾ÓÖĞ£¬2£ºx·½Ïò¾ÓÖĞ£¬ 3 Y·½Ïò¾ÓÖĞ£¬ 4£º¾Ó×ó£» 5£º¾ÓÓÒ£»6£º¾ÓÉÏ£»7 £º¾ÓÏÂ £» 8 ×óÉÏ½Ç£¬9 ÓÒÉÏ½Ç£¬10 ×óÏÂ½Ç 11 ÓÒÏÂ½Ç
---offWidth ÊÇÏà¶ÔÓÚ±ßµÄË®Æ½Î»ÖÃ
---offHeight ÊÇÏà¶ÔÓÚ±ßµÄ´¹Ö±Î»ÖÃ
+-- è®¾å®šformçš„ç±»å‹ï¼Œå±…ä¸­ï¼Œå±…ä¸‹ç­‰.
+--0 :æ™®é€š; 1ï¼šå…¨å±…ä¸­ï¼Œ2ï¼šxæ–¹å‘å±…ä¸­ï¼Œ 3 Yæ–¹å‘å±…ä¸­ï¼Œ 4ï¼šå±…å·¦ï¼› 5ï¼šå±…å³ï¼›6ï¼šå±…ä¸Šï¼›7 ï¼šå±…ä¸‹ ï¼› 8 å·¦ä¸Šè§’ï¼Œ9 å³ä¸Šè§’ï¼Œ10 å·¦ä¸‹è§’ 11 å³ä¸‹è§’
+--offWidth æ˜¯ç›¸å¯¹äºè¾¹çš„æ°´å¹³ä½ç½®
+--offHeight æ˜¯ç›¸å¯¹äºè¾¹çš„å‚ç›´ä½ç½®
 function UI_SetFormStyleEx( id, index, offWidth, offHeight )
 	CLU_Call("UI_SetFormStyleEx", id, index, offWidth, offHeight)
 end
 
--- ×°ÔØFrameImageÍ¼Æ¬£¬clientÊÇÆ½ÆÌµ¥ÔªÎÄ¼ş£¬cw,chÊÇÆ½ÆÌµ¥Ôª¿í¸ß£¬bw,bhÊÇÖ¸±ß¿òµ¥ÔªµÄ¿í¸ß£¬µ¥Î»£ºÏñËØ
+-- è£…è½½FrameImageå›¾ç‰‡ï¼Œclientæ˜¯å¹³é“ºå•å…ƒæ–‡ä»¶ï¼Œcw,chæ˜¯å¹³é“ºå•å…ƒå®½é«˜ï¼Œbw,bhæ˜¯æŒ‡è¾¹æ¡†å•å…ƒçš„å®½é«˜ï¼Œå•ä½ï¼šåƒç´ 
 function UI_LoadFrameImage( id, client, cw, ch, tx, ty, board, bw, bh )
 	CLU_Call("UI_LoadFrameImage", id, client, cw, ch, tx, ty, board, bw, bh )
 end
 
--- ÏÔÊ¾»òÒş²Ø±íµ¥£º±íµ¥ID£¬ÊÇ·ñÏÔÊ¾
+-- æ˜¾ç¤ºæˆ–éšè—è¡¨å•ï¼šè¡¨å•IDï¼Œæ˜¯å¦æ˜¾ç¤º
 function UI_ShowForm( id, show )
 	CLU_Call("UI_ShowForm", id, show )
 end
 
--- ´´½¨¿Ø¼ş£ºËùÊô±íµ¥£¬¿Ø¼şÀàĞÍ£¬¿Ø¼şÃû³Æ£¬¿í¸ß£¬X,Y
--- ÆäÖĞÀàĞÍÎª£º1-°´Å¥£¬2-×éºÏ¿ò£¬3-±à¼­¿ò£¬4-Í¼Æ¬£¬5-ÎÄ±¾£¬6-ÁĞ±í
--- ·µ»ØÖµ£ºÊ§°Ü-1£¬³É¹¦Îª¿Ø¼şID
+-- åˆ›å»ºæ§ä»¶ï¼šæ‰€å±è¡¨å•ï¼Œæ§ä»¶ç±»å‹ï¼Œæ§ä»¶åç§°ï¼Œå®½é«˜ï¼ŒX,Y
+-- å…¶ä¸­ç±»å‹ä¸ºï¼š1-æŒ‰é’®ï¼Œ2-ç»„åˆæ¡†ï¼Œ3-ç¼–è¾‘æ¡†ï¼Œ4-å›¾ç‰‡ï¼Œ5-æ–‡æœ¬ï¼Œ6-åˆ—è¡¨
+-- è¿”å›å€¼ï¼šå¤±è´¥-1ï¼ŒæˆåŠŸä¸ºæ§ä»¶ID
 function UI_CreateCompent( formid, type, name, w, h, x, y )
 	local ret = CLU_Call( "UI_CreateCompent", formid, type, name, w, h, x, y )
 	if ret==-1 then 
@@ -324,21 +324,21 @@ function UI_CreateCompent( formid, type, name, w, h, x, y )
 	return ret
 end
 
--- ÉèÖÃ¿Ø¼ş£¨°üÀ¨±íµ¥£©ÊÇ·ñ¿ÉÒÔÍÏ¶¯
+-- è®¾ç½®æ§ä»¶ï¼ˆåŒ…æ‹¬è¡¨å•ï¼‰æ˜¯å¦å¯ä»¥æ‹–åŠ¨
 function UI_SetIsDrag( id, isDrag )
 	CLU_Call("UI_SetIsDrag", id, isDrag )
 end
 
--- ÉèÖÃ¿Ø¼şÌáÊ¾
+-- è®¾ç½®æ§ä»¶æç¤º
 function UI_SetHint( id, hint )
 	CLU_Call("UI_SetHint", id, hint )
 end
 
--- ´´½¨¶àĞĞÁĞ±í,Ê§°Ü·µ»Ø-1
--- ÆäÖĞstyleÎª±êÌâ·ç¸ñ
-eSimpleTitle = 0		-- ¼òµ¥±êÍ·,¼´½öÒ»·ùÍ¼Æ¬
-eWindowTitle = 1		-- ÏówindowsÒ»ÑùµÄ±êÍ·,ĞèÒª¼ÓÔØÃ¿Ò»¸ö±êÍ·µÄÍ¼Æ¬
-eNoTitle     = 2 		-- Ã»ÓĞ±êÌâÀ¸
+-- åˆ›å»ºå¤šè¡Œåˆ—è¡¨,å¤±è´¥è¿”å›-1
+-- å…¶ä¸­styleä¸ºæ ‡é¢˜é£æ ¼
+eSimpleTitle = 0		-- ç®€å•æ ‡å¤´,å³ä»…ä¸€å¹…å›¾ç‰‡
+eWindowTitle = 1		-- è±¡windowsä¸€æ ·çš„æ ‡å¤´,éœ€è¦åŠ è½½æ¯ä¸€ä¸ªæ ‡å¤´çš„å›¾ç‰‡
+eNoTitle     = 2 		-- æ²¡æœ‰æ ‡é¢˜æ 
 function UI_CreateListView( formid, name, w, h, x, y, col, style )
 	local ret = CLU_Call( "UI_CreateListView", formid, name, w, h, x, y, col, style )
 	if ret==-1 then 
@@ -347,114 +347,114 @@ function UI_CreateListView( formid, name, w, h, x, y, col, style )
 	return ret
 end
 
--- ÉèÖÃlistview±êÍ·,²ÎÊıÒÀ´ÎÎª:id,ÉèÖÃµÄ±êÍ·Ë÷Òı,±êÍ·¿íµ×,±êÍ·Í¼Æ¬,Í¼Æ¬¿í¸ßÆğÊ¼×ø±ê
+-- è®¾ç½®listviewæ ‡å¤´,å‚æ•°ä¾æ¬¡ä¸º:id,è®¾ç½®çš„æ ‡å¤´ç´¢å¼•,æ ‡å¤´å®½åº•,æ ‡å¤´å›¾ç‰‡,å›¾ç‰‡å®½é«˜èµ·å§‹åæ ‡
 function UI_ListViewSetTitle( listviewid, index, width, titleimage, w, h, sx, sy )
 	CLU_Call( "UI_ListViewSetTitle", listviewid, index, width, titleimage, w, h, sx, sy )
 end
 
--- ÉèÖÃlistview±êÍ·¸ß¶È
+-- è®¾ç½®listviewæ ‡å¤´é«˜åº¦
 function UI_ListViewSetTitleHeight( listviewid, height )
 	CLU_Call( "UI_ListViewSetTitleHeight", listviewid, height )
 end
 
--- ÉèÖÃµÄÑ¡ÔñÌõÊÇ·ñ¸úËæÊó±ê
+-- è®¾ç½®çš„é€‰æ‹©æ¡æ˜¯å¦è·Ÿéšé¼ æ ‡
 function UI_SetListIsMouseFollow( listid, IsFollow )
 	CLU_Call( "UI_SetListIsMouseFollow", listid, IsFollow )
 end
 
--- ÉèÖÃ¿Ø¼şĞ¯´ø²ÎÊı,tagÎªÕûÊı
+-- è®¾ç½®æ§ä»¶æºå¸¦å‚æ•°,tagä¸ºæ•´æ•°
 function UI_SetTag( id, tag )
 	CLU_Call( "UI_SetTag", id, tag )
 end
 
--- ÉèÖÃ¿Ø¼ş´óĞ¡
+-- è®¾ç½®æ§ä»¶å¤§å°
 function UI_SetSize( id, w, h )
 	CLU_Call( "UI_SetSize", id, w, h )
 end
 
--- ÉèÖÃ¿Ø¼şÎ»ÖÃ
+-- è®¾ç½®æ§ä»¶ä½ç½®
 function UI_SetPos( id, x, y )
 	CLU_Call( "UI_SetPos", id, x, y )
 end
 
--- ÉèÖÃ¿Ø¼şÊÇ·ñÏìÓ¦¼üÅÌ½¹µã
+-- è®¾ç½®æ§ä»¶æ˜¯å¦å“åº”é”®ç›˜ç„¦ç‚¹
 function UI_SetIsKeyFocus( id, IsKeyFocus )
 	CLU_Call( "UI_SetIsKeyFocus", id, IsKeyFocus )
 end
 
--- ÉèÖÃ¿Ø¼şµÄÏÔÊ¾ÎÄ×Ö
+-- è®¾ç½®æ§ä»¶çš„æ˜¾ç¤ºæ–‡å­—
 function UI_SetCaption( id, caption )
 	CLU_Call( "UI_SetCaption", id, caption )
 end
 
--- ¿½±´ÁíÒ»¸ö¿Ø¼şµÄÍ¼Æ¬£¬²ÎÊı£ºÒª¿½±´
--- ·µ»ØÖµ£º³É¹¦1£¬Ê§°Ü-1
+-- æ‹·è´å¦ä¸€ä¸ªæ§ä»¶çš„å›¾ç‰‡ï¼Œå‚æ•°ï¼šè¦æ‹·è´
+-- è¿”å›å€¼ï¼šæˆåŠŸ1ï¼Œå¤±è´¥-1
 function UI_CopyImage( targetid, sourceid )
 	CLU_Call( "UI_CopyImage", targetid, sourceid )
 end
 
--- ÉèÖÃ¿Ø¼şµÄalpha,²»Í¸Ã÷Îª255,È«Í¸Ã÷Îª:0
+-- è®¾ç½®æ§ä»¶çš„alpha,ä¸é€æ˜ä¸º255,å…¨é€æ˜ä¸º:0
 function UI_SetAlpha( id, alpha )
 	CLU_Call( "UI_SetAlpha", id, alpha )
 end
 
--- ÉèÖÃ¿Ø¼şµÄ±³¾°alpha,²»Í¸Ã÷Îª255,È«Í¸Ã÷Îª:0
+-- è®¾ç½®æ§ä»¶çš„èƒŒæ™¯alpha,ä¸é€æ˜ä¸º255,å…¨é€æ˜ä¸º:0
 function UI_SetImageAlpha( id, alpha )
 	CLU_Call( "UI_SetImageAlpha", id, alpha )
 end
 
--- ÉèÖÃ¿Ø¼şÏÔÊ¾·½Ê½
+-- è®¾ç½®æ§ä»¶æ˜¾ç¤ºæ–¹å¼
 function UI_SetAlign( id, align )
 	CLU_Call( "UI_SetAlign", id, align )
 end
 
--- ÉèÖÃÊÇ·ñÏÔÊ¾¿Ø¼ş
+-- è®¾ç½®æ˜¯å¦æ˜¾ç¤ºæ§ä»¶
 function UI_SetIsShow( id, isshow )
 	CLU_Call( "UI_SetIsShow", id, isshow )
 end
 
--- ÉèÖÃ¿Ø¼şÊÇ·ñ¿ÉÓÃ
+-- è®¾ç½®æ§ä»¶æ˜¯å¦å¯ç”¨
 function UI_SetIsEnabled( id, isEnabled )
 	CLU_Call( "UI_SetIsEnabled", id, isEnabled )
 end
 
--- ÉèÖÃ¿Ø¼şÀëËÄÖÜµÄ±ß¾à
+-- è®¾ç½®æ§ä»¶ç¦»å››å‘¨çš„è¾¹è·
 function UI_SetMargin( id, left, top, right, bottom )
 	CLU_Call( "UI_SetMargin", id, left, top, right, bottom )
 end
 
--- ÉèÖÃËµ»°µÄÑÕÉ«£¬ÒÀ´ÎÎª£ºÊÀ½ç,Â·ÈË,¶ÓÁÄ,¹«»á,GM,ÏµÍ³,½»Ò×,Ë½ÁÄ
+-- è®¾ç½®è¯´è¯çš„é¢œè‰²ï¼Œä¾æ¬¡ä¸ºï¼šä¸–ç•Œ,è·¯äºº,é˜ŸèŠ,å…¬ä¼š,GM,ç³»ç»Ÿ,äº¤æ˜“,ç§èŠ
 function UI_SetChatColor( p1, p2, p3, p4, p5, p6, p7, p8 )
 	CLU_Call( "UI_SetChatColor", p1, p2, p3, p4, p5, p6, p7, p8 )
 end
 
--- ×°ÔØ¿Ø¼şµÄÍ¼Æ¬£¬¿Ø¼şid£¬Í¼Æ¬Ãû³Æ£¬µÚ¼¸·ù£¬Í¼Æ¬¿í£¬¸ß£¬Í¼Æ¬¿ªÊ¼X,Y
+-- è£…è½½æ§ä»¶çš„å›¾ç‰‡ï¼Œæ§ä»¶idï¼Œå›¾ç‰‡åç§°ï¼Œç¬¬å‡ å¹…ï¼Œå›¾ç‰‡å®½ï¼Œé«˜ï¼Œå›¾ç‰‡å¼€å§‹X,Y
 function UI_LoadImage( id, file, frame, w, h, tx, ty )
 	CLU_Call( "UI_LoadImage", id, file, frame, w, h, tx, ty )
 end
 
--- ÉèÖÃ¿Ø¼şµÄ±³¾°Í¼Æ¬Ö¡Êı
+-- è®¾ç½®æ§ä»¶çš„èƒŒæ™¯å›¾ç‰‡å¸§æ•°
 function UI_SetMaxImage( id, max )
 	CLU_Call( "UI_SetMaxImage", id, max )
 end
 
--- ×°ÔØ¿Ø¼şµÄÍ¼Æ¬(ÓĞ¹Ì¶¨±ÈÀı)£¬¿Ø¼şid£¬Í¼Æ¬Ãû³Æ£¬µÚ¼¸·ù£¬Í¼Æ¬¿í£¬¸ß£¬Í¼Æ¬¿ªÊ¼X,Y
+-- è£…è½½æ§ä»¶çš„å›¾ç‰‡(æœ‰å›ºå®šæ¯”ä¾‹)ï¼Œæ§ä»¶idï¼Œå›¾ç‰‡åç§°ï¼Œç¬¬å‡ å¹…ï¼Œå›¾ç‰‡å®½ï¼Œé«˜ï¼Œå›¾ç‰‡å¼€å§‹X,Y
 function UI_LoadScaleImage( id, file, frame, w, h, tx, ty, scalex, scaley )
 	CLU_Call( "UI_LoadScaleImage", id, file, frame, w, h, tx, ty, scalex, scaley )
 end
 
 
--- ×°ÔØ¿Ø¼şµÄÍ¼Æ¬(ÓĞ¹Ì¶¨±ÈÀı)£¬¿Ø¼şid£¬Í¼Æ¬Ãû³Æ£¬µÚ¼¸·ù£¬Í¼Æ¬¿í£¬¸ß£¬Í¼Æ¬¿ªÊ¼X,Y
+-- è£…è½½æ§ä»¶çš„å›¾ç‰‡(æœ‰å›ºå®šæ¯”ä¾‹)ï¼Œæ§ä»¶idï¼Œå›¾ç‰‡åç§°ï¼Œç¬¬å‡ å¹…ï¼Œå›¾ç‰‡å®½ï¼Œé«˜ï¼Œå›¾ç‰‡å¼€å§‹X,Y
 function UI_LoadFlashScaleImage( id, flash, file, frame, w, h, tx, ty, scalex, scaley )
 	CLU_Call( "UI_LoadFlashScaleImage", id, flash, file, frame, w, h, tx, ty, scalex, scaley )
 end
 
--- ×°ÔØSkillListµÄÉı¼¶°´Å¥Í¼Æ¬
+-- è£…è½½SkillListçš„å‡çº§æŒ‰é’®å›¾ç‰‡
 function UI_LoadSkillListButtonImage( id, file, w, h, sx, sy, item_w, item_h )
 	CLU_Call( "UI_LoadSkillListButtonImage", id, file, w, h, sx, sy, item_w, item_h )
 end
 
--- ×°ÔØ°´Å¥µÄÍ¼Æ¬
+-- è£…è½½æŒ‰é’®çš„å›¾ç‰‡
 function UI_LoadButtonImage( id, file, w, h, sx, sy, isHorizontal )
 	CLU_Call( "UI_LoadButtonImage", id, file, w, h, sx, sy, isHorizontal )
 end
@@ -466,13 +466,13 @@ BUTTON_NO	= 3
 BUTTON_OK	= 4
 BUTTON_CANCLE	= 5
 
--- ÉèÖÃ°´Å¥µÄ·µ»ØÖµ
+-- è®¾ç½®æŒ‰é’®çš„è¿”å›å€¼
 function UI_SetButtonModalResult( id, modal )
 	CLU_Call( "UI_SetButtonModalResult", id, modal )
 end
 
 
--- ÉèÖÃ°´Å¥µÄHint
+-- è®¾ç½®æŒ‰é’®çš„Hint
 function UI_ButtonSetHint( id, strHint )
 	CLU_Call( "UI_ButtonSetHint", id, strHint )
 end
@@ -481,7 +481,7 @@ function UI_ButtonSetText( id, szText, szFont, szColor, szTextPosX, szTextPosY )
 	CLU_Call( "UI_ButtonSetText", id, szText, szFont, szColor, szTextPosX, szTextPosY )
 end
 
--- »ñµÃcombo»òlistµÄscroll£¬ÓÃÓÚ¼ÓÔØscrollµÄÍ¼Æ¬£¬ÉèÖÃ´óĞ¡
+-- è·å¾—comboæˆ–listçš„scrollï¼Œç”¨äºåŠ è½½scrollçš„å›¾ç‰‡ï¼Œè®¾ç½®å¤§å°
 function UI_GetScroll( id )
 	local ret = CLU_Call( "UI_GetScroll", id )
 	if ret==-1 then 
@@ -490,7 +490,7 @@ function UI_GetScroll( id )
 	return ret	
 end
 
--- »ñµÃcombo»òÕßCListViewµÄlist
+-- è·å¾—comboæˆ–è€…CListViewçš„list
 function UI_GetList( id )
 	local ret = CLU_Call( "UI_GetList", id )
 	if ret==-1 then 
@@ -499,17 +499,17 @@ function UI_GetList( id )
 	return ret	
 end
 
--- ×°ÔØ±í¸ñµÄÑ¡ÔñÌõ
+-- è£…è½½è¡¨æ ¼çš„é€‰æ‹©æ¡
 function UI_GridLoadSelectImage( id, file, w, h, tx, ty )
 	CLU_Call( "UI_GridLoadSelectImage", id, file, w, h, tx, ty )
 end
 
--- ÉèÖÃ±í¸ñÊÇ·ñ¿ÉÒÔÍÏ¶¯×óÏÂ½Ç±ä´ó±äĞ¡
+-- è®¾ç½®è¡¨æ ¼æ˜¯å¦å¯ä»¥æ‹–åŠ¨å·¦ä¸‹è§’å˜å¤§å˜å°
 function UI_SetGridIsDragSize( id, IsEnabled )
 	CLU_Call( "UI_SetGridIsDragSize", id, IsEnabled )
 end
 
--- µÃµ½¹ö¶¯ÌõÖĞµÄ¶ÔÏó:up°´Å¥,down°´Å¥,scrollÍ¼Æ¬
+-- å¾—åˆ°æ»šåŠ¨æ¡ä¸­çš„å¯¹è±¡:upæŒ‰é’®,downæŒ‰é’®,scrollå›¾ç‰‡
 SCROLL_UP = 0
 SCROLL_DOWN = 1
 SCROLL_SCROLL = 2
@@ -521,85 +521,85 @@ function UI_GetScrollObj( id, scrolltype )
 	return ret	
 end
 
--- ×°ÔØcomboµÄÍ¼Æ¬£ºeditÎªÊäÈëÀ¸±³¾°ÎÄ¼ş£¬w,hÎª¶ÔÓ¦¿í¸ß,ex,eyÍ¼Æ¬Î»ÖÃ,buttonÎªÓÒ±ß°´Å¥±³¾°ÎÄ¼ş£¬bw,bhÎª°´Å¥¿í¸ß,bx,byÎªÍ¼Æ¬Î»ÖÃ,isHorizontalÎªÍ¼Æ¬ÊÇ·ñË®Æ½ÅÅÁĞ
+-- è£…è½½comboçš„å›¾ç‰‡ï¼šeditä¸ºè¾“å…¥æ èƒŒæ™¯æ–‡ä»¶ï¼Œw,hä¸ºå¯¹åº”å®½é«˜,ex,eyå›¾ç‰‡ä½ç½®,buttonä¸ºå³è¾¹æŒ‰é’®èƒŒæ™¯æ–‡ä»¶ï¼Œbw,bhä¸ºæŒ‰é’®å®½é«˜,bx,byä¸ºå›¾ç‰‡ä½ç½®,isHorizontalä¸ºå›¾ç‰‡æ˜¯å¦æ°´å¹³æ’åˆ—
 function UI_LoadComboImage( id, edit, ew, eh, ex, ey, button, bw, bh, bx, by, isHorizontal )
 	CLU_Call( "UI_LoadComboImage", id, edit, ew, eh, ex, ey, button, bw, bh, bx, by, isHorizontal )
 end
 
--- ÉèÖÃcomboµÄlistÏòÉÏ,»¹ÊÇÏòÏÂ
+-- è®¾ç½®comboçš„listå‘ä¸Š,è¿˜æ˜¯å‘ä¸‹
 function UI_ComboSetStyle( id, IsDown )
 	CLU_Call( "UI_ComboSetStyle", id, IsDown )
 end
 
--- ÉèÖÃcomboµÄtextÎÄ×ÖÑÕÉ«
+-- è®¾ç½®comboçš„textæ–‡å­—é¢œè‰²
 function UI_ComboSetTextColor( id, color )
 	CLU_Call( "UI_ComboSetTextColor", id, color )
 end
 
--- ×°ÔØFixListµÄÑ¡Ôñ¿òÍ¼Ïó
+-- è£…è½½FixListçš„é€‰æ‹©æ¡†å›¾è±¡
 function UI_LoadListFixSelect( id, imagefile, w, h, sx, sy )
 	CLU_Call( "UI_LoadListFixSelect", id, imagefile, w, h, sx, sy )
 end
 
--- ¿½±´ÁíÒ»¸ö¿Ø¼şµÄËùÓĞ×´Ì¬£¬Èç¹û²»ÊÇÍ¬ÀàĞÍ¿Ø¼ş£¬¿½±´»áÊ§°Ü
+-- æ‹·è´å¦ä¸€ä¸ªæ§ä»¶çš„æ‰€æœ‰çŠ¶æ€ï¼Œå¦‚æœä¸æ˜¯åŒç±»å‹æ§ä»¶ï¼Œæ‹·è´ä¼šå¤±è´¥
 function UI_CopyCompent( targetid, sourceid )
 	CLU_Call( "UI_CopyCompent", targetid, sourceid )
 end
 
--- Ôö¼ÓlistµÄÎÄ±¾
+-- å¢åŠ listçš„æ–‡æœ¬
 function UI_AddListText( id, text )
 	CLU_Call( "UI_AddListText", id, text )
 end
 
--- ¼ÓÔØListÖĞÑ¡ÔñÌõ±³¾°Í¼Æ¬
+-- åŠ è½½Listä¸­é€‰æ‹©æ¡èƒŒæ™¯å›¾ç‰‡
 function UI_ListLoadSelectImage( id, file, w, h, sx, sy )
 	CLU_Call( "UI_ListLoadSelectImage", id, file, w, h, sx, sy )
 end
 
--- ¼ÓÔØListÖĞÏîÄ¿Ìõ±³¾°Í¼Æ¬
+-- åŠ è½½Listä¸­é¡¹ç›®æ¡èƒŒæ™¯å›¾ç‰‡
 function UI_LoadListItemImage( id, file, w, h, sx, sy, item_w, item_h )
 	CLU_Call( "UI_LoadListItemImage", id, file, w, h, sx, sy, item_w, item_h )
 end
 
--- ÉèÖÃListÖĞÃ¿Ò»¸öItemµÄ±ß¾à
+-- è®¾ç½®Listä¸­æ¯ä¸€ä¸ªItemçš„è¾¹è·
 function UI_ListSetItemMargin( id, left, top )
 	CLU_Call( "UI_ListSetItemMargin", id, left, top )
 end
 
--- ÉèÖÃListÖĞÃ¿Ò»¸öItemµÄ±³¾°Í¼±ß¾à
+-- è®¾ç½®Listä¸­æ¯ä¸€ä¸ªItemçš„èƒŒæ™¯å›¾è¾¹è·
 function UI_ListSetItemImageMargin( id, left, top )
 	CLU_Call( "UI_ListSetItemImageMargin", id, left, top )
 end
 
--- Ôö¼ÓlistµÄÎÄ±¾(´ø½ø¶ÈÌõ),prgressÎª²ÎÊı,0.0~1.0
+-- å¢åŠ listçš„æ–‡æœ¬(å¸¦è¿›åº¦æ¡),prgressä¸ºå‚æ•°,0.0~1.0
 function UI_AddListBarText( id, text, prgress )
 	CLU_Call( "UI_AddListBarText", id, text, prgress )
 end
 
--- ÉèÖÃListµÄÎÄ×Ö±³¾°É«ÒÔ¼°Ñ¡ÔñÊ±µÄÑÕÉ«
+-- è®¾ç½®Listçš„æ–‡å­—èƒŒæ™¯è‰²ä»¥åŠé€‰æ‹©æ—¶çš„é¢œè‰²
 function UI_SetListFontColor( listid, nBackColor, nSelectColor )
 	CLU_Call( "UI_SetListFontColor", listid, nBackColor, nSelectColor )
 end
 
--- ÉèÖÃListĞĞ¸ß
+-- è®¾ç½®Listè¡Œé«˜
 function UI_SetListRowHeight( id, height )
 	CLU_Call( "UI_SetListRowHeight", id, height )
 end
 
--- Ôö¼Ócheckboxµ½×éÖĞ
+-- å¢åŠ checkboxåˆ°ç»„ä¸­
 function UI_AddGroupBox( id, checkbox )
 	CLU_Call( "UI_AddGroupBox", id, checkbox )
 end
 
 	
--- ÉèÖÃ½ø¶ÈÌõÏÔÊ¾·ç¸ñ
+-- è®¾ç½®è¿›åº¦æ¡æ˜¾ç¤ºé£æ ¼
 function UI_SetProgressStyle( id, style )
 	CLU_Call( "UI_SetProgressStyle", id, style )
 end
 
 PROGRESS_HINT_NUM = 0
 PROGRESS_HINT_PERCENT = 1
--- ÉèÖÃ½ø¶ÈÌõÌáÊ¾·ç¸ñÏÔÊ¾·ç¸ñ
+-- è®¾ç½®è¿›åº¦æ¡æç¤ºé£æ ¼æ˜¾ç¤ºé£æ ¼
 function UI_SetProgressHintStyle( id, style )
 	CLU_Call( "UI_SetProgressHintStyle", id, style )
 end
@@ -609,17 +609,17 @@ function UI_SetProgressActiveMouse( id, style )
 end
 
 
--- ÉèÖÃ¹ö¶¯ÖáÏÔÊ¾·ç¸ñ
+-- è®¾ç½®æ»šåŠ¨è½´æ˜¾ç¤ºé£æ ¼
 function UI_SetScrollStyle( id, style )
 	CLU_Call( "UI_SetScrollStyle", id, style )
 end
 
--- ÉèÖÃÊäÈë¿ò×î´óÊäÈë×ÖÊı,µ¥Î»:byte
+-- è®¾ç½®è¾“å…¥æ¡†æœ€å¤§è¾“å…¥å­—æ•°,å•ä½:byte
 function UI_SetEditMaxNum( id, num )
 	CLU_Call( "UI_SetEditMaxNum", id, num )
 end
 
--- ÉèÖÃÊäÈë¿ò¹â±êÑÕÉ«
+-- è®¾ç½®è¾“å…¥æ¡†å…‰æ ‡é¢œè‰²
 function UI_SetEditCursorColor( id, color )
 	CLU_Call( "UI_SetEditCursorColor", id, color )
 end
@@ -632,17 +632,17 @@ function UI_SetEditClue( id, font, color )
 	CLU_Call( "UI_SetEditClue", id, font, color )
 end
 
--- ÉèÖÃÊäÈë¿ò»Ø³µÊ±ÏìÓ¦µÄ°´Å¥
+-- è®¾ç½®è¾“å…¥æ¡†å›è½¦æ—¶å“åº”çš„æŒ‰é’®
 function UI_SetEditEnterButton( nEditID, nButtonID )
 	CLU_Call( "UI_SetEditEnterButton", nEditID, nButtonID )
 end
 
--- ÉèÖÃÊäÈë¿ò×î´óÊäÈë×ÖÊı,µ¥Î»:byte
+-- è®¾ç½®è¾“å…¥æ¡†æœ€å¤§è¾“å…¥å­—æ•°,å•ä½:byte
 function UI_SetEditMaxNumVisible( id, num )
 	CLU_Call( "UI_SetEditMaxNumVisible", id, num )
 end
 
--- ÉèÖÃ¿Ø¼ş×ÖÌåÑÕÉ«
+-- è®¾ç½®æ§ä»¶å­—ä½“é¢œè‰²
 function UI_SetTextColor( id, color )
 	CLU_Call( "UI_SetTextColor", id, color )
 end
@@ -651,12 +651,12 @@ function UI_SetTextHtmlColor( id, color )
 	CLU_Call( "UI_SetTextColor", id, argbColor(color) )
 end
 
--- ÉèÖÃgridµ¥Ôª¼ä¾à,Ä¬ÈÏÎª2
+-- è®¾ç½®gridå•å…ƒé—´è·,é»˜è®¤ä¸º2
 function UI_SetGridSpace( id, x, y )
 	CLU_Call( "UI_SetGridSpace", id, x, y )
 end
 
--- ÉèÖÃgridÈİÁ¿,²ÎÊı¶¼²»ÄÜÎªÁã
+-- è®¾ç½®gridå®¹é‡,å‚æ•°éƒ½ä¸èƒ½ä¸ºé›¶
 function UI_SetGridContent( id, nRow, nCol )
 	CLU_Call( "UI_SetGridContent", id, nRow, nCol )
 end
@@ -669,57 +669,57 @@ function UI_SetFontTree( id, font)
 	CLU_Call("UI_SetFontTree", id, font)
 end
 
--- ÉèÖÃGoodGridÖĞµÄµ¥Ôª¸ñ±³¾°
+-- è®¾ç½®GoodGridä¸­çš„å•å…ƒæ ¼èƒŒæ™¯
 function UI_GoodGridLoadUnitImage( id, file, w, h, tx, ty )
 	CLU_Call( "UI_GoodGridLoadUnitImage", id, file, w, h, tx, ty )
 end
 
--- ÉèÖÃgridµ¥Ôª¿í¸ß,Èç¹û²»ÉèÖÃ,ÔòÎª40
+-- è®¾ç½®gridå•å…ƒå®½é«˜,å¦‚æœä¸è®¾ç½®,åˆ™ä¸º40
 function UI_SetGridUnitSize( id, w, h )
 	CLU_Call( "UI_SetGridUnitSize", id, w, h )
 end
 
--- Ôö¼Ó±íÇéµ½GridÖĞ,ÆäÖĞframeÎª±íÇé¶¯»­Ö¡Êı
+-- å¢åŠ è¡¨æƒ…åˆ°Gridä¸­,å…¶ä¸­frameä¸ºè¡¨æƒ…åŠ¨ç”»å¸§æ•°
 function UI_AddFaceToGrid( id, file, w, h, sx, sy, frame, nTag )
 	CLU_Call( "UI_AddFaceToGrid", id, file, w, h, sx, sy, frame, nTag )
 end
 
--- ÉèÖÃ×î´óĞĞÊı
+-- è®¾ç½®æœ€å¤§è¡Œæ•°
 function UI_FixListSetMaxNum( id, num )
 	CLU_Call( "UI_FixListSetMaxNum", id, num )
 end
 
--- Éè¶¨Ã¿ĞĞÏÔÊ¾µÄÓ¢ÎÄ×ÖÊı
+-- è®¾å®šæ¯è¡Œæ˜¾ç¤ºçš„è‹±æ–‡å­—æ•°
 function UI_SetMemoMaxNumPerRow(id, num) 
     CLU_Call( "UI_SetMemoMaxNumPerRow", id, num )
 end
 
--- Éè¶¨MemoÃ¿ĞĞÏÔÊ¾µÄ¸ß¶È
+-- è®¾å®šMemoæ¯è¡Œæ˜¾ç¤ºçš„é«˜åº¦
 function UI_SetMemoRowHeight(id, num) 
     CLU_Call( "UI_SetMemoRowHeight", id, num )
 end
 
--- ÉèÖÃRichµÄ²Ã¼ôÇø
+-- è®¾ç½®Richçš„è£å‰ªåŒº
 function UI_RichSetClipRect(id, x0, y0, x1, y1) 
     CLU_Call( "UI_RichSetClipRect", id, x0, y0, x1, y1 )
 end
 
--- ÉèÖÃRichµÄ×î´óÈİÄÉĞĞÊı
+-- è®¾ç½®Richçš„æœ€å¤§å®¹çº³è¡Œæ•°
 function UI_RichSetMaxLine(id, line) 
     CLU_Call( "UI_RichSetMaxLine", id, line )
 end
 
--- ÉèÖÃÃ¿Ò»ĞĞ¶ÔÓ¦µÄÎÄ±¾
+-- è®¾ç½®æ¯ä¸€è¡Œå¯¹åº”çš„æ–‡æœ¬
 function UI_FixListSetText( id, index, text )
 	CLU_Call( "UI_FixListSetText", id, index, text )
 end
 
--- ÉèÖÃĞĞ¾à
+-- è®¾ç½®è¡Œè·
 function UI_FixListSetRowSpace( id, height )
 	CLU_Call( "UI_FixListSetRowSpace", id, height )
 end
 
--- ÉèÖÃCheckFixListÖĞCheckµÄÏÔÊ¾±ß¾à
+-- è®¾ç½®CheckFixListä¸­Checkçš„æ˜¾ç¤ºè¾¹è·
 function UI_CheckFixListSetCheckMargin( id, left, top )
 	CLU_Call( "UI_CheckFixListSetCheckMargin", id, left, top )
 end
@@ -730,12 +730,13 @@ end
 
 enumTreeAddImage = 0
 enumTreeSubImage = 1
--- ×°ÔØÊ÷ĞÍ¿Ø¼şÍ¼Æ¬,nTypeÎª×°ÔØÊÇÄÇÕÅÍ¼Æ¬,Í¼Æ¬´óĞ¡½¨Òé16x16,ÏÔÊ¾¿í¸ßitemw,itemh
+-- è£…è½½æ ‘å‹æ§ä»¶å›¾ç‰‡,nTypeä¸ºè£…è½½æ˜¯é‚£å¼ å›¾ç‰‡,å›¾ç‰‡å¤§å°å»ºè®®16x16,æ˜¾ç¤ºå®½é«˜itemw,itemh
 function UI_TreeLoadImage( nTreeID, nType, imagefile, w, h, sx, sy, itemw, itemh )
 	CLU_Call( "UI_TreeLoadImage", nTreeID, nType, imagefile, w, h, sx, sy, itemw, itemh )
 end
 
--- ´´½¨Ò»¸öÎÄ±¾Item,ÓÃÓÚ·ÅÈëtreenodeÖĞ
+
+-- åˆ›å»ºä¸€ä¸ªæ–‡æœ¬Item,ç”¨äºæ”¾å…¥treenodeä¸­
 function UI_CreateTextItem( text, color )
 	local ret = CLU_Call( "UI_CreateTextItem", text, color )
 	if ret==-1 then 
@@ -744,7 +745,7 @@ function UI_CreateTextItem( text, color )
 	return ret	
 end
 
--- ´´½¨Ò»¸öÍ¼ÏóItem,ÓÃÓÚ·ÅÈëtreenodeÖĞ
+-- åˆ›å»ºä¸€ä¸ªå›¾è±¡Item,ç”¨äºæ”¾å…¥treenodeä¸­
 function UI_CreateGraphItem( file, w, h, sx, sy, frame )
 	local ret = CLU_Call( "UI_CreateGraphItem", file, w, h, sx, sy, frame )
 	if ret==-1 then 
@@ -753,7 +754,7 @@ function UI_CreateGraphItem( file, w, h, sx, sy, frame )
 	return ret	
 end
 
--- ´´½¨Ò»¸ö´ø±³¾°µÄItem,ÓÃÓÚ·ÅÈëtreenodeÖĞ
+-- åˆ›å»ºä¸€ä¸ªå¸¦èƒŒæ™¯çš„Item,ç”¨äºæ”¾å…¥treenodeä¸­
 function UI_CreateNoteGraphItem( file, w, h, sx, sy, frame, text, textx, texty )
 	local ret = CLU_Call( "UI_CreateNoteGraphItem", file, w, h, sx, sy, frame, text, textx, texty )
 	if ret==-1 then 
@@ -762,7 +763,7 @@ function UI_CreateNoteGraphItem( file, w, h, sx, sy, frame, text, textx, texty )
 	return ret	
 end
 
--- ´´½¨Ò»¸öµ¥¸ötreenode,²ÎÊıÒÀ´ÎÎª:treeid,ÒÑ¾­´´½¨µÄitem,¸¸½Úµãid(Îª-1,ÔòÖ±½Ó²åÈëµ½¸ù½ÚµãÖĞ)
+-- åˆ›å»ºä¸€ä¸ªå•ä¸ªtreenode,å‚æ•°ä¾æ¬¡ä¸º:treeid,å·²ç»åˆ›å»ºçš„item,çˆ¶èŠ‚ç‚¹id(ä¸º-1,åˆ™ç›´æ¥æ’å…¥åˆ°æ ¹èŠ‚ç‚¹ä¸­)
 function UI_CreateSingleNode( treeid, itemid, nodeid_parent )
 	local ret = CLU_Call( "UI_CreateSingleNode", treeid, itemid, nodeid_parent )
 	if ret==-1 then 
@@ -771,7 +772,7 @@ function UI_CreateSingleNode( treeid, itemid, nodeid_parent )
 	return ret	
 end
 
--- ´´½¨Ò»¸ö±í¸ñÊ½µÄtreenode,²ÎÊıÒÀ´ÎÎª:treeid,Ã¿ĞĞÁĞÊı,µ¥Ôª¿í¸ß,¸¸½Úµãid(Îª-1,ÔòÖ±½Ó²åÈëµ½¸ù½ÚµãÖĞ)
+-- åˆ›å»ºä¸€ä¸ªè¡¨æ ¼å¼çš„treenode,å‚æ•°ä¾æ¬¡ä¸º:treeid,æ¯è¡Œåˆ—æ•°,å•å…ƒå®½é«˜,çˆ¶èŠ‚ç‚¹id(ä¸º-1,åˆ™ç›´æ¥æ’å…¥åˆ°æ ¹èŠ‚ç‚¹ä¸­)
 function UI_CreateGridNode( treeid, itemid, maxcol, uw, uh, nodeid_parent )
 	local ret = CLU_Call( "UI_CreateGridNode", treeid, itemid, maxcol, uw, uh, nodeid_parent )
 	if ret==-1 then 
@@ -780,7 +781,7 @@ function UI_CreateGridNode( treeid, itemid, maxcol, uw, uh, nodeid_parent )
 	return ret	
 end
 
--- ´´½¨Ò»¸öGraph
+-- åˆ›å»ºä¸€ä¸ªGraph
 function UI_CreateGraphItemTex( tx, ty, tw, th, scale_x, scale_y, nTextureID, nTag )
 	local ret = CLU_Call( "UI_CreateGraphItemTex", tx, ty, tw, th, scale_x, scale_y, nTextureID, nTag )
 	if ret==-1 then 
@@ -790,12 +791,12 @@ function UI_CreateGraphItemTex( tx, ty, tw, th, scale_x, scale_y, nTextureID, nT
 end
 
 
--- ½«itemid¼ÓÈëµ½nodeidÖĞ
+-- å°†itemidåŠ å…¥åˆ°nodeidä¸­
 function UI_GridNodeAddItem( nodeid, itemid )
 	CLU_Call( "UI_GridNodeAddItem", nodeid, itemid )
 end
 
--- ÔÚPage¶ÔÏóÖĞ´´½¨Ò»¸öPageItem¶ÔÏó
+-- åœ¨Pageå¯¹è±¡ä¸­åˆ›å»ºä¸€ä¸ªPageItemå¯¹è±¡
 function UI_CreatePageItem( page_id )
 	local ret = CLU_Call( "UI_CreatePageItem", page_id )
 	if ret==-1 then 
@@ -804,15 +805,15 @@ function UI_CreatePageItem( page_id )
 	return ret
 end
 
--- ÉèÖÃÒ»¸öPageµÄµã»÷°´Å¥°Ú·Å·½Ê½ÒÔ¼°µ¥Ôª¿í¸ß
-PAGE_BUTTON_LEFT_UP=0		-- ÒÀ´Î°ÚÔÚ×óÉÏ
-PAGE_BUTTON_FULL_UP=1		-- ³äÂúÉÏ²¿
-PAGE_BUTTON_CUSTOM =2		-- ×Ô¶¨
+-- è®¾ç½®ä¸€ä¸ªPageçš„ç‚¹å‡»æŒ‰é’®æ‘†æ”¾æ–¹å¼ä»¥åŠå•å…ƒå®½é«˜
+PAGE_BUTTON_LEFT_UP=0		-- ä¾æ¬¡æ‘†åœ¨å·¦ä¸Š
+PAGE_BUTTON_FULL_UP=1		-- å……æ»¡ä¸Šéƒ¨
+PAGE_BUTTON_CUSTOM =2		-- è‡ªå®š
 function UI_SetPageButton( page_id, button_style, bw, bh )
 	CLU_Call( "UI_SetPageButton", page_id, button_style, bw, bh )
 end
 
--- »ñµÃPageItemÖĞµÄ¶ÔÏó
+-- è·å¾—PageItemä¸­çš„å¯¹è±¡
 PAGE_ITEM_IMAGE=0
 PAGE_ITEM_TITLE=1	
 function UI_GetPageItemObj( page_item_id, type )
@@ -823,31 +824,31 @@ function UI_GetPageItemObj( page_item_id, type )
 	return ret
 end
 
--- ×°ÔØPAGE_ITEM_TITLEÖĞÍ¼Æ¬Ê±µÄÁ½ÖÖ×´Ì¬
+-- è£…è½½PAGE_ITEM_TITLEä¸­å›¾ç‰‡æ—¶çš„ä¸¤ç§çŠ¶æ€
 PAGE_ITEM_TITLE_NORMAL=0
 PAGE_ITEM_TITLE_ACTIVE=1
 
--- ½«Ò»¸ö¶ÔÏó¼ÓÈëµ½Ò»¸öÈİÆ÷ÖĞ
+-- å°†ä¸€ä¸ªå¯¹è±¡åŠ å…¥åˆ°ä¸€ä¸ªå®¹å™¨ä¸­
 function UI_AddCompent( container_id, compent_id )
 	CLU_Call( "UI_AddCompent", container_id, compent_id )
 end
 
--- ÉèÖÃÀ©Õ¹LabelµÄÒõÓ°±³¾°ÑÕÉ«
+-- è®¾ç½®æ‰©å±•Labelçš„é˜´å½±èƒŒæ™¯é¢œè‰²
 function UI_SetLabelExShadowColor( label_id, color )
 	CLU_Call( "UI_SetLabelExShadowColor", label_id, color )
 end
 
--- ÍÏ¶¯Ê±¶ÔÆëµÄ±í¸ñµÄµ¥Ôª¿í¸ß
+-- æ‹–åŠ¨æ—¶å¯¹é½çš„è¡¨æ ¼çš„å•å…ƒå®½é«˜
 function UI_SetDragSnapToGrid( nGridWidth, nGridHeight )
 	CLU_Call( "UI_SetDragSnapToGrid", nGridWidth, nGridHeight )
 end
 
--- ½¨Á¢ÎÄ×ÖÓëÍ¼ÏóµÄÓ³Éä,nIndexÊÇË÷Òı,ºóÃæÊÇÍ¼Æ¬
+-- å»ºç«‹æ–‡å­—ä¸å›¾è±¡çš„æ˜ å°„,nIndexæ˜¯ç´¢å¼•,åé¢æ˜¯å›¾ç‰‡
 function UI_SetTextParse( nIndex, file, w, h, sx, sy, frame )
 	CLU_Call( "UI_SetTextParse", nIndex, file, w, h, sx, sy, frame )
 end
 
--- ×°ÔØ´ø½ø¶ÈÌõµÄÎÄ×ÖµÄ½ø¶ÈÌõ
+-- è£…è½½å¸¦è¿›åº¦æ¡çš„æ–‡å­—çš„è¿›åº¦æ¡
 function UI_ItemBarLoadImage( file, w, h, tx, ty )
 	CLU_Call( "UI_ItemBarLoadImage", file, w, h, tx, ty )
 end
@@ -856,37 +857,37 @@ function UI_MenuLoadFont(id, font, hover, normal, disabled)
 	CLU_Call( "UI_MenuLoadFont", id, font, hover, normal, disabled)
 end
 
--- ×°ÔØ²Ëµ¥±³¾°Í¼Æ¬
+-- è£…è½½èœå•èƒŒæ™¯å›¾ç‰‡
 function UI_MenuLoadImage( id, IsShowFrame, IsTitle, clientfile, cw, ch, tx, ty, framefile, w, h )
 	CLU_Call( "UI_MenuLoadImage", id, IsShowFrame, IsTitle, clientfile, cw, ch, tx, ty, framefile, w, h )
 end
 
--- Ôö¼Ó²Ëµ¥
+-- å¢åŠ èœå•
 function UI_MenuAddText( id, text )
 	CLU_Call( "UI_MenuAddText", id, text )
 end
 
--- Ôö¼ÓÓÃÓÚÓÃ»§ÃûµÄ¹ıÂË×Ö·û
+-- å¢åŠ ç”¨äºç”¨æˆ·åçš„è¿‡æ»¤å­—ç¬¦
 function UI_AddFilterTextToNameTable(text )
 	CLU_Call( "UI_AddFilterTextToNameTable",text )
 end
 
--- Ôö¼ÓÓÃÓÚÁÄÌìÄÚÈİµÄ¹ıÂË×Ö·û
+-- å¢åŠ ç”¨äºèŠå¤©å†…å®¹çš„è¿‡æ»¤å­—ç¬¦
 function UI_AddFilterTextToDialogTable(text )
 	CLU_Call( "UI_AddFilterTextToDialogTable",text )
 end
 
--- ¸Ä±äÍ·¶¥ÉÏÁÄÌìÊ±µÄ±³¾°ÑÕÉ«
+-- æ”¹å˜å¤´é¡¶ä¸ŠèŠå¤©æ—¶çš„èƒŒæ™¯é¢œè‰²
 function UI_SetHeadSayBkgColor( color )
 	CLU_Call( "UI_SetHeadSayBkgColor", color )
 end
 
--- ÉèÖÃTitleµÄ×ÖÌåÒÔ¼°ÑÕÉ«
+-- è®¾ç½®Titleçš„å­—ä½“ä»¥åŠé¢œè‰²
 function UI_SetTitleFont( id, font, color, height )
 	CLU_Call( "UI_SetTitleFont", id, font, color, height )
 end
 
--- ÉèÖÃÀ©Õ¹LabelµÄ×ÖÌå,ÒÔ¼°ÊÇ·ñÏÔÊ¾ÒõÓ°
+-- è®¾ç½®æ‰©å±•Labelçš„å­—ä½“,ä»¥åŠæ˜¯å¦æ˜¾ç¤ºé˜´å½±
 function UI_SetLabelExFont( id, nFontIndex, IsShadow, dwShadowColor )
 	CLU_Call("UI_SetLabelExFont", id, nFontIndex, IsShadow, dwShadowColor )
 end
@@ -895,7 +896,7 @@ function UI_SetCaptionIsCenter( id, szBool )
 	CLU_Call("UI_SetCaptionIsCenter", id, szBool )
 end
 
--- ×°ÔØ¼¼ÄÜ¼¤»îÊ±µÄ±ß¿ò
+-- è£…è½½æŠ€èƒ½æ¿€æ´»æ—¶çš„è¾¹æ¡†
 function UI_LoadSkillActiveImage( file, maxframe, w, h, sx, sy )
 	CLU_Call("UI_LoadSkillActiveImage", file, maxframe, w, h, sx, sy )
 end
@@ -908,7 +909,7 @@ function UI_LoadGrdGacha(type, file, w, h, sx, sy )
 	CLU_Call("UI_LoadGrdGacha", type, file, w, h, sx, sy )
 end
 
--- ×°ÔØ±´¿Ç³äµçµÄÍ¼Æ¬
+-- è£…è½½è´å£³å……ç”µçš„å›¾ç‰‡
 function UI_LoadChargeImage( link, file, maxframe, w, h, sx, sy )
 	CLU_Call("UI_LoadChargeImage", link, file, maxframe, w, h, sx, sy )
 end
@@ -939,17 +940,17 @@ function addEquipGroup(X,Y,Xoff,Yoff,names,form,skillid)
 end
 
 ------
--- §¬§à§ß§Ó§Ö§â§ä§Ñ§è§Ú§ñ §è§Ó§Ö§ä§Ñ html to argb
+-- ĞšĞ¾Ğ½Ğ²ĞµÑ€Ñ‚Ğ°Ñ†Ğ¸Ñ Ñ†Ğ²ĞµÑ‚Ğ° html to argb
 ------
 function argbColor(hex)
-    -- §±§â§Ö§à§Ò§â§Ñ§Ù§å§Ö§Ş HEX §Ó §Ü§à§Ş§á§à§ß§Ö§ß§ä§í R, G, B
+    -- ĞŸÑ€ĞµĞ¾Ğ±Ñ€Ğ°Ğ·ÑƒĞµĞ¼ HEX Ğ² ĞºĞ¾Ğ¼Ğ¿Ğ¾Ğ½ĞµĞ½Ñ‚Ñ‹ R, G, B
     local r = tonumber(string.sub(hex, 1, 2), 16)
     local g = tonumber(string.sub(hex, 3, 4), 16)
     local b = tonumber(string.sub(hex, 5, 6), 16)
     
-    local a = 255  -- §á§à§İ§ß§à§ã§ä§î§ğ §ß§Ö§á§â§à§Ù§â§Ñ§é§ß§í§Û
+    local a = 255  -- Ğ¿Ğ¾Ğ»Ğ½Ğ¾ÑÑ‚ÑŒÑ Ğ½ĞµĞ¿Ñ€Ğ¾Ğ·Ñ€Ğ°Ñ‡Ğ½Ñ‹Ğ¹
 
-    -- §³§é§Ú§ä§Ñ§Ö§Ş §Ù§ß§Ñ§é§Ö§ß§Ú§Ö ARGB §Ó§â§å§é§ß§å§ğ §é§Ö§â§Ö§Ù §å§Ş§ß§à§Ø§Ö§ß§Ú§Ö
+    -- Ğ¡Ñ‡Ğ¸Ñ‚Ğ°ĞµĞ¼ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ ARGB Ğ²Ñ€ÑƒÑ‡Ğ½ÑƒÑ Ñ‡ĞµÑ€ĞµĞ· ÑƒĞ¼Ğ½Ğ¾Ğ¶ĞµĞ½Ğ¸Ğµ
     return a * 16777216 + r * 65536 + g * 256 + b
     -- 16777216 = 2^24, 65536 = 2^16, 256 = 2^8
 end
@@ -958,47 +959,47 @@ function setBackground(form, isbClose, form_size_x, form_size_y, alpha)
 	local image_x, image_y = 54, 54
 	local tile_size = 18
 	
-	-- §­§Ö§Ó§í§Û §Ó§Ö§â§ç§ß§Ú§Û §å§Ô§à§İ
+	-- Ğ›ĞµĞ²Ñ‹Ğ¹ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, 0)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 0, 0)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §Ó§Ö§â§ç§ß§Ú§Ş §İ§Ö§Ó§í§Ş §Ú §á§â§Ñ§Ó§í§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¼ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ¸ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size*2), tile_size, tile_size, 0)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, 0)
 	UI_SetAlpha(image, alpha)
 	
-	-- §±§â§Ñ§Ó§í§Û §Ó§Ö§â§ß§Ú§Û §å§Ô§à§İ
+	-- ĞŸÑ€Ğ°Ğ²Ñ‹Ğ¹ Ğ²ĞµÑ€Ğ½Ğ¸Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, 0)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, 0)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §İ§Ö§Ó§í§Ş §Ó§Ö§â§ç§ß§Ú§Ş §Ú §ß§Ú§Ø§ß§Ú§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¼ Ğ¸ Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, form_size_y - (tile_size*2), 0, tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 0, tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §á§â§Ñ§Ó§í§Ş §Ó§Ö§â§ç§ß§Ú§Ş §Ú §ß§Ú§Ø§ß§Ú§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¼ Ğ¸ Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, form_size_y - (tile_size*2), form_size_x - tile_size, tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size*2, tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §è§Ö§ß§ä§â§Ñ
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ñ†ĞµĞ½Ñ‚Ñ€Ğ°
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size*2), form_size_y - (tile_size*2), tile_size, tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §¯§Ú§Ø§ß§Ú§Û §İ§Ö§Ó§í§Û §å§Ô§à§İ
+	-- ĞĞ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ»ĞµĞ²Ñ‹Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, 0, form_size_y - tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 0, image_y - tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §ß§Ú§Ø§ß§Ú§Ş§Ú §İ§Ö§Ó§í§Ş §Ú §á§â§Ñ§Ó§í§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¼Ğ¸ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ¸ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size * 2), tile_size, tile_size, form_size_y - tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, tile_size, image_y - tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §¯§Ú§Ø§ß§Ú§Û §á§â§Ñ§Ó§í§Û §å§Ô§à§İ
+	-- ĞĞ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_size_x - tile_size, form_size_y - tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, image_x - tile_size, image_y - tile_size)
 	UI_SetAlpha(image, alpha)
@@ -1014,47 +1015,47 @@ function setBackground2(form, form_size_x, form_size_y, alpha, posx, posy)
 	local image_x, image_y = 55, 55
 	local tile_size = 18
 	
-	-- §­§Ö§Ó§í§Û §Ó§Ö§â§ç§ß§Ú§Û §å§Ô§à§İ
+	-- Ğ›ĞµĞ²Ñ‹Ğ¹ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx, posy)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52, 49)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §Ó§Ö§â§ç§ß§Ú§Ş §İ§Ö§Ó§í§Ş §Ú §á§â§Ñ§Ó§í§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¼ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ¸ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size*2), tile_size, posx + tile_size, posy)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size, 49)
 	UI_SetAlpha(image, alpha)
 	
-	-- §±§â§Ñ§Ó§í§Û §Ó§Ö§â§ß§Ú§Û §å§Ô§à§İ
+	-- ĞŸÑ€Ğ°Ğ²Ñ‹Ğ¹ Ğ²ĞµÑ€Ğ½Ğ¸Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx + form_size_x - tile_size, posy)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + image_x - tile_size, 49)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §İ§Ö§Ó§í§Ş §Ó§Ö§â§ç§ß§Ú§Ş §Ú §ß§Ú§Ø§ß§Ú§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¼ Ğ¸ Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, form_size_y - (tile_size*2), posx, posy + tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52, 49 + tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §á§â§Ñ§Ó§í§Ş §Ó§Ö§â§ç§ß§Ú§Ş §Ú §ß§Ú§Ø§ß§Ú§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¼ Ğ¸ Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, form_size_y - (tile_size*2), posx + form_size_x - tile_size, posy + tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size*2, 49 + tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §è§Ö§ß§ä§â§Ñ
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ñ†ĞµĞ½Ñ‚Ñ€Ğ°
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size*2), form_size_y - (tile_size*2), posx + tile_size, posy + tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size, 49 + tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §¯§Ú§Ø§ß§Ú§Û §İ§Ö§Ó§í§Û §å§Ô§à§İ
+	-- ĞĞ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ»ĞµĞ²Ñ‹Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx, posy + form_size_y - tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52, 49 + image_y - tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§İ§Ú§Ó§Ü§Ñ §Ş§Ö§Ø§Õ§å §ß§Ú§Ø§ß§Ú§Ş§Ú §İ§Ö§Ó§í§Ş §Ú §á§â§Ñ§Ó§í§Ş §å§Ô§İ§à§Ş
+	-- Ğ—Ğ°Ğ»Ğ¸Ğ²ĞºĞ° Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¼Ğ¸ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ¸ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ ÑƒĞ³Ğ»Ğ¾Ğ¼
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", form_size_x - (tile_size * 2), tile_size, posx + tile_size, posy + form_size_y - tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + tile_size, 49 + image_y - tile_size)
 	UI_SetAlpha(image, alpha)
 	
-	-- §¯§Ú§Ø§ß§Ú§Û §á§â§Ñ§Ó§í§Û §å§Ô§à§İ
+	-- ĞĞ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¹ ÑƒĞ³Ğ¾Ğ»
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, posx + form_size_x - tile_size, posy + form_size_y - tile_size)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 52 + image_x - tile_size, 49 + image_y - tile_size)
 	UI_SetAlpha(image, alpha)
@@ -1062,14 +1063,14 @@ end
 
 function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, form_pos_y)
 	local tile_size = 7
-	local image_x, image_y = 134, 21  -- §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§í §ä§Ö§Ü§ã§ä§å§â§í §Õ§İ§ñ §è§Ö§ß§ä§â§Ñ
+	local image_x, image_y = 134, 21  -- ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ñ‹ Ñ‚ĞµĞºÑÑ‚ÑƒÑ€Ñ‹ Ğ´Ğ»Ñ Ñ†ĞµĞ½Ñ‚Ñ€Ğ°
 
-	-- === §µ§Ô§İ§í ===
+	-- === Ğ£Ğ³Ğ»Ñ‹ ===
 	local corners = {
-		{ x=0, y=0, tex_x=110, tex_y=0 },                  -- §Ó§Ö§â§ç§ß§Ú§Û §İ§Ö§Ó§í§Û
-		{ x=form_size_x-tile_size, y=0, tex_x=158, tex_y=0 },         -- §Ó§Ö§â§ç§ß§Ú§Û §á§â§Ñ§Ó§í§Û
-		{ x=0, y=form_size_y-tile_size, tex_x=110, tex_y=48 },        -- §ß§Ú§Ø§ß§Ú§Û §İ§Ö§Ó§í§Û
-		{ x=form_size_x-tile_size, y=form_size_y-tile_size, tex_x=158, tex_y=48 } -- §ß§Ú§Ø§ß§Ú§Û §á§â§Ñ§Ó§í§Û
+		{ x=0, y=0, tex_x=110, tex_y=0 },                  -- Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¹ Ğ»ĞµĞ²Ñ‹Ğ¹
+		{ x=form_size_x-tile_size, y=0, tex_x=158, tex_y=0 },         -- Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¹ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¹
+		{ x=0, y=form_size_y-tile_size, tex_x=110, tex_y=48 },        -- Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ»ĞµĞ²Ñ‹Ğ¹
+		{ x=form_size_x-tile_size, y=form_size_y-tile_size, tex_x=158, tex_y=48 } -- Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¹
 	}
 	for _, corner in ipairs(corners) do
 		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + corner.x, form_pos_y + corner.y)
@@ -1077,7 +1078,7 @@ function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, 
 		UI_SetAlpha(img, alpha)
 	end
 
-	-- === §£§Ö§â§ç§ß§ñ§ñ §Ú §ß§Ú§Ø§ß§ñ§ñ §â§Ñ§Ş§Ü§Ñ ===
+	-- === Ğ’ĞµÑ€Ñ…Ğ½ÑÑ Ğ¸ Ğ½Ğ¸Ğ¶Ğ½ÑÑ Ñ€Ğ°Ğ¼ĞºĞ° ===
 	if form_size_x > tile_size * 2 then
 		local start_x = tile_size
 		local usable_width = form_size_x - tile_size * 2
@@ -1086,11 +1087,11 @@ function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, 
 
 		for i = 0, full_tiles-1 do
 			local pos_x = start_x + tile_size * i
-			-- §Ó§Ö§â§ç
+			-- Ğ²ĞµÑ€Ñ…
 			local img_top = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + pos_x, form_pos_y)
 			UI_LoadImage(img_top, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 134, 0)
 			UI_SetAlpha(img_top, alpha)
-			-- §ß§Ú§Ù
+			-- Ğ½Ğ¸Ğ·
 			local img_bottom = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + pos_x, form_pos_y + (form_size_y - tile_size))
 			UI_LoadImage(img_bottom, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 134, 48)
 			UI_SetAlpha(img_bottom, alpha)
@@ -1106,7 +1107,7 @@ function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, 
 		end
 	end
 
-	-- === §­§Ö§Ó§Ñ§ñ §Ú §á§â§Ñ§Ó§Ñ§ñ §â§Ñ§Ş§Ü§Ñ ===
+	-- === Ğ›ĞµĞ²Ğ°Ñ Ğ¸ Ğ¿Ñ€Ğ°Ğ²Ğ°Ñ Ñ€Ğ°Ğ¼ĞºĞ° ===
 	if form_size_y > tile_size * 2 then
 		local start_y = tile_size
 		local usable_height = form_size_y - tile_size * 2
@@ -1115,11 +1116,11 @@ function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, 
 
 		for i = 0, full_tiles-1 do
 			local pos_y = start_y + tile_size * i
-			-- §İ§Ö§Ó§Ñ§ñ
+			-- Ğ»ĞµĞ²Ğ°Ñ
 			local img_left = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x, form_pos_y + pos_y)
 			UI_LoadImage(img_left, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 110, 21)
 			UI_SetAlpha(img_left, alpha)
-			-- §á§â§Ñ§Ó§Ñ§ñ
+			-- Ğ¿Ñ€Ğ°Ğ²Ğ°Ñ
 			local img_right = UI_CreateCompent(form, IMAGE_TYPE, "image", tile_size, tile_size, form_pos_x + (form_size_x - tile_size), form_pos_y + pos_y)
 			UI_LoadImage(img_right, "./texture/ascaron_ui/asc-part-01.png", NORMAL, tile_size, tile_size, 158, 21)
 			UI_SetAlpha(img_right, alpha)
@@ -1135,7 +1136,7 @@ function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, 
 		end
 	end
 
-	-- === §¸§Ö§ß§ä§â §æ§à§â§Ş§í ===
+	-- === Ğ¦ĞµĞ½Ñ‚Ñ€ Ñ„Ğ¾Ñ€Ğ¼Ñ‹ ===
 	if form_size_x > tile_size*2 and form_size_y > tile_size*2 then
 		local start_x = tile_size
 		local start_y = tile_size
@@ -1183,36 +1184,36 @@ function setBackgroundMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, 
 	end
 end
 
--- form_size_x - §â§Ñ§Ù§Ş§Ö§â §à§Ü§ß§Ñ X
--- form_size_y - §â§Ñ§Ù§Ş§Ö§â §à§Ü§ß§Ñ Y
--- form_pos_x - §á§à§Ù§Ú§è§Ú§ñ §ã§à§Ù§Õ§Ñ§Ó§Ñ§Ö§Ş§à§Ô§à §à§Ü§ß§Ñ §ß§Ñ §ç§à§İ§ã§ä§Ö
--- form_pos_y - §á§à§Ù§Ú§è§Ú§ñ §ã§à§Ù§Õ§Ñ§Ó§Ñ§Ö§Ş§à§Ô§à §à§Ü§ß§Ñ §ß§Ñ §ç§à§İ§ã§ä§Ö
--- @todo §ã§Õ§Ö§İ§Ñ§ä§î §é§ä§à§Ò§í §ï§ä§Ñ §æ§å§ß§Ü§è§Ú§ñ §ã§à§Ù§Õ§Ñ§Ó§Ñ§İ§Ñ §â§Ñ§Ş§Ü§å §â§Ñ§Ù§Ş§Ö§â§à§Ş form_size_x §ß§Ñ form_size_y
+-- form_size_x - Ñ€Ğ°Ğ·Ğ¼ĞµÑ€ Ğ¾ĞºĞ½Ğ° X
+-- form_size_y - Ñ€Ğ°Ğ·Ğ¼ĞµÑ€ Ğ¾ĞºĞ½Ğ° Y
+-- form_pos_x - Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ²Ğ°ĞµĞ¼Ğ¾Ğ³Ğ¾ Ğ¾ĞºĞ½Ğ° Ğ½Ğ° Ñ…Ğ¾Ğ»ÑÑ‚Ğµ
+-- form_pos_y - Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ²Ğ°ĞµĞ¼Ğ¾Ğ³Ğ¾ Ğ¾ĞºĞ½Ğ° Ğ½Ğ° Ñ…Ğ¾Ğ»ÑÑ‚Ğµ
+-- @todo ÑĞ´ĞµĞ»Ğ°Ñ‚ÑŒ Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ ÑÑ‚Ğ° Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ²Ğ°Ğ»Ğ° Ñ€Ğ°Ğ¼ĞºÑƒ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ¾Ğ¼ form_size_x Ğ½Ğ° form_size_y
 function setBorderMiddle(form, form_size_x, form_size_y, alpha, form_pos_x, form_pos_y)
 	local border = 2
 	
-	-- §£§Ö§â§ç§ß§ñ§ñ §á§à§İ§à§ã§Ñ
+	-- Ğ’ĞµÑ€Ñ…Ğ½ÑÑ Ğ¿Ğ¾Ğ»Ğ¾ÑĞ°
 	for pos = 0, (form_size_x - border), border do
 		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x + pos, form_pos_y)
 		UI_LoadImage(img, "./texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
 		UI_SetAlpha(img, alpha)
 	end
 	
-	-- §¯§Ú§Ø§ß§ñ§ñ §á§à§İ§à§ã§Ñ
+	-- ĞĞ¸Ğ¶Ğ½ÑÑ Ğ¿Ğ¾Ğ»Ğ¾ÑĞ°
 	for pos = 0, (form_size_x - border), border do
 		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x + pos, form_pos_y + form_size_y)
 		UI_LoadImage(img, "./texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
 		UI_SetAlpha(img, alpha)
 	end
 	
-	-- §­§Ö§Ó§Ñ§ñ §á§à§İ§à§ã§Ñ
+	-- Ğ›ĞµĞ²Ğ°Ñ Ğ¿Ğ¾Ğ»Ğ¾ÑĞ°
 	for pos = border, (form_size_x - border), border do
 		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x, form_pos_y + pos)
 		UI_LoadImage(img, "./texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
 		UI_SetAlpha(img, alpha)
 	end
 	
-	-- §±§â§Ñ§Ó§Ñ§ñ §á§à§İ§à§ã§Ñ
+	-- ĞŸÑ€Ğ°Ğ²Ğ°Ñ Ğ¿Ğ¾Ğ»Ğ¾ÑĞ°
 	for pos = border, (form_size_x - border), border do
 		local img = UI_CreateCompent(form, IMAGE_TYPE, "image", border, border, form_pos_x + form_size_x - border, form_pos_y + pos)
 		UI_LoadImage(img, "./texture/ascaron_ui/asc-part-01.png", NORMAL, border, border, 23, 15)
@@ -1231,15 +1232,15 @@ function setScroll(form)
 end
 
 ------
--- §³§à§Ù§Õ§Ñ§ß§Ú§Ö §á§à§Õ§İ§à§Ø§Ü§Ú §á§à§Õ §á§Ñ§ß§Ö§İ§î §á§Ö§â§ã§à§ß§Ñ§Ø§Ñ (§ß§Ú§Ø§ß§Ú§Û §Ò§Ñ§â)
+-- Ğ¡Ğ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ğµ Ğ¿Ğ¾Ğ´Ğ»Ğ¾Ğ¶ĞºĞ¸ Ğ¿Ğ¾Ğ´ Ğ¿Ğ°Ğ½ĞµĞ»ÑŒ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ° (Ğ½Ğ¸Ğ¶Ğ½Ğ¸Ğ¹ Ğ±Ğ°Ñ€)
 ------
 function setBackgroundChaBar(form, size_x, size_y, alpha, form_size_x, form_size_y)
-	-- §­§Ö§Ó§í§Û §Ü§â§Ñ§Û
+	-- Ğ›ĞµĞ²Ñ‹Ğ¹ ĞºÑ€Ğ°Ğ¹
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", 11, 52, form_size_x, form_size_y)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 11, 52, 141, 57)
 	UI_SetAlpha(image, alpha)
 	
-	-- §©§Ñ§á§à§İ§ß§Ö§ß§Ú§Ö §Ş§Ö§Ø§Õ§å §İ§Ö§Ó§í§Ş §Ú §á§â§Ñ§Ó§í§Ş §Ü§â§Ñ§Ö§Ş
+	-- Ğ—Ğ°Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ğµ Ğ¼ĞµĞ¶Ğ´Ñƒ Ğ»ĞµĞ²Ñ‹Ğ¼ Ğ¸ Ğ¿Ñ€Ğ°Ğ²Ñ‹Ğ¼ ĞºÑ€Ğ°ĞµĞ¼
 	--image = UI_CreateCompent(form, IMAGE_TYPE, "image", 1, 52, form_size_x, form_size_y)
 	--UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 1, 52, 152, 57) 
 	
@@ -1251,50 +1252,50 @@ function setBackgroundChaBar(form, size_x, size_y, alpha, form_size_x, form_size
 		end
 	end
 	
-	-- §±§â§Ñ§Ó§í§Û §Ü§â§Ñ§Û
+	-- ĞŸÑ€Ğ°Ğ²Ñ‹Ğ¹ ĞºÑ€Ğ°Ğ¹
 	image = UI_CreateCompent(form, IMAGE_TYPE, "image", 11, 52, size_x - 11, form_size_y)
 	UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 11, 52, 153, 57)
 	UI_SetAlpha(image, alpha)
 end
 
--- §¶§å§ß§Ü§è§Ú§ñ §Õ§İ§ñ §á§à§ã§ä§â§à§Ö§ß§Ú§ñ §ã§Ö§ä§Ü§Ú §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§Û (rows ¡Á cols)
--- form      - §à§Ò§ì§Ö§Ü§ä §æ§à§â§Ş§í, §ß§Ñ §Ü§à§ä§à§â§å§ğ §Ò§å§Õ§å§ä §Õ§à§Ò§Ñ§Ó§İ§ñ§ä§î§ã§ñ §Ü§Ñ§â§ä§Ú§ß§Ü§Ú
--- cols      - §Ü§à§İ§Ú§é§Ö§ã§ä§Ó§à §Ü§à§İ§à§ß§à§Ü (§á§à §ê§Ú§â§Ú§ß§Ö)
--- rows      - §Ü§à§İ§Ú§é§Ö§ã§ä§Ó§à §ã§ä§â§à§Ü (§á§à §Ó§í§ã§à§ä§Ö)
--- indent    - §à§ä§ã§ä§å§á §Ş§Ö§Ø§Õ§å §ñ§é§Ö§Û§Ü§Ñ§Ş§Ú (§à§Õ§Ú§ß§Ñ§Ü§à§Ó§í§Û §á§à X §Ú Y)
--- grdWidth  - §ê§Ú§â§Ú§ß§Ñ §à§Õ§ß§à§Û §ñ§é§Ö§Û§Ü§Ú §ã§Ö§ä§Ü§Ú (§Ü§à§ß§ä§Ö§Û§ß§Ö§â§Ñ §Õ§İ§ñ §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§ñ)
--- grdHeight - §Ó§í§ã§à§ä§Ñ §à§Õ§ß§à§Û §ñ§é§Ö§Û§Ü§Ú
--- imgPath   - §á§å§ä§î §Ü §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§ğ, §Ü§à§ä§à§â§à§Ö §Ò§å§Õ§Ö§ä §Ù§Ñ§Ô§â§å§Ø§Ö§ß§à
--- imgWidth  - §ê§Ú§â§Ú§ß§Ñ §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§ñ
--- imgHeight - §Ó§í§ã§à§ä§Ñ §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§ñ
--- imgPosX   - §ã§Ş§Ö§ë§Ö§ß§Ú§Ö §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§ñ §á§à X §Ó§ß§å§ä§â§Ú §ñ§é§Ö§Û§Ü§Ú
--- imgPosY   - §ã§Ş§Ö§ë§Ö§ß§Ú§Ö §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§ñ §á§à Y §Ó§ß§å§ä§â§Ú §ñ§é§Ö§Û§Ü§Ú
--- startPosX - §ß§Ñ§é§Ñ§İ§î§ß§Ñ§ñ §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§Ñ X §Õ§İ§ñ §ã§Ö§ä§Ü§Ú (§İ§Ö§Ó§í§Û §Ó§Ö§â§ç§ß§Ú§Û §å§Ô§à§İ)
--- startPosY - §ß§Ñ§é§Ñ§İ§î§ß§Ñ§ñ §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§Ñ Y §Õ§İ§ñ §ã§Ö§ä§Ü§Ú (§İ§Ö§Ó§í§Û §Ó§Ö§â§ç§ß§Ú§Û §å§Ô§à§İ)
--- §¶§å§ß§Ü§è§Ú§ñ §Õ§İ§ñ §á§à§ã§ä§â§à§Ö§ß§Ú§ñ §ã§Ö§ä§Ü§Ú §Ú§Ù§à§Ò§â§Ñ§Ø§Ö§ß§Ú§Û §Ú §Ó§à§Ù§Ó§â§Ñ§ä§Ñ §Ü§à§à§â§Õ§Ú§ß§Ñ§ä §Õ§İ§ñ innerSize (§ß§Ñ§á§â§Ú§Ş§Ö§â, 32x32)
+-- Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ğ´Ğ»Ñ Ğ¿Ğ¾ÑÑ‚Ñ€Ğ¾ĞµĞ½Ğ¸Ñ ÑĞµÑ‚ĞºĞ¸ Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ğ¹ (rows Ã— cols)
+-- form      - Ğ¾Ğ±ÑŠĞµĞºÑ‚ Ñ„Ğ¾Ñ€Ğ¼Ñ‹, Ğ½Ğ° ĞºĞ¾Ñ‚Ğ¾Ñ€ÑƒÑ Ğ±ÑƒĞ´ÑƒÑ‚ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ÑÑ‚ÑŒÑÑ ĞºĞ°Ñ€Ñ‚Ğ¸Ğ½ĞºĞ¸
+-- cols      - ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ĞºĞ¾Ğ»Ğ¾Ğ½Ğ¾Ğº (Ğ¿Ğ¾ ÑˆĞ¸Ñ€Ğ¸Ğ½Ğµ)
+-- rows      - ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑÑ‚Ñ€Ğ¾Ğº (Ğ¿Ğ¾ Ğ²Ñ‹ÑĞ¾Ñ‚Ğµ)
+-- indent    - Ğ¾Ñ‚ÑÑ‚ÑƒĞ¿ Ğ¼ĞµĞ¶Ğ´Ñƒ ÑÑ‡ĞµĞ¹ĞºĞ°Ğ¼Ğ¸ (Ğ¾Ğ´Ğ¸Ğ½Ğ°ĞºĞ¾Ğ²Ñ‹Ğ¹ Ğ¿Ğ¾ X Ğ¸ Y)
+-- grdWidth  - ÑˆĞ¸Ñ€Ğ¸Ğ½Ğ° Ğ¾Ğ´Ğ½Ğ¾Ğ¹ ÑÑ‡ĞµĞ¹ĞºĞ¸ ÑĞµÑ‚ĞºĞ¸ (ĞºĞ¾Ğ½Ñ‚ĞµĞ¹Ğ½ĞµÑ€Ğ° Ğ´Ğ»Ñ Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ñ)
+-- grdHeight - Ğ²Ñ‹ÑĞ¾Ñ‚Ğ° Ğ¾Ğ´Ğ½Ğ¾Ğ¹ ÑÑ‡ĞµĞ¹ĞºĞ¸
+-- imgPath   - Ğ¿ÑƒÑ‚ÑŒ Ğº Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ñ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ğ±ÑƒĞ´ĞµÑ‚ Ğ·Ğ°Ğ³Ñ€ÑƒĞ¶ĞµĞ½Ğ¾
+-- imgWidth  - ÑˆĞ¸Ñ€Ğ¸Ğ½Ğ° Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ñ
+-- imgHeight - Ğ²Ñ‹ÑĞ¾Ñ‚Ğ° Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ñ
+-- imgPosX   - ÑĞ¼ĞµÑ‰ĞµĞ½Ğ¸Ğµ Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ñ Ğ¿Ğ¾ X Ğ²Ğ½ÑƒÑ‚Ñ€Ğ¸ ÑÑ‡ĞµĞ¹ĞºĞ¸
+-- imgPosY   - ÑĞ¼ĞµÑ‰ĞµĞ½Ğ¸Ğµ Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ñ Ğ¿Ğ¾ Y Ğ²Ğ½ÑƒÑ‚Ñ€Ğ¸ ÑÑ‡ĞµĞ¹ĞºĞ¸
+-- startPosX - Ğ½Ğ°Ñ‡Ğ°Ğ»ÑŒĞ½Ğ°Ñ ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ğ° X Ğ´Ğ»Ñ ÑĞµÑ‚ĞºĞ¸ (Ğ»ĞµĞ²Ñ‹Ğ¹ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¹ ÑƒĞ³Ğ¾Ğ»)
+-- startPosY - Ğ½Ğ°Ñ‡Ğ°Ğ»ÑŒĞ½Ğ°Ñ ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ğ° Y Ğ´Ğ»Ñ ÑĞµÑ‚ĞºĞ¸ (Ğ»ĞµĞ²Ñ‹Ğ¹ Ğ²ĞµÑ€Ñ…Ğ½Ğ¸Ğ¹ ÑƒĞ³Ğ¾Ğ»)
+-- Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ğ´Ğ»Ñ Ğ¿Ğ¾ÑÑ‚Ñ€Ğ¾ĞµĞ½Ğ¸Ñ ÑĞµÑ‚ĞºĞ¸ Ğ¸Ğ·Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ğ¹ Ğ¸ Ğ²Ğ¾Ğ·Ğ²Ñ€Ğ°Ñ‚Ğ° ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚ Ğ´Ğ»Ñ innerSize (Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€, 32x32)
 function CreateImageGrid(form, cols, rows, indent, grdWidth, grdHeight, imgPath, imgWidth, imgHeight, imgPosX, imgPosY, imgAlpha, startPosX, startPosY)
     local coords = {}
 
     for r = 1, rows do
-        -- §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§Ñ Y §ä§Ö§Ü§å§ë§Ö§Û §ã§ä§â§à§Ü§Ú
+        -- ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ğ° Y Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹ ÑÑ‚Ñ€Ğ¾ĞºĞ¸
         local y = startPosY + (r - 1) * (grdHeight + indent)
 
         for c = 1, cols do
-            -- §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§Ñ X §ä§Ö§Ü§å§ë§Ö§Û §Ü§à§İ§à§ß§Ü§Ú
+            -- ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ğ° X Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹ ĞºĞ¾Ğ»Ğ¾Ğ½ĞºĞ¸
             local x = startPosX + (c - 1) * (grdWidth + indent)
 
-            -- §å§ß§Ú§Ü§Ñ§İ§î§ß§à§Ö §Ú§Ş§ñ §Ü§à§ß§ä§Ö§Û§ß§Ö§â§Ñ
+            -- ÑƒĞ½Ğ¸ĞºĞ°Ğ»ÑŒĞ½Ğ¾Ğµ Ğ¸Ğ¼Ñ ĞºĞ¾Ğ½Ñ‚ĞµĞ¹Ğ½ĞµÑ€Ğ°
             local name = string.format("imgGrid_%d_%d", r, c)
 
             local imgGrid = UI_CreateCompent(form, IMAGE_TYPE, name, grdWidth, grdHeight, x, y)
             UI_LoadImage(imgGrid, imgPath, NORMAL, imgWidth, imgHeight, imgPosX, imgPosY)
 			UI_SetAlpha(imgGrid, imgAlpha)
 			
-            -- §Ü§à§à§â§Õ§Ú§ß§Ñ§ä§í §Õ§İ§ñ §Ó§İ§à§Ø§Ö§ß§ß§à§Ô§à innerSize¡ÁinnerSize §à§Ò§ì§Ö§Ü§ä§Ñ (§ß§Ñ§á§â§Ú§Ş§Ö§â 32§ç32), §á§à §è§Ö§ß§ä§â§å
+            -- ĞºĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ñ‹ Ğ´Ğ»Ñ Ğ²Ğ»Ğ¾Ğ¶ĞµĞ½Ğ½Ğ¾Ğ³Ğ¾ innerSizeÃ—innerSize Ğ¾Ğ±ÑŠĞµĞºÑ‚Ğ° (Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€ 32Ñ…32), Ğ¿Ğ¾ Ñ†ĞµĞ½Ñ‚Ñ€Ñƒ
             local cx = x + (grdWidth  - 32) / 2
             local cy = y + (grdHeight - 32) / 2
 
-            -- §Õ§à§Ò§Ñ§Ó§İ§ñ§Ö§Ş §Ó §ã§á§Ú§ã§à§Ü (§ã§ä§â§à§Ü§Ñ §Ù§Ñ§á§à§İ§ß§ñ§Ö§ä§ã§ñ §ã§İ§Ö§Ó§Ñ §ß§Ñ§á§â§Ñ§Ó§à)
+            -- Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞµĞ¼ Ğ² ÑĞ¿Ğ¸ÑĞ¾Ğº (ÑÑ‚Ñ€Ğ¾ĞºĞ° Ğ·Ğ°Ğ¿Ğ¾Ğ»Ğ½ÑĞµÑ‚ÑÑ ÑĞ»ĞµĞ²Ğ° Ğ½Ğ°Ğ¿Ñ€Ğ°Ğ²Ğ¾)
             table.insert(coords, {x = cx, y = cy})
         end
     end
@@ -1302,25 +1303,25 @@ function CreateImageGrid(form, cols, rows, indent, grdWidth, grdHeight, imgPath,
     return coords
 end
 
--- §¶§å§ß§Ü§è§Ú§ñ §İ§à§Ô§Ú§â§à§Ó§Ñ§ß§Ú§ñ §ã§à§à§Ò§ë§Ö§ß§Ú§Û
--- fileName - §Ú§Ş§ñ §æ§Ñ§Û§İ§Ñ (§ß§Ñ§á§â§Ú§Ş§Ö§â "grid_log.txt")
--- message  - §ã§ä§â§à§Ü§Ñ §Õ§İ§ñ §Ù§Ñ§á§Ú§ã§Ú
+-- Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ğ»Ğ¾Ğ³Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ ÑĞ¾Ğ¾Ğ±Ñ‰ĞµĞ½Ğ¸Ğ¹
+-- fileName - Ğ¸Ğ¼Ñ Ñ„Ğ°Ğ¹Ğ»Ğ° (Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€ "grid_log.txt")
+-- message  - ÑÑ‚Ñ€Ğ¾ĞºĞ° Ğ´Ğ»Ñ Ğ·Ğ°Ğ¿Ğ¸ÑĞ¸
 function LogMsg(fileName, message)
 	fileName = string.format("log/%s", fileName)
 	
     local file, err = io.open(fileName, "a")
     if not file then
-        print("§°§ê§Ú§Ò§Ü§Ñ: §ß§Ö §å§Õ§Ñ§İ§à§ã§î §à§ä§Ü§â§í§ä§î §æ§Ñ§Û§İ " .. fileName .. ": " .. err)
+        print("ĞÑˆĞ¸Ğ±ĞºĞ°: Ğ½Ğµ ÑƒĞ´Ğ°Ğ»Ğ¾ÑÑŒ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ğ°Ğ¹Ğ» " .. fileName .. ": " .. err)
         return
     end
 
-    -- §Õ§à§Ò§Ñ§Ó§İ§ñ§Ö§Ş §Õ§Ñ§ä§å §Ú §Ó§â§Ö§Ş§ñ §Ü §ã§à§à§Ò§ë§Ö§ß§Ú§ğ
+    -- Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞµĞ¼ Ğ´Ğ°Ñ‚Ñƒ Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ Ğº ÑĞ¾Ğ¾Ğ±Ñ‰ĞµĞ½Ğ¸Ñ
     local timeStamp = os.date("%Y-%m-%d %H:%M:%S")
     file:write(string.format("[%s] %s\n", timeStamp, message))
     file:close()
 end
 
--- §¶§å§ß§Ü§è§Ú§ñ §Õ§İ§ñ §Õ§à§Ò§Ñ§Ó§İ§Ö§ß§Ú§ñ §ã§ä§â§à§Ü§Ú
+-- Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ğ´Ğ»Ñ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ ÑÑ‚Ñ€Ğ¾ĞºĞ¸
 function AddStatRow(index, caption, hint, labelName, btnName)
     local y = basestatgroup.y + (index * rowHeight)
 
@@ -1360,23 +1361,23 @@ function AddCharStat(index, caption, labelName)
     UI_AddCompent(skillid, valueLab)
 end
 
--- 0 - §Ò§à§İ§î§ê§Ñ§ñ §Ø§Ö§İ§ä§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 420§ç60
--- 1 - §Ò§à§İ§î§ê§Ñ§ñ §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 420§ç60
--- 2 - §Ş§Ñ§İ§Ö§ß§î§Ü§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 106§ç42 (§Ø§Ö§İ§ä§Ñ§ñ)
--- 3 - §Ş§Ñ§İ§Ö§ß§î§Ü§Ñ§ñ-§Ş§Ú§ß§Ú §Ü§ß§à§á§Ü§Ñ §Ú§Ù §Ô§Ñ§é§Ú (70§ç19) §Ø§Ö§İ§ä§Ñ§ñ
--- 4 - §Ü§ß§à§á§Ü§Ñ §Ø§Ö§İ§ä§Ñ§ñ §Ú§Ù alt+r
--- 5 - §Ü§ß§à§á§Ü§Ñ §ã§Ö§â§Ñ§ñ §Ú§Ù alt+r
--- 6 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ motto §Ú§Ù §Ô§Ú§İ§î§Õ§Ú§Û
--- 7 - §Ü§â§Ñ§ã§ß§Ñ§ñ §Ü§ß§à§á§Ü§Ñ disband\exit §Ú§Ù §Ô§Ú§İ§î§Õ§Ú§Û
--- 8 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 74§ç42
--- 9 - §Ø§Ö§İ§ä§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 123§ç42
--- 10 - §Ø§Ö§İ§ä§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 138§ç32
--- 11 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 138§ç32
--- 12 §Ü§ß§à§á§Ü§Ñ §Ú§Ù §Ş§Ñ§Ô§Ñ§Ù§Ú§ß§Ñ 380§ç42 §Ø§Ö§İ§ä§Ñ§ñ
--- 13 - §Ø§Ö§İ§ä§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 130§ç42 (§Ù§Ñ§á§â§à§ã §ß§Ñ §à§ä§â§ñ§Õ\§ä§à§â§Ô§à§Ó§İ§ğ)
--- 14 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 130§ç42 (§Ù§Ñ§á§â§à§ã §ß§Ñ §à§ä§â§ñ§Õ\§ä§à§â§Ô§à§Ó§İ§ğ)
--- 15 - §ã§Ö§â§Ñ§ñ §Ü§ß§à§á§Ü§Ñ 54§ç42
--- 16 - §Ü§â§Ñ§ã§ß§Ñ §Ü§ß§à§á§Ü§Ñ 70§ç42
+-- 0 - Ğ±Ğ¾Ğ»ÑŒÑˆĞ°Ñ Ğ¶ĞµĞ»Ñ‚Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 420Ñ…60
+-- 1 - Ğ±Ğ¾Ğ»ÑŒÑˆĞ°Ñ ÑĞµÑ€Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 420Ñ…60
+-- 2 - Ğ¼Ğ°Ğ»ĞµĞ½ÑŒĞºĞ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 106Ñ…42 (Ğ¶ĞµĞ»Ñ‚Ğ°Ñ)
+-- 3 - Ğ¼Ğ°Ğ»ĞµĞ½ÑŒĞºĞ°Ñ-Ğ¼Ğ¸Ğ½Ğ¸ ĞºĞ½Ğ¾Ğ¿ĞºĞ° Ğ¸Ğ· Ğ³Ğ°Ñ‡Ğ¸ (70Ñ…19) Ğ¶ĞµĞ»Ñ‚Ğ°Ñ
+-- 4 - ĞºĞ½Ğ¾Ğ¿ĞºĞ° Ğ¶ĞµĞ»Ñ‚Ğ°Ñ Ğ¸Ğ· alt+r
+-- 5 - ĞºĞ½Ğ¾Ğ¿ĞºĞ° ÑĞµÑ€Ğ°Ñ Ğ¸Ğ· alt+r
+-- 6 - ÑĞµÑ€Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° motto Ğ¸Ğ· Ğ³Ğ¸Ğ»ÑŒĞ´Ğ¸Ğ¹
+-- 7 - ĞºÑ€Ğ°ÑĞ½Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° disband\exit Ğ¸Ğ· Ğ³Ğ¸Ğ»ÑŒĞ´Ğ¸Ğ¹
+-- 8 - ÑĞµÑ€Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 74Ñ…42
+-- 9 - Ğ¶ĞµĞ»Ñ‚Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 123Ñ…42
+-- 10 - Ğ¶ĞµĞ»Ñ‚Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 138Ñ…32
+-- 11 - ÑĞµÑ€Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 138Ñ…32
+-- 12 ĞºĞ½Ğ¾Ğ¿ĞºĞ° Ğ¸Ğ· Ğ¼Ğ°Ğ³Ğ°Ğ·Ğ¸Ğ½Ğ° 380Ñ…42 Ğ¶ĞµĞ»Ñ‚Ğ°Ñ
+-- 13 - Ğ¶ĞµĞ»Ñ‚Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 130Ñ…42 (Ğ·Ğ°Ğ¿Ñ€Ğ¾Ñ Ğ½Ğ° Ğ¾Ñ‚Ñ€ÑĞ´\Ñ‚Ğ¾Ñ€Ğ³Ğ¾Ğ²Ğ»Ñ)
+-- 14 - ÑĞµÑ€Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 130Ñ…42 (Ğ·Ğ°Ğ¿Ñ€Ğ¾Ñ Ğ½Ğ° Ğ¾Ñ‚Ñ€ÑĞ´\Ñ‚Ğ¾Ñ€Ğ³Ğ¾Ğ²Ğ»Ñ)
+-- 15 - ÑĞµÑ€Ğ°Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ° 54Ñ…42
+-- 16 - ĞºÑ€Ğ°ÑĞ½Ğ° ĞºĞ½Ğ¾Ğ¿ĞºĞ° 70Ñ…42
 function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y, posx, posy)
 	local Item
 	Item = UI_CreateCompent(frm, BUTTON_TYPE, button_name, size_x, size_y, posx, posy)
@@ -1390,7 +1391,7 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 	elseif (type == 2) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 106, 42, 888, 1001, FALSE)
-	-- §®§Ú§ß§Ú §Ü§ß§à§á§Ü§Ñ §Ú§Ù §Ô§Ñ§é§Ú (use)
+	-- ĞœĞ¸Ğ½Ğ¸ ĞºĞ½Ğ¾Ğ¿ĞºĞ° Ğ¸Ğ· Ğ³Ğ°Ñ‡Ğ¸ (use)
 	elseif (type == 3) then
 		UI_ButtonSetText(Item, szCaption, szFont, argbColor("000000"), 0, 0)
 		UI_LoadButtonImage(Item, "./texture/ascaron_ui/asc-part-01.png", 70, 19, 940, 188, FALSE)
@@ -1438,11 +1439,15 @@ function CreateButton(type, frm, button_name, szCaption, szFont, size_x, size_y,
 	return Item
 end
 
+-- PageItem title caption: text, font, color, activeColor, x/y, isCenter
+function UI_SetPageItemCaption( page_item_id, caption, font, color, activeColor, x, y, isCenter )
+	CLU_Call( "UI_SetPageItemCaption", page_item_id, caption, font, color, activeColor, x, y, isCenter )
+end
 
 UI_ItemBarLoadImage( "texture/ui/system/progress.tga", 64, 16, 0, 0 )
 
 
--- ASCIIËÙ²é±í,ÓÃÓÚ¿ì½İ¼ü
+-- ASCIIé€ŸæŸ¥è¡¨,ç”¨äºå¿«æ·é”®
 HOTKEY_A  = 65
 HOTKEY_B  = 66
 HOTKEY_C  = 67
@@ -1472,7 +1477,7 @@ HOTKEY_Z  = 90
 
 UI_SetDragSnapToGrid( 4, 4 )
 
--- ÉùÃ÷ËùÓĞµÄ±íµ¥Ä£°å£¬ÓÃÓÚÄ£°åÇĞ»»,¶ÔÓ¦ÓÚ³ÌĞòUITemplete.h
+-- å£°æ˜æ‰€æœ‰çš„è¡¨å•æ¨¡æ¿ï¼Œç”¨äºæ¨¡æ¿åˆ‡æ¢,å¯¹åº”äºç¨‹åºUITemplete.h
 FORM_LOGIN = 0
 FORM_MAIN = 1
 FORM_SELECT_CHA = 2
@@ -1480,11 +1485,11 @@ FORM_EDITOR = 3
 FORM_SWITCH_SCENE = 4
 FORM_CREATE_CHA = 5
 FORM_SELECT = 6
-UI_SetFormTempleteMax( 7 )	-- ÉèÖÃ×î´óÄ£°åÊı
+UI_SetFormTempleteMax( 7 )	-- è®¾ç½®æœ€å¤§æ¨¡æ¿æ•°
 
-FORM_DIALOG = FORM_SWITCH_SCENE	-- ¶Ô»°¿òÄ£°å-4
+FORM_DIALOG = FORM_SWITCH_SCENE	-- å¯¹è¯æ¡†æ¨¡æ¿-4
 
--- ×°ÔØÏà¹Ø½çÃæ½Å±¾
+-- è£…è½½ç›¸å…³ç•Œé¢è„šæœ¬
 UI_LoadScript("scripts/lua/forms/main.clu")
 --UI_LoadScript("scripts/lua/forms/selectcha.clu")
 UI_LoadScript("scripts/lua/forms/login.clu")
@@ -1493,23 +1498,23 @@ UI_LoadScript("scripts/lua/forms/NPC.clu")
 UI_LoadScript("scripts/lua/forms/Player.clu")
 --UI_LoadScript("scripts/lua/textparse.clu")
 
-UI_LoadScript("scripts/lua/forms/minimap.clu")	-- Ğ¡µØÍ¼
-UI_LoadScript("scripts/lua/forms/help.clu")		-- °ïÖú
-UI_LoadScript("scripts/lua/forms/system.clu")	-- ÏµÍ³
-UI_LoadScript("scripts/lua/forms/equip.clu")	-- ¼¼ÄÜ,µÀ¾ß
-UI_LoadScript("scripts/lua/forms/chat.clu")		-- ÁÄÌì
-UI_LoadScript("scripts/lua/forms/preperty.clu")	-- ½ÇÉ«ÊôĞÔ
-UI_LoadScript("scripts/lua/forms/mission.clu")	-- ÈÎÎñ
-UI_LoadScript("scripts/lua/forms/coze.clu")		-- ×óÏÂ½ÇµÄÁÄÌì
-UI_LoadScript("scripts/lua/forms/dialog.clu")	-- ³£ÓÃ¶Ô»°¿ò
-UI_LoadScript("scripts/lua/forms/ship.clu")		-- Ôì´¬
-UI_LoadScript("scripts/lua/forms/traderoom.clu")	-- ½»Ò×Ëù
-UI_LoadScript("scripts/lua/forms/manage.clu")	-- ¹«»á¹ÜÀí
+UI_LoadScript("scripts/lua/forms/minimap.clu")	-- å°åœ°å›¾
+UI_LoadScript("scripts/lua/forms/help.clu")		-- å¸®åŠ©
+UI_LoadScript("scripts/lua/forms/system.clu")	-- ç³»ç»Ÿ
+UI_LoadScript("scripts/lua/forms/equip.clu")	-- æŠ€èƒ½,é“å…·
+UI_LoadScript("scripts/lua/forms/chat.clu")		-- èŠå¤©
+UI_LoadScript("scripts/lua/forms/preperty.clu")	-- è§’è‰²å±æ€§
+UI_LoadScript("scripts/lua/forms/mission.clu")	-- ä»»åŠ¡
+UI_LoadScript("scripts/lua/forms/coze.clu")		-- å·¦ä¸‹è§’çš„èŠå¤©
+UI_LoadScript("scripts/lua/forms/dialog.clu")	-- å¸¸ç”¨å¯¹è¯æ¡†
+UI_LoadScript("scripts/lua/forms/ship.clu")		-- é€ èˆ¹
+UI_LoadScript("scripts/lua/forms/traderoom.clu")	-- äº¤æ˜“æ‰€
+UI_LoadScript("scripts/lua/forms/manage.clu")	-- å…¬ä¼šç®¡ç†
 UI_LoadScript("scripts/lua/forms/select.clu")
 UI_LoadScript("scripts/lua/forms/store.lua")
 UI_LoadScript("scripts/lua/forms/settings.lua")
 UI_LoadScript("scripts/lua/forms/database.lua")
 UI_LoadScript("scripts/lua/forms/realmarket.lua")
 
---×Ö·û¹ıÂË±í
+--å­—ç¬¦è¿‡æ»¤è¡¨
 UI_LoadScript("scripts/lua/filter.clu")
