@@ -290,44 +290,78 @@ UI_SetCaptionIsCenter(labFormname, TRUE)
 -- Страница добавления предмета
 -----------------------------------------------------------------------
 
-labSetLot = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labSetLot", 74, 10, 20, 50)
-UI_SetCaption(labSetLot, "Добавить лот на биржу")
-UI_SetTextColor(labSetLot, argbColor("ffffff"))
-UI_SetLabelExFont(labSetLot, EXO_Regular_S20, FALSE, COLOR_WHITE )
---UI_SetCaptionIsCenter(labSetLot, TRUE)
-UI_AddCompent(pgAddLot, labSetLot)
-
--- Координаты положения формы ввода стоимости
-local price_posx, price_posy = 0, 90
-
--- Подложка под стоимость
-image = UI_CreateCompent(frmDoublePwd, IMAGE_TYPE,"image", 420, 55, price_posx, price_posy)
-UI_LoadImage( image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
-UI_AddCompent(pgAddLot, image)
-
--- Стоимость лота
-editPrice = UI_CreateCompent(frmRealMarket, EDIT_TYPE, "editPrice", 420, 20, price_posx + 20, price_posy + 14)
-UI_SetTextColor(editPrice, argbColor("c0c0c0"))
-UI_SetEditMaxNum(editPrice, 25)
-UI_SetEditMaxNumVisible(editPrice, 25)
-UI_SetEditCursorColor(editPrice, argbColor("c0c0c0"))
-UI_SetEditFont(editPrice, EXO_Regular_S20 )
-UI_SetEditClue(editPrice, "Input price", argbColor("908a92"))
-UI_AddCompent(pgAddLot, editPrice)
-
 -- Координаты положения слота под предмет
-local cmdItem_posx, cmdItem_posy = 0, 150
+local cmdItem_posx, cmdItem_posy = 0, 50
 
 -- Подложка под предмет
-imgItem = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgItem", 55, 55, cmdItem_posx, cmdItem_posy)
-UI_LoadImage(imgItem, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 55, 55, 52, 49)
+imgItem = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgItem", 80, 80, cmdItem_posx, cmdItem_posy)
+UI_LoadImage(imgItem, "./texture/ascaron_ui/asc-part-04.png", NORMAL, 80, 80, 134, 0)
 UI_AddCompent(pgAddLot, imgItem)
 
+imgLabel01 = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgLabel01", 230, 80, cmdItem_posx + 100, cmdItem_posy)
+UI_LoadImage(imgLabel01, "./texture/ascaron_ui/asc-part-04.png", NORMAL, 230, 80, 214, 0)
+UI_AddCompent(pgAddLot, imgLabel01)
+
+labLabel01 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labLabel01", 300, 14, cmdItem_posx + 110, cmdItem_posy + 12)
+UI_SetCaption(labLabel01, "Переместите предмет \nв соседнюю ячейку")
+UI_SetTextColor(labLabel01, argbColor("d7d5da"))
+UI_SetLabelExFont(labLabel01, EXO_Regular_S14, FALSE, COLOR_BLACK)
+-- UI_SetCaptionIsCenter(labLabel01, TRUE)
+UI_AddCompent(pgAddLot, labLabel01)
+
+labLabel02 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labLabel02", 300, 14, cmdItem_posx + 110, cmdItem_posy + 50)
+UI_SetCaption(labLabel02, "Выберите предмет для продажи")
+UI_SetTextColor(labLabel02, argbColor("77767a"))
+UI_SetLabelExFont(labLabel02, EXO_Regular_S11, FALSE, COLOR_BLACK)
+UI_AddCompent(pgAddLot, labLabel02)
+
 -- Форма предмета
-cmdItem = UI_CreateCompent(frmRealMarket, COMMAND_ONE_TYPE, "cmdItem", 32, 32, cmdItem_posx + 12, cmdItem_posy + 12)
-UI_SetHint(cmdItem, "Item")
+cmdItem = UI_CreateCompent(frmRealMarket, COMMAND_ONE_TYPE, "cmdItem", 80, 80, cmdItem_posx, cmdItem_posy)
+UI_SetHint(cmdItem, "Move item here")
 UI_AddCompent(pgAddLot, cmdItem)
 
 -- Купить товар
 btnSetLot = CreateButton(2, frmRealMarket, "btnSetLot", "SET LOT", EXO_Regular_S14, 93, 42, 605, 502)
 UI_AddCompent(pgAddLot, btnSetLot)
+
+imgLabel03 = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgLabel03", 350, 80, cmdItem_posx + 350, cmdItem_posy)
+UI_LoadImage(imgLabel03, "./texture/ascaron_ui/asc-part-04.png", NORMAL, 350, 80, 134, 80)
+UI_AddCompent(pgAddLot, imgLabel03)
+
+labLabel03 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labLabel03", 300, 14, cmdItem_posx + 402, cmdItem_posy + 12)
+UI_SetCaption(labLabel03, "СТОИМОСТЬ (ЗА ВЕСЬ ЛОТ)")
+UI_SetTextColor(labLabel03, argbColor("d7d5da"))
+UI_SetLabelExFont(labLabel03, EXO_Regular_S14, FALSE, COLOR_BLACK)
+-- UI_SetCaptionIsCenter(labLabel03, TRUE)
+UI_AddCompent(pgAddLot, labLabel03)
+
+-- Стоимость лота
+editPrice = UI_CreateCompent(frmRealMarket, EDIT_TYPE, "editPrice", 232, 32, cmdItem_posx + 412, cmdItem_posy + 45)
+UI_SetTextColor(editPrice, argbColor("c0c0c0"))
+UI_SetEditMaxNum(editPrice, 10)
+UI_SetEditMaxNumVisible(editPrice, 10)
+UI_SetEditCursorColor(editPrice, argbColor("c0c0c0"))
+UI_SetEditFont(editPrice, EXO_Regular_S15 )
+UI_SetEditClue(editPrice, "1.00 USD - 500.00 USD", argbColor("4d4d4d"))
+UI_AddCompent(pgAddLot, editPrice)
+
+imgLabel04 = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgLabel04", 700, 328, cmdItem_posx, cmdItem_posy + 100)
+UI_LoadImage(imgLabel04, "./texture/ascaron_ui/asc-part-02.png", NORMAL, 700, 328, 288, 217)
+UI_AddCompent(pgAddLot, imgLabel04)
+
+imgAlert = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgAlert", 30, 30, cmdItem_posx + 20, cmdItem_posy + 120)
+UI_LoadImage(imgAlert, "./texture/ascaron_ui/icon/alert.png", NORMAL, 30, 30, 0, 0)
+UI_AddCompent(pgAddLot, imgAlert)
+
+labAlert = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labAlert", 300, 14, cmdItem_posx + 70, cmdItem_posy + 125)
+UI_SetCaption(labAlert, "Публикуя лот, вы автоматически принимаете правила Игровой биржи")
+UI_SetTextColor(labAlert, argbColor("FFCA61"))
+UI_SetLabelExFont(labAlert, EXO_Regular_S15, FALSE, COLOR_BLACK)
+UI_AddCompent(pgAddLot, labAlert)
+
+labRules = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labRules", 300, 14, cmdItem_posx + 20, cmdItem_posy + 125 + 40)
+UI_SetCaption(labRules, "1. Вывод денежных средств доступен только при балансе от 100 USD. \n\n2. Общая комиссия Игровой биржи (комиссия сервиса, налоги,\n ввод и вывод средств) состовляет 25% от суммы продажи.\n\n3. Администрация не несет ответственности за ошибки, \nдопущенные при указании стоимости лота. Перед публикацией внимательно проверьте цену и предмет.\n\n4. Стоимость указывается за весь лот, вклюачя его колличество, а не за одну единицу предмета.\n\n5. Минимальная стоимость одного лота - 1.00 USD, максимальная - 500.00 USD.\n\n6. Стоимость публикации одного лота состовляет 5 кристаллов. \n\n7. Продажа игровых предметов в не Игровой биржи строго запрещена. За любые сделки, совершенные в обход биржи, применяется полная и бессрочная блокировка аккаунтов как продавца, так и покупателя.\n\n8. Отмена сделки. После покупки лота другим игроком отмена сделки, возврат средств или предмета невозможны.\n\n9. Возврат комиссии. Комиссия за публикацию лота не возвращается, даже если лот был снят с продажи или не был продан в течении 72 часов.")
+UI_SetTextColor(labRules, argbColor("d7d5da"))
+UI_SetLabelExFont(labRules, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_AddCompent(pgAddLot, labRules)
+
