@@ -361,3 +361,156 @@ UI_SetTextColor(labRules, argbColor("d7d5da"))
 UI_SetLabelExFont(labRules, EXO_Regular_S12, FALSE, COLOR_BLACK)
 UI_AddCompent(pgAddLot, labRules)
 
+-----------------------------------------------------------------------
+-- Страница вывода средств
+-----------------------------------------------------------------------
+
+labBankTitle = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labBankTitle", 300, 14, 0, 50)
+UI_SetCaption(labBankTitle, "1. ВЫБЕРИТЕ МЕТОД ВЫВОДА")
+UI_SetTextColor(labBankTitle, argbColor("d7d5da"))
+UI_SetLabelExFont(labBankTitle, EXO_Regular_S16, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labBankTitle)
+
+imgLabel01 = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgLabel01", 340, 80, 0, 80)
+UI_LoadImage(imgLabel01, "./texture/ascaron_ui/asc-part-05.png", NORMAL, 340, 80, 0, 0)
+UI_AddCompent(pgCashOut, imgLabel01)
+
+imgBank = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgBank", 40, 40, 20, 100)
+UI_LoadImage(imgBank, "./texture/ascaron_ui/icon/bank.png", NORMAL, 40, 40, 0, 0)
+UI_AddCompent(pgCashOut, imgBank)
+
+labBank = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labBank", 300, 14, 80, 100)
+UI_SetCaption(labBank, "Банковский перевод Россия")
+UI_SetTextColor(labBank, argbColor("d7d5da"))
+UI_SetLabelExFont(labBank, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labBank)
+
+labBankD = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labBankD", 300, 14, 80, 125)
+UI_SetCaption(labBankD, "SPB (Россия) | Курс 1 USD = 75 RUB")
+UI_SetTextColor(labBankD, argbColor("77767a"))
+UI_SetLabelExFont(labBankD, EXO_Regular_S11, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labBankD)
+
+checkSpb = UI_CreateCompent(frmRealMarket, CHECK_TYPE, "checkSpb", 25, 25, 340 - 20 - 25, 107)
+UI_LoadImage(checkSpb, "./texture/ascaron_ui/asc-part-04.png", UNCHECKED, 40, 40, 0, 302)
+UI_LoadImage(checkSpb, "./texture/ascaron_ui/asc-part-04.png", CHECKED, 40, 40, 40, 302)
+UI_AddCompent(pgCashOut, checkSpb)
+
+imgLabel01 = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgLabel01", 340, 80, 360, 80)
+UI_LoadImage(imgLabel01, "./texture/ascaron_ui/asc-part-05.png", NORMAL, 340, 80, 0, 0)
+UI_AddCompent(pgCashOut, imgLabel01)
+
+imgUsdt = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgUsdt", 40, 40, 380, 100)
+UI_LoadImage(imgUsdt, "./texture/ascaron_ui/icon/usdt.png", NORMAL, 40, 40, 0, 0)
+UI_AddCompent(pgCashOut, imgUsdt)
+
+labUsdt = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labUsdt", 300, 14, 440, 100)
+UI_SetCaption(labUsdt, "Криптовалюта")
+UI_SetTextColor(labUsdt, argbColor("d7d5da"))
+UI_SetLabelExFont(labUsdt, EXO_Regular_S14, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labUsdt)
+
+labUsdtD = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labUsdtD", 300, 14, 440, 125)
+UI_SetCaption(labUsdtD, "TRC-20 (USDT)")
+UI_SetTextColor(labUsdtD, argbColor("77767a"))
+UI_SetLabelExFont(labUsdtD, EXO_Regular_S11, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labUsdtD)
+
+checkUsdt = UI_CreateCompent(frmRealMarket, CHECK_TYPE, "checkUsdt", 25, 25, 340 + 20 + 340 - 20 - 25, 107)
+UI_LoadImage(checkUsdt, "./texture/ascaron_ui/asc-part-04.png", UNCHECKED, 40, 40, 0, 302)
+UI_LoadImage(checkUsdt, "./texture/ascaron_ui/asc-part-04.png", CHECKED, 40, 40, 40, 302)
+UI_AddCompent(pgCashOut, checkUsdt)
+
+labPDetailsTitle = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labPDetailsTitle", 300, 14, 0, 180)
+UI_SetCaption(labPDetailsTitle, "2. УКАЖИТЕ РЕКВИЗИТЫ")
+UI_SetTextColor(labPDetailsTitle, argbColor("d7d5da"))
+UI_SetLabelExFont(labPDetailsTitle, EXO_Regular_S16, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labPDetailsTitle)
+
+imgPDetails = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgPDetails", 340, 55, 0, 210)
+UI_LoadImage(imgPDetails, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+UI_AddCompent(pgCashOut, imgPDetails)
+
+editPDetails = UI_CreateCompent( frmRealMarket, EDIT_TYPE, "editPDetails", 340, 20, 20, 230)
+UI_SetTextColor(editPDetails, argbColor("c0c0c0") )
+UI_SetEditMaxNum(editPDetails, 40 )
+UI_SetEditMaxNumVisible(editPDetails, 40)
+UI_SetEditCursorColor(editPDetails, argbColor("c0c0c0") )
+UI_SetEditFont(editPDetails, EXO_Regular_S12 )
+UI_SetEditClue(editPDetails, "Укажите номер телефона и банк получателя", argbColor("908a92"))
+UI_AddCompent(pgCashOut, editPDetails)
+
+imgUsdtDetails = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgUsdtDetails", 340, 55, 360, 210)
+UI_LoadImage(imgUsdtDetails, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+UI_AddCompent(pgCashOut, imgUsdtDetails)
+
+editUsdtDetails = UI_CreateCompent( frmRealMarket, EDIT_TYPE, "editUsdtDetails", 340, 20, 380, 230)
+UI_SetTextColor(editUsdtDetails, argbColor("c0c0c0") )
+UI_SetEditMaxNum(editUsdtDetails, 40 )
+UI_SetEditMaxNumVisible(editUsdtDetails, 40)
+UI_SetEditCursorColor(editUsdtDetails, argbColor("c0c0c0") )
+UI_SetEditFont(editUsdtDetails, EXO_Regular_S12 )
+UI_SetEditClue(editUsdtDetails, "Укажите адрес кошелька (USDT TRC-20)", argbColor("908a92"))
+UI_AddCompent(pgCashOut, editUsdtDetails)
+
+labCashAmountTitle = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labCashAmountTitle", 300, 14, 0, 285)
+UI_SetCaption(labCashAmountTitle, "3. СУММА ВЫВОДА (USD)")
+UI_SetTextColor(labCashAmountTitle, argbColor("d7d5da"))
+UI_SetLabelExFont(labCashAmountTitle, EXO_Regular_S16, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labCashAmountTitle)
+
+imgCurrency = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgCurrency", 340, 55, 0, 315)
+UI_LoadImage(imgCurrency, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+UI_AddCompent(pgCashOut, imgCurrency)
+
+editCurrency = UI_CreateCompent(frmRealMarket, EDIT_TYPE, "editCurrency", 340, 20, 20, 335)
+UI_SetTextColor(editCurrency, argbColor("c0c0c0"))
+UI_SetEditMaxNum(editCurrency, 40 )
+UI_SetEditMaxNumVisible(editCurrency, 40)
+UI_SetEditCursorColor(editCurrency, argbColor("c0c0c0"))
+UI_SetEditFont(editCurrency, EXO_Regular_S12 )
+UI_SetEditClue(editCurrency, "100.00 USD", argbColor("908a92"))
+UI_AddCompent(pgCashOut, editCurrency)
+
+imgCurrency = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgCurrency", 340, 55, 360, 315)
+UI_LoadImage(imgCurrency, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 420, 60, 420, 747)
+UI_AddCompent(pgCashOut, imgCurrency)
+
+imgCurrency = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgCurrency", 30, 30, 380, 327)
+UI_LoadImage(imgCurrency, "./texture/ascaron_ui/icon/alert.png", NORMAL, 30, 30, 0, 0)
+UI_AddCompent(pgCashOut, imgCurrency)
+
+labInform01 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labInform01", 300, 14, 420, 325)
+UI_SetCaption(labInform01, "Минимальная сумма вывода - 100 USD")
+UI_SetTextColor(labInform01, argbColor("FFCA61"))
+UI_SetLabelExFont(labInform01, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labInform01)
+
+labInform02 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labInform02", 300, 14, 420, 345)
+UI_SetCaption(labInform02, "Комиссия за вывод не взымается")
+UI_SetTextColor(labInform02, argbColor("77767a"))
+UI_SetLabelExFont(labInform02, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labInform02)
+
+imgLabel01 = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgLabel01", 700, 91, 0, 390)
+UI_LoadImage(imgLabel01, "./texture/ascaron_ui/asc-part-05.png", NORMAL, 700, 91, 0, 80)
+UI_AddCompent(pgCashOut, imgLabel01)
+
+imgSheild = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "imgSheild", 40, 40, 20, 410)
+UI_LoadImage(imgSheild, "./texture/ascaron_ui/icon/shieldcheck.png", NORMAL, 40, 40, 0, 0)
+UI_AddCompent(pgCashOut, imgSheild)
+
+labInform03 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labInform03", 300, 14, 20 + 40 + 20, 410 - 12)
+UI_SetCaption(labInform03, "4. ОТПРАВЛЯЯ ЗАЯВКУ НА ВЫВОД, ВЫ СОГЛАШАЕТЕСЬ:")
+UI_SetTextColor(labInform03, argbColor("d7d5da"))
+UI_SetLabelExFont(labInform03, EXO_Regular_S16, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labInform03)
+
+labInform04 = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labInform04", 300, 14, 20 + 40 + 20, 410 + 10)
+UI_SetCaption(labInform04, "1. Деньги будут отправлены выбранным методом на указанные реквизиты\n2. Администрация не несет ответственности за ошибук в реквизитах получателя.\n3. Средства зачисляются в течении 48 часов.\n4. Администрация вправе запросить дополнительную информацию для варификации заявки.")
+UI_SetTextColor(labInform04, argbColor("77767a"))
+UI_SetLabelExFont(labInform04, EXO_Regular_S12, FALSE, COLOR_BLACK)
+UI_AddCompent(pgCashOut, labInform04)
+
+btnSend = CreateButton(13, frmRealMarket, "btnSend", "ОТПРАВИТЬ", EXO_Regular_S14, 130, 42, 570, 500)
+UI_AddCompent(pgCashOut, btnSend)
