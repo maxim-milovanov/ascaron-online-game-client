@@ -81,6 +81,8 @@ image = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "image", 80, 19, 29, 504)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 80, 19, 324, 329)
 UI_AddCompent(pgLots, image)
 UI_AddCompent(pgHistory, image)
+UI_AddCompent(pgAddLot, image)
+UI_AddCompent(pgCashOut, image)
 
 -- Сумма купленных кристаллов
 labDollars = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "labDollars", 74, 10, 32, 508)
@@ -90,12 +92,16 @@ UI_SetLabelExFont( labDollars, EXO_Regular_S10, FALSE, COLOR_WHITE )
 UI_SetCaptionIsCenter(labDollars, TRUE)
 UI_AddCompent(pgLots, labDollars)
 UI_AddCompent(pgHistory, labDollars)
+UI_AddCompent(pgAddLot, labDollars)
+UI_AddCompent(pgCashOut, labDollars)
 
 -- Иконка долллара
 image = UI_CreateCompent(frmRealMarket, IMAGE_TYPE, "image", 14, 24, 0, 502)
 UI_LoadImage(image, "./texture/ascaron_ui/icon/dollar.png", NORMAL, 14, 24, 0, 0)
 UI_AddCompent(pgLots, image)
 UI_AddCompent(pgHistory, image)
+UI_AddCompent(pgAddLot, image)
+UI_AddCompent(pgCashOut, image)
 
 -- 
 labBallance = UI_CreateCompent(frmRealMarket, LABELEX_TYPE, "labBallance", 80, 13, 29, 531)
@@ -105,6 +111,8 @@ UI_SetLabelExFont(labBallance, EXO_Regular_S13, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labBallance, TRUE)
 UI_AddCompent(pgLots, labBallance)
 UI_AddCompent(pgHistory, labBallance)
+UI_AddCompent(pgAddLot, labBallance)
+UI_AddCompent(pgCashOut, labBallance)
 
 ------
 -- Переключатель страниц
