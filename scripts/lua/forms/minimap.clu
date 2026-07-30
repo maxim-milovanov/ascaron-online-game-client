@@ -66,6 +66,11 @@ UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-03.png", 117, 4
 UI_SetHint(btnOpenStore, "Store (Alt + F)")
 UI_SetAlpha(btnOpenStore, 220)
 
+btnOpenMarket = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenMarket", 117, 44, 31 + 49 + 49 - 77 - 10 - 117, 247 + 3000)
+UI_LoadButtonImage(btnOpenMarket, "./texture/ascaron_ui/asc-part-03.png", 117, 44, 688, 182, FALSE)
+UI_SetHint(btnOpenMarket, "Store (Alt + F)")
+UI_SetAlpha(btnOpenMarket, 220)
+
 -----------------------------------------------------------------------
 -- Radar (input x, y)
 -----------------------------------------------------------------------	
