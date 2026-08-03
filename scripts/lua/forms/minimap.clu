@@ -43,23 +43,30 @@ while 1 do
 	end	
 end
 
-btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 30, 30, -15, 100)
+btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 30, 30, -15, 100 - 49)
 UI_LoadButtonImage( btnSearch, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 113, TRUE)
 UI_SetHint(btnSearch, "Radar (Alt + T)")
 UI_SetAlpha(btnSearch, 220)
 
-btnOpenWorldMap = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenWorldMap", 30, 30, -15, 135)
+btnOpenWorldMap = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenWorldMap", 30, 30, -15, 135 - 49)
 UI_LoadButtonImage(btnOpenWorldMap, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 143, TRUE)
 UI_SetHint(btnOpenWorldMap, "World Map (Alt + W)")
 UI_SetAlpha(btnOpenWorldMap, 220)
 
-btnTeleports = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnTeleports", 30, 30, -15, 170)
+btnTeleports = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnTeleports", 30, 30, -15, 170 - 49)
 UI_LoadButtonImage( btnTeleports, "./texture/ascaron_ui/asc-part-01.png", 30, 30, 138, 173, TRUE)
 UI_SetHint(btnTeleports, "Area Manager (Alt + V)")
 UI_SetAlpha(btnTeleports, 220)
 
-btnSetTrade = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSetTrade", 40, 40, 31, 247)
-UI_LoadButtonImage( btnSetTrade, "./texture/ascaron_ui/asc-part-01.png", 40, 40, 260, 153, TRUE)
+btnWiki = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnWiki", 30, 30, -15, 205 - 49)
+UI_LoadButtonImage(btnWiki, "./texture/ascaron_ui/asc-part-05.png", 30, 30, 340, 0, TRUE)
+UI_SetHint(btnWiki, "Wikipedia")
+UI_SetAlpha(btnWiki, 220)
+
+btnDatabase = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnDatabase", 30, 30, -15, 240 - 49)
+UI_LoadButtonImage(btnDatabase, "./texture/ascaron_ui/asc-part-05.png", 30, 30, 340, 30, TRUE)
+UI_SetHint(btnDatabase, "Database (ALT + I)")
+UI_SetAlpha(btnDatabase, 220)
 
 btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 117, 44, 31 + 49 + 49 - 77, 247)
 UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-03.png", 117, 44, 688, 182, FALSE)

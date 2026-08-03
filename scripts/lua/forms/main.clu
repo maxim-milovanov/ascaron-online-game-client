@@ -135,7 +135,7 @@ drpTitleSystem = UI_CreateCompent( frmMain800, DRAG_TITLE_TYPE, "drpTitleSystem"
 UI_LoadImage( drpTitleSystem, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 14, 5, 236, 215)
 
 -- Подложка под системный чат
-lstOnSaySystem = UI_CreateCompent(frmMain800, LIST_TYPE, "lstOnSaySystem", 330, 60, 0, -158)
+lstOnSaySystem = UI_CreateCompent(frmMain800, CHATVIEW_TYPE, "lstOnSaySystem", 330, 60, 0, -158)
 UI_LoadImage(lstOnSaySystem, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 15, 15)
 UI_SetImageAlpha(lstOnSaySystem, 200)
 UI_SetMargin(lstOnSaySystem, 5, 3, 0, 0)
@@ -146,7 +146,7 @@ drpTitle = UI_CreateCompent( frmMain800, DRAG_TITLE_TYPE, "drpTitle", 14, 5, 0, 
 UI_LoadImage( drpTitle, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 14, 5, 236, 215)
 
 -- Подложка под основной игровой чат
-lstOnSay = UI_CreateCompent( frmMain800, LIST_TYPE, "lstOnSay", 330, 100, 0, -98 )
+lstOnSay = UI_CreateCompent( frmMain800, CHATVIEW_TYPE, "lstOnSay", 330, 100, 0, -98 )
 UI_LoadImage( lstOnSay, "./texture/ascaron_ui/asc-part-01.png", COMPENT_BACK, 5, 5, 15, 15)
 UI_SetImageAlpha( lstOnSay, 200)
 UI_SetMargin( lstOnSay, 5, 3, 0, 0 )
@@ -159,8 +159,8 @@ UI_LoadImage(img_top, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 312, 26, 4
 -- Написать сообщение
 edtSay = UI_CreateCompent( frmMain800, EDIT_TYPE, "edtSay", 200, 20, 85, 9 )
 UI_SetTextColor( edtSay, COLOR_8D837A )
-UI_SetEditMaxNum( edtSay, 64)
-UI_SetEditMaxNumVisible( edtSay, 24)
+UI_SetEditMaxNum( edtSay, 200)
+UI_SetEditMaxNumVisible( edtSay, 40)
 UI_SetEditCursorColor( edtSay, COLOR_WHITE )
 
 --btnTranslate = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnTranslate", 30, 30, 50, 2)
@@ -450,12 +450,43 @@ UI_SetFormStyleEx(frmBigmap, FORM_CENTERBOTTOM, 0, 160)
 setBackground(frmBigmap, true, 800, 570, 225)
 
 labFormname = UI_CreateCompent(frmBigmap, LABELEX_TYPE, "labFormname", 800, 14, 0, 20)
-UI_SetCaption( labFormname, "WORLD MAP" )
-UI_SetTextColor( labFormname, argbColor("ffffff"))
-UI_SetLabelExFont( labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK )
+UI_SetCaption(labFormname, "WORLD MAP")
+UI_SetTextColor(labFormname, argbColor("ffffff"))
+UI_SetLabelExFont(labFormname, EXO_Regular_S14, FALSE, COLOR_BLACK)
 UI_SetCaptionIsCenter(labFormname, TRUE)
 
 UI_CreateCompent(frmBigmap, UI3D_COMPENT_TYPE, "d3dCompent", 760, 500, 20, 50)
+
+image = UI_CreateCompent(frmBigmap, IMAGE_TYPE, "image", 760, 100 - 30, 20, 450 + 30)
+UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 18, 18, 18, 18)
+UI_SetAlpha(image, 110)
+
+image = UI_CreateCompent(frmBigmap, IMAGE_TYPE, "image", 30, 30, 20 + 20, 500)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/pinmapfill.png", NORMAL, 40, 40, 0, 0)
+UI_SetAlpha(image, 110)
+
+labMouse01 = UI_CreateCompent(frmBigmap, LABELEX_TYPE, "labMouse01", 10, 12, 20 + 20 + 30 + 10, 500)
+UI_SetCaption(labMouse01, "Движение к цели \n(CTRL + ЛКМ)")
+UI_SetTextHtmlColor(labMouse01, "e3e3e3")
+UI_SetLabelExFont(labMouse01, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+image = UI_CreateCompent(frmBigmap, IMAGE_TYPE, "image", 30, 30, 580 - 150, 500)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/mouse2.png", NORMAL, 40, 40, 0, 0)
+UI_SetAlpha(image, 110)
+
+labMouse02 = UI_CreateCompent(frmBigmap, LABELEX_TYPE, "labMouse02", 10, 12, 620 - 150, 500)
+UI_SetCaption(labMouse02, "Перемещение карты \n(Зажмите ЛКМ)")
+UI_SetTextHtmlColor(labMouse02, "e3e3e3")
+UI_SetLabelExFont(labMouse02, EXO_Regular_S12, FALSE, COLOR_BLACK)
+
+image = UI_CreateCompent(frmBigmap, IMAGE_TYPE, "image", 30, 30, 580 + 45, 500)
+UI_LoadImage(image, "./texture/ascaron_ui/icon/mouse.png", NORMAL, 40, 40, 0, 0)
+UI_SetAlpha(image, 110)
+
+labMouse03 = UI_CreateCompent(frmBigmap, LABELEX_TYPE, "labMouse03", 10, 12, 620 + 45, 500)
+UI_SetCaption(labMouse03, "Масштаб \n(Колесо мыши)")
+UI_SetTextHtmlColor(labMouse03, "e3e3e3")
+UI_SetLabelExFont(labMouse03, EXO_Regular_S12, FALSE, COLOR_BLACK)
 
 -----------------------------------------------------------------------
 -- 定义跟随界面
