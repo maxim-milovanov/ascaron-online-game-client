@@ -442,10 +442,10 @@ UI_SetHint( btnOpenGuild , "Guild(Alt+C)" )
 frmBigmap = UI_CreateForm( "frmBigmap", FALSE, 800, 570, 0, 0, TRUE, FALSE )
 UI_ShowForm( frmBigmap, TRUE )
 UI_AddFormToTemplete( frmBigmap, FORM_MAIN )
-UI_FormSetIsEscClose( frmBigmap, FALSE )
 UI_FormSetHotKey( frmBigmap, ALT_KEY, HOTKEY_W )
 UI_FormSetIsEscClose( frmBigmap, TRUE )
 UI_SetFormStyleEx(frmBigmap, FORM_CENTERBOTTOM, 0, 160)
+UI_SetIsDrag(frmBigmap, FALSE)
 
 setBackground(frmBigmap, true, 800, 570, 225)
 
