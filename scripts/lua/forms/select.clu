@@ -7,25 +7,44 @@ UI_AddFormToTemplete( frmHelpButton, FORM_SELECT )
 UI_FormSetIsEscClose( frmHelpButton, FALSE )
 UI_SetFormStyle( frmHelpButton, 2 )
 
-btnWikipedia = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnWikipedia", 144, 45, 0, 0 )
-UI_LoadButtonImage( btnWikipedia, "./texture/ascaron_ui/asc-part-01.png", 144, 45, 794, 147, FALSE )
-UI_SetHint( btnWikipedia, "Server guides" )
+--btnWikipedia = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnWikipedia", 144, 45, 0, 0 )
+--UI_LoadButtonImage( btnWikipedia, "./texture/ascaron_ui/asc-part-01.png", 144, 45, 794, 147, FALSE )
+--UI_SetHint( btnWikipedia, "Server guides" )
 
-btnDatabase = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnDatabase", 141, 45, 164, 0 )
-UI_LoadButtonImage( btnDatabase, "./texture/ascaron_ui/asc-part-01.png", 141, 45, 688, 331, FALSE )
-UI_SetHint( btnDatabase, "Game knowledge base of monsters and items" )
+--btnDatabase = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnDatabase", 141, 45, 164, 0 )
+--UI_LoadButtonImage( btnDatabase, "./texture/ascaron_ui/asc-part-01.png", 141, 45, 688, 331, FALSE )
+--UI_SetHint( btnDatabase, "Game knowledge base of monsters and items" )
 
-btnDonate = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnDonate", 121, 45, 325, 0 )
+btnDonate = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnDonate", 121, 45, 0, 0 )
 UI_LoadButtonImage( btnDonate, "./texture/ascaron_ui/asc-part-01.png", 121, 45, 903, 819, FALSE )
 UI_SetHint( btnDonate, "Top up your personal IMPS account" )
 
-btnRatings = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnRatings", 124, 45, 466, 0 )
+btnRatings = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnRatings", 124, 45, 164, 0 )
 UI_LoadButtonImage( btnRatings, "./texture/ascaron_ui/asc-part-01.png", 124, 45, 831, 331, FALSE )
 UI_SetHint( btnRatings, "Various character achievements" )
 
-btnDiscord = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnDiscord", 124, 45, 610, 0 )
+btnDiscord = UI_CreateCompent( frmHelpButton, BUTTON_TYPE, "btnDiscord", 124, 45, 325, 0 )
 UI_LoadButtonImage( btnDiscord, "./texture/ascaron_ui/asc-part-01.png", 124, 45, 762, 819, FALSE )
 UI_SetHint( btnDiscord, "Server to communicate with other players" )
+
+imgLanguage = UI_CreateCompent(frmHelpButton, IMAGE_TYPE, "imgLanguage", 197 + 10, 45, 486, 0 )
+UI_LoadImage(imgLanguage, "./texture/ascaron_ui/asc-part-05.png", NORMAL, 197, 45, 0, 171)
+
+langUsa = UI_CreateCompent(frmHelpButton, CHECK_TYPE, "langUsa", 39, 25, 486 + 10, 10)
+UI_LoadImage(langUsa, "./texture/ascaron_ui/asc-part-05.png", UNCHECKED, 39, 25, 197, 196)
+UI_LoadImage(langUsa, "./texture/ascaron_ui/asc-part-05.png", CHECKED, 39, 25, 197, 171)
+
+langRu = UI_CreateCompent(frmHelpButton, CHECK_TYPE, "langRu", 39, 25, 486 + 10 + 39 + 10, 10)
+UI_LoadImage(langRu, "./texture/ascaron_ui/asc-part-05.png", UNCHECKED, 39, 25, 236, 196)
+UI_LoadImage(langRu, "./texture/ascaron_ui/asc-part-05.png", CHECKED, 39, 25, 236, 171)
+
+langEs = UI_CreateCompent(frmHelpButton, CHECK_TYPE, "langEs", 39, 25, 486 + 10 + 39 + 10 + 39 + 10, 10)
+UI_LoadImage(langEs, "./texture/ascaron_ui/asc-part-05.png", UNCHECKED, 39, 25, 275, 196)
+UI_LoadImage(langEs, "./texture/ascaron_ui/asc-part-05.png", CHECKED, 39, 25, 275, 171)
+
+langBr = UI_CreateCompent(frmHelpButton, CHECK_TYPE, "langBr", 39, 25, 486 + 10 + 39 + 10 + 39 + 10 + 39 + 10, 10)
+UI_LoadImage(langBr, "./texture/ascaron_ui/asc-part-05.png", UNCHECKED, 39, 25, 314, 196)
+UI_LoadImage(langBr, "./texture/ascaron_ui/asc-part-05.png", CHECKED, 39, 25, 314, 171)
 
 -----------------------------------------------------------------------
 -- Main scene select cha
