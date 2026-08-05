@@ -213,7 +213,7 @@ for i = 0, 4, 1 do
 	LabNone[i] = UI_CreateCompent( frmRealMarket, LABELEX_TYPE, "LabNone_"..i, 540, 72, card_posx, card_posy + 23 )
 	UI_SetCaption(LabNone[i], "Item "..i)
 	UI_SetTextColor(LabNone[i], argbColor("ffffff"))
-	UI_SetLabelExFont(LabNone[i], EXO_Regular_S20, FALSE, COLOR_WHITE )
+	UI_SetLabelExFont(LabNone[i], EXO_Regular_S16, FALSE, COLOR_WHITE )
 	UI_SetCaptionIsCenter(LabNone[i], TRUE)
 	UI_SetIsShow(LabNone[i],FALSE)
 	UI_AddCompent(pgLots, LabNone[i])

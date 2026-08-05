@@ -68,15 +68,15 @@ UI_LoadButtonImage(btnDatabase, "./texture/ascaron_ui/asc-part-05.png", 30, 30, 
 UI_SetHint(btnDatabase, "Database (ALT + I)")
 UI_SetAlpha(btnDatabase, 220)
 
-btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 117, 44, 31 + 49 + 49 - 77, 247)
+btnOpenMarket = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenMarket", 44, 44, 14, 247)
+UI_LoadButtonImage(btnOpenMarket, "./texture/ascaron_ui/asc-part-05.png", 44, 44, 460, 0, TRUE)
+--UI_SetHint(btnOpenMarket, "Store (Alt + F)")
+UI_SetAlpha(btnOpenMarket, 220)
+
+btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 117, 44, 54 + 15, 247)
 UI_LoadButtonImage( btnOpenStore, "./texture/ascaron_ui/asc-part-03.png", 117, 44, 688, 182, FALSE)
 UI_SetHint(btnOpenStore, "Store (Alt + F)")
 UI_SetAlpha(btnOpenStore, 220)
-
-btnOpenMarket = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenMarket", 117, 44, 31 + 49 + 49 - 77 - 10 - 117, 247 + 3000)
-UI_LoadButtonImage(btnOpenMarket, "./texture/ascaron_ui/asc-part-03.png", 117, 44, 688, 182, FALSE)
-UI_SetHint(btnOpenMarket, "Store (Alt + F)")
-UI_SetAlpha(btnOpenMarket, 220)
 
 -----------------------------------------------------------------------
 -- Radar (input x, y)
