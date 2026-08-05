@@ -519,5 +519,5 @@ UI_SetTextColor(labInform04, argbColor("77767a"))
 UI_SetLabelExFont(labInform04, EXO_Regular_S12, FALSE, COLOR_BLACK)
 UI_AddCompent(pgCashOut, labInform04)
 
-btnSend = CreateButton(13, frmRealMarket, "btnSend", "ОТПРАВИТЬ", EXO_Regular_S14, 130, 42, 570, 500)
+btnSend = CreateButton(13, frmRealMarket, "btnSend", "Send", EXO_Regular_S14, 130, 42, 570, 500)
 UI_AddCompent(pgCashOut, btnSend)
