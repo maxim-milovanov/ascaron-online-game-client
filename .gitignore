@@ -1,0 +1,3 @@
+user/accounts/*.account
+*.log
+lua_err.txt
