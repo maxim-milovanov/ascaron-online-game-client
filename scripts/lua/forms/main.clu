@@ -157,15 +157,13 @@ local img_top = UI_CreateCompent(frmMain800, IMAGE_TYPE, "image", 330, 28, 0, 2)
 UI_LoadImage(img_top, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 312, 26, 440, 139)
 
 -- Написать сообщение
-edtSay = UI_CreateCompent( frmMain800, EDIT_TYPE, "edtSay", 200, 20, 85, 9 )
-UI_SetTextColor( edtSay, COLOR_8D837A )
-UI_SetEditMaxNum( edtSay, 200)
-UI_SetEditMaxNumVisible( edtSay, 40)
-UI_SetEditCursorColor( edtSay, COLOR_WHITE )
-
---btnTranslate = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnTranslate", 30, 30, 50, 2)
---UI_LoadButtonImage(btnTranslate, "./texture/ascaron_ui/asc-part-01.png", 34, 34, 260, 235, TRUE)
---UI_SetHint(btnTranslate, "Translate enable")
+edtSay = UI_CreateCompent(frmMain800, EDIT_TYPE, "edtSay", 200, 20, 85, 9)
+UI_SetTextColor(edtSay, argbColor("ffffff"))
+UI_SetEditMaxNum(edtSay, 200)
+UI_SetEditMaxNumVisible(edtSay, 40)
+UI_SetEditCursorColor(edtSay, argbColor("ffffff"))
+UI_SetEditFont(edtSay, EXO_Regular_S12)
+UI_SetEditClue(edtSay, "Message in chat...", argbColor("40413e"))
 
 -- Кнопка смайлов
 btnChatFace = UI_CreateCompent(frmMain800, BUTTON_TYPE, "btnChatFace", 22, 22, 300, 5)
@@ -232,6 +230,10 @@ UI_MenuLoadFont(selfMouseRight, EXO_Regular_S14, argbColor("FFD166"), argbColor(
 
 -- 增加菜单
 UI_MenuAddText( selfMouseRight, "Leave Party" )
+
+checkTranslate = UI_CreateCompent(frmMain800, CHECK_TYPE, "checkTranslate", 20, 20, 55, 7)
+UI_LoadImage(checkTranslate, "./texture/ascaron_ui/icon/translate_off.png", UNCHECKED, 24, 24, 0, 0)
+UI_LoadImage(checkTranslate, "./texture/ascaron_ui/icon/translate_on.png", CHECKED, 24, 24, 0, 0)
 
 -----------------------------------------------------------------------------------
 -- Fast bar
