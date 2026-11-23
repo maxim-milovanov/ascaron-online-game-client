@@ -26,37 +26,36 @@ UI_SetPageButton(pageStore, PAGE_BUTTON_CUSTOM, 48, 16 )
 image = UI_CreateCompent(frmStore, IMAGE_TYPE, "image", 701, 2, 30, 101)
 UI_LoadImage(image, "./texture/ascaron_ui/asc-part-01.png", NORMAL, 550, 2, 0, 381)
 
--- Кнопка магазина кристаллов
-pgCrystal = UI_CreatePageItem(pageStore)
-crystalItem = UI_GetPageItemObj(pgCrystal, PAGE_ITEM_TITLE)
-UI_LoadImage(crystalItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 1101)
-UI_LoadImage(crystalItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 1101)
-UI_SetPos(crystalItem, 0, 0)
-UI_SetSize(crystalItem, 175, 31)
+local storeTabs = {}
+local function addStoreTab(caption)
+    local page = UI_CreatePageItem(pageStore)
+    local tab = UI_GetPageItemObj(page, PAGE_ITEM_TITLE)
+    local texture = "./texture/ascaron_ui/asc-part-04.png"
+    UI_SetPageItemCaption(page, caption, EXO_Regular_S14, argbColor("808080"), argbColor("ffca61"), 0, 8, TRUE)
+    UI_LoadImage(tab, texture, PAGE_ITEM_TITLE_NORMAL, 123, 31, 0, 412)
+    UI_LoadImage(tab, texture, PAGE_ITEM_TITLE_ACTIVE, 123, 31, 175, 271)
+    table.insert(storeTabs, tab)
+    return page, tab
+end
 
--- Кнопка магазина репутации
-pgReputation = UI_CreatePageItem(pageStore)
-reputationItem = UI_GetPageItemObj(pgReputation, PAGE_ITEM_TITLE)
-UI_LoadImage(reputationItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 350, 1101)
-UI_LoadImage(reputationItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 525, 1101)
-UI_SetPos(reputationItem, 175, 0)
-UI_SetSize(reputationItem, 175, 31)
+pgCrystal, crystalItem = addStoreTab("CRYSTAL")
+pgReputation, reputationItem = addStoreTab("REPUTATION")
+pgWardrobe, wardrobeItem = addStoreTab("WARDROBE")
+pgGacha, GachaItem = addStoreTab("GACHA")
 
--- Кнопка магазина гардероба
-pgWardrobe = UI_CreatePageItem(pageStore)
-wardrobeItem = UI_GetPageItemObj(pgWardrobe, PAGE_ITEM_TITLE)
-UI_LoadImage(wardrobeItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 0, 1132)
-UI_LoadImage(wardrobeItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 175, 1132)
-UI_SetPos(wardrobeItem, 350, 0)
-UI_SetSize(wardrobeItem, 175, 31)
+local function addWheelTab()
+    local pgWheel = addStoreTab("WHEEL")
+    local wheelPanel = UI_CreateCompent(frmStore, UI3D_COMPENT, "wheelPanel", 700, 496, 0, 31)
+    UI_AddCompent(pgWheel, wheelPanel)
+end
 
--- Кнопка гачи
-pgGacha = UI_CreatePageItem(pageStore)
-GachaItem = UI_GetPageItemObj(pgGacha, PAGE_ITEM_TITLE)
-UI_LoadImage(GachaItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_NORMAL, 175, 31, 350, 1132)
-UI_LoadImage(GachaItem, "./texture/ascaron_ui/asc-part-01.png", PAGE_ITEM_TITLE_ACTIVE, 175, 31, 525, 1132)
-UI_SetPos(GachaItem, 525, 0)
-UI_SetSize(GachaItem, 175, 31)
+-- addWheelTab()
+
+local tabWidth = 700 / #storeTabs
+for index, tab in ipairs(storeTabs) do
+    UI_SetSize(tab, tabWidth, 31)
+    UI_SetPos(tab, (index - 1) * tabWidth, 0)
+end
 
 ------
 -- Спец. кнопки
